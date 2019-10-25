@@ -756,7 +756,7 @@ Name | Type | Description  | Notes
  **name** | **str**| iCalendar file name in storage | 
  **member_name** | **str**| Indexed property name | 
  **index** | **str**| Property index path | 
- **request** | [**StorageFolder**](StorageFolder.md)| Storage detail to specify iCalendar file location | 
+ **request** | [**StorageFolderLocation**](StorageFolderLocation.md)| Storage detail to specify iCalendar file location | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -786,7 +786,7 @@ Name | Type | Description  | Notes
  **name** | **str**| iCalendar file name in storage | 
  **member_name** | **str**| Indexed property name | 
  **index** | **str**| Property index path | 
- **request** | [**StorageFolder**](StorageFolder.md)| Storage detail to specify iCalendar file location | 
+ **request** | [**StorageFolderLocation**](StorageFolderLocation.md)| Storage detail to specify iCalendar file location | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -816,7 +816,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Contact document file name | 
  **member_name** | **str**| Indexed property name | 
  **index** | **int**| Property index | 
- **folder** | [**StorageFolder**](StorageFolder.md)| Calendar document location in storage information | 
+ **folder** | [**StorageFolderLocation**](StorageFolderLocation.md)| Calendar document location in storage information | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -848,7 +848,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Contact document file name | 
  **member_name** | **str**| Indexed property name | 
  **index** | **int**| Property index | 
- **folder** | [**StorageFolder**](StorageFolder.md)| Calendar document location in storage information | 
+ **folder** | [**StorageFolderLocation**](StorageFolderLocation.md)| Calendar document location in storage information | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1074,7 +1074,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
  **attachment** | **str**| Attachment name or index | 
- **storage** | [**StorageFolder**](StorageFolder.md)| Document file storage location info | 
+ **storage** | [**StorageFolderLocation**](StorageFolderLocation.md)| Document file storage location info | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1102,7 +1102,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
  **attachment** | **str**| Attachment name or index | 
- **storage** | [**StorageFolder**](StorageFolder.md)| Document file storage location info | 
+ **storage** | [**StorageFolderLocation**](StorageFolderLocation.md)| Document file storage location info | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

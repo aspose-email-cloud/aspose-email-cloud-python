@@ -29,7 +29,7 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.email_document import EmailDocument
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class CreateEmailRequest(object):
@@ -45,7 +45,7 @@ class CreateEmailRequest(object):
     """
     swagger_types = {
         'email_document': 'EmailDocument',
-        'storage_folder': 'StorageFolder'
+        'storage_folder': 'StorageFolderLocation'
     }
 
     attribute_map = {
@@ -96,7 +96,7 @@ class CreateEmailRequest(object):
         Email document location in storage
 
         :return: The storage_folder of this CreateEmailRequest.
-        :rtype: StorageFolder
+        :rtype: StorageFolderLocation
         """
         return self._storage_folder
 
@@ -107,7 +107,7 @@ class CreateEmailRequest(object):
         Email document location in storage
 
         :param storage_folder: The storage_folder of this CreateEmailRequest.
-        :type: StorageFolder
+        :type: StorageFolderLocation
         """
         self._storage_folder = storage_folder
 

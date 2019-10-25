@@ -28,11 +28,9 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
 
-
-class StorageFile(StorageFolder):
-    """A storage file location information
+class StorageFile(object):
+    """File or folder information
     """
 
     """
@@ -43,47 +41,164 @@ class StorageFile(StorageFolder):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file_name': 'str'
+        'name': 'str',
+        'is_folder': 'bool',
+        'modified_date': 'datetime',
+        'size': 'int',
+        'path': 'str'
     }
 
     attribute_map = {
-        'file_name': 'FileName'
+        'name': 'Name',
+        'is_folder': 'IsFolder',
+        'modified_date': 'ModifiedDate',
+        'size': 'Size',
+        'path': 'Path'
     }
 
-    def __init__(self, file_name=None):
+    discriminator_value_class_map = {
+        'FileVersion': 'FileVersion'
+    }
+
+    def __init__(self, name=None, is_folder=None, modified_date=None, size=None, path=None):
         """StorageFile - a model defined in Swagger"""
 
-        self._file_name = None
-        self.discriminator = None
+        self._name = None
+        self._is_folder = None
+        self._modified_date = None
+        self._size = None
+        self._path = None
+        self.discriminator = 'Type'
 
-        if file_name is not None:
-            self.file_name = file_name
+        if name is not None:
+            self.name = name
+        if is_folder is not None:
+            self.is_folder = is_folder
+        if modified_date is not None:
+            self.modified_date = modified_date
+        if size is not None:
+            self.size = size
+        if path is not None:
+            self.path = path
 
     @property
-    def file_name(self):
-        """Gets the file_name of this StorageFile.
+    def name(self):
+        """Gets the name of this StorageFile.
 
-        A file name in storage
+        File or folder name.
 
-        :return: The file_name of this StorageFile.
+        :return: The name of this StorageFile.
         :rtype: str
         """
-        return self._file_name
+        return self._name
 
-    @file_name.setter
-    def file_name(self, file_name):
-        """Sets the file_name of this StorageFile.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this StorageFile.
 
-        A file name in storage
+        File or folder name.
 
-        :param file_name: The file_name of this StorageFile.
+        :param name: The name of this StorageFile.
         :type: str
         """
-        if file_name is None:
-            raise ValueError("Invalid value for `file_name`, must not be `None`")
-        if file_name is not None and len(file_name) < 1:
-            raise ValueError("Invalid value for `file_name`, length must be greater than or equal to `1`")
-        self._file_name = file_name
+        self._name = name
+
+    @property
+    def is_folder(self):
+        """Gets the is_folder of this StorageFile.
+
+        True if it is a folder.
+
+        :return: The is_folder of this StorageFile.
+        :rtype: bool
+        """
+        return self._is_folder
+
+    @is_folder.setter
+    def is_folder(self, is_folder):
+        """Sets the is_folder of this StorageFile.
+
+        True if it is a folder.
+
+        :param is_folder: The is_folder of this StorageFile.
+        :type: bool
+        """
+        if is_folder is None:
+            raise ValueError("Invalid value for `is_folder`, must not be `None`")
+        self._is_folder = is_folder
+
+    @property
+    def modified_date(self):
+        """Gets the modified_date of this StorageFile.
+
+        File or folder last modified DateTime.
+
+        :return: The modified_date of this StorageFile.
+        :rtype: datetime
+        """
+        return self._modified_date
+
+    @modified_date.setter
+    def modified_date(self, modified_date):
+        """Sets the modified_date of this StorageFile.
+
+        File or folder last modified DateTime.
+
+        :param modified_date: The modified_date of this StorageFile.
+        :type: datetime
+        """
+        self._modified_date = modified_date
+
+    @property
+    def size(self):
+        """Gets the size of this StorageFile.
+
+        File or folder size.
+
+        :return: The size of this StorageFile.
+        :rtype: int
+        """
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        """Sets the size of this StorageFile.
+
+        File or folder size.
+
+        :param size: The size of this StorageFile.
+        :type: int
+        """
+        if size is None:
+            raise ValueError("Invalid value for `size`, must not be `None`")
+        self._size = size
+
+    @property
+    def path(self):
+        """Gets the path of this StorageFile.
+
+        File or folder path.
+
+        :return: The path of this StorageFile.
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this StorageFile.
+
+        File or folder path.
+
+        :param path: The path of this StorageFile.
+        :type: str
+        """
+        self._path = path
+
+    def get_real_child_model(self, data):
+        """Returns the real base class specified by the discriminator"""
+        discriminator_value = data.get(self.discriminator)
+        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -29,7 +29,7 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class AppendEmailMimeBaseRequest(AppendEmailAccountBaseRequest):

@@ -28,7 +28,7 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.storage_file import StorageFile
+from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 
 
 class EmailAccountRequest(object):
@@ -49,7 +49,7 @@ class EmailAccountRequest(object):
         'security_options': 'object',
         'protocol_type': 'object',
         'description': 'str',
-        'storage_file': 'StorageFile'
+        'storage_file': 'StorageFileLocation'
     }
 
     attribute_map = {
@@ -247,7 +247,7 @@ class EmailAccountRequest(object):
         A storage file location info to store email account
 
         :return: The storage_file of this EmailAccountRequest.
-        :rtype: StorageFile
+        :rtype: StorageFileLocation
         """
         return self._storage_file
 
@@ -258,7 +258,7 @@ class EmailAccountRequest(object):
         A storage file location info to store email account
 
         :param storage_file: The storage_file of this EmailAccountRequest.
-        :type: StorageFile
+        :type: StorageFileLocation
         """
         if storage_file is None:
             raise ValueError("Invalid value for `storage_file`, must not be `None`")

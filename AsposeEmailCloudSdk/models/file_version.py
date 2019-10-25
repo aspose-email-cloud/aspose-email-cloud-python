@@ -28,10 +28,10 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.storage_file2 import StorageFile2
+from AsposeEmailCloudSdk.models.storage_file import StorageFile
 
 
-class FileVersion(StorageFile2):
+class FileVersion(StorageFile):
     """File Version
     """
 

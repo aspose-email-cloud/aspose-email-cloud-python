@@ -29,7 +29,7 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.email_account_request import EmailAccountRequest
-from AsposeEmailCloudSdk.models.storage_file import StorageFile
+from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 
 
 class SaveOAuthEmailAccountRequest(EmailAccountRequest):

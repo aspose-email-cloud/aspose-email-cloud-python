@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import AsposeEmailCloudSdk
-from AsposeEmailCloudSdk.models.storage_file2 import StorageFile2  # noqa: E501
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation  # noqa: E501
 from AsposeEmailCloudSdk.rest import ApiException
 
 
-class TestStorageFile2(unittest.TestCase):
-    """StorageFile2 unit test stubs"""
+class TestStorageFolderLocation(unittest.TestCase):
+    """StorageFolderLocation unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestStorageFile2(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testStorageFile2(self):
-        """Test StorageFile2"""
+    def testStorageFolderLocation(self):
+        """Test StorageFolderLocation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = AsposeEmailCloudSdk.models.storage_file2.StorageFile2()  # noqa: E501
+        # model = AsposeEmailCloudSdk.models.storage_folder_location.StorageFolderLocation()  # noqa: E501
         pass
 
 

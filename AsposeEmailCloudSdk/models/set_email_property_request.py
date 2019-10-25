@@ -29,7 +29,7 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.email_property import EmailProperty
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class SetEmailPropertyRequest(object):
@@ -45,7 +45,7 @@ class SetEmailPropertyRequest(object):
     """
     swagger_types = {
         'email_property': 'EmailProperty',
-        'storage_folder': 'StorageFolder'
+        'storage_folder': 'StorageFolderLocation'
     }
 
     attribute_map = {
@@ -96,7 +96,7 @@ class SetEmailPropertyRequest(object):
         An email document location in storage
 
         :return: The storage_folder of this SetEmailPropertyRequest.
-        :rtype: StorageFolder
+        :rtype: StorageFolderLocation
         """
         return self._storage_folder
 
@@ -107,7 +107,7 @@ class SetEmailPropertyRequest(object):
         An email document location in storage
 
         :param storage_folder: The storage_folder of this SetEmailPropertyRequest.
-        :type: StorageFolder
+        :type: StorageFolderLocation
         """
         self._storage_folder = storage_folder
 

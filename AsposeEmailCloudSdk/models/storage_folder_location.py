@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="StorageFolder.py">
+#  <copyright company="Aspose" file="StorageFolderLocation.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -29,7 +29,7 @@ import re
 import six
 
 
-class StorageFolder(object):
+class StorageFolderLocation(object):
     """A storage folder location information
     """
 
@@ -51,11 +51,11 @@ class StorageFolder(object):
     }
 
     discriminator_value_class_map = {
-        'StorageFile': 'StorageFile'
+        'StorageFileLocation': 'StorageFileLocation'
     }
 
     def __init__(self, storage=None, folder_path=None):
-        """StorageFolder - a model defined in Swagger"""
+        """StorageFolderLocation - a model defined in Swagger"""
 
         self._storage = None
         self._folder_path = None
@@ -68,44 +68,44 @@ class StorageFolder(object):
 
     @property
     def storage(self):
-        """Gets the storage of this StorageFolder.
+        """Gets the storage of this StorageFolderLocation.
 
         A storage name
 
-        :return: The storage of this StorageFolder.
+        :return: The storage of this StorageFolderLocation.
         :rtype: str
         """
         return self._storage
 
     @storage.setter
     def storage(self, storage):
-        """Sets the storage of this StorageFolder.
+        """Sets the storage of this StorageFolderLocation.
 
         A storage name
 
-        :param storage: The storage of this StorageFolder.
+        :param storage: The storage of this StorageFolderLocation.
         :type: str
         """
         self._storage = storage
 
     @property
     def folder_path(self):
-        """Gets the folder_path of this StorageFolder.
+        """Gets the folder_path of this StorageFolderLocation.
 
         A path to a folder in specified storage
 
-        :return: The folder_path of this StorageFolder.
+        :return: The folder_path of this StorageFolderLocation.
         :rtype: str
         """
         return self._folder_path
 
     @folder_path.setter
     def folder_path(self, folder_path):
-        """Sets the folder_path of this StorageFolder.
+        """Sets the folder_path of this StorageFolderLocation.
 
         A path to a folder in specified storage
 
-        :param folder_path: The folder_path of this StorageFolder.
+        :param folder_path: The folder_path of this StorageFolderLocation.
         :type: str
         """
         self._folder_path = folder_path
@@ -149,7 +149,7 @@ class StorageFolder(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, StorageFolder):
+        if not isinstance(other, StorageFolderLocation):
             return False
 
         return self.__dict__ == other.__dict__

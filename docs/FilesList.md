@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | [**list[StorageFile2]**](StorageFile2.md) | Files and folders contained by folder StorageFile. | [optional] 
+**value** | [**list[StorageFile]**](StorageFile.md) | Files and folders contained by folder StorageFile. | [optional] 
 
 
 

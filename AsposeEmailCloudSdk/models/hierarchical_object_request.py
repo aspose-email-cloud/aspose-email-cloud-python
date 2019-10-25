@@ -29,7 +29,7 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.hierarchical_object import HierarchicalObject
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class HierarchicalObjectRequest(object):
@@ -45,7 +45,7 @@ class HierarchicalObjectRequest(object):
     """
     swagger_types = {
         'hierarchical_object': 'HierarchicalObject',
-        'storage_folder': 'StorageFolder'
+        'storage_folder': 'StorageFolderLocation'
     }
 
     attribute_map = {
@@ -96,7 +96,7 @@ class HierarchicalObjectRequest(object):
         Document location in storage
 
         :return: The storage_folder of this HierarchicalObjectRequest.
-        :rtype: StorageFolder
+        :rtype: StorageFolderLocation
         """
         return self._storage_folder
 
@@ -107,7 +107,7 @@ class HierarchicalObjectRequest(object):
         Document location in storage
 
         :param storage_folder: The storage_folder of this HierarchicalObjectRequest.
-        :type: StorageFolder
+        :type: StorageFolderLocation
         """
         self._storage_folder = storage_folder
 

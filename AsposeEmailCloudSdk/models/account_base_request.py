@@ -28,7 +28,7 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class AccountBaseRequest(object):
@@ -45,7 +45,7 @@ class AccountBaseRequest(object):
     swagger_types = {
         'first_account': 'str',
         'second_account': 'str',
-        'storage_folder': 'StorageFolder'
+        'storage_folder': 'StorageFolderLocation'
     }
 
     attribute_map = {
@@ -131,7 +131,7 @@ class AccountBaseRequest(object):
 
 
         :return: The storage_folder of this AccountBaseRequest.
-        :rtype: StorageFolder
+        :rtype: StorageFolderLocation
         """
         return self._storage_folder
 
@@ -141,7 +141,7 @@ class AccountBaseRequest(object):
 
 
         :param storage_folder: The storage_folder of this AccountBaseRequest.
-        :type: StorageFolder
+        :type: StorageFolderLocation
         """
         self._storage_folder = storage_folder
 

@@ -29,8 +29,8 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
-from AsposeEmailCloudSdk.models.storage_file import StorageFile
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class SendEmailBaseRequest(AccountBaseRequest):
@@ -45,7 +45,7 @@ class SendEmailBaseRequest(AccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'email_file': 'StorageFile'
+        'email_file': 'StorageFileLocation'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class SendEmailBaseRequest(AccountBaseRequest):
         Email document (*.eml) file location in storage
 
         :return: The email_file of this SendEmailBaseRequest.
-        :rtype: StorageFile
+        :rtype: StorageFileLocation
         """
         return self._email_file
 
@@ -79,7 +79,7 @@ class SendEmailBaseRequest(AccountBaseRequest):
         Email document (*.eml) file location in storage
 
         :param email_file: The email_file of this SendEmailBaseRequest.
-        :type: StorageFile
+        :type: StorageFileLocation
         """
         if email_file is None:
             raise ValueError("Invalid value for `email_file`, must not be `None`")

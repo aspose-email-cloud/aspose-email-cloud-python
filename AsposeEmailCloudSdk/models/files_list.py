@@ -28,7 +28,7 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.storage_file2 import StorageFile2
+from AsposeEmailCloudSdk.models.storage_file import StorageFile
 
 
 class FilesList(object):
@@ -43,7 +43,7 @@ class FilesList(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'value': 'list[StorageFile2]'
+        'value': 'list[StorageFile]'
     }
 
     attribute_map = {
@@ -66,7 +66,7 @@ class FilesList(object):
         Files and folders contained by folder StorageFile.
 
         :return: The value of this FilesList.
-        :rtype: list[StorageFile2]
+        :rtype: list[StorageFile]
         """
         return self._value
 
@@ -77,7 +77,7 @@ class FilesList(object):
         Files and folders contained by folder StorageFile.
 
         :param value: The value of this FilesList.
-        :type: list[StorageFile2]
+        :type: list[StorageFile]
         """
         self._value = value
 

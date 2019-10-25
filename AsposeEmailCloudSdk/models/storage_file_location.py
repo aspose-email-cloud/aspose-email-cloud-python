@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="SaveEmailAccountRequest.py">
+#  <copyright company="Aspose" file="StorageFileLocation.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -28,12 +28,11 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.email_account_request import EmailAccountRequest
-from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
-class SaveEmailAccountRequest(EmailAccountRequest):
-    """Save email account settings with login/password authentication request
+class StorageFileLocation(StorageFolderLocation):
+    """A storage file location information
     """
 
     """
@@ -44,47 +43,47 @@ class SaveEmailAccountRequest(EmailAccountRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'password': 'str'
+        'file_name': 'str'
     }
 
     attribute_map = {
-        'password': 'Password'
+        'file_name': 'FileName'
     }
 
-    def __init__(self, password=None):
-        """SaveEmailAccountRequest - a model defined in Swagger"""
+    def __init__(self, file_name=None):
+        """StorageFileLocation - a model defined in Swagger"""
 
-        self._password = None
+        self._file_name = None
         self.discriminator = None
 
-        if password is not None:
-            self.password = password
+        if file_name is not None:
+            self.file_name = file_name
 
     @property
-    def password(self):
-        """Gets the password of this SaveEmailAccountRequest.
+    def file_name(self):
+        """Gets the file_name of this StorageFileLocation.
 
-        Email account password
+        A file name in storage
 
-        :return: The password of this SaveEmailAccountRequest.
+        :return: The file_name of this StorageFileLocation.
         :rtype: str
         """
-        return self._password
+        return self._file_name
 
-    @password.setter
-    def password(self, password):
-        """Sets the password of this SaveEmailAccountRequest.
+    @file_name.setter
+    def file_name(self, file_name):
+        """Sets the file_name of this StorageFileLocation.
 
-        Email account password
+        A file name in storage
 
-        :param password: The password of this SaveEmailAccountRequest.
+        :param file_name: The file_name of this StorageFileLocation.
         :type: str
         """
-        if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")
-        if password is not None and len(password) < 1:
-            raise ValueError("Invalid value for `password`, length must be greater than or equal to `1`")
-        self._password = password
+        if file_name is None:
+            raise ValueError("Invalid value for `file_name`, must not be `None`")
+        if file_name is not None and len(file_name) < 1:
+            raise ValueError("Invalid value for `file_name`, length must be greater than or equal to `1`")
+        self._file_name = file_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -120,7 +119,7 @@ class SaveEmailAccountRequest(EmailAccountRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, SaveEmailAccountRequest):
+        if not isinstance(other, StorageFileLocation):
             return False
 
         return self.__dict__ == other.__dict__

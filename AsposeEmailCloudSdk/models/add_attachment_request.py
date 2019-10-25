@@ -28,7 +28,7 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class AddAttachmentRequest(object):
@@ -43,8 +43,8 @@ class AddAttachmentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'document_folder': 'StorageFolder',
-        'attachment_folder': 'StorageFolder'
+        'document_folder': 'StorageFolderLocation',
+        'attachment_folder': 'StorageFolderLocation'
     }
 
     attribute_map = {
@@ -71,7 +71,7 @@ class AddAttachmentRequest(object):
         Storage folder location of document
 
         :return: The document_folder of this AddAttachmentRequest.
-        :rtype: StorageFolder
+        :rtype: StorageFolderLocation
         """
         return self._document_folder
 
@@ -82,7 +82,7 @@ class AddAttachmentRequest(object):
         Storage folder location of document
 
         :param document_folder: The document_folder of this AddAttachmentRequest.
-        :type: StorageFolder
+        :type: StorageFolderLocation
         """
         self._document_folder = document_folder
 
@@ -93,7 +93,7 @@ class AddAttachmentRequest(object):
         Storage folder location of an attachment
 
         :return: The attachment_folder of this AddAttachmentRequest.
-        :rtype: StorageFolder
+        :rtype: StorageFolderLocation
         """
         return self._attachment_folder
 
@@ -104,7 +104,7 @@ class AddAttachmentRequest(object):
         Storage folder location of an attachment
 
         :param attachment_folder: The attachment_folder of this AddAttachmentRequest.
-        :type: StorageFolder
+        :type: StorageFolderLocation
         """
         self._attachment_folder = attachment_folder
 

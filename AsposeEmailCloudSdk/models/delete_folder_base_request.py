@@ -29,7 +29,7 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
-from AsposeEmailCloudSdk.models.storage_folder import StorageFolder
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class DeleteFolderBaseRequest(AccountBaseRequest):

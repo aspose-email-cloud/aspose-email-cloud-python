@@ -1,11 +1,12 @@
-# AsposeEmailCloudSdk.models.SendEmailBaseRequest
+# AsposeEmailCloudSdk.models.StorageFolderLocation
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email_file** | [**StorageFileLocation**](StorageFileLocation.md) | Email document (*.eml) file location in storage | 
+**storage** | **str** | A storage name | [optional] 
+**folder_path** | **str** | A path to a folder in specified storage | [optional] 
 
- Parent class: [AccountBaseRequest](AccountBaseRequest.md)
+
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to README]](README.md)
 
