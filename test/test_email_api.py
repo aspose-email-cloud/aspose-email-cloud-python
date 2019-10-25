@@ -29,6 +29,20 @@ class TestEmailApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_add_calendar_attachment(self):
+        """Test case for add_calendar_attachment
+
+        Adds an attachment to iCalendar file  # noqa: E501
+        """
+        pass
+
+    def test_add_contact_attachment(self):
+        """Test case for add_contact_attachment
+
+        Add attachment to contact document  # noqa: E501
+        """
+        pass
+
     def test_add_email_attachment(self):
         """Test case for add_email_attachment
 
@@ -36,10 +50,199 @@ class TestEmailApi(unittest.TestCase):
         """
         pass
 
+    def test_add_mapi_attachment(self):
+        """Test case for add_mapi_attachment
+
+        Add attachment to document  # noqa: E501
+        """
+        pass
+
+    def test_append_email_message(self):
+        """Test case for append_email_message
+
+        Adds an email from *.eml file to specified folder in email account  # noqa: E501
+        """
+        pass
+
+    def test_append_mime_message(self):
+        """Test case for append_mime_message
+
+        Adds an email from MIME to specified folder in email account  # noqa: E501
+        """
+        pass
+
+    def test_copy_file(self):
+        """Test case for copy_file
+
+        Copy file  # noqa: E501
+        """
+        pass
+
+    def test_copy_folder(self):
+        """Test case for copy_folder
+
+        Copy folder  # noqa: E501
+        """
+        pass
+
+    def test_create_calendar(self):
+        """Test case for create_calendar
+
+        Create calendar file  # noqa: E501
+        """
+        pass
+
+    def test_create_contact(self):
+        """Test case for create_contact
+
+        Create contact document  # noqa: E501
+        """
+        pass
+
     def test_create_email(self):
         """Test case for create_email
 
         Create an email document  # noqa: E501
+        """
+        pass
+
+    def test_create_email_folder(self):
+        """Test case for create_email_folder
+
+        Create new folder in email account  # noqa: E501
+        """
+        pass
+
+    def test_create_folder(self):
+        """Test case for create_folder
+
+        Create the folder  # noqa: E501
+        """
+        pass
+
+    def test_create_mapi(self):
+        """Test case for create_mapi
+
+        Create new document  # noqa: E501
+        """
+        pass
+
+    def test_delete_calendar_property(self):
+        """Test case for delete_calendar_property
+
+        Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}  # noqa: E501
+        """
+        pass
+
+    def test_delete_contact_property(self):
+        """Test case for delete_contact_property
+
+        Delete property from indexed property list  # noqa: E501
+        """
+        pass
+
+    def test_delete_email_folder(self):
+        """Test case for delete_email_folder
+
+        Delete a folder in email account  # noqa: E501
+        """
+        pass
+
+    def test_delete_email_message(self):
+        """Test case for delete_email_message
+
+        Delete message from email account by id  # noqa: E501
+        """
+        pass
+
+    def test_delete_file(self):
+        """Test case for delete_file
+
+        Delete file  # noqa: E501
+        """
+        pass
+
+    def test_delete_folder(self):
+        """Test case for delete_folder
+
+        Delete folder  # noqa: E501
+        """
+        pass
+
+    def test_delete_mapi_attachment(self):
+        """Test case for delete_mapi_attachment
+
+        Remove attachment from document  # noqa: E501
+        """
+        pass
+
+    def test_delete_mapi_properties(self):
+        """Test case for delete_mapi_properties
+
+        Delete document properties  # noqa: E501
+        """
+        pass
+
+    def test_download_file(self):
+        """Test case for download_file
+
+        Download file  # noqa: E501
+        """
+        pass
+
+    def test_fetch_email_message(self):
+        """Test case for fetch_email_message
+
+        Fetch message mime from email account  # noqa: E501
+        """
+        pass
+
+    def test_get_calendar(self):
+        """Test case for get_calendar
+
+        Get calendar file properties  # noqa: E501
+        """
+        pass
+
+    def test_get_calendar_attachment(self):
+        """Test case for get_calendar_attachment
+
+        Get iCalendar document attachment by name  # noqa: E501
+        """
+        pass
+
+    def test_get_calendar_list(self):
+        """Test case for get_calendar_list
+
+        Get iCalendar files list in folder on storage  # noqa: E501
+        """
+        pass
+
+    def test_get_contact_attachment(self):
+        """Test case for get_contact_attachment
+
+        Get attachment file by name  # noqa: E501
+        """
+        pass
+
+    def test_get_contact_list(self):
+        """Test case for get_contact_list
+
+        Get contact list from storage folder  # noqa: E501
+        """
+        pass
+
+    def test_get_contact_properties(self):
+        """Test case for get_contact_properties
+
+        Get contact document properties  # noqa: E501
+        """
+        pass
+
+    def test_get_disc_usage(self):
+        """Test case for get_disc_usage
+
+        Get disc usage  # noqa: E501
         """
         pass
 
@@ -64,10 +267,157 @@ class TestEmailApi(unittest.TestCase):
         """
         pass
 
+    def test_get_file_versions(self):
+        """Test case for get_file_versions
+
+        Get file versions  # noqa: E501
+        """
+        pass
+
+    def test_get_files_list(self):
+        """Test case for get_files_list
+
+        Get all files and folders within a folder  # noqa: E501
+        """
+        pass
+
+    def test_get_mapi_attachment(self):
+        """Test case for get_mapi_attachment
+
+        Get document attachment as file stream  # noqa: E501
+        """
+        pass
+
+    def test_get_mapi_attachments(self):
+        """Test case for get_mapi_attachments
+
+        Get document attachment list  # noqa: E501
+        """
+        pass
+
+    def test_get_mapi_list(self):
+        """Test case for get_mapi_list
+
+        Get document list from storage folder  # noqa: E501
+        """
+        pass
+
+    def test_get_mapi_properties(self):
+        """Test case for get_mapi_properties
+
+        Get document properties  # noqa: E501
+        """
+        pass
+
+    def test_list_email_folders(self):
+        """Test case for list_email_folders
+
+        Get folders list in email account  # noqa: E501
+        """
+        pass
+
+    def test_list_email_messages(self):
+        """Test case for list_email_messages
+
+        Get messages from folder, filtered by query  # noqa: E501
+        """
+        pass
+
+    def test_move_file(self):
+        """Test case for move_file
+
+        Move file  # noqa: E501
+        """
+        pass
+
+    def test_move_folder(self):
+        """Test case for move_folder
+
+        Move folder  # noqa: E501
+        """
+        pass
+
+    def test_object_exists(self):
+        """Test case for object_exists
+
+        Check if file or folder exists  # noqa: E501
+        """
+        pass
+
+    def test_save_mail_account(self):
+        """Test case for save_mail_account
+
+        Create email account file (*.account) with login/password authentication  # noqa: E501
+        """
+        pass
+
+    def test_save_mail_o_auth_account(self):
+        """Test case for save_mail_o_auth_account
+
+        Create email account file (*.account) with OAuth  # noqa: E501
+        """
+        pass
+
+    def test_send_email(self):
+        """Test case for send_email
+
+        Send an email from *.eml file located on storage  # noqa: E501
+        """
+        pass
+
+    def test_send_email_mime(self):
+        """Test case for send_email_mime
+
+        Send an email specified by MIME in request  # noqa: E501
+        """
+        pass
+
     def test_set_email_property(self):
         """Test case for set_email_property
 
         Set email document property value  # noqa: E501
+        """
+        pass
+
+    def test_set_email_read_flag(self):
+        """Test case for set_email_read_flag
+
+        Sets \"Message is read\" flag  # noqa: E501
+        """
+        pass
+
+    def test_storage_exists(self):
+        """Test case for storage_exists
+
+        Check if storage exists  # noqa: E501
+        """
+        pass
+
+    def test_update_calendar_properties(self):
+        """Test case for update_calendar_properties
+
+        Update calendar file properties  # noqa: E501
+        """
+        pass
+
+    def test_update_contact_properties(self):
+        """Test case for update_contact_properties
+
+        Update contact document properties  # noqa: E501
+        """
+        pass
+
+    def test_update_mapi_properties(self):
+        """Test case for update_mapi_properties
+
+        Update document properties  # noqa: E501
+        """
+        pass
+
+    def test_upload_file(self):
+        """Test case for upload_file
+
+        Upload file  # noqa: E501
         """
         pass
 

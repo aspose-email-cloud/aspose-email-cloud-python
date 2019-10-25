@@ -63,7 +63,7 @@ class GetEmailAttachmentRequest(BaseRequest):
             raise ValueError("Missing the required parameter `file_name` when calling `get_email_attachment`")
 
         collection_formats = {}
-        path = '/email/{fileName}/attachments/{attachment}'
+        path = '/email/{fileName}/attachments'
         path_params = {}
         if self.attachment is not None:
             path_params[self._lowercase_first_letter('attachment')] = self.attachment

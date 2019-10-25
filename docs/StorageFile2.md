@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **size** | **int** | File or folder size. | 
 **path** | **str** | File or folder path. | [optional] 
 
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to README]](README.md)
 
 

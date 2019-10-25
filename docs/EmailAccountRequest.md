@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **description** | **str** | Email account description | [optional] 
 **storage_file** | [**StorageFile**](StorageFile.md) | A storage file location info to store email account | 
 
+
+
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to README]](README.md)
 
 
