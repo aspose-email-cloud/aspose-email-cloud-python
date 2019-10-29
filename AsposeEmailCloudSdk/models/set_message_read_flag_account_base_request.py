@@ -49,8 +49,8 @@ class SetMessageReadFlagAccountBaseRequest(AccountBaseRequest):
     }
 
     attribute_map = {
-        'message_id': 'MessageId',
-        'is_read': 'IsRead'
+        'message_id': 'messageId',
+        'is_read': 'isRead'
     }
 
     def __init__(self, message_id=None, is_read=None):

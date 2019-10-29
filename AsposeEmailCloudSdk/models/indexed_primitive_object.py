@@ -48,8 +48,8 @@ class IndexedPrimitiveObject(BaseObject):
     }
 
     attribute_map = {
-        'index': 'Index',
-        'value': 'Value'
+        'index': 'index',
+        'value': 'value'
     }
 
     def __init__(self, index=None, value=None):

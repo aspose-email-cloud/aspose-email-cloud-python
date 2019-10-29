@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.FilesUploadResult
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.HierarchicalObjectResponse
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.ValueResponse
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

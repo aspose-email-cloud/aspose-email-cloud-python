@@ -45,7 +45,7 @@ class StorageExist(object):
     }
 
     attribute_map = {
-        'exists': 'Exists'
+        'exists': 'exists'
     }
 
     def __init__(self, exists=None):

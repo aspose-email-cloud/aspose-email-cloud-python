@@ -47,7 +47,7 @@ class StorageFileLocation(StorageFolderLocation):
     }
 
     attribute_map = {
-        'file_name': 'FileName'
+        'file_name': 'fileName'
     }
 
     def __init__(self, file_name=None):

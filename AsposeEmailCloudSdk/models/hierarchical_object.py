@@ -47,7 +47,7 @@ class HierarchicalObject(BaseObject):
     }
 
     attribute_map = {
-        'internal_properties': 'InternalProperties'
+        'internal_properties': 'internalProperties'
     }
 
     def __init__(self, internal_properties=None):

@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.ListResponseOfString
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

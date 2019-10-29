@@ -46,8 +46,8 @@ class AsposeResponse(object):
     }
 
     attribute_map = {
-        'code': 'Code',
-        'status': 'Status'
+        'code': 'code',
+        'status': 'status'
     }
 
     discriminator_value_class_map = {

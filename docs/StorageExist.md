@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.StorageExist
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

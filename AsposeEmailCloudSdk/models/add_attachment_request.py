@@ -48,8 +48,8 @@ class AddAttachmentRequest(object):
     }
 
     attribute_map = {
-        'document_folder': 'DocumentFolder',
-        'attachment_folder': 'AttachmentFolder'
+        'document_folder': 'documentFolder',
+        'attachment_folder': 'attachmentFolder'
     }
 
     def __init__(self, document_folder=None, attachment_folder=None):

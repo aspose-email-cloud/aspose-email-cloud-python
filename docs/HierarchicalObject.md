@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.HierarchicalObject
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

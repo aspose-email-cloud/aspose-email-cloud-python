@@ -49,9 +49,9 @@ class AccountBaseRequest(object):
     }
 
     attribute_map = {
-        'first_account': 'FirstAccount',
-        'second_account': 'SecondAccount',
-        'storage_folder': 'StorageFolder'
+        'first_account': 'firstAccount',
+        'second_account': 'secondAccount',
+        'storage_folder': 'storageFolder'
     }
 
     discriminator_value_class_map = {

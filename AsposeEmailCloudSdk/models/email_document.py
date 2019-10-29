@@ -49,8 +49,8 @@ class EmailDocument(object):
     }
 
     attribute_map = {
-        'links': 'Links',
-        'document_properties': 'DocumentProperties'
+        'links': 'links',
+        'document_properties': 'documentProperties'
     }
 
     def __init__(self, links=None, document_properties=None):

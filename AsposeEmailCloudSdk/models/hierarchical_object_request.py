@@ -49,8 +49,8 @@ class HierarchicalObjectRequest(object):
     }
 
     attribute_map = {
-        'hierarchical_object': 'HierarchicalObject',
-        'storage_folder': 'StorageFolder'
+        'hierarchical_object': 'hierarchicalObject',
+        'storage_folder': 'storageFolder'
     }
 
     def __init__(self, hierarchical_object=None, storage_folder=None):

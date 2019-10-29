@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.DiscUsage
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

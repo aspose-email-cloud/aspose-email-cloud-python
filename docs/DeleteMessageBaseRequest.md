@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.DeleteMessageBaseRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

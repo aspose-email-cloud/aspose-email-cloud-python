@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.CreateFolderBaseRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

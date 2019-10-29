@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.EmailAccountRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

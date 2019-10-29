@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.AppendEmailMimeBaseRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

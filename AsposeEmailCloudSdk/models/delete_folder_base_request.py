@@ -49,8 +49,8 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
     }
 
     attribute_map = {
-        'folder': 'Folder',
-        'delete_permanently': 'DeletePermanently'
+        'folder': 'folder',
+        'delete_permanently': 'deletePermanently'
     }
 
     def __init__(self, folder=None, delete_permanently=None):

@@ -46,8 +46,8 @@ class BaseObject(object):
     }
 
     attribute_map = {
-        'name': 'Name',
-        'type': 'Type'
+        'name': 'name',
+        'type': 'type'
     }
 
     discriminator_value_class_map = {

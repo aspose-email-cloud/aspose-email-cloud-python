@@ -49,7 +49,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
     }
 
     attribute_map = {
-        'email_file': 'EmailFile'
+        'email_file': 'emailFile'
     }
 
     def __init__(self, email_file=None):

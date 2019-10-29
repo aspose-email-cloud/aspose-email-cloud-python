@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.BaseObject
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

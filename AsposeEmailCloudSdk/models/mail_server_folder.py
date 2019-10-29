@@ -46,8 +46,8 @@ class MailServerFolder(object):
     }
 
     attribute_map = {
-        'name': 'Name',
-        'id': 'Id'
+        'name': 'name',
+        'id': 'id'
     }
 
     def __init__(self, name=None, id=None):

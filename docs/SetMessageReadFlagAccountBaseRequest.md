@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.SetMessageReadFlagAccountBaseRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

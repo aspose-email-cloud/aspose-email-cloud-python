@@ -49,8 +49,8 @@ class HierarchicalObjectResponse(object):
     }
 
     attribute_map = {
-        'hierarchical_object': 'HierarchicalObject',
-        'storage_file': 'StorageFile'
+        'hierarchical_object': 'hierarchicalObject',
+        'storage_file': 'storageFile'
     }
 
     def __init__(self, hierarchical_object=None, storage_file=None):

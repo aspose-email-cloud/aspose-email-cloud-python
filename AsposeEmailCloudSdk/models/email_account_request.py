@@ -53,13 +53,13 @@ class EmailAccountRequest(object):
     }
 
     attribute_map = {
-        'host': 'Host',
-        'port': 'Port',
-        'login': 'Login',
-        'security_options': 'SecurityOptions',
-        'protocol_type': 'ProtocolType',
-        'description': 'Description',
-        'storage_file': 'StorageFile'
+        'host': 'host',
+        'port': 'port',
+        'login': 'login',
+        'security_options': 'securityOptions',
+        'protocol_type': 'protocolType',
+        'description': 'description',
+        'storage_file': 'storageFile'
     }
 
     discriminator_value_class_map = {

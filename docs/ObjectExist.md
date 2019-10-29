@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.ObjectExist
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -36,9 +36,9 @@ class ContactFormat(object):
     """
     allowed enum values
     """
-    _0 = "0"
-    _1 = "1"
-    _2 = "2"
+    VCARD = "VCard"
+    WEBDAV = "WebDav"
+    MSG = "Msg"
 
     """
     Attributes:

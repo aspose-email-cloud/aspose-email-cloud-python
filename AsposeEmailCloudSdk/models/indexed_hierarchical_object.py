@@ -48,8 +48,8 @@ class IndexedHierarchicalObject(BaseObject):
     }
 
     attribute_map = {
-        'index': 'Index',
-        'internal_properties': 'InternalProperties'
+        'index': 'index',
+        'internal_properties': 'internalProperties'
     }
 
     def __init__(self, index=None, internal_properties=None):

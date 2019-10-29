@@ -45,7 +45,7 @@ class ListResponseOfString(object):
     }
 
     attribute_map = {
-        'value': 'Value'
+        'value': 'value'
     }
 
     def __init__(self, value=None):

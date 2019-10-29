@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.AddAttachmentRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

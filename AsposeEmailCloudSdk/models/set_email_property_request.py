@@ -49,8 +49,8 @@ class SetEmailPropertyRequest(object):
     }
 
     attribute_map = {
-        'email_property': 'EmailProperty',
-        'storage_folder': 'StorageFolder'
+        'email_property': 'emailProperty',
+        'storage_folder': 'storageFolder'
     }
 
     def __init__(self, email_property=None, storage_folder=None):

@@ -49,8 +49,8 @@ class CreateEmailRequest(object):
     }
 
     attribute_map = {
-        'email_document': 'EmailDocument',
-        'storage_folder': 'StorageFolder'
+        'email_document': 'emailDocument',
+        'storage_folder': 'storageFolder'
     }
 
     def __init__(self, email_document=None, storage_folder=None):

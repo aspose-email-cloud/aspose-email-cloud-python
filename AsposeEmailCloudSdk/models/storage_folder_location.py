@@ -46,8 +46,8 @@ class StorageFolderLocation(object):
     }
 
     attribute_map = {
-        'storage': 'Storage',
-        'folder_path': 'FolderPath'
+        'storage': 'storage',
+        'folder_path': 'folderPath'
     }
 
     discriminator_value_class_map = {

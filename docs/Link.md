@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.Link
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

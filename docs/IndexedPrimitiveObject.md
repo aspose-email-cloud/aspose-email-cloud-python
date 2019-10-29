@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.IndexedPrimitiveObject
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

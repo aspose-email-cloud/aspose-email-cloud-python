@@ -47,7 +47,7 @@ class MimeResponse(AsposeResponse):
     }
 
     attribute_map = {
-        'mime': 'Mime'
+        'mime': 'mime'
     }
 
     def __init__(self, mime=None):

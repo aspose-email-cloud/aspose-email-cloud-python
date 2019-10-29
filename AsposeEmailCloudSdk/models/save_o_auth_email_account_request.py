@@ -50,9 +50,9 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
     }
 
     attribute_map = {
-        'client_id': 'ClientId',
-        'client_secret': 'ClientSecret',
-        'refresh_token': 'RefreshToken'
+        'client_id': 'clientId',
+        'client_secret': 'clientSecret',
+        'refresh_token': 'refreshToken'
     }
 
     def __init__(self, client_id=None, client_secret=None, refresh_token=None):

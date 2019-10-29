@@ -49,11 +49,11 @@ class StorageFile(object):
     }
 
     attribute_map = {
-        'name': 'Name',
-        'is_folder': 'IsFolder',
-        'modified_date': 'ModifiedDate',
-        'size': 'Size',
-        'path': 'Path'
+        'name': 'name',
+        'is_folder': 'isFolder',
+        'modified_date': 'modifiedDate',
+        'size': 'size',
+        'path': 'path'
     }
 
     discriminator_value_class_map = {

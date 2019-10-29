@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.StorageFileLocation
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

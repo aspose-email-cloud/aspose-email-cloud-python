@@ -75,7 +75,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name | 
  **request** | [**AddAttachmentRequest**](AddAttachmentRequest.md)| Add attachment request | 
@@ -105,7 +105,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name | 
  **request** | [**AddAttachmentRequest**](AddAttachmentRequest.md)| Add attachment request | 
@@ -502,7 +502,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Create contact request | 
 
@@ -530,7 +530,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Create contact request | 
 
@@ -812,7 +812,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **member_name** | **str**| Indexed property name | 
  **index** | **int**| Property index | 
@@ -844,7 +844,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **member_name** | **str**| Indexed property name | 
  **index** | **int**| Property index | 
@@ -1464,7 +1464,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
@@ -1496,7 +1496,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
@@ -1526,7 +1526,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
  **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
@@ -1558,7 +1558,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
  **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
@@ -1587,7 +1587,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
@@ -1617,7 +1617,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
@@ -2874,7 +2874,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Properties that should be updated/added | 
 
@@ -2902,7 +2902,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **int**| Contact document format | 
+ **format** | **str**| Contact document format | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Properties that should be updated/added | 
 

@@ -48,7 +48,7 @@ class EmailDocumentResponse(AsposeResponse):
     }
 
     attribute_map = {
-        'document': 'Document'
+        'document': 'document'
     }
 
     def __init__(self, document=None):

@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.EmailProperty
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -49,8 +49,8 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
     }
 
     attribute_map = {
-        'folder': 'Folder',
-        'mark_as_sent': 'MarkAsSent'
+        'folder': 'folder',
+        'mark_as_sent': 'markAsSent'
     }
 
     def __init__(self, folder=None, mark_as_sent=None):

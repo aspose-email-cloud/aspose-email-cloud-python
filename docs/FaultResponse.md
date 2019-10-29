@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.FaultResponse
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

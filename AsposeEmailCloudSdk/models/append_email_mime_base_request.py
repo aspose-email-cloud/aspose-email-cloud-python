@@ -48,7 +48,7 @@ class AppendEmailMimeBaseRequest(AppendEmailAccountBaseRequest):
     }
 
     attribute_map = {
-        'base64_mime_message': 'Base64MimeMessage'
+        'base64_mime_message': 'base64MimeMessage'
     }
 
     def __init__(self, base64_mime_message=None):

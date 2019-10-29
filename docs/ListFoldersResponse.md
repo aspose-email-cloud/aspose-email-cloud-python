@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.ListFoldersResponse
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

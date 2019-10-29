@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.DeleteFolderBaseRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

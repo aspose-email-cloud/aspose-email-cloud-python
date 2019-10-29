@@ -46,8 +46,8 @@ class ErrorDetails(object):
     }
 
     attribute_map = {
-        'request_id': 'RequestId',
-        '_date': 'Date'
+        'request_id': 'requestId',
+        '_date': 'date'
     }
 
     def __init__(self, request_id=None, _date=None):

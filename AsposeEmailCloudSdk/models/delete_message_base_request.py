@@ -49,8 +49,8 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
     }
 
     attribute_map = {
-        'message_id': 'MessageId',
-        'delete_permanently': 'DeletePermanently'
+        'message_id': 'messageId',
+        'delete_permanently': 'deletePermanently'
     }
 
     def __init__(self, message_id=None, delete_permanently=None):

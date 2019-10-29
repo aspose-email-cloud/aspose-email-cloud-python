@@ -48,7 +48,7 @@ class SaveEmailAccountRequest(EmailAccountRequest):
     }
 
     attribute_map = {
-        'password': 'Password'
+        'password': 'password'
     }
 
     def __init__(self, password=None):

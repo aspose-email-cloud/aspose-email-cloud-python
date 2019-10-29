@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.MailServerFolder
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

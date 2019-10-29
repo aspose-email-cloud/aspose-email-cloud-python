@@ -47,7 +47,7 @@ class FaultResponse(AsposeResponse):
     }
 
     attribute_map = {
-        'message': 'Message'
+        'message': 'message'
     }
 
     def __init__(self, message=None):

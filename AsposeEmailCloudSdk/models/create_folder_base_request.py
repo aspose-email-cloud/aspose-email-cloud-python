@@ -49,8 +49,8 @@ class CreateFolderBaseRequest(AccountBaseRequest):
     }
 
     attribute_map = {
-        'folder': 'Folder',
-        'parent_folder': 'ParentFolder'
+        'folder': 'folder',
+        'parent_folder': 'parentFolder'
     }
 
     def __init__(self, folder=None, parent_folder=None):

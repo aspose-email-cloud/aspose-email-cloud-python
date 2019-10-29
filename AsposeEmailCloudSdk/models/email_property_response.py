@@ -48,7 +48,7 @@ class EmailPropertyResponse(AsposeResponse):
     }
 
     attribute_map = {
-        'email_property': 'EmailProperty'
+        'email_property': 'emailProperty'
     }
 
     def __init__(self, email_property=None):

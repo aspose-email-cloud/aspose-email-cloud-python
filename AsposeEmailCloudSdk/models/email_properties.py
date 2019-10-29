@@ -49,8 +49,8 @@ class EmailProperties(object):
     }
 
     attribute_map = {
-        'link': 'Link',
-        'list': 'List'
+        'link': 'link',
+        'list': 'list'
     }
 
     def __init__(self, link=None, list=None):

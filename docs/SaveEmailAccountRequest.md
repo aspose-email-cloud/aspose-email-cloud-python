@@ -1,5 +1,4 @@
 # AsposeEmailCloudSdk.models.SaveEmailAccountRequest
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

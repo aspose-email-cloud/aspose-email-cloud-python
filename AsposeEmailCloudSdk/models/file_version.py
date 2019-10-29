@@ -48,8 +48,8 @@ class FileVersion(StorageFile):
     }
 
     attribute_map = {
-        'version_id': 'VersionId',
-        'is_latest': 'IsLatest'
+        'version_id': 'versionId',
+        'is_latest': 'isLatest'
     }
 
     def __init__(self, version_id=None, is_latest=None):
