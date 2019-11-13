@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "AsposeEmailCloudSdk"
-VERSION = "19.11.59"
+VERSION = "19.11.11"
 # To install the library, run the following
 #
 # python setup.py install
