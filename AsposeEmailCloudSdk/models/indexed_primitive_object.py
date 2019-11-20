@@ -43,22 +43,31 @@ class IndexedPrimitiveObject(BaseObject):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name': 'str',
+        'type': 'str',
         'index': 'int',
         'value': 'str'
     }
 
     attribute_map = {
+        'name': 'name',
+        'type': 'type',
         'index': 'index',
         'value': 'value'
     }
 
-    def __init__(self, index=None, value=None):
+    def __init__(self, name=None, type=None, index=None, value=None):
         """IndexedPrimitiveObject - a model defined in Swagger"""
+        super(IndexedPrimitiveObject, self).__init__()
 
         self._index = None
         self._value = None
         self.discriminator = None
 
+        if name is not None:
+            self.name = name
+        if type is not None:
+            self.type = type
         if index is not None:
             self.index = index
         if value is not None:

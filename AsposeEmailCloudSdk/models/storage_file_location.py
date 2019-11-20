@@ -43,19 +43,28 @@ class StorageFileLocation(StorageFolderLocation):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'storage': 'str',
+        'folder_path': 'str',
         'file_name': 'str'
     }
 
     attribute_map = {
+        'storage': 'storage',
+        'folder_path': 'folderPath',
         'file_name': 'fileName'
     }
 
-    def __init__(self, file_name=None):
+    def __init__(self, storage=None, folder_path=None, file_name=None):
         """StorageFileLocation - a model defined in Swagger"""
+        super(StorageFileLocation, self).__init__()
 
         self._file_name = None
         self.discriminator = None
 
+        if storage is not None:
+            self.storage = storage
+        if folder_path is not None:
+            self.folder_path = folder_path
         if file_name is not None:
             self.file_name = file_name
 

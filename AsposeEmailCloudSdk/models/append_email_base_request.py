@@ -45,19 +45,40 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'first_account': 'str',
+        'second_account': 'str',
+        'storage_folder': 'StorageFolderLocation',
+        'folder': 'str',
+        'mark_as_sent': 'bool',
         'email_file': 'StorageFileLocation'
     }
 
     attribute_map = {
+        'first_account': 'firstAccount',
+        'second_account': 'secondAccount',
+        'storage_folder': 'storageFolder',
+        'folder': 'folder',
+        'mark_as_sent': 'markAsSent',
         'email_file': 'emailFile'
     }
 
-    def __init__(self, email_file=None):
+    def __init__(self, first_account=None, second_account=None, storage_folder=None, folder=None, mark_as_sent=None, email_file=None):
         """AppendEmailBaseRequest - a model defined in Swagger"""
+        super(AppendEmailBaseRequest, self).__init__()
 
         self._email_file = None
         self.discriminator = None
 
+        if first_account is not None:
+            self.first_account = first_account
+        if second_account is not None:
+            self.second_account = second_account
+        if storage_folder is not None:
+            self.storage_folder = storage_folder
+        if folder is not None:
+            self.folder = folder
+        if mark_as_sent is not None:
+            self.mark_as_sent = mark_as_sent
         if email_file is not None:
             self.email_file = email_file
 

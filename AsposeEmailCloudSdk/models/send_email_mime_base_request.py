@@ -44,19 +44,32 @@ class SendEmailMimeBaseRequest(AccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'first_account': 'str',
+        'second_account': 'str',
+        'storage_folder': 'StorageFolderLocation',
         'base64_mime_message': 'str'
     }
 
     attribute_map = {
+        'first_account': 'firstAccount',
+        'second_account': 'secondAccount',
+        'storage_folder': 'storageFolder',
         'base64_mime_message': 'base64MimeMessage'
     }
 
-    def __init__(self, base64_mime_message=None):
+    def __init__(self, first_account=None, second_account=None, storage_folder=None, base64_mime_message=None):
         """SendEmailMimeBaseRequest - a model defined in Swagger"""
+        super(SendEmailMimeBaseRequest, self).__init__()
 
         self._base64_mime_message = None
         self.discriminator = None
 
+        if first_account is not None:
+            self.first_account = first_account
+        if second_account is not None:
+            self.second_account = second_account
+        if storage_folder is not None:
+            self.storage_folder = storage_folder
         if base64_mime_message is not None:
             self.base64_mime_message = base64_mime_message
 

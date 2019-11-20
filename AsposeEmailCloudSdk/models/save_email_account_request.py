@@ -44,19 +44,48 @@ class SaveEmailAccountRequest(EmailAccountRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'host': 'str',
+        'port': 'int',
+        'login': 'str',
+        'security_options': 'object',
+        'protocol_type': 'object',
+        'description': 'str',
+        'storage_file': 'StorageFileLocation',
         'password': 'str'
     }
 
     attribute_map = {
+        'host': 'host',
+        'port': 'port',
+        'login': 'login',
+        'security_options': 'securityOptions',
+        'protocol_type': 'protocolType',
+        'description': 'description',
+        'storage_file': 'storageFile',
         'password': 'password'
     }
 
-    def __init__(self, password=None):
+    def __init__(self, host=None, port=None, login=None, security_options=None, protocol_type=None, description=None, storage_file=None, password=None):
         """SaveEmailAccountRequest - a model defined in Swagger"""
+        super(SaveEmailAccountRequest, self).__init__()
 
         self._password = None
         self.discriminator = None
 
+        if host is not None:
+            self.host = host
+        if port is not None:
+            self.port = port
+        if login is not None:
+            self.login = login
+        if security_options is not None:
+            self.security_options = security_options
+        if protocol_type is not None:
+            self.protocol_type = protocol_type
+        if description is not None:
+            self.description = description
+        if storage_file is not None:
+            self.storage_file = storage_file
         if password is not None:
             self.password = password
 

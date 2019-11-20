@@ -45,19 +45,32 @@ class SendEmailBaseRequest(AccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'first_account': 'str',
+        'second_account': 'str',
+        'storage_folder': 'StorageFolderLocation',
         'email_file': 'StorageFileLocation'
     }
 
     attribute_map = {
+        'first_account': 'firstAccount',
+        'second_account': 'secondAccount',
+        'storage_folder': 'storageFolder',
         'email_file': 'emailFile'
     }
 
-    def __init__(self, email_file=None):
+    def __init__(self, first_account=None, second_account=None, storage_folder=None, email_file=None):
         """SendEmailBaseRequest - a model defined in Swagger"""
+        super(SendEmailBaseRequest, self).__init__()
 
         self._email_file = None
         self.discriminator = None
 
+        if first_account is not None:
+            self.first_account = first_account
+        if second_account is not None:
+            self.second_account = second_account
+        if storage_folder is not None:
+            self.storage_folder = storage_folder
         if email_file is not None:
             self.email_file = email_file
 

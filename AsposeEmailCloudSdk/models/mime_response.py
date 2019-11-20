@@ -43,19 +43,28 @@ class MimeResponse(AsposeResponse):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'code': 'str',
+        'status': 'str',
         'mime': 'str'
     }
 
     attribute_map = {
+        'code': 'code',
+        'status': 'status',
         'mime': 'mime'
     }
 
-    def __init__(self, mime=None):
+    def __init__(self, code=None, status=None, mime=None):
         """MimeResponse - a model defined in Swagger"""
+        super(MimeResponse, self).__init__()
 
         self._mime = None
         self.discriminator = None
 
+        if code is not None:
+            self.code = code
+        if status is not None:
+            self.status = status
         if mime is not None:
             self.mime = mime
 

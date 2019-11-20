@@ -44,25 +44,54 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'host': 'str',
+        'port': 'int',
+        'login': 'str',
+        'security_options': 'object',
+        'protocol_type': 'object',
+        'description': 'str',
+        'storage_file': 'StorageFileLocation',
         'client_id': 'str',
         'client_secret': 'str',
         'refresh_token': 'str'
     }
 
     attribute_map = {
+        'host': 'host',
+        'port': 'port',
+        'login': 'login',
+        'security_options': 'securityOptions',
+        'protocol_type': 'protocolType',
+        'description': 'description',
+        'storage_file': 'storageFile',
         'client_id': 'clientId',
         'client_secret': 'clientSecret',
         'refresh_token': 'refreshToken'
     }
 
-    def __init__(self, client_id=None, client_secret=None, refresh_token=None):
+    def __init__(self, host=None, port=None, login=None, security_options=None, protocol_type=None, description=None, storage_file=None, client_id=None, client_secret=None, refresh_token=None):
         """SaveOAuthEmailAccountRequest - a model defined in Swagger"""
+        super(SaveOAuthEmailAccountRequest, self).__init__()
 
         self._client_id = None
         self._client_secret = None
         self._refresh_token = None
         self.discriminator = None
 
+        if host is not None:
+            self.host = host
+        if port is not None:
+            self.port = port
+        if login is not None:
+            self.login = login
+        if security_options is not None:
+            self.security_options = security_options
+        if protocol_type is not None:
+            self.protocol_type = protocol_type
+        if description is not None:
+            self.description = description
+        if storage_file is not None:
+            self.storage_file = storage_file
         if client_id is not None:
             self.client_id = client_id
         if client_secret is not None:

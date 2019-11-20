@@ -44,22 +44,35 @@ class SetMessageReadFlagAccountBaseRequest(AccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'first_account': 'str',
+        'second_account': 'str',
+        'storage_folder': 'StorageFolderLocation',
         'message_id': 'str',
         'is_read': 'bool'
     }
 
     attribute_map = {
+        'first_account': 'firstAccount',
+        'second_account': 'secondAccount',
+        'storage_folder': 'storageFolder',
         'message_id': 'messageId',
         'is_read': 'isRead'
     }
 
-    def __init__(self, message_id=None, is_read=None):
+    def __init__(self, first_account=None, second_account=None, storage_folder=None, message_id=None, is_read=None):
         """SetMessageReadFlagAccountBaseRequest - a model defined in Swagger"""
+        super(SetMessageReadFlagAccountBaseRequest, self).__init__()
 
         self._message_id = None
         self._is_read = None
         self.discriminator = None
 
+        if first_account is not None:
+            self.first_account = first_account
+        if second_account is not None:
+            self.second_account = second_account
+        if storage_folder is not None:
+            self.storage_folder = storage_folder
         if message_id is not None:
             self.message_id = message_id
         if is_read is not None:

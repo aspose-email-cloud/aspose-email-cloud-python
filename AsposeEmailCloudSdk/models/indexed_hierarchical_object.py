@@ -43,22 +43,31 @@ class IndexedHierarchicalObject(BaseObject):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name': 'str',
+        'type': 'str',
         'index': 'int',
         'internal_properties': 'list[BaseObject]'
     }
 
     attribute_map = {
+        'name': 'name',
+        'type': 'type',
         'index': 'index',
         'internal_properties': 'internalProperties'
     }
 
-    def __init__(self, index=None, internal_properties=None):
+    def __init__(self, name=None, type=None, index=None, internal_properties=None):
         """IndexedHierarchicalObject - a model defined in Swagger"""
+        super(IndexedHierarchicalObject, self).__init__()
 
         self._index = None
         self._internal_properties = None
         self.discriminator = None
 
+        if name is not None:
+            self.name = name
+        if type is not None:
+            self.type = type
         if index is not None:
             self.index = index
         if internal_properties is not None:

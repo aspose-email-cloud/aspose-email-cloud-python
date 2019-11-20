@@ -44,22 +44,35 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'first_account': 'str',
+        'second_account': 'str',
+        'storage_folder': 'StorageFolderLocation',
         'folder': 'str',
         'delete_permanently': 'bool'
     }
 
     attribute_map = {
+        'first_account': 'firstAccount',
+        'second_account': 'secondAccount',
+        'storage_folder': 'storageFolder',
         'folder': 'folder',
         'delete_permanently': 'deletePermanently'
     }
 
-    def __init__(self, folder=None, delete_permanently=None):
+    def __init__(self, first_account=None, second_account=None, storage_folder=None, folder=None, delete_permanently=None):
         """DeleteFolderBaseRequest - a model defined in Swagger"""
+        super(DeleteFolderBaseRequest, self).__init__()
 
         self._folder = None
         self._delete_permanently = None
         self.discriminator = None
 
+        if first_account is not None:
+            self.first_account = first_account
+        if second_account is not None:
+            self.second_account = second_account
+        if storage_folder is not None:
+            self.storage_folder = storage_folder
         if folder is not None:
             self.folder = folder
         if delete_permanently is not None:

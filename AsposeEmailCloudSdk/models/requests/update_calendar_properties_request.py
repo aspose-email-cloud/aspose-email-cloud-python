@@ -23,6 +23,7 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.update_calendar_properties_request import UpdateCalendarPropertiesRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest

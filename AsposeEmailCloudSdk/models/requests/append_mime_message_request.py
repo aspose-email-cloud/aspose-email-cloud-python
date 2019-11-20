@@ -23,6 +23,7 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.append_mime_message_request import AppendMimeMessageRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest

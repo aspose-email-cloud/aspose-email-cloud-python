@@ -44,19 +44,28 @@ class EmailDocumentResponse(AsposeResponse):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'code': 'str',
+        'status': 'str',
         'document': 'EmailDocument'
     }
 
     attribute_map = {
+        'code': 'code',
+        'status': 'status',
         'document': 'document'
     }
 
-    def __init__(self, document=None):
+    def __init__(self, code=None, status=None, document=None):
         """EmailDocumentResponse - a model defined in Swagger"""
+        super(EmailDocumentResponse, self).__init__()
 
         self._document = None
         self.discriminator = None
 
+        if code is not None:
+            self.code = code
+        if status is not None:
+            self.status = status
         if document is not None:
             self.document = document
 

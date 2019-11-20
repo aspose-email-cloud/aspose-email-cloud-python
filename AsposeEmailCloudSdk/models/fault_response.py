@@ -43,19 +43,28 @@ class FaultResponse(AsposeResponse):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'code': 'str',
+        'status': 'str',
         'message': 'str'
     }
 
     attribute_map = {
+        'code': 'code',
+        'status': 'status',
         'message': 'message'
     }
 
-    def __init__(self, message=None):
+    def __init__(self, code=None, status=None, message=None):
         """FaultResponse - a model defined in Swagger"""
+        super(FaultResponse, self).__init__()
 
         self._message = None
         self.discriminator = None
 
+        if code is not None:
+            self.code = code
+        if status is not None:
+            self.status = status
         if message is not None:
             self.message = message
 

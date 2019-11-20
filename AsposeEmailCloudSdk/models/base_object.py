@@ -61,7 +61,7 @@ class BaseObject(object):
         """BaseObject - a model defined in Swagger"""
 
         self._name = None
-        self._type = None
+        self._type = self.__class__.__name__
         self.discriminator = 'Type'
 
         if name is not None:
@@ -100,7 +100,7 @@ class BaseObject(object):
         :return: The type of this BaseObject.
         :rtype: str
         """
-        return self._type
+        return self.__class__.__name__
 
     @type.setter
     def type(self, type):
@@ -111,7 +111,7 @@ class BaseObject(object):
         :param type: The type of this BaseObject.
         :type: str
         """
-        self._type = type
+        self._type = self.__class__.__name__
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

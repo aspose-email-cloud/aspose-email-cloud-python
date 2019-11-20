@@ -43,22 +43,43 @@ class FileVersion(StorageFile):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name': 'str',
+        'is_folder': 'bool',
+        'modified_date': 'datetime',
+        'size': 'int',
+        'path': 'str',
         'version_id': 'str',
         'is_latest': 'bool'
     }
 
     attribute_map = {
+        'name': 'name',
+        'is_folder': 'isFolder',
+        'modified_date': 'modifiedDate',
+        'size': 'size',
+        'path': 'path',
         'version_id': 'versionId',
         'is_latest': 'isLatest'
     }
 
-    def __init__(self, version_id=None, is_latest=None):
+    def __init__(self, name=None, is_folder=None, modified_date=None, size=None, path=None, version_id=None, is_latest=None):
         """FileVersion - a model defined in Swagger"""
+        super(FileVersion, self).__init__()
 
         self._version_id = None
         self._is_latest = None
         self.discriminator = None
 
+        if name is not None:
+            self.name = name
+        if is_folder is not None:
+            self.is_folder = is_folder
+        if modified_date is not None:
+            self.modified_date = modified_date
+        if size is not None:
+            self.size = size
+        if path is not None:
+            self.path = path
         if version_id is not None:
             self.version_id = version_id
         if is_latest is not None:

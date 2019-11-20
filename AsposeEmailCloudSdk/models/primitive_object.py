@@ -43,19 +43,28 @@ class PrimitiveObject(BaseObject):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name': 'str',
+        'type': 'str',
         'value': 'str'
     }
 
     attribute_map = {
+        'name': 'name',
+        'type': 'type',
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, name=None, type=None, value=None):
         """PrimitiveObject - a model defined in Swagger"""
+        super(PrimitiveObject, self).__init__()
 
         self._value = None
         self.discriminator = None
 
+        if name is not None:
+            self.name = name
+        if type is not None:
+            self.type = type
         if value is not None:
             self.value = value
 

@@ -44,22 +44,35 @@ class CreateFolderBaseRequest(AccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'first_account': 'str',
+        'second_account': 'str',
+        'storage_folder': 'StorageFolderLocation',
         'folder': 'str',
         'parent_folder': 'str'
     }
 
     attribute_map = {
+        'first_account': 'firstAccount',
+        'second_account': 'secondAccount',
+        'storage_folder': 'storageFolder',
         'folder': 'folder',
         'parent_folder': 'parentFolder'
     }
 
-    def __init__(self, folder=None, parent_folder=None):
+    def __init__(self, first_account=None, second_account=None, storage_folder=None, folder=None, parent_folder=None):
         """CreateFolderBaseRequest - a model defined in Swagger"""
+        super(CreateFolderBaseRequest, self).__init__()
 
         self._folder = None
         self._parent_folder = None
         self.discriminator = None
 
+        if first_account is not None:
+            self.first_account = first_account
+        if second_account is not None:
+            self.second_account = second_account
+        if storage_folder is not None:
+            self.storage_folder = storage_folder
         if folder is not None:
             self.folder = folder
         if parent_folder is not None:
