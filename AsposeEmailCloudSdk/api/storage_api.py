@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="email_api.py">
+#  <copyright company="Aspose" file="storage_api.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -33,7 +33,7 @@ from AsposeEmailCloudSdk.configuration import Configuration
 from AsposeEmailCloudSdk.rest import ApiException
 
 
-class EmailApi(object):
+class StorageApi(object):
     """
     Aspose.Email Cloud API
 
@@ -42,7 +42,7 @@ class EmailApi(object):
     def __init__(self, app_key=None, app_sid=None, base_url=None,
                  api_version=None, debug=False):
         """
-        Initializes a new instance of the EmailApi class.
+        Initializes a new instance of the StorageApi class.
 
         :param app_key: The app key.
         :param app_sid: The app sid.
@@ -60,125 +60,85 @@ class EmailApi(object):
                                       debug=debug)
         self.api_client = ApiClient(configuration)
 
-    def add_email_attachment(self, request):
-        """Adds an attachment to Email document
+    def get_disc_usage(self, request):
+        """Get disc usage
 
 
-        :param request add_email_attachment_request object with parameters
-        :return: EmailDocumentResponse
+        :param request get_disc_usage_request object with parameters
+        :return: DiscUsage
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'POST', 'EmailDocumentResponse')
+        return self.__make_request(http_request, 'GET', 'DiscUsage')
 
-    def add_email_attachment_async(self, request):
-        """Adds an attachment to Email document
+    def get_disc_usage_async(self, request):
+        """Get disc usage
 
 
-        :param request add_email_attachment_request object with parameters
-        :return: EmailDocumentResponse
+        :param request get_disc_usage_request object with parameters
+        :return: DiscUsage
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'POST', 'EmailDocumentResponse')
+        return self.__make_request_async(http_request, 'GET', 'DiscUsage')
 
-    def create_email(self, request):
-        """Create an email document
+    def get_file_versions(self, request):
+        """Get file versions
 
 
-        :param request create_email_request object with parameters
-        :return: EmailDocumentResponse
+        :param request get_file_versions_request object with parameters
+        :return: FileVersions
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'PUT', 'EmailDocumentResponse')
+        return self.__make_request(http_request, 'GET', 'FileVersions')
 
-    def create_email_async(self, request):
-        """Create an email document
+    def get_file_versions_async(self, request):
+        """Get file versions
 
 
-        :param request create_email_request object with parameters
-        :return: EmailDocumentResponse
+        :param request get_file_versions_request object with parameters
+        :return: FileVersions
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'PUT', 'EmailDocumentResponse')
+        return self.__make_request_async(http_request, 'GET', 'FileVersions')
 
-    def get_email(self, request):
-        """Get email document
+    def object_exists(self, request):
+        """Check if file or folder exists
 
 
-        :param request get_email_request object with parameters
-        :return: EmailDocument
+        :param request object_exists_request object with parameters
+        :return: ObjectExist
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'EmailDocument')
+        return self.__make_request(http_request, 'GET', 'ObjectExist')
 
-    def get_email_async(self, request):
-        """Get email document
+    def object_exists_async(self, request):
+        """Check if file or folder exists
 
 
-        :param request get_email_request object with parameters
-        :return: EmailDocument
+        :param request object_exists_request object with parameters
+        :return: ObjectExist
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'EmailDocument')
+        return self.__make_request_async(http_request, 'GET', 'ObjectExist')
 
-    def get_email_attachment(self, request):
-        """Get email attachment by name
+    def storage_exists(self, request):
+        """Check if storage exists
 
 
-        :param request get_email_attachment_request object with parameters
-        :return: file
+        :param request storage_exists_request object with parameters
+        :return: StorageExist
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'file')
+        return self.__make_request(http_request, 'GET', 'StorageExist')
 
-    def get_email_attachment_async(self, request):
-        """Get email attachment by name
+    def storage_exists_async(self, request):
+        """Check if storage exists
 
 
-        :param request get_email_attachment_request object with parameters
-        :return: file
+        :param request storage_exists_request object with parameters
+        :return: StorageExist
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'file')
-
-    def get_email_property(self, request):
-        """Get an email document property by its name
-
-
-        :param request get_email_property_request object with parameters
-        :return: EmailPropertyResponse
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'EmailPropertyResponse')
-
-    def get_email_property_async(self, request):
-        """Get an email document property by its name
-
-
-        :param request get_email_property_request object with parameters
-        :return: EmailPropertyResponse
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
-
-    def set_email_property(self, request):
-        """Set email document property value
-
-
-        :param request set_email_property_request object with parameters
-        :return: EmailPropertyResponse
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'PUT', 'EmailPropertyResponse')
-
-    def set_email_property_async(self, request):
-        """Set email document property value
-
-
-        :param request set_email_property_request object with parameters
-        :return: EmailPropertyResponse
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
+        return self.__make_request_async(http_request, 'GET', 'StorageExist')
 
     def __make_request(self, http_request, method, return_type):
         def call_api():

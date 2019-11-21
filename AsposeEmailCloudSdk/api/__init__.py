@@ -27,4 +27,11 @@
 from __future__ import absolute_import
 
 # import apis into api package
+from AsposeEmailCloudSdk.api.calendar_api import CalendarApi
+from AsposeEmailCloudSdk.api.contact_api import ContactApi
 from AsposeEmailCloudSdk.api.email_api import EmailApi
+from AsposeEmailCloudSdk.api.email_client_api import EmailClientApi
+from AsposeEmailCloudSdk.api.file_api import FileApi
+from AsposeEmailCloudSdk.api.folder_api import FolderApi
+from AsposeEmailCloudSdk.api.mapi_api import MapiApi
+from AsposeEmailCloudSdk.api.storage_api import StorageApi

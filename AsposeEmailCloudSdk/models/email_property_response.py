@@ -28,11 +28,10 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.aspose_response import AsposeResponse
 from AsposeEmailCloudSdk.models.email_property import EmailProperty
 
 
-class EmailPropertyResponse(AsposeResponse):
+class EmailPropertyResponse(object):
     """Email property response.
     """
 
@@ -44,28 +43,19 @@ class EmailPropertyResponse(AsposeResponse):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'str',
-        'status': 'str',
         'email_property': 'EmailProperty'
     }
 
     attribute_map = {
-        'code': 'code',
-        'status': 'status',
         'email_property': 'emailProperty'
     }
 
-    def __init__(self, code=None, status=None, email_property=None):
+    def __init__(self, email_property=None):
         """EmailPropertyResponse - a model defined in Swagger"""
-        super(EmailPropertyResponse, self).__init__()
 
         self._email_property = None
         self.discriminator = None
 
-        if code is not None:
-            self.code = code
-        if status is not None:
-            self.status = status
         if email_property is not None:
             self.email_property = email_property
 

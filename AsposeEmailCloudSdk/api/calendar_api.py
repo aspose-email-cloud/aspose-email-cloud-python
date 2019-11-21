@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="email_api.py">
+#  <copyright company="Aspose" file="calendar_api.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -33,7 +33,7 @@ from AsposeEmailCloudSdk.configuration import Configuration
 from AsposeEmailCloudSdk.rest import ApiException
 
 
-class EmailApi(object):
+class CalendarApi(object):
     """
     Aspose.Email Cloud API
 
@@ -42,7 +42,7 @@ class EmailApi(object):
     def __init__(self, app_key=None, app_sid=None, base_url=None,
                  api_version=None, debug=False):
         """
-        Initializes a new instance of the EmailApi class.
+        Initializes a new instance of the CalendarApi class.
 
         :param app_key: The app key.
         :param app_sid: The app sid.
@@ -60,125 +60,145 @@ class EmailApi(object):
                                       debug=debug)
         self.api_client = ApiClient(configuration)
 
-    def add_email_attachment(self, request):
-        """Adds an attachment to Email document
+    def add_calendar_attachment(self, request):
+        """Adds an attachment to iCalendar file
 
 
-        :param request add_email_attachment_request object with parameters
-        :return: EmailDocumentResponse
+        :param request add_calendar_attachment_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'POST', 'EmailDocumentResponse')
+        return self.__make_request(http_request, 'PUT', None)
 
-    def add_email_attachment_async(self, request):
-        """Adds an attachment to Email document
+    def add_calendar_attachment_async(self, request):
+        """Adds an attachment to iCalendar file
 
 
-        :param request add_email_attachment_request object with parameters
-        :return: EmailDocumentResponse
+        :param request add_calendar_attachment_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'POST', 'EmailDocumentResponse')
+        return self.__make_request_async(http_request, 'PUT', None)
 
-    def create_email(self, request):
-        """Create an email document
+    def create_calendar(self, request):
+        """Create calendar file
 
 
-        :param request create_email_request object with parameters
-        :return: EmailDocumentResponse
+        :param request create_calendar_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'PUT', 'EmailDocumentResponse')
+        return self.__make_request(http_request, 'PUT', None)
 
-    def create_email_async(self, request):
-        """Create an email document
+    def create_calendar_async(self, request):
+        """Create calendar file
 
 
-        :param request create_email_request object with parameters
-        :return: EmailDocumentResponse
+        :param request create_calendar_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'PUT', 'EmailDocumentResponse')
+        return self.__make_request_async(http_request, 'PUT', None)
 
-    def get_email(self, request):
-        """Get email document
+    def delete_calendar_property(self, request):
+        """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}
 
 
-        :param request get_email_request object with parameters
-        :return: EmailDocument
+        :param request delete_calendar_property_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'EmailDocument')
+        return self.__make_request(http_request, 'DELETE', None)
 
-    def get_email_async(self, request):
-        """Get email document
+    def delete_calendar_property_async(self, request):
+        """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}
 
 
-        :param request get_email_request object with parameters
-        :return: EmailDocument
+        :param request delete_calendar_property_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'EmailDocument')
+        return self.__make_request_async(http_request, 'DELETE', None)
 
-    def get_email_attachment(self, request):
-        """Get email attachment by name
+    def get_calendar(self, request):
+        """Get calendar file properties
 
 
-        :param request get_email_attachment_request object with parameters
+        :param request get_calendar_request object with parameters
+        :return: HierarchicalObject
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'HierarchicalObject')
+
+    def get_calendar_async(self, request):
+        """Get calendar file properties
+
+
+        :param request get_calendar_request object with parameters
+        :return: HierarchicalObject
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
+
+    def get_calendar_attachment(self, request):
+        """Get iCalendar document attachment by name
+
+
+        :param request get_calendar_attachment_request object with parameters
         :return: file
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'file')
 
-    def get_email_attachment_async(self, request):
-        """Get email attachment by name
+    def get_calendar_attachment_async(self, request):
+        """Get iCalendar document attachment by name
 
 
-        :param request get_email_attachment_request object with parameters
+        :param request get_calendar_attachment_request object with parameters
         :return: file
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
-    def get_email_property(self, request):
-        """Get an email document property by its name
+    def get_calendar_list(self, request):
+        """Get iCalendar files list in folder on storage
 
 
-        :param request get_email_property_request object with parameters
-        :return: EmailPropertyResponse
+        :param request get_calendar_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'EmailPropertyResponse')
+        return self.__make_request(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def get_email_property_async(self, request):
-        """Get an email document property by its name
+    def get_calendar_list_async(self, request):
+        """Get iCalendar files list in folder on storage
 
 
-        :param request get_email_property_request object with parameters
-        :return: EmailPropertyResponse
+        :param request get_calendar_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def set_email_property(self, request):
-        """Set email document property value
+    def update_calendar_properties(self, request):
+        """Update calendar file properties
 
 
-        :param request set_email_property_request object with parameters
-        :return: EmailPropertyResponse
+        :param request update_calendar_properties_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'PUT', 'EmailPropertyResponse')
+        return self.__make_request(http_request, 'PUT', None)
 
-    def set_email_property_async(self, request):
-        """Set email document property value
+    def update_calendar_properties_async(self, request):
+        """Update calendar file properties
 
 
-        :param request set_email_property_request object with parameters
-        :return: EmailPropertyResponse
+        :param request update_calendar_properties_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
+        return self.__make_request_async(http_request, 'PUT', None)
 
     def __make_request(self, http_request, method, return_type):
         def call_api():

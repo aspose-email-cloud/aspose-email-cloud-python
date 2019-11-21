@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="ListFoldersResponse.py">
+#  <copyright company="Aspose" file="ListResponseOfMailServerFolder.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -28,12 +28,11 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.aspose_response import AsposeResponse
 from AsposeEmailCloudSdk.models.mail_server_folder import MailServerFolder
 
 
-class ListFoldersResponse(AsposeResponse):
-    """Email account folders list
+class ListResponseOfMailServerFolder(object):
+    """
     """
 
     """
@@ -44,47 +43,38 @@ class ListFoldersResponse(AsposeResponse):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'str',
-        'status': 'str',
         'value': 'list[MailServerFolder]'
     }
 
     attribute_map = {
-        'code': 'code',
-        'status': 'status',
         'value': 'value'
     }
 
-    def __init__(self, code=None, status=None, value=None):
-        """ListFoldersResponse - a model defined in Swagger"""
-        super(ListFoldersResponse, self).__init__()
+    def __init__(self, value=None):
+        """ListResponseOfMailServerFolder - a model defined in Swagger"""
 
         self._value = None
         self.discriminator = None
 
-        if code is not None:
-            self.code = code
-        if status is not None:
-            self.status = status
         if value is not None:
             self.value = value
 
     @property
     def value(self):
-        """Gets the value of this ListFoldersResponse.
+        """Gets the value of this ListResponseOfMailServerFolder.
 
 
-        :return: The value of this ListFoldersResponse.
+        :return: The value of this ListResponseOfMailServerFolder.
         :rtype: list[MailServerFolder]
         """
         return self._value
 
     @value.setter
     def value(self, value):
-        """Sets the value of this ListFoldersResponse.
+        """Sets the value of this ListResponseOfMailServerFolder.
 
 
-        :param value: The value of this ListFoldersResponse.
+        :param value: The value of this ListResponseOfMailServerFolder.
         :type: list[MailServerFolder]
         """
         self._value = value
@@ -123,7 +113,7 @@ class ListFoldersResponse(AsposeResponse):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, ListFoldersResponse):
+        if not isinstance(other, ListResponseOfMailServerFolder):
             return False
 
         return self.__dict__ == other.__dict__

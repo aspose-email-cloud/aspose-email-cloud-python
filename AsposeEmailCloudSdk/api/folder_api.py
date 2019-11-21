@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="email_api.py">
+#  <copyright company="Aspose" file="folder_api.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -33,7 +33,7 @@ from AsposeEmailCloudSdk.configuration import Configuration
 from AsposeEmailCloudSdk.rest import ApiException
 
 
-class EmailApi(object):
+class FolderApi(object):
     """
     Aspose.Email Cloud API
 
@@ -42,7 +42,7 @@ class EmailApi(object):
     def __init__(self, app_key=None, app_sid=None, base_url=None,
                  api_version=None, debug=False):
         """
-        Initializes a new instance of the EmailApi class.
+        Initializes a new instance of the FolderApi class.
 
         :param app_key: The app key.
         :param app_sid: The app sid.
@@ -60,125 +60,105 @@ class EmailApi(object):
                                       debug=debug)
         self.api_client = ApiClient(configuration)
 
-    def add_email_attachment(self, request):
-        """Adds an attachment to Email document
+    def copy_folder(self, request):
+        """Copy folder
 
 
-        :param request add_email_attachment_request object with parameters
-        :return: EmailDocumentResponse
+        :param request copy_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'POST', 'EmailDocumentResponse')
+        return self.__make_request(http_request, 'PUT', None)
 
-    def add_email_attachment_async(self, request):
-        """Adds an attachment to Email document
+    def copy_folder_async(self, request):
+        """Copy folder
 
 
-        :param request add_email_attachment_request object with parameters
-        :return: EmailDocumentResponse
+        :param request copy_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'POST', 'EmailDocumentResponse')
+        return self.__make_request_async(http_request, 'PUT', None)
 
-    def create_email(self, request):
-        """Create an email document
+    def create_folder(self, request):
+        """Create the folder
 
 
-        :param request create_email_request object with parameters
-        :return: EmailDocumentResponse
+        :param request create_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'PUT', 'EmailDocumentResponse')
+        return self.__make_request(http_request, 'PUT', None)
 
-    def create_email_async(self, request):
-        """Create an email document
+    def create_folder_async(self, request):
+        """Create the folder
 
 
-        :param request create_email_request object with parameters
-        :return: EmailDocumentResponse
+        :param request create_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'PUT', 'EmailDocumentResponse')
+        return self.__make_request_async(http_request, 'PUT', None)
 
-    def get_email(self, request):
-        """Get email document
+    def delete_folder(self, request):
+        """Delete folder
 
 
-        :param request get_email_request object with parameters
-        :return: EmailDocument
+        :param request delete_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'EmailDocument')
+        return self.__make_request(http_request, 'DELETE', None)
 
-    def get_email_async(self, request):
-        """Get email document
+    def delete_folder_async(self, request):
+        """Delete folder
 
 
-        :param request get_email_request object with parameters
-        :return: EmailDocument
+        :param request delete_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'EmailDocument')
+        return self.__make_request_async(http_request, 'DELETE', None)
 
-    def get_email_attachment(self, request):
-        """Get email attachment by name
+    def get_files_list(self, request):
+        """Get all files and folders within a folder
 
 
-        :param request get_email_attachment_request object with parameters
-        :return: file
+        :param request get_files_list_request object with parameters
+        :return: FilesList
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'file')
+        return self.__make_request(http_request, 'GET', 'FilesList')
 
-    def get_email_attachment_async(self, request):
-        """Get email attachment by name
+    def get_files_list_async(self, request):
+        """Get all files and folders within a folder
 
 
-        :param request get_email_attachment_request object with parameters
-        :return: file
+        :param request get_files_list_request object with parameters
+        :return: FilesList
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'file')
+        return self.__make_request_async(http_request, 'GET', 'FilesList')
 
-    def get_email_property(self, request):
-        """Get an email document property by its name
+    def move_folder(self, request):
+        """Move folder
 
 
-        :param request get_email_property_request object with parameters
-        :return: EmailPropertyResponse
+        :param request move_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'EmailPropertyResponse')
+        return self.__make_request(http_request, 'PUT', None)
 
-    def get_email_property_async(self, request):
-        """Get an email document property by its name
+    def move_folder_async(self, request):
+        """Move folder
 
 
-        :param request get_email_property_request object with parameters
-        :return: EmailPropertyResponse
+        :param request move_folder_request object with parameters
+        :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
-
-    def set_email_property(self, request):
-        """Set email document property value
-
-
-        :param request set_email_property_request object with parameters
-        :return: EmailPropertyResponse
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'PUT', 'EmailPropertyResponse')
-
-    def set_email_property_async(self, request):
-        """Set email document property value
-
-
-        :param request set_email_property_request object with parameters
-        :return: EmailPropertyResponse
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
+        return self.__make_request_async(http_request, 'PUT', None)
 
     def __make_request(self, http_request, method, return_type):
         def call_api():

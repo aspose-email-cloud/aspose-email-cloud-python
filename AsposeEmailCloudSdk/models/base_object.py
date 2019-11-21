@@ -52,8 +52,8 @@ class BaseObject(object):
 
     discriminator_value_class_map = {
         'PrimitiveObject': 'PrimitiveObject',
-        'HierarchicalObject': 'HierarchicalObject',
         'IndexedHierarchicalObject': 'IndexedHierarchicalObject',
+        'HierarchicalObject': 'HierarchicalObject',
         'IndexedPrimitiveObject': 'IndexedPrimitiveObject'
     }
 
