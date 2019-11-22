@@ -82,4 +82,3 @@ class SetEmailReadFlagRequest(BaseRequest):
 
         return HttpRequest(path, path_params, query_params, header_params, form_params, body_params, local_var_files,
                            collection_formats, auth_settings)
-

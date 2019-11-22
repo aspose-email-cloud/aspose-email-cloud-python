@@ -60,6 +60,46 @@ class EmailApi(object):
                                       debug=debug)
         self.api_client = ApiClient(configuration)
 
+    def add_calendar_attachment(self, request):
+        """Adds an attachment to iCalendar file
+
+
+        :param request add_calendar_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def add_calendar_attachment_async(self, request):
+        """Adds an attachment to iCalendar file
+
+
+        :param request add_calendar_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def add_contact_attachment(self, request):
+        """Add attachment to contact document
+
+
+        :param request add_contact_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def add_contact_attachment_async(self, request):
+        """Add attachment to contact document
+
+
+        :param request add_contact_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
     def add_email_attachment(self, request):
         """Adds an attachment to Email document
 
@@ -80,6 +120,146 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'EmailDocumentResponse')
 
+    def add_mapi_attachment(self, request):
+        """Add attachment to document
+
+
+        :param request add_mapi_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def add_mapi_attachment_async(self, request):
+        """Add attachment to document
+
+
+        :param request add_mapi_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def append_email_message(self, request):
+        """Adds an email from *.eml file to specified folder in email account
+
+
+        :param request append_email_message_request object with parameters
+        :return: EmailPropertyResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'EmailPropertyResponse')
+
+    def append_email_message_async(self, request):
+        """Adds an email from *.eml file to specified folder in email account
+
+
+        :param request append_email_message_request object with parameters
+        :return: EmailPropertyResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
+
+    def append_mime_message(self, request):
+        """Adds an email from MIME to specified folder in email account
+
+
+        :param request append_mime_message_request object with parameters
+        :return: ValueResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'ValueResponse')
+
+    def append_mime_message_async(self, request):
+        """Adds an email from MIME to specified folder in email account
+
+
+        :param request append_mime_message_request object with parameters
+        :return: ValueResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'ValueResponse')
+
+    def copy_file(self, request):
+        """Copy file
+
+
+        :param request copy_file_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def copy_file_async(self, request):
+        """Copy file
+
+
+        :param request copy_file_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def copy_folder(self, request):
+        """Copy folder
+
+
+        :param request copy_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def copy_folder_async(self, request):
+        """Copy folder
+
+
+        :param request copy_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def create_calendar(self, request):
+        """Create calendar file
+
+
+        :param request create_calendar_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def create_calendar_async(self, request):
+        """Create calendar file
+
+
+        :param request create_calendar_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def create_contact(self, request):
+        """Create contact document
+
+
+        :param request create_contact_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def create_contact_async(self, request):
+        """Create contact document
+
+
+        :param request create_contact_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
     def create_email(self, request):
         """Create an email document
 
@@ -99,6 +279,406 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'EmailDocumentResponse')
+
+    def create_email_folder(self, request):
+        """Create new folder in email account
+
+
+        :param request create_email_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def create_email_folder_async(self, request):
+        """Create new folder in email account
+
+
+        :param request create_email_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def create_folder(self, request):
+        """Create the folder
+
+
+        :param request create_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def create_folder_async(self, request):
+        """Create the folder
+
+
+        :param request create_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def create_mapi(self, request):
+        """Create new document
+
+
+        :param request create_mapi_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def create_mapi_async(self, request):
+        """Create new document
+
+
+        :param request create_mapi_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def delete_calendar_property(self, request):
+        """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}
+
+
+        :param request delete_calendar_property_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_calendar_property_async(self, request):
+        """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}
+
+
+        :param request delete_calendar_property_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def delete_contact_property(self, request):
+        """Delete property from indexed property list
+
+
+        :param request delete_contact_property_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_contact_property_async(self, request):
+        """Delete property from indexed property list
+
+
+        :param request delete_contact_property_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def delete_email_folder(self, request):
+        """Delete a folder in email account
+
+
+        :param request delete_email_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_email_folder_async(self, request):
+        """Delete a folder in email account
+
+
+        :param request delete_email_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def delete_email_message(self, request):
+        """Delete message from email account by id
+
+
+        :param request delete_email_message_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_email_message_async(self, request):
+        """Delete message from email account by id
+
+
+        :param request delete_email_message_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def delete_file(self, request):
+        """Delete file
+
+
+        :param request delete_file_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_file_async(self, request):
+        """Delete file
+
+
+        :param request delete_file_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def delete_folder(self, request):
+        """Delete folder
+
+
+        :param request delete_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_folder_async(self, request):
+        """Delete folder
+
+
+        :param request delete_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def delete_mapi_attachment(self, request):
+        """Remove attachment from document
+
+
+        :param request delete_mapi_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_mapi_attachment_async(self, request):
+        """Remove attachment from document
+
+
+        :param request delete_mapi_attachment_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def delete_mapi_properties(self, request):
+        """Delete document properties
+
+
+        :param request delete_mapi_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_mapi_properties_async(self, request):
+        """Delete document properties
+
+
+        :param request delete_mapi_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
+    def download_file(self, request):
+        """Download file
+
+
+        :param request download_file_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def download_file_async(self, request):
+        """Download file
+
+
+        :param request download_file_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
+    def fetch_email_message(self, request):
+        """Fetch message mime from email account
+
+
+        :param request fetch_email_message_request object with parameters
+        :return: MimeResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'MimeResponse')
+
+    def fetch_email_message_async(self, request):
+        """Fetch message mime from email account
+
+
+        :param request fetch_email_message_request object with parameters
+        :return: MimeResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'MimeResponse')
+
+    def get_calendar(self, request):
+        """Get calendar file properties
+
+
+        :param request get_calendar_request object with parameters
+        :return: HierarchicalObject
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'HierarchicalObject')
+
+    def get_calendar_async(self, request):
+        """Get calendar file properties
+
+
+        :param request get_calendar_request object with parameters
+        :return: HierarchicalObject
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
+
+    def get_calendar_attachment(self, request):
+        """Get iCalendar document attachment by name
+
+
+        :param request get_calendar_attachment_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_calendar_attachment_async(self, request):
+        """Get iCalendar document attachment by name
+
+
+        :param request get_calendar_attachment_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
+    def get_calendar_list(self, request):
+        """Get iCalendar files list in folder on storage
+
+
+        :param request get_calendar_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
+
+    def get_calendar_list_async(self, request):
+        """Get iCalendar files list in folder on storage
+
+
+        :param request get_calendar_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
+
+    def get_contact_attachment(self, request):
+        """Get attachment file by name
+
+
+        :param request get_contact_attachment_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_contact_attachment_async(self, request):
+        """Get attachment file by name
+
+
+        :param request get_contact_attachment_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
+    def get_contact_list(self, request):
+        """Get contact list from storage folder
+
+
+        :param request get_contact_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
+
+    def get_contact_list_async(self, request):
+        """Get contact list from storage folder
+
+
+        :param request get_contact_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
+
+    def get_contact_properties(self, request):
+        """Get contact document properties
+
+
+        :param request get_contact_properties_request object with parameters
+        :return: HierarchicalObject
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'HierarchicalObject')
+
+    def get_contact_properties_async(self, request):
+        """Get contact document properties
+
+
+        :param request get_contact_properties_request object with parameters
+        :return: HierarchicalObject
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
+
+    def get_disc_usage(self, request):
+        """Get disc usage
+
+
+        :param request get_disc_usage_request object with parameters
+        :return: DiscUsage
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'DiscUsage')
+
+    def get_disc_usage_async(self, request):
+        """Get disc usage
+
+
+        :param request get_disc_usage_request object with parameters
+        :return: DiscUsage
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'DiscUsage')
 
     def get_email(self, request):
         """Get email document
@@ -160,6 +740,308 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
 
+    def get_file_versions(self, request):
+        """Get file versions
+
+
+        :param request get_file_versions_request object with parameters
+        :return: FileVersions
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'FileVersions')
+
+    def get_file_versions_async(self, request):
+        """Get file versions
+
+
+        :param request get_file_versions_request object with parameters
+        :return: FileVersions
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'FileVersions')
+
+    def get_files_list(self, request):
+        """Get all files and folders within a folder
+
+
+        :param request get_files_list_request object with parameters
+        :return: FilesList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'FilesList')
+
+    def get_files_list_async(self, request):
+        """Get all files and folders within a folder
+
+
+        :param request get_files_list_request object with parameters
+        :return: FilesList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'FilesList')
+
+    def get_mapi_attachment(self, request):
+        """Get document attachment as file stream
+
+
+        :param request get_mapi_attachment_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_mapi_attachment_async(self, request):
+        """Get document attachment as file stream
+
+
+        :param request get_mapi_attachment_request object with parameters
+        :return: file
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
+    def get_mapi_attachments(self, request):
+        """Get document attachment list
+
+
+        :param request get_mapi_attachments_request object with parameters
+        :return: ListResponseOfString
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfString')
+
+    def get_mapi_attachments_async(self, request):
+        """Get document attachment list
+
+
+        :param request get_mapi_attachments_request object with parameters
+        :return: ListResponseOfString
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfString')
+
+    def get_mapi_list(self, request):
+        """Get document list from storage folder
+
+
+        :param request get_mapi_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
+
+    def get_mapi_list_async(self, request):
+        """Get document list from storage folder
+
+
+        :param request get_mapi_list_request object with parameters
+        :return: ListResponseOfHierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
+
+    def get_mapi_properties(self, request):
+        """Get document properties
+
+
+        :param request get_mapi_properties_request object with parameters
+        :return: HierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'HierarchicalObjectResponse')
+
+    def get_mapi_properties_async(self, request):
+        """Get document properties
+
+
+        :param request get_mapi_properties_request object with parameters
+        :return: HierarchicalObjectResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'HierarchicalObjectResponse')
+
+    def list_email_folders(self, request):
+        """Get folders list in email account
+
+
+        :param request list_email_folders_request object with parameters
+        :return: ListResponseOfMailServerFolder
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfMailServerFolder')
+
+    def list_email_folders_async(self, request):
+        """Get folders list in email account
+
+
+        :param request list_email_folders_request object with parameters
+        :return: ListResponseOfMailServerFolder
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfMailServerFolder')
+
+    def list_email_messages(self, request):
+        """Get messages from folder, filtered by query
+
+        The query string should have the following view.  The example of a simple expression:   '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.  The number of simple expressions can make a compound one, ex.: (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator  At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message  Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message  Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item  Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once  The field value (<Field value>) can take the following values: For text fields - any string, For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\", For flags (fields of boolean type) - either \"True\", or \"False\"
+
+        :param request list_email_messages_request object with parameters
+        :return: ListResponseOfString
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfString')
+
+    def list_email_messages_async(self, request):
+        """Get messages from folder, filtered by query
+
+        The query string should have the following view.  The example of a simple expression:   '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.  The number of simple expressions can make a compound one, ex.: (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator  At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message  Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message  Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item  Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once  The field value (<Field value>) can take the following values: For text fields - any string, For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\", For flags (fields of boolean type) - either \"True\", or \"False\"
+
+        :param request list_email_messages_request object with parameters
+        :return: ListResponseOfString
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfString')
+
+    def move_file(self, request):
+        """Move file
+
+
+        :param request move_file_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def move_file_async(self, request):
+        """Move file
+
+
+        :param request move_file_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def move_folder(self, request):
+        """Move folder
+
+
+        :param request move_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def move_folder_async(self, request):
+        """Move folder
+
+
+        :param request move_folder_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def object_exists(self, request):
+        """Check if file or folder exists
+
+
+        :param request object_exists_request object with parameters
+        :return: ObjectExist
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ObjectExist')
+
+    def object_exists_async(self, request):
+        """Check if file or folder exists
+
+
+        :param request object_exists_request object with parameters
+        :return: ObjectExist
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ObjectExist')
+
+    def save_mail_account(self, request):
+        """Create email account file (*.account) with login/password authentication
+
+
+        :param request save_mail_account_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', None)
+
+    def save_mail_account_async(self, request):
+        """Create email account file (*.account) with login/password authentication
+
+
+        :param request save_mail_account_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', None)
+
+    def save_mail_o_auth_account(self, request):
+        """Create email account file (*.account) with OAuth
+
+
+        :param request save_mail_o_auth_account_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', None)
+
+    def save_mail_o_auth_account_async(self, request):
+        """Create email account file (*.account) with OAuth
+
+
+        :param request save_mail_o_auth_account_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', None)
+
+    def send_email(self, request):
+        """Send an email from *.eml file located on storage
+
+
+        :param request send_email_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', None)
+
+    def send_email_async(self, request):
+        """Send an email from *.eml file located on storage
+
+
+        :param request send_email_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', None)
+
+    def send_email_mime(self, request):
+        """Send an email specified by MIME in request
+
+
+        :param request send_email_mime_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', None)
+
+    def send_email_mime_async(self, request):
+        """Send an email specified by MIME in request
+
+
+        :param request send_email_mime_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', None)
+
     def set_email_property(self, request):
         """Set email document property value
 
@@ -179,6 +1061,126 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
+
+    def set_email_read_flag(self, request):
+        """Sets \&quot;Message is read\&quot; flag
+
+
+        :param request set_email_read_flag_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', None)
+
+    def set_email_read_flag_async(self, request):
+        """Sets \&quot;Message is read\&quot; flag
+
+
+        :param request set_email_read_flag_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', None)
+
+    def storage_exists(self, request):
+        """Check if storage exists
+
+
+        :param request storage_exists_request object with parameters
+        :return: StorageExist
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'StorageExist')
+
+    def storage_exists_async(self, request):
+        """Check if storage exists
+
+
+        :param request storage_exists_request object with parameters
+        :return: StorageExist
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'StorageExist')
+
+    def update_calendar_properties(self, request):
+        """Update calendar file properties
+
+
+        :param request update_calendar_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def update_calendar_properties_async(self, request):
+        """Update calendar file properties
+
+
+        :param request update_calendar_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def update_contact_properties(self, request):
+        """Update contact document properties
+
+
+        :param request update_contact_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def update_contact_properties_async(self, request):
+        """Update contact document properties
+
+
+        :param request update_contact_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def update_mapi_properties(self, request):
+        """Update document properties
+
+
+        :param request update_mapi_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def update_mapi_properties_async(self, request):
+        """Update document properties
+
+
+        :param request update_mapi_properties_request object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def upload_file(self, request):
+        """Upload file
+
+
+        :param request upload_file_request object with parameters
+        :return: FilesUploadResult
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'FilesUploadResult')
+
+    def upload_file_async(self, request):
+        """Upload file
+
+
+        :param request upload_file_request object with parameters
+        :return: FilesUploadResult
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'FilesUploadResult')
 
     def __make_request(self, http_request, method, return_type):
         def call_api():
