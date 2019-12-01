@@ -36,7 +36,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+add_calendar_attachment_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -92,7 +93,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+add_contact_attachment_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -148,7 +150,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**EmailDocumentResponse**](EmailDocumentResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+add_email_attachment_async(request).get() returns [**EmailDocumentResponse**](EmailDocumentResponse.md)
 
 ### Request Parameters
 ```python
@@ -202,7 +205,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+add_mapi_attachment_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -252,7 +256,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfAiBcrOcrData**](ListResponseOfAiBcrOcrData.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_ocr_async(request).get() returns [**ListResponseOfAiBcrOcrData**](ListResponseOfAiBcrOcrData.md)
 
 ### Request Parameters
 ```python
@@ -298,7 +303,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfAiBcrOcrData**](ListResponseOfAiBcrOcrData.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_ocr_storage_async(request).get() returns [**ListResponseOfAiBcrOcrData**](ListResponseOfAiBcrOcrData.md)
 
 ### Request Parameters
 ```python
@@ -344,7 +350,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfHierarchicalObject**](ListResponseOfHierarchicalObject.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_parse_async(request).get() returns [**ListResponseOfHierarchicalObject**](ListResponseOfHierarchicalObject.md)
 
 ### Request Parameters
 ```python
@@ -390,7 +397,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfHierarchicalObject**](ListResponseOfHierarchicalObject.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_parse_ocr_data_async(request).get() returns [**ListResponseOfHierarchicalObject**](ListResponseOfHierarchicalObject.md)
 
 ### Request Parameters
 ```python
@@ -436,7 +444,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfStorageFileLocation**](ListResponseOfStorageFileLocation.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_parse_ocr_data_storage_async(request).get() returns [**ListResponseOfStorageFileLocation**](ListResponseOfStorageFileLocation.md)
 
 ### Request Parameters
 ```python
@@ -482,7 +491,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfStorageFileLocation**](ListResponseOfStorageFileLocation.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_parse_storage_async(request).get() returns [**ListResponseOfStorageFileLocation**](ListResponseOfStorageFileLocation.md)
 
 ### Request Parameters
 ```python
@@ -538,7 +548,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**AiNameWeightedVariants**](AiNameWeightedVariants.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_complete_async(request).get() returns [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
 ### Request Parameters
 ```python
@@ -604,7 +615,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**AiNameWeightedVariants**](AiNameWeightedVariants.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_expand_async(request).get() returns [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
 ### Request Parameters
 ```python
@@ -660,7 +672,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**AiNameWeightedVariants**](AiNameWeightedVariants.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_expand_parsed_async(request).get() returns [**AiNameWeightedVariants**](AiNameWeightedVariants.md)
 
 ### Request Parameters
 ```python
@@ -716,7 +729,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**AiNameFormatted**](AiNameFormatted.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_format_async(request).get() returns [**AiNameFormatted**](AiNameFormatted.md)
 
 ### Request Parameters
 ```python
@@ -772,7 +786,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**AiNameFormatted**](AiNameFormatted.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_format_parsed_async(request).get() returns [**AiNameFormatted**](AiNameFormatted.md)
 
 ### Request Parameters
 ```python
@@ -828,7 +843,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfAiNameGenderHypothesis**](ListResponseOfAiNameGenderHypothesis.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_genderize_async(request).get() returns [**ListResponseOfAiNameGenderHypothesis**](ListResponseOfAiNameGenderHypothesis.md)
 
 ### Request Parameters
 ```python
@@ -884,7 +900,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfAiNameGenderHypothesis**](ListResponseOfAiNameGenderHypothesis.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_genderize_parsed_async(request).get() returns [**ListResponseOfAiNameGenderHypothesis**](ListResponseOfAiNameGenderHypothesis.md)
 
 ### Request Parameters
 ```python
@@ -942,7 +959,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**AiNameMatchResult**](AiNameMatchResult.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_match_async(request).get() returns [**AiNameMatchResult**](AiNameMatchResult.md)
 
 ### Request Parameters
 ```python
@@ -1000,7 +1018,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**AiNameMatchResult**](AiNameMatchResult.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_match_parsed_async(request).get() returns [**AiNameMatchResult**](AiNameMatchResult.md)
 
 ### Request Parameters
 ```python
@@ -1056,7 +1075,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfAiNameComponent**](ListResponseOfAiNameComponent.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_parse_async(request).get() returns [**ListResponseOfAiNameComponent**](ListResponseOfAiNameComponent.md)
 
 ### Request Parameters
 ```python
@@ -1122,7 +1142,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfAiNameExtracted**](ListResponseOfAiNameExtracted.md)
+Returns multiprocessing.pool.AsyncResult.
+ai_name_parse_email_address_async(request).get() returns [**ListResponseOfAiNameExtracted**](ListResponseOfAiNameExtracted.md)
 
 ### Request Parameters
 ```python
@@ -1178,7 +1199,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**EmailPropertyResponse**](EmailPropertyResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+append_email_message_async(request).get() returns [**EmailPropertyResponse**](EmailPropertyResponse.md)
 
 ### Request Parameters
 ```python
@@ -1224,7 +1246,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ValueResponse**](ValueResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+append_mime_message_async(request).get() returns [**ValueResponse**](ValueResponse.md)
 
 ### Request Parameters
 ```python
@@ -1278,7 +1301,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+copy_file_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1338,7 +1362,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+copy_folder_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1392,7 +1417,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+create_calendar_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1444,7 +1470,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+create_contact_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1496,7 +1523,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**EmailDocumentResponse**](EmailDocumentResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+create_email_async(request).get() returns [**EmailDocumentResponse**](EmailDocumentResponse.md)
 
 ### Request Parameters
 ```python
@@ -1544,7 +1572,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+create_email_folder_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1592,7 +1621,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+create_folder_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1642,7 +1672,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+create_mapi_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1696,7 +1727,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_calendar_property_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1756,7 +1788,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_contact_property_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1810,7 +1843,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_email_folder_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1856,7 +1890,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_email_message_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1906,7 +1941,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_file_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -1960,7 +1996,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_folder_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -2014,7 +2051,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_mapi_attachment_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -2066,7 +2104,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+delete_mapi_properties_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -2118,7 +2157,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-**file**
+Returns multiprocessing.pool.AsyncResult.
+download_file_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -2176,7 +2216,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**MimeResponse**](MimeResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+fetch_email_message_async(request).get() returns [**MimeResponse**](MimeResponse.md)
 
 ### Request Parameters
 ```python
@@ -2234,7 +2275,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**HierarchicalObject**](HierarchicalObject.md)
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_async(request).get() returns [**HierarchicalObject**](HierarchicalObject.md)
 
 ### Request Parameters
 ```python
@@ -2290,7 +2332,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**file**](file.md)
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_attachment_async(request).get() returns [**file**](file.md)
 
 ### Request Parameters
 ```python
@@ -2348,7 +2391,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_list_async(request).get() returns [**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
 
 ### Request Parameters
 ```python
@@ -2408,7 +2452,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**file**](file.md)
+Returns multiprocessing.pool.AsyncResult.
+get_contact_attachment_async(request).get() returns [**file**](file.md)
 
 ### Request Parameters
 ```python
@@ -2470,7 +2515,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+get_contact_list_async(request).get() returns [**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
 
 ### Request Parameters
 ```python
@@ -2530,7 +2576,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**HierarchicalObject**](HierarchicalObject.md)
+Returns multiprocessing.pool.AsyncResult.
+get_contact_properties_async(request).get() returns [**HierarchicalObject**](HierarchicalObject.md)
 
 ### Request Parameters
 ```python
@@ -2582,7 +2629,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**DiscUsage**](DiscUsage.md)
+Returns multiprocessing.pool.AsyncResult.
+get_disc_usage_async(request).get() returns [**DiscUsage**](DiscUsage.md)
 
 ### Request Parameters
 ```python
@@ -2632,7 +2680,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**EmailDocument**](EmailDocument.md)
+Returns multiprocessing.pool.AsyncResult.
+get_email_async(request).get() returns [**EmailDocument**](EmailDocument.md)
 
 ### Request Parameters
 ```python
@@ -2688,7 +2737,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**file**](file.md)
+Returns multiprocessing.pool.AsyncResult.
+get_email_attachment_async(request).get() returns [**file**](file.md)
 
 ### Request Parameters
 ```python
@@ -2746,7 +2796,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**EmailPropertyResponse**](EmailPropertyResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+get_email_property_async(request).get() returns [**EmailPropertyResponse**](EmailPropertyResponse.md)
 
 ### Request Parameters
 ```python
@@ -2800,7 +2851,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**FileVersions**](FileVersions.md)
+Returns multiprocessing.pool.AsyncResult.
+get_file_versions_async(request).get() returns [**FileVersions**](FileVersions.md)
 
 ### Request Parameters
 ```python
@@ -2850,7 +2902,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**FilesList**](FilesList.md)
+Returns multiprocessing.pool.AsyncResult.
+get_files_list_async(request).get() returns [**FilesList**](FilesList.md)
 
 ### Request Parameters
 ```python
@@ -2904,7 +2957,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**file**](file.md)
+Returns multiprocessing.pool.AsyncResult.
+get_mapi_attachment_async(request).get() returns [**file**](file.md)
 
 ### Request Parameters
 ```python
@@ -2960,7 +3014,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfString**](ListResponseOfString.md)
+Returns multiprocessing.pool.AsyncResult.
+get_mapi_attachments_async(request).get() returns [**ListResponseOfString**](ListResponseOfString.md)
 
 ### Request Parameters
 ```python
@@ -3016,7 +3071,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+get_mapi_list_async(request).get() returns [**ListResponseOfHierarchicalObjectResponse**](ListResponseOfHierarchicalObjectResponse.md)
 
 ### Request Parameters
 ```python
@@ -3072,7 +3128,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**HierarchicalObjectResponse**](HierarchicalObjectResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+get_mapi_properties_async(request).get() returns [**HierarchicalObjectResponse**](HierarchicalObjectResponse.md)
 
 ### Request Parameters
 ```python
@@ -3130,7 +3187,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ListResponseOfMailServerFolder**](ListResponseOfMailServerFolder.md)
+Returns multiprocessing.pool.AsyncResult.
+list_email_folders_async(request).get() returns [**ListResponseOfMailServerFolder**](ListResponseOfMailServerFolder.md)
 
 ### Request Parameters
 ```python
@@ -3200,7 +3258,8 @@ The query string should have the following view.      The example of a simple ex
 
 ### Return type
 
-[**ListResponseOfString**](ListResponseOfString.md)
+Returns multiprocessing.pool.AsyncResult.
+list_email_messages_async(request).get() returns [**ListResponseOfString**](ListResponseOfString.md)
 
 ### Request Parameters
 ```python
@@ -3266,7 +3325,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+move_file_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3326,7 +3386,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+move_folder_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3382,7 +3443,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**ObjectExist**](ObjectExist.md)
+Returns multiprocessing.pool.AsyncResult.
+object_exists_async(request).get() returns [**ObjectExist**](ObjectExist.md)
 
 ### Request Parameters
 ```python
@@ -3432,7 +3494,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+save_mail_account_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3478,7 +3541,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+save_mail_o_auth_account_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3524,7 +3588,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+send_email_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3570,7 +3635,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+send_email_mime_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3620,7 +3686,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**EmailPropertyResponse**](EmailPropertyResponse.md)
+Returns multiprocessing.pool.AsyncResult.
+set_email_property_async(request).get() returns [**EmailPropertyResponse**](EmailPropertyResponse.md)
 
 ### Request Parameters
 ```python
@@ -3670,7 +3737,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+set_email_read_flag_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3716,7 +3784,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**StorageExist**](StorageExist.md)
+Returns multiprocessing.pool.AsyncResult.
+storage_exists_async(request).get() returns [**StorageExist**](StorageExist.md)
 
 ### Request Parameters
 ```python
@@ -3764,7 +3833,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+update_calendar_properties_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3816,7 +3886,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+update_contact_properties_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3868,7 +3939,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-void (empty response body)
+Returns multiprocessing.pool.AsyncResult.
+update_mapi_properties_async(request).get() returns void (empty response body)
 
 ### Request Parameters
 ```python
@@ -3920,7 +3992,8 @@ Performs operation asynchronously.
 
 ### Return type
 
-[**FilesUploadResult**](FilesUploadResult.md)
+Returns multiprocessing.pool.AsyncResult.
+upload_file_async(request).get() returns [**FilesUploadResult**](FilesUploadResult.md)
 
 ### Request Parameters
 ```python

@@ -3,17 +3,23 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "../../sdk"))
 from AsposeEmailCloudSdk import api, models
 from AsposeEmailCloudSdk.models import requests
 from datetime import timedelta, datetime
+from conftest import TestData
 
 
-def test_hierarchical(test_data):
-    calendarFile = create_calendar(test_data)
+def test_hierarchical(test_data: TestData):
+    calendarFile = _create_calendar(test_data)
     calendar = test_data.email.get_calendar(requests.GetCalendarRequest(calendarFile, test_data.folder, test_data.storage))
     assert calendar.name == 'CALENDAR'
     assert calendar.type == 'HierarchicalObject'
     primitive_properties = list(filter(lambda x: x.type == 'PrimitiveObject', calendar.internal_properties))
     assert len(primitive_properties) >= 3
 
-def create_calendar(test_data):
+def test_async(test_data: TestData):
+    calendarFile = _create_calendar(test_data)
+    calendar = test_data.email.get_calendar_async(requests.GetCalendarRequest(calendarFile, test_data.folder, test_data.storage)).get()
+    assert calendar.name == 'CALENDAR'
+
+def _create_calendar(test_data):
     name = str(uuid.uuid4())+ ".ics"
     startDate = datetime.today() + timedelta(days=1)
     endDate = startDate + timedelta(hours=1)

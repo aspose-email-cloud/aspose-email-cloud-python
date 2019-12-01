@@ -5,7 +5,7 @@ from AsposeEmailCloudSdk.models import requests
 import pytest
 
 class TestData:
-    def __init__(self, email_api, folder, storage):
+    def __init__(self, email_api: api.EmailApi, folder, storage):
         self.email = email_api
         self.folder = folder
         self.storage = storage
