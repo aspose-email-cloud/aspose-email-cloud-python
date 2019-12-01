@@ -6,7 +6,7 @@ import pytest
 
 class TestData:
     def __init__(self, email_api: api.EmailApi, folder, storage):
-        self.email = email_api
+        self.email = email_api # type: api.EmailApi
         self.folder = folder
         self.storage = storage
 
