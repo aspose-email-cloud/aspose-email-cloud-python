@@ -20,6 +20,7 @@ def test_hierarchical(test_data: TestData):
     assert calendar.type == 'HierarchicalObject'
     primitive_properties = list(filter(lambda x: x.type == 'PrimitiveObject', calendar.internal_properties))
     assert len(primitive_properties) >= 3
+    assert primitive_properties[0].value is not None
 
 def test_async(test_data: TestData):
     """
