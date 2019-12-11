@@ -34,7 +34,7 @@ class AddContactAttachmentRequest(BaseRequest):
     Request model for add_contact_attachment operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format
+    :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
     :param name (str) Contact document file name
     :param attachment (str) Attachment name
     :param request (AddAttachmentRequest) Add attachment request

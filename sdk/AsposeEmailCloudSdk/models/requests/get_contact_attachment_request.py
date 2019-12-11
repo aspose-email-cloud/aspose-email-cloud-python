@@ -34,7 +34,7 @@ class GetContactAttachmentRequest(BaseRequest):
     Request model for get_contact_attachment operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format
+    :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
     :param name (str) Contact document file name
     :param attachment (str) Attachment name or index
     :param folder (str) Path to folder in storage

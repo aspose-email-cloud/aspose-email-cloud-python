@@ -32,7 +32,7 @@ from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLoca
 
 
 class AccountBaseRequest(object):
-    """
+    """EmailClient accounts request             
     """
 
     """
@@ -85,6 +85,7 @@ class AccountBaseRequest(object):
     def first_account(self):
         """Gets the first_account of this AccountBaseRequest.
 
+        First account storage file name for receiving emails (or universal one)             
 
         :return: The first_account of this AccountBaseRequest.
         :rtype: str
@@ -95,6 +96,7 @@ class AccountBaseRequest(object):
     def first_account(self, first_account):
         """Sets the first_account of this AccountBaseRequest.
 
+        First account storage file name for receiving emails (or universal one)             
 
         :param first_account: The first_account of this AccountBaseRequest.
         :type: str
@@ -109,6 +111,7 @@ class AccountBaseRequest(object):
     def second_account(self):
         """Gets the second_account of this AccountBaseRequest.
 
+        Second account storage file name for sending emails (ignored if first is universal)             
 
         :return: The second_account of this AccountBaseRequest.
         :rtype: str
@@ -119,6 +122,7 @@ class AccountBaseRequest(object):
     def second_account(self, second_account):
         """Sets the second_account of this AccountBaseRequest.
 
+        Second account storage file name for sending emails (ignored if first is universal)             
 
         :param second_account: The second_account of this AccountBaseRequest.
         :type: str
@@ -129,6 +133,7 @@ class AccountBaseRequest(object):
     def storage_folder(self):
         """Gets the storage_folder of this AccountBaseRequest.
 
+        Storage folder location of account files             
 
         :return: The storage_folder of this AccountBaseRequest.
         :rtype: StorageFolderLocation
@@ -139,6 +144,7 @@ class AccountBaseRequest(object):
     def storage_folder(self, storage_folder):
         """Sets the storage_folder of this AccountBaseRequest.
 
+        Storage folder location of account files             
 
         :param storage_folder: The storage_folder of this AccountBaseRequest.
         :type: StorageFolderLocation

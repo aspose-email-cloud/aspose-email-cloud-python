@@ -76,7 +76,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name | 
  **request** | [**AddAttachmentRequest**](AddAttachmentRequest.md)| Add attachment request | 
@@ -107,7 +107,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name | 
  **request** | [**AddAttachmentRequest**](AddAttachmentRequest.md)| Add attachment request | 
@@ -237,12 +237,12 @@ Ocr images
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrBase64Request**](AiBcrBase64Request.md)| Request with base64 images data | 
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -262,12 +262,12 @@ ai_bcr_ocr_async(request).get() returns [**ListResponseOfAiBcrOcrData**](ListRes
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrBase64Request**](AiBcrBase64Request.md)| Request with base64 images data | 
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -284,12 +284,12 @@ Ocr images from storage
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrStorageImageRequest**](AiBcrStorageImageRequest.md)| Request with images located on storage | 
+ **rq** | [**AiBcrStorageImageRq**](AiBcrStorageImageRq.md)| Request with images located on storage | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -309,12 +309,12 @@ ai_bcr_ocr_storage_async(request).get() returns [**ListResponseOfAiBcrOcrData**]
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrStorageImageRequest**](AiBcrStorageImageRequest.md)| Request with images located on storage | 
+ **rq** | [**AiBcrStorageImageRq**](AiBcrStorageImageRq.md)| Request with images located on storage | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -331,12 +331,12 @@ Parse images to vCard properties
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrBase64Request**](AiBcrBase64Request.md)| Request with base64 images data | 
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -356,12 +356,12 @@ ai_bcr_parse_async(request).get() returns [**ListResponseOfHierarchicalObject**]
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrBase64Request**](AiBcrBase64Request.md)| Request with base64 images data | 
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -378,12 +378,12 @@ Parse OCR data to vCard properties
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrParseOcrDataRequest**](AiBcrParseOcrDataRequest.md)|  | 
+ **rq** | [**AiBcrParseOcrDataRq**](AiBcrParseOcrDataRq.md)|  | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -403,12 +403,12 @@ ai_bcr_parse_ocr_data_async(request).get() returns [**ListResponseOfHierarchical
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrParseOcrDataRequest**](AiBcrParseOcrDataRequest.md)|  | 
+ **rq** | [**AiBcrParseOcrDataRq**](AiBcrParseOcrDataRq.md)|  | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -425,12 +425,12 @@ Parse vCards from OCR data and save them to Storage
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrParseOcrDataStorageRequest**](AiBcrParseOcrDataStorageRequest.md)|  | 
+ **rq** | [**AiBcrParseOcrDataStorageRq**](AiBcrParseOcrDataStorageRq.md)|  | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -450,12 +450,12 @@ ai_bcr_parse_ocr_data_storage_async(request).get() returns [**ListResponseOfStor
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrParseOcrDataStorageRequest**](AiBcrParseOcrDataStorageRequest.md)|  | 
+ **rq** | [**AiBcrParseOcrDataStorageRq**](AiBcrParseOcrDataStorageRq.md)|  | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -472,12 +472,12 @@ Parse images from storage to vCard files
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrParseStorageRequest**](AiBcrParseStorageRequest.md)| Request with images located on storage | 
+ **rq** | [**AiBcrParseStorageRq**](AiBcrParseStorageRq.md)| Request with images located on storage | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -497,12 +497,12 @@ ai_bcr_parse_storage_async(request).get() returns [**ListResponseOfStorageFileLo
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiBcrParseStorageRequest**](AiBcrParseStorageRequest.md)| Request with images located on storage | 
+ **rq** | [**AiBcrParseStorageRq**](AiBcrParseStorageRq.md)| Request with images located on storage | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -534,7 +534,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -569,7 +569,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -653,12 +653,12 @@ Expands a person's parsed name into a list of possible alternatives using option
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Parsed name with options | 
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -678,12 +678,12 @@ ai_name_expand_parsed_async(request).get() returns [**AiNameWeightedVariants**](
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Parsed name with options | 
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -705,6 +705,7 @@ __init__(self,
     location=location, 
     encoding=encoding, 
     script=script, 
+    format=format, 
     style=style)
 ```
 
@@ -715,7 +716,8 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **format** | **str**| Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (&#x3D; &#39;%t%F%m%N%L%p&#39;)     /format/FN+LN/ (&#x3D; &#39;%F%L&#39;)     /format/title+FN+LN/ (&#x3D; &#39;%t%F%L&#39;)     /format/FN+MN+LN/ (&#x3D; &#39;%F%M%N%L&#39;)     /format/title+FN+MN+LN/ (&#x3D; &#39;%t%F%M%N%L&#39;)     /format/FN+MI+LN/ (&#x3D; &#39;%F%m%N%L&#39;)     /format/title+FN+MI+LN/ (&#x3D; &#39;%t%F%m%N%L&#39;)     /format/LN/ (&#x3D; &#39;%L&#39;)     /format/title+LN/ (&#x3D; &#39;%t%L&#39;)     /format/LN+FN+MN/ (&#x3D; &#39;%L,%F%M%N&#39;)     /format/LN+title+FN+MN/ (&#x3D; &#39;%L,%t%F%M%N&#39;)     /format/LN+FN+MI/ (&#x3D; &#39;%L,%F%m%N&#39;)     /format/LN+title+FN+MI/ (&#x3D; &#39;%L,%t%F%m%N&#39;)  Custom format string - custom combination of characters and the next term placeholders:      &#39;%t&#39; - Title (prefix)     &#39;%F&#39; - First name     &#39;%f&#39; - First initial     &#39;%M&#39; - Middle name(s)     &#39;%m&#39; - Middle initial(s)     &#39;%N&#39; - Nickname     &#39;%L&#39; - Last name     &#39;%l&#39; - Last initial     &#39;%p&#39; - Postfix  If no value for format option was provided, its default value is &#39;%t%F%m%N%L%p&#39;              | [optional] [default to ]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -740,6 +742,7 @@ __init__(self,
     location=location, 
     encoding=encoding, 
     script=script, 
+    format=format, 
     style=style)
 ```
 
@@ -750,7 +753,8 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **format** | **str**| Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (&#x3D; &#39;%t%F%m%N%L%p&#39;)     /format/FN+LN/ (&#x3D; &#39;%F%L&#39;)     /format/title+FN+LN/ (&#x3D; &#39;%t%F%L&#39;)     /format/FN+MN+LN/ (&#x3D; &#39;%F%M%N%L&#39;)     /format/title+FN+MN+LN/ (&#x3D; &#39;%t%F%M%N%L&#39;)     /format/FN+MI+LN/ (&#x3D; &#39;%F%m%N%L&#39;)     /format/title+FN+MI+LN/ (&#x3D; &#39;%t%F%m%N%L&#39;)     /format/LN/ (&#x3D; &#39;%L&#39;)     /format/title+LN/ (&#x3D; &#39;%t%L&#39;)     /format/LN+FN+MN/ (&#x3D; &#39;%L,%F%M%N&#39;)     /format/LN+title+FN+MN/ (&#x3D; &#39;%L,%t%F%M%N&#39;)     /format/LN+FN+MI/ (&#x3D; &#39;%L,%F%m%N&#39;)     /format/LN+title+FN+MI/ (&#x3D; &#39;%L,%t%F%m%N&#39;)  Custom format string - custom combination of characters and the next term placeholders:      &#39;%t&#39; - Title (prefix)     &#39;%F&#39; - First name     &#39;%f&#39; - First initial     &#39;%M&#39; - Middle name(s)     &#39;%m&#39; - Middle initial(s)     &#39;%N&#39; - Nickname     &#39;%L&#39; - Last name     &#39;%l&#39; - Last initial     &#39;%p&#39; - Postfix  If no value for format option was provided, its default value is &#39;%t%F%m%N%L%p&#39;              | [optional] [default to ]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -767,12 +771,12 @@ Formats a person's parsed name in correct case and name order using options for 
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Parsed name with options | 
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -792,12 +796,12 @@ ai_name_format_parsed_async(request).get() returns [**AiNameFormatted**](AiNameF
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Parsed name with options | 
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -829,7 +833,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -864,7 +868,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -881,12 +885,12 @@ Detect person's gender from parsed name
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Gender detection request data | 
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Gender detection request data | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -906,12 +910,12 @@ ai_name_genderize_parsed_async(request).get() returns [**ListResponseOfAiNameGen
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedRequest**](AiNameParsedRequest.md)| Gender detection request data | 
+ **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Gender detection request data | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -945,7 +949,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -982,7 +986,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -999,12 +1003,12 @@ Compare people's parsed names and attributes. Uses options for comparing instruc
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedMatchRequest**](AiNameParsedMatchRequest.md)| Parsed names to match | 
+ **rq** | [**AiNameParsedMatchRq**](AiNameParsedMatchRq.md)| Parsed names to match | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1024,12 +1028,12 @@ ai_name_match_parsed_async(request).get() returns [**AiNameMatchResult**](AiName
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AiNameParsedMatchRequest**](AiNameParsedMatchRequest.md)| Parsed names to match | 
+ **rq** | [**AiNameParsedMatchRq**](AiNameParsedMatchRq.md)| Parsed names to match | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1061,7 +1065,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1096,7 +1100,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1128,7 +1132,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1163,7 +1167,7 @@ Name | Type | Description  | Notes
  **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
- **style** | **str**| Name writing style | [optional] [default to 0]
+ **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1454,7 +1458,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Create contact request | 
 
@@ -1483,7 +1487,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Create contact request | 
 
@@ -1770,7 +1774,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **member_name** | **str**| Indexed property name | 
  **index** | **int**| Property index | 
@@ -1803,7 +1807,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **member_name** | **str**| Indexed property name | 
  **index** | **int**| Property index | 
@@ -2434,7 +2438,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
@@ -2467,7 +2471,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
@@ -2497,7 +2501,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
  **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
@@ -2530,7 +2534,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
  **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
@@ -2559,7 +2563,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
@@ -2590,7 +2594,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
@@ -3870,7 +3874,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Properties that should be updated/added | 
 
@@ -3899,7 +3903,7 @@ __init__(self,
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Contact document format | 
+ **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name | 
  **request** | [**HierarchicalObjectRequest**](HierarchicalObjectRequest.md)| Properties that should be updated/added | 
 

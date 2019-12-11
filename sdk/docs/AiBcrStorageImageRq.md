@@ -1,10 +1,10 @@
-# AsposeEmailCloudSdk.models.AiNameParsedMatchRequest
+# AsposeEmailCloudSdk.models.AiBcrStorageImageRq
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**other_parsed_name** | [**list[AiNameComponent]**](AiNameComponent.md) | Other parsed name to match              | 
+**images** | [**list[AiBcrImageStorageFile]**](AiBcrImageStorageFile.md) | List of images with business cards              | 
 
- Parent class: [AiNameParsedRequest](AiNameParsedRequest.md)
+ Parent class: [AiBcrRq](AiBcrRq.md)
 
 [[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to README]](README.md)
 

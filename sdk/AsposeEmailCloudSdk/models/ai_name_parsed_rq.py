@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiNameParsedRequest.py">
+#  <copyright company="Aspose" file="AiNameParsedRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -29,10 +29,10 @@ import re
 import six
 
 from AsposeEmailCloudSdk.models.ai_name_component import AiNameComponent
-from AsposeEmailCloudSdk.models.ai_name_options import AiNameOptions
+from AsposeEmailCloudSdk.models.ai_name_cultural_context import AiNameCulturalContext
 
 
-class AiNameParsedRequest(object):
+class AiNameParsedRq(object):
     """Parsed name request model             
     """
 
@@ -44,71 +44,98 @@ class AiNameParsedRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'options': 'AiNameOptions',
+        'cultural_context': 'AiNameCulturalContext',
+        'format': 'str',
         'parsed_name': 'list[AiNameComponent]'
     }
 
     attribute_map = {
-        'options': 'options',
+        'cultural_context': 'culturalContext',
+        'format': 'format',
         'parsed_name': 'parsedName'
     }
 
     discriminator_value_class_map = {
-        'AiNameParsedMatchRequest': 'AiNameParsedMatchRequest'
+        'AiNameParsedMatchRq': 'AiNameParsedMatchRq'
     }
 
-    def __init__(self, options=None, parsed_name=None):
-        """AiNameParsedRequest - a model defined in Swagger"""
+    def __init__(self, cultural_context=None, format=None, parsed_name=None):
+        """AiNameParsedRq - a model defined in Swagger"""
 
-        self._options = None
+        self._cultural_context = None
+        self._format = None
         self._parsed_name = None
         self.discriminator = 'Type'
 
-        if options is not None:
-            self.options = options
+        if cultural_context is not None:
+            self.cultural_context = cultural_context
+        if format is not None:
+            self.format = format
         if parsed_name is not None:
             self.parsed_name = parsed_name
 
     @property
-    def options(self):
-        """Gets the options of this AiNameParsedRequest.
+    def cultural_context(self):
+        """Gets the cultural_context of this AiNameParsedRq.
 
-        AiName parser options             
+        AiName parser cultural context             
 
-        :return: The options of this AiNameParsedRequest.
-        :rtype: AiNameOptions
+        :return: The cultural_context of this AiNameParsedRq.
+        :rtype: AiNameCulturalContext
         """
-        return self._options
+        return self._cultural_context
 
-    @options.setter
-    def options(self, options):
-        """Sets the options of this AiNameParsedRequest.
+    @cultural_context.setter
+    def cultural_context(self, cultural_context):
+        """Sets the cultural_context of this AiNameParsedRq.
 
-        AiName parser options             
+        AiName parser cultural context             
 
-        :param options: The options of this AiNameParsedRequest.
-        :type: AiNameOptions
+        :param cultural_context: The cultural_context of this AiNameParsedRq.
+        :type: AiNameCulturalContext
         """
-        self._options = options
+        self._cultural_context = cultural_context
+
+    @property
+    def format(self):
+        """Gets the format of this AiNameParsedRq.
+
+        Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (= '%t%F%m%N%L%p')     /format/FN+LN/ (= '%F%L')     /format/title+FN+LN/ (= '%t%F%L')     /format/FN+MN+LN/ (= '%F%M%N%L')     /format/title+FN+MN+LN/ (= '%t%F%M%N%L')     /format/FN+MI+LN/ (= '%F%m%N%L')     /format/title+FN+MI+LN/ (= '%t%F%m%N%L')     /format/LN/ (= '%L')     /format/title+LN/ (= '%t%L')     /format/LN+FN+MN/ (= '%L,%F%M%N')     /format/LN+title+FN+MN/ (= '%L,%t%F%M%N')     /format/LN+FN+MI/ (= '%L,%F%m%N')     /format/LN+title+FN+MI/ (= '%L,%t%F%m%N')  Custom format string - custom combination of characters and the next term placeholders:      '%t' - Title (prefix)     '%F' - First name     '%f' - First initial     '%M' - Middle name(s)     '%m' - Middle initial(s)     '%N' - Nickname     '%L' - Last name     '%l' - Last initial     '%p' - Postfix  If no value for format option was provided, its default value is '%t%F%m%N%L%p'             
+
+        :return: The format of this AiNameParsedRq.
+        :rtype: str
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format):
+        """Sets the format of this AiNameParsedRq.
+
+        Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (= '%t%F%m%N%L%p')     /format/FN+LN/ (= '%F%L')     /format/title+FN+LN/ (= '%t%F%L')     /format/FN+MN+LN/ (= '%F%M%N%L')     /format/title+FN+MN+LN/ (= '%t%F%M%N%L')     /format/FN+MI+LN/ (= '%F%m%N%L')     /format/title+FN+MI+LN/ (= '%t%F%m%N%L')     /format/LN/ (= '%L')     /format/title+LN/ (= '%t%L')     /format/LN+FN+MN/ (= '%L,%F%M%N')     /format/LN+title+FN+MN/ (= '%L,%t%F%M%N')     /format/LN+FN+MI/ (= '%L,%F%m%N')     /format/LN+title+FN+MI/ (= '%L,%t%F%m%N')  Custom format string - custom combination of characters and the next term placeholders:      '%t' - Title (prefix)     '%F' - First name     '%f' - First initial     '%M' - Middle name(s)     '%m' - Middle initial(s)     '%N' - Nickname     '%L' - Last name     '%l' - Last initial     '%p' - Postfix  If no value for format option was provided, its default value is '%t%F%m%N%L%p'             
+
+        :param format: The format of this AiNameParsedRq.
+        :type: str
+        """
+        self._format = format
 
     @property
     def parsed_name(self):
-        """Gets the parsed_name of this AiNameParsedRequest.
+        """Gets the parsed_name of this AiNameParsedRq.
 
         Parsed name             
 
-        :return: The parsed_name of this AiNameParsedRequest.
+        :return: The parsed_name of this AiNameParsedRq.
         :rtype: list[AiNameComponent]
         """
         return self._parsed_name
 
     @parsed_name.setter
     def parsed_name(self, parsed_name):
-        """Sets the parsed_name of this AiNameParsedRequest.
+        """Sets the parsed_name of this AiNameParsedRq.
 
         Parsed name             
 
-        :param parsed_name: The parsed_name of this AiNameParsedRequest.
+        :param parsed_name: The parsed_name of this AiNameParsedRq.
         :type: list[AiNameComponent]
         """
         if parsed_name is None:
@@ -154,7 +181,7 @@ class AiNameParsedRequest(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiNameParsedRequest):
+        if not isinstance(other, AiNameParsedRq):
             return False
 
         return self.__dict__ == other.__dict__

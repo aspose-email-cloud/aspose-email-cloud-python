@@ -34,7 +34,7 @@ class CreateContactRequest(BaseRequest):
     Request model for create_contact operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format
+    :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
     :param name (str) Contact document file name
     :param request (HierarchicalObjectRequest) Create contact request
     """

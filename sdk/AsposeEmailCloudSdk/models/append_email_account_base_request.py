@@ -82,6 +82,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
     def folder(self):
         """Gets the folder of this AppendEmailAccountBaseRequest.
 
+        Email account folder to store a message             
 
         :return: The folder of this AppendEmailAccountBaseRequest.
         :rtype: str
@@ -92,6 +93,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
     def folder(self, folder):
         """Sets the folder of this AppendEmailAccountBaseRequest.
 
+        Email account folder to store a message             
 
         :param folder: The folder of this AppendEmailAccountBaseRequest.
         :type: str
@@ -106,6 +108,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
     def mark_as_sent(self):
         """Gets the mark_as_sent of this AppendEmailAccountBaseRequest.
 
+        Mark message as sent             
 
         :return: The mark_as_sent of this AppendEmailAccountBaseRequest.
         :rtype: bool
@@ -116,6 +119,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
     def mark_as_sent(self, mark_as_sent):
         """Sets the mark_as_sent of this AppendEmailAccountBaseRequest.
 
+        Mark message as sent             
 
         :param mark_as_sent: The mark_as_sent of this AppendEmailAccountBaseRequest.
         :type: bool

@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="ContactFormat.py">
+#  <copyright company="Aspose" file="AiBcrRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -28,17 +28,12 @@ import pprint
 import re
 import six
 
+from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
 
-class ContactFormat(object):
-    """
-    """
 
+class AiBcrRq(object):
+    """Business card recognition request             
     """
-    allowed enum values
-    """
-    VCARD = "VCard"
-    WEBDAV = "WebDav"
-    MSG = "Msg"
 
     """
     Attributes:
@@ -48,14 +43,56 @@ class ContactFormat(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'options': 'AiBcrOptions'
     }
 
     attribute_map = {
+        'options': 'options'
     }
 
-    def __init__(self):
-        """ContactFormat - a model defined in Swagger"""
-        self.discriminator = None
+    discriminator_value_class_map = {
+        'AiBcrParseOcrDataStorageRq': 'AiBcrParseOcrDataStorageRq',
+        'AiBcrParseOcrDataRq': 'AiBcrParseOcrDataRq',
+        'AiBcrParseStorageRq': 'AiBcrParseStorageRq',
+        'AiBcrStorageImageRq': 'AiBcrStorageImageRq',
+        'AiBcrBase64Rq': 'AiBcrBase64Rq'
+    }
+
+    def __init__(self, options=None):
+        """AiBcrRq - a model defined in Swagger"""
+
+        self._options = None
+        self.discriminator = 'Type'
+
+        if options is not None:
+            self.options = options
+
+    @property
+    def options(self):
+        """Gets the options of this AiBcrRq.
+
+        Recognition options             
+
+        :return: The options of this AiBcrRq.
+        :rtype: AiBcrOptions
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        """Sets the options of this AiBcrRq.
+
+        Recognition options             
+
+        :param options: The options of this AiBcrRq.
+        :type: AiBcrOptions
+        """
+        self._options = options
+
+    def get_real_child_model(self, data):
+        """Returns the real base class specified by the discriminator"""
+        discriminator_value = data.get(self.discriminator)
+        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -91,7 +128,7 @@ class ContactFormat(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, ContactFormat):
+        if not isinstance(other, AiBcrRq):
             return False
 
         return self.__dict__ == other.__dict__

@@ -34,7 +34,7 @@ class GetContactPropertiesRequest(BaseRequest):
     Request model for get_contact_properties operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format
+    :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
     :param name (str) Contact document file name
     :param folder (str) Path to folder in storage
     :param storage (str) Storage name

@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiBcrParseOcrDataStorageRequest.py">
+#  <copyright company="Aspose" file="AiBcrParseOcrDataRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,12 +30,11 @@ import six
 
 from AsposeEmailCloudSdk.models.ai_bcr_ocr_data import AiBcrOcrData
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
-from AsposeEmailCloudSdk.models.ai_bcr_parse_ocr_data_request import AiBcrParseOcrDataRequest
-from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
+from AsposeEmailCloudSdk.models.ai_bcr_rq import AiBcrRq
 
 
-class AiBcrParseOcrDataStorageRequest(AiBcrParseOcrDataRequest):
-    """Parse ocr data request with storage output location             
+class AiBcrParseOcrDataRq(AiBcrRq):
+    """Parse ocr data request             
     """
 
     """
@@ -47,53 +46,49 @@ class AiBcrParseOcrDataStorageRequest(AiBcrParseOcrDataRequest):
     """
     swagger_types = {
         'options': 'AiBcrOptions',
-        'data': 'list[AiBcrOcrData]',
-        'out_folder': 'StorageFolderLocation'
+        'data': 'list[AiBcrOcrData]'
     }
 
     attribute_map = {
         'options': 'options',
-        'data': 'data',
-        'out_folder': 'outFolder'
+        'data': 'data'
     }
 
-    def __init__(self, options=None, data=None, out_folder=None):
-        """AiBcrParseOcrDataStorageRequest - a model defined in Swagger"""
-        super(AiBcrParseOcrDataStorageRequest, self).__init__()
+    def __init__(self, options=None, data=None):
+        """AiBcrParseOcrDataRq - a model defined in Swagger"""
+        super(AiBcrParseOcrDataRq, self).__init__()
 
-        self._out_folder = None
+        self._data = None
         self.discriminator = None
 
         if options is not None:
             self.options = options
         if data is not None:
             self.data = data
-        if out_folder is not None:
-            self.out_folder = out_folder
 
     @property
-    def out_folder(self):
-        """Gets the out_folder of this AiBcrParseOcrDataStorageRequest.
+    def data(self):
+        """Gets the data of this AiBcrParseOcrDataRq.
 
-        Output folder location on storage             
+        OCR data             
 
-        :return: The out_folder of this AiBcrParseOcrDataStorageRequest.
-        :rtype: StorageFolderLocation
+        :return: The data of this AiBcrParseOcrDataRq.
+        :rtype: list[AiBcrOcrData]
         """
-        return self._out_folder
+        return self._data
 
-    @out_folder.setter
-    def out_folder(self, out_folder):
-        """Sets the out_folder of this AiBcrParseOcrDataStorageRequest.
+    @data.setter
+    def data(self, data):
+        """Sets the data of this AiBcrParseOcrDataRq.
 
-        Output folder location on storage             
+        OCR data             
 
-        :param out_folder: The out_folder of this AiBcrParseOcrDataStorageRequest.
-        :type: StorageFolderLocation
+        :param data: The data of this AiBcrParseOcrDataRq.
+        :type: list[AiBcrOcrData]
         """
-        if out_folder is None:
-            raise ValueError("Invalid value for `out_folder`, must not be `None`")
-        self._out_folder = out_folder
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -129,7 +124,7 @@ class AiBcrParseOcrDataStorageRequest(AiBcrParseOcrDataRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiBcrParseOcrDataStorageRequest):
+        if not isinstance(other, AiBcrParseOcrDataRq):
             return False
 
         return self.__dict__ == other.__dict__

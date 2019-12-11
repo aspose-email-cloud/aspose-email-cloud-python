@@ -39,7 +39,7 @@ class AiNameGenderizeRequest(BaseRequest):
     :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France
     :param encoding (str) A character encoding name
     :param script (str) A writing system code; starts with the ISO-15924 script name
-    :param style (str) Name writing style
+    :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
     """
 
     def __init__(self, name, language=None, location=None, encoding=None, script=None, style=None):

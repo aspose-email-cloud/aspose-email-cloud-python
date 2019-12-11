@@ -34,7 +34,7 @@ class DeleteContactPropertyRequest(BaseRequest):
     Request model for delete_contact_property operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format
+    :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
     :param name (str) Contact document file name
     :param member_name (str) Indexed property name
     :param index (int) Property index

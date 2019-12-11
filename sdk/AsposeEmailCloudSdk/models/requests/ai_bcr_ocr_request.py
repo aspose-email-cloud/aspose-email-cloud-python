@@ -34,12 +34,12 @@ class AiBcrOcrRequest(BaseRequest):
     Request model for ai_bcr_ocr operation.
     Initializes a new instance.
 
-    :param request (AiBcrBase64Request) Request with base64 images data
+    :param rq (AiBcrBase64Rq) Request with base64 images data
     """
 
-    def __init__(self, request):
+    def __init__(self, rq):
         BaseRequest.__init__(self)
-        self.request = request
+        self.rq = rq
 
     def to_http_info(self, config):
         """
@@ -50,9 +50,9 @@ class AiBcrOcrRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'request' is set
-        if self.request is None:
-            raise ValueError("Missing the required parameter `request` when calling `ai_bcr_ocr`")
+        # verify the required parameter 'rq' is set
+        if self.rq is None:
+            raise ValueError("Missing the required parameter `rq` when calling `ai_bcr_ocr`")
 
         collection_formats = {}
         path = '/email/AiBcr/ocr'
@@ -66,8 +66,8 @@ class AiBcrOcrRequest(BaseRequest):
         local_var_files = []
 
         body_params = None
-        if self.request is not None:
-            body_params = self.request
+        if self.rq is not None:
+            body_params = self.rq
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(

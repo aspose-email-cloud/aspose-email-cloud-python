@@ -41,7 +41,7 @@ class AiNameExtractedComponent(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'category': 'object',
+        'category': 'str',
         'value': 'str'
     }
 
@@ -66,10 +66,10 @@ class AiNameExtractedComponent(object):
     def category(self):
         """Gets the category of this AiNameExtractedComponent.
 
-        Component category             
+        Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
 
         :return: The category of this AiNameExtractedComponent.
-        :rtype: object
+        :rtype: str
         """
         return self._category
 
@@ -77,10 +77,10 @@ class AiNameExtractedComponent(object):
     def category(self, category):
         """Sets the category of this AiNameExtractedComponent.
 
-        Component category             
+        Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
 
         :param category: The category of this AiNameExtractedComponent.
-        :type: object
+        :type: str
         """
         if category is None:
             raise ValueError("Invalid value for `category`, must not be `None`")

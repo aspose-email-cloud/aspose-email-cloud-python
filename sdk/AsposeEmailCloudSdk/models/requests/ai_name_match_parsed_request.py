@@ -34,12 +34,12 @@ class AiNameMatchParsedRequest(BaseRequest):
     Request model for ai_name_match_parsed operation.
     Initializes a new instance.
 
-    :param request (AiNameParsedMatchRequest) Parsed names to match
+    :param rq (AiNameParsedMatchRq) Parsed names to match
     """
 
-    def __init__(self, request):
+    def __init__(self, rq):
         BaseRequest.__init__(self)
-        self.request = request
+        self.rq = rq
 
     def to_http_info(self, config):
         """
@@ -50,9 +50,9 @@ class AiNameMatchParsedRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'request' is set
-        if self.request is None:
-            raise ValueError("Missing the required parameter `request` when calling `ai_name_match_parsed`")
+        # verify the required parameter 'rq' is set
+        if self.rq is None:
+            raise ValueError("Missing the required parameter `rq` when calling `ai_name_match_parsed`")
 
         collection_formats = {}
         path = '/email/AiName/match-parsed'
@@ -66,8 +66,8 @@ class AiNameMatchParsedRequest(BaseRequest):
         local_var_files = []
 
         body_params = None
-        if self.request is not None:
-            body_params = self.request
+        if self.rq is not None:
+            body_params = self.rq
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(

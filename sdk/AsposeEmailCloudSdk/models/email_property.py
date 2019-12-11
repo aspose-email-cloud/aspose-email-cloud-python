@@ -73,6 +73,7 @@ class EmailProperty(object):
     def link(self):
         """Gets the link of this EmailProperty.
 
+        Link to property             
 
         :return: The link of this EmailProperty.
         :rtype: Link
@@ -83,6 +84,7 @@ class EmailProperty(object):
     def link(self, link):
         """Sets the link of this EmailProperty.
 
+        Link to property             
 
         :param link: The link of this EmailProperty.
         :type: Link
@@ -93,6 +95,7 @@ class EmailProperty(object):
     def name(self):
         """Gets the name of this EmailProperty.
 
+        Property name             
 
         :return: The name of this EmailProperty.
         :rtype: str
@@ -103,6 +106,7 @@ class EmailProperty(object):
     def name(self, name):
         """Sets the name of this EmailProperty.
 
+        Property name             
 
         :param name: The name of this EmailProperty.
         :type: str
@@ -117,6 +121,7 @@ class EmailProperty(object):
     def value(self):
         """Gets the value of this EmailProperty.
 
+        Property value             
 
         :return: The value of this EmailProperty.
         :rtype: object
@@ -127,6 +132,7 @@ class EmailProperty(object):
     def value(self, value):
         """Sets the value of this EmailProperty.
 
+        Property value             
 
         :param value: The value of this EmailProperty.
         :type: object

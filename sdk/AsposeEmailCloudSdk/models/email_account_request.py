@@ -46,8 +46,8 @@ class EmailAccountRequest(object):
         'host': 'str',
         'port': 'int',
         'login': 'str',
-        'security_options': 'object',
-        'protocol_type': 'object',
+        'security_options': 'str',
+        'protocol_type': 'str',
         'description': 'str',
         'storage_file': 'StorageFileLocation'
     }
@@ -174,10 +174,10 @@ class EmailAccountRequest(object):
     def security_options(self):
         """Gets the security_options of this EmailAccountRequest.
 
-        Email account security options             
+        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The security_options of this EmailAccountRequest.
-        :rtype: object
+        :rtype: str
         """
         return self._security_options
 
@@ -185,23 +185,25 @@ class EmailAccountRequest(object):
     def security_options(self, security_options):
         """Sets the security_options of this EmailAccountRequest.
 
-        Email account security options             
+        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param security_options: The security_options of this EmailAccountRequest.
-        :type: object
+        :type: str
         """
         if security_options is None:
             raise ValueError("Invalid value for `security_options`, must not be `None`")
+        if security_options is not None and len(security_options) < 1:
+            raise ValueError("Invalid value for `security_options`, length must be greater than or equal to `1`")
         self._security_options = security_options
 
     @property
     def protocol_type(self):
         """Gets the protocol_type of this EmailAccountRequest.
 
-        Email account protocol type             
+        Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :return: The protocol_type of this EmailAccountRequest.
-        :rtype: object
+        :rtype: str
         """
         return self._protocol_type
 
@@ -209,13 +211,15 @@ class EmailAccountRequest(object):
     def protocol_type(self, protocol_type):
         """Sets the protocol_type of this EmailAccountRequest.
 
-        Email account protocol type             
+        Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :param protocol_type: The protocol_type of this EmailAccountRequest.
-        :type: object
+        :type: str
         """
         if protocol_type is None:
             raise ValueError("Invalid value for `protocol_type`, must not be `None`")
+        if protocol_type is not None and len(protocol_type) < 1:
+            raise ValueError("Invalid value for `protocol_type`, length must be greater than or equal to `1`")
         self._protocol_type = protocol_type
 
     @property

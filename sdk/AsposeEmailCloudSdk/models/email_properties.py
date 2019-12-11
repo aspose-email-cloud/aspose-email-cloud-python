@@ -91,6 +91,7 @@ class EmailProperties(object):
     def list(self):
         """Gets the list of this EmailProperties.
 
+        List of properties             
 
         :return: The list of this EmailProperties.
         :rtype: list[EmailProperty]
@@ -101,6 +102,7 @@ class EmailProperties(object):
     def list(self, list):
         """Sets the list of this EmailProperties.
 
+        List of properties             
 
         :param list: The list of this EmailProperties.
         :type: list[EmailProperty]

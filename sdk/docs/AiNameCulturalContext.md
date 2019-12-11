@@ -1,4 +1,4 @@
-# AsposeEmailCloudSdk.models.AiNameOptions
+# AsposeEmailCloudSdk.models.AiNameCulturalContext
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **location** | **str** | A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] 
 **script** | **str** | A writing system code; starts with the ISO-15924 script name              | [optional] 
 **encoding** | **str** | A character encoding name              | [optional] 
-**style** | **str** | Name writing style. Allowed values are: \&quot;Formal\&quot;, \&quot;Informal\&quot;, \&quot;Legal\&quot;, \&quot;Academic\&quot;              | [optional] 
+**style** | **str** | Name writing style. Enum, available values: Formal, Informal, Legal, Academic | 
 
 
 

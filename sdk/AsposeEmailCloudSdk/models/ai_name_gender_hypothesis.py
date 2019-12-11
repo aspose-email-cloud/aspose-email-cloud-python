@@ -41,7 +41,7 @@ class AiNameGenderHypothesis(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'gender': 'object',
+        'gender': 'str',
         'score': 'float'
     }
 
@@ -66,10 +66,10 @@ class AiNameGenderHypothesis(object):
     def gender(self):
         """Gets the gender of this AiNameGenderHypothesis.
 
-        Name's possible gender             
+        Recognized name gender. Enum, available values: Male, Female, Unknown
 
         :return: The gender of this AiNameGenderHypothesis.
-        :rtype: object
+        :rtype: str
         """
         return self._gender
 
@@ -77,10 +77,10 @@ class AiNameGenderHypothesis(object):
     def gender(self, gender):
         """Sets the gender of this AiNameGenderHypothesis.
 
-        Name's possible gender             
+        Recognized name gender. Enum, available values: Male, Female, Unknown
 
         :param gender: The gender of this AiNameGenderHypothesis.
-        :type: object
+        :type: str
         """
         if gender is None:
             raise ValueError("Invalid value for `gender`, must not be `None`")

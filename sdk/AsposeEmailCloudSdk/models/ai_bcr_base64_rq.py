@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiBcrBase64Request.py">
+#  <copyright company="Aspose" file="AiBcrBase64Rq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,10 +30,10 @@ import six
 
 from AsposeEmailCloudSdk.models.ai_bcr_base64_image import AiBcrBase64Image
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
-from AsposeEmailCloudSdk.models.ai_bcr_request import AiBcrRequest
+from AsposeEmailCloudSdk.models.ai_bcr_rq import AiBcrRq
 
 
-class AiBcrBase64Request(AiBcrRequest):
+class AiBcrBase64Rq(AiBcrRq):
     """Parse business card image request             
     """
 
@@ -55,8 +55,8 @@ class AiBcrBase64Request(AiBcrRequest):
     }
 
     def __init__(self, options=None, images=None):
-        """AiBcrBase64Request - a model defined in Swagger"""
-        super(AiBcrBase64Request, self).__init__()
+        """AiBcrBase64Rq - a model defined in Swagger"""
+        super(AiBcrBase64Rq, self).__init__()
 
         self._images = None
         self.discriminator = None
@@ -68,22 +68,22 @@ class AiBcrBase64Request(AiBcrRequest):
 
     @property
     def images(self):
-        """Gets the images of this AiBcrBase64Request.
+        """Gets the images of this AiBcrBase64Rq.
 
         Images to recognize             
 
-        :return: The images of this AiBcrBase64Request.
+        :return: The images of this AiBcrBase64Rq.
         :rtype: list[AiBcrBase64Image]
         """
         return self._images
 
     @images.setter
     def images(self, images):
-        """Sets the images of this AiBcrBase64Request.
+        """Sets the images of this AiBcrBase64Rq.
 
         Images to recognize             
 
-        :param images: The images of this AiBcrBase64Request.
+        :param images: The images of this AiBcrBase64Rq.
         :type: list[AiBcrBase64Image]
         """
         self._images = images
@@ -122,7 +122,7 @@ class AiBcrBase64Request(AiBcrRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiBcrBase64Request):
+        if not isinstance(other, AiBcrBase64Rq):
             return False
 
         return self.__dict__ == other.__dict__

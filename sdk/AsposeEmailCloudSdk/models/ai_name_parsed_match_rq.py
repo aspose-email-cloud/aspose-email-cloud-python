@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiBcrStorageImageRequest.py">
+#  <copyright company="Aspose" file="AiNameParsedMatchRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -28,13 +28,13 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.ai_bcr_image_storage_file import AiBcrImageStorageFile
-from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
-from AsposeEmailCloudSdk.models.ai_bcr_request import AiBcrRequest
+from AsposeEmailCloudSdk.models.ai_name_component import AiNameComponent
+from AsposeEmailCloudSdk.models.ai_name_cultural_context import AiNameCulturalContext
+from AsposeEmailCloudSdk.models.ai_name_parsed_rq import AiNameParsedRq
 
 
-class AiBcrStorageImageRequest(AiBcrRequest):
-    """Business card images from storage for recognition             
+class AiNameParsedMatchRq(AiNameParsedRq):
+    """Two parsed names to match request             
     """
 
     """
@@ -45,50 +45,58 @@ class AiBcrStorageImageRequest(AiBcrRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'options': 'AiBcrOptions',
-        'images': 'list[AiBcrImageStorageFile]'
+        'cultural_context': 'AiNameCulturalContext',
+        'format': 'str',
+        'parsed_name': 'list[AiNameComponent]',
+        'other_parsed_name': 'list[AiNameComponent]'
     }
 
     attribute_map = {
-        'options': 'options',
-        'images': 'images'
+        'cultural_context': 'culturalContext',
+        'format': 'format',
+        'parsed_name': 'parsedName',
+        'other_parsed_name': 'otherParsedName'
     }
 
-    def __init__(self, options=None, images=None):
-        """AiBcrStorageImageRequest - a model defined in Swagger"""
-        super(AiBcrStorageImageRequest, self).__init__()
+    def __init__(self, cultural_context=None, format=None, parsed_name=None, other_parsed_name=None):
+        """AiNameParsedMatchRq - a model defined in Swagger"""
+        super(AiNameParsedMatchRq, self).__init__()
 
-        self._images = None
+        self._other_parsed_name = None
         self.discriminator = None
 
-        if options is not None:
-            self.options = options
-        if images is not None:
-            self.images = images
+        if cultural_context is not None:
+            self.cultural_context = cultural_context
+        if format is not None:
+            self.format = format
+        if parsed_name is not None:
+            self.parsed_name = parsed_name
+        if other_parsed_name is not None:
+            self.other_parsed_name = other_parsed_name
 
     @property
-    def images(self):
-        """Gets the images of this AiBcrStorageImageRequest.
+    def other_parsed_name(self):
+        """Gets the other_parsed_name of this AiNameParsedMatchRq.
 
-        List of images with business cards             
+        Other parsed name to match             
 
-        :return: The images of this AiBcrStorageImageRequest.
-        :rtype: list[AiBcrImageStorageFile]
+        :return: The other_parsed_name of this AiNameParsedMatchRq.
+        :rtype: list[AiNameComponent]
         """
-        return self._images
+        return self._other_parsed_name
 
-    @images.setter
-    def images(self, images):
-        """Sets the images of this AiBcrStorageImageRequest.
+    @other_parsed_name.setter
+    def other_parsed_name(self, other_parsed_name):
+        """Sets the other_parsed_name of this AiNameParsedMatchRq.
 
-        List of images with business cards             
+        Other parsed name to match             
 
-        :param images: The images of this AiBcrStorageImageRequest.
-        :type: list[AiBcrImageStorageFile]
+        :param other_parsed_name: The other_parsed_name of this AiNameParsedMatchRq.
+        :type: list[AiNameComponent]
         """
-        if images is None:
-            raise ValueError("Invalid value for `images`, must not be `None`")
-        self._images = images
+        if other_parsed_name is None:
+            raise ValueError("Invalid value for `other_parsed_name`, must not be `None`")
+        self._other_parsed_name = other_parsed_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -124,7 +132,7 @@ class AiBcrStorageImageRequest(AiBcrRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiBcrStorageImageRequest):
+        if not isinstance(other, AiNameParsedMatchRq):
             return False
 
         return self.__dict__ == other.__dict__

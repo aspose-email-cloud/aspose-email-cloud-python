@@ -34,7 +34,7 @@ class GetContactListRequest(BaseRequest):
     Request model for get_contact_list operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format
+    :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
     :param folder (str) Path to folder in storage
     :param storage (str) Storage name
     :param items_per_page (int) Count of items on page

@@ -41,7 +41,7 @@ class AiNameMismatch(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'category': 'object',
+        'category': 'str',
         'similarity': 'float',
         'explanation': 'str'
     }
@@ -71,10 +71,10 @@ class AiNameMismatch(object):
     def category(self):
         """Gets the category of this AiNameMismatch.
 
-        Mismatch type             
+        Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
 
         :return: The category of this AiNameMismatch.
-        :rtype: object
+        :rtype: str
         """
         return self._category
 
@@ -82,10 +82,10 @@ class AiNameMismatch(object):
     def category(self, category):
         """Sets the category of this AiNameMismatch.
 
-        Mismatch type             
+        Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
 
         :param category: The category of this AiNameMismatch.
-        :type: object
+        :type: str
         """
         if category is None:
             raise ValueError("Invalid value for `category`, must not be `None`")

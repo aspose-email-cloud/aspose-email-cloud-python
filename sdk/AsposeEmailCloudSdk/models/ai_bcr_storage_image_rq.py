@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiBcrParseStorageRequest.py">
+#  <copyright company="Aspose" file="AiBcrStorageImageRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,12 +30,11 @@ import six
 
 from AsposeEmailCloudSdk.models.ai_bcr_image_storage_file import AiBcrImageStorageFile
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
-from AsposeEmailCloudSdk.models.ai_bcr_storage_image_request import AiBcrStorageImageRequest
-from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
+from AsposeEmailCloudSdk.models.ai_bcr_rq import AiBcrRq
 
 
-class AiBcrParseStorageRequest(AiBcrStorageImageRequest):
-    """Parse business card images from Storage request             
+class AiBcrStorageImageRq(AiBcrRq):
+    """Business card images from storage for recognition             
     """
 
     """
@@ -47,53 +46,49 @@ class AiBcrParseStorageRequest(AiBcrStorageImageRequest):
     """
     swagger_types = {
         'options': 'AiBcrOptions',
-        'images': 'list[AiBcrImageStorageFile]',
-        'out_folder': 'StorageFolderLocation'
+        'images': 'list[AiBcrImageStorageFile]'
     }
 
     attribute_map = {
         'options': 'options',
-        'images': 'images',
-        'out_folder': 'outFolder'
+        'images': 'images'
     }
 
-    def __init__(self, options=None, images=None, out_folder=None):
-        """AiBcrParseStorageRequest - a model defined in Swagger"""
-        super(AiBcrParseStorageRequest, self).__init__()
+    def __init__(self, options=None, images=None):
+        """AiBcrStorageImageRq - a model defined in Swagger"""
+        super(AiBcrStorageImageRq, self).__init__()
 
-        self._out_folder = None
+        self._images = None
         self.discriminator = None
 
         if options is not None:
             self.options = options
         if images is not None:
             self.images = images
-        if out_folder is not None:
-            self.out_folder = out_folder
 
     @property
-    def out_folder(self):
-        """Gets the out_folder of this AiBcrParseStorageRequest.
+    def images(self):
+        """Gets the images of this AiBcrStorageImageRq.
 
-        Parse output folder location on storage             
+        List of images with business cards             
 
-        :return: The out_folder of this AiBcrParseStorageRequest.
-        :rtype: StorageFolderLocation
+        :return: The images of this AiBcrStorageImageRq.
+        :rtype: list[AiBcrImageStorageFile]
         """
-        return self._out_folder
+        return self._images
 
-    @out_folder.setter
-    def out_folder(self, out_folder):
-        """Sets the out_folder of this AiBcrParseStorageRequest.
+    @images.setter
+    def images(self, images):
+        """Sets the images of this AiBcrStorageImageRq.
 
-        Parse output folder location on storage             
+        List of images with business cards             
 
-        :param out_folder: The out_folder of this AiBcrParseStorageRequest.
-        :type: StorageFolderLocation
+        :param images: The images of this AiBcrStorageImageRq.
+        :type: list[AiBcrImageStorageFile]
         """
-        if out_folder is None:
-            raise ValueError("Invalid value for `out_folder`, must not be `None`")
-        self._out_folder = out_folder
+        if images is None:
+            raise ValueError("Invalid value for `images`, must not be `None`")
+        self._images = images
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -129,7 +124,7 @@ class AiBcrParseStorageRequest(AiBcrStorageImageRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiBcrParseStorageRequest):
+        if not isinstance(other, AiBcrStorageImageRq):
             return False
 
         return self.__dict__ == other.__dict__

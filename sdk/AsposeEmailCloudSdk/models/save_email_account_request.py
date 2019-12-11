@@ -47,8 +47,8 @@ class SaveEmailAccountRequest(EmailAccountRequest):
         'host': 'str',
         'port': 'int',
         'login': 'str',
-        'security_options': 'object',
-        'protocol_type': 'object',
+        'security_options': 'str',
+        'protocol_type': 'str',
         'description': 'str',
         'storage_file': 'StorageFileLocation',
         'password': 'str'

@@ -39,16 +39,18 @@ class AiNameFormatRequest(BaseRequest):
     :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France
     :param encoding (str) A character encoding name
     :param script (str) A writing system code; starts with the ISO-15924 script name
-    :param style (str) Name writing style
+    :param format (str) Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (= '%t%F%m%N%L%p')     /format/FN+LN/ (= '%F%L')     /format/title+FN+LN/ (= '%t%F%L')     /format/FN+MN+LN/ (= '%F%M%N%L')     /format/title+FN+MN+LN/ (= '%t%F%M%N%L')     /format/FN+MI+LN/ (= '%F%m%N%L')     /format/title+FN+MI+LN/ (= '%t%F%m%N%L')     /format/LN/ (= '%L')     /format/title+LN/ (= '%t%L')     /format/LN+FN+MN/ (= '%L,%F%M%N')     /format/LN+title+FN+MN/ (= '%L,%t%F%M%N')     /format/LN+FN+MI/ (= '%L,%F%m%N')     /format/LN+title+FN+MI/ (= '%L,%t%F%m%N')  Custom format string - custom combination of characters and the next term placeholders:      '%t' - Title (prefix)     '%F' - First name     '%f' - First initial     '%M' - Middle name(s)     '%m' - Middle initial(s)     '%N' - Nickname     '%L' - Last name     '%l' - Last initial     '%p' - Postfix  If no value for format option was provided, its default value is '%t%F%m%N%L%p'             
+    :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
     """
 
-    def __init__(self, name, language=None, location=None, encoding=None, script=None, style=None):
+    def __init__(self, name, language=None, location=None, encoding=None, script=None, format=None, style=None):
         BaseRequest.__init__(self)
         self.name = name
         self.language = language
         self.location = location
         self.encoding = encoding
         self.script = script
+        self.format = format
         self.style = style
 
     def to_http_info(self, config):
@@ -94,6 +96,11 @@ class AiNameFormatRequest(BaseRequest):
         else:
             if self.script is not None:
                 query_params.append((self._lowercase_first_letter('script'), self.script))
+        if self._lowercase_first_letter('format') in path:
+            path = path.replace('{' + self._lowercase_first_letter('format' + '}'), self.format if self.format is not None else '')
+        else:
+            if self.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), self.format))
         if self._lowercase_first_letter('style') in path:
             path = path.replace('{' + self._lowercase_first_letter('style' + '}'), self.style if self.style is not None else '')
         else:

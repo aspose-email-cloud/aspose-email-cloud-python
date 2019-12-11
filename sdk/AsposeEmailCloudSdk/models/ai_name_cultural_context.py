@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiNameOptions.py">
+#  <copyright company="Aspose" file="AiNameCulturalContext.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -29,8 +29,8 @@ import re
 import six
 
 
-class AiNameOptions(object):
-    """AiName parser options             
+class AiNameCulturalContext(object):
+    """AiName cultural context             
     """
 
     """
@@ -57,7 +57,7 @@ class AiNameOptions(object):
     }
 
     def __init__(self, language=None, location=None, script=None, encoding=None, style=None):
-        """AiNameOptions - a model defined in Swagger"""
+        """AiNameCulturalContext - a model defined in Swagger"""
 
         self._language = None
         self._location = None
@@ -79,112 +79,114 @@ class AiNameOptions(object):
 
     @property
     def language(self):
-        """Gets the language of this AiNameOptions.
+        """Gets the language of this AiNameCulturalContext.
 
         An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
 
-        :return: The language of this AiNameOptions.
+        :return: The language of this AiNameCulturalContext.
         :rtype: str
         """
         return self._language
 
     @language.setter
     def language(self, language):
-        """Sets the language of this AiNameOptions.
+        """Sets the language of this AiNameCulturalContext.
 
         An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
 
-        :param language: The language of this AiNameOptions.
+        :param language: The language of this AiNameCulturalContext.
         :type: str
         """
         self._language = language
 
     @property
     def location(self):
-        """Gets the location of this AiNameOptions.
+        """Gets the location of this AiNameCulturalContext.
 
         A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
 
-        :return: The location of this AiNameOptions.
+        :return: The location of this AiNameCulturalContext.
         :rtype: str
         """
         return self._location
 
     @location.setter
     def location(self, location):
-        """Sets the location of this AiNameOptions.
+        """Sets the location of this AiNameCulturalContext.
 
         A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
 
-        :param location: The location of this AiNameOptions.
+        :param location: The location of this AiNameCulturalContext.
         :type: str
         """
         self._location = location
 
     @property
     def script(self):
-        """Gets the script of this AiNameOptions.
+        """Gets the script of this AiNameCulturalContext.
 
         A writing system code; starts with the ISO-15924 script name             
 
-        :return: The script of this AiNameOptions.
+        :return: The script of this AiNameCulturalContext.
         :rtype: str
         """
         return self._script
 
     @script.setter
     def script(self, script):
-        """Sets the script of this AiNameOptions.
+        """Sets the script of this AiNameCulturalContext.
 
         A writing system code; starts with the ISO-15924 script name             
 
-        :param script: The script of this AiNameOptions.
+        :param script: The script of this AiNameCulturalContext.
         :type: str
         """
         self._script = script
 
     @property
     def encoding(self):
-        """Gets the encoding of this AiNameOptions.
+        """Gets the encoding of this AiNameCulturalContext.
 
         A character encoding name             
 
-        :return: The encoding of this AiNameOptions.
+        :return: The encoding of this AiNameCulturalContext.
         :rtype: str
         """
         return self._encoding
 
     @encoding.setter
     def encoding(self, encoding):
-        """Sets the encoding of this AiNameOptions.
+        """Sets the encoding of this AiNameCulturalContext.
 
         A character encoding name             
 
-        :param encoding: The encoding of this AiNameOptions.
+        :param encoding: The encoding of this AiNameCulturalContext.
         :type: str
         """
         self._encoding = encoding
 
     @property
     def style(self):
-        """Gets the style of this AiNameOptions.
+        """Gets the style of this AiNameCulturalContext.
 
-        Name writing style. Allowed values are: \"Formal\", \"Informal\", \"Legal\", \"Academic\"             
+        Name writing style. Enum, available values: Formal, Informal, Legal, Academic
 
-        :return: The style of this AiNameOptions.
+        :return: The style of this AiNameCulturalContext.
         :rtype: str
         """
         return self._style
 
     @style.setter
     def style(self, style):
-        """Sets the style of this AiNameOptions.
+        """Sets the style of this AiNameCulturalContext.
 
-        Name writing style. Allowed values are: \"Formal\", \"Informal\", \"Legal\", \"Academic\"             
+        Name writing style. Enum, available values: Formal, Informal, Legal, Academic
 
-        :param style: The style of this AiNameOptions.
+        :param style: The style of this AiNameCulturalContext.
         :type: str
         """
+        if style is None:
+            raise ValueError("Invalid value for `style`, must not be `None`")
         self._style = style
 
     def to_dict(self):
@@ -221,7 +223,7 @@ class AiNameOptions(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiNameOptions):
+        if not isinstance(other, AiNameCulturalContext):
             return False
 
         return self.__dict__ == other.__dict__

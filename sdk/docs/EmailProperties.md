@@ -3,7 +3,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **link** | [**Link**](Link.md) | Gets or sets link that originate from this document.              | [optional] 
-**list** | [**list[EmailProperty]**](EmailProperty.md) |  | 
+**list** | [**list[EmailProperty]**](EmailProperty.md) | List of properties              | 
 
 
 

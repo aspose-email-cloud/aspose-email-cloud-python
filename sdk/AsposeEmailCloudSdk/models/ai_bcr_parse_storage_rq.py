@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiNameParsedMatchRequest.py">
+#  <copyright company="Aspose" file="AiBcrParseStorageRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -28,13 +28,14 @@ import pprint
 import re
 import six
 
-from AsposeEmailCloudSdk.models.ai_name_component import AiNameComponent
-from AsposeEmailCloudSdk.models.ai_name_options import AiNameOptions
-from AsposeEmailCloudSdk.models.ai_name_parsed_request import AiNameParsedRequest
+from AsposeEmailCloudSdk.models.ai_bcr_image_storage_file import AiBcrImageStorageFile
+from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
+from AsposeEmailCloudSdk.models.ai_bcr_storage_image_rq import AiBcrStorageImageRq
+from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
-class AiNameParsedMatchRequest(AiNameParsedRequest):
-    """Two parsed names to match request             
+class AiBcrParseStorageRq(AiBcrStorageImageRq):
+    """Parse business card images from Storage request             
     """
 
     """
@@ -45,54 +46,54 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'options': 'AiNameOptions',
-        'parsed_name': 'list[AiNameComponent]',
-        'other_parsed_name': 'list[AiNameComponent]'
+        'options': 'AiBcrOptions',
+        'images': 'list[AiBcrImageStorageFile]',
+        'out_folder': 'StorageFolderLocation'
     }
 
     attribute_map = {
         'options': 'options',
-        'parsed_name': 'parsedName',
-        'other_parsed_name': 'otherParsedName'
+        'images': 'images',
+        'out_folder': 'outFolder'
     }
 
-    def __init__(self, options=None, parsed_name=None, other_parsed_name=None):
-        """AiNameParsedMatchRequest - a model defined in Swagger"""
-        super(AiNameParsedMatchRequest, self).__init__()
+    def __init__(self, options=None, images=None, out_folder=None):
+        """AiBcrParseStorageRq - a model defined in Swagger"""
+        super(AiBcrParseStorageRq, self).__init__()
 
-        self._other_parsed_name = None
+        self._out_folder = None
         self.discriminator = None
 
         if options is not None:
             self.options = options
-        if parsed_name is not None:
-            self.parsed_name = parsed_name
-        if other_parsed_name is not None:
-            self.other_parsed_name = other_parsed_name
+        if images is not None:
+            self.images = images
+        if out_folder is not None:
+            self.out_folder = out_folder
 
     @property
-    def other_parsed_name(self):
-        """Gets the other_parsed_name of this AiNameParsedMatchRequest.
+    def out_folder(self):
+        """Gets the out_folder of this AiBcrParseStorageRq.
 
-        Other parsed name to match             
+        Parse output folder location on storage             
 
-        :return: The other_parsed_name of this AiNameParsedMatchRequest.
-        :rtype: list[AiNameComponent]
+        :return: The out_folder of this AiBcrParseStorageRq.
+        :rtype: StorageFolderLocation
         """
-        return self._other_parsed_name
+        return self._out_folder
 
-    @other_parsed_name.setter
-    def other_parsed_name(self, other_parsed_name):
-        """Sets the other_parsed_name of this AiNameParsedMatchRequest.
+    @out_folder.setter
+    def out_folder(self, out_folder):
+        """Sets the out_folder of this AiBcrParseStorageRq.
 
-        Other parsed name to match             
+        Parse output folder location on storage             
 
-        :param other_parsed_name: The other_parsed_name of this AiNameParsedMatchRequest.
-        :type: list[AiNameComponent]
+        :param out_folder: The out_folder of this AiBcrParseStorageRq.
+        :type: StorageFolderLocation
         """
-        if other_parsed_name is None:
-            raise ValueError("Invalid value for `other_parsed_name`, must not be `None`")
-        self._other_parsed_name = other_parsed_name
+        if out_folder is None:
+            raise ValueError("Invalid value for `out_folder`, must not be `None`")
+        self._out_folder = out_folder
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -128,7 +129,7 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiNameParsedMatchRequest):
+        if not isinstance(other, AiBcrParseStorageRq):
             return False
 
         return self.__dict__ == other.__dict__

@@ -34,7 +34,7 @@ class UpdateContactPropertiesRequest(BaseRequest):
     Request model for update_contact_properties operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format
+    :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
     :param name (str) Contact document file name
     :param request (HierarchicalObjectRequest) Properties that should be updated/added
     """
