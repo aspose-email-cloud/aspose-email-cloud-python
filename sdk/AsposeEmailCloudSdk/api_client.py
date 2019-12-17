@@ -104,7 +104,7 @@ class ApiClient(object):
             query_params=None, header_params=None, body=None, post_params=None,
             files=None, response_type=None, auth_settings=None,
             _return_http_data_only=None, collection_formats=None,
-            _preload_content=True, _request_timeout=None):
+            _preload_content=True, _request_timeout=None, host = None):
         """Call api method"""
         config = self.configuration
 
@@ -152,11 +152,13 @@ class ApiClient(object):
 
         # request url
         url = ''
+        if host is None:
+            host = self.configuration.host
         if six.PY3:
-            url = self.configuration.host + self.configuration.api_version + \
+            url = host + self.configuration.api_version + \
                   resource_path
         else:
-            url = (self.configuration.host + self.configuration.api_version +
+            url = (host + self.configuration.api_version +
                    resource_path).encode('utf8')
 
         # perform request and return response
@@ -294,7 +296,7 @@ class ApiClient(object):
                  body=None, post_params=None, files=None,
                  response_type=None, auth_settings=None,
                  _return_http_data_only=None, collection_formats=None,
-                 _preload_content=True, _request_timeout=None):
+                 _preload_content=True, _request_timeout=None, host=None):
         """Makes the HTTP request (synchronous) and returns deserialized data.
 
         To make an async request, set the async parameter.
@@ -323,6 +325,7 @@ class ApiClient(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
+        :param host: should not be used
         :return: response from server.
         """
         return self.__call_api(resource_path, method,
@@ -330,7 +333,7 @@ class ApiClient(object):
                                body, post_params, files,
                                response_type, auth_settings,
                                _return_http_data_only, collection_formats,
-                               _preload_content, _request_timeout)
+                               _preload_content, _request_timeout, host)
 
     def call_api_async(self, resource_path, method,
                        path_params=None, query_params=None, header_params=None,

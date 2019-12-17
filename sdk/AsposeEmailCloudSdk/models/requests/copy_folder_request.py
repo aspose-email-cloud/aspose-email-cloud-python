@@ -70,18 +70,21 @@ class CopyFolderRequest(BaseRequest):
             path_params[self._lowercase_first_letter('srcPath')] = self.src_path
 
         query_params = []
-        if self._lowercase_first_letter('destPath') in path:
-            path = path.replace('{' + self._lowercase_first_letter('destPath' + '}'), self.dest_path if self.dest_path is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('destPath') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.dest_path if self.dest_path is not None else '')
         else:
             if self.dest_path is not None:
                 query_params.append((self._lowercase_first_letter('destPath'), self.dest_path))
-        if self._lowercase_first_letter('srcStorageName') in path:
-            path = path.replace('{' + self._lowercase_first_letter('srcStorageName' + '}'), self.src_storage_name if self.src_storage_name is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('srcStorageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.src_storage_name if self.src_storage_name is not None else '')
         else:
             if self.src_storage_name is not None:
                 query_params.append((self._lowercase_first_letter('srcStorageName'), self.src_storage_name))
-        if self._lowercase_first_letter('destStorageName') in path:
-            path = path.replace('{' + self._lowercase_first_letter('destStorageName' + '}'), self.dest_storage_name if self.dest_storage_name is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('destStorageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.dest_storage_name if self.dest_storage_name is not None else '')
         else:
             if self.dest_storage_name is not None:
                 query_params.append((self._lowercase_first_letter('destStorageName'), self.dest_storage_name))

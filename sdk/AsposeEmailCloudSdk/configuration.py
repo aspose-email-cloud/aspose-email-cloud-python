@@ -53,7 +53,7 @@ class Configuration(object):
             self.host = Configuration.default_base_url
         if str.endswith(self.host, '/'):
             self.host = self.host[:-1]
-
+        self.auth_url = self.host
         # Default api version is v3
         if api_version:
             if api_version.startswith('v1') or api_version.startswith('v2'):
@@ -126,7 +126,13 @@ class Configuration(object):
         # Proxy URL
         self.proxy = None
         # Safe chars for path_param
-        self.safe_chars_for_path_param = ''
+        self.safe_chars_for_path_param = '/'
+
+    def get_auth_url(self):
+        if self.auth_url:
+            return self.auth_url
+        else:
+            self.host
 
     @property
     def logger_file(self):

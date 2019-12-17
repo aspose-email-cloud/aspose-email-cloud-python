@@ -65,13 +65,15 @@ class ObjectExistsRequest(BaseRequest):
             path_params[self._lowercase_first_letter('path')] = self.path
 
         query_params = []
-        if self._lowercase_first_letter('storageName') in path:
-            path = path.replace('{' + self._lowercase_first_letter('storageName' + '}'), self.storage_name if self.storage_name is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('storageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.storage_name if self.storage_name is not None else '')
         else:
             if self.storage_name is not None:
                 query_params.append((self._lowercase_first_letter('storageName'), self.storage_name))
-        if self._lowercase_first_letter('versionId') in path:
-            path = path.replace('{' + self._lowercase_first_letter('versionId' + '}'), self.version_id if self.version_id is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('versionId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.version_id if self.version_id is not None else '')
         else:
             if self.version_id is not None:
                 query_params.append((self._lowercase_first_letter('versionId'), self.version_id))

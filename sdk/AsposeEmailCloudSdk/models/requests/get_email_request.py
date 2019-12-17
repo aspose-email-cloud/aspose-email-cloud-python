@@ -65,13 +65,15 @@ class GetEmailRequest(BaseRequest):
             path_params[self._lowercase_first_letter('fileName')] = self.file_name
 
         query_params = []
-        if self._lowercase_first_letter('storage') in path:
-            path = path.replace('{' + self._lowercase_first_letter('storage' + '}'), self.storage if self.storage is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.storage if self.storage is not None else '')
         else:
             if self.storage is not None:
                 query_params.append((self._lowercase_first_letter('storage'), self.storage))
-        if self._lowercase_first_letter('folder') in path:
-            path = path.replace('{' + self._lowercase_first_letter('folder' + '}'), self.folder if self.folder is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.folder if self.folder is not None else '')
         else:
             if self.folder is not None:
                 query_params.append((self._lowercase_first_letter('folder'), self.folder))

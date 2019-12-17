@@ -67,28 +67,33 @@ class ListEmailFoldersRequest(BaseRequest):
         path_params = {}
 
         query_params = []
-        if self._lowercase_first_letter('firstAccount') in path:
-            path = path.replace('{' + self._lowercase_first_letter('firstAccount' + '}'), self.first_account if self.first_account is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('firstAccount') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.first_account if self.first_account is not None else '')
         else:
             if self.first_account is not None:
                 query_params.append((self._lowercase_first_letter('firstAccount'), self.first_account))
-        if self._lowercase_first_letter('secondAccount') in path:
-            path = path.replace('{' + self._lowercase_first_letter('secondAccount' + '}'), self.second_account if self.second_account is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('secondAccount') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.second_account if self.second_account is not None else '')
         else:
             if self.second_account is not None:
                 query_params.append((self._lowercase_first_letter('secondAccount'), self.second_account))
-        if self._lowercase_first_letter('storage') in path:
-            path = path.replace('{' + self._lowercase_first_letter('storage' + '}'), self.storage if self.storage is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.storage if self.storage is not None else '')
         else:
             if self.storage is not None:
                 query_params.append((self._lowercase_first_letter('storage'), self.storage))
-        if self._lowercase_first_letter('storageFolder') in path:
-            path = path.replace('{' + self._lowercase_first_letter('storageFolder' + '}'), self.storage_folder if self.storage_folder is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('storageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.storage_folder if self.storage_folder is not None else '')
         else:
             if self.storage_folder is not None:
                 query_params.append((self._lowercase_first_letter('storageFolder'), self.storage_folder))
-        if self._lowercase_first_letter('parentFolder') in path:
-            path = path.replace('{' + self._lowercase_first_letter('parentFolder' + '}'), self.parent_folder if self.parent_folder is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('parentFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.parent_folder if self.parent_folder is not None else '')
         else:
             if self.parent_folder is not None:
                 query_params.append((self._lowercase_first_letter('parentFolder'), self.parent_folder))

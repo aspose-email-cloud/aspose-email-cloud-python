@@ -69,33 +69,39 @@ class AiNameCompleteRequest(BaseRequest):
         path_params = {}
 
         query_params = []
-        if self._lowercase_first_letter('name') in path:
-            path = path.replace('{' + self._lowercase_first_letter('name' + '}'), self.name if self.name is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('name') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.name if self.name is not None else '')
         else:
             if self.name is not None:
                 query_params.append((self._lowercase_first_letter('name'), self.name))
-        if self._lowercase_first_letter('language') in path:
-            path = path.replace('{' + self._lowercase_first_letter('language' + '}'), self.language if self.language is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.language if self.language is not None else '')
         else:
             if self.language is not None:
                 query_params.append((self._lowercase_first_letter('language'), self.language))
-        if self._lowercase_first_letter('location') in path:
-            path = path.replace('{' + self._lowercase_first_letter('location' + '}'), self.location if self.location is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.location if self.location is not None else '')
         else:
             if self.location is not None:
                 query_params.append((self._lowercase_first_letter('location'), self.location))
-        if self._lowercase_first_letter('encoding') in path:
-            path = path.replace('{' + self._lowercase_first_letter('encoding' + '}'), self.encoding if self.encoding is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.encoding if self.encoding is not None else '')
         else:
             if self.encoding is not None:
                 query_params.append((self._lowercase_first_letter('encoding'), self.encoding))
-        if self._lowercase_first_letter('script') in path:
-            path = path.replace('{' + self._lowercase_first_letter('script' + '}'), self.script if self.script is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.script if self.script is not None else '')
         else:
             if self.script is not None:
                 query_params.append((self._lowercase_first_letter('script'), self.script))
-        if self._lowercase_first_letter('style') in path:
-            path = path.replace('{' + self._lowercase_first_letter('style' + '}'), self.style if self.style is not None else '')
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.style if self.style is not None else '')
         else:
             if self.style is not None:
                 query_params.append((self._lowercase_first_letter('style'), self.style))
