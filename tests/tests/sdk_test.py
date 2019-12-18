@@ -160,7 +160,7 @@ def test_ai_name_expand(test_data: TestData):
     name = 'Smith Bobby'
     result = test_data.email.ai_name_expand(
         requests.AiNameExpandRequest(name)) # type: models.AiNameWeightedVariants
-    expandedNames = list(map(lambda weighted: weighted.name, result.names))
+    expandedNames = list(weighted.name for weighted in result.names)
     assert 'Mr. Smith' in expandedNames
     assert 'B. Smith' in expandedNames
 
@@ -169,7 +169,7 @@ def test_ai_name_complete(test_data: TestData):
     prefix = 'Dav'
     result = test_data.email.ai_name_complete(
         requests.AiNameCompleteRequest(prefix)) # type: models.AiNameWeightedVariants
-    names = list(map(lambda weighted: prefix + weighted.name, result.names))
+    names = list(prefix + weighted.name for weighted in result.names)
     assert 'David' in names
     assert 'Dave' in names
     assert 'Davis' in names
@@ -179,7 +179,7 @@ def test_ai_name_parse_email_address(test_data: TestData):
     address = 'john-cane@gmail.com'
     result = test_data.email.ai_name_parse_email_address(
         requests.AiNameParseEmailAddressRequest(address)) # type: models.ListResponseOfAiNameExtracted
-    names = map(lambda extracted: extracted.name, result.value)
+    names = (extracted.name for extracted in result.value)
     extracted_values = list(functools.reduce(lambda a,b: a+b, names))
     given_name = next((x for x in extracted_values if x.category == 'GivenName'))
     surname = next((x for x in extracted_values if x.category == 'Surname'))
