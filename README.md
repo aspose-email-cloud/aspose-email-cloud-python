@@ -1,15 +1,32 @@
-﻿Aspose.Email Cloud is a REST API for creating email applications that work with standard email file formats. This SDK:
+﻿# Aspose.Email Cloud SDK for Python [![PYPI](https://img.shields.io/pypi/v/aspose-email-cloud)](https://pypi.org/project/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-python)](https://pypi.org/project/aspose-email-cloud/)
+This repository contains Aspose.Email Cloud SDK for Python source code. This SDK allows you to work with Aspose.Email Cloud REST APIs in your Python applications quickly and easily, with zero initial cost.
+
+[Aspose.Email Cloud home](https://products.aspose.cloud/email/family "Aspose.Email Cloud")  
+[API Reference](https://apireference.aspose.cloud/email/)
+
+# Key features
+
+Aspose.Email Cloud is a REST API for creating email applications that work with standard email file formats. This SDK:
 - Lets developers manipulate different emails’ formats such as Outlook MSG, EML, VCard, and iCalendar files
 - Has a built-in email client
 - Supports AI functionalities:
     - The Business card recognition
     - The Name API for parsing and handling personal names
 
-To use this SDK, you need an App SID and an App Key; they can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (it requires free registration in Aspose Cloud for this).
-
 ## How to use the SDK?
 The complete source code is available in the GIT repository. 
 Use reference documentation, available [**here**](sdk/docs/README.md)
+
+### Prerequisites
+
+To use this SDK, you need an App SID and an App Key; they can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (it requires free registration in Aspose Cloud for this).
+
+### Installation
+
+You can use it directly in your project via the source code or get a [PYPI Package](https://pypi.org/project/aspose-email-cloud/):
+
+    pip install aspose-email-cloud
+
 
 ### Usage examples
 
@@ -40,12 +57,6 @@ async_result = email_api.get_calendar_async( #returns multiprocessing.pool.Async
         storage))
 result = async_result.get()
 ```
-
-### Install Aspose.Email for Cloud via PYPI
-
-You can use it directly in your project via the source code or get a [PYPI Package](https://pypi.org/project/aspose-email-cloud/):
-
-    pip install aspose-email-cloud
 
 # Licensing
 All Aspose.Email Cloud SDKs, helper scripts and templates are licensed under [MIT License](LICENSE).
