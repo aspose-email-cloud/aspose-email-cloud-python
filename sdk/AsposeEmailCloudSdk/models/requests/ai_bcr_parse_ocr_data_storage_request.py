@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AiBcrParseOcrDataStorageRequest(BaseRequest):
@@ -37,7 +38,7 @@ class AiBcrParseOcrDataStorageRequest(BaseRequest):
     :param rq (AiBcrParseOcrDataStorageRq) 
     """
 
-    def __init__(self, rq):
+    def __init__(self, rq: AiBcrParseOcrDataStorageRq):
         BaseRequest.__init__(self)
         self.rq = rq
 

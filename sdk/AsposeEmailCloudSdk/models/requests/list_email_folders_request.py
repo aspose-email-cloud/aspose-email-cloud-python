@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class ListEmailFoldersRequest(BaseRequest):
@@ -41,7 +42,7 @@ class ListEmailFoldersRequest(BaseRequest):
     :param parent_folder (str) Folder in which subfolders should be listed
     """
 
-    def __init__(self, first_account, second_account=None, storage=None, storage_folder=None, parent_folder=None):
+    def __init__(self, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, parent_folder: str = None):
         BaseRequest.__init__(self)
         self.first_account = first_account
         self.second_account = second_account

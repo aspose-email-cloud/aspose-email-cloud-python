@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
@@ -62,7 +64,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
         'email_file': 'emailFile'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, folder=None, mark_as_sent=None, email_file=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, email_file: StorageFileLocation = None):
         """AppendEmailBaseRequest - a model defined in Swagger"""
         super(AppendEmailBaseRequest, self).__init__()
 
@@ -83,7 +85,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
             self.email_file = email_file
 
     @property
-    def email_file(self):
+    def email_file(self) -> StorageFileLocation:
         """Gets the email_file of this AppendEmailBaseRequest.
 
         Email document file location in storage             
@@ -94,7 +96,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
         return self._email_file
 
     @email_file.setter
-    def email_file(self, email_file):
+    def email_file(self, email_file: StorageFileLocation):
         """Sets the email_file of this AppendEmailBaseRequest.
 
         Email document file location in storage             

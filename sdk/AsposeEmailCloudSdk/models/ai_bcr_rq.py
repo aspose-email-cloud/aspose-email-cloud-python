@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
 
@@ -58,7 +60,7 @@ class AiBcrRq(object):
         'AiBcrBase64Rq': 'AiBcrBase64Rq'
     }
 
-    def __init__(self, options=None):
+    def __init__(self, options: AiBcrOptions = None):
         """AiBcrRq - a model defined in Swagger"""
 
         self._options = None
@@ -68,7 +70,7 @@ class AiBcrRq(object):
             self.options = options
 
     @property
-    def options(self):
+    def options(self) -> AiBcrOptions:
         """Gets the options of this AiBcrRq.
 
         Recognition options             
@@ -79,7 +81,7 @@ class AiBcrRq(object):
         return self._options
 
     @options.setter
-    def options(self, options):
+    def options(self, options: AiBcrOptions):
         """Sets the options of this AiBcrRq.
 
         Recognition options             

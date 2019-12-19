@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.base_object import BaseObject
 
@@ -56,7 +58,7 @@ class IndexedHierarchicalObject(BaseObject):
         'internal_properties': 'internalProperties'
     }
 
-    def __init__(self, name=None, type=None, index=None, internal_properties=None):
+    def __init__(self, name: str = None, type: str = None, index: int = None, internal_properties: List[BaseObject] = None):
         """IndexedHierarchicalObject - a model defined in Swagger"""
         super(IndexedHierarchicalObject, self).__init__()
 
@@ -74,7 +76,7 @@ class IndexedHierarchicalObject(BaseObject):
             self.internal_properties = internal_properties
 
     @property
-    def index(self):
+    def index(self) -> int:
         """Gets the index of this IndexedHierarchicalObject.
 
         Index of property in list             
@@ -85,7 +87,7 @@ class IndexedHierarchicalObject(BaseObject):
         return self._index
 
     @index.setter
-    def index(self, index):
+    def index(self, index: int):
         """Sets the index of this IndexedHierarchicalObject.
 
         Index of property in list             
@@ -98,7 +100,7 @@ class IndexedHierarchicalObject(BaseObject):
         self._index = index
 
     @property
-    def internal_properties(self):
+    def internal_properties(self) -> List[BaseObject]:
         """Gets the internal_properties of this IndexedHierarchicalObject.
 
         List of internal properties             
@@ -109,7 +111,7 @@ class IndexedHierarchicalObject(BaseObject):
         return self._internal_properties
 
     @internal_properties.setter
-    def internal_properties(self, internal_properties):
+    def internal_properties(self, internal_properties: List[BaseObject]):
         """Sets the internal_properties of this IndexedHierarchicalObject.
 
         List of internal properties             

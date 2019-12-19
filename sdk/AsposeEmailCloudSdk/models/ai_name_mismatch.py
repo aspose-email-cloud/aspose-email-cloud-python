@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiNameMismatch(object):
@@ -52,7 +54,7 @@ class AiNameMismatch(object):
         'explanation': 'explanation'
     }
 
-    def __init__(self, category=None, similarity=None, explanation=None):
+    def __init__(self, category: str = None, similarity: float = None, explanation: str = None):
         """AiNameMismatch - a model defined in Swagger"""
 
         self._category = None
@@ -68,7 +70,7 @@ class AiNameMismatch(object):
             self.explanation = explanation
 
     @property
-    def category(self):
+    def category(self) -> str:
         """Gets the category of this AiNameMismatch.
 
         Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
@@ -79,7 +81,7 @@ class AiNameMismatch(object):
         return self._category
 
     @category.setter
-    def category(self, category):
+    def category(self, category: str):
         """Sets the category of this AiNameMismatch.
 
         Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
@@ -92,7 +94,7 @@ class AiNameMismatch(object):
         self._category = category
 
     @property
-    def similarity(self):
+    def similarity(self) -> float:
         """Gets the similarity of this AiNameMismatch.
 
         Similarity score             
@@ -103,7 +105,7 @@ class AiNameMismatch(object):
         return self._similarity
 
     @similarity.setter
-    def similarity(self, similarity):
+    def similarity(self, similarity: float):
         """Sets the similarity of this AiNameMismatch.
 
         Similarity score             
@@ -116,7 +118,7 @@ class AiNameMismatch(object):
         self._similarity = similarity
 
     @property
-    def explanation(self):
+    def explanation(self) -> str:
         """Gets the explanation of this AiNameMismatch.
 
         Explanation or mismatch subtype             
@@ -127,7 +129,7 @@ class AiNameMismatch(object):
         return self._explanation
 
     @explanation.setter
-    def explanation(self, explanation):
+    def explanation(self, explanation: str):
         """Sets the explanation of this AiNameMismatch.
 
         Explanation or mismatch subtype             

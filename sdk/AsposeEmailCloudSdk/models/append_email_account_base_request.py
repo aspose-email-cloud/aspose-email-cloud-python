@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -59,7 +61,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
         'mark_as_sent': 'markAsSent'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, folder=None, mark_as_sent=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None):
         """AppendEmailAccountBaseRequest - a model defined in Swagger"""
         super(AppendEmailAccountBaseRequest, self).__init__()
 
@@ -79,7 +81,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
             self.mark_as_sent = mark_as_sent
 
     @property
-    def folder(self):
+    def folder(self) -> str:
         """Gets the folder of this AppendEmailAccountBaseRequest.
 
         Email account folder to store a message             
@@ -90,7 +92,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
         return self._folder
 
     @folder.setter
-    def folder(self, folder):
+    def folder(self, folder: str):
         """Sets the folder of this AppendEmailAccountBaseRequest.
 
         Email account folder to store a message             
@@ -105,7 +107,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
         self._folder = folder
 
     @property
-    def mark_as_sent(self):
+    def mark_as_sent(self) -> bool:
         """Gets the mark_as_sent of this AppendEmailAccountBaseRequest.
 
         Mark message as sent             
@@ -116,7 +118,7 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
         return self._mark_as_sent
 
     @mark_as_sent.setter
-    def mark_as_sent(self, mark_as_sent):
+    def mark_as_sent(self, mark_as_sent: bool):
         """Sets the mark_as_sent of this AppendEmailAccountBaseRequest.
 
         Mark message as sent             

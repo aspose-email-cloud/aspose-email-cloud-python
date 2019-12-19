@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.email_document import EmailDocument
 
@@ -50,7 +52,7 @@ class EmailDocumentResponse(object):
         'document': 'document'
     }
 
-    def __init__(self, document=None):
+    def __init__(self, document: EmailDocument = None):
         """EmailDocumentResponse - a model defined in Swagger"""
 
         self._document = None
@@ -60,7 +62,7 @@ class EmailDocumentResponse(object):
             self.document = document
 
     @property
-    def document(self):
+    def document(self) -> EmailDocument:
         """Gets the document of this EmailDocumentResponse.
 
         An email document requested             
@@ -71,7 +73,7 @@ class EmailDocumentResponse(object):
         return self._document
 
     @document.setter
-    def document(self, document):
+    def document(self, document: EmailDocument):
         """Sets the document of this EmailDocumentResponse.
 
         An email document requested             

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class GetEmailAttachmentRequest(BaseRequest):
@@ -40,7 +41,7 @@ class GetEmailAttachmentRequest(BaseRequest):
     :param folder (str) Path to folder in storage
     """
 
-    def __init__(self, attachment, file_name, storage=None, folder=None):
+    def __init__(self, attachment: str, file_name: str, storage: str = None, folder: str = None):
         BaseRequest.__init__(self)
         self.attachment = attachment
         self.file_name = file_name

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class ObjectExistsRequest(BaseRequest):
@@ -39,7 +40,7 @@ class ObjectExistsRequest(BaseRequest):
     :param version_id (str) File version ID
     """
 
-    def __init__(self, path, storage_name=None, version_id=None):
+    def __init__(self, path: str, storage_name: str = None, version_id: str = None):
         BaseRequest.__init__(self)
         self.path = path
         self.storage_name = storage_name

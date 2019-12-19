@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class MailServerFolder(object):
@@ -50,7 +52,7 @@ class MailServerFolder(object):
         'id': 'id'
     }
 
-    def __init__(self, name=None, id=None):
+    def __init__(self, name: str = None, id: str = None):
         """MailServerFolder - a model defined in Swagger"""
 
         self._name = None
@@ -63,7 +65,7 @@ class MailServerFolder(object):
             self.id = id
 
     @property
-    def name(self):
+    def name(self) -> str:
         """Gets the name of this MailServerFolder.
 
         Gets or sets mail folder name             
@@ -74,7 +76,7 @@ class MailServerFolder(object):
         return self._name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: str):
         """Sets the name of this MailServerFolder.
 
         Gets or sets mail folder name             
@@ -85,7 +87,7 @@ class MailServerFolder(object):
         self._name = name
 
     @property
-    def id(self):
+    def id(self) -> str:
         """Gets the id of this MailServerFolder.
 
         Gets or sets mail folder id             
@@ -96,7 +98,7 @@ class MailServerFolder(object):
         return self._id
 
     @id.setter
-    def id(self, id):
+    def id(self, id: str):
         """Sets the id of this MailServerFolder.
 
         Gets or sets mail folder id             

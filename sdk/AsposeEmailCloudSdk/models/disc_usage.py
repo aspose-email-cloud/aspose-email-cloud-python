@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class DiscUsage(object):
@@ -50,7 +52,7 @@ class DiscUsage(object):
         'total_size': 'totalSize'
     }
 
-    def __init__(self, used_size=None, total_size=None):
+    def __init__(self, used_size: int = None, total_size: int = None):
         """DiscUsage - a model defined in Swagger"""
 
         self._used_size = None
@@ -63,7 +65,7 @@ class DiscUsage(object):
             self.total_size = total_size
 
     @property
-    def used_size(self):
+    def used_size(self) -> int:
         """Gets the used_size of this DiscUsage.
 
         Application used disc space.
@@ -74,7 +76,7 @@ class DiscUsage(object):
         return self._used_size
 
     @used_size.setter
-    def used_size(self, used_size):
+    def used_size(self, used_size: int):
         """Sets the used_size of this DiscUsage.
 
         Application used disc space.
@@ -87,7 +89,7 @@ class DiscUsage(object):
         self._used_size = used_size
 
     @property
-    def total_size(self):
+    def total_size(self) -> int:
         """Gets the total_size of this DiscUsage.
 
         Total disc space.
@@ -98,7 +100,7 @@ class DiscUsage(object):
         return self._total_size
 
     @total_size.setter
-    def total_size(self, total_size):
+    def total_size(self, total_size: int):
         """Sets the total_size of this DiscUsage.
 
         Total disc space.

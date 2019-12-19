@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.link import Link
 
@@ -54,7 +56,7 @@ class EmailProperty(object):
         'value': 'value'
     }
 
-    def __init__(self, link=None, name=None, value=None):
+    def __init__(self, link: Link = None, name: str = None, value: object = None):
         """EmailProperty - a model defined in Swagger"""
 
         self._link = None
@@ -70,7 +72,7 @@ class EmailProperty(object):
             self.value = value
 
     @property
-    def link(self):
+    def link(self) -> Link:
         """Gets the link of this EmailProperty.
 
         Link to property             
@@ -81,7 +83,7 @@ class EmailProperty(object):
         return self._link
 
     @link.setter
-    def link(self, link):
+    def link(self, link: Link):
         """Sets the link of this EmailProperty.
 
         Link to property             
@@ -92,7 +94,7 @@ class EmailProperty(object):
         self._link = link
 
     @property
-    def name(self):
+    def name(self) -> str:
         """Gets the name of this EmailProperty.
 
         Property name             
@@ -103,7 +105,7 @@ class EmailProperty(object):
         return self._name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: str):
         """Sets the name of this EmailProperty.
 
         Property name             
@@ -118,7 +120,7 @@ class EmailProperty(object):
         self._name = name
 
     @property
-    def value(self):
+    def value(self) -> object:
         """Gets the value of this EmailProperty.
 
         Property value             
@@ -129,7 +131,7 @@ class EmailProperty(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: object):
         """Sets the value of this EmailProperty.
 
         Property value             

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class CopyFileRequest(BaseRequest):
@@ -41,7 +42,7 @@ class CopyFileRequest(BaseRequest):
     :param version_id (str) File version ID to copy
     """
 
-    def __init__(self, src_path, dest_path, src_storage_name=None, dest_storage_name=None, version_id=None):
+    def __init__(self, src_path: str, dest_path: str, src_storage_name: str = None, dest_storage_name: str = None, version_id: str = None):
         BaseRequest.__init__(self)
         self.src_path = src_path
         self.dest_path = dest_path

@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class BaseObject(object):
@@ -57,7 +59,7 @@ class BaseObject(object):
         'IndexedPrimitiveObject': 'IndexedPrimitiveObject'
     }
 
-    def __init__(self, name=None, type=None):
+    def __init__(self, name: str = None, type: str = None):
         """BaseObject - a model defined in Swagger"""
 
         self._name = None
@@ -70,7 +72,7 @@ class BaseObject(object):
             self.type = type
 
     @property
-    def name(self):
+    def name(self) -> str:
         """Gets the name of this BaseObject.
 
         Gets or sets the name of an object.             
@@ -81,7 +83,7 @@ class BaseObject(object):
         return self._name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: str):
         """Sets the name of this BaseObject.
 
         Gets or sets the name of an object.             
@@ -92,7 +94,7 @@ class BaseObject(object):
         self._name = name
 
     @property
-    def type(self):
+    def type(self) -> str:
         """Gets the type of this BaseObject.
 
         Property type. Used for deserialization purposes             
@@ -103,7 +105,7 @@ class BaseObject(object):
         return self.__class__.__name__
 
     @type.setter
-    def type(self, type):
+    def type(self, type: str):
         """Sets the type of this BaseObject.
 
         Property type. Used for deserialization purposes             

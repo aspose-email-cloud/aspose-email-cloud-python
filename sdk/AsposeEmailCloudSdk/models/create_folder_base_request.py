@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -59,7 +61,7 @@ class CreateFolderBaseRequest(AccountBaseRequest):
         'parent_folder': 'parentFolder'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, folder=None, parent_folder=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, parent_folder: str = None):
         """CreateFolderBaseRequest - a model defined in Swagger"""
         super(CreateFolderBaseRequest, self).__init__()
 
@@ -79,7 +81,7 @@ class CreateFolderBaseRequest(AccountBaseRequest):
             self.parent_folder = parent_folder
 
     @property
-    def folder(self):
+    def folder(self) -> str:
         """Gets the folder of this CreateFolderBaseRequest.
 
         Folder name             
@@ -90,7 +92,7 @@ class CreateFolderBaseRequest(AccountBaseRequest):
         return self._folder
 
     @folder.setter
-    def folder(self, folder):
+    def folder(self, folder: str):
         """Sets the folder of this CreateFolderBaseRequest.
 
         Folder name             
@@ -105,7 +107,7 @@ class CreateFolderBaseRequest(AccountBaseRequest):
         self._folder = folder
 
     @property
-    def parent_folder(self):
+    def parent_folder(self) -> str:
         """Gets the parent_folder of this CreateFolderBaseRequest.
 
         Parent folder path             
@@ -116,7 +118,7 @@ class CreateFolderBaseRequest(AccountBaseRequest):
         return self._parent_folder
 
     @parent_folder.setter
-    def parent_folder(self, parent_folder):
+    def parent_folder(self, parent_folder: str):
         """Sets the parent_folder of this CreateFolderBaseRequest.
 
         Parent folder path             

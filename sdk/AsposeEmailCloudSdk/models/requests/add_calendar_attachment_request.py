@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AddCalendarAttachmentRequest(BaseRequest):
@@ -39,7 +40,7 @@ class AddCalendarAttachmentRequest(BaseRequest):
     :param request (AddAttachmentRequest) Storage name and folder path for calendar and attachment files
     """
 
-    def __init__(self, name, attachment, request):
+    def __init__(self, name: str, attachment: str, request: AddAttachmentRequest):
         BaseRequest.__init__(self)
         self.name = name
         self.attachment = attachment

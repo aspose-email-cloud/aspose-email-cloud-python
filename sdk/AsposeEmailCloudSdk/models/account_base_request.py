@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
@@ -66,7 +68,7 @@ class AccountBaseRequest(object):
         'CreateFolderBaseRequest': 'CreateFolderBaseRequest'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None):
         """AccountBaseRequest - a model defined in Swagger"""
 
         self._first_account = None
@@ -82,7 +84,7 @@ class AccountBaseRequest(object):
             self.storage_folder = storage_folder
 
     @property
-    def first_account(self):
+    def first_account(self) -> str:
         """Gets the first_account of this AccountBaseRequest.
 
         First account storage file name for receiving emails (or universal one)             
@@ -93,7 +95,7 @@ class AccountBaseRequest(object):
         return self._first_account
 
     @first_account.setter
-    def first_account(self, first_account):
+    def first_account(self, first_account: str):
         """Sets the first_account of this AccountBaseRequest.
 
         First account storage file name for receiving emails (or universal one)             
@@ -108,7 +110,7 @@ class AccountBaseRequest(object):
         self._first_account = first_account
 
     @property
-    def second_account(self):
+    def second_account(self) -> str:
         """Gets the second_account of this AccountBaseRequest.
 
         Second account storage file name for sending emails (ignored if first is universal)             
@@ -119,7 +121,7 @@ class AccountBaseRequest(object):
         return self._second_account
 
     @second_account.setter
-    def second_account(self, second_account):
+    def second_account(self, second_account: str):
         """Sets the second_account of this AccountBaseRequest.
 
         Second account storage file name for sending emails (ignored if first is universal)             
@@ -130,7 +132,7 @@ class AccountBaseRequest(object):
         self._second_account = second_account
 
     @property
-    def storage_folder(self):
+    def storage_folder(self) -> StorageFolderLocation:
         """Gets the storage_folder of this AccountBaseRequest.
 
         Storage folder location of account files             
@@ -141,7 +143,7 @@ class AccountBaseRequest(object):
         return self._storage_folder
 
     @storage_folder.setter
-    def storage_folder(self, storage_folder):
+    def storage_folder(self, storage_folder: StorageFolderLocation):
         """Sets the storage_folder of this AccountBaseRequest.
 
         Storage folder location of account files             

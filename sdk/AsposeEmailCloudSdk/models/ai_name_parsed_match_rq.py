@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_name_component import AiNameComponent
 from AsposeEmailCloudSdk.models.ai_name_cultural_context import AiNameCulturalContext
@@ -58,7 +60,7 @@ class AiNameParsedMatchRq(AiNameParsedRq):
         'other_parsed_name': 'otherParsedName'
     }
 
-    def __init__(self, cultural_context=None, format=None, parsed_name=None, other_parsed_name=None):
+    def __init__(self, cultural_context: AiNameCulturalContext = None, format: str = None, parsed_name: List[AiNameComponent] = None, other_parsed_name: List[AiNameComponent] = None):
         """AiNameParsedMatchRq - a model defined in Swagger"""
         super(AiNameParsedMatchRq, self).__init__()
 
@@ -75,7 +77,7 @@ class AiNameParsedMatchRq(AiNameParsedRq):
             self.other_parsed_name = other_parsed_name
 
     @property
-    def other_parsed_name(self):
+    def other_parsed_name(self) -> List[AiNameComponent]:
         """Gets the other_parsed_name of this AiNameParsedMatchRq.
 
         Other parsed name to match             
@@ -86,7 +88,7 @@ class AiNameParsedMatchRq(AiNameParsedRq):
         return self._other_parsed_name
 
     @other_parsed_name.setter
-    def other_parsed_name(self, other_parsed_name):
+    def other_parsed_name(self, other_parsed_name: List[AiNameComponent]):
         """Sets the other_parsed_name of this AiNameParsedMatchRq.
 
         Other parsed name to match             

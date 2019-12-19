@@ -39,6 +39,7 @@ def test_file(test_data: TestData):
     file_name = str(uuid.uuid4()) + ".ics"
     storage_location = test_data.folder + "/" + file_name
     test_data.email.upload_file(requests.UploadFileRequest(storage_location, sample, test_data.storage))
+    rq = requests.UploadFileRequest(storage_location, sample, test_data.storage)
     downloaded = test_data.email.download_file(requests.DownloadFileRequest(storage_location, test_data.storage))
     with open(downloaded, 'r') as f:
         filedata = f.read()
@@ -178,7 +179,7 @@ def test_ai_name_complete(test_data: TestData):
 def test_ai_name_parse_email_address(test_data: TestData):
     address = 'john-cane@gmail.com'
     result = test_data.email.ai_name_parse_email_address(
-        requests.AiNameParseEmailAddressRequest(address)) # type: models.ListResponseOfAiNameExtracted
+        requests.AiNameParseEmailAddressRequest(address))
     names = (extracted.name for extracted in result.value)
     extracted_values = list(functools.reduce(lambda a,b: a+b, names))
     given_name = next((x for x in extracted_values if x.category == 'GivenName'))

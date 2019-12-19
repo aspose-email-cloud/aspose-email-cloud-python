@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiBcrOcrDataPart(object):
@@ -58,7 +60,7 @@ class AiBcrOcrDataPart(object):
         'details': 'details'
     }
 
-    def __init__(self, x=None, y=None, width=None, height=None, text=None, details=None):
+    def __init__(self, x: float = None, y: float = None, width: float = None, height: float = None, text: str = None, details: Dict[str, str] = None):
         """AiBcrOcrDataPart - a model defined in Swagger"""
 
         self._x = None
@@ -83,7 +85,7 @@ class AiBcrOcrDataPart(object):
             self.details = details
 
     @property
-    def x(self):
+    def x(self) -> float:
         """Gets the x of this AiBcrOcrDataPart.
 
         X position of text block             
@@ -94,7 +96,7 @@ class AiBcrOcrDataPart(object):
         return self._x
 
     @x.setter
-    def x(self, x):
+    def x(self, x: float):
         """Sets the x of this AiBcrOcrDataPart.
 
         X position of text block             
@@ -107,7 +109,7 @@ class AiBcrOcrDataPart(object):
         self._x = x
 
     @property
-    def y(self):
+    def y(self) -> float:
         """Gets the y of this AiBcrOcrDataPart.
 
         Y position of text block             
@@ -118,7 +120,7 @@ class AiBcrOcrDataPart(object):
         return self._y
 
     @y.setter
-    def y(self, y):
+    def y(self, y: float):
         """Sets the y of this AiBcrOcrDataPart.
 
         Y position of text block             
@@ -131,7 +133,7 @@ class AiBcrOcrDataPart(object):
         self._y = y
 
     @property
-    def width(self):
+    def width(self) -> float:
         """Gets the width of this AiBcrOcrDataPart.
 
         Width of text block             
@@ -142,7 +144,7 @@ class AiBcrOcrDataPart(object):
         return self._width
 
     @width.setter
-    def width(self, width):
+    def width(self, width: float):
         """Sets the width of this AiBcrOcrDataPart.
 
         Width of text block             
@@ -155,7 +157,7 @@ class AiBcrOcrDataPart(object):
         self._width = width
 
     @property
-    def height(self):
+    def height(self) -> float:
         """Gets the height of this AiBcrOcrDataPart.
 
         Height of text block             
@@ -166,7 +168,7 @@ class AiBcrOcrDataPart(object):
         return self._height
 
     @height.setter
-    def height(self, height):
+    def height(self, height: float):
         """Sets the height of this AiBcrOcrDataPart.
 
         Height of text block             
@@ -179,7 +181,7 @@ class AiBcrOcrDataPart(object):
         self._height = height
 
     @property
-    def text(self):
+    def text(self) -> str:
         """Gets the text of this AiBcrOcrDataPart.
 
         Recognized text             
@@ -190,7 +192,7 @@ class AiBcrOcrDataPart(object):
         return self._text
 
     @text.setter
-    def text(self, text):
+    def text(self, text: str):
         """Sets the text of this AiBcrOcrDataPart.
 
         Recognized text             
@@ -201,7 +203,7 @@ class AiBcrOcrDataPart(object):
         self._text = text
 
     @property
-    def details(self):
+    def details(self) -> Dict[str, str]:
         """Gets the details of this AiBcrOcrDataPart.
 
         Additional recognition result details             
@@ -212,7 +214,7 @@ class AiBcrOcrDataPart(object):
         return self._details
 
     @details.setter
-    def details(self, details):
+    def details(self, details: Dict[str, str]):
         """Sets the details of this AiBcrOcrDataPart.
 
         Additional recognition result details             

@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.email_account_request import EmailAccountRequest
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
@@ -65,7 +67,7 @@ class SaveEmailAccountRequest(EmailAccountRequest):
         'password': 'password'
     }
 
-    def __init__(self, host=None, port=None, login=None, security_options=None, protocol_type=None, description=None, storage_file=None, password=None):
+    def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None, password: str = None):
         """SaveEmailAccountRequest - a model defined in Swagger"""
         super(SaveEmailAccountRequest, self).__init__()
 
@@ -90,7 +92,7 @@ class SaveEmailAccountRequest(EmailAccountRequest):
             self.password = password
 
     @property
-    def password(self):
+    def password(self) -> str:
         """Gets the password of this SaveEmailAccountRequest.
 
         Email account password             
@@ -101,7 +103,7 @@ class SaveEmailAccountRequest(EmailAccountRequest):
         return self._password
 
     @password.setter
-    def password(self, password):
+    def password(self, password: str):
         """Sets the password of this SaveEmailAccountRequest.
 
         Email account password             

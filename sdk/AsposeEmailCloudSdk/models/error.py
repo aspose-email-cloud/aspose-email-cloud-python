@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.error_details import ErrorDetails
 
@@ -56,7 +58,7 @@ class Error(object):
         'inner_error': 'innerError'
     }
 
-    def __init__(self, code=None, message=None, description=None, inner_error=None):
+    def __init__(self, code: str = None, message: str = None, description: str = None, inner_error: ErrorDetails = None):
         """Error - a model defined in Swagger"""
 
         self._code = None
@@ -75,7 +77,7 @@ class Error(object):
             self.inner_error = inner_error
 
     @property
-    def code(self):
+    def code(self) -> str:
         """Gets the code of this Error.
 
         Code             
@@ -86,7 +88,7 @@ class Error(object):
         return self._code
 
     @code.setter
-    def code(self, code):
+    def code(self, code: str):
         """Sets the code of this Error.
 
         Code             
@@ -97,7 +99,7 @@ class Error(object):
         self._code = code
 
     @property
-    def message(self):
+    def message(self) -> str:
         """Gets the message of this Error.
 
         Message             
@@ -108,7 +110,7 @@ class Error(object):
         return self._message
 
     @message.setter
-    def message(self, message):
+    def message(self, message: str):
         """Sets the message of this Error.
 
         Message             
@@ -119,7 +121,7 @@ class Error(object):
         self._message = message
 
     @property
-    def description(self):
+    def description(self) -> str:
         """Gets the description of this Error.
 
         Description             
@@ -130,7 +132,7 @@ class Error(object):
         return self._description
 
     @description.setter
-    def description(self, description):
+    def description(self, description: str):
         """Sets the description of this Error.
 
         Description             
@@ -141,7 +143,7 @@ class Error(object):
         self._description = description
 
     @property
-    def inner_error(self):
+    def inner_error(self) -> ErrorDetails:
         """Gets the inner_error of this Error.
 
         Inner Error             
@@ -152,7 +154,7 @@ class Error(object):
         return self._inner_error
 
     @inner_error.setter
-    def inner_error(self, inner_error):
+    def inner_error(self, inner_error: ErrorDetails):
         """Sets the inner_error of this Error.
 
         Inner Error             

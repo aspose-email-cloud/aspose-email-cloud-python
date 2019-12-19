@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_image_storage_file import AiBcrImageStorageFile
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
@@ -54,7 +56,7 @@ class AiBcrStorageImageRq(AiBcrRq):
         'images': 'images'
     }
 
-    def __init__(self, options=None, images=None):
+    def __init__(self, options: AiBcrOptions = None, images: List[AiBcrImageStorageFile] = None):
         """AiBcrStorageImageRq - a model defined in Swagger"""
         super(AiBcrStorageImageRq, self).__init__()
 
@@ -67,7 +69,7 @@ class AiBcrStorageImageRq(AiBcrRq):
             self.images = images
 
     @property
-    def images(self):
+    def images(self) -> List[AiBcrImageStorageFile]:
         """Gets the images of this AiBcrStorageImageRq.
 
         List of images with business cards             
@@ -78,7 +80,7 @@ class AiBcrStorageImageRq(AiBcrRq):
         return self._images
 
     @images.setter
-    def images(self, images):
+    def images(self, images: List[AiBcrImageStorageFile]):
         """Sets the images of this AiBcrStorageImageRq.
 
         List of images with business cards             

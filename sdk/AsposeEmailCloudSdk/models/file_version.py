@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.storage_file import StorageFile
 
@@ -62,7 +64,7 @@ class FileVersion(StorageFile):
         'is_latest': 'isLatest'
     }
 
-    def __init__(self, name=None, is_folder=None, modified_date=None, size=None, path=None, version_id=None, is_latest=None):
+    def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None, version_id: str = None, is_latest: bool = None):
         """FileVersion - a model defined in Swagger"""
         super(FileVersion, self).__init__()
 
@@ -86,7 +88,7 @@ class FileVersion(StorageFile):
             self.is_latest = is_latest
 
     @property
-    def version_id(self):
+    def version_id(self) -> str:
         """Gets the version_id of this FileVersion.
 
         File Version ID.
@@ -97,7 +99,7 @@ class FileVersion(StorageFile):
         return self._version_id
 
     @version_id.setter
-    def version_id(self, version_id):
+    def version_id(self, version_id: str):
         """Sets the version_id of this FileVersion.
 
         File Version ID.
@@ -108,7 +110,7 @@ class FileVersion(StorageFile):
         self._version_id = version_id
 
     @property
-    def is_latest(self):
+    def is_latest(self) -> bool:
         """Gets the is_latest of this FileVersion.
 
         Specifies whether the file is (true) or is not (false) the latest version of an file.
@@ -119,7 +121,7 @@ class FileVersion(StorageFile):
         return self._is_latest
 
     @is_latest.setter
-    def is_latest(self, is_latest):
+    def is_latest(self, is_latest: bool):
         """Sets the is_latest of this FileVersion.
 
         Specifies whether the file is (true) or is not (false) the latest version of an file.

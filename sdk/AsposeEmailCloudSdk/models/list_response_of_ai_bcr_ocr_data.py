@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_ocr_data import AiBcrOcrData
 
@@ -50,7 +52,7 @@ class ListResponseOfAiBcrOcrData(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[AiBcrOcrData] = None):
         """ListResponseOfAiBcrOcrData - a model defined in Swagger"""
 
         self._value = None
@@ -60,7 +62,7 @@ class ListResponseOfAiBcrOcrData(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[AiBcrOcrData]:
         """Gets the value of this ListResponseOfAiBcrOcrData.
 
 
@@ -70,7 +72,7 @@ class ListResponseOfAiBcrOcrData(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[AiBcrOcrData]):
         """Sets the value of this ListResponseOfAiBcrOcrData.
 
 

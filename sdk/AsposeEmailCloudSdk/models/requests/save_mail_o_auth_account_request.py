@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class SaveMailOAuthAccountRequest(BaseRequest):
@@ -37,7 +38,7 @@ class SaveMailOAuthAccountRequest(BaseRequest):
     :param request (SaveOAuthEmailAccountRequest) Email account information
     """
 
-    def __init__(self, request):
+    def __init__(self, request: SaveOAuthEmailAccountRequest):
         BaseRequest.__init__(self)
         self.request = request
 

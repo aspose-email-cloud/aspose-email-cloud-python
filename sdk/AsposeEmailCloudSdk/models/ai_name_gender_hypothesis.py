@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiNameGenderHypothesis(object):
@@ -50,7 +52,7 @@ class AiNameGenderHypothesis(object):
         'score': 'score'
     }
 
-    def __init__(self, gender=None, score=None):
+    def __init__(self, gender: str = None, score: float = None):
         """AiNameGenderHypothesis - a model defined in Swagger"""
 
         self._gender = None
@@ -63,7 +65,7 @@ class AiNameGenderHypothesis(object):
             self.score = score
 
     @property
-    def gender(self):
+    def gender(self) -> str:
         """Gets the gender of this AiNameGenderHypothesis.
 
         Recognized name gender. Enum, available values: Male, Female, Unknown
@@ -74,7 +76,7 @@ class AiNameGenderHypothesis(object):
         return self._gender
 
     @gender.setter
-    def gender(self, gender):
+    def gender(self, gender: str):
         """Sets the gender of this AiNameGenderHypothesis.
 
         Recognized name gender. Enum, available values: Male, Female, Unknown
@@ -87,7 +89,7 @@ class AiNameGenderHypothesis(object):
         self._gender = gender
 
     @property
-    def score(self):
+    def score(self) -> float:
         """Gets the score of this AiNameGenderHypothesis.
 
         Hypothesis score             
@@ -98,7 +100,7 @@ class AiNameGenderHypothesis(object):
         return self._score
 
     @score.setter
-    def score(self, score):
+    def score(self, score: float):
         """Sets the score of this AiNameGenderHypothesis.
 
         Hypothesis score             

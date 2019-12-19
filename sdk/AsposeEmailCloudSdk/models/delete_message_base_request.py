@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -59,7 +61,7 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
         'delete_permanently': 'deletePermanently'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, message_id=None, delete_permanently=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, message_id: str = None, delete_permanently: bool = None):
         """DeleteMessageBaseRequest - a model defined in Swagger"""
         super(DeleteMessageBaseRequest, self).__init__()
 
@@ -79,7 +81,7 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
             self.delete_permanently = delete_permanently
 
     @property
-    def message_id(self):
+    def message_id(self) -> str:
         """Gets the message_id of this DeleteMessageBaseRequest.
 
         Message identifier             
@@ -90,7 +92,7 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
         return self._message_id
 
     @message_id.setter
-    def message_id(self, message_id):
+    def message_id(self, message_id: str):
         """Sets the message_id of this DeleteMessageBaseRequest.
 
         Message identifier             
@@ -105,7 +107,7 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
         self._message_id = message_id
 
     @property
-    def delete_permanently(self):
+    def delete_permanently(self) -> bool:
         """Gets the delete_permanently of this DeleteMessageBaseRequest.
 
         Specifies that message should be deleted permanently             
@@ -116,7 +118,7 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
         return self._delete_permanently
 
     @delete_permanently.setter
-    def delete_permanently(self, delete_permanently):
+    def delete_permanently(self, delete_permanently: bool):
         """Sets the delete_permanently of this DeleteMessageBaseRequest.
 
         Specifies that message should be deleted permanently             

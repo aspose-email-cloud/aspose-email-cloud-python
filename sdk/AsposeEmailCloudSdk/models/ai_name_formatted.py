@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiNameFormatted(object):
@@ -50,7 +52,7 @@ class AiNameFormatted(object):
         'comments': 'comments'
     }
 
-    def __init__(self, name=None, comments=None):
+    def __init__(self, name: str = None, comments: str = None):
         """AiNameFormatted - a model defined in Swagger"""
 
         self._name = None
@@ -63,7 +65,7 @@ class AiNameFormatted(object):
             self.comments = comments
 
     @property
-    def name(self):
+    def name(self) -> str:
         """Gets the name of this AiNameFormatted.
 
         Formatted name value             
@@ -74,7 +76,7 @@ class AiNameFormatted(object):
         return self._name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: str):
         """Sets the name of this AiNameFormatted.
 
         Formatted name value             
@@ -85,7 +87,7 @@ class AiNameFormatted(object):
         self._name = name
 
     @property
-    def comments(self):
+    def comments(self) -> str:
         """Gets the comments of this AiNameFormatted.
 
         Usually empty; can contain extra message describing some issue occurred during the formatting             
@@ -96,7 +98,7 @@ class AiNameFormatted(object):
         return self._comments
 
     @comments.setter
-    def comments(self, comments):
+    def comments(self, comments: str):
         """Sets the comments of this AiNameFormatted.
 
         Usually empty; can contain extra message describing some issue occurred during the formatting             

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class CopyFolderRequest(BaseRequest):
@@ -40,7 +41,7 @@ class CopyFolderRequest(BaseRequest):
     :param dest_storage_name (str) Destination storage name
     """
 
-    def __init__(self, src_path, dest_path, src_storage_name=None, dest_storage_name=None):
+    def __init__(self, src_path: str, dest_path: str, src_storage_name: str = None, dest_storage_name: str = None):
         BaseRequest.__init__(self)
         self.src_path = src_path
         self.dest_path = dest_path

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class CreateEmailFolderRequest(BaseRequest):
@@ -37,7 +38,7 @@ class CreateEmailFolderRequest(BaseRequest):
     :param request (CreateFolderBaseRequest) Create folder request
     """
 
-    def __init__(self, request):
+    def __init__(self, request: CreateFolderBaseRequest):
         BaseRequest.__init__(self)
         self.request = request
 

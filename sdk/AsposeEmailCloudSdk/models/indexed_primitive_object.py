@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.base_object import BaseObject
 
@@ -56,7 +58,7 @@ class IndexedPrimitiveObject(BaseObject):
         'value': 'value'
     }
 
-    def __init__(self, name=None, type=None, index=None, value=None):
+    def __init__(self, name: str = None, type: str = None, index: int = None, value: str = None):
         """IndexedPrimitiveObject - a model defined in Swagger"""
         super(IndexedPrimitiveObject, self).__init__()
 
@@ -74,7 +76,7 @@ class IndexedPrimitiveObject(BaseObject):
             self.value = value
 
     @property
-    def index(self):
+    def index(self) -> int:
         """Gets the index of this IndexedPrimitiveObject.
 
         Index of property in list             
@@ -85,7 +87,7 @@ class IndexedPrimitiveObject(BaseObject):
         return self._index
 
     @index.setter
-    def index(self, index):
+    def index(self, index: int):
         """Sets the index of this IndexedPrimitiveObject.
 
         Index of property in list             
@@ -98,7 +100,7 @@ class IndexedPrimitiveObject(BaseObject):
         self._index = index
 
     @property
-    def value(self):
+    def value(self) -> str:
         """Gets the value of this IndexedPrimitiveObject.
 
         Gets or sets the name of a property.             
@@ -109,7 +111,7 @@ class IndexedPrimitiveObject(BaseObject):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: str):
         """Sets the value of this IndexedPrimitiveObject.
 
         Gets or sets the name of a property.             

@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_image_storage_file import AiBcrImageStorageFile
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
@@ -57,7 +59,7 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
         'out_folder': 'outFolder'
     }
 
-    def __init__(self, options=None, images=None, out_folder=None):
+    def __init__(self, options: AiBcrOptions = None, images: List[AiBcrImageStorageFile] = None, out_folder: StorageFolderLocation = None):
         """AiBcrParseStorageRq - a model defined in Swagger"""
         super(AiBcrParseStorageRq, self).__init__()
 
@@ -72,7 +74,7 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
             self.out_folder = out_folder
 
     @property
-    def out_folder(self):
+    def out_folder(self) -> StorageFolderLocation:
         """Gets the out_folder of this AiBcrParseStorageRq.
 
         Parse output folder location on storage             
@@ -83,7 +85,7 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
         return self._out_folder
 
     @out_folder.setter
-    def out_folder(self, out_folder):
+    def out_folder(self, out_folder: StorageFolderLocation):
         """Sets the out_folder of this AiBcrParseStorageRq.
 
         Parse output folder location on storage             

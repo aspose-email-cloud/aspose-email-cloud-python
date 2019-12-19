@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.email_account_request import EmailAccountRequest
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
@@ -69,7 +71,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         'refresh_token': 'refreshToken'
     }
 
-    def __init__(self, host=None, port=None, login=None, security_options=None, protocol_type=None, description=None, storage_file=None, client_id=None, client_secret=None, refresh_token=None):
+    def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None, client_id: str = None, client_secret: str = None, refresh_token: str = None):
         """SaveOAuthEmailAccountRequest - a model defined in Swagger"""
         super(SaveOAuthEmailAccountRequest, self).__init__()
 
@@ -100,7 +102,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
             self.refresh_token = refresh_token
 
     @property
-    def client_id(self):
+    def client_id(self) -> str:
         """Gets the client_id of this SaveOAuthEmailAccountRequest.
 
         OAuth client identifier             
@@ -111,7 +113,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         return self._client_id
 
     @client_id.setter
-    def client_id(self, client_id):
+    def client_id(self, client_id: str):
         """Sets the client_id of this SaveOAuthEmailAccountRequest.
 
         OAuth client identifier             
@@ -126,7 +128,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         self._client_id = client_id
 
     @property
-    def client_secret(self):
+    def client_secret(self) -> str:
         """Gets the client_secret of this SaveOAuthEmailAccountRequest.
 
         OAuth client secret             
@@ -137,7 +139,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         return self._client_secret
 
     @client_secret.setter
-    def client_secret(self, client_secret):
+    def client_secret(self, client_secret: str):
         """Sets the client_secret of this SaveOAuthEmailAccountRequest.
 
         OAuth client secret             
@@ -152,7 +154,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         self._client_secret = client_secret
 
     @property
-    def refresh_token(self):
+    def refresh_token(self) -> str:
         """Gets the refresh_token of this SaveOAuthEmailAccountRequest.
 
         OAuth refresh token             
@@ -163,7 +165,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         return self._refresh_token
 
     @refresh_token.setter
-    def refresh_token(self, refresh_token):
+    def refresh_token(self, refresh_token: str):
         """Sets the refresh_token of this SaveOAuthEmailAccountRequest.
 
         OAuth refresh token             

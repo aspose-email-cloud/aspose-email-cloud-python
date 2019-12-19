@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_ocr_data import AiBcrOcrData
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
@@ -54,7 +56,7 @@ class AiBcrParseOcrDataRq(AiBcrRq):
         'data': 'data'
     }
 
-    def __init__(self, options=None, data=None):
+    def __init__(self, options: AiBcrOptions = None, data: List[AiBcrOcrData] = None):
         """AiBcrParseOcrDataRq - a model defined in Swagger"""
         super(AiBcrParseOcrDataRq, self).__init__()
 
@@ -67,7 +69,7 @@ class AiBcrParseOcrDataRq(AiBcrRq):
             self.data = data
 
     @property
-    def data(self):
+    def data(self) -> List[AiBcrOcrData]:
         """Gets the data of this AiBcrParseOcrDataRq.
 
         OCR data             
@@ -78,7 +80,7 @@ class AiBcrParseOcrDataRq(AiBcrRq):
         return self._data
 
     @data.setter
-    def data(self, data):
+    def data(self, data: List[AiBcrOcrData]):
         """Sets the data of this AiBcrParseOcrDataRq.
 
         OCR data             

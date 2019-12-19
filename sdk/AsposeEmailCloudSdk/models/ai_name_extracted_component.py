@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiNameExtractedComponent(object):
@@ -50,7 +52,7 @@ class AiNameExtractedComponent(object):
         'value': 'value'
     }
 
-    def __init__(self, category=None, value=None):
+    def __init__(self, category: str = None, value: str = None):
         """AiNameExtractedComponent - a model defined in Swagger"""
 
         self._category = None
@@ -63,7 +65,7 @@ class AiNameExtractedComponent(object):
             self.value = value
 
     @property
-    def category(self):
+    def category(self) -> str:
         """Gets the category of this AiNameExtractedComponent.
 
         Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
@@ -74,7 +76,7 @@ class AiNameExtractedComponent(object):
         return self._category
 
     @category.setter
-    def category(self, category):
+    def category(self, category: str):
         """Sets the category of this AiNameExtractedComponent.
 
         Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
@@ -87,7 +89,7 @@ class AiNameExtractedComponent(object):
         self._category = category
 
     @property
-    def value(self):
+    def value(self) -> str:
         """Gets the value of this AiNameExtractedComponent.
 
         Extracted value             
@@ -98,7 +100,7 @@ class AiNameExtractedComponent(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: str):
         """Sets the value of this AiNameExtractedComponent.
 
         Extracted value             

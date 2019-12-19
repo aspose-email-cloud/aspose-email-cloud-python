@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class StorageFolderLocation(object):
@@ -54,7 +56,7 @@ class StorageFolderLocation(object):
         'StorageFileLocation': 'StorageFileLocation'
     }
 
-    def __init__(self, storage=None, folder_path=None):
+    def __init__(self, storage: str = None, folder_path: str = None):
         """StorageFolderLocation - a model defined in Swagger"""
 
         self._storage = None
@@ -67,7 +69,7 @@ class StorageFolderLocation(object):
             self.folder_path = folder_path
 
     @property
-    def storage(self):
+    def storage(self) -> str:
         """Gets the storage of this StorageFolderLocation.
 
         A storage name             
@@ -78,7 +80,7 @@ class StorageFolderLocation(object):
         return self._storage
 
     @storage.setter
-    def storage(self, storage):
+    def storage(self, storage: str):
         """Sets the storage of this StorageFolderLocation.
 
         A storage name             
@@ -89,7 +91,7 @@ class StorageFolderLocation(object):
         self._storage = storage
 
     @property
-    def folder_path(self):
+    def folder_path(self) -> str:
         """Gets the folder_path of this StorageFolderLocation.
 
         A path to a folder in specified storage             
@@ -100,7 +102,7 @@ class StorageFolderLocation(object):
         return self._folder_path
 
     @folder_path.setter
-    def folder_path(self, folder_path):
+    def folder_path(self, folder_path: str):
         """Sets the folder_path of this StorageFolderLocation.
 
         A path to a folder in specified storage             

@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
@@ -58,7 +60,7 @@ class SendEmailBaseRequest(AccountBaseRequest):
         'email_file': 'emailFile'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, email_file=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, email_file: StorageFileLocation = None):
         """SendEmailBaseRequest - a model defined in Swagger"""
         super(SendEmailBaseRequest, self).__init__()
 
@@ -75,7 +77,7 @@ class SendEmailBaseRequest(AccountBaseRequest):
             self.email_file = email_file
 
     @property
-    def email_file(self):
+    def email_file(self) -> StorageFileLocation:
         """Gets the email_file of this SendEmailBaseRequest.
 
         Email document (*.eml) file location in storage             
@@ -86,7 +88,7 @@ class SendEmailBaseRequest(AccountBaseRequest):
         return self._email_file
 
     @email_file.setter
-    def email_file(self, email_file):
+    def email_file(self, email_file: StorageFileLocation):
         """Sets the email_file of this SendEmailBaseRequest.
 
         Email document (*.eml) file location in storage             

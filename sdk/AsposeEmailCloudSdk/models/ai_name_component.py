@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiNameComponent(object):
@@ -54,7 +56,7 @@ class AiNameComponent(object):
         'position': 'position'
     }
 
-    def __init__(self, value=None, category=None, score=None, position=None):
+    def __init__(self, value: str = None, category: str = None, score: float = None, position: int = None):
         """AiNameComponent - a model defined in Swagger"""
 
         self._value = None
@@ -73,7 +75,7 @@ class AiNameComponent(object):
             self.position = position
 
     @property
-    def value(self):
+    def value(self) -> str:
         """Gets the value of this AiNameComponent.
 
         Component value             
@@ -84,7 +86,7 @@ class AiNameComponent(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: str):
         """Sets the value of this AiNameComponent.
 
         Component value             
@@ -95,7 +97,7 @@ class AiNameComponent(object):
         self._value = value
 
     @property
-    def category(self):
+    def category(self) -> str:
         """Gets the category of this AiNameComponent.
 
         Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
@@ -106,7 +108,7 @@ class AiNameComponent(object):
         return self._category
 
     @category.setter
-    def category(self, category):
+    def category(self, category: str):
         """Sets the category of this AiNameComponent.
 
         Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
@@ -119,7 +121,7 @@ class AiNameComponent(object):
         self._category = category
 
     @property
-    def score(self):
+    def score(self) -> float:
         """Gets the score of this AiNameComponent.
 
         Score from 0.0 to 1.0             
@@ -130,7 +132,7 @@ class AiNameComponent(object):
         return self._score
 
     @score.setter
-    def score(self, score):
+    def score(self, score: float):
         """Sets the score of this AiNameComponent.
 
         Score from 0.0 to 1.0             
@@ -143,7 +145,7 @@ class AiNameComponent(object):
         self._score = score
 
     @property
-    def position(self):
+    def position(self) -> int:
         """Gets the position of this AiNameComponent.
 
         Component position from 0             
@@ -154,7 +156,7 @@ class AiNameComponent(object):
         return self._position
 
     @position.setter
-    def position(self, position):
+    def position(self, position: int):
         """Sets the position of this AiNameComponent.
 
         Component position from 0             

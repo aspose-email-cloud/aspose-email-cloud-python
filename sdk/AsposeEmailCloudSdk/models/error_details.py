@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class ErrorDetails(object):
@@ -50,7 +52,7 @@ class ErrorDetails(object):
         '_date': 'date'
     }
 
-    def __init__(self, request_id=None, _date=None):
+    def __init__(self, request_id: str = None, _date: datetime = None):
         """ErrorDetails - a model defined in Swagger"""
 
         self._request_id = None
@@ -63,7 +65,7 @@ class ErrorDetails(object):
             self._date = _date
 
     @property
-    def request_id(self):
+    def request_id(self) -> str:
         """Gets the request_id of this ErrorDetails.
 
         The request id
@@ -74,7 +76,7 @@ class ErrorDetails(object):
         return self._request_id
 
     @request_id.setter
-    def request_id(self, request_id):
+    def request_id(self, request_id: str):
         """Sets the request_id of this ErrorDetails.
 
         The request id
@@ -85,7 +87,7 @@ class ErrorDetails(object):
         self._request_id = request_id
 
     @property
-    def _date(self):
+    def _date(self) -> datetime:
         """Gets the _date of this ErrorDetails.
 
         Date
@@ -96,7 +98,7 @@ class ErrorDetails(object):
         return self.__date
 
     @_date.setter
-    def _date(self, _date):
+    def _date(self, _date: datetime):
         """Sets the _date of this ErrorDetails.
 
         Date

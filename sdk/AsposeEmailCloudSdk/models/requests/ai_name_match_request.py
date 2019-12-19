@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AiNameMatchRequest(BaseRequest):
@@ -43,7 +44,7 @@ class AiNameMatchRequest(BaseRequest):
     :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
     """
 
-    def __init__(self, name, other_name, language=None, location=None, encoding=None, script=None, style=None):
+    def __init__(self, name: str, other_name: str, language: str = None, location: str = None, encoding: str = None, script: str = None, style: str = None):
         BaseRequest.__init__(self)
         self.name = name
         self.other_name = other_name

@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.email_property import EmailProperty
 
@@ -50,7 +52,7 @@ class EmailPropertyResponse(object):
         'email_property': 'emailProperty'
     }
 
-    def __init__(self, email_property=None):
+    def __init__(self, email_property: EmailProperty = None):
         """EmailPropertyResponse - a model defined in Swagger"""
 
         self._email_property = None
@@ -60,7 +62,7 @@ class EmailPropertyResponse(object):
             self.email_property = email_property
 
     @property
-    def email_property(self):
+    def email_property(self) -> EmailProperty:
         """Gets the email_property of this EmailPropertyResponse.
 
         Gets or sets email property.             
@@ -71,7 +73,7 @@ class EmailPropertyResponse(object):
         return self._email_property
 
     @email_property.setter
-    def email_property(self, email_property):
+    def email_property(self, email_property: EmailProperty):
         """Sets the email_property of this EmailPropertyResponse.
 
         Gets or sets email property.             

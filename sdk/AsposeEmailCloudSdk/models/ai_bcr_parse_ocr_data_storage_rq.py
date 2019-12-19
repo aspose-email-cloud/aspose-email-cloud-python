@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_ocr_data import AiBcrOcrData
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
@@ -57,7 +59,7 @@ class AiBcrParseOcrDataStorageRq(AiBcrParseOcrDataRq):
         'out_folder': 'outFolder'
     }
 
-    def __init__(self, options=None, data=None, out_folder=None):
+    def __init__(self, options: AiBcrOptions = None, data: List[AiBcrOcrData] = None, out_folder: StorageFolderLocation = None):
         """AiBcrParseOcrDataStorageRq - a model defined in Swagger"""
         super(AiBcrParseOcrDataStorageRq, self).__init__()
 
@@ -72,7 +74,7 @@ class AiBcrParseOcrDataStorageRq(AiBcrParseOcrDataRq):
             self.out_folder = out_folder
 
     @property
-    def out_folder(self):
+    def out_folder(self) -> StorageFolderLocation:
         """Gets the out_folder of this AiBcrParseOcrDataStorageRq.
 
         Output folder location on storage             
@@ -83,7 +85,7 @@ class AiBcrParseOcrDataStorageRq(AiBcrParseOcrDataRq):
         return self._out_folder
 
     @out_folder.setter
-    def out_folder(self, out_folder):
+    def out_folder(self, out_folder: StorageFolderLocation):
         """Sets the out_folder of this AiBcrParseOcrDataStorageRq.
 
         Output folder location on storage             

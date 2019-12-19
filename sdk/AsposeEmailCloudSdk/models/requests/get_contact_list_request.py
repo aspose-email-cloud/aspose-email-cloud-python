@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class GetContactListRequest(BaseRequest):
@@ -41,7 +42,7 @@ class GetContactListRequest(BaseRequest):
     :param page_number (int) Page number
     """
 
-    def __init__(self, format, folder=None, storage=None, items_per_page=None, page_number=None):
+    def __init__(self, format: str, folder: str = None, storage: str = None, items_per_page: int = None, page_number: int = None):
         BaseRequest.__init__(self)
         self.format = format
         self.folder = folder

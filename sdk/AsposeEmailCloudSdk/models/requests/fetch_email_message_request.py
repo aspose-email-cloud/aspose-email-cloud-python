@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class FetchEmailMessageRequest(BaseRequest):
@@ -41,7 +42,7 @@ class FetchEmailMessageRequest(BaseRequest):
     :param storage_folder (str) Folder in storage where account file(s) located
     """
 
-    def __init__(self, message_id, first_account, second_account=None, storage=None, storage_folder=None):
+    def __init__(self, message_id: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None):
         BaseRequest.__init__(self)
         self.message_id = message_id
         self.first_account = first_account

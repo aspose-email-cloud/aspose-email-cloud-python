@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -57,7 +59,7 @@ class SendEmailMimeBaseRequest(AccountBaseRequest):
         'base64_mime_message': 'base64MimeMessage'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, base64_mime_message=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, base64_mime_message: str = None):
         """SendEmailMimeBaseRequest - a model defined in Swagger"""
         super(SendEmailMimeBaseRequest, self).__init__()
 
@@ -74,7 +76,7 @@ class SendEmailMimeBaseRequest(AccountBaseRequest):
             self.base64_mime_message = base64_mime_message
 
     @property
-    def base64_mime_message(self):
+    def base64_mime_message(self) -> str:
         """Gets the base64_mime_message of this SendEmailMimeBaseRequest.
 
         Email document serialized as MIME             
@@ -85,7 +87,7 @@ class SendEmailMimeBaseRequest(AccountBaseRequest):
         return self._base64_mime_message
 
     @base64_mime_message.setter
-    def base64_mime_message(self, base64_mime_message):
+    def base64_mime_message(self, base64_mime_message: str):
         """Sets the base64_mime_message of this SendEmailMimeBaseRequest.
 
         Email document serialized as MIME             

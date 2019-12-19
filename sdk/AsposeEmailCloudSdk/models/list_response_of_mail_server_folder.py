@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.mail_server_folder import MailServerFolder
 
@@ -50,7 +52,7 @@ class ListResponseOfMailServerFolder(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[MailServerFolder] = None):
         """ListResponseOfMailServerFolder - a model defined in Swagger"""
 
         self._value = None
@@ -60,7 +62,7 @@ class ListResponseOfMailServerFolder(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[MailServerFolder]:
         """Gets the value of this ListResponseOfMailServerFolder.
 
 
@@ -70,7 +72,7 @@ class ListResponseOfMailServerFolder(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[MailServerFolder]):
         """Sets the value of this ListResponseOfMailServerFolder.
 
 

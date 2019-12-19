@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiBcrOptions(object):
@@ -50,7 +52,7 @@ class AiBcrOptions(object):
         'countries': 'countries'
     }
 
-    def __init__(self, languages=None, countries=None):
+    def __init__(self, languages: str = None, countries: str = None):
         """AiBcrOptions - a model defined in Swagger"""
 
         self._languages = None
@@ -63,7 +65,7 @@ class AiBcrOptions(object):
             self.countries = countries
 
     @property
-    def languages(self):
+    def languages(self) -> str:
         """Gets the languages of this AiBcrOptions.
 
         Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default             
@@ -74,7 +76,7 @@ class AiBcrOptions(object):
         return self._languages
 
     @languages.setter
-    def languages(self, languages):
+    def languages(self, languages: str):
         """Sets the languages of this AiBcrOptions.
 
         Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default             
@@ -85,7 +87,7 @@ class AiBcrOptions(object):
         self._languages = languages
 
     @property
-    def countries(self):
+    def countries(self) -> str:
         """Gets the countries of this AiBcrOptions.
 
         Comma-separated codes of countries             
@@ -96,7 +98,7 @@ class AiBcrOptions(object):
         return self._countries
 
     @countries.setter
-    def countries(self, countries):
+    def countries(self, countries: str):
         """Sets the countries of this AiBcrOptions.
 
         Comma-separated codes of countries             

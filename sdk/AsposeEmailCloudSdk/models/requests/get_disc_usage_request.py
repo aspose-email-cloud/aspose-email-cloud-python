@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class GetDiscUsageRequest(BaseRequest):
@@ -37,7 +38,7 @@ class GetDiscUsageRequest(BaseRequest):
     :param storage_name (str) Storage name
     """
 
-    def __init__(self, storage_name=None):
+    def __init__(self, storage_name: str = None):
         BaseRequest.__init__(self)
         self.storage_name = storage_name
 

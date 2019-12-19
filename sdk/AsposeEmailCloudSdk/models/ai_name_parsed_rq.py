@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_name_component import AiNameComponent
 from AsposeEmailCloudSdk.models.ai_name_cultural_context import AiNameCulturalContext
@@ -59,7 +61,7 @@ class AiNameParsedRq(object):
         'AiNameParsedMatchRq': 'AiNameParsedMatchRq'
     }
 
-    def __init__(self, cultural_context=None, format=None, parsed_name=None):
+    def __init__(self, cultural_context: AiNameCulturalContext = None, format: str = None, parsed_name: List[AiNameComponent] = None):
         """AiNameParsedRq - a model defined in Swagger"""
 
         self._cultural_context = None
@@ -75,7 +77,7 @@ class AiNameParsedRq(object):
             self.parsed_name = parsed_name
 
     @property
-    def cultural_context(self):
+    def cultural_context(self) -> AiNameCulturalContext:
         """Gets the cultural_context of this AiNameParsedRq.
 
         AiName parser cultural context             
@@ -86,7 +88,7 @@ class AiNameParsedRq(object):
         return self._cultural_context
 
     @cultural_context.setter
-    def cultural_context(self, cultural_context):
+    def cultural_context(self, cultural_context: AiNameCulturalContext):
         """Sets the cultural_context of this AiNameParsedRq.
 
         AiName parser cultural context             
@@ -97,7 +99,7 @@ class AiNameParsedRq(object):
         self._cultural_context = cultural_context
 
     @property
-    def format(self):
+    def format(self) -> str:
         """Gets the format of this AiNameParsedRq.
 
         Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (= '%t%F%m%N%L%p')     /format/FN+LN/ (= '%F%L')     /format/title+FN+LN/ (= '%t%F%L')     /format/FN+MN+LN/ (= '%F%M%N%L')     /format/title+FN+MN+LN/ (= '%t%F%M%N%L')     /format/FN+MI+LN/ (= '%F%m%N%L')     /format/title+FN+MI+LN/ (= '%t%F%m%N%L')     /format/LN/ (= '%L')     /format/title+LN/ (= '%t%L')     /format/LN+FN+MN/ (= '%L,%F%M%N')     /format/LN+title+FN+MN/ (= '%L,%t%F%M%N')     /format/LN+FN+MI/ (= '%L,%F%m%N')     /format/LN+title+FN+MI/ (= '%L,%t%F%m%N')  Custom format string - custom combination of characters and the next term placeholders:      '%t' - Title (prefix)     '%F' - First name     '%f' - First initial     '%M' - Middle name(s)     '%m' - Middle initial(s)     '%N' - Nickname     '%L' - Last name     '%l' - Last initial     '%p' - Postfix  If no value for format option was provided, its default value is '%t%F%m%N%L%p'             
@@ -108,7 +110,7 @@ class AiNameParsedRq(object):
         return self._format
 
     @format.setter
-    def format(self, format):
+    def format(self, format: str):
         """Sets the format of this AiNameParsedRq.
 
         Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (= '%t%F%m%N%L%p')     /format/FN+LN/ (= '%F%L')     /format/title+FN+LN/ (= '%t%F%L')     /format/FN+MN+LN/ (= '%F%M%N%L')     /format/title+FN+MN+LN/ (= '%t%F%M%N%L')     /format/FN+MI+LN/ (= '%F%m%N%L')     /format/title+FN+MI+LN/ (= '%t%F%m%N%L')     /format/LN/ (= '%L')     /format/title+LN/ (= '%t%L')     /format/LN+FN+MN/ (= '%L,%F%M%N')     /format/LN+title+FN+MN/ (= '%L,%t%F%M%N')     /format/LN+FN+MI/ (= '%L,%F%m%N')     /format/LN+title+FN+MI/ (= '%L,%t%F%m%N')  Custom format string - custom combination of characters and the next term placeholders:      '%t' - Title (prefix)     '%F' - First name     '%f' - First initial     '%M' - Middle name(s)     '%m' - Middle initial(s)     '%N' - Nickname     '%L' - Last name     '%l' - Last initial     '%p' - Postfix  If no value for format option was provided, its default value is '%t%F%m%N%L%p'             
@@ -119,7 +121,7 @@ class AiNameParsedRq(object):
         self._format = format
 
     @property
-    def parsed_name(self):
+    def parsed_name(self) -> List[AiNameComponent]:
         """Gets the parsed_name of this AiNameParsedRq.
 
         Parsed name             
@@ -130,7 +132,7 @@ class AiNameParsedRq(object):
         return self._parsed_name
 
     @parsed_name.setter
-    def parsed_name(self, parsed_name):
+    def parsed_name(self, parsed_name: List[AiNameComponent]):
         """Sets the parsed_name of this AiNameParsedRq.
 
         Parsed name             

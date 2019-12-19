@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class GetCalendarListRequest(BaseRequest):
@@ -40,7 +41,7 @@ class GetCalendarListRequest(BaseRequest):
     :param storage (str) Storage name
     """
 
-    def __init__(self, folder, items_per_page, page_number, storage=None):
+    def __init__(self, folder: str, items_per_page: int, page_number: int, storage: str = None):
         BaseRequest.__init__(self)
         self.folder = folder
         self.items_per_page = items_per_page

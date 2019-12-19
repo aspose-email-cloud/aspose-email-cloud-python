@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.email_document import EmailDocument
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -53,7 +55,7 @@ class CreateEmailRequest(object):
         'storage_folder': 'storageFolder'
     }
 
-    def __init__(self, email_document=None, storage_folder=None):
+    def __init__(self, email_document: EmailDocument = None, storage_folder: StorageFolderLocation = None):
         """CreateEmailRequest - a model defined in Swagger"""
 
         self._email_document = None
@@ -66,7 +68,7 @@ class CreateEmailRequest(object):
             self.storage_folder = storage_folder
 
     @property
-    def email_document(self):
+    def email_document(self) -> EmailDocument:
         """Gets the email_document of this CreateEmailRequest.
 
         An email document that should be created             
@@ -77,7 +79,7 @@ class CreateEmailRequest(object):
         return self._email_document
 
     @email_document.setter
-    def email_document(self, email_document):
+    def email_document(self, email_document: EmailDocument):
         """Sets the email_document of this CreateEmailRequest.
 
         An email document that should be created             
@@ -90,7 +92,7 @@ class CreateEmailRequest(object):
         self._email_document = email_document
 
     @property
-    def storage_folder(self):
+    def storage_folder(self) -> StorageFolderLocation:
         """Gets the storage_folder of this CreateEmailRequest.
 
         Email document location in storage             
@@ -101,7 +103,7 @@ class CreateEmailRequest(object):
         return self._storage_folder
 
     @storage_folder.setter
-    def storage_folder(self, storage_folder):
+    def storage_folder(self, storage_folder: StorageFolderLocation):
         """Sets the storage_folder of this CreateEmailRequest.
 
         Email document location in storage             

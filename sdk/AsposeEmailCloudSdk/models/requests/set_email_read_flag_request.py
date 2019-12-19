@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class SetEmailReadFlagRequest(BaseRequest):
@@ -37,7 +38,7 @@ class SetEmailReadFlagRequest(BaseRequest):
     :param request (SetMessageReadFlagAccountBaseRequest) Message is read request
     """
 
-    def __init__(self, request):
+    def __init__(self, request: SetMessageReadFlagAccountBaseRequest):
         BaseRequest.__init__(self)
         self.request = request
 

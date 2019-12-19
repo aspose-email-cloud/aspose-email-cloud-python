@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AddContactAttachmentRequest(BaseRequest):
@@ -40,7 +41,7 @@ class AddContactAttachmentRequest(BaseRequest):
     :param request (AddAttachmentRequest) Add attachment request
     """
 
-    def __init__(self, format, name, attachment, request):
+    def __init__(self, format: str, name: str, attachment: str, request: AddAttachmentRequest):
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

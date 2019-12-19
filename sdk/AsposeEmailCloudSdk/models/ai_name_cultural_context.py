@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiNameCulturalContext(object):
@@ -56,7 +58,7 @@ class AiNameCulturalContext(object):
         'style': 'style'
     }
 
-    def __init__(self, language=None, location=None, script=None, encoding=None, style=None):
+    def __init__(self, language: str = None, location: str = None, script: str = None, encoding: str = None, style: str = None):
         """AiNameCulturalContext - a model defined in Swagger"""
 
         self._language = None
@@ -78,7 +80,7 @@ class AiNameCulturalContext(object):
             self.style = style
 
     @property
-    def language(self):
+    def language(self) -> str:
         """Gets the language of this AiNameCulturalContext.
 
         An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
@@ -89,7 +91,7 @@ class AiNameCulturalContext(object):
         return self._language
 
     @language.setter
-    def language(self, language):
+    def language(self, language: str):
         """Sets the language of this AiNameCulturalContext.
 
         An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
@@ -100,7 +102,7 @@ class AiNameCulturalContext(object):
         self._language = language
 
     @property
-    def location(self):
+    def location(self) -> str:
         """Gets the location of this AiNameCulturalContext.
 
         A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
@@ -111,7 +113,7 @@ class AiNameCulturalContext(object):
         return self._location
 
     @location.setter
-    def location(self, location):
+    def location(self, location: str):
         """Sets the location of this AiNameCulturalContext.
 
         A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
@@ -122,7 +124,7 @@ class AiNameCulturalContext(object):
         self._location = location
 
     @property
-    def script(self):
+    def script(self) -> str:
         """Gets the script of this AiNameCulturalContext.
 
         A writing system code; starts with the ISO-15924 script name             
@@ -133,7 +135,7 @@ class AiNameCulturalContext(object):
         return self._script
 
     @script.setter
-    def script(self, script):
+    def script(self, script: str):
         """Sets the script of this AiNameCulturalContext.
 
         A writing system code; starts with the ISO-15924 script name             
@@ -144,7 +146,7 @@ class AiNameCulturalContext(object):
         self._script = script
 
     @property
-    def encoding(self):
+    def encoding(self) -> str:
         """Gets the encoding of this AiNameCulturalContext.
 
         A character encoding name             
@@ -155,7 +157,7 @@ class AiNameCulturalContext(object):
         return self._encoding
 
     @encoding.setter
-    def encoding(self, encoding):
+    def encoding(self, encoding: str):
         """Sets the encoding of this AiNameCulturalContext.
 
         A character encoding name             
@@ -166,7 +168,7 @@ class AiNameCulturalContext(object):
         self._encoding = encoding
 
     @property
-    def style(self):
+    def style(self) -> str:
         """Gets the style of this AiNameCulturalContext.
 
         Name writing style. Enum, available values: Formal, Informal, Legal, Academic
@@ -177,7 +179,7 @@ class AiNameCulturalContext(object):
         return self._style
 
     @style.setter
-    def style(self, style):
+    def style(self, style: str):
         """Sets the style of this AiNameCulturalContext.
 
         Name writing style. Enum, available values: Formal, Informal, Legal, Academic

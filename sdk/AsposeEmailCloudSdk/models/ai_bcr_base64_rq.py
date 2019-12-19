@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_base64_image import AiBcrBase64Image
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
@@ -54,7 +56,7 @@ class AiBcrBase64Rq(AiBcrRq):
         'images': 'images'
     }
 
-    def __init__(self, options=None, images=None):
+    def __init__(self, options: AiBcrOptions = None, images: List[AiBcrBase64Image] = None):
         """AiBcrBase64Rq - a model defined in Swagger"""
         super(AiBcrBase64Rq, self).__init__()
 
@@ -67,7 +69,7 @@ class AiBcrBase64Rq(AiBcrRq):
             self.images = images
 
     @property
-    def images(self):
+    def images(self) -> List[AiBcrBase64Image]:
         """Gets the images of this AiBcrBase64Rq.
 
         Images to recognize             
@@ -78,7 +80,7 @@ class AiBcrBase64Rq(AiBcrRq):
         return self._images
 
     @images.setter
-    def images(self, images):
+    def images(self, images: List[AiBcrBase64Image]):
         """Sets the images of this AiBcrBase64Rq.
 
         Images to recognize             

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AiNameExpandParsedRequest(BaseRequest):
@@ -37,7 +38,7 @@ class AiNameExpandParsedRequest(BaseRequest):
     :param rq (AiNameParsedRq) Parsed name with options
     """
 
-    def __init__(self, rq):
+    def __init__(self, rq: AiNameParsedRq):
         BaseRequest.__init__(self)
         self.rq = rq
 

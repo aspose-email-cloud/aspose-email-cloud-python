@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class UploadFileRequest(BaseRequest):
@@ -35,11 +36,11 @@ class UploadFileRequest(BaseRequest):
     Initializes a new instance.
 
     :param path (str) Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
-    :param file (file) File to upload
+    :param file (str) File to upload
     :param storage_name (str) Storage name
     """
 
-    def __init__(self, path, file, storage_name=None):
+    def __init__(self, path: str, file: str, storage_name: str = None):
         BaseRequest.__init__(self)
         self.path = path
         self.file = file

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AiBcrParseStorageRequest(BaseRequest):
@@ -37,7 +38,7 @@ class AiBcrParseStorageRequest(BaseRequest):
     :param rq (AiBcrParseStorageRq) Request with images located on storage
     """
 
-    def __init__(self, rq):
+    def __init__(self, rq: AiBcrParseStorageRq):
         BaseRequest.__init__(self)
         self.rq = rq
 

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class GetMapiListRequest(BaseRequest):
@@ -40,7 +41,7 @@ class GetMapiListRequest(BaseRequest):
     :param page_number (int) Page number
     """
 
-    def __init__(self, folder=None, storage=None, items_per_page=None, page_number=None):
+    def __init__(self, folder: str = None, storage: str = None, items_per_page: int = None, page_number: int = None):
         BaseRequest.__init__(self)
         self.folder = folder
         self.storage = storage

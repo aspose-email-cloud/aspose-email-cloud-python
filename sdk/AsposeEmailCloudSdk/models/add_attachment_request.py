@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
@@ -52,7 +54,7 @@ class AddAttachmentRequest(object):
         'attachment_folder': 'attachmentFolder'
     }
 
-    def __init__(self, document_folder=None, attachment_folder=None):
+    def __init__(self, document_folder: StorageFolderLocation = None, attachment_folder: StorageFolderLocation = None):
         """AddAttachmentRequest - a model defined in Swagger"""
 
         self._document_folder = None
@@ -65,7 +67,7 @@ class AddAttachmentRequest(object):
             self.attachment_folder = attachment_folder
 
     @property
-    def document_folder(self):
+    def document_folder(self) -> StorageFolderLocation:
         """Gets the document_folder of this AddAttachmentRequest.
 
         Storage folder location of document             
@@ -76,7 +78,7 @@ class AddAttachmentRequest(object):
         return self._document_folder
 
     @document_folder.setter
-    def document_folder(self, document_folder):
+    def document_folder(self, document_folder: StorageFolderLocation):
         """Sets the document_folder of this AddAttachmentRequest.
 
         Storage folder location of document             
@@ -87,7 +89,7 @@ class AddAttachmentRequest(object):
         self._document_folder = document_folder
 
     @property
-    def attachment_folder(self):
+    def attachment_folder(self) -> StorageFolderLocation:
         """Gets the attachment_folder of this AddAttachmentRequest.
 
         Storage folder location of an attachment             
@@ -98,7 +100,7 @@ class AddAttachmentRequest(object):
         return self._attachment_folder
 
     @attachment_folder.setter
-    def attachment_folder(self, attachment_folder):
+    def attachment_folder(self, attachment_folder: StorageFolderLocation):
         """Sets the attachment_folder of this AddAttachmentRequest.
 
         Storage folder location of an attachment             

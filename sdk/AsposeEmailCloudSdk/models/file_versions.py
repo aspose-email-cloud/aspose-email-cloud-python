@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.file_version import FileVersion
 
@@ -50,7 +52,7 @@ class FileVersions(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[FileVersion] = None):
         """FileVersions - a model defined in Swagger"""
 
         self._value = None
@@ -60,7 +62,7 @@ class FileVersions(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[FileVersion]:
         """Gets the value of this FileVersions.
 
         File versions FileVersion.
@@ -71,7 +73,7 @@ class FileVersions(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[FileVersion]):
         """Sets the value of this FileVersions.
 
         File versions FileVersion.

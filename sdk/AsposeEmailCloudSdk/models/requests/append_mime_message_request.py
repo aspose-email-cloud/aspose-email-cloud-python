@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AppendMimeMessageRequest(BaseRequest):
@@ -37,7 +38,7 @@ class AppendMimeMessageRequest(BaseRequest):
     :param request (AppendEmailMimeBaseRequest) Append email request
     """
 
-    def __init__(self, request):
+    def __init__(self, request: AppendEmailMimeBaseRequest):
         BaseRequest.__init__(self)
         self.request = request
 

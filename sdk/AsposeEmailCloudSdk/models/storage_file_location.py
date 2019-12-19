@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
@@ -54,7 +56,7 @@ class StorageFileLocation(StorageFolderLocation):
         'file_name': 'fileName'
     }
 
-    def __init__(self, storage=None, folder_path=None, file_name=None):
+    def __init__(self, storage: str = None, folder_path: str = None, file_name: str = None):
         """StorageFileLocation - a model defined in Swagger"""
         super(StorageFileLocation, self).__init__()
 
@@ -69,7 +71,7 @@ class StorageFileLocation(StorageFolderLocation):
             self.file_name = file_name
 
     @property
-    def file_name(self):
+    def file_name(self) -> str:
         """Gets the file_name of this StorageFileLocation.
 
         A file name in storage             
@@ -80,7 +82,7 @@ class StorageFileLocation(StorageFolderLocation):
         return self._file_name
 
     @file_name.setter
-    def file_name(self, file_name):
+    def file_name(self, file_name: str):
         """Sets the file_name of this StorageFileLocation.
 
         A file name in storage             

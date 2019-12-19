@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiBcrImage(object):
@@ -53,7 +55,7 @@ class AiBcrImage(object):
         'AiBcrBase64Image': 'AiBcrBase64Image'
     }
 
-    def __init__(self, is_single=None):
+    def __init__(self, is_single: bool = None):
         """AiBcrImage - a model defined in Swagger"""
 
         self._is_single = None
@@ -63,7 +65,7 @@ class AiBcrImage(object):
             self.is_single = is_single
 
     @property
-    def is_single(self):
+    def is_single(self) -> bool:
         """Gets the is_single of this AiBcrImage.
 
         Determines that image contains single VCard or more             
@@ -74,7 +76,7 @@ class AiBcrImage(object):
         return self._is_single
 
     @is_single.setter
-    def is_single(self, is_single):
+    def is_single(self, is_single: bool):
         """Sets the is_single of this AiBcrImage.
 
         Determines that image contains single VCard or more             

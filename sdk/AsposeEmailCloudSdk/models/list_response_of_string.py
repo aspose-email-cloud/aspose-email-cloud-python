@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class ListResponseOfString(object):
@@ -48,7 +50,7 @@ class ListResponseOfString(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[str] = None):
         """ListResponseOfString - a model defined in Swagger"""
 
         self._value = None
@@ -58,7 +60,7 @@ class ListResponseOfString(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[str]:
         """Gets the value of this ListResponseOfString.
 
 
@@ -68,7 +70,7 @@ class ListResponseOfString(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[str]):
         """Sets the value of this ListResponseOfString.
 
 

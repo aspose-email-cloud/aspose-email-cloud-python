@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class DeleteMapiAttachmentRequest(BaseRequest):
@@ -39,7 +40,7 @@ class DeleteMapiAttachmentRequest(BaseRequest):
     :param storage (StorageFolderLocation) Document file storage location info
     """
 
-    def __init__(self, name, attachment, storage):
+    def __init__(self, name: str, attachment: str, storage: StorageFolderLocation):
         BaseRequest.__init__(self)
         self.name = name
         self.attachment = attachment

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class DeleteContactPropertyRequest(BaseRequest):
@@ -41,7 +42,7 @@ class DeleteContactPropertyRequest(BaseRequest):
     :param folder (StorageFolderLocation) Calendar document location in storage information
     """
 
-    def __init__(self, format, name, member_name, index, folder):
+    def __init__(self, format: str, name: str, member_name: str, index: int, folder: StorageFolderLocation):
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

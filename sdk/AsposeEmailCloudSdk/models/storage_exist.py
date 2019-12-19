@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class StorageExist(object):
@@ -48,7 +50,7 @@ class StorageExist(object):
         'exists': 'exists'
     }
 
-    def __init__(self, exists=None):
+    def __init__(self, exists: bool = None):
         """StorageExist - a model defined in Swagger"""
 
         self._exists = None
@@ -58,7 +60,7 @@ class StorageExist(object):
             self.exists = exists
 
     @property
-    def exists(self):
+    def exists(self) -> bool:
         """Gets the exists of this StorageExist.
 
         Shows that the storage exists.             
@@ -69,7 +71,7 @@ class StorageExist(object):
         return self._exists
 
     @exists.setter
-    def exists(self, exists):
+    def exists(self, exists: bool):
         """Sets the exists of this StorageExist.
 
         Shows that the storage exists.             

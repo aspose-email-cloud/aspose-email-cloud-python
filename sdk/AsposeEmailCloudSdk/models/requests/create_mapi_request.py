@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class CreateMapiRequest(BaseRequest):
@@ -38,7 +39,7 @@ class CreateMapiRequest(BaseRequest):
     :param request (HierarchicalObjectRequest) Create document request
     """
 
-    def __init__(self, name, request):
+    def __init__(self, name: str, request: HierarchicalObjectRequest):
         BaseRequest.__init__(self)
         self.name = name
         self.request = request

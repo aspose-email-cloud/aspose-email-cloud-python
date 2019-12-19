@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class Link(object):
@@ -54,7 +56,7 @@ class Link(object):
         'title': 'title'
     }
 
-    def __init__(self, href=None, rel=None, type=None, title=None):
+    def __init__(self, href: str = None, rel: str = None, type: str = None, title: str = None):
         """Link - a model defined in Swagger"""
 
         self._href = None
@@ -73,7 +75,7 @@ class Link(object):
             self.title = title
 
     @property
-    def href(self):
+    def href(self) -> str:
         """Gets the href of this Link.
 
         The \"href\" attribute contains the link's IRI. atom:link elements MUST have an href attribute, whose value MUST be a IRI reference             
@@ -84,7 +86,7 @@ class Link(object):
         return self._href
 
     @href.setter
-    def href(self, href):
+    def href(self, href: str):
         """Sets the href of this Link.
 
         The \"href\" attribute contains the link's IRI. atom:link elements MUST have an href attribute, whose value MUST be a IRI reference             
@@ -95,7 +97,7 @@ class Link(object):
         self._href = href
 
     @property
-    def rel(self):
+    def rel(self) -> str:
         """Gets the rel of this Link.
 
         atom:link elements MAY have a \"rel\" attribute that indicates the link relation type.  If the \"rel\" attribute is not present, the link element MUST be interpreted as if the link relation type is \"alternate\".             
@@ -106,7 +108,7 @@ class Link(object):
         return self._rel
 
     @rel.setter
-    def rel(self, rel):
+    def rel(self, rel: str):
         """Sets the rel of this Link.
 
         atom:link elements MAY have a \"rel\" attribute that indicates the link relation type.  If the \"rel\" attribute is not present, the link element MUST be interpreted as if the link relation type is \"alternate\".             
@@ -117,7 +119,7 @@ class Link(object):
         self._rel = rel
 
     @property
-    def type(self):
+    def type(self) -> str:
         """Gets the type of this Link.
 
         On the link element, the \"type\" attribute's value is an advisory media type: it is a hint about the type of the representation that is expected to be returned when the value of the href attribute is dereferenced.  Note that the type attribute does not override the actual media type returned with the representation.             
@@ -128,7 +130,7 @@ class Link(object):
         return self._type
 
     @type.setter
-    def type(self, type):
+    def type(self, type: str):
         """Sets the type of this Link.
 
         On the link element, the \"type\" attribute's value is an advisory media type: it is a hint about the type of the representation that is expected to be returned when the value of the href attribute is dereferenced.  Note that the type attribute does not override the actual media type returned with the representation.             
@@ -139,7 +141,7 @@ class Link(object):
         self._type = type
 
     @property
-    def title(self):
+    def title(self) -> str:
         """Gets the title of this Link.
 
         The \"title\" attribute conveys human-readable information about the link.  The content of the \"title\" attribute is Language-Sensitive.             
@@ -150,7 +152,7 @@ class Link(object):
         return self._title
 
     @title.setter
-    def title(self, title):
+    def title(self, title: str):
         """Sets the title of this Link.
 
         The \"title\" attribute conveys human-readable information about the link.  The content of the \"title\" attribute is Language-Sensitive.             

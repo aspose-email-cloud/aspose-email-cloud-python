@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class AiNameWeighted(object):
@@ -50,7 +52,7 @@ class AiNameWeighted(object):
         'score': 'score'
     }
 
-    def __init__(self, name=None, score=None):
+    def __init__(self, name: str = None, score: float = None):
         """AiNameWeighted - a model defined in Swagger"""
 
         self._name = None
@@ -63,7 +65,7 @@ class AiNameWeighted(object):
             self.score = score
 
     @property
-    def name(self):
+    def name(self) -> str:
         """Gets the name of this AiNameWeighted.
 
         Name             
@@ -74,7 +76,7 @@ class AiNameWeighted(object):
         return self._name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: str):
         """Sets the name of this AiNameWeighted.
 
         Name             
@@ -85,7 +87,7 @@ class AiNameWeighted(object):
         self._name = name
 
     @property
-    def score(self):
+    def score(self) -> float:
         """Gets the score of this AiNameWeighted.
 
         Score of name             
@@ -96,7 +98,7 @@ class AiNameWeighted(object):
         return self._score
 
     @score.setter
-    def score(self, score):
+    def score(self, score: float):
         """Sets the score of this AiNameWeighted.
 
         Score of name             

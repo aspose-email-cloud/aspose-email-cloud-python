@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AiNameMatchParsedRequest(BaseRequest):
@@ -37,7 +38,7 @@ class AiNameMatchParsedRequest(BaseRequest):
     :param rq (AiNameParsedMatchRq) Parsed names to match
     """
 
-    def __init__(self, rq):
+    def __init__(self, rq: AiNameParsedMatchRq):
         BaseRequest.__init__(self)
         self.rq = rq
 

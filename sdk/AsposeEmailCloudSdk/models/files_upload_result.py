@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.error import Error
 
@@ -52,7 +54,7 @@ class FilesUploadResult(object):
         'errors': 'errors'
     }
 
-    def __init__(self, uploaded=None, errors=None):
+    def __init__(self, uploaded: List[str] = None, errors: List[Error] = None):
         """FilesUploadResult - a model defined in Swagger"""
 
         self._uploaded = None
@@ -65,7 +67,7 @@ class FilesUploadResult(object):
             self.errors = errors
 
     @property
-    def uploaded(self):
+    def uploaded(self) -> List[str]:
         """Gets the uploaded of this FilesUploadResult.
 
         List of uploaded file names
@@ -76,7 +78,7 @@ class FilesUploadResult(object):
         return self._uploaded
 
     @uploaded.setter
-    def uploaded(self, uploaded):
+    def uploaded(self, uploaded: List[str]):
         """Sets the uploaded of this FilesUploadResult.
 
         List of uploaded file names
@@ -87,7 +89,7 @@ class FilesUploadResult(object):
         self._uploaded = uploaded
 
     @property
-    def errors(self):
+    def errors(self) -> List[Error]:
         """Gets the errors of this FilesUploadResult.
 
         List of errors.
@@ -98,7 +100,7 @@ class FilesUploadResult(object):
         return self._errors
 
     @errors.setter
-    def errors(self, errors):
+    def errors(self, errors: List[Error]):
         """Sets the errors of this FilesUploadResult.
 
         List of errors.

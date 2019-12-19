@@ -31,6 +31,9 @@ import six
 from AsposeEmailCloudSdk.api_client import ApiClient
 from AsposeEmailCloudSdk.configuration import Configuration
 from AsposeEmailCloudSdk.rest import ApiException
+from AsposeEmailCloudSdk.models import *
+from AsposeEmailCloudSdk.models import requests
+import multiprocessing
 
 
 class EmailApi(object):
@@ -60,7 +63,7 @@ class EmailApi(object):
                                       debug=debug)
         self.api_client = ApiClient(configuration)
 
-    def add_calendar_attachment(self, request):
+    def add_calendar_attachment(self, request: requests.AddCalendarAttachmentRequest) :
         """Adds an attachment to iCalendar file             
 
 
@@ -70,7 +73,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def add_calendar_attachment_async(self, request):
+    def add_calendar_attachment_async(self, request: requests.AddCalendarAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Adds an attachment to iCalendar file             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -80,7 +83,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def add_contact_attachment(self, request):
+    def add_contact_attachment(self, request: requests.AddContactAttachmentRequest) :
         """Add attachment to contact document             
 
 
@@ -90,7 +93,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def add_contact_attachment_async(self, request):
+    def add_contact_attachment_async(self, request: requests.AddContactAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Add attachment to contact document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -100,7 +103,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def add_email_attachment(self, request):
+    def add_email_attachment(self, request: requests.AddEmailAttachmentRequest)  -> EmailDocumentResponse:
         """Adds an attachment to Email document             
 
 
@@ -110,7 +113,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'EmailDocumentResponse')
 
-    def add_email_attachment_async(self, request):
+    def add_email_attachment_async(self, request: requests.AddEmailAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Adds an attachment to Email document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -120,7 +123,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'EmailDocumentResponse')
 
-    def add_mapi_attachment(self, request):
+    def add_mapi_attachment(self, request: requests.AddMapiAttachmentRequest) :
         """Add attachment to document             
 
 
@@ -130,7 +133,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def add_mapi_attachment_async(self, request):
+    def add_mapi_attachment_async(self, request: requests.AddMapiAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Add attachment to document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -140,7 +143,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def ai_bcr_ocr(self, request):
+    def ai_bcr_ocr(self, request: requests.AiBcrOcrRequest)  -> ListResponseOfAiBcrOcrData:
         """Ocr images             
 
 
@@ -150,7 +153,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'ListResponseOfAiBcrOcrData')
 
-    def ai_bcr_ocr_async(self, request):
+    def ai_bcr_ocr_async(self, request: requests.AiBcrOcrRequest) -> multiprocessing.pool.AsyncResult:
         """Ocr images             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -160,7 +163,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfAiBcrOcrData')
 
-    def ai_bcr_ocr_storage(self, request):
+    def ai_bcr_ocr_storage(self, request: requests.AiBcrOcrStorageRequest)  -> ListResponseOfAiBcrOcrData:
         """Ocr images from storage             
 
 
@@ -170,7 +173,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'ListResponseOfAiBcrOcrData')
 
-    def ai_bcr_ocr_storage_async(self, request):
+    def ai_bcr_ocr_storage_async(self, request: requests.AiBcrOcrStorageRequest) -> multiprocessing.pool.AsyncResult:
         """Ocr images from storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -180,7 +183,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfAiBcrOcrData')
 
-    def ai_bcr_parse(self, request):
+    def ai_bcr_parse(self, request: requests.AiBcrParseRequest)  -> ListResponseOfHierarchicalObject:
         """Parse images to vCard properties             
 
 
@@ -190,7 +193,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'ListResponseOfHierarchicalObject')
 
-    def ai_bcr_parse_async(self, request):
+    def ai_bcr_parse_async(self, request: requests.AiBcrParseRequest) -> multiprocessing.pool.AsyncResult:
         """Parse images to vCard properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -200,7 +203,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfHierarchicalObject')
 
-    def ai_bcr_parse_ocr_data(self, request):
+    def ai_bcr_parse_ocr_data(self, request: requests.AiBcrParseOcrDataRequest)  -> ListResponseOfHierarchicalObject:
         """Parse OCR data to vCard properties             
 
 
@@ -210,7 +213,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'ListResponseOfHierarchicalObject')
 
-    def ai_bcr_parse_ocr_data_async(self, request):
+    def ai_bcr_parse_ocr_data_async(self, request: requests.AiBcrParseOcrDataRequest) -> multiprocessing.pool.AsyncResult:
         """Parse OCR data to vCard properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -220,7 +223,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfHierarchicalObject')
 
-    def ai_bcr_parse_ocr_data_storage(self, request):
+    def ai_bcr_parse_ocr_data_storage(self, request: requests.AiBcrParseOcrDataStorageRequest)  -> ListResponseOfStorageFileLocation:
         """Parse vCards from OCR data and save them to Storage             
 
 
@@ -230,7 +233,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'ListResponseOfStorageFileLocation')
 
-    def ai_bcr_parse_ocr_data_storage_async(self, request):
+    def ai_bcr_parse_ocr_data_storage_async(self, request: requests.AiBcrParseOcrDataStorageRequest) -> multiprocessing.pool.AsyncResult:
         """Parse vCards from OCR data and save them to Storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -240,7 +243,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfStorageFileLocation')
 
-    def ai_bcr_parse_storage(self, request):
+    def ai_bcr_parse_storage(self, request: requests.AiBcrParseStorageRequest)  -> ListResponseOfStorageFileLocation:
         """Parse images from storage to vCard files             
 
 
@@ -250,7 +253,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'ListResponseOfStorageFileLocation')
 
-    def ai_bcr_parse_storage_async(self, request):
+    def ai_bcr_parse_storage_async(self, request: requests.AiBcrParseStorageRequest) -> multiprocessing.pool.AsyncResult:
         """Parse images from storage to vCard files             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -260,7 +263,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfStorageFileLocation')
 
-    def ai_name_complete(self, request):
+    def ai_name_complete(self, request: requests.AiNameCompleteRequest)  -> AiNameWeightedVariants:
         """The call proposes k most probable names for given starting characters             
 
 
@@ -270,7 +273,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'AiNameWeightedVariants')
 
-    def ai_name_complete_async(self, request):
+    def ai_name_complete_async(self, request: requests.AiNameCompleteRequest) -> multiprocessing.pool.AsyncResult:
         """The call proposes k most probable names for given starting characters             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -280,7 +283,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'AiNameWeightedVariants')
 
-    def ai_name_expand(self, request):
+    def ai_name_expand(self, request: requests.AiNameExpandRequest)  -> AiNameWeightedVariants:
         """Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
 
 
@@ -290,7 +293,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'AiNameWeightedVariants')
 
-    def ai_name_expand_async(self, request):
+    def ai_name_expand_async(self, request: requests.AiNameExpandRequest) -> multiprocessing.pool.AsyncResult:
         """Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -300,7 +303,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'AiNameWeightedVariants')
 
-    def ai_name_expand_parsed(self, request):
+    def ai_name_expand_parsed(self, request: requests.AiNameExpandParsedRequest)  -> AiNameWeightedVariants:
         """Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
 
 
@@ -310,7 +313,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'AiNameWeightedVariants')
 
-    def ai_name_expand_parsed_async(self, request):
+    def ai_name_expand_parsed_async(self, request: requests.AiNameExpandParsedRequest) -> multiprocessing.pool.AsyncResult:
         """Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -320,7 +323,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'AiNameWeightedVariants')
 
-    def ai_name_format(self, request):
+    def ai_name_format(self, request: requests.AiNameFormatRequest)  -> AiNameFormatted:
         """Formats a person&#39;s name in correct case and name order using options for formatting instructions             
 
 
@@ -330,7 +333,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'AiNameFormatted')
 
-    def ai_name_format_async(self, request):
+    def ai_name_format_async(self, request: requests.AiNameFormatRequest) -> multiprocessing.pool.AsyncResult:
         """Formats a person&#39;s name in correct case and name order using options for formatting instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -340,7 +343,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'AiNameFormatted')
 
-    def ai_name_format_parsed(self, request):
+    def ai_name_format_parsed(self, request: requests.AiNameFormatParsedRequest)  -> AiNameFormatted:
         """Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
 
 
@@ -350,7 +353,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'AiNameFormatted')
 
-    def ai_name_format_parsed_async(self, request):
+    def ai_name_format_parsed_async(self, request: requests.AiNameFormatParsedRequest) -> multiprocessing.pool.AsyncResult:
         """Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -360,7 +363,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'AiNameFormatted')
 
-    def ai_name_genderize(self, request):
+    def ai_name_genderize(self, request: requests.AiNameGenderizeRequest)  -> ListResponseOfAiNameGenderHypothesis:
         """Detect person&#39;s gender from name string             
 
 
@@ -370,7 +373,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfAiNameGenderHypothesis')
 
-    def ai_name_genderize_async(self, request):
+    def ai_name_genderize_async(self, request: requests.AiNameGenderizeRequest) -> multiprocessing.pool.AsyncResult:
         """Detect person&#39;s gender from name string             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -380,7 +383,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfAiNameGenderHypothesis')
 
-    def ai_name_genderize_parsed(self, request):
+    def ai_name_genderize_parsed(self, request: requests.AiNameGenderizeParsedRequest)  -> ListResponseOfAiNameGenderHypothesis:
         """Detect person&#39;s gender from parsed name             
 
 
@@ -390,7 +393,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'ListResponseOfAiNameGenderHypothesis')
 
-    def ai_name_genderize_parsed_async(self, request):
+    def ai_name_genderize_parsed_async(self, request: requests.AiNameGenderizeParsedRequest) -> multiprocessing.pool.AsyncResult:
         """Detect person&#39;s gender from parsed name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -400,7 +403,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfAiNameGenderHypothesis')
 
-    def ai_name_match(self, request):
+    def ai_name_match(self, request: requests.AiNameMatchRequest)  -> AiNameMatchResult:
         """Compare people&#39;s names. Uses options for comparing instructions             
 
 
@@ -410,7 +413,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'AiNameMatchResult')
 
-    def ai_name_match_async(self, request):
+    def ai_name_match_async(self, request: requests.AiNameMatchRequest) -> multiprocessing.pool.AsyncResult:
         """Compare people&#39;s names. Uses options for comparing instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -420,7 +423,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'AiNameMatchResult')
 
-    def ai_name_match_parsed(self, request):
+    def ai_name_match_parsed(self, request: requests.AiNameMatchParsedRequest)  -> AiNameMatchResult:
         """Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
 
 
@@ -430,7 +433,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', 'AiNameMatchResult')
 
-    def ai_name_match_parsed_async(self, request):
+    def ai_name_match_parsed_async(self, request: requests.AiNameMatchParsedRequest) -> multiprocessing.pool.AsyncResult:
         """Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -440,7 +443,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'AiNameMatchResult')
 
-    def ai_name_parse(self, request):
+    def ai_name_parse(self, request: requests.AiNameParseRequest)  -> ListResponseOfAiNameComponent:
         """Parse name to components             
 
 
@@ -450,7 +453,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfAiNameComponent')
 
-    def ai_name_parse_async(self, request):
+    def ai_name_parse_async(self, request: requests.AiNameParseRequest) -> multiprocessing.pool.AsyncResult:
         """Parse name to components             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -460,7 +463,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfAiNameComponent')
 
-    def ai_name_parse_email_address(self, request):
+    def ai_name_parse_email_address(self, request: requests.AiNameParseEmailAddressRequest)  -> ListResponseOfAiNameExtracted:
         """Parse person&#39;s name out of an email address             
 
 
@@ -470,7 +473,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfAiNameExtracted')
 
-    def ai_name_parse_email_address_async(self, request):
+    def ai_name_parse_email_address_async(self, request: requests.AiNameParseEmailAddressRequest) -> multiprocessing.pool.AsyncResult:
         """Parse person&#39;s name out of an email address             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -480,7 +483,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfAiNameExtracted')
 
-    def append_email_message(self, request):
+    def append_email_message(self, request: requests.AppendEmailMessageRequest)  -> EmailPropertyResponse:
         """Adds an email from *.eml file to specified folder in email account             
 
 
@@ -490,7 +493,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', 'EmailPropertyResponse')
 
-    def append_email_message_async(self, request):
+    def append_email_message_async(self, request: requests.AppendEmailMessageRequest) -> multiprocessing.pool.AsyncResult:
         """Adds an email from *.eml file to specified folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -500,7 +503,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
 
-    def append_mime_message(self, request):
+    def append_mime_message(self, request: requests.AppendMimeMessageRequest)  -> ValueResponse:
         """Adds an email from MIME to specified folder in email account             
 
 
@@ -510,7 +513,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', 'ValueResponse')
 
-    def append_mime_message_async(self, request):
+    def append_mime_message_async(self, request: requests.AppendMimeMessageRequest) -> multiprocessing.pool.AsyncResult:
         """Adds an email from MIME to specified folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -520,7 +523,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'ValueResponse')
 
-    def copy_file(self, request):
+    def copy_file(self, request: requests.CopyFileRequest) :
         """Copy file
 
 
@@ -530,7 +533,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def copy_file_async(self, request):
+    def copy_file_async(self, request: requests.CopyFileRequest) -> multiprocessing.pool.AsyncResult:
         """Copy file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -540,7 +543,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def copy_folder(self, request):
+    def copy_folder(self, request: requests.CopyFolderRequest) :
         """Copy folder
 
 
@@ -550,7 +553,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def copy_folder_async(self, request):
+    def copy_folder_async(self, request: requests.CopyFolderRequest) -> multiprocessing.pool.AsyncResult:
         """Copy folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -560,7 +563,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def create_calendar(self, request):
+    def create_calendar(self, request: requests.CreateCalendarRequest) :
         """Create calendar file             
 
 
@@ -570,7 +573,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def create_calendar_async(self, request):
+    def create_calendar_async(self, request: requests.CreateCalendarRequest) -> multiprocessing.pool.AsyncResult:
         """Create calendar file             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -580,7 +583,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def create_contact(self, request):
+    def create_contact(self, request: requests.CreateContactRequest) :
         """Create contact document             
 
 
@@ -590,7 +593,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def create_contact_async(self, request):
+    def create_contact_async(self, request: requests.CreateContactRequest) -> multiprocessing.pool.AsyncResult:
         """Create contact document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -600,7 +603,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def create_email(self, request):
+    def create_email(self, request: requests.CreateEmailRequest)  -> EmailDocumentResponse:
         """Create an email document             
 
 
@@ -610,7 +613,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', 'EmailDocumentResponse')
 
-    def create_email_async(self, request):
+    def create_email_async(self, request: requests.CreateEmailRequest) -> multiprocessing.pool.AsyncResult:
         """Create an email document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -620,7 +623,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'EmailDocumentResponse')
 
-    def create_email_folder(self, request):
+    def create_email_folder(self, request: requests.CreateEmailFolderRequest) :
         """Create new folder in email account             
 
 
@@ -630,7 +633,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def create_email_folder_async(self, request):
+    def create_email_folder_async(self, request: requests.CreateEmailFolderRequest) -> multiprocessing.pool.AsyncResult:
         """Create new folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -640,7 +643,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def create_folder(self, request):
+    def create_folder(self, request: requests.CreateFolderRequest) :
         """Create the folder
 
 
@@ -650,7 +653,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def create_folder_async(self, request):
+    def create_folder_async(self, request: requests.CreateFolderRequest) -> multiprocessing.pool.AsyncResult:
         """Create the folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -660,7 +663,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def create_mapi(self, request):
+    def create_mapi(self, request: requests.CreateMapiRequest) :
         """Create new document             
 
 
@@ -670,7 +673,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def create_mapi_async(self, request):
+    def create_mapi_async(self, request: requests.CreateMapiRequest) -> multiprocessing.pool.AsyncResult:
         """Create new document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -680,7 +683,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def delete_calendar_property(self, request):
+    def delete_calendar_property(self, request: requests.DeleteCalendarPropertyRequest) :
         """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}             
 
 
@@ -690,7 +693,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_calendar_property_async(self, request):
+    def delete_calendar_property_async(self, request: requests.DeleteCalendarPropertyRequest) -> multiprocessing.pool.AsyncResult:
         """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -700,7 +703,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def delete_contact_property(self, request):
+    def delete_contact_property(self, request: requests.DeleteContactPropertyRequest) :
         """Delete property from indexed property list             
 
 
@@ -710,7 +713,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_contact_property_async(self, request):
+    def delete_contact_property_async(self, request: requests.DeleteContactPropertyRequest) -> multiprocessing.pool.AsyncResult:
         """Delete property from indexed property list             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -720,7 +723,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def delete_email_folder(self, request):
+    def delete_email_folder(self, request: requests.DeleteEmailFolderRequest) :
         """Delete a folder in email account             
 
 
@@ -730,7 +733,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_email_folder_async(self, request):
+    def delete_email_folder_async(self, request: requests.DeleteEmailFolderRequest) -> multiprocessing.pool.AsyncResult:
         """Delete a folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -740,7 +743,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def delete_email_message(self, request):
+    def delete_email_message(self, request: requests.DeleteEmailMessageRequest) :
         """Delete message from email account by id             
 
 
@@ -750,7 +753,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_email_message_async(self, request):
+    def delete_email_message_async(self, request: requests.DeleteEmailMessageRequest) -> multiprocessing.pool.AsyncResult:
         """Delete message from email account by id             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -760,7 +763,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def delete_file(self, request):
+    def delete_file(self, request: requests.DeleteFileRequest) :
         """Delete file
 
 
@@ -770,7 +773,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_file_async(self, request):
+    def delete_file_async(self, request: requests.DeleteFileRequest) -> multiprocessing.pool.AsyncResult:
         """Delete file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -780,7 +783,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def delete_folder(self, request):
+    def delete_folder(self, request: requests.DeleteFolderRequest) :
         """Delete folder
 
 
@@ -790,7 +793,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_folder_async(self, request):
+    def delete_folder_async(self, request: requests.DeleteFolderRequest) -> multiprocessing.pool.AsyncResult:
         """Delete folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -800,7 +803,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def delete_mapi_attachment(self, request):
+    def delete_mapi_attachment(self, request: requests.DeleteMapiAttachmentRequest) :
         """Remove attachment from document             
 
 
@@ -810,7 +813,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_mapi_attachment_async(self, request):
+    def delete_mapi_attachment_async(self, request: requests.DeleteMapiAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Remove attachment from document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -820,7 +823,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def delete_mapi_properties(self, request):
+    def delete_mapi_properties(self, request: requests.DeleteMapiPropertiesRequest) :
         """Delete document properties             
 
 
@@ -830,7 +833,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'DELETE', None)
 
-    def delete_mapi_properties_async(self, request):
+    def delete_mapi_properties_async(self, request: requests.DeleteMapiPropertiesRequest) -> multiprocessing.pool.AsyncResult:
         """Delete document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -840,17 +843,17 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
-    def download_file(self, request):
+    def download_file(self, request: requests.DownloadFileRequest)  -> str:
         """Download file
 
 
         :param request DownloadFileRequest object with parameters
-        :return: file
+        :return: str
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'file')
 
-    def download_file_async(self, request):
+    def download_file_async(self, request: requests.DownloadFileRequest) -> multiprocessing.pool.AsyncResult:
         """Download file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -860,7 +863,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
-    def fetch_email_message(self, request):
+    def fetch_email_message(self, request: requests.FetchEmailMessageRequest)  -> MimeResponse:
         """Fetch message mime from email account             
 
 
@@ -870,7 +873,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'MimeResponse')
 
-    def fetch_email_message_async(self, request):
+    def fetch_email_message_async(self, request: requests.FetchEmailMessageRequest) -> multiprocessing.pool.AsyncResult:
         """Fetch message mime from email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -880,7 +883,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'MimeResponse')
 
-    def get_calendar(self, request):
+    def get_calendar(self, request: requests.GetCalendarRequest)  -> HierarchicalObject:
         """Get calendar file properties             
 
 
@@ -890,7 +893,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'HierarchicalObject')
 
-    def get_calendar_async(self, request):
+    def get_calendar_async(self, request: requests.GetCalendarRequest) -> multiprocessing.pool.AsyncResult:
         """Get calendar file properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -900,17 +903,17 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
 
-    def get_calendar_attachment(self, request):
+    def get_calendar_attachment(self, request: requests.GetCalendarAttachmentRequest)  -> str:
         """Get iCalendar document attachment by name             
 
 
         :param request GetCalendarAttachmentRequest object with parameters
-        :return: file
+        :return: str
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'file')
 
-    def get_calendar_attachment_async(self, request):
+    def get_calendar_attachment_async(self, request: requests.GetCalendarAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Get iCalendar document attachment by name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -920,7 +923,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
-    def get_calendar_list(self, request):
+    def get_calendar_list(self, request: requests.GetCalendarListRequest)  -> ListResponseOfHierarchicalObjectResponse:
         """Get iCalendar files list in folder on storage             
 
 
@@ -930,7 +933,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def get_calendar_list_async(self, request):
+    def get_calendar_list_async(self, request: requests.GetCalendarListRequest) -> multiprocessing.pool.AsyncResult:
         """Get iCalendar files list in folder on storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -940,17 +943,17 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def get_contact_attachment(self, request):
+    def get_contact_attachment(self, request: requests.GetContactAttachmentRequest)  -> str:
         """Get attachment file by name             
 
 
         :param request GetContactAttachmentRequest object with parameters
-        :return: file
+        :return: str
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'file')
 
-    def get_contact_attachment_async(self, request):
+    def get_contact_attachment_async(self, request: requests.GetContactAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Get attachment file by name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -960,7 +963,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
-    def get_contact_list(self, request):
+    def get_contact_list(self, request: requests.GetContactListRequest)  -> ListResponseOfHierarchicalObjectResponse:
         """Get contact list from storage folder             
 
 
@@ -970,7 +973,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def get_contact_list_async(self, request):
+    def get_contact_list_async(self, request: requests.GetContactListRequest) -> multiprocessing.pool.AsyncResult:
         """Get contact list from storage folder             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -980,7 +983,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def get_contact_properties(self, request):
+    def get_contact_properties(self, request: requests.GetContactPropertiesRequest)  -> HierarchicalObject:
         """Get contact document properties             
 
 
@@ -990,7 +993,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'HierarchicalObject')
 
-    def get_contact_properties_async(self, request):
+    def get_contact_properties_async(self, request: requests.GetContactPropertiesRequest) -> multiprocessing.pool.AsyncResult:
         """Get contact document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1000,7 +1003,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
 
-    def get_disc_usage(self, request):
+    def get_disc_usage(self, request: requests.GetDiscUsageRequest)  -> DiscUsage:
         """Get disc usage
 
 
@@ -1010,7 +1013,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'DiscUsage')
 
-    def get_disc_usage_async(self, request):
+    def get_disc_usage_async(self, request: requests.GetDiscUsageRequest) -> multiprocessing.pool.AsyncResult:
         """Get disc usage
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1020,7 +1023,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'DiscUsage')
 
-    def get_email(self, request):
+    def get_email(self, request: requests.GetEmailRequest)  -> EmailDocument:
         """Get email document             
 
 
@@ -1030,7 +1033,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'EmailDocument')
 
-    def get_email_async(self, request):
+    def get_email_async(self, request: requests.GetEmailRequest) -> multiprocessing.pool.AsyncResult:
         """Get email document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1040,17 +1043,17 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailDocument')
 
-    def get_email_attachment(self, request):
+    def get_email_attachment(self, request: requests.GetEmailAttachmentRequest)  -> str:
         """Get email attachment by name             
 
 
         :param request GetEmailAttachmentRequest object with parameters
-        :return: file
+        :return: str
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'file')
 
-    def get_email_attachment_async(self, request):
+    def get_email_attachment_async(self, request: requests.GetEmailAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Get email attachment by name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1060,7 +1063,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
-    def get_email_property(self, request):
+    def get_email_property(self, request: requests.GetEmailPropertyRequest)  -> EmailPropertyResponse:
         """Get an email document property by its name             
 
 
@@ -1070,7 +1073,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'EmailPropertyResponse')
 
-    def get_email_property_async(self, request):
+    def get_email_property_async(self, request: requests.GetEmailPropertyRequest) -> multiprocessing.pool.AsyncResult:
         """Get an email document property by its name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1080,7 +1083,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
 
-    def get_file_versions(self, request):
+    def get_file_versions(self, request: requests.GetFileVersionsRequest)  -> FileVersions:
         """Get file versions
 
 
@@ -1090,7 +1093,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'FileVersions')
 
-    def get_file_versions_async(self, request):
+    def get_file_versions_async(self, request: requests.GetFileVersionsRequest) -> multiprocessing.pool.AsyncResult:
         """Get file versions
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1100,7 +1103,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'FileVersions')
 
-    def get_files_list(self, request):
+    def get_files_list(self, request: requests.GetFilesListRequest)  -> FilesList:
         """Get all files and folders within a folder
 
 
@@ -1110,7 +1113,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'FilesList')
 
-    def get_files_list_async(self, request):
+    def get_files_list_async(self, request: requests.GetFilesListRequest) -> multiprocessing.pool.AsyncResult:
         """Get all files and folders within a folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1120,17 +1123,17 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'FilesList')
 
-    def get_mapi_attachment(self, request):
+    def get_mapi_attachment(self, request: requests.GetMapiAttachmentRequest)  -> str:
         """Get document attachment as file stream             
 
 
         :param request GetMapiAttachmentRequest object with parameters
-        :return: file
+        :return: str
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'file')
 
-    def get_mapi_attachment_async(self, request):
+    def get_mapi_attachment_async(self, request: requests.GetMapiAttachmentRequest) -> multiprocessing.pool.AsyncResult:
         """Get document attachment as file stream             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1140,7 +1143,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
-    def get_mapi_attachments(self, request):
+    def get_mapi_attachments(self, request: requests.GetMapiAttachmentsRequest)  -> ListResponseOfString:
         """Get document attachment list             
 
 
@@ -1150,7 +1153,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfString')
 
-    def get_mapi_attachments_async(self, request):
+    def get_mapi_attachments_async(self, request: requests.GetMapiAttachmentsRequest) -> multiprocessing.pool.AsyncResult:
         """Get document attachment list             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1160,7 +1163,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfString')
 
-    def get_mapi_list(self, request):
+    def get_mapi_list(self, request: requests.GetMapiListRequest)  -> ListResponseOfHierarchicalObjectResponse:
         """Get document list from storage folder             
 
 
@@ -1170,7 +1173,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def get_mapi_list_async(self, request):
+    def get_mapi_list_async(self, request: requests.GetMapiListRequest) -> multiprocessing.pool.AsyncResult:
         """Get document list from storage folder             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1180,7 +1183,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
-    def get_mapi_properties(self, request):
+    def get_mapi_properties(self, request: requests.GetMapiPropertiesRequest)  -> HierarchicalObjectResponse:
         """Get document properties             
 
 
@@ -1190,7 +1193,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'HierarchicalObjectResponse')
 
-    def get_mapi_properties_async(self, request):
+    def get_mapi_properties_async(self, request: requests.GetMapiPropertiesRequest) -> multiprocessing.pool.AsyncResult:
         """Get document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1200,7 +1203,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObjectResponse')
 
-    def list_email_folders(self, request):
+    def list_email_folders(self, request: requests.ListEmailFoldersRequest)  -> ListResponseOfMailServerFolder:
         """Get folders list in email account             
 
 
@@ -1210,7 +1213,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfMailServerFolder')
 
-    def list_email_folders_async(self, request):
+    def list_email_folders_async(self, request: requests.ListEmailFoldersRequest) -> multiprocessing.pool.AsyncResult:
         """Get folders list in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1220,7 +1223,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfMailServerFolder')
 
-    def list_email_messages(self, request):
+    def list_email_messages(self, request: requests.ListEmailMessagesRequest)  -> ListResponseOfString:
         """Get messages from folder, filtered by query             
 
         The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
@@ -1231,7 +1234,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ListResponseOfString')
 
-    def list_email_messages_async(self, request):
+    def list_email_messages_async(self, request: requests.ListEmailMessagesRequest) -> multiprocessing.pool.AsyncResult:
         """Get messages from folder, filtered by query             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
         The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
@@ -1242,7 +1245,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfString')
 
-    def move_file(self, request):
+    def move_file(self, request: requests.MoveFileRequest) :
         """Move file
 
 
@@ -1252,7 +1255,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def move_file_async(self, request):
+    def move_file_async(self, request: requests.MoveFileRequest) -> multiprocessing.pool.AsyncResult:
         """Move file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1262,7 +1265,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def move_folder(self, request):
+    def move_folder(self, request: requests.MoveFolderRequest) :
         """Move folder
 
 
@@ -1272,7 +1275,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def move_folder_async(self, request):
+    def move_folder_async(self, request: requests.MoveFolderRequest) -> multiprocessing.pool.AsyncResult:
         """Move folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1282,7 +1285,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def object_exists(self, request):
+    def object_exists(self, request: requests.ObjectExistsRequest)  -> ObjectExist:
         """Check if file or folder exists
 
 
@@ -1292,7 +1295,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'ObjectExist')
 
-    def object_exists_async(self, request):
+    def object_exists_async(self, request: requests.ObjectExistsRequest) -> multiprocessing.pool.AsyncResult:
         """Check if file or folder exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1302,7 +1305,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ObjectExist')
 
-    def save_mail_account(self, request):
+    def save_mail_account(self, request: requests.SaveMailAccountRequest) :
         """Create email account file (*.account) with login/password authentication             
 
 
@@ -1312,7 +1315,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', None)
 
-    def save_mail_account_async(self, request):
+    def save_mail_account_async(self, request: requests.SaveMailAccountRequest) -> multiprocessing.pool.AsyncResult:
         """Create email account file (*.account) with login/password authentication             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1322,7 +1325,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', None)
 
-    def save_mail_o_auth_account(self, request):
+    def save_mail_o_auth_account(self, request: requests.SaveMailOAuthAccountRequest) :
         """Create email account file (*.account) with OAuth             
 
 
@@ -1332,7 +1335,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', None)
 
-    def save_mail_o_auth_account_async(self, request):
+    def save_mail_o_auth_account_async(self, request: requests.SaveMailOAuthAccountRequest) -> multiprocessing.pool.AsyncResult:
         """Create email account file (*.account) with OAuth             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1342,7 +1345,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', None)
 
-    def send_email(self, request):
+    def send_email(self, request: requests.SendEmailRequest) :
         """Send an email from *.eml file located on storage             
 
 
@@ -1352,7 +1355,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', None)
 
-    def send_email_async(self, request):
+    def send_email_async(self, request: requests.SendEmailRequest) -> multiprocessing.pool.AsyncResult:
         """Send an email from *.eml file located on storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1362,7 +1365,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', None)
 
-    def send_email_mime(self, request):
+    def send_email_mime(self, request: requests.SendEmailMimeRequest) :
         """Send an email specified by MIME in request             
 
 
@@ -1372,7 +1375,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', None)
 
-    def send_email_mime_async(self, request):
+    def send_email_mime_async(self, request: requests.SendEmailMimeRequest) -> multiprocessing.pool.AsyncResult:
         """Send an email specified by MIME in request             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1382,7 +1385,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', None)
 
-    def set_email_property(self, request):
+    def set_email_property(self, request: requests.SetEmailPropertyRequest)  -> EmailPropertyResponse:
         """Set email document property value             
 
 
@@ -1392,7 +1395,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', 'EmailPropertyResponse')
 
-    def set_email_property_async(self, request):
+    def set_email_property_async(self, request: requests.SetEmailPropertyRequest) -> multiprocessing.pool.AsyncResult:
         """Set email document property value             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1402,7 +1405,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
 
-    def set_email_read_flag(self, request):
+    def set_email_read_flag(self, request: requests.SetEmailReadFlagRequest) :
         """Sets \&quot;Message is read\&quot; flag             
 
 
@@ -1412,7 +1415,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'POST', None)
 
-    def set_email_read_flag_async(self, request):
+    def set_email_read_flag_async(self, request: requests.SetEmailReadFlagRequest) -> multiprocessing.pool.AsyncResult:
         """Sets \&quot;Message is read\&quot; flag             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1422,7 +1425,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', None)
 
-    def storage_exists(self, request):
+    def storage_exists(self, request: requests.StorageExistsRequest)  -> StorageExist:
         """Check if storage exists
 
 
@@ -1432,7 +1435,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'GET', 'StorageExist')
 
-    def storage_exists_async(self, request):
+    def storage_exists_async(self, request: requests.StorageExistsRequest) -> multiprocessing.pool.AsyncResult:
         """Check if storage exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1442,7 +1445,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'StorageExist')
 
-    def update_calendar_properties(self, request):
+    def update_calendar_properties(self, request: requests.UpdateCalendarPropertiesRequest) :
         """Update calendar file properties             
 
 
@@ -1452,7 +1455,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def update_calendar_properties_async(self, request):
+    def update_calendar_properties_async(self, request: requests.UpdateCalendarPropertiesRequest) -> multiprocessing.pool.AsyncResult:
         """Update calendar file properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1462,7 +1465,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def update_contact_properties(self, request):
+    def update_contact_properties(self, request: requests.UpdateContactPropertiesRequest) :
         """Update contact document properties             
 
 
@@ -1472,7 +1475,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def update_contact_properties_async(self, request):
+    def update_contact_properties_async(self, request: requests.UpdateContactPropertiesRequest) -> multiprocessing.pool.AsyncResult:
         """Update contact document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1482,7 +1485,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def update_mapi_properties(self, request):
+    def update_mapi_properties(self, request: requests.UpdateMapiPropertiesRequest) :
         """Update document properties             
 
 
@@ -1492,7 +1495,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', None)
 
-    def update_mapi_properties_async(self, request):
+    def update_mapi_properties_async(self, request: requests.UpdateMapiPropertiesRequest) -> multiprocessing.pool.AsyncResult:
         """Update document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
@@ -1502,7 +1505,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', None)
 
-    def upload_file(self, request):
+    def upload_file(self, request: requests.UploadFileRequest)  -> FilesUploadResult:
         """Upload file
 
 
@@ -1512,7 +1515,7 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request(http_request, 'PUT', 'FilesUploadResult')
 
-    def upload_file_async(self, request):
+    def upload_file_async(self, request: requests.UploadFileRequest) -> multiprocessing.pool.AsyncResult:
         """Upload file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 

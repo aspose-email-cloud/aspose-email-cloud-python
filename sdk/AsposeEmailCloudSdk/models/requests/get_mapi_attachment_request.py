@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class GetMapiAttachmentRequest(BaseRequest):
@@ -40,7 +41,7 @@ class GetMapiAttachmentRequest(BaseRequest):
     :param storage (str) Storage name
     """
 
-    def __init__(self, name, attachment, folder=None, storage=None):
+    def __init__(self, name: str, attachment: str, folder: str = None, storage: str = None):
         BaseRequest.__init__(self)
         self.name = name
         self.attachment = attachment

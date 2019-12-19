@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_name_mismatch import AiNameMismatch
 
@@ -52,7 +54,7 @@ class AiNameMatchResult(object):
         'mismatches': 'mismatches'
     }
 
-    def __init__(self, similarity=None, mismatches=None):
+    def __init__(self, similarity: float = None, mismatches: List[AiNameMismatch] = None):
         """AiNameMatchResult - a model defined in Swagger"""
 
         self._similarity = None
@@ -65,7 +67,7 @@ class AiNameMatchResult(object):
             self.mismatches = mismatches
 
     @property
-    def similarity(self):
+    def similarity(self) -> float:
         """Gets the similarity of this AiNameMatchResult.
 
         Similarity score             
@@ -76,7 +78,7 @@ class AiNameMatchResult(object):
         return self._similarity
 
     @similarity.setter
-    def similarity(self, similarity):
+    def similarity(self, similarity: float):
         """Sets the similarity of this AiNameMatchResult.
 
         Similarity score             
@@ -89,7 +91,7 @@ class AiNameMatchResult(object):
         self._similarity = similarity
 
     @property
-    def mismatches(self):
+    def mismatches(self) -> List[AiNameMismatch]:
         """Gets the mismatches of this AiNameMatchResult.
 
         Detailed description of mismatches             
@@ -100,7 +102,7 @@ class AiNameMatchResult(object):
         return self._mismatches
 
     @mismatches.setter
-    def mismatches(self, mismatches):
+    def mismatches(self, mismatches: List[AiNameMismatch]):
         """Sets the mismatches of this AiNameMatchResult.
 
         Detailed description of mismatches             

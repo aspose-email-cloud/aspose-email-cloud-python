@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class StorageFile(object):
@@ -60,7 +62,7 @@ class StorageFile(object):
         'FileVersion': 'FileVersion'
     }
 
-    def __init__(self, name=None, is_folder=None, modified_date=None, size=None, path=None):
+    def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None):
         """StorageFile - a model defined in Swagger"""
 
         self._name = None
@@ -82,7 +84,7 @@ class StorageFile(object):
             self.path = path
 
     @property
-    def name(self):
+    def name(self) -> str:
         """Gets the name of this StorageFile.
 
         File or folder name.
@@ -93,7 +95,7 @@ class StorageFile(object):
         return self._name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: str):
         """Sets the name of this StorageFile.
 
         File or folder name.
@@ -104,7 +106,7 @@ class StorageFile(object):
         self._name = name
 
     @property
-    def is_folder(self):
+    def is_folder(self) -> bool:
         """Gets the is_folder of this StorageFile.
 
         True if it is a folder.
@@ -115,7 +117,7 @@ class StorageFile(object):
         return self._is_folder
 
     @is_folder.setter
-    def is_folder(self, is_folder):
+    def is_folder(self, is_folder: bool):
         """Sets the is_folder of this StorageFile.
 
         True if it is a folder.
@@ -128,7 +130,7 @@ class StorageFile(object):
         self._is_folder = is_folder
 
     @property
-    def modified_date(self):
+    def modified_date(self) -> datetime:
         """Gets the modified_date of this StorageFile.
 
         File or folder last modified DateTime.
@@ -139,7 +141,7 @@ class StorageFile(object):
         return self._modified_date
 
     @modified_date.setter
-    def modified_date(self, modified_date):
+    def modified_date(self, modified_date: datetime):
         """Sets the modified_date of this StorageFile.
 
         File or folder last modified DateTime.
@@ -150,7 +152,7 @@ class StorageFile(object):
         self._modified_date = modified_date
 
     @property
-    def size(self):
+    def size(self) -> int:
         """Gets the size of this StorageFile.
 
         File or folder size.
@@ -161,7 +163,7 @@ class StorageFile(object):
         return self._size
 
     @size.setter
-    def size(self, size):
+    def size(self, size: int):
         """Sets the size of this StorageFile.
 
         File or folder size.
@@ -174,7 +176,7 @@ class StorageFile(object):
         self._size = size
 
     @property
-    def path(self):
+    def path(self) -> str:
         """Gets the path of this StorageFile.
 
         File or folder path.
@@ -185,7 +187,7 @@ class StorageFile(object):
         return self._path
 
     @path.setter
-    def path(self, path):
+    def path(self, path: str):
         """Sets the path of this StorageFile.
 
         File or folder path.

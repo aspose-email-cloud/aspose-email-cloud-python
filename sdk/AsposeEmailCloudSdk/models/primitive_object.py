@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.base_object import BaseObject
 
@@ -54,7 +56,7 @@ class PrimitiveObject(BaseObject):
         'value': 'value'
     }
 
-    def __init__(self, name=None, type=None, value=None):
+    def __init__(self, name: str = None, type: str = None, value: str = None):
         """PrimitiveObject - a model defined in Swagger"""
         super(PrimitiveObject, self).__init__()
 
@@ -69,7 +71,7 @@ class PrimitiveObject(BaseObject):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> str:
         """Gets the value of this PrimitiveObject.
 
         Property value             
@@ -80,7 +82,7 @@ class PrimitiveObject(BaseObject):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: str):
         """Sets the value of this PrimitiveObject.
 
         Property value             

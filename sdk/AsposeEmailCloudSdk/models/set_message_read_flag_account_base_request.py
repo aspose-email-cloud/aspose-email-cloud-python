@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -59,7 +61,7 @@ class SetMessageReadFlagAccountBaseRequest(AccountBaseRequest):
         'is_read': 'isRead'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, message_id=None, is_read=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, message_id: str = None, is_read: bool = None):
         """SetMessageReadFlagAccountBaseRequest - a model defined in Swagger"""
         super(SetMessageReadFlagAccountBaseRequest, self).__init__()
 
@@ -79,7 +81,7 @@ class SetMessageReadFlagAccountBaseRequest(AccountBaseRequest):
             self.is_read = is_read
 
     @property
-    def message_id(self):
+    def message_id(self) -> str:
         """Gets the message_id of this SetMessageReadFlagAccountBaseRequest.
 
         Message identifier             
@@ -90,7 +92,7 @@ class SetMessageReadFlagAccountBaseRequest(AccountBaseRequest):
         return self._message_id
 
     @message_id.setter
-    def message_id(self, message_id):
+    def message_id(self, message_id: str):
         """Sets the message_id of this SetMessageReadFlagAccountBaseRequest.
 
         Message identifier             
@@ -105,7 +107,7 @@ class SetMessageReadFlagAccountBaseRequest(AccountBaseRequest):
         self._message_id = message_id
 
     @property
-    def is_read(self):
+    def is_read(self) -> bool:
         """Gets the is_read of this SetMessageReadFlagAccountBaseRequest.
 
         Specifies that message should be marked read or unread             
@@ -116,7 +118,7 @@ class SetMessageReadFlagAccountBaseRequest(AccountBaseRequest):
         return self._is_read
 
     @is_read.setter
-    def is_read(self, is_read):
+    def is_read(self, is_read: bool):
         """Sets the is_read of this SetMessageReadFlagAccountBaseRequest.
 
         Specifies that message should be marked read or unread             

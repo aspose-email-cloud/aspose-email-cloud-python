@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class ObjectExist(object):
@@ -50,7 +52,7 @@ class ObjectExist(object):
         'is_folder': 'isFolder'
     }
 
-    def __init__(self, exists=None, is_folder=None):
+    def __init__(self, exists: bool = None, is_folder: bool = None):
         """ObjectExist - a model defined in Swagger"""
 
         self._exists = None
@@ -63,7 +65,7 @@ class ObjectExist(object):
             self.is_folder = is_folder
 
     @property
-    def exists(self):
+    def exists(self) -> bool:
         """Gets the exists of this ObjectExist.
 
         Indicates that the file or folder exists.
@@ -74,7 +76,7 @@ class ObjectExist(object):
         return self._exists
 
     @exists.setter
-    def exists(self, exists):
+    def exists(self, exists: bool):
         """Sets the exists of this ObjectExist.
 
         Indicates that the file or folder exists.
@@ -87,7 +89,7 @@ class ObjectExist(object):
         self._exists = exists
 
     @property
-    def is_folder(self):
+    def is_folder(self) -> bool:
         """Gets the is_folder of this ObjectExist.
 
         True if it is a folder, false if it is a file.
@@ -98,7 +100,7 @@ class ObjectExist(object):
         return self._is_folder
 
     @is_folder.setter
-    def is_folder(self, is_folder):
+    def is_folder(self, is_folder: bool):
         """Sets the is_folder of this ObjectExist.
 
         True if it is a folder, false if it is a file.

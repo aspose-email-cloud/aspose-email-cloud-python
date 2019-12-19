@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.hierarchical_object import HierarchicalObject
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -53,7 +55,7 @@ class HierarchicalObjectRequest(object):
         'storage_folder': 'storageFolder'
     }
 
-    def __init__(self, hierarchical_object=None, storage_folder=None):
+    def __init__(self, hierarchical_object: HierarchicalObject = None, storage_folder: StorageFolderLocation = None):
         """HierarchicalObjectRequest - a model defined in Swagger"""
 
         self._hierarchical_object = None
@@ -66,7 +68,7 @@ class HierarchicalObjectRequest(object):
             self.storage_folder = storage_folder
 
     @property
-    def hierarchical_object(self):
+    def hierarchical_object(self) -> HierarchicalObject:
         """Gets the hierarchical_object of this HierarchicalObjectRequest.
 
         Hierarchical properties of document             
@@ -77,7 +79,7 @@ class HierarchicalObjectRequest(object):
         return self._hierarchical_object
 
     @hierarchical_object.setter
-    def hierarchical_object(self, hierarchical_object):
+    def hierarchical_object(self, hierarchical_object: HierarchicalObject):
         """Sets the hierarchical_object of this HierarchicalObjectRequest.
 
         Hierarchical properties of document             
@@ -90,7 +92,7 @@ class HierarchicalObjectRequest(object):
         self._hierarchical_object = hierarchical_object
 
     @property
-    def storage_folder(self):
+    def storage_folder(self) -> StorageFolderLocation:
         """Gets the storage_folder of this HierarchicalObjectRequest.
 
         Document location in storage             
@@ -101,7 +103,7 @@ class HierarchicalObjectRequest(object):
         return self._storage_folder
 
     @storage_folder.setter
-    def storage_folder(self, storage_folder):
+    def storage_folder(self, storage_folder: StorageFolderLocation):
         """Sets the storage_folder of this HierarchicalObjectRequest.
 
         Document location in storage             

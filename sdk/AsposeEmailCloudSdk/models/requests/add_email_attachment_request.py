@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class AddEmailAttachmentRequest(BaseRequest):
@@ -39,7 +40,7 @@ class AddEmailAttachmentRequest(BaseRequest):
     :param request (AddAttachmentRequest) Storage info to specify location of email document and attachment files
     """
 
-    def __init__(self, attachment_name, file_name, request):
+    def __init__(self, attachment_name: str, file_name: str, request: AddAttachmentRequest):
         BaseRequest.__init__(self)
         self.attachment_name = attachment_name
         self.file_name = file_name

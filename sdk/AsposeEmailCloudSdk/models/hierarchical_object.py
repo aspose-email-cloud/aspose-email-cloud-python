@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.base_object import BaseObject
 
@@ -54,7 +56,7 @@ class HierarchicalObject(BaseObject):
         'internal_properties': 'internalProperties'
     }
 
-    def __init__(self, name=None, type=None, internal_properties=None):
+    def __init__(self, name: str = None, type: str = None, internal_properties: List[BaseObject] = None):
         """HierarchicalObject - a model defined in Swagger"""
         super(HierarchicalObject, self).__init__()
 
@@ -69,7 +71,7 @@ class HierarchicalObject(BaseObject):
             self.internal_properties = internal_properties
 
     @property
-    def internal_properties(self):
+    def internal_properties(self) -> List[BaseObject]:
         """Gets the internal_properties of this HierarchicalObject.
 
         List of internal properties             
@@ -80,7 +82,7 @@ class HierarchicalObject(BaseObject):
         return self._internal_properties
 
     @internal_properties.setter
-    def internal_properties(self, internal_properties):
+    def internal_properties(self, internal_properties: List[BaseObject]):
         """Sets the internal_properties of this HierarchicalObject.
 
         List of internal properties             

@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.hierarchical_object import HierarchicalObject
 
@@ -50,7 +52,7 @@ class ListResponseOfHierarchicalObject(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[HierarchicalObject] = None):
         """ListResponseOfHierarchicalObject - a model defined in Swagger"""
 
         self._value = None
@@ -60,7 +62,7 @@ class ListResponseOfHierarchicalObject(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[HierarchicalObject]:
         """Gets the value of this ListResponseOfHierarchicalObject.
 
 
@@ -70,7 +72,7 @@ class ListResponseOfHierarchicalObject(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[HierarchicalObject]):
         """Sets the value of this ListResponseOfHierarchicalObject.
 
 

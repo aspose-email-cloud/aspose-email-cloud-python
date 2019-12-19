@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class MimeResponse(object):
@@ -48,7 +50,7 @@ class MimeResponse(object):
         'mime': 'mime'
     }
 
-    def __init__(self, mime=None):
+    def __init__(self, mime: str = None):
         """MimeResponse - a model defined in Swagger"""
 
         self._mime = None
@@ -58,7 +60,7 @@ class MimeResponse(object):
             self.mime = mime
 
     @property
-    def mime(self):
+    def mime(self) -> str:
         """Gets the mime of this MimeResponse.
 
         Gets or sets base64 encoded mime content.             
@@ -69,7 +71,7 @@ class MimeResponse(object):
         return self._mime
 
     @mime.setter
-    def mime(self, mime):
+    def mime(self, mime: str):
         """Sets the mime of this MimeResponse.
 
         Gets or sets base64 encoded mime content.             

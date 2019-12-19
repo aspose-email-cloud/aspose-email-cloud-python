@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class ListEmailMessagesRequest(BaseRequest):
@@ -43,7 +44,7 @@ class ListEmailMessagesRequest(BaseRequest):
     :param recursive (bool) Specifies that should message be searched in subfolders recursively
     """
 
-    def __init__(self, folder, query_string, first_account, second_account=None, storage=None, storage_folder=None, recursive=None):
+    def __init__(self, folder: str, query_string: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, recursive: bool = None):
         BaseRequest.__init__(self)
         self.folder = folder
         self.query_string = query_string

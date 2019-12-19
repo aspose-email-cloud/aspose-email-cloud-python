@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class CreateEmailRequest(BaseRequest):
@@ -38,7 +39,7 @@ class CreateEmailRequest(BaseRequest):
     :param request (CreateEmailRequest) An email document and optional Storage info to specify where the file should be located
     """
 
-    def __init__(self, file_name, request):
+    def __init__(self, file_name: str, request: CreateEmailRequest):
         BaseRequest.__init__(self)
         self.file_name = file_name
         self.request = request

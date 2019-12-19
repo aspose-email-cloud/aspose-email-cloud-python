@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_name_extracted_component import AiNameExtractedComponent
 
@@ -52,7 +54,7 @@ class AiNameExtracted(object):
         'score': 'score'
     }
 
-    def __init__(self, name=None, score=None):
+    def __init__(self, name: List[AiNameExtractedComponent] = None, score: float = None):
         """AiNameExtracted - a model defined in Swagger"""
 
         self._name = None
@@ -65,7 +67,7 @@ class AiNameExtracted(object):
             self.score = score
 
     @property
-    def name(self):
+    def name(self) -> List[AiNameExtractedComponent]:
         """Gets the name of this AiNameExtracted.
 
         Extracted name components             
@@ -76,7 +78,7 @@ class AiNameExtracted(object):
         return self._name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: List[AiNameExtractedComponent]):
         """Sets the name of this AiNameExtracted.
 
         Extracted name components             
@@ -87,7 +89,7 @@ class AiNameExtracted(object):
         self._name = name
 
     @property
-    def score(self):
+    def score(self) -> float:
         """Gets the score of this AiNameExtracted.
 
         Extracted name score             
@@ -98,7 +100,7 @@ class AiNameExtracted(object):
         return self._score
 
     @score.setter
-    def score(self, score):
+    def score(self, score: float):
         """Sets the score of this AiNameExtracted.
 
         Extracted name score             

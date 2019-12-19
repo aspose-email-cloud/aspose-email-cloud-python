@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class SetEmailPropertyRequest(BaseRequest):
@@ -39,7 +40,7 @@ class SetEmailPropertyRequest(BaseRequest):
     :param request (SetEmailPropertyRequest) A property that should be changed and optional Storage info to specify where the file located             
     """
 
-    def __init__(self, property_name, file_name, request):
+    def __init__(self, property_name: str, file_name: str, request: SetEmailPropertyRequest):
         BaseRequest.__init__(self)
         self.property_name = property_name
         self.file_name = file_name

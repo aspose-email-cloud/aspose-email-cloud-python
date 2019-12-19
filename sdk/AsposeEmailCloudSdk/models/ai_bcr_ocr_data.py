@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_ocr_data_part import AiBcrOcrDataPart
 
@@ -56,7 +58,7 @@ class AiBcrOcrData(object):
         'data': 'data'
     }
 
-    def __init__(self, id=None, image=None, details=None, data=None):
+    def __init__(self, id: str = None, image: str = None, details: Dict[str, str] = None, data: List[AiBcrOcrDataPart] = None):
         """AiBcrOcrData - a model defined in Swagger"""
 
         self._id = None
@@ -75,7 +77,7 @@ class AiBcrOcrData(object):
             self.data = data
 
     @property
-    def id(self):
+    def id(self) -> str:
         """Gets the id of this AiBcrOcrData.
 
         Image identifier             
@@ -86,7 +88,7 @@ class AiBcrOcrData(object):
         return self._id
 
     @id.setter
-    def id(self, id):
+    def id(self, id: str):
         """Sets the id of this AiBcrOcrData.
 
         Image identifier             
@@ -97,7 +99,7 @@ class AiBcrOcrData(object):
         self._id = id
 
     @property
-    def image(self):
+    def image(self) -> str:
         """Gets the image of this AiBcrOcrData.
 
         Image with possible pre-processing in Base64             
@@ -108,7 +110,7 @@ class AiBcrOcrData(object):
         return self._image
 
     @image.setter
-    def image(self, image):
+    def image(self, image: str):
         """Sets the image of this AiBcrOcrData.
 
         Image with possible pre-processing in Base64             
@@ -119,7 +121,7 @@ class AiBcrOcrData(object):
         self._image = image
 
     @property
-    def details(self):
+    def details(self) -> Dict[str, str]:
         """Gets the details of this AiBcrOcrData.
 
         Additional details from OCR engine             
@@ -130,7 +132,7 @@ class AiBcrOcrData(object):
         return self._details
 
     @details.setter
-    def details(self, details):
+    def details(self, details: Dict[str, str]):
         """Sets the details of this AiBcrOcrData.
 
         Additional details from OCR engine             
@@ -141,7 +143,7 @@ class AiBcrOcrData(object):
         self._details = details
 
     @property
-    def data(self):
+    def data(self) -> List[AiBcrOcrDataPart]:
         """Gets the data of this AiBcrOcrData.
 
         OCR results             
@@ -152,7 +154,7 @@ class AiBcrOcrData(object):
         return self._data
 
     @data.setter
-    def data(self, data):
+    def data(self, data: List[AiBcrOcrDataPart]):
         """Sets the data of this AiBcrOcrData.
 
         OCR results             

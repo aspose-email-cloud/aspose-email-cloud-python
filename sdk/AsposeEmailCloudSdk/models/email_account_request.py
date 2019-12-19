@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 
@@ -67,7 +69,7 @@ class EmailAccountRequest(object):
         'SaveOAuthEmailAccountRequest': 'SaveOAuthEmailAccountRequest'
     }
 
-    def __init__(self, host=None, port=None, login=None, security_options=None, protocol_type=None, description=None, storage_file=None):
+    def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None):
         """EmailAccountRequest - a model defined in Swagger"""
 
         self._host = None
@@ -95,7 +97,7 @@ class EmailAccountRequest(object):
             self.storage_file = storage_file
 
     @property
-    def host(self):
+    def host(self) -> str:
         """Gets the host of this EmailAccountRequest.
 
         Email account host             
@@ -106,7 +108,7 @@ class EmailAccountRequest(object):
         return self._host
 
     @host.setter
-    def host(self, host):
+    def host(self, host: str):
         """Sets the host of this EmailAccountRequest.
 
         Email account host             
@@ -121,7 +123,7 @@ class EmailAccountRequest(object):
         self._host = host
 
     @property
-    def port(self):
+    def port(self) -> int:
         """Gets the port of this EmailAccountRequest.
 
         Email account port             
@@ -132,7 +134,7 @@ class EmailAccountRequest(object):
         return self._port
 
     @port.setter
-    def port(self, port):
+    def port(self, port: int):
         """Sets the port of this EmailAccountRequest.
 
         Email account port             
@@ -145,7 +147,7 @@ class EmailAccountRequest(object):
         self._port = port
 
     @property
-    def login(self):
+    def login(self) -> str:
         """Gets the login of this EmailAccountRequest.
 
         Email account login             
@@ -156,7 +158,7 @@ class EmailAccountRequest(object):
         return self._login
 
     @login.setter
-    def login(self, login):
+    def login(self, login: str):
         """Sets the login of this EmailAccountRequest.
 
         Email account login             
@@ -171,7 +173,7 @@ class EmailAccountRequest(object):
         self._login = login
 
     @property
-    def security_options(self):
+    def security_options(self) -> str:
         """Gets the security_options of this EmailAccountRequest.
 
         Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
@@ -182,7 +184,7 @@ class EmailAccountRequest(object):
         return self._security_options
 
     @security_options.setter
-    def security_options(self, security_options):
+    def security_options(self, security_options: str):
         """Sets the security_options of this EmailAccountRequest.
 
         Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
@@ -197,7 +199,7 @@ class EmailAccountRequest(object):
         self._security_options = security_options
 
     @property
-    def protocol_type(self):
+    def protocol_type(self) -> str:
         """Gets the protocol_type of this EmailAccountRequest.
 
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
@@ -208,7 +210,7 @@ class EmailAccountRequest(object):
         return self._protocol_type
 
     @protocol_type.setter
-    def protocol_type(self, protocol_type):
+    def protocol_type(self, protocol_type: str):
         """Sets the protocol_type of this EmailAccountRequest.
 
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
@@ -223,7 +225,7 @@ class EmailAccountRequest(object):
         self._protocol_type = protocol_type
 
     @property
-    def description(self):
+    def description(self) -> str:
         """Gets the description of this EmailAccountRequest.
 
         Email account description             
@@ -234,7 +236,7 @@ class EmailAccountRequest(object):
         return self._description
 
     @description.setter
-    def description(self, description):
+    def description(self, description: str):
         """Sets the description of this EmailAccountRequest.
 
         Email account description             
@@ -245,7 +247,7 @@ class EmailAccountRequest(object):
         self._description = description
 
     @property
-    def storage_file(self):
+    def storage_file(self) -> StorageFileLocation:
         """Gets the storage_file of this EmailAccountRequest.
 
         A storage file location info to store email account             
@@ -256,7 +258,7 @@ class EmailAccountRequest(object):
         return self._storage_file
 
     @storage_file.setter
-    def storage_file(self, storage_file):
+    def storage_file(self, storage_file: StorageFileLocation):
         """Sets the storage_file of this EmailAccountRequest.
 
         A storage file location info to store email account             

@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.hierarchical_object import HierarchicalObject
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
@@ -53,7 +55,7 @@ class HierarchicalObjectResponse(object):
         'storage_file': 'storageFile'
     }
 
-    def __init__(self, hierarchical_object=None, storage_file=None):
+    def __init__(self, hierarchical_object: HierarchicalObject = None, storage_file: StorageFileLocation = None):
         """HierarchicalObjectResponse - a model defined in Swagger"""
 
         self._hierarchical_object = None
@@ -66,7 +68,7 @@ class HierarchicalObjectResponse(object):
             self.storage_file = storage_file
 
     @property
-    def hierarchical_object(self):
+    def hierarchical_object(self) -> HierarchicalObject:
         """Gets the hierarchical_object of this HierarchicalObjectResponse.
 
         Document properties             
@@ -77,7 +79,7 @@ class HierarchicalObjectResponse(object):
         return self._hierarchical_object
 
     @hierarchical_object.setter
-    def hierarchical_object(self, hierarchical_object):
+    def hierarchical_object(self, hierarchical_object: HierarchicalObject):
         """Sets the hierarchical_object of this HierarchicalObjectResponse.
 
         Document properties             
@@ -88,7 +90,7 @@ class HierarchicalObjectResponse(object):
         self._hierarchical_object = hierarchical_object
 
     @property
-    def storage_file(self):
+    def storage_file(self) -> StorageFileLocation:
         """Gets the storage_file of this HierarchicalObjectResponse.
 
         Document location in storage             
@@ -99,7 +101,7 @@ class HierarchicalObjectResponse(object):
         return self._storage_file
 
     @storage_file.setter
-    def storage_file(self, storage_file):
+    def storage_file(self, storage_file: StorageFileLocation):
         """Sets the storage_file of this HierarchicalObjectResponse.
 
         Document location in storage             

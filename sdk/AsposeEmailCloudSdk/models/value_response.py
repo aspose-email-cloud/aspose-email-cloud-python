@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 
 class ValueResponse(object):
@@ -48,7 +50,7 @@ class ValueResponse(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: str = None):
         """ValueResponse - a model defined in Swagger"""
 
         self._value = None
@@ -58,7 +60,7 @@ class ValueResponse(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> str:
         """Gets the value of this ValueResponse.
 
         Gets or sets string content.             
@@ -69,7 +71,7 @@ class ValueResponse(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: str):
         """Sets the value of this ValueResponse.
 
         Gets or sets string content.             

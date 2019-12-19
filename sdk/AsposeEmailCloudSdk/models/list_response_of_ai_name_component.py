@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_name_component import AiNameComponent
 
@@ -50,7 +52,7 @@ class ListResponseOfAiNameComponent(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[AiNameComponent] = None):
         """ListResponseOfAiNameComponent - a model defined in Swagger"""
 
         self._value = None
@@ -60,7 +62,7 @@ class ListResponseOfAiNameComponent(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[AiNameComponent]:
         """Gets the value of this ListResponseOfAiNameComponent.
 
 
@@ -70,7 +72,7 @@ class ListResponseOfAiNameComponent(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[AiNameComponent]):
         """Sets the value of this ListResponseOfAiNameComponent.
 
 

@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class DeleteCalendarPropertyRequest(BaseRequest):
@@ -40,7 +41,7 @@ class DeleteCalendarPropertyRequest(BaseRequest):
     :param request (StorageFolderLocation) Storage detail to specify iCalendar file location
     """
 
-    def __init__(self, name, member_name, index, request):
+    def __init__(self, name: str, member_name: str, index: str, request: StorageFolderLocation):
         BaseRequest.__init__(self)
         self.name = name
         self.member_name = member_name

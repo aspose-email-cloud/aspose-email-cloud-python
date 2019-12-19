@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.storage_file import StorageFile
 
@@ -50,7 +52,7 @@ class FilesList(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[StorageFile] = None):
         """FilesList - a model defined in Swagger"""
 
         self._value = None
@@ -60,7 +62,7 @@ class FilesList(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[StorageFile]:
         """Gets the value of this FilesList.
 
         Files and folders contained by folder StorageFile.
@@ -71,7 +73,7 @@ class FilesList(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[StorageFile]):
         """Sets the value of this FilesList.
 
         Files and folders contained by folder StorageFile.

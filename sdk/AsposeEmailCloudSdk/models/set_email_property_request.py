@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.email_property import EmailProperty
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -53,7 +55,7 @@ class SetEmailPropertyRequest(object):
         'storage_folder': 'storageFolder'
     }
 
-    def __init__(self, email_property=None, storage_folder=None):
+    def __init__(self, email_property: EmailProperty = None, storage_folder: StorageFolderLocation = None):
         """SetEmailPropertyRequest - a model defined in Swagger"""
 
         self._email_property = None
@@ -66,7 +68,7 @@ class SetEmailPropertyRequest(object):
             self.storage_folder = storage_folder
 
     @property
-    def email_property(self):
+    def email_property(self) -> EmailProperty:
         """Gets the email_property of this SetEmailPropertyRequest.
 
         An email property that should be updated             
@@ -77,7 +79,7 @@ class SetEmailPropertyRequest(object):
         return self._email_property
 
     @email_property.setter
-    def email_property(self, email_property):
+    def email_property(self, email_property: EmailProperty):
         """Sets the email_property of this SetEmailPropertyRequest.
 
         An email property that should be updated             
@@ -90,7 +92,7 @@ class SetEmailPropertyRequest(object):
         self._email_property = email_property
 
     @property
-    def storage_folder(self):
+    def storage_folder(self) -> StorageFolderLocation:
         """Gets the storage_folder of this SetEmailPropertyRequest.
 
         An email document location in storage             
@@ -101,7 +103,7 @@ class SetEmailPropertyRequest(object):
         return self._storage_folder
 
     @storage_folder.setter
-    def storage_folder(self, storage_folder):
+    def storage_folder(self, storage_folder: StorageFolderLocation):
         """Sets the storage_folder of this SetEmailPropertyRequest.
 
         An email document location in storage             

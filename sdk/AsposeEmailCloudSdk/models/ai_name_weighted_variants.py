@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_name_weighted import AiNameWeighted
 
@@ -52,7 +54,7 @@ class AiNameWeightedVariants(object):
         'comments': 'comments'
     }
 
-    def __init__(self, names=None, comments=None):
+    def __init__(self, names: List[AiNameWeighted] = None, comments: str = None):
         """AiNameWeightedVariants - a model defined in Swagger"""
 
         self._names = None
@@ -65,7 +67,7 @@ class AiNameWeightedVariants(object):
             self.comments = comments
 
     @property
-    def names(self):
+    def names(self) -> List[AiNameWeighted]:
         """Gets the names of this AiNameWeightedVariants.
 
         List of name variations             
@@ -76,7 +78,7 @@ class AiNameWeightedVariants(object):
         return self._names
 
     @names.setter
-    def names(self, names):
+    def names(self, names: List[AiNameWeighted]):
         """Sets the names of this AiNameWeightedVariants.
 
         List of name variations             
@@ -87,7 +89,7 @@ class AiNameWeightedVariants(object):
         self._names = names
 
     @property
-    def comments(self):
+    def comments(self) -> str:
         """Gets the comments of this AiNameWeightedVariants.
 
         Usually empty; can contain extra message describing some issue occurred during processing             
@@ -98,7 +100,7 @@ class AiNameWeightedVariants(object):
         return self._comments
 
     @comments.setter
-    def comments(self, comments):
+    def comments(self, comments: str):
         """Sets the comments of this AiNameWeightedVariants.
 
         Usually empty; can contain extra message describing some issue occurred during processing             

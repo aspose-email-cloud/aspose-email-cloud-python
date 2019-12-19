@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_name_gender_hypothesis import AiNameGenderHypothesis
 
@@ -50,7 +52,7 @@ class ListResponseOfAiNameGenderHypothesis(object):
         'value': 'value'
     }
 
-    def __init__(self, value=None):
+    def __init__(self, value: List[AiNameGenderHypothesis] = None):
         """ListResponseOfAiNameGenderHypothesis - a model defined in Swagger"""
 
         self._value = None
@@ -60,7 +62,7 @@ class ListResponseOfAiNameGenderHypothesis(object):
             self.value = value
 
     @property
-    def value(self):
+    def value(self) -> List[AiNameGenderHypothesis]:
         """Gets the value of this ListResponseOfAiNameGenderHypothesis.
 
 
@@ -70,7 +72,7 @@ class ListResponseOfAiNameGenderHypothesis(object):
         return self._value
 
     @value.setter
-    def value(self, value):
+    def value(self, value: List[AiNameGenderHypothesis]):
         """Sets the value of this ListResponseOfAiNameGenderHypothesis.
 
 

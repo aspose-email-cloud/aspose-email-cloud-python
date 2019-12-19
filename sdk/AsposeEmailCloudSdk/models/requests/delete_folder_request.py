@@ -27,6 +27,7 @@
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
+from AsposeEmailCloudSdk.models import *
 
 
 class DeleteFolderRequest(BaseRequest):
@@ -39,7 +40,7 @@ class DeleteFolderRequest(BaseRequest):
     :param recursive (bool) Enable to delete folders, subfolders and files
     """
 
-    def __init__(self, path, storage_name=None, recursive=None):
+    def __init__(self, path: str, storage_name: str = None, recursive: bool = None):
         BaseRequest.__init__(self)
         self.path = path
         self.storage_name = storage_name

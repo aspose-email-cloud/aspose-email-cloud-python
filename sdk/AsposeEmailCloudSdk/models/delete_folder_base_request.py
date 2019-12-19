@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
@@ -59,7 +61,7 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
         'delete_permanently': 'deletePermanently'
     }
 
-    def __init__(self, first_account=None, second_account=None, storage_folder=None, folder=None, delete_permanently=None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, delete_permanently: bool = None):
         """DeleteFolderBaseRequest - a model defined in Swagger"""
         super(DeleteFolderBaseRequest, self).__init__()
 
@@ -79,7 +81,7 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
             self.delete_permanently = delete_permanently
 
     @property
-    def folder(self):
+    def folder(self) -> str:
         """Gets the folder of this DeleteFolderBaseRequest.
 
         Folder name             
@@ -90,7 +92,7 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
         return self._folder
 
     @folder.setter
-    def folder(self, folder):
+    def folder(self, folder: str):
         """Sets the folder of this DeleteFolderBaseRequest.
 
         Folder name             
@@ -105,7 +107,7 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
         self._folder = folder
 
     @property
-    def delete_permanently(self):
+    def delete_permanently(self) -> bool:
         """Gets the delete_permanently of this DeleteFolderBaseRequest.
 
         Specifies that folder should be deleted permanently             
@@ -116,7 +118,7 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
         return self._delete_permanently
 
     @delete_permanently.setter
-    def delete_permanently(self, delete_permanently):
+    def delete_permanently(self, delete_permanently: bool):
         """Sets the delete_permanently of this DeleteFolderBaseRequest.
 
         Specifies that folder should be deleted permanently             

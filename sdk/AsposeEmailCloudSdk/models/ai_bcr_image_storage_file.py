@@ -27,6 +27,8 @@
 import pprint
 import re
 import six
+from typing import List, Set, Dict, Tuple, Optional
+from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_image import AiBcrImage
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
@@ -53,7 +55,7 @@ class AiBcrImageStorageFile(AiBcrImage):
         'file': 'file'
     }
 
-    def __init__(self, is_single=None, file=None):
+    def __init__(self, is_single: bool = None, file: StorageFileLocation = None):
         """AiBcrImageStorageFile - a model defined in Swagger"""
         super(AiBcrImageStorageFile, self).__init__()
 
@@ -66,7 +68,7 @@ class AiBcrImageStorageFile(AiBcrImage):
             self.file = file
 
     @property
-    def file(self):
+    def file(self) -> StorageFileLocation:
         """Gets the file of this AiBcrImageStorageFile.
 
         Image location             
@@ -77,7 +79,7 @@ class AiBcrImageStorageFile(AiBcrImage):
         return self._file
 
     @file.setter
-    def file(self, file):
+    def file(self, file: StorageFileLocation):
         """Sets the file of this AiBcrImageStorageFile.
 
         Image location             
