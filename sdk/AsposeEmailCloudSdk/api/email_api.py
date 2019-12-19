@@ -64,7 +64,7 @@ class EmailApi(object):
         """Adds an attachment to iCalendar file             
 
 
-        :param request add_calendar_attachment_request object with parameters
+        :param request AddCalendarAttachmentRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -74,7 +74,7 @@ class EmailApi(object):
         """Adds an attachment to iCalendar file             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request add_calendar_attachment_request object with parameters
+        :param request AddCalendarAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -84,7 +84,7 @@ class EmailApi(object):
         """Add attachment to contact document             
 
 
-        :param request add_contact_attachment_request object with parameters
+        :param request AddContactAttachmentRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -94,7 +94,7 @@ class EmailApi(object):
         """Add attachment to contact document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request add_contact_attachment_request object with parameters
+        :param request AddContactAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -104,7 +104,7 @@ class EmailApi(object):
         """Adds an attachment to Email document             
 
 
-        :param request add_email_attachment_request object with parameters
+        :param request AddEmailAttachmentRequest object with parameters
         :return: EmailDocumentResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -114,7 +114,7 @@ class EmailApi(object):
         """Adds an attachment to Email document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request add_email_attachment_request object with parameters
+        :param request AddEmailAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDocumentResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -124,7 +124,7 @@ class EmailApi(object):
         """Add attachment to document             
 
 
-        :param request add_mapi_attachment_request object with parameters
+        :param request AddMapiAttachmentRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -134,7 +134,7 @@ class EmailApi(object):
         """Add attachment to document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request add_mapi_attachment_request object with parameters
+        :param request AddMapiAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -144,7 +144,7 @@ class EmailApi(object):
         """Ocr images             
 
 
-        :param request ai_bcr_ocr_request object with parameters
+        :param request AiBcrOcrRequest object with parameters
         :return: ListResponseOfAiBcrOcrData
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -154,7 +154,7 @@ class EmailApi(object):
         """Ocr images             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_bcr_ocr_request object with parameters
+        :param request AiBcrOcrRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfAiBcrOcrData)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -164,7 +164,7 @@ class EmailApi(object):
         """Ocr images from storage             
 
 
-        :param request ai_bcr_ocr_storage_request object with parameters
+        :param request AiBcrOcrStorageRequest object with parameters
         :return: ListResponseOfAiBcrOcrData
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -174,7 +174,7 @@ class EmailApi(object):
         """Ocr images from storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_bcr_ocr_storage_request object with parameters
+        :param request AiBcrOcrStorageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfAiBcrOcrData)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -184,7 +184,7 @@ class EmailApi(object):
         """Parse images to vCard properties             
 
 
-        :param request ai_bcr_parse_request object with parameters
+        :param request AiBcrParseRequest object with parameters
         :return: ListResponseOfHierarchicalObject
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -194,7 +194,7 @@ class EmailApi(object):
         """Parse images to vCard properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_bcr_parse_request object with parameters
+        :param request AiBcrParseRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfHierarchicalObject)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -204,7 +204,7 @@ class EmailApi(object):
         """Parse OCR data to vCard properties             
 
 
-        :param request ai_bcr_parse_ocr_data_request object with parameters
+        :param request AiBcrParseOcrDataRequest object with parameters
         :return: ListResponseOfHierarchicalObject
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -214,7 +214,7 @@ class EmailApi(object):
         """Parse OCR data to vCard properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_bcr_parse_ocr_data_request object with parameters
+        :param request AiBcrParseOcrDataRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfHierarchicalObject)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -224,7 +224,7 @@ class EmailApi(object):
         """Parse vCards from OCR data and save them to Storage             
 
 
-        :param request ai_bcr_parse_ocr_data_storage_request object with parameters
+        :param request AiBcrParseOcrDataStorageRequest object with parameters
         :return: ListResponseOfStorageFileLocation
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -234,7 +234,7 @@ class EmailApi(object):
         """Parse vCards from OCR data and save them to Storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_bcr_parse_ocr_data_storage_request object with parameters
+        :param request AiBcrParseOcrDataStorageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfStorageFileLocation)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -244,7 +244,7 @@ class EmailApi(object):
         """Parse images from storage to vCard files             
 
 
-        :param request ai_bcr_parse_storage_request object with parameters
+        :param request AiBcrParseStorageRequest object with parameters
         :return: ListResponseOfStorageFileLocation
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -254,7 +254,7 @@ class EmailApi(object):
         """Parse images from storage to vCard files             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_bcr_parse_storage_request object with parameters
+        :param request AiBcrParseStorageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfStorageFileLocation)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -264,7 +264,7 @@ class EmailApi(object):
         """The call proposes k most probable names for given starting characters             
 
 
-        :param request ai_name_complete_request object with parameters
+        :param request AiNameCompleteRequest object with parameters
         :return: AiNameWeightedVariants
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -274,7 +274,7 @@ class EmailApi(object):
         """The call proposes k most probable names for given starting characters             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_complete_request object with parameters
+        :param request AiNameCompleteRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AiNameWeightedVariants)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -284,7 +284,7 @@ class EmailApi(object):
         """Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
 
 
-        :param request ai_name_expand_request object with parameters
+        :param request AiNameExpandRequest object with parameters
         :return: AiNameWeightedVariants
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -294,7 +294,7 @@ class EmailApi(object):
         """Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_expand_request object with parameters
+        :param request AiNameExpandRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AiNameWeightedVariants)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -304,7 +304,7 @@ class EmailApi(object):
         """Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
 
 
-        :param request ai_name_expand_parsed_request object with parameters
+        :param request AiNameExpandParsedRequest object with parameters
         :return: AiNameWeightedVariants
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -314,7 +314,7 @@ class EmailApi(object):
         """Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_expand_parsed_request object with parameters
+        :param request AiNameExpandParsedRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AiNameWeightedVariants)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -324,7 +324,7 @@ class EmailApi(object):
         """Formats a person&#39;s name in correct case and name order using options for formatting instructions             
 
 
-        :param request ai_name_format_request object with parameters
+        :param request AiNameFormatRequest object with parameters
         :return: AiNameFormatted
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -334,7 +334,7 @@ class EmailApi(object):
         """Formats a person&#39;s name in correct case and name order using options for formatting instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_format_request object with parameters
+        :param request AiNameFormatRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AiNameFormatted)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -344,7 +344,7 @@ class EmailApi(object):
         """Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
 
 
-        :param request ai_name_format_parsed_request object with parameters
+        :param request AiNameFormatParsedRequest object with parameters
         :return: AiNameFormatted
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -354,7 +354,7 @@ class EmailApi(object):
         """Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_format_parsed_request object with parameters
+        :param request AiNameFormatParsedRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AiNameFormatted)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -364,7 +364,7 @@ class EmailApi(object):
         """Detect person&#39;s gender from name string             
 
 
-        :param request ai_name_genderize_request object with parameters
+        :param request AiNameGenderizeRequest object with parameters
         :return: ListResponseOfAiNameGenderHypothesis
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -374,7 +374,7 @@ class EmailApi(object):
         """Detect person&#39;s gender from name string             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_genderize_request object with parameters
+        :param request AiNameGenderizeRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfAiNameGenderHypothesis)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -384,7 +384,7 @@ class EmailApi(object):
         """Detect person&#39;s gender from parsed name             
 
 
-        :param request ai_name_genderize_parsed_request object with parameters
+        :param request AiNameGenderizeParsedRequest object with parameters
         :return: ListResponseOfAiNameGenderHypothesis
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -394,7 +394,7 @@ class EmailApi(object):
         """Detect person&#39;s gender from parsed name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_genderize_parsed_request object with parameters
+        :param request AiNameGenderizeParsedRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfAiNameGenderHypothesis)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -404,7 +404,7 @@ class EmailApi(object):
         """Compare people&#39;s names. Uses options for comparing instructions             
 
 
-        :param request ai_name_match_request object with parameters
+        :param request AiNameMatchRequest object with parameters
         :return: AiNameMatchResult
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -414,7 +414,7 @@ class EmailApi(object):
         """Compare people&#39;s names. Uses options for comparing instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_match_request object with parameters
+        :param request AiNameMatchRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AiNameMatchResult)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -424,7 +424,7 @@ class EmailApi(object):
         """Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
 
 
-        :param request ai_name_match_parsed_request object with parameters
+        :param request AiNameMatchParsedRequest object with parameters
         :return: AiNameMatchResult
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -434,7 +434,7 @@ class EmailApi(object):
         """Compare people&#39;s parsed names and attributes. Uses options for comparing instructions             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_match_parsed_request object with parameters
+        :param request AiNameMatchParsedRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AiNameMatchResult)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -444,7 +444,7 @@ class EmailApi(object):
         """Parse name to components             
 
 
-        :param request ai_name_parse_request object with parameters
+        :param request AiNameParseRequest object with parameters
         :return: ListResponseOfAiNameComponent
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -454,7 +454,7 @@ class EmailApi(object):
         """Parse name to components             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_parse_request object with parameters
+        :param request AiNameParseRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfAiNameComponent)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -464,7 +464,7 @@ class EmailApi(object):
         """Parse person&#39;s name out of an email address             
 
 
-        :param request ai_name_parse_email_address_request object with parameters
+        :param request AiNameParseEmailAddressRequest object with parameters
         :return: ListResponseOfAiNameExtracted
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -474,7 +474,7 @@ class EmailApi(object):
         """Parse person&#39;s name out of an email address             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request ai_name_parse_email_address_request object with parameters
+        :param request AiNameParseEmailAddressRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfAiNameExtracted)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -484,7 +484,7 @@ class EmailApi(object):
         """Adds an email from *.eml file to specified folder in email account             
 
 
-        :param request append_email_message_request object with parameters
+        :param request AppendEmailMessageRequest object with parameters
         :return: EmailPropertyResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -494,7 +494,7 @@ class EmailApi(object):
         """Adds an email from *.eml file to specified folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request append_email_message_request object with parameters
+        :param request AppendEmailMessageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailPropertyResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -504,7 +504,7 @@ class EmailApi(object):
         """Adds an email from MIME to specified folder in email account             
 
 
-        :param request append_mime_message_request object with parameters
+        :param request AppendMimeMessageRequest object with parameters
         :return: ValueResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -514,7 +514,7 @@ class EmailApi(object):
         """Adds an email from MIME to specified folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request append_mime_message_request object with parameters
+        :param request AppendMimeMessageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ValueResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -524,7 +524,7 @@ class EmailApi(object):
         """Copy file
 
 
-        :param request copy_file_request object with parameters
+        :param request CopyFileRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -534,7 +534,7 @@ class EmailApi(object):
         """Copy file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request copy_file_request object with parameters
+        :param request CopyFileRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -544,7 +544,7 @@ class EmailApi(object):
         """Copy folder
 
 
-        :param request copy_folder_request object with parameters
+        :param request CopyFolderRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -554,7 +554,7 @@ class EmailApi(object):
         """Copy folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request copy_folder_request object with parameters
+        :param request CopyFolderRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -564,7 +564,7 @@ class EmailApi(object):
         """Create calendar file             
 
 
-        :param request create_calendar_request object with parameters
+        :param request CreateCalendarRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -574,7 +574,7 @@ class EmailApi(object):
         """Create calendar file             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request create_calendar_request object with parameters
+        :param request CreateCalendarRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -584,7 +584,7 @@ class EmailApi(object):
         """Create contact document             
 
 
-        :param request create_contact_request object with parameters
+        :param request CreateContactRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -594,7 +594,7 @@ class EmailApi(object):
         """Create contact document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request create_contact_request object with parameters
+        :param request CreateContactRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -604,7 +604,7 @@ class EmailApi(object):
         """Create an email document             
 
 
-        :param request create_email_request object with parameters
+        :param request CreateEmailRequest object with parameters
         :return: EmailDocumentResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -614,7 +614,7 @@ class EmailApi(object):
         """Create an email document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request create_email_request object with parameters
+        :param request CreateEmailRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDocumentResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -624,7 +624,7 @@ class EmailApi(object):
         """Create new folder in email account             
 
 
-        :param request create_email_folder_request object with parameters
+        :param request CreateEmailFolderRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -634,7 +634,7 @@ class EmailApi(object):
         """Create new folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request create_email_folder_request object with parameters
+        :param request CreateEmailFolderRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -644,7 +644,7 @@ class EmailApi(object):
         """Create the folder
 
 
-        :param request create_folder_request object with parameters
+        :param request CreateFolderRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -654,7 +654,7 @@ class EmailApi(object):
         """Create the folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request create_folder_request object with parameters
+        :param request CreateFolderRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -664,7 +664,7 @@ class EmailApi(object):
         """Create new document             
 
 
-        :param request create_mapi_request object with parameters
+        :param request CreateMapiRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -674,7 +674,7 @@ class EmailApi(object):
         """Create new document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request create_mapi_request object with parameters
+        :param request CreateMapiRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -684,7 +684,7 @@ class EmailApi(object):
         """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}             
 
 
-        :param request delete_calendar_property_request object with parameters
+        :param request DeleteCalendarPropertyRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -694,7 +694,7 @@ class EmailApi(object):
         """Deletes indexed property by index and name. To delete Reminder attachment, use path ReminderAttachment/{ReminderIndex}/{AttachmentIndex}             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_calendar_property_request object with parameters
+        :param request DeleteCalendarPropertyRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -704,7 +704,7 @@ class EmailApi(object):
         """Delete property from indexed property list             
 
 
-        :param request delete_contact_property_request object with parameters
+        :param request DeleteContactPropertyRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -714,7 +714,7 @@ class EmailApi(object):
         """Delete property from indexed property list             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_contact_property_request object with parameters
+        :param request DeleteContactPropertyRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -724,7 +724,7 @@ class EmailApi(object):
         """Delete a folder in email account             
 
 
-        :param request delete_email_folder_request object with parameters
+        :param request DeleteEmailFolderRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -734,7 +734,7 @@ class EmailApi(object):
         """Delete a folder in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_email_folder_request object with parameters
+        :param request DeleteEmailFolderRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -744,7 +744,7 @@ class EmailApi(object):
         """Delete message from email account by id             
 
 
-        :param request delete_email_message_request object with parameters
+        :param request DeleteEmailMessageRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -754,7 +754,7 @@ class EmailApi(object):
         """Delete message from email account by id             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_email_message_request object with parameters
+        :param request DeleteEmailMessageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -764,7 +764,7 @@ class EmailApi(object):
         """Delete file
 
 
-        :param request delete_file_request object with parameters
+        :param request DeleteFileRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -774,7 +774,7 @@ class EmailApi(object):
         """Delete file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_file_request object with parameters
+        :param request DeleteFileRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -784,7 +784,7 @@ class EmailApi(object):
         """Delete folder
 
 
-        :param request delete_folder_request object with parameters
+        :param request DeleteFolderRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -794,7 +794,7 @@ class EmailApi(object):
         """Delete folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_folder_request object with parameters
+        :param request DeleteFolderRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -804,7 +804,7 @@ class EmailApi(object):
         """Remove attachment from document             
 
 
-        :param request delete_mapi_attachment_request object with parameters
+        :param request DeleteMapiAttachmentRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -814,7 +814,7 @@ class EmailApi(object):
         """Remove attachment from document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_mapi_attachment_request object with parameters
+        :param request DeleteMapiAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -824,7 +824,7 @@ class EmailApi(object):
         """Delete document properties             
 
 
-        :param request delete_mapi_properties_request object with parameters
+        :param request DeleteMapiPropertiesRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -834,7 +834,7 @@ class EmailApi(object):
         """Delete document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request delete_mapi_properties_request object with parameters
+        :param request DeleteMapiPropertiesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -844,7 +844,7 @@ class EmailApi(object):
         """Download file
 
 
-        :param request download_file_request object with parameters
+        :param request DownloadFileRequest object with parameters
         :return: file
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -854,7 +854,7 @@ class EmailApi(object):
         """Download file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request download_file_request object with parameters
+        :param request DownloadFileRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -864,7 +864,7 @@ class EmailApi(object):
         """Fetch message mime from email account             
 
 
-        :param request fetch_email_message_request object with parameters
+        :param request FetchEmailMessageRequest object with parameters
         :return: MimeResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -874,7 +874,7 @@ class EmailApi(object):
         """Fetch message mime from email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request fetch_email_message_request object with parameters
+        :param request FetchEmailMessageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns MimeResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -884,7 +884,7 @@ class EmailApi(object):
         """Get calendar file properties             
 
 
-        :param request get_calendar_request object with parameters
+        :param request GetCalendarRequest object with parameters
         :return: HierarchicalObject
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -894,7 +894,7 @@ class EmailApi(object):
         """Get calendar file properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_calendar_request object with parameters
+        :param request GetCalendarRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns HierarchicalObject)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -904,7 +904,7 @@ class EmailApi(object):
         """Get iCalendar document attachment by name             
 
 
-        :param request get_calendar_attachment_request object with parameters
+        :param request GetCalendarAttachmentRequest object with parameters
         :return: file
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -914,7 +914,7 @@ class EmailApi(object):
         """Get iCalendar document attachment by name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_calendar_attachment_request object with parameters
+        :param request GetCalendarAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -924,7 +924,7 @@ class EmailApi(object):
         """Get iCalendar files list in folder on storage             
 
 
-        :param request get_calendar_list_request object with parameters
+        :param request GetCalendarListRequest object with parameters
         :return: ListResponseOfHierarchicalObjectResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -934,7 +934,7 @@ class EmailApi(object):
         """Get iCalendar files list in folder on storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_calendar_list_request object with parameters
+        :param request GetCalendarListRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfHierarchicalObjectResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -944,7 +944,7 @@ class EmailApi(object):
         """Get attachment file by name             
 
 
-        :param request get_contact_attachment_request object with parameters
+        :param request GetContactAttachmentRequest object with parameters
         :return: file
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -954,7 +954,7 @@ class EmailApi(object):
         """Get attachment file by name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_contact_attachment_request object with parameters
+        :param request GetContactAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -964,7 +964,7 @@ class EmailApi(object):
         """Get contact list from storage folder             
 
 
-        :param request get_contact_list_request object with parameters
+        :param request GetContactListRequest object with parameters
         :return: ListResponseOfHierarchicalObjectResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -974,7 +974,7 @@ class EmailApi(object):
         """Get contact list from storage folder             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_contact_list_request object with parameters
+        :param request GetContactListRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfHierarchicalObjectResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -984,7 +984,7 @@ class EmailApi(object):
         """Get contact document properties             
 
 
-        :param request get_contact_properties_request object with parameters
+        :param request GetContactPropertiesRequest object with parameters
         :return: HierarchicalObject
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -994,7 +994,7 @@ class EmailApi(object):
         """Get contact document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_contact_properties_request object with parameters
+        :param request GetContactPropertiesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns HierarchicalObject)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1004,7 +1004,7 @@ class EmailApi(object):
         """Get disc usage
 
 
-        :param request get_disc_usage_request object with parameters
+        :param request GetDiscUsageRequest object with parameters
         :return: DiscUsage
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1014,7 +1014,7 @@ class EmailApi(object):
         """Get disc usage
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_disc_usage_request object with parameters
+        :param request GetDiscUsageRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns DiscUsage)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1024,7 +1024,7 @@ class EmailApi(object):
         """Get email document             
 
 
-        :param request get_email_request object with parameters
+        :param request GetEmailRequest object with parameters
         :return: EmailDocument
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1034,7 +1034,7 @@ class EmailApi(object):
         """Get email document             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_email_request object with parameters
+        :param request GetEmailRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDocument)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1044,7 +1044,7 @@ class EmailApi(object):
         """Get email attachment by name             
 
 
-        :param request get_email_attachment_request object with parameters
+        :param request GetEmailAttachmentRequest object with parameters
         :return: file
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1054,7 +1054,7 @@ class EmailApi(object):
         """Get email attachment by name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_email_attachment_request object with parameters
+        :param request GetEmailAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1064,7 +1064,7 @@ class EmailApi(object):
         """Get an email document property by its name             
 
 
-        :param request get_email_property_request object with parameters
+        :param request GetEmailPropertyRequest object with parameters
         :return: EmailPropertyResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1074,7 +1074,7 @@ class EmailApi(object):
         """Get an email document property by its name             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_email_property_request object with parameters
+        :param request GetEmailPropertyRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailPropertyResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1084,7 +1084,7 @@ class EmailApi(object):
         """Get file versions
 
 
-        :param request get_file_versions_request object with parameters
+        :param request GetFileVersionsRequest object with parameters
         :return: FileVersions
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1094,7 +1094,7 @@ class EmailApi(object):
         """Get file versions
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_file_versions_request object with parameters
+        :param request GetFileVersionsRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns FileVersions)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1104,7 +1104,7 @@ class EmailApi(object):
         """Get all files and folders within a folder
 
 
-        :param request get_files_list_request object with parameters
+        :param request GetFilesListRequest object with parameters
         :return: FilesList
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1114,7 +1114,7 @@ class EmailApi(object):
         """Get all files and folders within a folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_files_list_request object with parameters
+        :param request GetFilesListRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns FilesList)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1124,7 +1124,7 @@ class EmailApi(object):
         """Get document attachment as file stream             
 
 
-        :param request get_mapi_attachment_request object with parameters
+        :param request GetMapiAttachmentRequest object with parameters
         :return: file
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1134,7 +1134,7 @@ class EmailApi(object):
         """Get document attachment as file stream             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_mapi_attachment_request object with parameters
+        :param request GetMapiAttachmentRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1144,7 +1144,7 @@ class EmailApi(object):
         """Get document attachment list             
 
 
-        :param request get_mapi_attachments_request object with parameters
+        :param request GetMapiAttachmentsRequest object with parameters
         :return: ListResponseOfString
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1154,7 +1154,7 @@ class EmailApi(object):
         """Get document attachment list             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_mapi_attachments_request object with parameters
+        :param request GetMapiAttachmentsRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfString)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1164,7 +1164,7 @@ class EmailApi(object):
         """Get document list from storage folder             
 
 
-        :param request get_mapi_list_request object with parameters
+        :param request GetMapiListRequest object with parameters
         :return: ListResponseOfHierarchicalObjectResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1174,7 +1174,7 @@ class EmailApi(object):
         """Get document list from storage folder             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_mapi_list_request object with parameters
+        :param request GetMapiListRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfHierarchicalObjectResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1184,7 +1184,7 @@ class EmailApi(object):
         """Get document properties             
 
 
-        :param request get_mapi_properties_request object with parameters
+        :param request GetMapiPropertiesRequest object with parameters
         :return: HierarchicalObjectResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1194,7 +1194,7 @@ class EmailApi(object):
         """Get document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request get_mapi_properties_request object with parameters
+        :param request GetMapiPropertiesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns HierarchicalObjectResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1204,7 +1204,7 @@ class EmailApi(object):
         """Get folders list in email account             
 
 
-        :param request list_email_folders_request object with parameters
+        :param request ListEmailFoldersRequest object with parameters
         :return: ListResponseOfMailServerFolder
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1214,7 +1214,7 @@ class EmailApi(object):
         """Get folders list in email account             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request list_email_folders_request object with parameters
+        :param request ListEmailFoldersRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfMailServerFolder)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1225,7 +1225,7 @@ class EmailApi(object):
 
         The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
 
-        :param request list_email_messages_request object with parameters
+        :param request ListEmailMessagesRequest object with parameters
         :return: ListResponseOfString
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1236,7 +1236,7 @@ class EmailApi(object):
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
         The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
 
-        :param request list_email_messages_request object with parameters
+        :param request ListEmailMessagesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfString)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1246,7 +1246,7 @@ class EmailApi(object):
         """Move file
 
 
-        :param request move_file_request object with parameters
+        :param request MoveFileRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1256,7 +1256,7 @@ class EmailApi(object):
         """Move file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request move_file_request object with parameters
+        :param request MoveFileRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1266,7 +1266,7 @@ class EmailApi(object):
         """Move folder
 
 
-        :param request move_folder_request object with parameters
+        :param request MoveFolderRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1276,7 +1276,7 @@ class EmailApi(object):
         """Move folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request move_folder_request object with parameters
+        :param request MoveFolderRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1286,7 +1286,7 @@ class EmailApi(object):
         """Check if file or folder exists
 
 
-        :param request object_exists_request object with parameters
+        :param request ObjectExistsRequest object with parameters
         :return: ObjectExist
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1296,7 +1296,7 @@ class EmailApi(object):
         """Check if file or folder exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request object_exists_request object with parameters
+        :param request ObjectExistsRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ObjectExist)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1306,7 +1306,7 @@ class EmailApi(object):
         """Create email account file (*.account) with login/password authentication             
 
 
-        :param request save_mail_account_request object with parameters
+        :param request SaveMailAccountRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1316,7 +1316,7 @@ class EmailApi(object):
         """Create email account file (*.account) with login/password authentication             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request save_mail_account_request object with parameters
+        :param request SaveMailAccountRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1326,7 +1326,7 @@ class EmailApi(object):
         """Create email account file (*.account) with OAuth             
 
 
-        :param request save_mail_o_auth_account_request object with parameters
+        :param request SaveMailOAuthAccountRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1336,7 +1336,7 @@ class EmailApi(object):
         """Create email account file (*.account) with OAuth             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request save_mail_o_auth_account_request object with parameters
+        :param request SaveMailOAuthAccountRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1346,7 +1346,7 @@ class EmailApi(object):
         """Send an email from *.eml file located on storage             
 
 
-        :param request send_email_request object with parameters
+        :param request SendEmailRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1356,7 +1356,7 @@ class EmailApi(object):
         """Send an email from *.eml file located on storage             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request send_email_request object with parameters
+        :param request SendEmailRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1366,7 +1366,7 @@ class EmailApi(object):
         """Send an email specified by MIME in request             
 
 
-        :param request send_email_mime_request object with parameters
+        :param request SendEmailMimeRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1376,7 +1376,7 @@ class EmailApi(object):
         """Send an email specified by MIME in request             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request send_email_mime_request object with parameters
+        :param request SendEmailMimeRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1386,7 +1386,7 @@ class EmailApi(object):
         """Set email document property value             
 
 
-        :param request set_email_property_request object with parameters
+        :param request SetEmailPropertyRequest object with parameters
         :return: EmailPropertyResponse
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1396,7 +1396,7 @@ class EmailApi(object):
         """Set email document property value             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request set_email_property_request object with parameters
+        :param request SetEmailPropertyRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailPropertyResponse)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1406,7 +1406,7 @@ class EmailApi(object):
         """Sets \&quot;Message is read\&quot; flag             
 
 
-        :param request set_email_read_flag_request object with parameters
+        :param request SetEmailReadFlagRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1416,7 +1416,7 @@ class EmailApi(object):
         """Sets \&quot;Message is read\&quot; flag             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request set_email_read_flag_request object with parameters
+        :param request SetEmailReadFlagRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1426,7 +1426,7 @@ class EmailApi(object):
         """Check if storage exists
 
 
-        :param request storage_exists_request object with parameters
+        :param request StorageExistsRequest object with parameters
         :return: StorageExist
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1436,7 +1436,7 @@ class EmailApi(object):
         """Check if storage exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request storage_exists_request object with parameters
+        :param request StorageExistsRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns StorageExist)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1446,7 +1446,7 @@ class EmailApi(object):
         """Update calendar file properties             
 
 
-        :param request update_calendar_properties_request object with parameters
+        :param request UpdateCalendarPropertiesRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1456,7 +1456,7 @@ class EmailApi(object):
         """Update calendar file properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request update_calendar_properties_request object with parameters
+        :param request UpdateCalendarPropertiesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1466,7 +1466,7 @@ class EmailApi(object):
         """Update contact document properties             
 
 
-        :param request update_contact_properties_request object with parameters
+        :param request UpdateContactPropertiesRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1476,7 +1476,7 @@ class EmailApi(object):
         """Update contact document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request update_contact_properties_request object with parameters
+        :param request UpdateContactPropertiesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1486,7 +1486,7 @@ class EmailApi(object):
         """Update document properties             
 
 
-        :param request update_mapi_properties_request object with parameters
+        :param request UpdateMapiPropertiesRequest object with parameters
         :return: None
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1496,7 +1496,7 @@ class EmailApi(object):
         """Update document properties             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request update_mapi_properties_request object with parameters
+        :param request UpdateMapiPropertiesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1506,7 +1506,7 @@ class EmailApi(object):
         """Upload file
 
 
-        :param request upload_file_request object with parameters
+        :param request UploadFileRequest object with parameters
         :return: FilesUploadResult
         """
         http_request = request.to_http_info(self.api_client.configuration)
@@ -1516,7 +1516,7 @@ class EmailApi(object):
         """Upload file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
-        :param request upload_file_request object with parameters
+        :param request UploadFileRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns FilesUploadResult)
         """
         http_request = request.to_http_info(self.api_client.configuration)

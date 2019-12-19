@@ -18,6 +18,16 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.add_calendar_attachment(
+    AddCalendarAttachmentRequest(
+        name, 
+        attachment, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Calendar file name in storage | 
@@ -47,6 +57,16 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.add_calendar_attachment_async(
+    AddCalendarAttachmentRequest(
+        name, 
+        attachment, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Calendar file name in storage | 
@@ -73,6 +93,17 @@ __init__(self,
     attachment, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.add_contact_attachment(
+    AddContactAttachmentRequest(
+        format, 
+        name, 
+        attachment, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -105,6 +136,17 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.add_contact_attachment_async(
+    AddContactAttachmentRequest(
+        format, 
+        name, 
+        attachment, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
@@ -131,6 +173,16 @@ __init__(self,
     file_name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.add_email_attachment(
+    AddEmailAttachmentRequest(
+        attachment_name, 
+        file_name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -161,6 +213,16 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.add_email_attachment_async(
+    AddEmailAttachmentRequest(
+        attachment_name, 
+        file_name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **attachment_name** | **str**| Attachment file name | 
@@ -186,6 +248,16 @@ __init__(self,
     attachment, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.add_mapi_attachment(
+    AddMapiAttachmentRequest(
+        name, 
+        attachment, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -216,6 +288,16 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.add_mapi_attachment_async(
+    AddMapiAttachmentRequest(
+        name, 
+        attachment, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -239,6 +321,14 @@ Ocr images
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_bcr_ocr(
+    AiBcrOcrRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -265,6 +355,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_bcr_ocr_async(
+    AiBcrOcrRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
@@ -286,6 +384,14 @@ Ocr images from storage
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_bcr_ocr_storage(
+    AiBcrOcrStorageRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -312,6 +418,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_bcr_ocr_storage_async(
+    AiBcrOcrStorageRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiBcrStorageImageRq**](AiBcrStorageImageRq.md)| Request with images located on storage | 
@@ -333,6 +447,14 @@ Parse images to vCard properties
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse(
+    AiBcrParseRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -359,6 +481,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_bcr_parse_async(
+    AiBcrParseRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
@@ -380,6 +510,14 @@ Parse OCR data to vCard properties
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_ocr_data(
+    AiBcrParseOcrDataRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -406,6 +544,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_bcr_parse_ocr_data_async(
+    AiBcrParseOcrDataRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiBcrParseOcrDataRq**](AiBcrParseOcrDataRq.md)|  | 
@@ -427,6 +573,14 @@ Parse vCards from OCR data and save them to Storage
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_ocr_data_storage(
+    AiBcrParseOcrDataStorageRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -453,6 +607,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_bcr_parse_ocr_data_storage_async(
+    AiBcrParseOcrDataStorageRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiBcrParseOcrDataStorageRq**](AiBcrParseOcrDataStorageRq.md)|  | 
@@ -474,6 +636,14 @@ Parse images from storage to vCard files
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_storage(
+    AiBcrParseStorageRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -499,6 +669,14 @@ ai_bcr_parse_storage_async(request).get() returns [**ListResponseOfStorageFileLo
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_storage_async(
+    AiBcrParseStorageRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -526,6 +704,19 @@ __init__(self,
     script=script, 
     style=style)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_complete(
+    AiNameCompleteRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -562,6 +753,19 @@ __init__(self,
     style=style)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_complete_async(
+    AiNameCompleteRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to complete (required) | 
@@ -593,6 +797,19 @@ __init__(self,
     script=script, 
     style=style)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_expand(
+    AiNameExpandRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -629,6 +846,19 @@ __init__(self,
     style=style)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_expand_async(
+    AiNameExpandRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to format (required) | 
@@ -656,6 +886,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_expand_parsed(
+    AiNameExpandParsedRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options | 
@@ -680,6 +918,14 @@ ai_name_expand_parsed_async(request).get() returns [**AiNameWeightedVariants**](
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_expand_parsed_async(
+    AiNameExpandParsedRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -708,6 +954,20 @@ __init__(self,
     format=format, 
     style=style)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_format(
+    AiNameFormatRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        format=format, 
+        style=style))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -746,6 +1006,20 @@ __init__(self,
     style=style)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_format_async(
+    AiNameFormatRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        format=format, 
+        style=style))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to format (required) | 
@@ -774,6 +1048,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_format_parsed(
+    AiNameFormatParsedRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Parsed name with options | 
@@ -798,6 +1080,14 @@ ai_name_format_parsed_async(request).get() returns [**AiNameFormatted**](AiNameF
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_format_parsed_async(
+    AiNameFormatParsedRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -825,6 +1115,19 @@ __init__(self,
     script=script, 
     style=style)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_genderize(
+    AiNameGenderizeRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -861,6 +1164,19 @@ __init__(self,
     style=style)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_genderize_async(
+    AiNameGenderizeRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to parse (required) | 
@@ -888,6 +1204,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_genderize_parsed(
+    AiNameGenderizeParsedRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiNameParsedRq**](AiNameParsedRq.md)| Gender detection request data | 
@@ -912,6 +1236,14 @@ ai_name_genderize_parsed_async(request).get() returns [**ListResponseOfAiNameGen
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_genderize_parsed_async(
+    AiNameGenderizeParsedRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -940,6 +1272,20 @@ __init__(self,
     script=script, 
     style=style)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_match(
+    AiNameMatchRequest(
+        name, 
+        other_name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -978,6 +1324,20 @@ __init__(self,
     style=style)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_match_async(
+    AiNameMatchRequest(
+        name, 
+        other_name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to match (required) | 
@@ -1006,6 +1366,14 @@ __init__(self,
     rq)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_match_parsed(
+    AiNameMatchParsedRequest(
+        rq))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rq** | [**AiNameParsedMatchRq**](AiNameParsedMatchRq.md)| Parsed names to match | 
@@ -1030,6 +1398,14 @@ ai_name_match_parsed_async(request).get() returns [**AiNameMatchResult**](AiName
 __init__(self, 
     rq)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_match_parsed_async(
+    AiNameMatchParsedRequest(
+        rq))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1057,6 +1433,19 @@ __init__(self,
     script=script, 
     style=style)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_parse(
+    AiNameParseRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1093,6 +1482,19 @@ __init__(self,
     style=style)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_parse_async(
+    AiNameParseRequest(
+        name, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to parse (required) | 
@@ -1124,6 +1526,19 @@ __init__(self,
     script=script, 
     style=style)
 ```
+
+### Usage
+```python
+EmailApi.ai_name_parse_email_address(
+    AiNameParseEmailAddressRequest(
+        email_address, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1160,6 +1575,19 @@ __init__(self,
     style=style)
 ```
 
+### Usage
+```python
+EmailApi.ai_name_parse_email_address_async(
+    AiNameParseEmailAddressRequest(
+        email_address, 
+        language=language, 
+        location=location, 
+        encoding=encoding, 
+        script=script, 
+        style=style))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email_address** | **str**| Email address to parse (required) | 
@@ -1187,6 +1615,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.append_email_message(
+    AppendEmailMessageRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**AppendEmailBaseRequest**](AppendEmailBaseRequest.md)| Append email request | 
@@ -1212,6 +1648,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.append_email_message_async(
+    AppendEmailMessageRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**AppendEmailBaseRequest**](AppendEmailBaseRequest.md)| Append email request | 
@@ -1233,6 +1677,14 @@ Adds an email from MIME to specified folder in email account
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.append_mime_message(
+    AppendMimeMessageRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1259,6 +1711,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.append_mime_message_async(
+    AppendMimeMessageRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**AppendEmailMimeBaseRequest**](AppendEmailMimeBaseRequest.md)| Append email request | 
@@ -1284,6 +1744,18 @@ __init__(self,
     dest_storage_name=dest_storage_name, 
     version_id=version_id)
 ```
+
+### Usage
+```python
+EmailApi.copy_file(
+    CopyFileRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name, 
+        version_id=version_id))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1318,6 +1790,18 @@ __init__(self,
     version_id=version_id)
 ```
 
+### Usage
+```python
+EmailApi.copy_file_async(
+    CopyFileRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name, 
+        version_id=version_id))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **src_path** | **str**| Source file path e.g. &#39;/folder/file.ext&#39; | 
@@ -1346,6 +1830,17 @@ __init__(self,
     src_storage_name=src_storage_name, 
     dest_storage_name=dest_storage_name)
 ```
+
+### Usage
+```python
+EmailApi.copy_folder(
+    CopyFolderRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1378,6 +1873,17 @@ __init__(self,
     dest_storage_name=dest_storage_name)
 ```
 
+### Usage
+```python
+EmailApi.copy_folder_async(
+    CopyFolderRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **src_path** | **str**| Source folder path e.g. &#39;/src&#39; | 
@@ -1403,6 +1909,15 @@ __init__(self,
     name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.create_calendar(
+    CreateCalendarRequest(
+        name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1431,6 +1946,15 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.create_calendar_async(
+    CreateCalendarRequest(
+        name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Calendar file name in storage | 
@@ -1455,6 +1979,16 @@ __init__(self,
     name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.create_contact(
+    CreateContactRequest(
+        format, 
+        name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1485,6 +2019,16 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.create_contact_async(
+    CreateContactRequest(
+        format, 
+        name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
@@ -1509,6 +2053,15 @@ __init__(self,
     file_name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.create_email(
+    CreateEmailRequest(
+        file_name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1537,6 +2090,15 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.create_email_async(
+    CreateEmailRequest(
+        file_name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name in storage | 
@@ -1559,6 +2121,14 @@ void (empty response body)
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.create_email_folder(
+    CreateEmailFolderRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1585,6 +2155,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.create_email_folder_async(
+    CreateEmailFolderRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CreateFolderBaseRequest**](CreateFolderBaseRequest.md)| Create folder request | 
@@ -1607,6 +2185,15 @@ __init__(self,
     path, 
     storage_name=storage_name)
 ```
+
+### Usage
+```python
+EmailApi.create_folder(
+    CreateFolderRequest(
+        path, 
+        storage_name=storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1635,6 +2222,15 @@ __init__(self,
     storage_name=storage_name)
 ```
 
+### Usage
+```python
+EmailApi.create_folder_async(
+    CreateFolderRequest(
+        path, 
+        storage_name=storage_name))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; | 
@@ -1658,6 +2254,15 @@ __init__(self,
     name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.create_mapi(
+    CreateMapiRequest(
+        name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1686,6 +2291,15 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.create_mapi_async(
+    CreateMapiRequest(
+        name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -1711,6 +2325,17 @@ __init__(self,
     index, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.delete_calendar_property(
+    DeleteCalendarPropertyRequest(
+        name, 
+        member_name, 
+        index, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1743,6 +2368,17 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.delete_calendar_property_async(
+    DeleteCalendarPropertyRequest(
+        name, 
+        member_name, 
+        index, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| iCalendar file name in storage | 
@@ -1771,6 +2407,18 @@ __init__(self,
     index, 
     folder)
 ```
+
+### Usage
+```python
+EmailApi.delete_contact_property(
+    DeleteContactPropertyRequest(
+        format, 
+        name, 
+        member_name, 
+        index, 
+        folder))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1805,6 +2453,18 @@ __init__(self,
     folder)
 ```
 
+### Usage
+```python
+EmailApi.delete_contact_property_async(
+    DeleteContactPropertyRequest(
+        format, 
+        name, 
+        member_name, 
+        index, 
+        folder))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
@@ -1831,6 +2491,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.delete_email_folder(
+    DeleteEmailFolderRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**DeleteFolderBaseRequest**](DeleteFolderBaseRequest.md)| Delete folder request | 
@@ -1856,6 +2524,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.delete_email_folder_async(
+    DeleteEmailFolderRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**DeleteFolderBaseRequest**](DeleteFolderBaseRequest.md)| Delete folder request | 
@@ -1877,6 +2553,14 @@ void (empty response body)
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.delete_email_message(
+    DeleteEmailMessageRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1903,6 +2587,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.delete_email_message_async(
+    DeleteEmailMessageRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**DeleteMessageBaseRequest**](DeleteMessageBaseRequest.md)| Delete message request | 
@@ -1926,6 +2618,16 @@ __init__(self,
     storage_name=storage_name, 
     version_id=version_id)
 ```
+
+### Usage
+```python
+EmailApi.delete_file(
+    DeleteFileRequest(
+        path, 
+        storage_name=storage_name, 
+        version_id=version_id))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1956,6 +2658,16 @@ __init__(self,
     version_id=version_id)
 ```
 
+### Usage
+```python
+EmailApi.delete_file_async(
+    DeleteFileRequest(
+        path, 
+        storage_name=storage_name, 
+        version_id=version_id))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| File path e.g. &#39;/folder/file.ext&#39; | 
@@ -1981,6 +2693,16 @@ __init__(self,
     storage_name=storage_name, 
     recursive=recursive)
 ```
+
+### Usage
+```python
+EmailApi.delete_folder(
+    DeleteFolderRequest(
+        path, 
+        storage_name=storage_name, 
+        recursive=recursive))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2011,6 +2733,16 @@ __init__(self,
     recursive=recursive)
 ```
 
+### Usage
+```python
+EmailApi.delete_folder_async(
+    DeleteFolderRequest(
+        path, 
+        storage_name=storage_name, 
+        recursive=recursive))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| Folder path e.g. &#39;/folder&#39; | 
@@ -2036,6 +2768,16 @@ __init__(self,
     attachment, 
     storage)
 ```
+
+### Usage
+```python
+EmailApi.delete_mapi_attachment(
+    DeleteMapiAttachmentRequest(
+        name, 
+        attachment, 
+        storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2066,6 +2808,16 @@ __init__(self,
     storage)
 ```
 
+### Usage
+```python
+EmailApi.delete_mapi_attachment_async(
+    DeleteMapiAttachmentRequest(
+        name, 
+        attachment, 
+        storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -2090,6 +2842,15 @@ __init__(self,
     name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.delete_mapi_properties(
+    DeleteMapiPropertiesRequest(
+        name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2118,6 +2879,15 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.delete_mapi_properties_async(
+    DeleteMapiPropertiesRequest(
+        name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -2142,6 +2912,16 @@ __init__(self,
     storage_name=storage_name, 
     version_id=version_id)
 ```
+
+### Usage
+```python
+EmailApi.download_file(
+    DownloadFileRequest(
+        path, 
+        storage_name=storage_name, 
+        version_id=version_id))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2172,6 +2952,16 @@ __init__(self,
     version_id=version_id)
 ```
 
+### Usage
+```python
+EmailApi.download_file_async(
+    DownloadFileRequest(
+        path, 
+        storage_name=storage_name, 
+        version_id=version_id))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| File path e.g. &#39;/folder/file.ext&#39; | 
@@ -2199,6 +2989,18 @@ __init__(self,
     storage=storage, 
     storage_folder=storage_folder)
 ```
+
+### Usage
+```python
+EmailApi.fetch_email_message(
+    FetchEmailMessageRequest(
+        message_id, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2233,6 +3035,18 @@ __init__(self,
     storage_folder=storage_folder)
 ```
 
+### Usage
+```python
+EmailApi.fetch_email_message_async(
+    FetchEmailMessageRequest(
+        message_id, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
@@ -2260,6 +3074,16 @@ __init__(self,
     folder=folder, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_calendar(
+    GetCalendarRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2290,6 +3114,16 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_calendar_async(
+    GetCalendarRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| iCalendar file name in storage | 
@@ -2316,6 +3150,17 @@ __init__(self,
     folder=folder, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_calendar_attachment(
+    GetCalendarAttachmentRequest(
+        name, 
+        attachment, 
+        folder=folder, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2348,6 +3193,17 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_calendar_attachment_async(
+    GetCalendarAttachmentRequest(
+        name, 
+        attachment, 
+        folder=folder, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| iCalendar document file name | 
@@ -2375,6 +3231,17 @@ __init__(self,
     page_number, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_calendar_list(
+    GetCalendarListRequest(
+        folder, 
+        items_per_page, 
+        page_number, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2407,6 +3274,17 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_calendar_list_async(
+    GetCalendarListRequest(
+        folder, 
+        items_per_page, 
+        page_number, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **str**| Path to folder in storage | 
@@ -2435,6 +3313,18 @@ __init__(self,
     folder=folder, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_contact_attachment(
+    GetContactAttachmentRequest(
+        format, 
+        name, 
+        attachment, 
+        folder=folder, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2469,6 +3359,18 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_contact_attachment_async(
+    GetContactAttachmentRequest(
+        format, 
+        name, 
+        attachment, 
+        folder=folder, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
@@ -2498,6 +3400,18 @@ __init__(self,
     items_per_page=items_per_page, 
     page_number=page_number)
 ```
+
+### Usage
+```python
+EmailApi.get_contact_list(
+    GetContactListRequest(
+        format, 
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2532,6 +3446,18 @@ __init__(self,
     page_number=page_number)
 ```
 
+### Usage
+```python
+EmailApi.get_contact_list_async(
+    GetContactListRequest(
+        format, 
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
@@ -2560,6 +3486,17 @@ __init__(self,
     folder=folder, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_contact_properties(
+    GetContactPropertiesRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2592,6 +3529,17 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_contact_properties_async(
+    GetContactPropertiesRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
@@ -2616,6 +3564,14 @@ Get disc usage
 __init__(self, 
     storage_name=storage_name)
 ```
+
+### Usage
+```python
+EmailApi.get_disc_usage(
+    GetDiscUsageRequest(
+        storage_name=storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2642,6 +3598,14 @@ __init__(self,
     storage_name=storage_name)
 ```
 
+### Usage
+```python
+EmailApi.get_disc_usage_async(
+    GetDiscUsageRequest(
+        storage_name=storage_name))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storage_name** | **str**| Storage name | [optional] 
@@ -2665,6 +3629,16 @@ __init__(self,
     storage=storage, 
     folder=folder)
 ```
+
+### Usage
+```python
+EmailApi.get_email(
+    GetEmailRequest(
+        file_name, 
+        storage=storage, 
+        folder=folder))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2695,6 +3669,16 @@ __init__(self,
     folder=folder)
 ```
 
+### Usage
+```python
+EmailApi.get_email_async(
+    GetEmailRequest(
+        file_name, 
+        storage=storage, 
+        folder=folder))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name in storage | 
@@ -2721,6 +3705,17 @@ __init__(self,
     storage=storage, 
     folder=folder)
 ```
+
+### Usage
+```python
+EmailApi.get_email_attachment(
+    GetEmailAttachmentRequest(
+        attachment, 
+        file_name, 
+        storage=storage, 
+        folder=folder))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2753,6 +3748,17 @@ __init__(self,
     folder=folder)
 ```
 
+### Usage
+```python
+EmailApi.get_email_attachment_async(
+    GetEmailAttachmentRequest(
+        attachment, 
+        file_name, 
+        storage=storage, 
+        folder=folder))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **attachment** | **str**| Attachment name | 
@@ -2780,6 +3786,17 @@ __init__(self,
     storage=storage, 
     folder=folder)
 ```
+
+### Usage
+```python
+EmailApi.get_email_property(
+    GetEmailPropertyRequest(
+        property_name, 
+        file_name, 
+        storage=storage, 
+        folder=folder))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2812,6 +3829,17 @@ __init__(self,
     folder=folder)
 ```
 
+### Usage
+```python
+EmailApi.get_email_property_async(
+    GetEmailPropertyRequest(
+        property_name, 
+        file_name, 
+        storage=storage, 
+        folder=folder))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **property_name** | **str**| A property name | 
@@ -2837,6 +3865,15 @@ __init__(self,
     path, 
     storage_name=storage_name)
 ```
+
+### Usage
+```python
+EmailApi.get_file_versions(
+    GetFileVersionsRequest(
+        path, 
+        storage_name=storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2865,6 +3902,15 @@ __init__(self,
     storage_name=storage_name)
 ```
 
+### Usage
+```python
+EmailApi.get_file_versions_async(
+    GetFileVersionsRequest(
+        path, 
+        storage_name=storage_name))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| File path e.g. &#39;/file.ext&#39; | 
@@ -2888,6 +3934,15 @@ __init__(self,
     path, 
     storage_name=storage_name)
 ```
+
+### Usage
+```python
+EmailApi.get_files_list(
+    GetFilesListRequest(
+        path, 
+        storage_name=storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2916,6 +3971,15 @@ __init__(self,
     storage_name=storage_name)
 ```
 
+### Usage
+```python
+EmailApi.get_files_list_async(
+    GetFilesListRequest(
+        path, 
+        storage_name=storage_name))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| Folder path e.g. &#39;/folder&#39; | 
@@ -2941,6 +4005,17 @@ __init__(self,
     folder=folder, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_mapi_attachment(
+    GetMapiAttachmentRequest(
+        name, 
+        attachment, 
+        folder=folder, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2973,6 +4048,17 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_mapi_attachment_async(
+    GetMapiAttachmentRequest(
+        name, 
+        attachment, 
+        folder=folder, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -2999,6 +4085,16 @@ __init__(self,
     folder=folder, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_mapi_attachments(
+    GetMapiAttachmentsRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3029,6 +4125,16 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_mapi_attachments_async(
+    GetMapiAttachmentsRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -3055,6 +4161,17 @@ __init__(self,
     items_per_page=items_per_page, 
     page_number=page_number)
 ```
+
+### Usage
+```python
+EmailApi.get_mapi_list(
+    GetMapiListRequest(
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3087,6 +4204,17 @@ __init__(self,
     page_number=page_number)
 ```
 
+### Usage
+```python
+EmailApi.get_mapi_list_async(
+    GetMapiListRequest(
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **str**| Path to folder in storage | [optional] 
@@ -3113,6 +4241,16 @@ __init__(self,
     folder=folder, 
     storage=storage)
 ```
+
+### Usage
+```python
+EmailApi.get_mapi_properties(
+    GetMapiPropertiesRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3143,6 +4281,16 @@ __init__(self,
     storage=storage)
 ```
 
+### Usage
+```python
+EmailApi.get_mapi_properties_async(
+    GetMapiPropertiesRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -3170,6 +4318,18 @@ __init__(self,
     storage_folder=storage_folder, 
     parent_folder=parent_folder)
 ```
+
+### Usage
+```python
+EmailApi.list_email_folders(
+    ListEmailFoldersRequest(
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        parent_folder=parent_folder))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3204,6 +4364,18 @@ __init__(self,
     parent_folder=parent_folder)
 ```
 
+### Usage
+```python
+EmailApi.list_email_folders_async(
+    ListEmailFoldersRequest(
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        parent_folder=parent_folder))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **first_account** | **str**| Email account | 
@@ -3237,6 +4409,20 @@ __init__(self,
     storage_folder=storage_folder, 
     recursive=recursive)
 ```
+
+### Usage
+```python
+EmailApi.list_email_messages(
+    ListEmailMessagesRequest(
+        folder, 
+        query_string, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        recursive=recursive))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3277,6 +4463,20 @@ __init__(self,
     recursive=recursive)
 ```
 
+### Usage
+```python
+EmailApi.list_email_messages_async(
+    ListEmailMessagesRequest(
+        folder, 
+        query_string, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        recursive=recursive))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **str**| A folder in email account | 
@@ -3308,6 +4508,18 @@ __init__(self,
     dest_storage_name=dest_storage_name, 
     version_id=version_id)
 ```
+
+### Usage
+```python
+EmailApi.move_file(
+    MoveFileRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name, 
+        version_id=version_id))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3342,6 +4554,18 @@ __init__(self,
     version_id=version_id)
 ```
 
+### Usage
+```python
+EmailApi.move_file_async(
+    MoveFileRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name, 
+        version_id=version_id))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **src_path** | **str**| Source file path e.g. &#39;/src.ext&#39; | 
@@ -3370,6 +4594,17 @@ __init__(self,
     src_storage_name=src_storage_name, 
     dest_storage_name=dest_storage_name)
 ```
+
+### Usage
+```python
+EmailApi.move_folder(
+    MoveFolderRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3402,6 +4637,17 @@ __init__(self,
     dest_storage_name=dest_storage_name)
 ```
 
+### Usage
+```python
+EmailApi.move_folder_async(
+    MoveFolderRequest(
+        src_path, 
+        dest_path, 
+        src_storage_name=src_storage_name, 
+        dest_storage_name=dest_storage_name))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **src_path** | **str**| Folder path to move e.g. &#39;/folder&#39; | 
@@ -3428,6 +4674,16 @@ __init__(self,
     storage_name=storage_name, 
     version_id=version_id)
 ```
+
+### Usage
+```python
+EmailApi.object_exists(
+    ObjectExistsRequest(
+        path, 
+        storage_name=storage_name, 
+        version_id=version_id))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3458,6 +4714,16 @@ __init__(self,
     version_id=version_id)
 ```
 
+### Usage
+```python
+EmailApi.object_exists_async(
+    ObjectExistsRequest(
+        path, 
+        storage_name=storage_name, 
+        version_id=version_id))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **str**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; | 
@@ -3481,6 +4747,14 @@ void (empty response body)
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.save_mail_account(
+    SaveMailAccountRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3507,6 +4781,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.save_mail_account_async(
+    SaveMailAccountRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SaveEmailAccountRequest**](SaveEmailAccountRequest.md)| Email account information | 
@@ -3528,6 +4810,14 @@ void (empty response body)
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.save_mail_o_auth_account(
+    SaveMailOAuthAccountRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3554,6 +4844,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.save_mail_o_auth_account_async(
+    SaveMailOAuthAccountRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SaveOAuthEmailAccountRequest**](SaveOAuthEmailAccountRequest.md)| Email account information | 
@@ -3575,6 +4873,14 @@ void (empty response body)
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.send_email(
+    SendEmailRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3601,6 +4907,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.send_email_async(
+    SendEmailRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SendEmailBaseRequest**](SendEmailBaseRequest.md)| Send email request | 
@@ -3622,6 +4936,14 @@ void (empty response body)
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.send_email_mime(
+    SendEmailMimeRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3648,6 +4970,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.send_email_mime_async(
+    SendEmailMimeRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SendEmailMimeBaseRequest**](SendEmailMimeBaseRequest.md)| Send email request | 
@@ -3671,6 +5001,16 @@ __init__(self,
     file_name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.set_email_property(
+    SetEmailPropertyRequest(
+        property_name, 
+        file_name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3701,6 +5041,16 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.set_email_property_async(
+    SetEmailPropertyRequest(
+        property_name, 
+        file_name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **property_name** | **str**| A property name that should be changed | 
@@ -3724,6 +5074,14 @@ void (empty response body)
 __init__(self, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.set_email_read_flag(
+    SetEmailReadFlagRequest(
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3750,6 +5108,14 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.set_email_read_flag_async(
+    SetEmailReadFlagRequest(
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SetMessageReadFlagAccountBaseRequest**](SetMessageReadFlagAccountBaseRequest.md)| Message is read request | 
@@ -3771,6 +5137,14 @@ Check if storage exists
 __init__(self, 
     storage_name)
 ```
+
+### Usage
+```python
+EmailApi.storage_exists(
+    StorageExistsRequest(
+        storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3797,6 +5171,14 @@ __init__(self,
     storage_name)
 ```
 
+### Usage
+```python
+EmailApi.storage_exists_async(
+    StorageExistsRequest(
+        storage_name))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storage_name** | **str**| Storage name | 
@@ -3819,6 +5201,15 @@ __init__(self,
     name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.update_calendar_properties(
+    UpdateCalendarPropertiesRequest(
+        name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3847,6 +5238,15 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.update_calendar_properties_async(
+    UpdateCalendarPropertiesRequest(
+        name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| iCalendar file name in storage | 
@@ -3871,6 +5271,16 @@ __init__(self,
     name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.update_contact_properties(
+    UpdateContactPropertiesRequest(
+        format, 
+        name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3901,6 +5311,16 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.update_contact_properties_async(
+    UpdateContactPropertiesRequest(
+        format, 
+        name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format Enum, available values: VCard, WebDav, Msg | 
@@ -3925,6 +5345,15 @@ __init__(self,
     name, 
     request)
 ```
+
+### Usage
+```python
+EmailApi.update_mapi_properties(
+    UpdateMapiPropertiesRequest(
+        name, 
+        request))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3953,6 +5382,15 @@ __init__(self,
     request)
 ```
 
+### Usage
+```python
+EmailApi.update_mapi_properties_async(
+    UpdateMapiPropertiesRequest(
+        name, 
+        request))
+```
+
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Document file name | 
@@ -3977,6 +5415,16 @@ __init__(self,
     file, 
     storage_name=storage_name)
 ```
+
+### Usage
+```python
+EmailApi.upload_file(
+    UploadFileRequest(
+        path, 
+        file, 
+        storage_name=storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4006,6 +5454,16 @@ __init__(self,
     file, 
     storage_name=storage_name)
 ```
+
+### Usage
+```python
+EmailApi.upload_file_async(
+    UploadFileRequest(
+        path, 
+        file, 
+        storage_name=storage_name))
+```
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
