@@ -18,10 +18,6 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**ai_bcr_ocr_storage_async**](EmailApi.md#ai_bcr_ocr_storage_async) | **POST** /email/AiBcr/ocr-storage | Ocr images from storage             
 *EmailApi* | [**ai_bcr_parse**](EmailApi.md#ai_bcr_parse) | **POST** /email/AiBcr/parse | Parse images to vCard properties             
 *EmailApi* | [**ai_bcr_parse_async**](EmailApi.md#ai_bcr_parse_async) | **POST** /email/AiBcr/parse | Parse images to vCard properties             
-*EmailApi* | [**ai_bcr_parse_ocr_data**](EmailApi.md#ai_bcr_parse_ocr_data) | **POST** /email/AiBcr/parse-ocr-data | Parse OCR data to vCard properties             
-*EmailApi* | [**ai_bcr_parse_ocr_data_async**](EmailApi.md#ai_bcr_parse_ocr_data_async) | **POST** /email/AiBcr/parse-ocr-data | Parse OCR data to vCard properties             
-*EmailApi* | [**ai_bcr_parse_ocr_data_storage**](EmailApi.md#ai_bcr_parse_ocr_data_storage) | **POST** /email/AiBcr/parse-ocr-data-storage | Parse vCards from OCR data and save them to Storage             
-*EmailApi* | [**ai_bcr_parse_ocr_data_storage_async**](EmailApi.md#ai_bcr_parse_ocr_data_storage_async) | **POST** /email/AiBcr/parse-ocr-data-storage | Parse vCards from OCR data and save them to Storage             
 *EmailApi* | [**ai_bcr_parse_storage**](EmailApi.md#ai_bcr_parse_storage) | **POST** /email/AiBcr/parse-storage | Parse images from storage to vCard files             
 *EmailApi* | [**ai_bcr_parse_storage_async**](EmailApi.md#ai_bcr_parse_storage_async) | **POST** /email/AiBcr/parse-storage | Parse images from storage to vCard files             
 *EmailApi* | [**ai_name_complete**](EmailApi.md#ai_name_complete) | **GET** /email/AiName/complete | The call proposes k most probable names for given starting characters             
@@ -209,7 +205,6 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.AiBcrBase64Image](AiBcrBase64Image.md)
  - [AsposeEmailCloudSdk.models.AiBcrBase64Rq](AiBcrBase64Rq.md)
  - [AsposeEmailCloudSdk.models.AiBcrImageStorageFile](AiBcrImageStorageFile.md)
- - [AsposeEmailCloudSdk.models.AiBcrParseOcrDataRq](AiBcrParseOcrDataRq.md)
  - [AsposeEmailCloudSdk.models.AiBcrStorageImageRq](AiBcrStorageImageRq.md)
  - [AsposeEmailCloudSdk.models.AiNameParsedMatchRq](AiNameParsedMatchRq.md)
  - [AsposeEmailCloudSdk.models.AppendEmailAccountBaseRequest](AppendEmailAccountBaseRequest.md)
@@ -227,7 +222,6 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.SendEmailMimeBaseRequest](SendEmailMimeBaseRequest.md)
  - [AsposeEmailCloudSdk.models.SetMessageReadFlagAccountBaseRequest](SetMessageReadFlagAccountBaseRequest.md)
  - [AsposeEmailCloudSdk.models.StorageFileLocation](StorageFileLocation.md)
- - [AsposeEmailCloudSdk.models.AiBcrParseOcrDataStorageRq](AiBcrParseOcrDataStorageRq.md)
  - [AsposeEmailCloudSdk.models.AiBcrParseStorageRq](AiBcrParseStorageRq.md)
  - [AsposeEmailCloudSdk.models.AppendEmailBaseRequest](AppendEmailBaseRequest.md)
  - [AsposeEmailCloudSdk.models.AppendEmailMimeBaseRequest](AppendEmailMimeBaseRequest.md)

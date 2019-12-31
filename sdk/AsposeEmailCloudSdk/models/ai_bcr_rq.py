@@ -53,8 +53,6 @@ class AiBcrRq(object):
     }
 
     discriminator_value_class_map = {
-        'AiBcrParseOcrDataStorageRq': 'AiBcrParseOcrDataStorageRq',
-        'AiBcrParseOcrDataRq': 'AiBcrParseOcrDataRq',
         'AiBcrParseStorageRq': 'AiBcrParseStorageRq',
         'AiBcrStorageImageRq': 'AiBcrStorageImageRq',
         'AiBcrBase64Rq': 'AiBcrBase64Rq'

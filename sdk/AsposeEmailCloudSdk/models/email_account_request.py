@@ -176,7 +176,7 @@ class EmailAccountRequest(object):
     def security_options(self) -> str:
         """Gets the security_options of this EmailAccountRequest.
 
-        Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The security_options of this EmailAccountRequest.
         :rtype: str
@@ -187,7 +187,7 @@ class EmailAccountRequest(object):
     def security_options(self, security_options: str):
         """Sets the security_options of this EmailAccountRequest.
 
-        Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param security_options: The security_options of this EmailAccountRequest.
         :type: str

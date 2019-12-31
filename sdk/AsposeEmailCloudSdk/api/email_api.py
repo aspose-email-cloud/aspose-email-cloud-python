@@ -203,46 +203,6 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfHierarchicalObject')
 
-    def ai_bcr_parse_ocr_data(self, request: requests.AiBcrParseOcrDataRequest)  -> ListResponseOfHierarchicalObject:
-        """Parse OCR data to vCard properties             
-
-
-        :param request AiBcrParseOcrDataRequest object with parameters
-        :return: ListResponseOfHierarchicalObject
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'POST', 'ListResponseOfHierarchicalObject')
-
-    def ai_bcr_parse_ocr_data_async(self, request: requests.AiBcrParseOcrDataRequest) -> multiprocessing.pool.AsyncResult:
-        """Parse OCR data to vCard properties             
-        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
-
-        :param request AiBcrParseOcrDataRequest object with parameters
-        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfHierarchicalObject)
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'POST', 'ListResponseOfHierarchicalObject')
-
-    def ai_bcr_parse_ocr_data_storage(self, request: requests.AiBcrParseOcrDataStorageRequest)  -> ListResponseOfStorageFileLocation:
-        """Parse vCards from OCR data and save them to Storage             
-
-
-        :param request AiBcrParseOcrDataStorageRequest object with parameters
-        :return: ListResponseOfStorageFileLocation
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'POST', 'ListResponseOfStorageFileLocation')
-
-    def ai_bcr_parse_ocr_data_storage_async(self, request: requests.AiBcrParseOcrDataStorageRequest) -> multiprocessing.pool.AsyncResult:
-        """Parse vCards from OCR data and save them to Storage             
-        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
-
-        :param request AiBcrParseOcrDataStorageRequest object with parameters
-        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfStorageFileLocation)
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'POST', 'ListResponseOfStorageFileLocation')
-
     def ai_bcr_parse_storage(self, request: requests.AiBcrParseStorageRequest)  -> ListResponseOfStorageFileLocation:
         """Parse images from storage to vCard files             
 
