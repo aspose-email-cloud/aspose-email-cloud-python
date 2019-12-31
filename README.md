@@ -81,7 +81,8 @@ result = email_api.ai_bcr_parse_storage(requests.AiBcrParseStorageRequest(
     models.AiBcrParseStorageRq(
         images=[
             models.AiBcrImageStorageFile(
-                True,
+                True, #Flag isSingle determines that image contains single VCard or more.
+                      #Only single VCard on image variant is supported in current version.
                 models.StorageFileLocation(storage, folder, file_name))],
         out_folder=models.StorageFolderLocation(storage, out_folder_path))))
 # Get file name from recognition result
