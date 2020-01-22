@@ -403,7 +403,7 @@ class EmailDto(object):
     def delivery_notification_options(self) -> List[str]:
         """Gets the delivery_notification_options of this EmailDto.
 
-        Delivery notifications.             
+        Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
 
         :return: The delivery_notification_options of this EmailDto.
         :rtype: list[str]
@@ -414,7 +414,7 @@ class EmailDto(object):
     def delivery_notification_options(self, delivery_notification_options: List[str]):
         """Sets the delivery_notification_options of this EmailDto.
 
-        Delivery notifications.             
+        Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
 
         :param delivery_notification_options: The delivery_notification_options of this EmailDto.
         :type: list[str]

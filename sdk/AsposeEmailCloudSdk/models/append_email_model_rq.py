@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AppendEmailModelRequest.py">
+#  <copyright company="Aspose" file="AppendEmailModelRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -35,7 +35,7 @@ from AsposeEmailCloudSdk.models.email_dto import EmailDto
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
-class AppendEmailModelRequest(AppendEmailAccountBaseRequest):
+class AppendEmailModelRq(AppendEmailAccountBaseRequest):
     """Append email request             
     """
 
@@ -65,8 +65,8 @@ class AppendEmailModelRequest(AppendEmailAccountBaseRequest):
     }
 
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: EmailDto = None):
-        """AppendEmailModelRequest - a model defined in Swagger"""
-        super(AppendEmailModelRequest, self).__init__()
+        """AppendEmailModelRq - a model defined in Swagger"""
+        super(AppendEmailModelRq, self).__init__()
 
         self._message = None
         self.discriminator = None
@@ -86,22 +86,22 @@ class AppendEmailModelRequest(AppendEmailAccountBaseRequest):
 
     @property
     def message(self) -> EmailDto:
-        """Gets the message of this AppendEmailModelRequest.
+        """Gets the message of this AppendEmailModelRq.
 
         Email document             
 
-        :return: The message of this AppendEmailModelRequest.
+        :return: The message of this AppendEmailModelRq.
         :rtype: EmailDto
         """
         return self._message
 
     @message.setter
     def message(self, message: EmailDto):
-        """Sets the message of this AppendEmailModelRequest.
+        """Sets the message of this AppendEmailModelRq.
 
         Email document             
 
-        :param message: The message of this AppendEmailModelRequest.
+        :param message: The message of this AppendEmailModelRq.
         :type: EmailDto
         """
         if message is None:
@@ -142,7 +142,7 @@ class AppendEmailModelRequest(AppendEmailAccountBaseRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AppendEmailModelRequest):
+        if not isinstance(other, AppendEmailModelRq):
             return False
 
         return self.__dict__ == other.__dict__

@@ -302,11 +302,11 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.SaveOAuthEmailAccountRequest](SaveOAuthEmailAccountRequest.md)
  - [AsposeEmailCloudSdk.models.SendEmailBaseRequest](SendEmailBaseRequest.md)
  - [AsposeEmailCloudSdk.models.SendEmailMimeBaseRequest](SendEmailMimeBaseRequest.md)
- - [AsposeEmailCloudSdk.models.SendEmailModelRequest](SendEmailModelRequest.md)
+ - [AsposeEmailCloudSdk.models.SendEmailModelRq](SendEmailModelRq.md)
  - [AsposeEmailCloudSdk.models.SetMessageReadFlagAccountBaseRequest](SetMessageReadFlagAccountBaseRequest.md)
  - [AsposeEmailCloudSdk.models.StorageFileLocation](StorageFileLocation.md)
  - [AsposeEmailCloudSdk.models.AiBcrParseStorageRq](AiBcrParseStorageRq.md)
  - [AsposeEmailCloudSdk.models.AppendEmailBaseRequest](AppendEmailBaseRequest.md)
  - [AsposeEmailCloudSdk.models.AppendEmailMimeBaseRequest](AppendEmailMimeBaseRequest.md)
- - [AsposeEmailCloudSdk.models.AppendEmailModelRequest](AppendEmailModelRequest.md)
+ - [AsposeEmailCloudSdk.models.AppendEmailModelRq](AppendEmailModelRq.md)
 

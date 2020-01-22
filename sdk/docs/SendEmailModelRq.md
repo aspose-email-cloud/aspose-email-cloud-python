@@ -1,4 +1,4 @@
-# AsposeEmailCloudSdk.models.SendEmailModelRequest
+# AsposeEmailCloudSdk.models.SendEmailModelRq
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

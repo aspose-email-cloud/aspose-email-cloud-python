@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **body_type** | **str** | The content type of message body. Enum, available values: PlainText, Html, Rtf | 
 **cc** | [**list[MailAddress]**](MailAddress.md) | CC recipients.              | [optional] 
 **_date** | **datetime** | Message date.              | 
-**delivery_notification_options** | **list[str]** | Delivery notifications.              | [optional] 
+**delivery_notification_options** | **list[str]** | Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess | [optional] 
 **_from** | [**MailAddress**](MailAddress.md) | From address.              | [optional] 
 **headers** | **dict(str, str)** | Document headers.              | [optional] 
 **html_body** | **str** | HTML body.              | [optional] 

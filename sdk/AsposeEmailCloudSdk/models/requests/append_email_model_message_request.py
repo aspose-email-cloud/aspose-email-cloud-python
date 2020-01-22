@@ -35,12 +35,12 @@ class AppendEmailModelMessageRequest(BaseRequest):
     Request model for append_email_model_message operation.
     Initializes a new instance.
 
-    :param request (AppendEmailModelRequest) Append email request
+    :param rq (AppendEmailModelRq) Append email request
     """
 
-    def __init__(self, request: AppendEmailModelRequest):
+    def __init__(self, rq: AppendEmailModelRq):
         BaseRequest.__init__(self)
-        self.request = request
+        self.rq = rq
 
     def to_http_info(self, config):
         """
@@ -51,9 +51,9 @@ class AppendEmailModelMessageRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'request' is set
-        if self.request is None:
-            raise ValueError("Missing the required parameter `request` when calling `append_email_model_message`")
+        # verify the required parameter 'rq' is set
+        if self.rq is None:
+            raise ValueError("Missing the required parameter `rq` when calling `append_email_model_message`")
 
         collection_formats = {}
         path = '/email/client/AppendModel'
@@ -67,8 +67,8 @@ class AppendEmailModelMessageRequest(BaseRequest):
         local_var_files = []
 
         body_params = None
-        if self.request is not None:
-            body_params = self.request
+        if self.rq is not None:
+            body_params = self.rq
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(

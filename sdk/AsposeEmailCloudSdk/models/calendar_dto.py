@@ -36,7 +36,7 @@ from AsposeEmailCloudSdk.models.mail_address import MailAddress
 
 
 class CalendarDto(object):
-    """iCalendar document representation             
+    """iCalendar document representation.             
     """
 
     """
@@ -167,7 +167,7 @@ class CalendarDto(object):
     def attachments(self) -> List[Attachment]:
         """Gets the attachments of this CalendarDto.
 
-        Document attachments
+        Document attachments.
 
         :return: The attachments of this CalendarDto.
         :rtype: list[Attachment]
@@ -178,7 +178,7 @@ class CalendarDto(object):
     def attachments(self, attachments: List[Attachment]):
         """Sets the attachments of this CalendarDto.
 
-        Document attachments
+        Document attachments.
 
         :param attachments: The attachments of this CalendarDto.
         :type: list[Attachment]
@@ -189,7 +189,7 @@ class CalendarDto(object):
     def attendees(self) -> List[MailAddress]:
         """Gets the attendees of this CalendarDto.
 
-        Event attendees
+        Event attendees.
 
         :return: The attendees of this CalendarDto.
         :rtype: list[MailAddress]
@@ -200,7 +200,7 @@ class CalendarDto(object):
     def attendees(self, attendees: List[MailAddress]):
         """Sets the attendees of this CalendarDto.
 
-        Event attendees
+        Event attendees.
 
         :param attendees: The attendees of this CalendarDto.
         :type: list[MailAddress]
@@ -213,7 +213,7 @@ class CalendarDto(object):
     def description(self) -> str:
         """Gets the description of this CalendarDto.
 
-        Description
+        Description.
 
         :return: The description of this CalendarDto.
         :rtype: str
@@ -224,7 +224,7 @@ class CalendarDto(object):
     def description(self, description: str):
         """Sets the description of this CalendarDto.
 
-        Description
+        Description.
 
         :param description: The description of this CalendarDto.
         :type: str
@@ -235,7 +235,7 @@ class CalendarDto(object):
     def end_date(self) -> datetime:
         """Gets the end_date of this CalendarDto.
 
-        End date
+        End date.
 
         :return: The end_date of this CalendarDto.
         :rtype: datetime
@@ -246,7 +246,7 @@ class CalendarDto(object):
     def end_date(self, end_date: datetime):
         """Sets the end_date of this CalendarDto.
 
-        End date
+        End date.
 
         :param end_date: The end_date of this CalendarDto.
         :type: datetime
@@ -259,7 +259,7 @@ class CalendarDto(object):
     def end_time_zone(self) -> str:
         """Gets the end_time_zone of this CalendarDto.
 
-        End time zone
+        End time zone.
 
         :return: The end_time_zone of this CalendarDto.
         :rtype: str
@@ -270,7 +270,7 @@ class CalendarDto(object):
     def end_time_zone(self, end_time_zone: str):
         """Sets the end_time_zone of this CalendarDto.
 
-        End time zone
+        End time zone.
 
         :param end_time_zone: The end_time_zone of this CalendarDto.
         :type: str
@@ -281,7 +281,7 @@ class CalendarDto(object):
     def flags(self) -> List[str]:
         """Gets the flags of this CalendarDto.
 
-        Appointment flags
+        Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
 
         :return: The flags of this CalendarDto.
         :rtype: list[str]
@@ -292,7 +292,7 @@ class CalendarDto(object):
     def flags(self, flags: List[str]):
         """Sets the flags of this CalendarDto.
 
-        Appointment flags
+        Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
 
         :param flags: The flags of this CalendarDto.
         :type: list[str]
@@ -303,7 +303,7 @@ class CalendarDto(object):
     def is_description_html(self) -> bool:
         """Gets the is_description_html of this CalendarDto.
 
-        Indicates if description is in HTML format
+        Indicates if description is in HTML format.
 
         :return: The is_description_html of this CalendarDto.
         :rtype: bool
@@ -314,7 +314,7 @@ class CalendarDto(object):
     def is_description_html(self, is_description_html: bool):
         """Sets the is_description_html of this CalendarDto.
 
-        Indicates if description is in HTML format
+        Indicates if description is in HTML format.
 
         :param is_description_html: The is_description_html of this CalendarDto.
         :type: bool
@@ -327,7 +327,7 @@ class CalendarDto(object):
     def location(self) -> str:
         """Gets the location of this CalendarDto.
 
-        Location
+        Location.
 
         :return: The location of this CalendarDto.
         :rtype: str
@@ -338,7 +338,7 @@ class CalendarDto(object):
     def location(self, location: str):
         """Sets the location of this CalendarDto.
 
-        Location
+        Location.
 
         :param location: The location of this CalendarDto.
         :type: str
@@ -425,7 +425,7 @@ class CalendarDto(object):
     def optional_attendees(self) -> List[MailAddress]:
         """Gets the optional_attendees of this CalendarDto.
 
-        Optional attendees             
+        Optional attendees.             
 
         :return: The optional_attendees of this CalendarDto.
         :rtype: list[MailAddress]
@@ -436,7 +436,7 @@ class CalendarDto(object):
     def optional_attendees(self, optional_attendees: List[MailAddress]):
         """Sets the optional_attendees of this CalendarDto.
 
-        Optional attendees             
+        Optional attendees.             
 
         :param optional_attendees: The optional_attendees of this CalendarDto.
         :type: list[MailAddress]
@@ -447,7 +447,7 @@ class CalendarDto(object):
     def organizer(self) -> MailAddress:
         """Gets the organizer of this CalendarDto.
 
-        Event organizer             
+        Event organizer.             
 
         :return: The organizer of this CalendarDto.
         :rtype: MailAddress
@@ -458,7 +458,7 @@ class CalendarDto(object):
     def organizer(self, organizer: MailAddress):
         """Sets the organizer of this CalendarDto.
 
-        Event organizer             
+        Event organizer.             
 
         :param organizer: The organizer of this CalendarDto.
         :type: MailAddress
@@ -493,7 +493,7 @@ class CalendarDto(object):
     def reminders(self) -> List[CalendarReminder]:
         """Gets the reminders of this CalendarDto.
 
-        Reminders
+        Reminders.
 
         :return: The reminders of this CalendarDto.
         :rtype: list[CalendarReminder]
@@ -504,7 +504,7 @@ class CalendarDto(object):
     def reminders(self, reminders: List[CalendarReminder]):
         """Sets the reminders of this CalendarDto.
 
-        Reminders
+        Reminders.
 
         :param reminders: The reminders of this CalendarDto.
         :type: list[CalendarReminder]
@@ -537,7 +537,7 @@ class CalendarDto(object):
     def start_date(self) -> datetime:
         """Gets the start_date of this CalendarDto.
 
-        Start date
+        Start date.
 
         :return: The start_date of this CalendarDto.
         :rtype: datetime
@@ -548,7 +548,7 @@ class CalendarDto(object):
     def start_date(self, start_date: datetime):
         """Sets the start_date of this CalendarDto.
 
-        Start date
+        Start date.
 
         :param start_date: The start_date of this CalendarDto.
         :type: datetime
@@ -561,7 +561,7 @@ class CalendarDto(object):
     def start_time_zone(self) -> str:
         """Gets the start_time_zone of this CalendarDto.
 
-        Start time zone
+        Start time zone.
 
         :return: The start_time_zone of this CalendarDto.
         :rtype: str
@@ -572,7 +572,7 @@ class CalendarDto(object):
     def start_time_zone(self, start_time_zone: str):
         """Sets the start_time_zone of this CalendarDto.
 
-        Start time zone
+        Start time zone.
 
         :param start_time_zone: The start_time_zone of this CalendarDto.
         :type: str
@@ -607,7 +607,7 @@ class CalendarDto(object):
     def summary(self) -> str:
         """Gets the summary of this CalendarDto.
 
-        Summary
+        Summary.
 
         :return: The summary of this CalendarDto.
         :rtype: str
@@ -618,7 +618,7 @@ class CalendarDto(object):
     def summary(self, summary: str):
         """Sets the summary of this CalendarDto.
 
-        Summary
+        Summary.
 
         :param summary: The summary of this CalendarDto.
         :type: str

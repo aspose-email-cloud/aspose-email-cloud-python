@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="SendEmailModelRequest.py">
+#  <copyright company="Aspose" file="SendEmailModelRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -35,7 +35,7 @@ from AsposeEmailCloudSdk.models.email_dto import EmailDto
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
-class SendEmailModelRequest(AccountBaseRequest):
+class SendEmailModelRq(AccountBaseRequest):
     """Send email model request             
     """
 
@@ -61,8 +61,8 @@ class SendEmailModelRequest(AccountBaseRequest):
     }
 
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, message: EmailDto = None):
-        """SendEmailModelRequest - a model defined in Swagger"""
-        super(SendEmailModelRequest, self).__init__()
+        """SendEmailModelRq - a model defined in Swagger"""
+        super(SendEmailModelRq, self).__init__()
 
         self._message = None
         self.discriminator = None
@@ -78,22 +78,22 @@ class SendEmailModelRequest(AccountBaseRequest):
 
     @property
     def message(self) -> EmailDto:
-        """Gets the message of this SendEmailModelRequest.
+        """Gets the message of this SendEmailModelRq.
 
         Message to send             
 
-        :return: The message of this SendEmailModelRequest.
+        :return: The message of this SendEmailModelRq.
         :rtype: EmailDto
         """
         return self._message
 
     @message.setter
     def message(self, message: EmailDto):
-        """Sets the message of this SendEmailModelRequest.
+        """Sets the message of this SendEmailModelRq.
 
         Message to send             
 
-        :param message: The message of this SendEmailModelRequest.
+        :param message: The message of this SendEmailModelRq.
         :type: EmailDto
         """
         self._message = message
@@ -132,7 +132,7 @@ class SendEmailModelRequest(AccountBaseRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, SendEmailModelRequest):
+        if not isinstance(other, SendEmailModelRq):
             return False
 
         return self.__dict__ == other.__dict__

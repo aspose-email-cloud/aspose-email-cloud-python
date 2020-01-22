@@ -1675,20 +1675,20 @@ Adds an email from model to specified folder in email account
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 ### Usage
 ```python
 EmailApi.append_email_model_message(
     AppendEmailModelMessageRequest(
-        request))
+        rq))
 ```
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AppendEmailModelRequest**](AppendEmailModelRequest.md)| Append email request | 
+ **rq** | [**AppendEmailModelRq**](AppendEmailModelRq.md)| Append email request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1708,20 +1708,20 @@ append_email_model_message_async(request).get() returns [**ValueResponse**](Valu
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 ### Usage
 ```python
 EmailApi.append_email_model_message_async(
     AppendEmailModelMessageRequest(
-        request))
+        rq))
 ```
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**AppendEmailModelRequest**](AppendEmailModelRequest.md)| Append email request | 
+ **rq** | [**AppendEmailModelRq**](AppendEmailModelRq.md)| Append email request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6261,20 +6261,20 @@ void (empty response body)
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 ### Usage
 ```python
 EmailApi.send_email_model(
     SendEmailModelRequest(
-        request))
+        rq))
 ```
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**SendEmailModelRequest**](SendEmailModelRequest.md)| Send email request | 
+ **rq** | [**SendEmailModelRq**](SendEmailModelRq.md)| Send email request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6294,20 +6294,20 @@ send_email_model_async(request).get() returns void (empty response body)
 ### Request Parameters
 ```python
 __init__(self, 
-    request)
+    rq)
 ```
 
 ### Usage
 ```python
 EmailApi.send_email_model_async(
     SendEmailModelRequest(
-        request))
+        rq))
 ```
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**SendEmailModelRequest**](SendEmailModelRequest.md)| Send email request | 
+ **rq** | [**SendEmailModelRq**](SendEmailModelRq.md)| Send email request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

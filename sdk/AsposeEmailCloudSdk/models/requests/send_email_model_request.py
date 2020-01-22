@@ -35,12 +35,12 @@ class SendEmailModelRequest(BaseRequest):
     Request model for send_email_model operation.
     Initializes a new instance.
 
-    :param request (SendEmailModelRequest) Send email request
+    :param rq (SendEmailModelRq) Send email request
     """
 
-    def __init__(self, request: SendEmailModelRequest):
+    def __init__(self, rq: SendEmailModelRq):
         BaseRequest.__init__(self)
-        self.request = request
+        self.rq = rq
 
     def to_http_info(self, config):
         """
@@ -51,9 +51,9 @@ class SendEmailModelRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'request' is set
-        if self.request is None:
-            raise ValueError("Missing the required parameter `request` when calling `send_email_model`")
+        # verify the required parameter 'rq' is set
+        if self.rq is None:
+            raise ValueError("Missing the required parameter `rq` when calling `send_email_model`")
 
         collection_formats = {}
         path = '/email/client/SendModel'
@@ -67,8 +67,8 @@ class SendEmailModelRequest(BaseRequest):
         local_var_files = []
 
         body_params = None
-        if self.request is not None:
-            body_params = self.request
+        if self.rq is not None:
+            body_params = self.rq
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(
