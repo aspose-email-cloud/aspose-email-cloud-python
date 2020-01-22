@@ -203,6 +203,46 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', 'ListResponseOfHierarchicalObject')
 
+    def ai_bcr_parse_model(self, request: requests.AiBcrParseModelRequest)  -> ListResponseOfContactDto:
+        """Parse images to vCard document models             
+
+
+        :param request AiBcrParseModelRequest object with parameters
+        :return: ListResponseOfContactDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', 'ListResponseOfContactDto')
+
+    def ai_bcr_parse_model_async(self, request: requests.AiBcrParseModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Parse images to vCard document models             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request AiBcrParseModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfContactDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', 'ListResponseOfContactDto')
+
+    def ai_bcr_parse_ocr_data_model(self, request: requests.AiBcrParseOcrDataModelRequest)  -> ListResponseOfContactDto:
+        """Parse OCR data to vCard document models             
+
+
+        :param request AiBcrParseOcrDataModelRequest object with parameters
+        :return: ListResponseOfContactDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', 'ListResponseOfContactDto')
+
+    def ai_bcr_parse_ocr_data_model_async(self, request: requests.AiBcrParseOcrDataModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Parse OCR data to vCard document models             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request AiBcrParseOcrDataModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfContactDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', 'ListResponseOfContactDto')
+
     def ai_bcr_parse_storage(self, request: requests.AiBcrParseStorageRequest)  -> ListResponseOfStorageFileLocation:
         """Parse images from storage to vCard files             
 
@@ -463,6 +503,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'EmailPropertyResponse')
 
+    def append_email_model_message(self, request: requests.AppendEmailModelMessageRequest)  -> ValueResponse:
+        """Adds an email from model to specified folder in email account             
+
+
+        :param request AppendEmailModelMessageRequest object with parameters
+        :return: ValueResponse
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'ValueResponse')
+
+    def append_email_model_message_async(self, request: requests.AppendEmailModelMessageRequest) -> multiprocessing.pool.AsyncResult:
+        """Adds an email from model to specified folder in email account             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request AppendEmailModelMessageRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ValueResponse)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'ValueResponse')
+
     def append_mime_message(self, request: requests.AppendMimeMessageRequest)  -> ValueResponse:
         """Adds an email from MIME to specified folder in email account             
 
@@ -482,6 +542,46 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'ValueResponse')
+
+    def convert_calendar_model_to_alternate(self, request: requests.ConvertCalendarModelToAlternateRequest)  -> AlternateView:
+        """Convert iCalendar to AlternateView             
+
+
+        :param request ConvertCalendarModelToAlternateRequest object with parameters
+        :return: AlternateView
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'AlternateView')
+
+    def convert_calendar_model_to_alternate_async(self, request: requests.ConvertCalendarModelToAlternateRequest) -> multiprocessing.pool.AsyncResult:
+        """Convert iCalendar to AlternateView             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertCalendarModelToAlternateRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AlternateView)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'AlternateView')
+
+    def convert_email(self, request: requests.ConvertEmailRequest)  -> str:
+        """Converts email document to specified format and returns as file             
+
+
+        :param request ConvertEmailRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_email_async(self, request: requests.ConvertEmailRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts email document to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertEmailRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
 
     def copy_file(self, request: requests.CopyFileRequest) :
         """Copy file
@@ -843,6 +943,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'MimeResponse')
 
+    def fetch_email_model(self, request: requests.FetchEmailModelRequest)  -> EmailDto:
+        """Fetch message model from email account             
+
+
+        :param request FetchEmailModelRequest object with parameters
+        :return: EmailDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailDto')
+
+    def fetch_email_model_async(self, request: requests.FetchEmailModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Fetch message model from email account             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request FetchEmailModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailDto')
+
     def get_calendar(self, request: requests.GetCalendarRequest)  -> HierarchicalObject:
         """Get calendar file properties             
 
@@ -903,6 +1023,66 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
+    def get_calendar_model(self, request: requests.GetCalendarModelRequest)  -> CalendarDto:
+        """Get calendar file             
+
+
+        :param request GetCalendarModelRequest object with parameters
+        :return: CalendarDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'CalendarDto')
+
+    def get_calendar_model_async(self, request: requests.GetCalendarModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Get calendar file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetCalendarModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns CalendarDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'CalendarDto')
+
+    def get_calendar_model_as_alternate(self, request: requests.GetCalendarModelAsAlternateRequest)  -> AlternateView:
+        """Get iCalendar from storage as AlternateView             
+
+
+        :param request GetCalendarModelAsAlternateRequest object with parameters
+        :return: AlternateView
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'AlternateView')
+
+    def get_calendar_model_as_alternate_async(self, request: requests.GetCalendarModelAsAlternateRequest) -> multiprocessing.pool.AsyncResult:
+        """Get iCalendar from storage as AlternateView             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetCalendarModelAsAlternateRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns AlternateView)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'AlternateView')
+
+    def get_calendar_model_list(self, request: requests.GetCalendarModelListRequest)  -> CalendarDtoList:
+        """Get iCalendar list from storage folder             
+
+
+        :param request GetCalendarModelListRequest object with parameters
+        :return: CalendarDtoList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'CalendarDtoList')
+
+    def get_calendar_model_list_async(self, request: requests.GetCalendarModelListRequest) -> multiprocessing.pool.AsyncResult:
+        """Get iCalendar list from storage folder             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetCalendarModelListRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns CalendarDtoList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'CalendarDtoList')
+
     def get_contact_attachment(self, request: requests.GetContactAttachmentRequest)  -> str:
         """Get attachment file by name             
 
@@ -942,6 +1122,46 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
+
+    def get_contact_model(self, request: requests.GetContactModelRequest)  -> ContactDto:
+        """Get contact document.             
+
+
+        :param request GetContactModelRequest object with parameters
+        :return: ContactDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ContactDto')
+
+    def get_contact_model_async(self, request: requests.GetContactModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Get contact document.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetContactModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ContactDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ContactDto')
+
+    def get_contact_model_list(self, request: requests.GetContactModelListRequest)  -> ContactDtoList:
+        """Get contact list from storage folder.             
+
+
+        :param request GetContactModelListRequest object with parameters
+        :return: ContactDtoList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ContactDtoList')
+
+    def get_contact_model_list_async(self, request: requests.GetContactModelListRequest) -> multiprocessing.pool.AsyncResult:
+        """Get contact list from storage folder.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetContactModelListRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ContactDtoList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ContactDtoList')
 
     def get_contact_properties(self, request: requests.GetContactPropertiesRequest)  -> HierarchicalObject:
         """Get contact document properties             
@@ -1003,6 +1223,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailDocument')
 
+    def get_email_as_file(self, request: requests.GetEmailAsFileRequest)  -> str:
+        """Converts email document from storage to specified format and returns as file             
+
+
+        :param request GetEmailAsFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_email_as_file_async(self, request: requests.GetEmailAsFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts email document from storage to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailAsFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
     def get_email_attachment(self, request: requests.GetEmailAttachmentRequest)  -> str:
         """Get email attachment by name             
 
@@ -1022,6 +1262,46 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
+
+    def get_email_model(self, request: requests.GetEmailModelRequest)  -> EmailDto:
+        """Get email document.             
+
+
+        :param request GetEmailModelRequest object with parameters
+        :return: EmailDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailDto')
+
+    def get_email_model_async(self, request: requests.GetEmailModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Get email document.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailDto')
+
+    def get_email_model_list(self, request: requests.GetEmailModelListRequest)  -> EmailDtoList:
+        """Get email list from storage folder.             
+
+
+        :param request GetEmailModelListRequest object with parameters
+        :return: EmailDtoList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailDtoList')
+
+    def get_email_model_list_async(self, request: requests.GetEmailModelListRequest) -> multiprocessing.pool.AsyncResult:
+        """Get email list from storage folder.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailModelListRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDtoList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailDtoList')
 
     def get_email_property(self, request: requests.GetEmailPropertyRequest)  -> EmailPropertyResponse:
         """Get an email document property by its name             
@@ -1186,7 +1466,7 @@ class EmailApi(object):
     def list_email_messages(self, request: requests.ListEmailMessagesRequest)  -> ListResponseOfString:
         """Get messages from folder, filtered by query             
 
-        The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+        The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
 
         :param request ListEmailMessagesRequest object with parameters
         :return: ListResponseOfString
@@ -1197,13 +1477,35 @@ class EmailApi(object):
     def list_email_messages_async(self, request: requests.ListEmailMessagesRequest) -> multiprocessing.pool.AsyncResult:
         """Get messages from folder, filtered by query             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
-        The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+        The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
 
         :param request ListEmailMessagesRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfString)
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfString')
+
+    def list_email_models(self, request: requests.ListEmailModelsRequest)  -> ListResponseOfEmailDto:
+        """Get messages from folder, filtered by query             
+
+        The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+
+        :param request ListEmailModelsRequest object with parameters
+        :return: ListResponseOfEmailDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfEmailDto')
+
+    def list_email_models_async(self, request: requests.ListEmailModelsRequest) -> multiprocessing.pool.AsyncResult:
+        """Get messages from folder, filtered by query             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+        The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+
+        :param request ListEmailModelsRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfEmailDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfEmailDto')
 
     def move_file(self, request: requests.MoveFileRequest) :
         """Move file
@@ -1264,6 +1566,66 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ObjectExist')
+
+    def save_calendar_model(self, request: requests.SaveCalendarModelRequest) :
+        """Save iCalendar             
+
+
+        :param request SaveCalendarModelRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def save_calendar_model_async(self, request: requests.SaveCalendarModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Save iCalendar             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SaveCalendarModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def save_contact_model(self, request: requests.SaveContactModelRequest) :
+        """Save contact.             
+
+
+        :param request SaveContactModelRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def save_contact_model_async(self, request: requests.SaveContactModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Save contact.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SaveContactModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def save_email_model(self, request: requests.SaveEmailModelRequest) :
+        """Save email document.             
+
+
+        :param request SaveEmailModelRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def save_email_model_async(self, request: requests.SaveEmailModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Save email document.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SaveEmailModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
 
     def save_mail_account(self, request: requests.SaveMailAccountRequest) :
         """Create email account file (*.account) with login/password authentication             
@@ -1340,6 +1702,26 @@ class EmailApi(object):
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request SendEmailMimeRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', None)
+
+    def send_email_model(self, request: requests.SendEmailModelRequest) :
+        """Send an email specified by model in request             
+
+
+        :param request SendEmailModelRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', None)
+
+    def send_email_model_async(self, request: requests.SendEmailModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Send an email specified by model in request             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SendEmailModelRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)

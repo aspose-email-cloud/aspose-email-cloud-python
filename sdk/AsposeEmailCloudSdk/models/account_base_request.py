@@ -59,12 +59,14 @@ class AccountBaseRequest(object):
     discriminator_value_class_map = {
         'DeleteFolderBaseRequest': 'DeleteFolderBaseRequest',
         'AppendEmailAccountBaseRequest': 'AppendEmailAccountBaseRequest',
-        'SendEmailMimeBaseRequest': 'SendEmailMimeBaseRequest',
         'SendEmailBaseRequest': 'SendEmailBaseRequest',
         'DeleteMessageBaseRequest': 'DeleteMessageBaseRequest',
+        'SendEmailMimeBaseRequest': 'SendEmailMimeBaseRequest',
+        'SendEmailModelRequest': 'SendEmailModelRequest',
         'AppendEmailBaseRequest': 'AppendEmailBaseRequest',
         'SetMessageReadFlagAccountBaseRequest': 'SetMessageReadFlagAccountBaseRequest',
         'AppendEmailMimeBaseRequest': 'AppendEmailMimeBaseRequest',
+        'AppendEmailModelRequest': 'AppendEmailModelRequest',
         'CreateFolderBaseRequest': 'CreateFolderBaseRequest'
     }
 
