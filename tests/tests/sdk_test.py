@@ -187,9 +187,59 @@ def test_ai_name_parse_email_address(test_data: TestData):
     assert given_name.value == 'John'
     assert surname.value == 'Cane'
 
+@pytest.mark.ai
+def test_create_calendar_email(test_data: TestData):
+    calendar = models.CalendarDto()
+    calendar.attendees = [models.MailAddress('Attendee Name', 'attendee@aspose.com', 'Accepted')]
+    calendar.description = 'Some description'
+    calendar.summary = 'Some summary'
+    calendar.organizer = models.MailAddress('Organizer Name', 'organizer@aspose.com', 'Accepted')
+    calendar.start_date = datetime.today() + timedelta(days=1)
+    calendar.end_date = calendar.start_date + timedelta(hours=1)
+    calendar.location = 'Some location'
+
+    folder_location = models.StorageFolderLocation(test_data.storage, test_data.folder)
+    calendar_file = str(uuid.uuid4()) + '.ics'
+    test_data.email.save_calendar_model(
+        requests.SaveCalendarModelRequest(
+            calendar_file,
+            models.StorageModelRqOfCalendarDto(calendar, folder_location)))
+    exist_result = test_data.email.object_exists(
+        requests.ObjectExistsRequest(test_data.folder + '/' + calendar_file, test_data.storage))
+    assert exist_result.exists
+
+    alternate = test_data.email.convert_calendar_model_to_alternate(
+        requests.ConvertCalendarModelToAlternateRequest(
+            models.CalendarDtoAlternateRq(calendar, 'Create')))
+
+    email = models.EmailDto()
+    email.alternate_views = [alternate]
+    # 'from' is reserved, so from field is named '_from':
+    email._from = models.MailAddress('From Name', 'organizer@aspose.com')
+    email.to = [models.MailAddress('To Name', 'attendee@aspose.com')]
+    email.subject = 'Some subject'
+    email.body = 'Some body'
+
+    email_file = str(uuid.uuid4())+ '.eml'
+    test_data.email.save_email_model(
+        requests.SaveEmailModelRequest(
+            'Eml', email_file,
+            models.StorageModelRqOfEmailDto(email, folder_location)))
+
+    downloaded = test_data.email.download_file(
+        requests.DownloadFileRequest(
+            test_data.folder + '/' + email_file,
+            test_data.storage))
+    with open(downloaded, 'r') as f:
+        file_data = f.read()
+        assert 'attendee@aspose.com' in file_data
+
+
 def _create_calendar(test_data, start_date_param=None):
-    name = str(uuid.uuid4())+ ".ics"
-    start_date = start_date_param if start_date_param is not None else datetime.today() + timedelta(days=1)
+    name = str(uuid.uuid4())+ '.ics'
+    start_date =
+        start_date_param if start_date_param is not None
+        else datetime.today() + timedelta(days=1)
     end_date = start_date + timedelta(hours=1)
     request = requests.CreateCalendarRequest(
         name,
