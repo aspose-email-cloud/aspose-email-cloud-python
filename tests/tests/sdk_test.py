@@ -86,6 +86,7 @@ def test_date_time(td: TestData):
     assert start_date == fact_start_date
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_bcr_parse_storage(td: TestData):
     file_name = str(uuid.uuid4())+ ".png"
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
@@ -118,6 +119,7 @@ def test_ai_bcr_parse_storage(td: TestData):
     assert len(contact_properties.internal_properties) >= 3
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_bcr_parse(td: TestData):
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
     image_data = None
@@ -133,6 +135,7 @@ def test_ai_bcr_parse(td: TestData):
     assert 'Thomas' in display_name.value
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_genderize(td: TestData):
     """ Test name gender detection """
     result = td.email.ai_name_genderize(
@@ -141,6 +144,7 @@ def test_ai_name_genderize(td: TestData):
     assert result.value[0].gender == 'Male'
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_format(td: TestData):
     result = td.email.ai_name_format(
         requests.AiNameFormatRequest(
@@ -149,6 +153,7 @@ def test_ai_name_format(td: TestData):
     assert result.name == 'Mr. Cane J. M.'
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_match(td: TestData):
     first = 'John Michael Cane'
     second = 'Cane J.'
@@ -157,6 +162,7 @@ def test_ai_name_match(td: TestData):
     assert result.similarity >= 0.5
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_expand(td: TestData):
     name = 'Smith Bobby'
     result = td.email.ai_name_expand(
@@ -166,6 +172,7 @@ def test_ai_name_expand(td: TestData):
     assert 'B. Smith' in expandedNames
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_complete(td: TestData):
     prefix = 'Dav'
     result = td.email.ai_name_complete(
@@ -176,6 +183,7 @@ def test_ai_name_complete(td: TestData):
     assert 'Davis' in names
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_parse_email_address(td: TestData):
     address = 'john-cane@gmail.com'
     result = td.email.ai_name_parse_email_address(
@@ -262,6 +270,7 @@ def test_contact_model(td: TestData):
     assert exist_result.exists
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_bcr_parse_model(td: TestData):
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
     image_data = None
