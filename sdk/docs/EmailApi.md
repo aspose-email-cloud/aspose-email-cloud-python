@@ -495,6 +495,132 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="ai_bcr_parse_model"></a>
+# **ai_bcr_parse_model**
+> ai_bcr_parse_model(self, ai_bcr_parse_model_request)
+
+Parse images to vCard document models             
+
+### Return type
+
+[**ListResponseOfContactDto**](ListResponseOfContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_model(
+    AiBcrParseModelRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="ai_bcr_parse_model_async"></a>
+# **ai_bcr_parse_model_async**
+> ai_bcr_parse_model_async(self, ai_bcr_parse_model_request)
+
+Parse images to vCard document models             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_parse_model_async(request).get() returns [**ListResponseOfContactDto**](ListResponseOfContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_model_async(
+    AiBcrParseModelRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrBase64Rq**](AiBcrBase64Rq.md)| Request with base64 images data | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="ai_bcr_parse_ocr_data_model"></a>
+# **ai_bcr_parse_ocr_data_model**
+> ai_bcr_parse_ocr_data_model(self, ai_bcr_parse_ocr_data_model_request)
+
+Parse OCR data to vCard document models             
+
+### Return type
+
+[**ListResponseOfContactDto**](ListResponseOfContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_ocr_data_model(
+    AiBcrParseOcrDataModelRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrParseOcrDataRq**](AiBcrParseOcrDataRq.md)|  | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="ai_bcr_parse_ocr_data_model_async"></a>
+# **ai_bcr_parse_ocr_data_model_async**
+> ai_bcr_parse_ocr_data_model_async(self, ai_bcr_parse_ocr_data_model_request)
+
+Parse OCR data to vCard document models             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+ai_bcr_parse_ocr_data_model_async(request).get() returns [**ListResponseOfContactDto**](ListResponseOfContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.ai_bcr_parse_ocr_data_model_async(
+    AiBcrParseOcrDataModelRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AiBcrParseOcrDataRq**](AiBcrParseOcrDataRq.md)|  | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="ai_bcr_parse_storage"></a>
 # **ai_bcr_parse_storage**
 > ai_bcr_parse_storage(self, ai_bcr_parse_storage_request)
@@ -1536,6 +1662,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="append_email_model_message"></a>
+# **append_email_model_message**
+> append_email_model_message(self, append_email_model_message_request)
+
+Adds an email from model to specified folder in email account             
+
+### Return type
+
+[**ValueResponse**](ValueResponse.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.append_email_model_message(
+    AppendEmailModelMessageRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AppendEmailModelRq**](AppendEmailModelRq.md)| Append email request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="append_email_model_message_async"></a>
+# **append_email_model_message_async**
+> append_email_model_message_async(self, append_email_model_message_request)
+
+Adds an email from model to specified folder in email account             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+append_email_model_message_async(request).get() returns [**ValueResponse**](ValueResponse.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.append_email_model_message_async(
+    AppendEmailModelMessageRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**AppendEmailModelRq**](AppendEmailModelRq.md)| Append email request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="append_mime_message"></a>
 # **append_mime_message**
 > append_mime_message(self, append_mime_message_request)
@@ -1596,6 +1785,138 @@ EmailApi.append_mime_message_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**AppendEmailMimeBaseRequest**](AppendEmailMimeBaseRequest.md)| Append email request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_model_to_alternate"></a>
+# **convert_calendar_model_to_alternate**
+> convert_calendar_model_to_alternate(self, convert_calendar_model_to_alternate_request)
+
+Convert iCalendar to AlternateView             
+
+### Return type
+
+[**AlternateView**](AlternateView.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_alternate(
+    ConvertCalendarModelToAlternateRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**CalendarDtoAlternateRq**](CalendarDtoAlternateRq.md)| iCalendar to AlternateView request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_model_to_alternate_async"></a>
+# **convert_calendar_model_to_alternate_async**
+> convert_calendar_model_to_alternate_async(self, convert_calendar_model_to_alternate_request)
+
+Convert iCalendar to AlternateView             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_calendar_model_to_alternate_async(request).get() returns [**AlternateView**](AlternateView.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_alternate_async(
+    ConvertCalendarModelToAlternateRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**CalendarDtoAlternateRq**](CalendarDtoAlternateRq.md)| iCalendar to AlternateView request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email"></a>
+# **convert_email**
+> convert_email(self, convert_email_request)
+
+Converts email document to specified format and returns as file             
+
+### Return type
+
+[**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_email(
+    ConvertEmailRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **file** | **file**| File to upload | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email_async"></a>
+# **convert_email_async**
+> convert_email_async(self, convert_email_request)
+
+Converts email document to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_email_async(request).get() returns [**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_email_async(
+    ConvertEmailRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **file** | **file**| File to upload | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2931,6 +3252,93 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="fetch_email_model"></a>
+# **fetch_email_model**
+> fetch_email_model(self, fetch_email_model_request)
+
+Fetch message model from email account             
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    message_id, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.fetch_email_model(
+    FetchEmailModelRequest(
+        message_id, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **message_id** | **str**| Message identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="fetch_email_model_async"></a>
+# **fetch_email_model_async**
+> fetch_email_model_async(self, fetch_email_model_request)
+
+Fetch message model from email account             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+fetch_email_model_async(request).get() returns [**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    message_id, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.fetch_email_model_async(
+    FetchEmailModelRequest(
+        message_id, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **message_id** | **str**| Message identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_calendar"></a>
 # **get_calendar**
 > get_calendar(self, get_calendar_request)
@@ -3168,6 +3576,249 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_calendar_model"></a>
+# **get_calendar_model**
+> get_calendar_model(self, get_calendar_model_request)
+
+Get calendar file             
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_model(
+    GetCalendarModelRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| iCalendar file name in storage | 
+ **folder** | **str**| Path to folder in storage | [optional] 
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_model_async"></a>
+# **get_calendar_model_async**
+> get_calendar_model_async(self, get_calendar_model_request)
+
+Get calendar file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_model_async(request).get() returns [**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_model_async(
+    GetCalendarModelRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| iCalendar file name in storage | 
+ **folder** | **str**| Path to folder in storage | [optional] 
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_model_as_alternate"></a>
+# **get_calendar_model_as_alternate**
+> get_calendar_model_as_alternate(self, get_calendar_model_as_alternate_request)
+
+Get iCalendar from storage as AlternateView             
+
+### Return type
+
+[**AlternateView**](AlternateView.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    calendar_action, 
+    sequence_id=sequence_id, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_model_as_alternate(
+    GetCalendarModelAsAlternateRequest(
+        name, 
+        calendar_action, 
+        sequence_id=sequence_id, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| iCalendar file name in storage | 
+ **calendar_action** | **str**| iCalendar method type Enum, available values: Create, Update, Cancel | 
+ **sequence_id** | **str**| The sequence id | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_model_as_alternate_async"></a>
+# **get_calendar_model_as_alternate_async**
+> get_calendar_model_as_alternate_async(self, get_calendar_model_as_alternate_request)
+
+Get iCalendar from storage as AlternateView             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_model_as_alternate_async(request).get() returns [**AlternateView**](AlternateView.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    calendar_action, 
+    sequence_id=sequence_id, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_model_as_alternate_async(
+    GetCalendarModelAsAlternateRequest(
+        name, 
+        calendar_action, 
+        sequence_id=sequence_id, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| iCalendar file name in storage | 
+ **calendar_action** | **str**| iCalendar method type Enum, available values: Create, Update, Cancel | 
+ **sequence_id** | **str**| The sequence id | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_model_list"></a>
+# **get_calendar_model_list**
+> get_calendar_model_list(self, get_calendar_model_list_request)
+
+Get iCalendar list from storage folder             
+
+### Return type
+
+[**CalendarDtoList**](CalendarDtoList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    items_per_page=items_per_page, 
+    page_number=page_number, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_model_list(
+    GetCalendarModelListRequest(
+        folder, 
+        items_per_page=items_per_page, 
+        page_number=page_number, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| Path to folder in storage | 
+ **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
+ **page_number** | **int**| Page number | [optional] [default to 0]
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_model_list_async"></a>
+# **get_calendar_model_list_async**
+> get_calendar_model_list_async(self, get_calendar_model_list_request)
+
+Get iCalendar list from storage folder             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_model_list_async(request).get() returns [**CalendarDtoList**](CalendarDtoList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    items_per_page=items_per_page, 
+    page_number=page_number, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_model_list_async(
+    GetCalendarModelListRequest(
+        folder, 
+        items_per_page=items_per_page, 
+        page_number=page_number, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| Path to folder in storage | 
+ **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
+ **page_number** | **int**| Page number | [optional] [default to 0]
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_contact_attachment"></a>
 # **get_contact_attachment**
 > get_contact_attachment(self, get_contact_attachment_request)
@@ -3339,6 +3990,174 @@ Name | Type | Description  | Notes
  **storage** | **str**| Storage name | [optional] 
  **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
  **page_number** | **int**| Page number | [optional] [default to 0]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_model"></a>
+# **get_contact_model**
+> get_contact_model(self, get_contact_model_request)
+
+Get contact document.             
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_contact_model(
+    GetContactModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_model_async"></a>
+# **get_contact_model_async**
+> get_contact_model_async(self, get_contact_model_request)
+
+Get contact document.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_contact_model_async(request).get() returns [**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_contact_model_async(
+    GetContactModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_model_list"></a>
+# **get_contact_model_list**
+> get_contact_model_list(self, get_contact_model_list_request)
+
+Get contact list from storage folder.             
+
+### Return type
+
+[**ContactDtoList**](ContactDtoList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    folder=folder, 
+    storage=storage, 
+    items_per_page=items_per_page, 
+    page_number=page_number)
+```
+
+### Usage
+```python
+EmailApi.get_contact_model_list(
+    GetContactModelListRequest(
+        format, 
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+ **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
+ **page_number** | **int**| Page number. | [optional] [default to 0]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_model_list_async"></a>
+# **get_contact_model_list_async**
+> get_contact_model_list_async(self, get_contact_model_list_request)
+
+Get contact list from storage folder.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_contact_model_list_async(request).get() returns [**ContactDtoList**](ContactDtoList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    folder=folder, 
+    storage=storage, 
+    items_per_page=items_per_page, 
+    page_number=page_number)
+```
+
+### Usage
+```python
+EmailApi.get_contact_model_list_async(
+    GetContactModelListRequest(
+        format, 
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+ **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
+ **page_number** | **int**| Page number. | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -3561,6 +4380,87 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_email_as_file"></a>
+# **get_email_as_file**
+> get_email_as_file(self, get_email_as_file_request)
+
+Converts email document from storage to specified format and returns as file             
+
+### Return type
+
+[**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_email_as_file(
+    GetEmailAsFileRequest(
+        file_name, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Email document file name | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_as_file_async"></a>
+# **get_email_as_file_async**
+> get_email_as_file_async(self, get_email_as_file_request)
+
+Converts email document from storage to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_as_file_async(request).get() returns [**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_email_as_file_async(
+    GetEmailAsFileRequest(
+        file_name, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Email document file name | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_email_attachment"></a>
 # **get_email_attachment**
 > get_email_attachment(self, get_email_attachment_request)
@@ -3639,6 +4539,174 @@ Name | Type | Description  | Notes
  **file_name** | **str**| Email document file name | 
  **storage** | **str**| Storage name | [optional] 
  **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_model"></a>
+# **get_email_model**
+> get_email_model(self, get_email_model_request)
+
+Get email document.             
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_email_model(
+    GetEmailModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **name** | **str**| Email document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_model_async"></a>
+# **get_email_model_async**
+> get_email_model_async(self, get_email_model_request)
+
+Get email document.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_model_async(request).get() returns [**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_email_model_async(
+    GetEmailModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **name** | **str**| Email document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_model_list"></a>
+# **get_email_model_list**
+> get_email_model_list(self, get_email_model_list_request)
+
+Get email list from storage folder.             
+
+### Return type
+
+[**EmailDtoList**](EmailDtoList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    folder=folder, 
+    storage=storage, 
+    items_per_page=items_per_page, 
+    page_number=page_number)
+```
+
+### Usage
+```python
+EmailApi.get_email_model_list(
+    GetEmailModelListRequest(
+        format, 
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+ **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
+ **page_number** | **int**| Page number. | [optional] [default to 0]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_model_list_async"></a>
+# **get_email_model_list_async**
+> get_email_model_list_async(self, get_email_model_list_request)
+
+Get email list from storage folder.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_model_list_async(request).get() returns [**EmailDtoList**](EmailDtoList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    folder=folder, 
+    storage=storage, 
+    items_per_page=items_per_page, 
+    page_number=page_number)
+```
+
+### Usage
+```python
+EmailApi.get_email_model_list_async(
+    GetEmailModelListRequest(
+        format, 
+        folder=folder, 
+        storage=storage, 
+        items_per_page=items_per_page, 
+        page_number=page_number))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+ **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
+ **page_number** | **int**| Page number. | [optional] [default to 0]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -4266,7 +5334,7 @@ Name | Type | Description  | Notes
 
 Get messages from folder, filtered by query             
 
-The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
 
 ### Return type
 
@@ -4318,7 +5386,7 @@ Get messages from folder, filtered by query
 
 Performs operation asynchronously.
 
-The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3>,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
 
 ### Return type
 
@@ -4341,6 +5409,109 @@ __init__(self,
 ```python
 EmailApi.list_email_messages_async(
     ListEmailMessagesRequest(
+        folder, 
+        query_string, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        recursive=recursive))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| A folder in email account | 
+ **query_string** | **str**| A MailQuery search string | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+ **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="list_email_models"></a>
+# **list_email_models**
+> list_email_models(self, list_email_models_request)
+
+Get messages from folder, filtered by query             
+
+The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+
+### Return type
+
+[**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    query_string, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder, 
+    recursive=recursive)
+```
+
+### Usage
+```python
+EmailApi.list_email_models(
+    ListEmailModelsRequest(
+        folder, 
+        query_string, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        recursive=recursive))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| A folder in email account | 
+ **query_string** | **str**| A MailQuery search string | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+ **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="list_email_models_async"></a>
+# **list_email_models_async**
+> list_email_models_async(self, list_email_models_request)
+
+Get messages from folder, filtered by query             
+
+Performs operation asynchronously.
+
+The query string should have the following view.      The example of a simple expression:       '<Field name>' <Comparison operator> '<Field value>',  where &lt;Field Name&gt; - the name of a message field through which filtering is made, &lt;Comparison operator&gt; - comparison operators, as their name implies, allow to compare message field and specified value, &lt;Field value&gt; - value to be compared with a message field.      The number of simple expressions can make a compound one, ex.:     (<Simple expression 1> & <Simple expression 2>) | <Simple expression 3     >,  where \"&amp;\" - logical-AND operator, \"|\" - logical-OR operator      At present the following values are allowed as a field name (<Field name>):  \"To\" - represents a TO field of message, \"Text\" - represents string in the header or body of the message, \"Bcc\" - represents a BCC field of message, \"Body\" - represents a string in the body of message, \"Cc\" - represents a CC field of message, \"From\" - represents a From field of message, \"Subject\" - represents a string in the subject of message, \"InternalDate\" - represents an internal date of message, \"SentDate\" - represents a sent date of message      Additionally, the following field names are allowed for IMAP-protocol:  \"Answered\" - represents an /Answered flag of message \"Seen\" - represents a /Seen flag of message \"Flagged\" - represents a /Flagged flag of message \"Draft\" - represents a /Draft flag of message \"Deleted\" - represents a Deleted/ flag of message \"Recent\" - represents a Deleted/ flag of message \"MessageSize\" - represents a size (in bytes) of message      Additionally, the following field names are allowed for Exchange:  \"IsRead\" - Indicates whether the message has been read \"HasAttachment\" - Indicates whether or not the message has attachments \"IsSubmitted\" - Indicates whether the message has been submitted to the Outbox \"ContentClass\" - represents a content class of item      Additionally, the following field names are allowed for pst/ost files:  \"MessageClass\" - Represents a message class \"ContainerClass\" - Represents a folder container class \"Importance\" - Represents a message importance \"MessageSize\" - represents a size (in bytes) of message \"FolderName\" - represents a folder name \"ContentsCount\" - represents a total number of items in the folder \"UnreadContentsCount\" - represents the number of unread items in the folder. \"Subfolders\" - Indicates whether or not the folder has subfolders \"Read\" - the message is marked as having been read \"HasAttachment\" - the message has at least one attachment \"Unsent\" - the message is still being composed \"Unmodified\" - the message has not been modified since it was first saved (if unsent) or it was delivered (if sent) \"FromMe\" - the user receiving the message was also the user who sent the message \"Resend\" - the message includes a request for a resend operation with a non-delivery report \"NotifyRead\" - the user who sent the message has requested notification when a recipient first reads it \"NotifyUnread\" - the user who sent the message has requested notification when a recipient deletes it before reading or the Message object expires \"EverRead\" - the message has been read at least once      The field value (<Field value>) can take the following values:     For text fields - any string,     For date type fields - the string of \"d-MMM-yyy\" format, ex. \"10-Feb-2009\",     For flags (fields of boolean type) - either \"True\", or \"False\"              
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+list_email_models_async(request).get() returns [**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    query_string, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder, 
+    recursive=recursive)
+```
+
+### Usage
+```python
+EmailApi.list_email_models_async(
+    ListEmailModelsRequest(
         folder, 
         query_string, 
         first_account, 
@@ -4606,6 +5777,225 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="save_calendar_model"></a>
+# **save_calendar_model**
+> save_calendar_model(self, save_calendar_model_request)
+
+Save iCalendar             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_calendar_model(
+    SaveCalendarModelRequest(
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| iCalendar file name in storage | 
+ **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar properties update request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_calendar_model_async"></a>
+# **save_calendar_model_async**
+> save_calendar_model_async(self, save_calendar_model_request)
+
+Save iCalendar             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_calendar_model_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_calendar_model_async(
+    SaveCalendarModelRequest(
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| iCalendar file name in storage | 
+ **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar properties update request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_contact_model"></a>
+# **save_contact_model**
+> save_contact_model(self, save_contact_model_request)
+
+Save contact.             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_contact_model(
+    SaveContactModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create contact request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_contact_model_async"></a>
+# **save_contact_model_async**
+> save_contact_model_async(self, save_contact_model_request)
+
+Save contact.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_contact_model_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_contact_model_async(
+    SaveContactModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create contact request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_email_model"></a>
+# **save_email_model**
+> save_email_model(self, save_email_model_request)
+
+Save email document.             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_email_model(
+    SaveEmailModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **name** | **str**| iCalendar file name in storage. | 
+ **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_email_model_async"></a>
+# **save_email_model_async**
+> save_email_model_async(self, save_email_model_request)
+
+Save email document.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_email_model_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_email_model_async(
+    SaveEmailModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **name** | **str**| iCalendar file name in storage. | 
+ **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="save_mail_account"></a>
 # **save_mail_account**
 > save_mail_account(self, save_mail_account_request)
@@ -4855,6 +6245,69 @@ EmailApi.send_email_mime_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SendEmailMimeBaseRequest**](SendEmailMimeBaseRequest.md)| Send email request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="send_email_model"></a>
+# **send_email_model**
+> send_email_model(self, send_email_model_request)
+
+Send an email specified by model in request             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.send_email_model(
+    SendEmailModelRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**SendEmailModelRq**](SendEmailModelRq.md)| Send email request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="send_email_model_async"></a>
+# **send_email_model_async**
+> send_email_model_async(self, send_email_model_request)
+
+Send an email specified by model in request             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+send_email_model_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.send_email_model_async(
+    SendEmailModelRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**SendEmailModelRq**](SendEmailModelRq.md)| Send email request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

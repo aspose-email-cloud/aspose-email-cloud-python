@@ -19,7 +19,7 @@ def pytest_configure(config):
     config.addinivalue_line("markers", "ai")
 
 @pytest.fixture(scope="class")
-def test_data(request):
+def td(request):
     config = _get_config(request)
     app_sid = config["appsid"]
     app_key = config["appkey"]

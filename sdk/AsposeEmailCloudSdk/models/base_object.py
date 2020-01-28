@@ -55,8 +55,8 @@ class BaseObject(object):
     discriminator_value_class_map = {
         'PrimitiveObject': 'PrimitiveObject',
         'HierarchicalObject': 'HierarchicalObject',
-        'IndexedHierarchicalObject': 'IndexedHierarchicalObject',
-        'IndexedPrimitiveObject': 'IndexedPrimitiveObject'
+        'IndexedPrimitiveObject': 'IndexedPrimitiveObject',
+        'IndexedHierarchicalObject': 'IndexedHierarchicalObject'
     }
 
     def __init__(self, name: str = None, type: str = None):

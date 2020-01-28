@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class ValueResponse(object):
-    """Email document property DTO.             
+    """String value object             
     """
 
     """
