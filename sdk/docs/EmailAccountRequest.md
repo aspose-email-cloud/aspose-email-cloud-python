@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 **host** | **str** | Email account host              | 
 **port** | **int** | Email account port              | 
 **login** | **str** | Email account login              | 
-**security_options** | **str** | Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto | 
+**security_options** | **str** | Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto | 
 **protocol_type** | **str** | Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav | 
 **description** | **str** | Email account description              | [optional] 
 **storage_file** | [**StorageFileLocation**](StorageFileLocation.md) | A storage file location info to store email account              | 

@@ -46,7 +46,7 @@ class EmailAccountConfig(object):
     """
     swagger_types = {
         'display_name': 'str',
-        'type': 'str',
+        'protocol_type': 'str',
         'host': 'str',
         'port': 'int',
         'socket_type': 'str',
@@ -57,7 +57,7 @@ class EmailAccountConfig(object):
 
     attribute_map = {
         'display_name': 'displayName',
-        'type': 'type',
+        'protocol_type': 'protocolType',
         'host': 'host',
         'port': 'port',
         'socket_type': 'socketType',
@@ -66,11 +66,11 @@ class EmailAccountConfig(object):
         'is_validated': 'isValidated'
     }
 
-    def __init__(self, display_name: str = None, type: str = None, host: str = None, port: int = None, socket_type: str = None, authentication_types: List[str] = None, extra_info: List[NameValuePair] = None, is_validated: bool = None):
+    def __init__(self, display_name: str = None, protocol_type: str = None, host: str = None, port: int = None, socket_type: str = None, authentication_types: List[str] = None, extra_info: List[NameValuePair] = None, is_validated: bool = None):
         """EmailAccountConfig - a model defined in Swagger"""
 
         self._display_name = None
-        self._type = None
+        self._protocol_type = None
         self._host = None
         self._port = None
         self._socket_type = None
@@ -81,8 +81,8 @@ class EmailAccountConfig(object):
 
         if display_name is not None:
             self.display_name = display_name
-        if type is not None:
-            self.type = type
+        if protocol_type is not None:
+            self.protocol_type = protocol_type
         if host is not None:
             self.host = host
         if port is not None:
@@ -119,28 +119,28 @@ class EmailAccountConfig(object):
         self._display_name = display_name
 
     @property
-    def type(self) -> str:
-        """Gets the type of this EmailAccountConfig.
+    def protocol_type(self) -> str:
+        """Gets the protocol_type of this EmailAccountConfig.
 
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
-        :return: The type of this EmailAccountConfig.
+        :return: The protocol_type of this EmailAccountConfig.
         :rtype: str
         """
-        return self._type
+        return self._protocol_type
 
-    @type.setter
-    def type(self, type: str):
-        """Sets the type of this EmailAccountConfig.
+    @protocol_type.setter
+    def protocol_type(self, protocol_type: str):
+        """Sets the protocol_type of this EmailAccountConfig.
 
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
-        :param type: The type of this EmailAccountConfig.
+        :param protocol_type: The protocol_type of this EmailAccountConfig.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
-        self._type = type
+        if protocol_type is None:
+            raise ValueError("Invalid value for `protocol_type`, must not be `None`")
+        self._protocol_type = protocol_type
 
     @property
     def host(self) -> str:
@@ -190,7 +190,7 @@ class EmailAccountConfig(object):
     def socket_type(self) -> str:
         """Gets the socket_type of this EmailAccountConfig.
 
-        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The socket_type of this EmailAccountConfig.
         :rtype: str
@@ -201,7 +201,7 @@ class EmailAccountConfig(object):
     def socket_type(self, socket_type: str):
         """Sets the socket_type of this EmailAccountConfig.
 
-        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param socket_type: The socket_type of this EmailAccountConfig.
         :type: str

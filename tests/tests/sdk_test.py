@@ -286,9 +286,9 @@ def test_ai_bcr_parse_model(td: TestData):
 
 @pytest.mark.pipeline
 def test_discover_email_config(td: TestData):
-    configs = td.email.discover_email_config(requests.DiscoverEmailConfigRequest('example@gmail.com'))
+    configs = td.email.discover_email_config(requests.DiscoverEmailConfigRequest('example@gmail.com', True))
     assert len(configs.value) >= 2
-    smtp = list(filter(lambda x: x.type == 'SMTP', configs.value))[0] #type: models.EmailAccountConfig
+    smtp = list(filter(lambda x: x.protocol_type == 'SMTP', configs.value))[0] #type: models.EmailAccountConfig
     assert smtp.host == 'smtp.gmail.com'
 
 def _create_calendar(td, start_date_param=None):
