@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="DiscoverEmailConfigRequest.py">
+#  <copyright company="Aspose" file="DiscoverEmailConfigRq.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -31,7 +31,7 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 
-class DiscoverEmailConfigRequest(object):
+class DiscoverEmailConfigRq(object):
     """Discover email configuration request.             
     """
 
@@ -60,7 +60,7 @@ class DiscoverEmailConfigRequest(object):
     }
 
     def __init__(self, address: str = None, fast_processing: bool = None, login: str = None):
-        """DiscoverEmailConfigRequest - a model defined in Swagger"""
+        """DiscoverEmailConfigRq - a model defined in Swagger"""
 
         self._address = None
         self._fast_processing = None
@@ -76,22 +76,22 @@ class DiscoverEmailConfigRequest(object):
 
     @property
     def address(self) -> str:
-        """Gets the address of this DiscoverEmailConfigRequest.
+        """Gets the address of this DiscoverEmailConfigRq.
 
         Email address to discover.             
 
-        :return: The address of this DiscoverEmailConfigRequest.
+        :return: The address of this DiscoverEmailConfigRq.
         :rtype: str
         """
         return self._address
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this DiscoverEmailConfigRequest.
+        """Sets the address of this DiscoverEmailConfigRq.
 
         Email address to discover.             
 
-        :param address: The address of this DiscoverEmailConfigRequest.
+        :param address: The address of this DiscoverEmailConfigRq.
         :type: str
         """
         if address is None:
@@ -102,22 +102,22 @@ class DiscoverEmailConfigRequest(object):
 
     @property
     def fast_processing(self) -> bool:
-        """Gets the fast_processing of this DiscoverEmailConfigRequest.
+        """Gets the fast_processing of this DiscoverEmailConfigRq.
 
         Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
 
-        :return: The fast_processing of this DiscoverEmailConfigRequest.
+        :return: The fast_processing of this DiscoverEmailConfigRq.
         :rtype: bool
         """
         return self._fast_processing
 
     @fast_processing.setter
     def fast_processing(self, fast_processing: bool):
-        """Sets the fast_processing of this DiscoverEmailConfigRequest.
+        """Sets the fast_processing of this DiscoverEmailConfigRq.
 
         Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
 
-        :param fast_processing: The fast_processing of this DiscoverEmailConfigRequest.
+        :param fast_processing: The fast_processing of this DiscoverEmailConfigRq.
         :type: bool
         """
         if fast_processing is None:
@@ -126,22 +126,22 @@ class DiscoverEmailConfigRequest(object):
 
     @property
     def login(self) -> str:
-        """Gets the login of this DiscoverEmailConfigRequest.
+        """Gets the login of this DiscoverEmailConfigRq.
 
         Email account login. If not specified, address used as a login.             
 
-        :return: The login of this DiscoverEmailConfigRequest.
+        :return: The login of this DiscoverEmailConfigRq.
         :rtype: str
         """
         return self._login
 
     @login.setter
     def login(self, login: str):
-        """Sets the login of this DiscoverEmailConfigRequest.
+        """Sets the login of this DiscoverEmailConfigRq.
 
         Email account login. If not specified, address used as a login.             
 
-        :param login: The login of this DiscoverEmailConfigRequest.
+        :param login: The login of this DiscoverEmailConfigRq.
         :type: str
         """
         self._login = login
@@ -185,7 +185,7 @@ class DiscoverEmailConfigRequest(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, DiscoverEmailConfigRequest):
+        if not isinstance(other, DiscoverEmailConfigRq):
             return False
 
         return self.__dict__ == other.__dict__

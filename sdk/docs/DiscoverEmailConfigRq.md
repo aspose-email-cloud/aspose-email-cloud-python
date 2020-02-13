@@ -1,4 +1,4 @@
-# AsposeEmailCloudSdk.models.DiscoverEmailConfigRequest
+# AsposeEmailCloudSdk.models.DiscoverEmailConfigRq
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

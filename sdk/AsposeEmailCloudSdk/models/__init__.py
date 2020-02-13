@@ -58,7 +58,7 @@ from AsposeEmailCloudSdk.models.content_type_parameter import ContentTypeParamet
 from AsposeEmailCloudSdk.models.create_email_request import CreateEmailRequest
 from AsposeEmailCloudSdk.models.customer_event import CustomerEvent
 from AsposeEmailCloudSdk.models.disc_usage import DiscUsage
-from AsposeEmailCloudSdk.models.discover_email_config_request import DiscoverEmailConfigRequest
+from AsposeEmailCloudSdk.models.discover_email_config_rq import DiscoverEmailConfigRq
 from AsposeEmailCloudSdk.models.email_account_config import EmailAccountConfig
 from AsposeEmailCloudSdk.models.email_account_request import EmailAccountRequest
 from AsposeEmailCloudSdk.models.email_address import EmailAddress

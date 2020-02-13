@@ -30,10 +30,10 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
-from AsposeEmailCloudSdk.models.discover_email_config_request import DiscoverEmailConfigRequest
+from AsposeEmailCloudSdk.models.discover_email_config_rq import DiscoverEmailConfigRq
 
 
-class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
+class DiscoverEmailConfigOauth(DiscoverEmailConfigRq):
     """
     """
 

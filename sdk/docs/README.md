@@ -225,7 +225,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.CreateEmailRequest](CreateEmailRequest.md)
  - [AsposeEmailCloudSdk.models.CustomerEvent](CustomerEvent.md)
  - [AsposeEmailCloudSdk.models.DiscUsage](DiscUsage.md)
- - [AsposeEmailCloudSdk.models.DiscoverEmailConfigRequest](DiscoverEmailConfigRequest.md)
+ - [AsposeEmailCloudSdk.models.DiscoverEmailConfigRq](DiscoverEmailConfigRq.md)
  - [AsposeEmailCloudSdk.models.EmailAccountConfig](EmailAccountConfig.md)
  - [AsposeEmailCloudSdk.models.EmailAccountRequest](EmailAccountRequest.md)
  - [AsposeEmailCloudSdk.models.EmailAddress](EmailAddress.md)
