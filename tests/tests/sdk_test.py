@@ -283,6 +283,14 @@ def test_ai_bcr_parse_model(td: TestData):
     first_vcard = result.value[0]
     assert 'Thomas' in first_vcard.display_name
 
+
+@pytest.mark.pipeline
+def test_discover_email_config(td: TestData):
+    configs = td.email.discover_email_config(requests.DiscoverEmailConfigRequest('example@gmail.com'))
+    assert len(configs.value) >= 2
+    smtp = list(filter(lambda x: x.type == 'SMTP', configs.value))[0] #type: models.EmailAccountConfig
+    assert smtp.host == 'smtp.gmail.com'
+
 def _create_calendar(td, start_date_param=None):
     name = str(uuid.uuid4())+ '.ics'
     start_date = (
