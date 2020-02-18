@@ -40,6 +40,14 @@ class CreateMapiRequest(BaseRequest):
     """
 
     def __init__(self, name: str, request: HierarchicalObjectRequest):
+        """
+        Request model for create_mapi operation.
+        Initializes a new instance.
+
+        :param name (str) Document file name
+        :param request (HierarchicalObjectRequest) Create document request
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.request = request

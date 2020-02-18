@@ -57,7 +57,12 @@ class AssociatedPerson(object):
     }
 
     def __init__(self, name: str = None, category: EnumWithCustomOfAssociatedPersonCategory = None, preferred: bool = None):
-        """AssociatedPerson - a model defined in Swagger"""
+        """
+        Describes associated person.             
+        :param name (str) Associated person's name.             
+        :param category (EnumWithCustomOfAssociatedPersonCategory) Associated person's category.             
+        :param preferred (bool) Defines whether associated person is preferred.             
+        """
 
         self._name = None
         self._category = None

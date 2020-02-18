@@ -40,6 +40,14 @@ class ConvertEmailRequest(BaseRequest):
     """
 
     def __init__(self, format: str, file: str):
+        """
+        Request model for convert_email operation.
+        Initializes a new instance.
+
+        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param file (str) File to upload
+        """
+
         BaseRequest.__init__(self)
         self.format = format
         self.file = file

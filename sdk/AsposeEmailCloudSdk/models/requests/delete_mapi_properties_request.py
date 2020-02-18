@@ -40,6 +40,14 @@ class DeleteMapiPropertiesRequest(BaseRequest):
     """
 
     def __init__(self, name: str, request: HierarchicalObjectRequest):
+        """
+        Request model for delete_mapi_properties operation.
+        Initializes a new instance.
+
+        :param name (str) Document file name
+        :param request (HierarchicalObjectRequest) Properties that should be deleted
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.request = request

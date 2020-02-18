@@ -41,6 +41,15 @@ class CreateContactRequest(BaseRequest):
     """
 
     def __init__(self, format: str, name: str, request: HierarchicalObjectRequest):
+        """
+        Request model for create_contact operation.
+        Initializes a new instance.
+
+        :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
+        :param name (str) Contact document file name
+        :param request (HierarchicalObjectRequest) Create contact request
+        """
+
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

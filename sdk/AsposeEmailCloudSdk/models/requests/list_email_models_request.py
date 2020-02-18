@@ -45,6 +45,19 @@ class ListEmailModelsRequest(BaseRequest):
     """
 
     def __init__(self, folder: str, query_string: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, recursive: bool = None):
+        """
+        Request model for list_email_models operation.
+        Initializes a new instance.
+
+        :param folder (str) A folder in email account
+        :param query_string (str) A MailQuery search string
+        :param first_account (str) Email account
+        :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+        :param storage (str) Storage name where account file(s) located
+        :param storage_folder (str) Folder in storage where account file(s) located
+        :param recursive (bool) Specifies that should message be searched in subfolders recursively
+        """
+
         BaseRequest.__init__(self)
         self.folder = folder
         self.query_string = query_string

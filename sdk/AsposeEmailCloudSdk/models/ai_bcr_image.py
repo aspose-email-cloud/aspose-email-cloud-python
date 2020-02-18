@@ -56,7 +56,10 @@ class AiBcrImage(object):
     }
 
     def __init__(self, is_single: bool = None):
-        """AiBcrImage - a model defined in Swagger"""
+        """
+        Image for recognition             
+        :param is_single (bool) Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+        """
 
         self._is_single = None
         self.discriminator = 'Type'

@@ -61,7 +61,15 @@ class AiBcrOcrDataPart(object):
     }
 
     def __init__(self, x: float = None, y: float = None, width: float = None, height: float = None, text: str = None, details: Dict[str, str] = None):
-        """AiBcrOcrDataPart - a model defined in Swagger"""
+        """
+        Recognized text block             
+        :param x (float) X position of text block             
+        :param y (float) Y position of text block             
+        :param width (float) Width of text block             
+        :param height (float) Height of text block             
+        :param text (str) Recognized text             
+        :param details (Dict[str, str]) Additional recognition result details             
+        """
 
         self._x = None
         self._y = None

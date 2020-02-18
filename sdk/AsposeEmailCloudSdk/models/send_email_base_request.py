@@ -61,7 +61,13 @@ class SendEmailBaseRequest(AccountBaseRequest):
     }
 
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, email_file: StorageFileLocation = None):
-        """SendEmailBaseRequest - a model defined in Swagger"""
+        """
+        Send email file request             
+        :param first_account (str) First account storage file name for receiving emails (or universal one)             
+        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param storage_folder (StorageFolderLocation) Storage folder location of account files             
+        :param email_file (StorageFileLocation) Email document (*.eml) file location in storage             
+        """
         super(SendEmailBaseRequest, self).__init__()
 
         self._email_file = None

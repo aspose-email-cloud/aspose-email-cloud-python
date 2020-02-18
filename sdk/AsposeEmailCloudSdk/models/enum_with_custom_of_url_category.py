@@ -53,7 +53,11 @@ class EnumWithCustomOfUrlCategory(object):
     }
 
     def __init__(self, value: str = None, description: str = None):
-        """EnumWithCustomOfUrlCategory - a model defined in Swagger"""
+        """
+        
+        :param value (str) Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+        :param description (str) 
+        """
 
         self._value = None
         self._description = None

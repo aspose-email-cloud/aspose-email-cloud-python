@@ -39,6 +39,13 @@ class AiBcrParseOcrDataModelRequest(BaseRequest):
     """
 
     def __init__(self, rq: AiBcrParseOcrDataRq):
+        """
+        Request model for ai_bcr_parse_ocr_data_model operation.
+        Initializes a new instance.
+
+        :param rq (AiBcrParseOcrDataRq) 
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

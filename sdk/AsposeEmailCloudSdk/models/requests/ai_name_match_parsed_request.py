@@ -39,6 +39,13 @@ class AiNameMatchParsedRequest(BaseRequest):
     """
 
     def __init__(self, rq: AiNameParsedMatchRq):
+        """
+        Request model for ai_name_match_parsed operation.
+        Initializes a new instance.
+
+        :param rq (AiNameParsedMatchRq) Parsed names to match
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

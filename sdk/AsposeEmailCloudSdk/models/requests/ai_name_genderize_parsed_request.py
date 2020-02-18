@@ -39,6 +39,13 @@ class AiNameGenderizeParsedRequest(BaseRequest):
     """
 
     def __init__(self, rq: AiNameParsedRq):
+        """
+        Request model for ai_name_genderize_parsed operation.
+        Initializes a new instance.
+
+        :param rq (AiNameParsedRq) Gender detection request data
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

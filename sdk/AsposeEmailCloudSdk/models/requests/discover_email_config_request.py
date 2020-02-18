@@ -40,6 +40,14 @@ class DiscoverEmailConfigRequest(BaseRequest):
     """
 
     def __init__(self, address: str, fast_processing: bool = None):
+        """
+        Request model for discover_email_config operation.
+        Initializes a new instance.
+
+        :param address (str) Email address
+        :param fast_processing (bool) Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned             
+        """
+
         BaseRequest.__init__(self)
         self.address = address
         self.fast_processing = fast_processing

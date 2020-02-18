@@ -55,7 +55,11 @@ class AiNameWeightedVariants(object):
     }
 
     def __init__(self, names: List[AiNameWeighted] = None, comments: str = None):
-        """AiNameWeightedVariants - a model defined in Swagger"""
+        """
+        Name variants             
+        :param names (List[AiNameWeighted]) List of name variations             
+        :param comments (str) Usually empty; can contain extra message describing some issue occurred during processing             
+        """
 
         self._names = None
         self._comments = None

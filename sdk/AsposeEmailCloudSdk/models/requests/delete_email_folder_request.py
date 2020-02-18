@@ -39,6 +39,13 @@ class DeleteEmailFolderRequest(BaseRequest):
     """
 
     def __init__(self, request: DeleteFolderBaseRequest):
+        """
+        Request model for delete_email_folder operation.
+        Initializes a new instance.
+
+        :param request (DeleteFolderBaseRequest) Delete folder request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

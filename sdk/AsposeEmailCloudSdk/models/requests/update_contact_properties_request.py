@@ -41,6 +41,15 @@ class UpdateContactPropertiesRequest(BaseRequest):
     """
 
     def __init__(self, format: str, name: str, request: HierarchicalObjectRequest):
+        """
+        Request model for update_contact_properties operation.
+        Initializes a new instance.
+
+        :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
+        :param name (str) Contact document file name
+        :param request (HierarchicalObjectRequest) Properties that should be updated/added
+        """
+
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

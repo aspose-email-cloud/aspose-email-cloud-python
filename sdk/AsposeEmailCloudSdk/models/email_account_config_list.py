@@ -54,7 +54,10 @@ class EmailAccountConfigList(ListResponseOfEmailAccountConfig):
     }
 
     def __init__(self, value: List[EmailAccountConfig] = None):
-        """EmailAccountConfigList - a model defined in Swagger"""
+        """
+        List of email accounts             
+        :param value (List[EmailAccountConfig]) 
+        """
         super(EmailAccountConfigList, self).__init__()
         self.discriminator = None
 

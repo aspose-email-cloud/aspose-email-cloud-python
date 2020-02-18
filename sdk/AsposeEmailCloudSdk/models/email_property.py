@@ -57,7 +57,12 @@ class EmailProperty(object):
     }
 
     def __init__(self, link: Link = None, name: str = None, value: object = None):
-        """EmailProperty - a model defined in Swagger"""
+        """
+        Email property.             
+        :param link (Link) Link to property             
+        :param name (str) Property name             
+        :param value (object) Property value             
+        """
 
         self._link = None
         self._name = None

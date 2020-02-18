@@ -41,6 +41,15 @@ class GetMapiPropertiesRequest(BaseRequest):
     """
 
     def __init__(self, name: str, folder: str = None, storage: str = None):
+        """
+        Request model for get_mapi_properties operation.
+        Initializes a new instance.
+
+        :param name (str) Document file name
+        :param folder (str) Path to folder in storage
+        :param storage (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.folder = folder

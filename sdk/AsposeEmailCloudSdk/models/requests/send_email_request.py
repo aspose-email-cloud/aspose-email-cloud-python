@@ -39,6 +39,13 @@ class SendEmailRequest(BaseRequest):
     """
 
     def __init__(self, request: SendEmailBaseRequest):
+        """
+        Request model for send_email operation.
+        Initializes a new instance.
+
+        :param request (SendEmailBaseRequest) Send email request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

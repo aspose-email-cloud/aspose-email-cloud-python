@@ -53,7 +53,10 @@ class ListResponseOfAiNameGenderHypothesis(object):
     }
 
     def __init__(self, value: List[AiNameGenderHypothesis] = None):
-        """ListResponseOfAiNameGenderHypothesis - a model defined in Swagger"""
+        """
+        
+        :param value (List[AiNameGenderHypothesis]) 
+        """
 
         self._value = None
         self.discriminator = None

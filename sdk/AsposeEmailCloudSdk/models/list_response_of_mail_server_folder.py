@@ -53,7 +53,10 @@ class ListResponseOfMailServerFolder(object):
     }
 
     def __init__(self, value: List[MailServerFolder] = None):
-        """ListResponseOfMailServerFolder - a model defined in Swagger"""
+        """
+        
+        :param value (List[MailServerFolder]) 
+        """
 
         self._value = None
         self.discriminator = None

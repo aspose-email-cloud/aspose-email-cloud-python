@@ -56,7 +56,11 @@ class SetEmailPropertyRequest(object):
     }
 
     def __init__(self, email_property: EmailProperty = None, storage_folder: StorageFolderLocation = None):
-        """SetEmailPropertyRequest - a model defined in Swagger"""
+        """
+        Update email document property request             
+        :param email_property (EmailProperty) An email property that should be updated             
+        :param storage_folder (StorageFolderLocation) An email document location in storage             
+        """
 
         self._email_property = None
         self._storage_folder = None

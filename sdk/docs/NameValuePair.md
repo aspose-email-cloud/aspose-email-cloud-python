@@ -2,8 +2,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **str** | Name of the property  | [optional] 
-**name** | **str** | Value of the property | [optional] 
+**value** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
 
 
 

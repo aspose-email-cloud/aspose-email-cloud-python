@@ -51,7 +51,10 @@ class ValueResponse(object):
     }
 
     def __init__(self, value: str = None):
-        """ValueResponse - a model defined in Swagger"""
+        """
+        String value object             
+        :param value (str) Gets or sets string content.             
+        """
 
         self._value = None
         self.discriminator = None

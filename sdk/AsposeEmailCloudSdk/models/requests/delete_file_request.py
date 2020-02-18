@@ -41,6 +41,15 @@ class DeleteFileRequest(BaseRequest):
     """
 
     def __init__(self, path: str, storage_name: str = None, version_id: str = None):
+        """
+        Request model for delete_file operation.
+        Initializes a new instance.
+
+        :param path (str) File path e.g. '/folder/file.ext'
+        :param storage_name (str) Storage name
+        :param version_id (str) File version ID to delete
+        """
+
         BaseRequest.__init__(self)
         self.path = path
         self.storage_name = storage_name

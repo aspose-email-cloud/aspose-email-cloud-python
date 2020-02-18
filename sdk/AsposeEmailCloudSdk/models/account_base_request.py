@@ -71,7 +71,12 @@ class AccountBaseRequest(object):
     }
 
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None):
-        """AccountBaseRequest - a model defined in Swagger"""
+        """
+        EmailClient accounts request             
+        :param first_account (str) First account storage file name for receiving emails (or universal one)             
+        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param storage_folder (StorageFolderLocation) Storage folder location of account files             
+        """
 
         self._first_account = None
         self._second_account = None

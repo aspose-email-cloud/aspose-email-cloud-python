@@ -40,6 +40,14 @@ class CreateFolderRequest(BaseRequest):
     """
 
     def __init__(self, path: str, storage_name: str = None):
+        """
+        Request model for create_folder operation.
+        Initializes a new instance.
+
+        :param path (str) Folder path to create e.g. 'folder_1/folder_2/'
+        :param storage_name (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.path = path
         self.storage_name = storage_name

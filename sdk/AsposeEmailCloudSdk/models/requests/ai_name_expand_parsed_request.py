@@ -39,6 +39,13 @@ class AiNameExpandParsedRequest(BaseRequest):
     """
 
     def __init__(self, rq: AiNameParsedRq):
+        """
+        Request model for ai_name_expand_parsed operation.
+        Initializes a new instance.
+
+        :param rq (AiNameParsedRq) Parsed name with options
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

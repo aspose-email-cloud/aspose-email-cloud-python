@@ -53,7 +53,11 @@ class ContentTypeParameter(object):
     }
 
     def __init__(self, name: str = None, value: str = None):
-        """ContentTypeParameter - a model defined in Swagger"""
+        """
+        Content-Type header parameter             
+        :param name (str) Parameter name             
+        :param value (str) Parameter value             
+        """
 
         self._name = None
         self._value = None

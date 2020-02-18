@@ -41,6 +41,15 @@ class AddMapiAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, name: str, attachment: str, request: AddAttachmentRequest):
+        """
+        Request model for add_mapi_attachment operation.
+        Initializes a new instance.
+
+        :param name (str) Document file name
+        :param attachment (str) Attachment file name
+        :param request (AddAttachmentRequest) Add attachment request
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.attachment = attachment

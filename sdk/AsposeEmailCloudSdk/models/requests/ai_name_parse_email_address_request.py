@@ -44,6 +44,18 @@ class AiNameParseEmailAddressRequest(BaseRequest):
     """
 
     def __init__(self, email_address: str, language: str = None, location: str = None, encoding: str = None, script: str = None, style: str = None):
+        """
+        Request model for ai_name_parse_email_address operation.
+        Initializes a new instance.
+
+        :param email_address (str) Email address to parse (required)
+        :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)
+        :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France
+        :param encoding (str) A character encoding name
+        :param script (str) A writing system code; starts with the ISO-15924 script name
+        :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        """
+
         BaseRequest.__init__(self)
         self.email_address = email_address
         self.language = language

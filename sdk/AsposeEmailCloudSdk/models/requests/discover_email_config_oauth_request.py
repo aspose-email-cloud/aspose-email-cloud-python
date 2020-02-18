@@ -39,6 +39,13 @@ class DiscoverEmailConfigOauthRequest(BaseRequest):
     """
 
     def __init__(self, rq: DiscoverEmailConfigOauth):
+        """
+        Request model for discover_email_config_oauth operation.
+        Initializes a new instance.
+
+        :param rq (DiscoverEmailConfigOauth) Discover email configuration request.
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

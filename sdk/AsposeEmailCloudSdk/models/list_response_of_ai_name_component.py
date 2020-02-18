@@ -53,7 +53,10 @@ class ListResponseOfAiNameComponent(object):
     }
 
     def __init__(self, value: List[AiNameComponent] = None):
-        """ListResponseOfAiNameComponent - a model defined in Swagger"""
+        """
+        
+        :param value (List[AiNameComponent]) 
+        """
 
         self._value = None
         self.discriminator = None

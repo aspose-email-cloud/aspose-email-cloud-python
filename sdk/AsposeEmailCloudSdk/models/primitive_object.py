@@ -57,7 +57,12 @@ class PrimitiveObject(BaseObject):
     }
 
     def __init__(self, name: str = None, type: str = None, value: str = None):
-        """PrimitiveObject - a model defined in Swagger"""
+        """
+        Simple property object             
+        :param name (str) Gets or sets the name of an object.             
+        :param type (str) Property type. Used for deserialization purposes             
+        :param value (str) Property value             
+        """
         super(PrimitiveObject, self).__init__()
 
         self._value = None

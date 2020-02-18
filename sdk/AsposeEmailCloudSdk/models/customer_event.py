@@ -55,7 +55,11 @@ class CustomerEvent(object):
     }
 
     def __init__(self, category: EnumWithCustomOfEventCategory = None, _date: datetime = None):
-        """CustomerEvent - a model defined in Swagger"""
+        """
+        Event.             
+        :param category (EnumWithCustomOfEventCategory) Event category.             
+        :param _date (datetime) Event date.             
+        """
 
         self._category = None
         self.__date = None

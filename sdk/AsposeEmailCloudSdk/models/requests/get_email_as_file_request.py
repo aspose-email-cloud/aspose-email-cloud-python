@@ -42,6 +42,16 @@ class GetEmailAsFileRequest(BaseRequest):
     """
 
     def __init__(self, file_name: str, format: str, storage: str = None, folder: str = None):
+        """
+        Request model for get_email_as_file operation.
+        Initializes a new instance.
+
+        :param file_name (str) Email document file name
+        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param storage (str) Storage name
+        :param folder (str) Path to folder in storage
+        """
+
         BaseRequest.__init__(self)
         self.file_name = file_name
         self.format = format

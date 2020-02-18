@@ -40,6 +40,14 @@ class SaveCalendarModelRequest(BaseRequest):
     """
 
     def __init__(self, name: str, rq: StorageModelRqOfCalendarDto):
+        """
+        Request model for save_calendar_model operation.
+        Initializes a new instance.
+
+        :param name (str) iCalendar file name in storage
+        :param rq (StorageModelRqOfCalendarDto) Calendar properties update request
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.rq = rq

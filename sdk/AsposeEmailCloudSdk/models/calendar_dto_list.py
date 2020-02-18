@@ -54,7 +54,10 @@ class CalendarDtoList(ListResponseOfStorageModelOfCalendarDto):
     }
 
     def __init__(self, value: List[StorageModelOfCalendarDto] = None):
-        """CalendarDtoList - a model defined in Swagger"""
+        """
+        List of iCalendar documents             
+        :param value (List[StorageModelOfCalendarDto]) 
+        """
         super(CalendarDtoList, self).__init__()
         self.discriminator = None
 

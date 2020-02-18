@@ -53,7 +53,10 @@ class ListResponseOfAiNameExtracted(object):
     }
 
     def __init__(self, value: List[AiNameExtracted] = None):
-        """ListResponseOfAiNameExtracted - a model defined in Swagger"""
+        """
+        
+        :param value (List[AiNameExtracted]) 
+        """
 
         self._value = None
         self.discriminator = None

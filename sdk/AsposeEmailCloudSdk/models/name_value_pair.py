@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class NameValuePair(object):
-    """An extended property.
+    """
     """
 
     """
@@ -53,7 +53,11 @@ class NameValuePair(object):
     }
 
     def __init__(self, value: str = None, name: str = None):
-        """NameValuePair - a model defined in Swagger"""
+        """
+        
+        :param value (str) 
+        :param name (str) 
+        """
 
         self._value = None
         self._name = None
@@ -68,7 +72,6 @@ class NameValuePair(object):
     def value(self) -> str:
         """Gets the value of this NameValuePair.
 
-        Name of the property 
 
         :return: The value of this NameValuePair.
         :rtype: str
@@ -79,7 +82,6 @@ class NameValuePair(object):
     def value(self, value: str):
         """Sets the value of this NameValuePair.
 
-        Name of the property 
 
         :param value: The value of this NameValuePair.
         :type: str
@@ -90,7 +92,6 @@ class NameValuePair(object):
     def name(self) -> str:
         """Gets the name of this NameValuePair.
 
-        Value of the property
 
         :return: The name of this NameValuePair.
         :rtype: str
@@ -101,7 +102,6 @@ class NameValuePair(object):
     def name(self, name: str):
         """Sets the name of this NameValuePair.
 
-        Value of the property
 
         :param name: The name of this NameValuePair.
         :type: str

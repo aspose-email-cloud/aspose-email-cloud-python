@@ -53,7 +53,10 @@ class FileVersions(object):
     }
 
     def __init__(self, value: List[FileVersion] = None):
-        """FileVersions - a model defined in Swagger"""
+        """
+        File versions FileVersion.
+        :param value (List[FileVersion]) File versions FileVersion.
+        """
 
         self._value = None
         self.discriminator = None

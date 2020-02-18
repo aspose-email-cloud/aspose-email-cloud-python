@@ -65,7 +65,15 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
     }
 
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: EmailDto = None):
-        """AppendEmailModelRq - a model defined in Swagger"""
+        """
+        Append email request             
+        :param first_account (str) First account storage file name for receiving emails (or universal one)             
+        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param storage_folder (StorageFolderLocation) Storage folder location of account files             
+        :param folder (str) Email account folder to store a message             
+        :param mark_as_sent (bool) Mark message as sent             
+        :param message (EmailDto) Email document             
+        """
         super(AppendEmailModelRq, self).__init__()
 
         self._message = None

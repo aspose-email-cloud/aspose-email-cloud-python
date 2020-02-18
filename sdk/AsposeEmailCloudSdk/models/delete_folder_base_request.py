@@ -62,7 +62,14 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
     }
 
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, delete_permanently: bool = None):
-        """DeleteFolderBaseRequest - a model defined in Swagger"""
+        """
+        Delete folder request             
+        :param first_account (str) First account storage file name for receiving emails (or universal one)             
+        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param storage_folder (StorageFolderLocation) Storage folder location of account files             
+        :param folder (str) Folder name             
+        :param delete_permanently (bool) Specifies that folder should be deleted permanently             
+        """
         super(DeleteFolderBaseRequest, self).__init__()
 
         self._folder = None

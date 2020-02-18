@@ -57,7 +57,12 @@ class HierarchicalObject(BaseObject):
     }
 
     def __init__(self, name: str = None, type: str = None, internal_properties: List[BaseObject] = None):
-        """HierarchicalObject - a model defined in Swagger"""
+        """
+        Objects&#39; properties hierarchical representation             
+        :param name (str) Gets or sets the name of an object.             
+        :param type (str) Property type. Used for deserialization purposes             
+        :param internal_properties (List[BaseObject]) List of internal properties             
+        """
         super(HierarchicalObject, self).__init__()
 
         self._internal_properties = None

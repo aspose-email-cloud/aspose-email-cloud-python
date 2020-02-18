@@ -57,7 +57,10 @@ class ListResponseOfStorageModelOfEmailDto(object):
     }
 
     def __init__(self, value: List[StorageModelOfEmailDto] = None):
-        """ListResponseOfStorageModelOfEmailDto - a model defined in Swagger"""
+        """
+        
+        :param value (List[StorageModelOfEmailDto]) 
+        """
 
         self._value = None
         self.discriminator = 'Type'

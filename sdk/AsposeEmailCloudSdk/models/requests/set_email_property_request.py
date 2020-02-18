@@ -41,6 +41,15 @@ class SetEmailPropertyRequest(BaseRequest):
     """
 
     def __init__(self, property_name: str, file_name: str, request: SetEmailPropertyRequest):
+        """
+        Request model for set_email_property operation.
+        Initializes a new instance.
+
+        :param property_name (str) A property name that should be changed
+        :param file_name (str) Email document file name
+        :param request (SetEmailPropertyRequest) A property that should be changed and optional Storage info to specify where the file located             
+        """
+
         BaseRequest.__init__(self)
         self.property_name = property_name
         self.file_name = file_name

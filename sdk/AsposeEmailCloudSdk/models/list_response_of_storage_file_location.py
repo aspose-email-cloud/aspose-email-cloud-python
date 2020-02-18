@@ -53,7 +53,10 @@ class ListResponseOfStorageFileLocation(object):
     }
 
     def __init__(self, value: List[StorageFileLocation] = None):
-        """ListResponseOfStorageFileLocation - a model defined in Swagger"""
+        """
+        
+        :param value (List[StorageFileLocation]) 
+        """
 
         self._value = None
         self.discriminator = None

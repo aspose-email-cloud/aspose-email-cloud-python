@@ -61,7 +61,14 @@ class EmailAddress(object):
     }
 
     def __init__(self, category: EnumWithCustomOfEmailAddressCategory = None, display_name: str = None, preferred: bool = None, routing_type: str = None, address: str = None):
-        """EmailAddress - a model defined in Swagger"""
+        """
+        Email address.             
+        :param category (EnumWithCustomOfEmailAddressCategory) Address category.             
+        :param display_name (str) Display name.             
+        :param preferred (bool) Defines whether email address is preferred.             
+        :param routing_type (str) A routing type for an email.             
+        :param address (str) Email address.             
+        """
 
         self._category = None
         self._display_name = None

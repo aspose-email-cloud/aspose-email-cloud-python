@@ -42,6 +42,16 @@ class GetCalendarAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, name: str, attachment: str, folder: str = None, storage: str = None):
+        """
+        Request model for get_calendar_attachment operation.
+        Initializes a new instance.
+
+        :param name (str) iCalendar document file name
+        :param attachment (str) Attachment name or index
+        :param folder (str) Path to folder in storage
+        :param storage (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.attachment = attachment

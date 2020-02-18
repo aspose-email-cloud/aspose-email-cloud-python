@@ -43,6 +43,17 @@ class GetCalendarModelAsAlternateRequest(BaseRequest):
     """
 
     def __init__(self, name: str, calendar_action: str, sequence_id: str = None, folder: str = None, storage: str = None):
+        """
+        Request model for get_calendar_model_as_alternate operation.
+        Initializes a new instance.
+
+        :param name (str) iCalendar file name in storage
+        :param calendar_action (str) iCalendar method type Enum, available values: Create, Update, Cancel
+        :param sequence_id (str) The sequence id
+        :param folder (str) Path to folder in storage
+        :param storage (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.calendar_action = calendar_action

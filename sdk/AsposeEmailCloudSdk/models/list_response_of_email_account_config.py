@@ -57,7 +57,10 @@ class ListResponseOfEmailAccountConfig(object):
     }
 
     def __init__(self, value: List[EmailAccountConfig] = None):
-        """ListResponseOfEmailAccountConfig - a model defined in Swagger"""
+        """
+        
+        :param value (List[EmailAccountConfig]) 
+        """
 
         self._value = None
         self.discriminator = 'Type'

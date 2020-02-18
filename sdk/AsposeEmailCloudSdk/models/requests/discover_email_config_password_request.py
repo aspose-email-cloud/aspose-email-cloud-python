@@ -39,6 +39,13 @@ class DiscoverEmailConfigPasswordRequest(BaseRequest):
     """
 
     def __init__(self, rq: DiscoverEmailConfigPassword):
+        """
+        Request model for discover_email_config_password operation.
+        Initializes a new instance.
+
+        :param rq (DiscoverEmailConfigPassword) Discover email configuration request.
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

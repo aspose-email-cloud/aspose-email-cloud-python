@@ -67,7 +67,17 @@ class EmailAccountConfig(object):
     }
 
     def __init__(self, display_name: str = None, protocol_type: str = None, host: str = None, port: int = None, socket_type: str = None, authentication_types: List[str] = None, extra_info: List[NameValuePair] = None, is_validated: bool = None):
-        """EmailAccountConfig - a model defined in Swagger"""
+        """
+        Email account configuration.             
+        :param display_name (str) Email account display name             
+        :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :param host (str) Email account host.             
+        :param port (int) Port.             
+        :param socket_type (str) Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param authentication_types (List[str]) Supported authentication types.             
+        :param extra_info (List[NameValuePair]) Extra account information.             
+        :param is_validated (bool) Determines that configuration validated. Set to false if validation skipped.             
+        """
 
         self._display_name = None
         self._protocol_type = None
@@ -190,7 +200,7 @@ class EmailAccountConfig(object):
     def socket_type(self) -> str:
         """Gets the socket_type of this EmailAccountConfig.
 
-        Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The socket_type of this EmailAccountConfig.
         :rtype: str
@@ -201,7 +211,7 @@ class EmailAccountConfig(object):
     def socket_type(self, socket_type: str):
         """Sets the socket_type of this EmailAccountConfig.
 
-        Security mode for a mail client Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param socket_type: The socket_type of this EmailAccountConfig.
         :type: str

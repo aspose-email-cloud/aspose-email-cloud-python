@@ -51,7 +51,10 @@ class ListResponseOfString(object):
     }
 
     def __init__(self, value: List[str] = None):
-        """ListResponseOfString - a model defined in Swagger"""
+        """
+        
+        :param value (List[str]) 
+        """
 
         self._value = None
         self.discriminator = None

@@ -39,6 +39,13 @@ class AppendMimeMessageRequest(BaseRequest):
     """
 
     def __init__(self, request: AppendEmailMimeBaseRequest):
+        """
+        Request model for append_mime_message operation.
+        Initializes a new instance.
+
+        :param request (AppendEmailMimeBaseRequest) Append email request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

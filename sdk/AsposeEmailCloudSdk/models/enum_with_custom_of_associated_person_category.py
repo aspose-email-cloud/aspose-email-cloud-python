@@ -53,7 +53,11 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
     }
 
     def __init__(self, value: str = None, description: str = None):
-        """EnumWithCustomOfAssociatedPersonCategory - a model defined in Swagger"""
+        """
+        
+        :param value (str) Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+        :param description (str) 
+        """
 
         self._value = None
         self._description = None

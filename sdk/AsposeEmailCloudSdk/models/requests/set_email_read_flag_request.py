@@ -39,6 +39,13 @@ class SetEmailReadFlagRequest(BaseRequest):
     """
 
     def __init__(self, request: SetMessageReadFlagAccountBaseRequest):
+        """
+        Request model for set_email_read_flag operation.
+        Initializes a new instance.
+
+        :param request (SetMessageReadFlagAccountBaseRequest) Message is read request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

@@ -59,7 +59,13 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRq):
     }
 
     def __init__(self, address: str = None, fast_processing: bool = None, login: str = None, password: str = None):
-        """DiscoverEmailConfigPassword - a model defined in Swagger"""
+        """
+        
+        :param address (str) Email address to discover.             
+        :param fast_processing (bool) Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :param login (str) Email account login. If not specified, address used as a login.             
+        :param password (str) Email account password.             
+        """
         super(DiscoverEmailConfigPassword, self).__init__()
 
         self._password = None

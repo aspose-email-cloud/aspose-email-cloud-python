@@ -53,7 +53,10 @@ class EmailPropertyResponse(object):
     }
 
     def __init__(self, email_property: EmailProperty = None):
-        """EmailPropertyResponse - a model defined in Swagger"""
+        """
+        Email property response.             
+        :param email_property (EmailProperty) Gets or sets email property.             
+        """
 
         self._email_property = None
         self.discriminator = None

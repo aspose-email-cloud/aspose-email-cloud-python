@@ -61,7 +61,14 @@ class ContentType(object):
     }
 
     def __init__(self, boundary: str = None, char_set: str = None, media_type: str = None, name: str = None, parameters: List[ContentTypeParameter] = None):
-        """ContentType - a model defined in Swagger"""
+        """
+        Represents a Content-Type header.             
+        :param boundary (str) The boundary parameter included in the Content-Type header.             
+        :param char_set (str) CharSet parameter.             
+        :param media_type (str) The internet media type.             
+        :param name (str) Name parameter.             
+        :param parameters (List[ContentTypeParameter]) Full list of parameters             
+        """
 
         self._boundary = None
         self._char_set = None

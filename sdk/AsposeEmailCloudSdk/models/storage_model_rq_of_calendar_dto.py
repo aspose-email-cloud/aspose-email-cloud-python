@@ -56,7 +56,11 @@ class StorageModelRqOfCalendarDto(object):
     }
 
     def __init__(self, value: CalendarDto = None, storage_folder: StorageFolderLocation = None):
-        """StorageModelRqOfCalendarDto - a model defined in Swagger"""
+        """
+        
+        :param value (CalendarDto) 
+        :param storage_folder (StorageFolderLocation) 
+        """
 
         self._value = None
         self._storage_folder = None

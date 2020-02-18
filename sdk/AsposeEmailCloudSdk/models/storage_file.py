@@ -63,7 +63,14 @@ class StorageFile(object):
     }
 
     def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None):
-        """StorageFile - a model defined in Swagger"""
+        """
+        File or folder information
+        :param name (str) File or folder name.
+        :param is_folder (bool) True if it is a folder.
+        :param modified_date (datetime) File or folder last modified DateTime.
+        :param size (int) File or folder size.
+        :param path (str) File or folder path.
+        """
 
         self._name = None
         self._is_folder = None

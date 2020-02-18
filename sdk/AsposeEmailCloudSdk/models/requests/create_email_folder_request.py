@@ -39,6 +39,13 @@ class CreateEmailFolderRequest(BaseRequest):
     """
 
     def __init__(self, request: CreateFolderBaseRequest):
+        """
+        Request model for create_email_folder operation.
+        Initializes a new instance.
+
+        :param request (CreateFolderBaseRequest) Create folder request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

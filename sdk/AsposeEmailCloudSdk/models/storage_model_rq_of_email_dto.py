@@ -56,7 +56,11 @@ class StorageModelRqOfEmailDto(object):
     }
 
     def __init__(self, value: EmailDto = None, storage_folder: StorageFolderLocation = None):
-        """StorageModelRqOfEmailDto - a model defined in Swagger"""
+        """
+        
+        :param value (EmailDto) 
+        :param storage_folder (StorageFolderLocation) 
+        """
 
         self._value = None
         self._storage_folder = None

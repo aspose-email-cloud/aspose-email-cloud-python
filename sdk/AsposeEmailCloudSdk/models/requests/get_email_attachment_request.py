@@ -42,6 +42,16 @@ class GetEmailAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, attachment: str, file_name: str, storage: str = None, folder: str = None):
+        """
+        Request model for get_email_attachment operation.
+        Initializes a new instance.
+
+        :param attachment (str) Attachment name
+        :param file_name (str) Email document file name
+        :param storage (str) Storage name
+        :param folder (str) Path to folder in storage
+        """
+
         BaseRequest.__init__(self)
         self.attachment = attachment
         self.file_name = file_name

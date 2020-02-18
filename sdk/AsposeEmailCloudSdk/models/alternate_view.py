@@ -65,7 +65,15 @@ class AlternateView(AttachmentBase):
     }
 
     def __init__(self, base64_data: str = None, content_id: str = None, content_type: ContentType = None, headers: Dict[str, str] = None, base_uri: str = None, linked_resources: List[LinkedResource] = None):
-        """AlternateView - a model defined in Swagger"""
+        """
+        Represents the format to view a message.             
+        :param base64_data (str) Attachment file content as Base64 string.             
+        :param content_id (str) Attachment content id             
+        :param content_type (ContentType) Content type             
+        :param headers (Dict[str, str]) Attachment headers.             
+        :param base_uri (str) Base URI.             
+        :param linked_resources (List[LinkedResource]) Embedded resources referred to by this alternate view.             
+        """
         super(AlternateView, self).__init__()
 
         self._base_uri = None

@@ -59,7 +59,13 @@ class Error(object):
     }
 
     def __init__(self, code: str = None, message: str = None, description: str = None, inner_error: ErrorDetails = None):
-        """Error - a model defined in Swagger"""
+        """
+        Error
+        :param code (str) Code             
+        :param message (str) Message             
+        :param description (str) Description             
+        :param inner_error (ErrorDetails) Inner Error             
+        """
 
         self._code = None
         self._message = None

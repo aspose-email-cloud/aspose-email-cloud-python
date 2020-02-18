@@ -55,7 +55,11 @@ class FilesUploadResult(object):
     }
 
     def __init__(self, uploaded: List[str] = None, errors: List[Error] = None):
-        """FilesUploadResult - a model defined in Swagger"""
+        """
+        File upload result
+        :param uploaded (List[str]) List of uploaded file names
+        :param errors (List[Error]) List of errors.
+        """
 
         self._uploaded = None
         self._errors = None

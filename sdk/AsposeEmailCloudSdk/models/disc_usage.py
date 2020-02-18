@@ -53,7 +53,11 @@ class DiscUsage(object):
     }
 
     def __init__(self, used_size: int = None, total_size: int = None):
-        """DiscUsage - a model defined in Swagger"""
+        """
+        Class for disc space information.
+        :param used_size (int) Application used disc space.
+        :param total_size (int) Total disc space.
+        """
 
         self._used_size = None
         self._total_size = None

@@ -53,7 +53,10 @@ class ListResponseOfHierarchicalObjectResponse(object):
     }
 
     def __init__(self, value: List[HierarchicalObjectResponse] = None):
-        """ListResponseOfHierarchicalObjectResponse - a model defined in Swagger"""
+        """
+        
+        :param value (List[HierarchicalObjectResponse]) 
+        """
 
         self._value = None
         self.discriminator = None

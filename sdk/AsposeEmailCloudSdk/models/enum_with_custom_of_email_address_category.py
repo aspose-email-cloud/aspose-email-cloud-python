@@ -53,7 +53,11 @@ class EnumWithCustomOfEmailAddressCategory(object):
     }
 
     def __init__(self, value: str = None, description: str = None):
-        """EnumWithCustomOfEmailAddressCategory - a model defined in Swagger"""
+        """
+        
+        :param value (str) Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+        :param description (str) 
+        """
 
         self._value = None
         self._description = None

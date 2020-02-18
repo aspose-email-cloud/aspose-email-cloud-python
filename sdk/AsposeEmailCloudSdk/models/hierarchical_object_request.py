@@ -56,7 +56,11 @@ class HierarchicalObjectRequest(object):
     }
 
     def __init__(self, hierarchical_object: HierarchicalObject = None, storage_folder: StorageFolderLocation = None):
-        """HierarchicalObjectRequest - a model defined in Swagger"""
+        """
+        Object represented as hierarchical properties request             
+        :param hierarchical_object (HierarchicalObject) Hierarchical properties of document             
+        :param storage_folder (StorageFolderLocation) Document location in storage             
+        """
 
         self._hierarchical_object = None
         self._storage_folder = None

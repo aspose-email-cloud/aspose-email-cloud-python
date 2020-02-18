@@ -53,7 +53,11 @@ class AiNameExtractedComponent(object):
     }
 
     def __init__(self, category: str = None, value: str = None):
-        """AiNameExtractedComponent - a model defined in Swagger"""
+        """
+        Extracted name component             
+        :param category (str) Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+        :param value (str) Extracted value             
+        """
 
         self._category = None
         self._value = None

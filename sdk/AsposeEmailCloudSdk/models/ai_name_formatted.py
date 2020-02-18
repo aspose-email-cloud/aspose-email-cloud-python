@@ -53,7 +53,11 @@ class AiNameFormatted(object):
     }
 
     def __init__(self, name: str = None, comments: str = None):
-        """AiNameFormatted - a model defined in Swagger"""
+        """
+        Formatted name             
+        :param name (str) Formatted name value             
+        :param comments (str) Usually empty; can contain extra message describing some issue occurred during the formatting             
+        """
 
         self._name = None
         self._comments = None

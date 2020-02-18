@@ -53,7 +53,11 @@ class EnumWithCustomOfPhoneNumberCategory(object):
     }
 
     def __init__(self, value: str = None, description: str = None):
-        """EnumWithCustomOfPhoneNumberCategory - a model defined in Swagger"""
+        """
+        
+        :param value (str) Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+        :param description (str) 
+        """
 
         self._value = None
         self._description = None
