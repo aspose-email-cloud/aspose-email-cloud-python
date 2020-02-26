@@ -2261,7 +2261,7 @@ EmailApi.create_email(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name in storage | 
- **request** | [**CreateEmailRequest**](CreateEmailRequest.md)| An email document and optional Storage info to specify where the file should be located | 
+ **request** | [**CreateEmailRequest**](CreateEmailRequest.md)| An email document and optional Storage info to specify where the file should be located              | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2297,7 +2297,7 @@ EmailApi.create_email_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name in storage | 
- **request** | [**CreateEmailRequest**](CreateEmailRequest.md)| An email document and optional Storage info to specify where the file should be located | 
+ **request** | [**CreateEmailRequest**](CreateEmailRequest.md)| An email document and optional Storage info to specify where the file should be located              | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -3617,7 +3617,7 @@ Get iCalendar document attachment by name
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -3659,7 +3659,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-get_calendar_attachment_async(request).get() returns [**file**](file.md)
+get_calendar_attachment_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -4022,7 +4022,7 @@ Get attachment file by name
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -4067,7 +4067,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-get_contact_attachment_async(request).get() returns [**file**](file.md)
+get_contact_attachment_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -4583,7 +4583,7 @@ Converts email document from storage to specified format and returns as file
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -4625,7 +4625,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-get_email_as_file_async(request).get() returns [**file**](file.md)
+get_email_as_file_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -4664,7 +4664,7 @@ Get email attachment by name
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -4706,7 +4706,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-get_email_attachment_async(request).get() returns [**file**](file.md)
+get_email_attachment_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -5132,7 +5132,7 @@ Get document attachment as file stream
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -5174,7 +5174,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-get_mapi_attachment_async(request).get() returns [**file**](file.md)
+get_mapi_attachment_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -5433,6 +5433,69 @@ Name | Type | Description  | Notes
  **name** | **str**| Document file name | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="is_email_address_disposable"></a>
+# **is_email_address_disposable**
+> is_email_address_disposable(self, is_email_address_disposable_request)
+
+Check email address is disposable             
+
+### Return type
+
+[**ValueTOfBoolean**](ValueTOfBoolean.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    address)
+```
+
+### Usage
+```python
+EmailApi.is_email_address_disposable(
+    IsEmailAddressDisposableRequest(
+        address))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **str**| An email address to check | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="is_email_address_disposable_async"></a>
+# **is_email_address_disposable_async**
+> is_email_address_disposable_async(self, is_email_address_disposable_request)
+
+Check email address is disposable             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+is_email_address_disposable_async(request).get() returns [**ValueTOfBoolean**](ValueTOfBoolean.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    address)
+```
+
+### Usage
+```python
+EmailApi.is_email_address_disposable_async(
+    IsEmailAddressDisposableRequest(
+        address))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **str**| An email address to check | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

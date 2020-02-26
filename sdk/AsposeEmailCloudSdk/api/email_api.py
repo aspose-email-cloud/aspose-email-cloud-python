@@ -1503,6 +1503,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObjectResponse')
 
+    def is_email_address_disposable(self, request: requests.IsEmailAddressDisposableRequest)  -> ValueTOfBoolean:
+        """Check email address is disposable             
+
+
+        :param request IsEmailAddressDisposableRequest object with parameters
+        :return: ValueTOfBoolean
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ValueTOfBoolean')
+
+    def is_email_address_disposable_async(self, request: requests.IsEmailAddressDisposableRequest) -> multiprocessing.pool.AsyncResult:
+        """Check email address is disposable             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request IsEmailAddressDisposableRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ValueTOfBoolean)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ValueTOfBoolean')
+
     def list_email_folders(self, request: requests.ListEmailFoldersRequest)  -> ListResponseOfMailServerFolder:
         """Get folders list in email account             
 

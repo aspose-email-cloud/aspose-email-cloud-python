@@ -148,6 +148,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**get_mapi_list_async**](EmailApi.md#get_mapi_list_async) | **GET** /email/Mapi | Get document list from storage folder             
 *EmailApi* | [**get_mapi_properties**](EmailApi.md#get_mapi_properties) | **GET** /email/Mapi/{name}/properties | Get document properties             
 *EmailApi* | [**get_mapi_properties_async**](EmailApi.md#get_mapi_properties_async) | **GET** /email/Mapi/{name}/properties | Get document properties             
+*EmailApi* | [**is_email_address_disposable**](EmailApi.md#is_email_address_disposable) | **GET** /email/disposable/isDisposable/{address} | Check email address is disposable             
+*EmailApi* | [**is_email_address_disposable_async**](EmailApi.md#is_email_address_disposable_async) | **GET** /email/disposable/isDisposable/{address} | Check email address is disposable             
 *EmailApi* | [**list_email_folders**](EmailApi.md#list_email_folders) | **GET** /email/client/ListFolders | Get folders list in email account             
 *EmailApi* | [**list_email_folders_async**](EmailApi.md#list_email_folders_async) | **GET** /email/client/ListFolders | Get folders list in email account             
 *EmailApi* | [**list_email_messages**](EmailApi.md#list_email_messages) | **GET** /email/client/ListMessages | Get messages from folder, filtered by query             
@@ -287,6 +289,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.StorageModelRqOfEmailDto](StorageModelRqOfEmailDto.md)
  - [AsposeEmailCloudSdk.models.Url](Url.md)
  - [AsposeEmailCloudSdk.models.ValueResponse](ValueResponse.md)
+ - [AsposeEmailCloudSdk.models.ValueTOfBoolean](ValueTOfBoolean.md)
  - [AsposeEmailCloudSdk.models.AiBcrBase64Image](AiBcrBase64Image.md)
  - [AsposeEmailCloudSdk.models.AiBcrBase64Rq](AiBcrBase64Rq.md)
  - [AsposeEmailCloudSdk.models.AiBcrImageStorageFile](AiBcrImageStorageFile.md)

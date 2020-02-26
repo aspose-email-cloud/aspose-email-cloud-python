@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="get_mapi_attachment_request.py">
+#  <copyright company="Aspose" file="is_email_address_disposable_request.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,40 +23,31 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.get_mapi_attachment_request import GetMapiAttachmentRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.is_email_address_disposable_request import IsEmailAddressDisposableRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class GetMapiAttachmentRequest(BaseRequest):
+class IsEmailAddressDisposableRequest(BaseRequest):
     """
-    Request model for get_mapi_attachment operation.
+    Request model for is_email_address_disposable operation.
     Initializes a new instance.
 
-    :param name (str) Document file name
-    :param attachment (str) Attachment name or index
-    :param folder (str) Path to folder in storage
-    :param storage (str) Storage name
+    :param address (str) An email address to check
     """
 
-    def __init__(self, name: str, attachment: str, folder: str = None, storage: str = None):
+    def __init__(self, address: str):
         """
-        Request model for get_mapi_attachment operation.
+        Request model for is_email_address_disposable operation.
         Initializes a new instance.
 
-        :param name (str) Document file name
-        :param attachment (str) Attachment name or index
-        :param folder (str) Path to folder in storage
-        :param storage (str) Storage name
+        :param address (str) An email address to check
         """
 
         BaseRequest.__init__(self)
-        self.name = name
-        self.attachment = attachment
-        self.folder = folder
-        self.storage = storage
+        self.address = address
 
     def to_http_info(self, config):
         """
@@ -67,34 +58,17 @@ class GetMapiAttachmentRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'name' is set
-        if self.name is None:
-            raise ValueError("Missing the required parameter `name` when calling `get_mapi_attachment`")
-        # verify the required parameter 'attachment' is set
-        if self.attachment is None:
-            raise ValueError("Missing the required parameter `attachment` when calling `get_mapi_attachment`")
+        # verify the required parameter 'address' is set
+        if self.address is None:
+            raise ValueError("Missing the required parameter `address` when calling `is_email_address_disposable`")
 
         collection_formats = {}
-        path = '/email/Mapi/{name}/attachments/{attachment}'
+        path = '/email/disposable/isDisposable/{address}'
         path_params = {}
-        if self.name is not None:
-            path_params[self._lowercase_first_letter('name')] = self.name
-        if self.attachment is not None:
-            path_params[self._lowercase_first_letter('attachment')] = self.attachment
+        if self.address is not None:
+            path_params[self._lowercase_first_letter('address')] = self.address
 
         query_params = []
-        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
-        if path_parameter in path:
-            path = path.replace(path_parameter, self.folder if self.folder is not None else '')
-        else:
-            if self.folder is not None:
-                query_params.append((self._lowercase_first_letter('folder'), self.folder))
-        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
-        if path_parameter in path:
-            path = path.replace(path_parameter, self.storage if self.storage is not None else '')
-        else:
-            if self.storage is not None:
-                query_params.append((self._lowercase_first_letter('storage'), self.storage))
 
         header_params = {}
 
@@ -105,7 +79,7 @@ class GetMapiAttachmentRequest(BaseRequest):
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(
-            ['multipart/form-data'])
+            ['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self._select_header_content_type(
