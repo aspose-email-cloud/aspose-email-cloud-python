@@ -335,6 +335,15 @@ def test_mapi_get_properties(td: TestData):
         name, td.folder, td.storage))
     assert 'IPM.Schedule' in properties.hierarchical_object.name
 
+@pytest.mark.pipeline
+def test_is_disposable_email(td: TestData):
+    disposable = td.email.is_email_address_disposable(
+        requests.IsEmailAddressDisposableRequest('example@mailcatch.com'))
+    assert disposable.value
+    regular = td.email.is_email_address_disposable(
+        requests.IsEmailAddressDisposableRequest('example@gmail.com'))
+    assert not regular.value
+
 def _create_calendar(td, start_date_param=None):
     name = str(uuid.uuid4())+ '.ics'
     start_date = (
