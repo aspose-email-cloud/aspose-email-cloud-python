@@ -56,7 +56,11 @@ class AiBcrImageStorageFile(AiBcrImage):
     }
 
     def __init__(self, is_single: bool = None, file: StorageFileLocation = None):
-        """AiBcrImageStorageFile - a model defined in Swagger"""
+        """
+        Image from storage for recognition             
+        :param is_single (bool) Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+        :param file (StorageFileLocation) Image location             
+        """
         super(AiBcrImageStorageFile, self).__init__()
 
         self._file = None

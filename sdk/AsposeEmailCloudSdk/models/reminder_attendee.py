@@ -51,7 +51,10 @@ class ReminderAttendee(object):
     }
 
     def __init__(self, address: str = None):
-        """ReminderAttendee - a model defined in Swagger"""
+        """
+        Defines an \&quot;Attendee\&quot; within a alarm.
+        :param address (str) Contains the email address.
+        """
 
         self._address = None
         self.discriminator = None

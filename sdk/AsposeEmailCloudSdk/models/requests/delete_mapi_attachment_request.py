@@ -41,6 +41,15 @@ class DeleteMapiAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, name: str, attachment: str, storage: StorageFolderLocation):
+        """
+        Request model for delete_mapi_attachment operation.
+        Initializes a new instance.
+
+        :param name (str) Document file name
+        :param attachment (str) Attachment name or index
+        :param storage (StorageFolderLocation) Document file storage location info
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.attachment = attachment

@@ -42,6 +42,16 @@ class AddContactAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, format: str, name: str, attachment: str, request: AddAttachmentRequest):
+        """
+        Request model for add_contact_attachment operation.
+        Initializes a new instance.
+
+        :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
+        :param name (str) Contact document file name
+        :param attachment (str) Attachment name
+        :param request (AddAttachmentRequest) Add attachment request
+        """
+
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

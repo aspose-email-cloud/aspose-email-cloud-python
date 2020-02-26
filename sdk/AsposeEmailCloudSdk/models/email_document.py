@@ -56,7 +56,11 @@ class EmailDocument(object):
     }
 
     def __init__(self, links: List[Link] = None, document_properties: EmailProperties = None):
-        """EmailDocument - a model defined in Swagger"""
+        """
+        Represents Email document DTO.             
+        :param links (List[Link]) Links that originate from this document.             
+        :param document_properties (EmailProperties) List of document properties.             
+        """
 
         self._links = None
         self._document_properties = None

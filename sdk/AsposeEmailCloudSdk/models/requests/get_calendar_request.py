@@ -41,6 +41,15 @@ class GetCalendarRequest(BaseRequest):
     """
 
     def __init__(self, name: str, folder: str = None, storage: str = None):
+        """
+        Request model for get_calendar operation.
+        Initializes a new instance.
+
+        :param name (str) iCalendar file name in storage
+        :param folder (str) Path to folder in storage
+        :param storage (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.folder = folder

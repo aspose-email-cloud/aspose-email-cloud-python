@@ -57,7 +57,12 @@ class PhoneNumber(object):
     }
 
     def __init__(self, category: EnumWithCustomOfPhoneNumberCategory = None, number: str = None, preferred: bool = None):
-        """PhoneNumber - a model defined in Swagger"""
+        """
+        A phone number.             
+        :param category (EnumWithCustomOfPhoneNumberCategory) Phone number category.             
+        :param number (str) Phone number.             
+        :param preferred (bool) Defines whether phone number is preferred.             
+        """
 
         self._category = None
         self._number = None

@@ -53,7 +53,10 @@ class FilesList(object):
     }
 
     def __init__(self, value: List[StorageFile] = None):
-        """FilesList - a model defined in Swagger"""
+        """
+        Files list
+        :param value (List[StorageFile]) Files and folders contained by folder StorageFile.
+        """
 
         self._value = None
         self.discriminator = None

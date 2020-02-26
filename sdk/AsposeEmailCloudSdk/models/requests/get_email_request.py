@@ -41,6 +41,15 @@ class GetEmailRequest(BaseRequest):
     """
 
     def __init__(self, file_name: str, storage: str = None, folder: str = None):
+        """
+        Request model for get_email operation.
+        Initializes a new instance.
+
+        :param file_name (str) Email document file name in storage
+        :param storage (str) Storage name
+        :param folder (str) Path to folder in storage
+        """
+
         BaseRequest.__init__(self)
         self.file_name = file_name
         self.storage = storage

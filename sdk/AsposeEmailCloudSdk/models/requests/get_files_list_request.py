@@ -40,6 +40,14 @@ class GetFilesListRequest(BaseRequest):
     """
 
     def __init__(self, path: str, storage_name: str = None):
+        """
+        Request model for get_files_list operation.
+        Initializes a new instance.
+
+        :param path (str) Folder path e.g. '/folder'
+        :param storage_name (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.path = path
         self.storage_name = storage_name

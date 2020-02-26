@@ -53,7 +53,10 @@ class ListResponseOfContactDto(object):
     }
 
     def __init__(self, value: List[ContactDto] = None):
-        """ListResponseOfContactDto - a model defined in Swagger"""
+        """
+        
+        :param value (List[ContactDto]) 
+        """
 
         self._value = None
         self.discriminator = None

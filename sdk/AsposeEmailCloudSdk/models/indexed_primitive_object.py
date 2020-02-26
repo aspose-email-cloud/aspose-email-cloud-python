@@ -59,7 +59,13 @@ class IndexedPrimitiveObject(BaseObject):
     }
 
     def __init__(self, name: str = None, type: str = None, index: int = None, value: str = None):
-        """IndexedPrimitiveObject - a model defined in Swagger"""
+        """
+        Simple indexed property             
+        :param name (str) Gets or sets the name of an object.             
+        :param type (str) Property type. Used for deserialization purposes             
+        :param index (int) Index of property in list             
+        :param value (str) Gets or sets the name of a property.             
+        """
         super(IndexedPrimitiveObject, self).__init__()
 
         self._index = None

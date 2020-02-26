@@ -57,7 +57,11 @@ class AiBcrParseOcrDataRq(AiBcrRq):
     }
 
     def __init__(self, options: AiBcrOptions = None, data: List[AiBcrOcrData] = None):
-        """AiBcrParseOcrDataRq - a model defined in Swagger"""
+        """
+        Parse ocr data request             
+        :param options (AiBcrOptions) Recognition options             
+        :param data (List[AiBcrOcrData]) OCR data             
+        """
         super(AiBcrParseOcrDataRq, self).__init__()
 
         self._data = None

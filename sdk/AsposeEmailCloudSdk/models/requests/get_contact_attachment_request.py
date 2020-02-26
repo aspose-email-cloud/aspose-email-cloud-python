@@ -43,6 +43,17 @@ class GetContactAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, format: str, name: str, attachment: str, folder: str = None, storage: str = None):
+        """
+        Request model for get_contact_attachment operation.
+        Initializes a new instance.
+
+        :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
+        :param name (str) Contact document file name
+        :param attachment (str) Attachment name or index
+        :param folder (str) Path to folder in storage
+        :param storage (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

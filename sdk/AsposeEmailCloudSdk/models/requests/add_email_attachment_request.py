@@ -41,6 +41,15 @@ class AddEmailAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, attachment_name: str, file_name: str, request: AddAttachmentRequest):
+        """
+        Request model for add_email_attachment operation.
+        Initializes a new instance.
+
+        :param attachment_name (str) Attachment file name
+        :param file_name (str) Email document file name
+        :param request (AddAttachmentRequest) Storage info to specify location of email document and attachment files
+        """
+
         BaseRequest.__init__(self)
         self.attachment_name = attachment_name
         self.file_name = file_name

@@ -55,7 +55,12 @@ class AiNameMismatch(object):
     }
 
     def __init__(self, category: str = None, similarity: float = None, explanation: str = None):
-        """AiNameMismatch - a model defined in Swagger"""
+        """
+        Names mismatch detailed description             
+        :param category (str) Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+        :param similarity (float) Similarity score             
+        :param explanation (str) Explanation or mismatch subtype             
+        """
 
         self._category = None
         self._similarity = None

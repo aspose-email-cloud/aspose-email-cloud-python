@@ -39,6 +39,13 @@ class AppendEmailMessageRequest(BaseRequest):
     """
 
     def __init__(self, request: AppendEmailBaseRequest):
+        """
+        Request model for append_email_message operation.
+        Initializes a new instance.
+
+        :param request (AppendEmailBaseRequest) Append email request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

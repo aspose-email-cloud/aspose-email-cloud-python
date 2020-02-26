@@ -55,7 +55,12 @@ class ReminderTrigger(object):
     }
 
     def __init__(self, date_time: datetime = None, duration: int = None, related: str = None):
-        """ReminderTrigger - a model defined in Swagger"""
+        """
+        Specifies when an alarm will trigger.
+        :param date_time (datetime) A trigger set to an absolute date/time.
+        :param duration (int) Specifies a relative time in ticks for the trigger of the alarm.             
+        :param related (str) Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
+        """
 
         self._date_time = None
         self._duration = None

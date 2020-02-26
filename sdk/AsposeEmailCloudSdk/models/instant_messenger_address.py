@@ -57,7 +57,12 @@ class InstantMessengerAddress(object):
     }
 
     def __init__(self, category: EnumWithCustomOfInstantMessengerCategory = None, address: str = None, preferred: bool = None):
-        """InstantMessengerAddress - a model defined in Swagger"""
+        """
+        Instant messenger address.             
+        :param category (EnumWithCustomOfInstantMessengerCategory) Address category.             
+        :param address (str) Address.             
+        :param preferred (bool) Determines whether this address is preferred.             
+        """
 
         self._category = None
         self._address = None

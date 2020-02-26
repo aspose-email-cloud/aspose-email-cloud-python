@@ -57,7 +57,12 @@ class StorageFileLocation(StorageFolderLocation):
     }
 
     def __init__(self, storage: str = None, folder_path: str = None, file_name: str = None):
-        """StorageFileLocation - a model defined in Swagger"""
+        """
+        A storage file location information             
+        :param storage (str) A storage name             
+        :param folder_path (str) A path to a folder in specified storage             
+        :param file_name (str) A file name in storage             
+        """
         super(StorageFileLocation, self).__init__()
 
         self._file_name = None

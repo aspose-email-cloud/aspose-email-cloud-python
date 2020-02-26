@@ -42,6 +42,16 @@ class DeleteCalendarPropertyRequest(BaseRequest):
     """
 
     def __init__(self, name: str, member_name: str, index: str, request: StorageFolderLocation):
+        """
+        Request model for delete_calendar_property operation.
+        Initializes a new instance.
+
+        :param name (str) iCalendar file name in storage
+        :param member_name (str) Indexed property name
+        :param index (str) Property index path
+        :param request (StorageFolderLocation) Storage detail to specify iCalendar file location
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.member_name = member_name

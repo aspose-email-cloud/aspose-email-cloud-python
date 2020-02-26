@@ -65,7 +65,13 @@ class AttachmentBase(object):
     }
 
     def __init__(self, base64_data: str = None, content_id: str = None, content_type: ContentType = None, headers: Dict[str, str] = None):
-        """AttachmentBase - a model defined in Swagger"""
+        """
+        AttachmentBase class             
+        :param base64_data (str) Attachment file content as Base64 string.             
+        :param content_id (str) Attachment content id             
+        :param content_type (ContentType) Content type             
+        :param headers (Dict[str, str]) Attachment headers.             
+        """
 
         self._base64_data = None
         self._content_id = None

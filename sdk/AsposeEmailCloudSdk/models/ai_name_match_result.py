@@ -55,7 +55,11 @@ class AiNameMatchResult(object):
     }
 
     def __init__(self, similarity: float = None, mismatches: List[AiNameMismatch] = None):
-        """AiNameMatchResult - a model defined in Swagger"""
+        """
+        Two names match result             
+        :param similarity (float) Similarity score             
+        :param mismatches (List[AiNameMismatch]) Detailed description of mismatches             
+        """
 
         self._similarity = None
         self._mismatches = None

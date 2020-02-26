@@ -70,7 +70,16 @@ class EmailAccountRequest(object):
     }
 
     def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None):
-        """EmailAccountRequest - a model defined in Swagger"""
+        """
+        Email account settings request             
+        :param host (str) Email account host             
+        :param port (int) Email account port             
+        :param login (str) Email account login             
+        :param security_options (str) Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :param description (str) Email account description             
+        :param storage_file (StorageFileLocation) A storage file location info to store email account             
+        """
 
         self._host = None
         self._port = None

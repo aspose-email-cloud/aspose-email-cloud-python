@@ -57,7 +57,12 @@ class Url(object):
     }
 
     def __init__(self, category: EnumWithCustomOfUrlCategory = None, preferred: bool = None, href: str = None):
-        """Url - a model defined in Swagger"""
+        """
+        Url and its category.             
+        :param category (EnumWithCustomOfUrlCategory) Url category.             
+        :param preferred (bool) Defines whether url is preferred.             
+        :param href (str) URL.             
+        """
 
         self._category = None
         self._preferred = None

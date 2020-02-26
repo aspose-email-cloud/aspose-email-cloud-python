@@ -88,6 +88,12 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**delete_mapi_attachment_async**](EmailApi.md#delete_mapi_attachment_async) | **DELETE** /email/Mapi/{name}/attachments/{attachment} | Remove attachment from document             
 *EmailApi* | [**delete_mapi_properties**](EmailApi.md#delete_mapi_properties) | **DELETE** /email/Mapi/{name}/properties | Delete document properties             
 *EmailApi* | [**delete_mapi_properties_async**](EmailApi.md#delete_mapi_properties_async) | **DELETE** /email/Mapi/{name}/properties | Delete document properties             
+*EmailApi* | [**discover_email_config**](EmailApi.md#discover_email_config) | **GET** /email/config/discover | Discover email accounts by email address. Does not validate discovered accounts.             
+*EmailApi* | [**discover_email_config_async**](EmailApi.md#discover_email_config_async) | **GET** /email/config/discover | Discover email accounts by email address. Does not validate discovered accounts.             
+*EmailApi* | [**discover_email_config_oauth**](EmailApi.md#discover_email_config_oauth) | **POST** /email/config/discover/oauth | Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+*EmailApi* | [**discover_email_config_oauth_async**](EmailApi.md#discover_email_config_oauth_async) | **POST** /email/config/discover/oauth | Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+*EmailApi* | [**discover_email_config_password**](EmailApi.md#discover_email_config_password) | **POST** /email/config/discover/password | Discover email accounts by email address. Validates discovered accounts using login and password.             
+*EmailApi* | [**discover_email_config_password_async**](EmailApi.md#discover_email_config_password_async) | **POST** /email/config/discover/password | Discover email accounts by email address. Validates discovered accounts using login and password.             
 *EmailApi* | [**download_file**](EmailApi.md#download_file) | **GET** /email/storage/file/{path} | Download file
 *EmailApi* | [**download_file_async**](EmailApi.md#download_file_async) | **GET** /email/storage/file/{path} | Download file
 *EmailApi* | [**fetch_email_message**](EmailApi.md#fetch_email_message) | **GET** /email/client/Fetch | Fetch message mime from email account             
@@ -219,6 +225,8 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.CreateEmailRequest](CreateEmailRequest.md)
  - [AsposeEmailCloudSdk.models.CustomerEvent](CustomerEvent.md)
  - [AsposeEmailCloudSdk.models.DiscUsage](DiscUsage.md)
+ - [AsposeEmailCloudSdk.models.DiscoverEmailConfigRq](DiscoverEmailConfigRq.md)
+ - [AsposeEmailCloudSdk.models.EmailAccountConfig](EmailAccountConfig.md)
  - [AsposeEmailCloudSdk.models.EmailAccountRequest](EmailAccountRequest.md)
  - [AsposeEmailCloudSdk.models.EmailAddress](EmailAddress.md)
  - [AsposeEmailCloudSdk.models.EmailDocument](EmailDocument.md)
@@ -248,6 +256,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.ListResponseOfAiNameExtracted](ListResponseOfAiNameExtracted.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfAiNameGenderHypothesis](ListResponseOfAiNameGenderHypothesis.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfContactDto](ListResponseOfContactDto.md)
+ - [AsposeEmailCloudSdk.models.ListResponseOfEmailAccountConfig](ListResponseOfEmailAccountConfig.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfEmailDto](ListResponseOfEmailDto.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfHierarchicalObject](ListResponseOfHierarchicalObject.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md)
@@ -260,6 +269,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.MailAddress](MailAddress.md)
  - [AsposeEmailCloudSdk.models.MailServerFolder](MailServerFolder.md)
  - [AsposeEmailCloudSdk.models.MimeResponse](MimeResponse.md)
+ - [AsposeEmailCloudSdk.models.NameValuePair](NameValuePair.md)
  - [AsposeEmailCloudSdk.models.ObjectExist](ObjectExist.md)
  - [AsposeEmailCloudSdk.models.PhoneNumber](PhoneNumber.md)
  - [AsposeEmailCloudSdk.models.PostalAddress](PostalAddress.md)
@@ -291,6 +301,9 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.CreateFolderBaseRequest](CreateFolderBaseRequest.md)
  - [AsposeEmailCloudSdk.models.DeleteFolderBaseRequest](DeleteFolderBaseRequest.md)
  - [AsposeEmailCloudSdk.models.DeleteMessageBaseRequest](DeleteMessageBaseRequest.md)
+ - [AsposeEmailCloudSdk.models.DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md)
+ - [AsposeEmailCloudSdk.models.DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md)
+ - [AsposeEmailCloudSdk.models.EmailAccountConfigList](EmailAccountConfigList.md)
  - [AsposeEmailCloudSdk.models.EmailDtoList](EmailDtoList.md)
  - [AsposeEmailCloudSdk.models.FileVersion](FileVersion.md)
  - [AsposeEmailCloudSdk.models.HierarchicalObject](HierarchicalObject.md)

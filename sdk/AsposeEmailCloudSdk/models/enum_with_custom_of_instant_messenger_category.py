@@ -53,7 +53,11 @@ class EnumWithCustomOfInstantMessengerCategory(object):
     }
 
     def __init__(self, value: str = None, description: str = None):
-        """EnumWithCustomOfInstantMessengerCategory - a model defined in Swagger"""
+        """
+        
+        :param value (str) Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+        :param description (str) 
+        """
 
         self._value = None
         self._description = None

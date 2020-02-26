@@ -43,6 +43,17 @@ class ListEmailFoldersRequest(BaseRequest):
     """
 
     def __init__(self, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, parent_folder: str = None):
+        """
+        Request model for list_email_folders operation.
+        Initializes a new instance.
+
+        :param first_account (str) Email account
+        :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+        :param storage (str) Storage name where account file(s) located
+        :param storage_folder (str) Folder in storage where account file(s) located
+        :param parent_folder (str) Folder in which subfolders should be listed
+        """
+
         BaseRequest.__init__(self)
         self.first_account = first_account
         self.second_account = second_account

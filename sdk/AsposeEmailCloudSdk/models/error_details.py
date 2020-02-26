@@ -53,7 +53,11 @@ class ErrorDetails(object):
     }
 
     def __init__(self, request_id: str = None, _date: datetime = None):
-        """ErrorDetails - a model defined in Swagger"""
+        """
+        The error details
+        :param request_id (str) The request id
+        :param _date (datetime) Date
+        """
 
         self._request_id = None
         self.__date = None

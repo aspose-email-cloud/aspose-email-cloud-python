@@ -55,7 +55,11 @@ class AiNameExtracted(object):
     }
 
     def __init__(self, name: List[AiNameExtractedComponent] = None, score: float = None):
-        """AiNameExtracted - a model defined in Swagger"""
+        """
+        Extracted name             
+        :param name (List[AiNameExtractedComponent]) Extracted name components             
+        :param score (float) Extracted name score             
+        """
 
         self._name = None
         self._score = None

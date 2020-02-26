@@ -95,7 +95,30 @@ class CalendarDto(object):
     }
 
     def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None):
-        """CalendarDto - a model defined in Swagger"""
+        """
+        iCalendar document representation.             
+        :param attachments (List[Attachment]) Document attachments.
+        :param attendees (List[MailAddress]) Event attendees.
+        :param description (str) Description.
+        :param end_date (datetime) End date.
+        :param end_time_zone (str) End time zone.
+        :param flags (List[str]) Appointment flags.
+        :param is_description_html (bool) Indicates if description is in HTML format.
+        :param location (str) Location.
+        :param method (str) Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+        :param microsoft_busy_status (str) Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        :param microsoft_intended_status (str) Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        :param optional_attendees (List[MailAddress]) Optional attendees.             
+        :param organizer (MailAddress) Event organizer.             
+        :param recurrence_string (str) String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
+        :param reminders (List[CalendarReminder]) Reminders.
+        :param sequence_id (str) The sequence id. Read only.
+        :param start_date (datetime) Start date.
+        :param start_time_zone (str) Start time zone.
+        :param status (str) Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+        :param summary (str) Summary.
+        :param transparency (str) Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+        """
 
         self._attachments = None
         self._attendees = None

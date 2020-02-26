@@ -55,7 +55,11 @@ class AddAttachmentRequest(object):
     }
 
     def __init__(self, document_folder: StorageFolderLocation = None, attachment_folder: StorageFolderLocation = None):
-        """AddAttachmentRequest - a model defined in Swagger"""
+        """
+        Add attachment request             
+        :param document_folder (StorageFolderLocation) Storage folder location of document             
+        :param attachment_folder (StorageFolderLocation) Storage folder location of an attachment             
+        """
 
         self._document_folder = None
         self._attachment_folder = None

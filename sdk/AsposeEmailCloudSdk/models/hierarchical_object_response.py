@@ -56,7 +56,11 @@ class HierarchicalObjectResponse(object):
     }
 
     def __init__(self, hierarchical_object: HierarchicalObject = None, storage_file: StorageFileLocation = None):
-        """HierarchicalObjectResponse - a model defined in Swagger"""
+        """
+        Document represented as hierarchical set of properties response             
+        :param hierarchical_object (HierarchicalObject) Document properties             
+        :param storage_file (StorageFileLocation) Document location in storage             
+        """
 
         self._hierarchical_object = None
         self._storage_file = None

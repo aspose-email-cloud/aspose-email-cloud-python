@@ -42,6 +42,16 @@ class GetMapiListRequest(BaseRequest):
     """
 
     def __init__(self, folder: str = None, storage: str = None, items_per_page: int = None, page_number: int = None):
+        """
+        Request model for get_mapi_list operation.
+        Initializes a new instance.
+
+        :param folder (str) Path to folder in storage
+        :param storage (str) Storage name
+        :param items_per_page (int) Count of items on page
+        :param page_number (int) Page number
+        """
+
         BaseRequest.__init__(self)
         self.folder = folder
         self.storage = storage

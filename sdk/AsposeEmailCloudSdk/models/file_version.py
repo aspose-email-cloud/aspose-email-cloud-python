@@ -65,7 +65,16 @@ class FileVersion(StorageFile):
     }
 
     def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None, version_id: str = None, is_latest: bool = None):
-        """FileVersion - a model defined in Swagger"""
+        """
+        File Version
+        :param name (str) File or folder name.
+        :param is_folder (bool) True if it is a folder.
+        :param modified_date (datetime) File or folder last modified DateTime.
+        :param size (int) File or folder size.
+        :param path (str) File or folder path.
+        :param version_id (str) File Version ID.
+        :param is_latest (bool) Specifies whether the file is (true) or is not (false) the latest version of an file.
+        """
         super(FileVersion, self).__init__()
 
         self._version_id = None

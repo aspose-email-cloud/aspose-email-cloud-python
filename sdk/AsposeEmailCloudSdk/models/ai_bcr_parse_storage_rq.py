@@ -60,7 +60,12 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
     }
 
     def __init__(self, options: AiBcrOptions = None, images: List[AiBcrImageStorageFile] = None, out_folder: StorageFolderLocation = None):
-        """AiBcrParseStorageRq - a model defined in Swagger"""
+        """
+        Parse business card images from Storage request             
+        :param options (AiBcrOptions) Recognition options             
+        :param images (List[AiBcrImageStorageFile]) List of images with business cards             
+        :param out_folder (StorageFolderLocation) Parse output folder location on storage             
+        """
         super(AiBcrParseStorageRq, self).__init__()
 
         self._out_folder = None

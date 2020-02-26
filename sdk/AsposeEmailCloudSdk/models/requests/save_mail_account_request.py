@@ -39,6 +39,13 @@ class SaveMailAccountRequest(BaseRequest):
     """
 
     def __init__(self, request: SaveEmailAccountRequest):
+        """
+        Request model for save_mail_account operation.
+        Initializes a new instance.
+
+        :param request (SaveEmailAccountRequest) Email account information
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

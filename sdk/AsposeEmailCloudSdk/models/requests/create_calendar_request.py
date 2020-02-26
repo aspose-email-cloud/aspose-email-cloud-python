@@ -40,6 +40,14 @@ class CreateCalendarRequest(BaseRequest):
     """
 
     def __init__(self, name: str, request: HierarchicalObjectRequest):
+        """
+        Request model for create_calendar operation.
+        Initializes a new instance.
+
+        :param name (str) Calendar file name in storage
+        :param request (HierarchicalObjectRequest) 
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.request = request

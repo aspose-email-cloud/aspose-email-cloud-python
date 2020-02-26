@@ -60,7 +60,13 @@ class SendEmailMimeBaseRequest(AccountBaseRequest):
     }
 
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, base64_mime_message: str = None):
-        """SendEmailMimeBaseRequest - a model defined in Swagger"""
+        """
+        Send email MIME request             
+        :param first_account (str) First account storage file name for receiving emails (or universal one)             
+        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param storage_folder (StorageFolderLocation) Storage folder location of account files             
+        :param base64_mime_message (str) Email document serialized as MIME             
+        """
         super(SendEmailMimeBaseRequest, self).__init__()
 
         self._base64_mime_message = None

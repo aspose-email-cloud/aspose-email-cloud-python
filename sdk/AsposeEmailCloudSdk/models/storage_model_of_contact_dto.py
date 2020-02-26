@@ -56,7 +56,11 @@ class StorageModelOfContactDto(object):
     }
 
     def __init__(self, storage_file: StorageFileLocation = None, value: ContactDto = None):
-        """StorageModelOfContactDto - a model defined in Swagger"""
+        """
+        
+        :param storage_file (StorageFileLocation) 
+        :param value (ContactDto) 
+        """
 
         self._storage_file = None
         self._value = None

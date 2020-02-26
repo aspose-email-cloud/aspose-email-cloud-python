@@ -57,7 +57,10 @@ class ListResponseOfStorageModelOfCalendarDto(object):
     }
 
     def __init__(self, value: List[StorageModelOfCalendarDto] = None):
-        """ListResponseOfStorageModelOfCalendarDto - a model defined in Swagger"""
+        """
+        
+        :param value (List[StorageModelOfCalendarDto]) 
+        """
 
         self._value = None
         self.discriminator = 'Type'

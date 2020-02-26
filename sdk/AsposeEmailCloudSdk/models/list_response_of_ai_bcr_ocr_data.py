@@ -53,7 +53,10 @@ class ListResponseOfAiBcrOcrData(object):
     }
 
     def __init__(self, value: List[AiBcrOcrData] = None):
-        """ListResponseOfAiBcrOcrData - a model defined in Swagger"""
+        """
+        
+        :param value (List[AiBcrOcrData]) 
+        """
 
         self._value = None
         self.discriminator = None

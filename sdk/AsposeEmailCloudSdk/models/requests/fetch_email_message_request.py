@@ -43,6 +43,17 @@ class FetchEmailMessageRequest(BaseRequest):
     """
 
     def __init__(self, message_id: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None):
+        """
+        Request model for fetch_email_message operation.
+        Initializes a new instance.
+
+        :param message_id (str) Message identifier
+        :param first_account (str) Email account
+        :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+        :param storage (str) Storage name where account file(s) located
+        :param storage_folder (str) Folder in storage where account file(s) located
+        """
+
         BaseRequest.__init__(self)
         self.message_id = message_id
         self.first_account = first_account

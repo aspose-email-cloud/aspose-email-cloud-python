@@ -59,7 +59,14 @@ class AiNameCulturalContext(object):
     }
 
     def __init__(self, language: str = None, location: str = None, script: str = None, encoding: str = None, style: str = None):
-        """AiNameCulturalContext - a model defined in Swagger"""
+        """
+        AiName cultural context             
+        :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
+        :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
+        :param script (str) A writing system code; starts with the ISO-15924 script name             
+        :param encoding (str) A character encoding name             
+        :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        """
 
         self._language = None
         self._location = None

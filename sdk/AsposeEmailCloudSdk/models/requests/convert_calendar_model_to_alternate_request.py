@@ -39,6 +39,13 @@ class ConvertCalendarModelToAlternateRequest(BaseRequest):
     """
 
     def __init__(self, rq: CalendarDtoAlternateRq):
+        """
+        Request model for convert_calendar_model_to_alternate operation.
+        Initializes a new instance.
+
+        :param rq (CalendarDtoAlternateRq) iCalendar to AlternateView request
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

@@ -41,6 +41,15 @@ class AddCalendarAttachmentRequest(BaseRequest):
     """
 
     def __init__(self, name: str, attachment: str, request: AddAttachmentRequest):
+        """
+        Request model for add_calendar_attachment operation.
+        Initializes a new instance.
+
+        :param name (str) Calendar file name in storage
+        :param attachment (str) Attachment file name in storage
+        :param request (AddAttachmentRequest) Storage name and folder path for calendar and attachment files
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.attachment = attachment

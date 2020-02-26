@@ -39,6 +39,13 @@ class AppendEmailModelMessageRequest(BaseRequest):
     """
 
     def __init__(self, rq: AppendEmailModelRq):
+        """
+        Request model for append_email_model_message operation.
+        Initializes a new instance.
+
+        :param rq (AppendEmailModelRq) Append email request
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

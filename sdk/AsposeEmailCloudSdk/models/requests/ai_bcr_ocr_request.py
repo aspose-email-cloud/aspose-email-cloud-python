@@ -39,6 +39,13 @@ class AiBcrOcrRequest(BaseRequest):
     """
 
     def __init__(self, rq: AiBcrBase64Rq):
+        """
+        Request model for ai_bcr_ocr operation.
+        Initializes a new instance.
+
+        :param rq (AiBcrBase64Rq) Request with base64 images data
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

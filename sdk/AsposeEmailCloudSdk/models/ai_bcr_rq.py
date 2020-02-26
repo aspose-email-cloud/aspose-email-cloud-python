@@ -60,7 +60,10 @@ class AiBcrRq(object):
     }
 
     def __init__(self, options: AiBcrOptions = None):
-        """AiBcrRq - a model defined in Swagger"""
+        """
+        Business card recognition request             
+        :param options (AiBcrOptions) Recognition options             
+        """
 
         self._options = None
         self.discriminator = 'Type'

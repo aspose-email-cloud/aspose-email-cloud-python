@@ -57,7 +57,11 @@ class AiBcrBase64Rq(AiBcrRq):
     }
 
     def __init__(self, options: AiBcrOptions = None, images: List[AiBcrBase64Image] = None):
-        """AiBcrBase64Rq - a model defined in Swagger"""
+        """
+        Parse business card image request             
+        :param options (AiBcrOptions) Recognition options             
+        :param images (List[AiBcrBase64Image]) Images to recognize             
+        """
         super(AiBcrBase64Rq, self).__init__()
 
         self._images = None

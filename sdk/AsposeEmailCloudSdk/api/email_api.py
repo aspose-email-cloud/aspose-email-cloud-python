@@ -903,6 +903,66 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
+    def discover_email_config(self, request: requests.DiscoverEmailConfigRequest)  -> EmailAccountConfigList:
+        """Discover email accounts by email address. Does not validate discovered accounts.             
+
+
+        :param request DiscoverEmailConfigRequest object with parameters
+        :return: EmailAccountConfigList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailAccountConfigList')
+
+    def discover_email_config_async(self, request: requests.DiscoverEmailConfigRequest) -> multiprocessing.pool.AsyncResult:
+        """Discover email accounts by email address. Does not validate discovered accounts.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request DiscoverEmailConfigRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailAccountConfigList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailAccountConfigList')
+
+    def discover_email_config_oauth(self, request: requests.DiscoverEmailConfigOauthRequest)  -> EmailAccountConfigList:
+        """Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+
+
+        :param request DiscoverEmailConfigOauthRequest object with parameters
+        :return: EmailAccountConfigList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', 'EmailAccountConfigList')
+
+    def discover_email_config_oauth_async(self, request: requests.DiscoverEmailConfigOauthRequest) -> multiprocessing.pool.AsyncResult:
+        """Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request DiscoverEmailConfigOauthRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailAccountConfigList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', 'EmailAccountConfigList')
+
+    def discover_email_config_password(self, request: requests.DiscoverEmailConfigPasswordRequest)  -> EmailAccountConfigList:
+        """Discover email accounts by email address. Validates discovered accounts using login and password.             
+
+
+        :param request DiscoverEmailConfigPasswordRequest object with parameters
+        :return: EmailAccountConfigList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'POST', 'EmailAccountConfigList')
+
+    def discover_email_config_password_async(self, request: requests.DiscoverEmailConfigPasswordRequest) -> multiprocessing.pool.AsyncResult:
+        """Discover email accounts by email address. Validates discovered accounts using login and password.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request DiscoverEmailConfigPasswordRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailAccountConfigList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'POST', 'EmailAccountConfigList')
+
     def download_file(self, request: requests.DownloadFileRequest)  -> str:
         """Download file
 

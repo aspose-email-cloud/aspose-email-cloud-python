@@ -51,7 +51,10 @@ class StorageExist(object):
     }
 
     def __init__(self, exists: bool = None):
-        """StorageExist - a model defined in Swagger"""
+        """
+        Storage exists
+        :param exists (bool) Shows that the storage exists.             
+        """
 
         self._exists = None
         self.discriminator = None

@@ -73,7 +73,20 @@ class PostalAddress(object):
     }
 
     def __init__(self, address: str = None, category: EnumWithCustomOfPostalAddressCategory = None, city: str = None, country: str = None, country_code: str = None, is_mailing_address: bool = None, postal_code: str = None, post_office_box: str = None, preferred: bool = None, state_or_province: str = None, street: str = None):
-        """PostalAddress - a model defined in Swagger"""
+        """
+        A postal address             
+        :param address (str) Address.             
+        :param category (EnumWithCustomOfPostalAddressCategory) Address category.             
+        :param city (str) Address's city.             
+        :param country (str) Address's country.             
+        :param country_code (str) Country code.             
+        :param is_mailing_address (bool) Defines whether address may be used for mailing.             
+        :param postal_code (str) Postal code.             
+        :param post_office_box (str) Post Office box.             
+        :param preferred (bool) Defines whether postal address is preferred.             
+        :param state_or_province (str) Address's region.             
+        :param street (str) Address's street.             
+        """
 
         self._address = None
         self._category = None

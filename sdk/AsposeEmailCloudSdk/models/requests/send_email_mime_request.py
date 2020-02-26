@@ -39,6 +39,13 @@ class SendEmailMimeRequest(BaseRequest):
     """
 
     def __init__(self, request: SendEmailMimeBaseRequest):
+        """
+        Request model for send_email_mime operation.
+        Initializes a new instance.
+
+        :param request (SendEmailMimeBaseRequest) Send email request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

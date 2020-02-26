@@ -56,7 +56,11 @@ class CreateEmailRequest(object):
     }
 
     def __init__(self, email_document: EmailDocument = None, storage_folder: StorageFolderLocation = None):
-        """CreateEmailRequest - a model defined in Swagger"""
+        """
+        Create email document request             
+        :param email_document (EmailDocument) An email document that should be created             
+        :param storage_folder (StorageFolderLocation) Email document location in storage             
+        """
 
         self._email_document = None
         self._storage_folder = None

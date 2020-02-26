@@ -55,7 +55,12 @@ class MailAddress(object):
     }
 
     def __init__(self, display_name: str = None, address: str = None, participation_status: str = None):
-        """MailAddress - a model defined in Swagger"""
+        """
+        Represents the address of a message.
+        :param display_name (str) Display name             
+        :param address (str) Address             
+        :param participation_status (str) Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        """
 
         self._display_name = None
         self._address = None

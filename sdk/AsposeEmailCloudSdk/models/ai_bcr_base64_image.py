@@ -55,7 +55,11 @@ class AiBcrBase64Image(AiBcrImage):
     }
 
     def __init__(self, is_single: bool = None, base64_data: str = None):
-        """AiBcrBase64Image - a model defined in Swagger"""
+        """
+        Image to recognize             
+        :param is_single (bool) Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+        :param base64_data (str) Image data in base64             
+        """
         super(AiBcrBase64Image, self).__init__()
 
         self._base64_data = None

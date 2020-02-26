@@ -53,7 +53,10 @@ class EmailDocumentResponse(object):
     }
 
     def __init__(self, document: EmailDocument = None):
-        """EmailDocumentResponse - a model defined in Swagger"""
+        """
+        An email document response             
+        :param document (EmailDocument) An email document requested             
+        """
 
         self._document = None
         self.discriminator = None

@@ -57,7 +57,12 @@ class CalendarDtoAlternateRq(object):
     }
 
     def __init__(self, value: CalendarDto = None, action: str = None, sequence_id: str = None):
-        """CalendarDtoAlternateRq - a model defined in Swagger"""
+        """
+        iCalendar document as AlternateView request             
+        :param value (CalendarDto) iCalendar document model             
+        :param action (str) iCalendar actions. Enum, available values: Create, Update, Cancel
+        :param sequence_id (str) iCalendar sequence id             
+        """
 
         self._value = None
         self._action = None

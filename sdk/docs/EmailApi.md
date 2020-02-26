@@ -3090,6 +3090,201 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="discover_email_config"></a>
+# **discover_email_config**
+> discover_email_config(self, discover_email_config_request)
+
+Discover email accounts by email address. Does not validate discovered accounts.             
+
+### Return type
+
+[**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    address, 
+    fast_processing=fast_processing)
+```
+
+### Usage
+```python
+EmailApi.discover_email_config(
+    DiscoverEmailConfigRequest(
+        address, 
+        fast_processing=fast_processing))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **str**| Email address | 
+ **fast_processing** | **bool**| Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned              | [optional] [default to false]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="discover_email_config_async"></a>
+# **discover_email_config_async**
+> discover_email_config_async(self, discover_email_config_request)
+
+Discover email accounts by email address. Does not validate discovered accounts.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+discover_email_config_async(request).get() returns [**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    address, 
+    fast_processing=fast_processing)
+```
+
+### Usage
+```python
+EmailApi.discover_email_config_async(
+    DiscoverEmailConfigRequest(
+        address, 
+        fast_processing=fast_processing))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **str**| Email address | 
+ **fast_processing** | **bool**| Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned              | [optional] [default to false]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="discover_email_config_oauth"></a>
+# **discover_email_config_oauth**
+> discover_email_config_oauth(self, discover_email_config_oauth_request)
+
+Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+
+### Return type
+
+[**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.discover_email_config_oauth(
+    DiscoverEmailConfigOauthRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**DiscoverEmailConfigOauth**](DiscoverEmailConfigOauth.md)| Discover email configuration request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="discover_email_config_oauth_async"></a>
+# **discover_email_config_oauth_async**
+> discover_email_config_oauth_async(self, discover_email_config_oauth_request)
+
+Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+discover_email_config_oauth_async(request).get() returns [**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.discover_email_config_oauth_async(
+    DiscoverEmailConfigOauthRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**DiscoverEmailConfigOauth**](DiscoverEmailConfigOauth.md)| Discover email configuration request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="discover_email_config_password"></a>
+# **discover_email_config_password**
+> discover_email_config_password(self, discover_email_config_password_request)
+
+Discover email accounts by email address. Validates discovered accounts using login and password.             
+
+### Return type
+
+[**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.discover_email_config_password(
+    DiscoverEmailConfigPasswordRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**DiscoverEmailConfigPassword**](DiscoverEmailConfigPassword.md)| Discover email configuration request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="discover_email_config_password_async"></a>
+# **discover_email_config_password_async**
+> discover_email_config_password_async(self, discover_email_config_password_request)
+
+Discover email accounts by email address. Validates discovered accounts using login and password.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+discover_email_config_password_async(request).get() returns [**EmailAccountConfigList**](EmailAccountConfigList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.discover_email_config_password_async(
+    DiscoverEmailConfigPasswordRequest(
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rq** | [**DiscoverEmailConfigPassword**](DiscoverEmailConfigPassword.md)| Discover email configuration request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="download_file"></a>
 # **download_file**
 > download_file(self, download_file_request)

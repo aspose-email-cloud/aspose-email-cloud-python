@@ -42,6 +42,16 @@ class GetCalendarModelListRequest(BaseRequest):
     """
 
     def __init__(self, folder: str, items_per_page: int = None, page_number: int = None, storage: str = None):
+        """
+        Request model for get_calendar_model_list operation.
+        Initializes a new instance.
+
+        :param folder (str) Path to folder in storage
+        :param items_per_page (int) Count of items on page
+        :param page_number (int) Page number
+        :param storage (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.folder = folder
         self.items_per_page = items_per_page

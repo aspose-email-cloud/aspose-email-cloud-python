@@ -57,7 +57,13 @@ class AiNameComponent(object):
     }
 
     def __init__(self, value: str = None, category: str = None, score: float = None, position: int = None):
-        """AiNameComponent - a model defined in Swagger"""
+        """
+        Parsed name component             
+        :param value (str) Component value             
+        :param category (str) Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
+        :param score (float) Score from 0.0 to 1.0             
+        :param position (int) Component position from 0             
+        """
 
         self._value = None
         self._category = None

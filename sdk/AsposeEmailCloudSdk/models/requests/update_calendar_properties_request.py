@@ -40,6 +40,14 @@ class UpdateCalendarPropertiesRequest(BaseRequest):
     """
 
     def __init__(self, name: str, request: HierarchicalObjectRequest):
+        """
+        Request model for update_calendar_properties operation.
+        Initializes a new instance.
+
+        :param name (str) iCalendar file name in storage
+        :param request (HierarchicalObjectRequest) Calendar properties update request
+        """
+
         BaseRequest.__init__(self)
         self.name = name
         self.request = request

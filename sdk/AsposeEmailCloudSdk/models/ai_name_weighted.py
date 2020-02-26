@@ -53,7 +53,11 @@ class AiNameWeighted(object):
     }
 
     def __init__(self, name: str = None, score: float = None):
-        """AiNameWeighted - a model defined in Swagger"""
+        """
+        Name with score             
+        :param name (str) Name             
+        :param score (float) Score of name             
+        """
 
         self._name = None
         self._score = None

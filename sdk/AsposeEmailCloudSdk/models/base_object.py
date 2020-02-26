@@ -60,7 +60,11 @@ class BaseObject(object):
     }
 
     def __init__(self, name: str = None, type: str = None):
-        """BaseObject - a model defined in Swagger"""
+        """
+        Base property object             
+        :param name (str) Gets or sets the name of an object.             
+        :param type (str) Property type. Used for deserialization purposes             
+        """
 
         self._name = None
         self._type = self.__class__.__name__

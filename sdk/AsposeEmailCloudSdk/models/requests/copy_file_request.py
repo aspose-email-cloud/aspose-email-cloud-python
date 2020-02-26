@@ -43,6 +43,17 @@ class CopyFileRequest(BaseRequest):
     """
 
     def __init__(self, src_path: str, dest_path: str, src_storage_name: str = None, dest_storage_name: str = None, version_id: str = None):
+        """
+        Request model for copy_file operation.
+        Initializes a new instance.
+
+        :param src_path (str) Source file path e.g. '/folder/file.ext'
+        :param dest_path (str) Destination file path
+        :param src_storage_name (str) Source storage name
+        :param dest_storage_name (str) Destination storage name
+        :param version_id (str) File version ID to copy
+        """
+
         BaseRequest.__init__(self)
         self.src_path = src_path
         self.dest_path = dest_path

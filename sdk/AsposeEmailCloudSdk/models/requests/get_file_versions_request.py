@@ -40,6 +40,14 @@ class GetFileVersionsRequest(BaseRequest):
     """
 
     def __init__(self, path: str, storage_name: str = None):
+        """
+        Request model for get_file_versions operation.
+        Initializes a new instance.
+
+        :param path (str) File path e.g. '/file.ext'
+        :param storage_name (str) Storage name
+        """
+
         BaseRequest.__init__(self)
         self.path = path
         self.storage_name = storage_name

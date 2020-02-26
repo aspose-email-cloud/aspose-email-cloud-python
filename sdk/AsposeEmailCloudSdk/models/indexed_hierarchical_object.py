@@ -59,7 +59,13 @@ class IndexedHierarchicalObject(BaseObject):
     }
 
     def __init__(self, name: str = None, type: str = None, index: int = None, internal_properties: List[BaseObject] = None):
-        """IndexedHierarchicalObject - a model defined in Swagger"""
+        """
+        Indexed hierarchical property             
+        :param name (str) Gets or sets the name of an object.             
+        :param type (str) Property type. Used for deserialization purposes             
+        :param index (int) Index of property in list             
+        :param internal_properties (List[BaseObject]) List of internal properties             
+        """
         super(IndexedHierarchicalObject, self).__init__()
 
         self._index = None

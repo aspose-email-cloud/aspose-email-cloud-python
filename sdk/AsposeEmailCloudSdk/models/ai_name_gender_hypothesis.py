@@ -53,7 +53,11 @@ class AiNameGenderHypothesis(object):
     }
 
     def __init__(self, gender: str = None, score: float = None):
-        """AiNameGenderHypothesis - a model defined in Swagger"""
+        """
+        Name gender hypothesis             
+        :param gender (str) Recognized name gender. Enum, available values: Male, Female, Unknown
+        :param score (float) Hypothesis score             
+        """
 
         self._gender = None
         self._score = None

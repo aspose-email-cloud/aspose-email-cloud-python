@@ -59,7 +59,13 @@ class AiBcrOcrData(object):
     }
 
     def __init__(self, id: str = None, image: str = None, details: Dict[str, str] = None, data: List[AiBcrOcrDataPart] = None):
-        """AiBcrOcrData - a model defined in Swagger"""
+        """
+        Image OCR results             
+        :param id (str) Image identifier             
+        :param image (str) Image with possible pre-processing in Base64             
+        :param details (Dict[str, str]) Additional details from OCR engine             
+        :param data (List[AiBcrOcrDataPart]) OCR results             
+        """
 
         self._id = None
         self._image = None

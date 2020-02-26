@@ -54,7 +54,10 @@ class ContactDtoList(ListResponseOfStorageModelOfContactDto):
     }
 
     def __init__(self, value: List[StorageModelOfContactDto] = None):
-        """ContactDtoList - a model defined in Swagger"""
+        """
+        List of contact documents             
+        :param value (List[StorageModelOfContactDto]) 
+        """
         super(ContactDtoList, self).__init__()
         self.discriminator = None
 

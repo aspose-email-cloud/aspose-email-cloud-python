@@ -57,7 +57,11 @@ class AiBcrStorageImageRq(AiBcrRq):
     }
 
     def __init__(self, options: AiBcrOptions = None, images: List[AiBcrImageStorageFile] = None):
-        """AiBcrStorageImageRq - a model defined in Swagger"""
+        """
+        Business card images from storage for recognition             
+        :param options (AiBcrOptions) Recognition options             
+        :param images (List[AiBcrImageStorageFile]) List of images with business cards             
+        """
         super(AiBcrStorageImageRq, self).__init__()
 
         self._images = None

@@ -39,6 +39,13 @@ class AiBcrParseStorageRequest(BaseRequest):
     """
 
     def __init__(self, rq: AiBcrParseStorageRq):
+        """
+        Request model for ai_bcr_parse_storage operation.
+        Initializes a new instance.
+
+        :param rq (AiBcrParseStorageRq) Request with images located on storage
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

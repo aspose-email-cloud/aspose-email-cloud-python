@@ -39,6 +39,13 @@ class AiBcrOcrStorageRequest(BaseRequest):
     """
 
     def __init__(self, rq: AiBcrStorageImageRq):
+        """
+        Request model for ai_bcr_ocr_storage operation.
+        Initializes a new instance.
+
+        :param rq (AiBcrStorageImageRq) Request with images located on storage
+        """
+
         BaseRequest.__init__(self)
         self.rq = rq
 

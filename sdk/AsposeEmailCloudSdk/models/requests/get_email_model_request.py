@@ -42,6 +42,16 @@ class GetEmailModelRequest(BaseRequest):
     """
 
     def __init__(self, format: str, name: str, folder: str = None, storage: str = None):
+        """
+        Request model for get_email_model operation.
+        Initializes a new instance.
+
+        :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param name (str) Email document file name.
+        :param folder (str) Path to folder in storage.
+        :param storage (str) Storage name.
+        """
+
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

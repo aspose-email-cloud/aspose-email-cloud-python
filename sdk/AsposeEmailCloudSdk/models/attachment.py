@@ -70,7 +70,18 @@ class Attachment(AttachmentBase):
     }
 
     def __init__(self, base64_data: str = None, content_id: str = None, content_type: ContentType = None, headers: Dict[str, str] = None, content_disposition: str = None, is_embedded_message: bool = None, name: str = None, name_encoding: str = None, preferred_text_encoding: str = None):
-        """Attachment - a model defined in Swagger"""
+        """
+        Document attachment.             
+        :param base64_data (str) Attachment file content as Base64 string.             
+        :param content_id (str) Attachment content id             
+        :param content_type (ContentType) Content type             
+        :param headers (Dict[str, str]) Attachment headers.             
+        :param content_disposition (str) Content-Disposition header. Read only.             
+        :param is_embedded_message (bool) Determines if attachment is an embedded message. Read only.             
+        :param name (str) Attachment name.             
+        :param name_encoding (str) Encoding of attachment name.             
+        :param preferred_text_encoding (str) Preferred text encoding.             
+        """
         super(Attachment, self).__init__()
 
         self._content_disposition = None

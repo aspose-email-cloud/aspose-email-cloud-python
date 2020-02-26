@@ -43,6 +43,17 @@ class DeleteContactPropertyRequest(BaseRequest):
     """
 
     def __init__(self, format: str, name: str, member_name: str, index: int, folder: StorageFolderLocation):
+        """
+        Request model for delete_contact_property operation.
+        Initializes a new instance.
+
+        :param format (str) Contact document format Enum, available values: VCard, WebDav, Msg
+        :param name (str) Contact document file name
+        :param member_name (str) Indexed property name
+        :param index (int) Property index
+        :param folder (StorageFolderLocation) Calendar document location in storage information
+        """
+
         BaseRequest.__init__(self)
         self.format = format
         self.name = name

@@ -56,7 +56,11 @@ class StorageModelRqOfContactDto(object):
     }
 
     def __init__(self, value: ContactDto = None, storage_folder: StorageFolderLocation = None):
-        """StorageModelRqOfContactDto - a model defined in Swagger"""
+        """
+        
+        :param value (ContactDto) 
+        :param storage_folder (StorageFolderLocation) 
+        """
 
         self._value = None
         self._storage_folder = None

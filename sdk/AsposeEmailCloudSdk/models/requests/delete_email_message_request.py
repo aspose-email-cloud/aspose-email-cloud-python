@@ -39,6 +39,13 @@ class DeleteEmailMessageRequest(BaseRequest):
     """
 
     def __init__(self, request: DeleteMessageBaseRequest):
+        """
+        Request model for delete_email_message operation.
+        Initializes a new instance.
+
+        :param request (DeleteMessageBaseRequest) Delete message request
+        """
+
         BaseRequest.__init__(self)
         self.request = request
 

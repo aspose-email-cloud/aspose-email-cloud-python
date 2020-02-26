@@ -51,7 +51,10 @@ class MimeResponse(object):
     }
 
     def __init__(self, mime: str = None):
-        """MimeResponse - a model defined in Swagger"""
+        """
+        Email document property DTO.             
+        :param mime (str) Gets or sets base64 encoded mime content.             
+        """
 
         self._mime = None
         self.discriminator = None

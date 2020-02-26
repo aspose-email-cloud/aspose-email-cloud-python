@@ -57,7 +57,13 @@ class Link(object):
     }
 
     def __init__(self, href: str = None, rel: str = None, type: str = None, title: str = None):
-        """Link - a model defined in Swagger"""
+        """
+        Provides information for the object link. This is supposed to be an atom:link, therefore it should have all attributes specified here http://tools.ietf.org/html/rfc4287#section-4.2.7             
+        :param href (str) The \"href\" attribute contains the link's IRI. atom:link elements MUST have an href attribute, whose value MUST be a IRI reference             
+        :param rel (str) atom:link elements MAY have a \"rel\" attribute that indicates the link relation type.  If the \"rel\" attribute is not present, the link element MUST be interpreted as if the link relation type is \"alternate\".             
+        :param type (str) On the link element, the \"type\" attribute's value is an advisory media type: it is a hint about the type of the representation that is expected to be returned when the value of the href attribute is dereferenced.  Note that the type attribute does not override the actual media type returned with the representation.             
+        :param title (str) The \"title\" attribute conveys human-readable information about the link.  The content of the \"title\" attribute is Language-Sensitive.             
+        """
 
         self._href = None
         self._rel = None

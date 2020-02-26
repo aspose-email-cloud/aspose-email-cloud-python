@@ -86,6 +86,7 @@ def test_date_time(td: TestData):
     assert start_date == fact_start_date
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_bcr_parse_storage(td: TestData):
     file_name = str(uuid.uuid4())+ ".png"
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
@@ -118,6 +119,7 @@ def test_ai_bcr_parse_storage(td: TestData):
     assert len(contact_properties.internal_properties) >= 3
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_bcr_parse(td: TestData):
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
     image_data = None
@@ -133,6 +135,7 @@ def test_ai_bcr_parse(td: TestData):
     assert 'Thomas' in display_name.value
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_genderize(td: TestData):
     """ Test name gender detection """
     result = td.email.ai_name_genderize(
@@ -141,6 +144,7 @@ def test_ai_name_genderize(td: TestData):
     assert result.value[0].gender == 'Male'
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_format(td: TestData):
     result = td.email.ai_name_format(
         requests.AiNameFormatRequest(
@@ -149,6 +153,7 @@ def test_ai_name_format(td: TestData):
     assert result.name == 'Mr. Cane J. M.'
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_match(td: TestData):
     first = 'John Michael Cane'
     second = 'Cane J.'
@@ -157,6 +162,7 @@ def test_ai_name_match(td: TestData):
     assert result.similarity >= 0.5
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_expand(td: TestData):
     name = 'Smith Bobby'
     result = td.email.ai_name_expand(
@@ -166,6 +172,7 @@ def test_ai_name_expand(td: TestData):
     assert 'B. Smith' in expandedNames
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_complete(td: TestData):
     prefix = 'Dav'
     result = td.email.ai_name_complete(
@@ -176,6 +183,7 @@ def test_ai_name_complete(td: TestData):
     assert 'Davis' in names
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_name_parse_email_address(td: TestData):
     address = 'john-cane@gmail.com'
     result = td.email.ai_name_parse_email_address(
@@ -262,6 +270,7 @@ def test_contact_model(td: TestData):
     assert exist_result.exists
 
 @pytest.mark.ai
+@pytest.mark.pipeline
 def test_ai_bcr_parse_model(td: TestData):
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
     image_data = None
@@ -273,6 +282,58 @@ def test_ai_bcr_parse_model(td: TestData):
     assert len(result.value) == 1
     first_vcard = result.value[0]
     assert 'Thomas' in first_vcard.display_name
+
+
+@pytest.mark.pipeline
+def test_discover_email_config(td: TestData):
+    configs = td.email.discover_email_config(requests.DiscoverEmailConfigRequest('example@gmail.com', True))
+    assert len(configs.value) >= 2
+    smtp = list(filter(lambda x: x.protocol_type == 'SMTP', configs.value))[0] #type: models.EmailAccountConfig
+    assert smtp.host == 'smtp.gmail.com'
+
+@pytest.mark.pipeline
+def test_create_mapi(td: TestData):
+    name = str(uuid.uuid4())+ '.msg'
+    td.email.create_mapi(requests.CreateMapiRequest(
+        name,
+        models.HierarchicalObjectRequest(
+            models.HierarchicalObject('IPM.Contact', internal_properties=[
+                models.PrimitiveObject("Tag:'PidTagMessageClass':0x1A:String", None, "IPM.Contact"),
+                models.PrimitiveObject("Tag:'PidTagSubject':0x37:String"),
+                models.PrimitiveObject("Tag:'PidTagSubjectPrefix':0x3D:String"),
+                models.PrimitiveObject("Tag:'PidTagMessageFlags':0xE07:Integer32", value="8"),
+                models.PrimitiveObject("Tag:'PidTagNormalizedSubject':0xE1D:String"),
+                models.PrimitiveObject("Tag:'PidTagBody':0x1000:String"),
+                models.PrimitiveObject("Tag:'PidTagStoreSupportMask':0x340D:Integer32", value="265849"),
+                models.PrimitiveObject("Tag:'PidTagSurname':0x3A11:String", value="Surname"),
+                models.PrimitiveObject("Tag:'PidTagOtherTelephoneNumber':0x3A1F:String", value="+79123456789"),
+                models.PrimitiveObject("Tag:'':0x6662:Integer32", value="0"),
+                models.PrimitiveObject(
+                    "Lid:'PidLidAddressBookProviderArrayType':0x8029:Integer32:00062004-0000-0000-c000-000000000046",
+                    value="1")]),
+            models.StorageFolderLocation(td.storage, td.folder))))
+    assert td.email.object_exists(requests.ObjectExistsRequest(td.folder + '/' + name, td.storage)).exists
+
+@pytest.mark.pipeline
+def test_mapi_add_attachment(td: TestData):
+    name = _create_calendar(td)
+    attachment = _create_calendar(td)
+    td.email.add_mapi_attachment(requests.AddMapiAttachmentRequest(
+        name, attachment, models.AddAttachmentRequest(
+            models.StorageFolderLocation(td.storage, td.folder),
+            models.StorageFolderLocation(td.storage, td.folder))))
+    attachment_downloaded = td.email.get_calendar_attachment(requests.GetCalendarAttachmentRequest(
+        name, attachment, td.folder, td.storage))
+    with open(attachment_downloaded, 'r') as f:
+        filedata = f.read()
+        assert 'Aspose Ltd' in filedata
+
+@pytest.mark.pipeline
+def test_mapi_get_properties(td: TestData):
+    name = _create_calendar(td)
+    properties = td.email.get_mapi_properties(requests.GetMapiPropertiesRequest(
+        name, td.folder, td.storage))
+    assert 'IPM.Schedule' in properties.hierarchical_object.name
 
 def _create_calendar(td, start_date_param=None):
     name = str(uuid.uuid4())+ '.ics'
