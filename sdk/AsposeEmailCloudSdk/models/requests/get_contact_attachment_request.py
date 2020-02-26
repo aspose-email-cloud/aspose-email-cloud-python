@@ -113,7 +113,7 @@ class GetContactAttachmentRequest(BaseRequest):
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(
-            ['application/json'])
+            ['multipart/form-data'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self._select_header_content_type(

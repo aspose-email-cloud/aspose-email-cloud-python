@@ -36,7 +36,7 @@ class CreateEmailRequest(BaseRequest):
     Initializes a new instance.
 
     :param file_name (str) Email document file name in storage
-    :param request (CreateEmailRequest) An email document and optional Storage info to specify where the file should be located
+    :param request (CreateEmailRequest) An email document and optional Storage info to specify where the file should be located             
     """
 
     def __init__(self, file_name: str, request: CreateEmailRequest):
@@ -45,7 +45,7 @@ class CreateEmailRequest(BaseRequest):
         Initializes a new instance.
 
         :param file_name (str) Email document file name in storage
-        :param request (CreateEmailRequest) An email document and optional Storage info to specify where the file should be located
+        :param request (CreateEmailRequest) An email document and optional Storage info to specify where the file should be located             
         """
 
         BaseRequest.__init__(self)
