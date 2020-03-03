@@ -721,8 +721,8 @@ EmailApi.ai_name_complete(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to complete (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -769,8 +769,8 @@ EmailApi.ai_name_complete_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to complete (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -814,8 +814,8 @@ EmailApi.ai_name_expand(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to format (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -862,8 +862,8 @@ EmailApi.ai_name_expand_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to format (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -972,8 +972,8 @@ EmailApi.ai_name_format(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to format (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **format** | **str**| Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (&#x3D; &#39;%t%F%m%N%L%p&#39;)     /format/FN+LN/ (&#x3D; &#39;%F%L&#39;)     /format/title+FN+LN/ (&#x3D; &#39;%t%F%L&#39;)     /format/FN+MN+LN/ (&#x3D; &#39;%F%M%N%L&#39;)     /format/title+FN+MN+LN/ (&#x3D; &#39;%t%F%M%N%L&#39;)     /format/FN+MI+LN/ (&#x3D; &#39;%F%m%N%L&#39;)     /format/title+FN+MI+LN/ (&#x3D; &#39;%t%F%m%N%L&#39;)     /format/LN/ (&#x3D; &#39;%L&#39;)     /format/title+LN/ (&#x3D; &#39;%t%L&#39;)     /format/LN+FN+MN/ (&#x3D; &#39;%L,%F%M%N&#39;)     /format/LN+title+FN+MN/ (&#x3D; &#39;%L,%t%F%M%N&#39;)     /format/LN+FN+MI/ (&#x3D; &#39;%L,%F%m%N&#39;)     /format/LN+title+FN+MI/ (&#x3D; &#39;%L,%t%F%m%N&#39;)  Custom format string - custom combination of characters and the next term placeholders:      &#39;%t&#39; - Title (prefix)     &#39;%F&#39; - First name     &#39;%f&#39; - First initial     &#39;%M&#39; - Middle name(s)     &#39;%m&#39; - Middle initial(s)     &#39;%N&#39; - Nickname     &#39;%L&#39; - Last name     &#39;%l&#39; - Last initial     &#39;%p&#39; - Postfix  If no value for format option was provided, its default value is &#39;%t%F%m%N%L%p&#39;              | [optional] [default to ]
@@ -1023,8 +1023,8 @@ EmailApi.ai_name_format_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to format (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **format** | **str**| Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (&#x3D; &#39;%t%F%m%N%L%p&#39;)     /format/FN+LN/ (&#x3D; &#39;%F%L&#39;)     /format/title+FN+LN/ (&#x3D; &#39;%t%F%L&#39;)     /format/FN+MN+LN/ (&#x3D; &#39;%F%M%N%L&#39;)     /format/title+FN+MN+LN/ (&#x3D; &#39;%t%F%M%N%L&#39;)     /format/FN+MI+LN/ (&#x3D; &#39;%F%m%N%L&#39;)     /format/title+FN+MI+LN/ (&#x3D; &#39;%t%F%m%N%L&#39;)     /format/LN/ (&#x3D; &#39;%L&#39;)     /format/title+LN/ (&#x3D; &#39;%t%L&#39;)     /format/LN+FN+MN/ (&#x3D; &#39;%L,%F%M%N&#39;)     /format/LN+title+FN+MN/ (&#x3D; &#39;%L,%t%F%M%N&#39;)     /format/LN+FN+MI/ (&#x3D; &#39;%L,%F%m%N&#39;)     /format/LN+title+FN+MI/ (&#x3D; &#39;%L,%t%F%m%N&#39;)  Custom format string - custom combination of characters and the next term placeholders:      &#39;%t&#39; - Title (prefix)     &#39;%F&#39; - First name     &#39;%f&#39; - First initial     &#39;%M&#39; - Middle name(s)     &#39;%m&#39; - Middle initial(s)     &#39;%N&#39; - Nickname     &#39;%L&#39; - Last name     &#39;%l&#39; - Last initial     &#39;%p&#39; - Postfix  If no value for format option was provided, its default value is &#39;%t%F%m%N%L%p&#39;              | [optional] [default to ]
@@ -1132,8 +1132,8 @@ EmailApi.ai_name_genderize(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to parse (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -1180,8 +1180,8 @@ EmailApi.ai_name_genderize_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to parse (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -1291,8 +1291,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to match (required) | 
  **other_name** | **str**| Another name to match (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -1342,8 +1342,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to match (required) | 
  **other_name** | **str**| Another name to match (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -1450,8 +1450,8 @@ EmailApi.ai_name_parse(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to parse (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -1498,8 +1498,8 @@ EmailApi.ai_name_parse_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| A name to parse (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -1543,8 +1543,8 @@ EmailApi.ai_name_parse_email_address(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email_address** | **str**| Email address to parse (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -1591,8 +1591,8 @@ EmailApi.ai_name_parse_email_address_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email_address** | **str**| Email address to parse (required) | 
- **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian) | [optional] [default to ]
- **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France | [optional] [default to ]
+ **language** | **str**| An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \&quot;it\&quot; or \&quot;ita\&quot; for Italian)              | [optional] [default to ]
+ **location** | **str**| A geographic code such as an ISO-3166 two letter country code, for example \&quot;FR\&quot; for France              | [optional] [default to ]
  **encoding** | **str**| A character encoding name | [optional] [default to ]
  **script** | **str**| A writing system code; starts with the ISO-15924 script name | [optional] [default to ]
  **style** | **str**| Name writing style. Enum, available values: Formal, Informal, Legal, Academic | [optional] [default to 0]
@@ -4737,6 +4737,81 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_email_client_account"></a>
+# **get_email_client_account**
+> get_email_client_account(self, get_email_client_account_request)
+
+Get email client account from storage             
+
+### Return type
+
+[**EmailClientAccount**](EmailClientAccount.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder, 
+    storage)
+```
+
+### Usage
+```python
+EmailApi.get_email_client_account(
+    GetEmailClientAccountRequest(
+        name, 
+        folder, 
+        storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| File name on storage | 
+ **folder** | **str**| Folder on storage | 
+ **storage** | **str**| Storage name | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_client_account_async"></a>
+# **get_email_client_account_async**
+> get_email_client_account_async(self, get_email_client_account_request)
+
+Get email client account from storage             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_client_account_async(request).get() returns [**EmailClientAccount**](EmailClientAccount.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder, 
+    storage)
+```
+
+### Usage
+```python
+EmailApi.get_email_client_account_async(
+    GetEmailClientAccountRequest(
+        name, 
+        folder, 
+        storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| File name on storage | 
+ **folder** | **str**| Folder on storage | 
+ **storage** | **str**| Storage name | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_email_model"></a>
 # **get_email_model**
 > get_email_model(self, get_email_model_request)
@@ -6176,6 +6251,69 @@ Name | Type | Description  | Notes
  **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name. | 
  **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create contact request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_email_client_account"></a>
+# **save_email_client_account**
+> save_email_client_account(self, save_email_client_account_request)
+
+Create email client account file (*.account) with any of supported credentials             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.save_email_client_account(
+    SaveEmailClientAccountRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**StorageFileRqOfEmailClientAccount**](StorageFileRqOfEmailClientAccount.md)| Email account information | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_email_client_account_async"></a>
+# **save_email_client_account_async**
+> save_email_client_account_async(self, save_email_client_account_request)
+
+Create email client account file (*.account) with any of supported credentials             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_email_client_account_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.save_email_client_account_async(
+    SaveEmailClientAccountRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**StorageFileRqOfEmailClientAccount**](StorageFileRqOfEmailClientAccount.md)| Email account information | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

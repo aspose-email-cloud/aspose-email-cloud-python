@@ -1323,6 +1323,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
+    def get_email_client_account(self, request: requests.GetEmailClientAccountRequest)  -> EmailClientAccount:
+        """Get email client account from storage             
+
+
+        :param request GetEmailClientAccountRequest object with parameters
+        :return: EmailClientAccount
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailClientAccount')
+
+    def get_email_client_account_async(self, request: requests.GetEmailClientAccountRequest) -> multiprocessing.pool.AsyncResult:
+        """Get email client account from storage             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailClientAccountRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailClientAccount)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailClientAccount')
+
     def get_email_model(self, request: requests.GetEmailModelRequest)  -> EmailDto:
         """Get email document.             
 
@@ -1682,6 +1702,26 @@ class EmailApi(object):
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request SaveContactModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def save_email_client_account(self, request: requests.SaveEmailClientAccountRequest) :
+        """Create email client account file (*.account) with any of supported credentials             
+
+
+        :param request SaveEmailClientAccountRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def save_email_client_account_async(self, request: requests.SaveEmailClientAccountRequest) -> multiprocessing.pool.AsyncResult:
+        """Create email client account file (*.account) with any of supported credentials             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SaveEmailClientAccountRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)

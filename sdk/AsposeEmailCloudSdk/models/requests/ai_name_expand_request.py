@@ -36,8 +36,8 @@ class AiNameExpandRequest(BaseRequest):
     Initializes a new instance.
 
     :param name (str) A name to format (required)
-    :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)
-    :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France
+    :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
+    :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
     :param encoding (str) A character encoding name
     :param script (str) A writing system code; starts with the ISO-15924 script name
     :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
@@ -49,8 +49,8 @@ class AiNameExpandRequest(BaseRequest):
         Initializes a new instance.
 
         :param name (str) A name to format (required)
-        :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)
-        :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France
+        :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
+        :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
         :param encoding (str) A character encoding name
         :param script (str) A writing system code; starts with the ISO-15924 script name
         :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic

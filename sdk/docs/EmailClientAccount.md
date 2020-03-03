@@ -1,14 +1,12 @@
-# AsposeEmailCloudSdk.models.EmailAccountRequest
+# AsposeEmailCloudSdk.models.EmailClientAccount
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**host** | **str** | Email account host              | 
-**port** | **int** | Email account port              | 
-**login** | **str** | Email account login              | 
+**host** | **str** | Mail server host name or IP address              | 
+**port** | **int** | Mail server port              | 
 **security_options** | **str** | Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto | 
 **protocol_type** | **str** | Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav | 
-**description** | **str** | Email account description              | [optional] 
-**storage_file** | [**StorageFileLocation**](StorageFileLocation.md) | A storage file location info to store email account              | 
+**credentials** | [**EmailClientAccountCredentials**](EmailClientAccountCredentials.md) | Email client account credentials              | 
 
 
 

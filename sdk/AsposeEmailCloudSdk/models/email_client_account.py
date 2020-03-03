@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="EmailAccountRequest.py">
+#  <copyright company="Aspose" file="EmailClientAccount.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,11 +30,11 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
-from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
+from AsposeEmailCloudSdk.models.email_client_account_credentials import EmailClientAccountCredentials
 
 
-class EmailAccountRequest(object):
-    """Email account settings request             
+class EmailClientAccount(object):
+    """A universal email client account             
     """
 
     """
@@ -47,82 +47,65 @@ class EmailAccountRequest(object):
     swagger_types = {
         'host': 'str',
         'port': 'int',
-        'login': 'str',
         'security_options': 'str',
         'protocol_type': 'str',
-        'description': 'str',
-        'storage_file': 'StorageFileLocation'
+        'credentials': 'EmailClientAccountCredentials'
     }
 
     attribute_map = {
         'host': 'host',
         'port': 'port',
-        'login': 'login',
         'security_options': 'securityOptions',
         'protocol_type': 'protocolType',
-        'description': 'description',
-        'storage_file': 'storageFile'
+        'credentials': 'credentials'
     }
 
-    discriminator_value_class_map = {
-        'SaveEmailAccountRequest': 'SaveEmailAccountRequest',
-        'SaveOAuthEmailAccountRequest': 'SaveOAuthEmailAccountRequest'
-    }
-
-    def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None):
+    def __init__(self, host: str = None, port: int = None, security_options: str = None, protocol_type: str = None, credentials: EmailClientAccountCredentials = None):
         """
-        Email account settings request             
-        :param host (str) Email account host             
-        :param port (int) Email account port             
-        :param login (str) Email account login             
+        A universal email client account             
+        :param host (str) Mail server host name or IP address             
+        :param port (int) Mail server port             
         :param security_options (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
-        :param description (str) Email account description             
-        :param storage_file (StorageFileLocation) A storage file location info to store email account             
+        :param credentials (EmailClientAccountCredentials) Email client account credentials             
         """
 
         self._host = None
         self._port = None
-        self._login = None
         self._security_options = None
         self._protocol_type = None
-        self._description = None
-        self._storage_file = None
-        self.discriminator = 'Type'
+        self._credentials = None
+        self.discriminator = None
 
         if host is not None:
             self.host = host
         if port is not None:
             self.port = port
-        if login is not None:
-            self.login = login
         if security_options is not None:
             self.security_options = security_options
         if protocol_type is not None:
             self.protocol_type = protocol_type
-        if description is not None:
-            self.description = description
-        if storage_file is not None:
-            self.storage_file = storage_file
+        if credentials is not None:
+            self.credentials = credentials
 
     @property
     def host(self) -> str:
-        """Gets the host of this EmailAccountRequest.
+        """Gets the host of this EmailClientAccount.
 
-        Email account host             
+        Mail server host name or IP address             
 
-        :return: The host of this EmailAccountRequest.
+        :return: The host of this EmailClientAccount.
         :rtype: str
         """
         return self._host
 
     @host.setter
     def host(self, host: str):
-        """Sets the host of this EmailAccountRequest.
+        """Sets the host of this EmailClientAccount.
 
-        Email account host             
+        Mail server host name or IP address             
 
-        :param host: The host of this EmailAccountRequest.
+        :param host: The host of this EmailClientAccount.
         :type: str
         """
         if host is None:
@@ -133,156 +116,103 @@ class EmailAccountRequest(object):
 
     @property
     def port(self) -> int:
-        """Gets the port of this EmailAccountRequest.
+        """Gets the port of this EmailClientAccount.
 
-        Email account port             
+        Mail server port             
 
-        :return: The port of this EmailAccountRequest.
+        :return: The port of this EmailClientAccount.
         :rtype: int
         """
         return self._port
 
     @port.setter
     def port(self, port: int):
-        """Sets the port of this EmailAccountRequest.
+        """Sets the port of this EmailClientAccount.
 
-        Email account port             
+        Mail server port             
 
-        :param port: The port of this EmailAccountRequest.
+        :param port: The port of this EmailClientAccount.
         :type: int
         """
         if port is None:
             raise ValueError("Invalid value for `port`, must not be `None`")
+        if port is not None and port > 2147483647:
+            raise ValueError("Invalid value for `port`, must be a value less than or equal to `2147483647`")
+        if port is not None and port < 1:
+            raise ValueError("Invalid value for `port`, must be a value greater than or equal to `1`")
         self._port = port
 
     @property
-    def login(self) -> str:
-        """Gets the login of this EmailAccountRequest.
-
-        Email account login             
-
-        :return: The login of this EmailAccountRequest.
-        :rtype: str
-        """
-        return self._login
-
-    @login.setter
-    def login(self, login: str):
-        """Sets the login of this EmailAccountRequest.
-
-        Email account login             
-
-        :param login: The login of this EmailAccountRequest.
-        :type: str
-        """
-        if login is None:
-            raise ValueError("Invalid value for `login`, must not be `None`")
-        if login is not None and len(login) < 1:
-            raise ValueError("Invalid value for `login`, length must be greater than or equal to `1`")
-        self._login = login
-
-    @property
     def security_options(self) -> str:
-        """Gets the security_options of this EmailAccountRequest.
+        """Gets the security_options of this EmailClientAccount.
 
         Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
-        :return: The security_options of this EmailAccountRequest.
+        :return: The security_options of this EmailClientAccount.
         :rtype: str
         """
         return self._security_options
 
     @security_options.setter
     def security_options(self, security_options: str):
-        """Sets the security_options of this EmailAccountRequest.
+        """Sets the security_options of this EmailClientAccount.
 
         Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
-        :param security_options: The security_options of this EmailAccountRequest.
+        :param security_options: The security_options of this EmailClientAccount.
         :type: str
         """
         if security_options is None:
             raise ValueError("Invalid value for `security_options`, must not be `None`")
-        if security_options is not None and len(security_options) < 1:
-            raise ValueError("Invalid value for `security_options`, length must be greater than or equal to `1`")
         self._security_options = security_options
 
     @property
     def protocol_type(self) -> str:
-        """Gets the protocol_type of this EmailAccountRequest.
+        """Gets the protocol_type of this EmailClientAccount.
 
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
-        :return: The protocol_type of this EmailAccountRequest.
+        :return: The protocol_type of this EmailClientAccount.
         :rtype: str
         """
         return self._protocol_type
 
     @protocol_type.setter
     def protocol_type(self, protocol_type: str):
-        """Sets the protocol_type of this EmailAccountRequest.
+        """Sets the protocol_type of this EmailClientAccount.
 
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
-        :param protocol_type: The protocol_type of this EmailAccountRequest.
+        :param protocol_type: The protocol_type of this EmailClientAccount.
         :type: str
         """
         if protocol_type is None:
             raise ValueError("Invalid value for `protocol_type`, must not be `None`")
-        if protocol_type is not None and len(protocol_type) < 1:
-            raise ValueError("Invalid value for `protocol_type`, length must be greater than or equal to `1`")
         self._protocol_type = protocol_type
 
     @property
-    def description(self) -> str:
-        """Gets the description of this EmailAccountRequest.
+    def credentials(self) -> EmailClientAccountCredentials:
+        """Gets the credentials of this EmailClientAccount.
 
-        Email account description             
+        Email client account credentials             
 
-        :return: The description of this EmailAccountRequest.
-        :rtype: str
+        :return: The credentials of this EmailClientAccount.
+        :rtype: EmailClientAccountCredentials
         """
-        return self._description
+        return self._credentials
 
-    @description.setter
-    def description(self, description: str):
-        """Sets the description of this EmailAccountRequest.
+    @credentials.setter
+    def credentials(self, credentials: EmailClientAccountCredentials):
+        """Sets the credentials of this EmailClientAccount.
 
-        Email account description             
+        Email client account credentials             
 
-        :param description: The description of this EmailAccountRequest.
-        :type: str
+        :param credentials: The credentials of this EmailClientAccount.
+        :type: EmailClientAccountCredentials
         """
-        self._description = description
-
-    @property
-    def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this EmailAccountRequest.
-
-        A storage file location info to store email account             
-
-        :return: The storage_file of this EmailAccountRequest.
-        :rtype: StorageFileLocation
-        """
-        return self._storage_file
-
-    @storage_file.setter
-    def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this EmailAccountRequest.
-
-        A storage file location info to store email account             
-
-        :param storage_file: The storage_file of this EmailAccountRequest.
-        :type: StorageFileLocation
-        """
-        if storage_file is None:
-            raise ValueError("Invalid value for `storage_file`, must not be `None`")
-        self._storage_file = storage_file
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
+        if credentials is None:
+            raise ValueError("Invalid value for `credentials`, must not be `None`")
+        self._credentials = credentials
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -318,7 +248,7 @@ class EmailAccountRequest(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, EmailAccountRequest):
+        if not isinstance(other, EmailClientAccount):
             return False
 
         return self.__dict__ == other.__dict__

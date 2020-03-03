@@ -1,9 +1,9 @@
-# AsposeEmailCloudSdk.models.NameValuePair
+# AsposeEmailCloudSdk.models.EmailClientAccountCredentials
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Property name              | [optional] 
-**value** | **str** | Property value              | [optional] 
+**login** | **str** | Email client account login              | 
+**discriminator** | **str** |  | 
 
 
 

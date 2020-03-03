@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="NameValuePair.py">
+#  <copyright company="Aspose" file="StorageFileRqOfEmailClientAccount.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,9 +30,12 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
+from AsposeEmailCloudSdk.models.email_client_account import EmailClientAccount
+from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 
-class NameValuePair(object):
-    """Name-Value property             
+
+class StorageFileRqOfEmailClientAccount(object):
+    """
     """
 
     """
@@ -43,74 +46,70 @@ class NameValuePair(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'value': 'str'
+        'value': 'EmailClientAccount',
+        'storage_file': 'StorageFileLocation'
     }
 
     attribute_map = {
-        'name': 'name',
-        'value': 'value'
+        'value': 'value',
+        'storage_file': 'storageFile'
     }
 
-    def __init__(self, name: str = None, value: str = None):
+    def __init__(self, value: EmailClientAccount = None, storage_file: StorageFileLocation = None):
         """
-        Name-Value property             
-        :param name (str) Property name             
-        :param value (str) Property value             
+        
+        :param value (EmailClientAccount) 
+        :param storage_file (StorageFileLocation) 
         """
 
-        self._name = None
         self._value = None
+        self._storage_file = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
         if value is not None:
             self.value = value
+        if storage_file is not None:
+            self.storage_file = storage_file
 
     @property
-    def name(self) -> str:
-        """Gets the name of this NameValuePair.
+    def value(self) -> EmailClientAccount:
+        """Gets the value of this StorageFileRqOfEmailClientAccount.
 
-        Property name             
 
-        :return: The name of this NameValuePair.
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name: str):
-        """Sets the name of this NameValuePair.
-
-        Property name             
-
-        :param name: The name of this NameValuePair.
-        :type: str
-        """
-        self._name = name
-
-    @property
-    def value(self) -> str:
-        """Gets the value of this NameValuePair.
-
-        Property value             
-
-        :return: The value of this NameValuePair.
-        :rtype: str
+        :return: The value of this StorageFileRqOfEmailClientAccount.
+        :rtype: EmailClientAccount
         """
         return self._value
 
     @value.setter
-    def value(self, value: str):
-        """Sets the value of this NameValuePair.
+    def value(self, value: EmailClientAccount):
+        """Sets the value of this StorageFileRqOfEmailClientAccount.
 
-        Property value             
 
-        :param value: The value of this NameValuePair.
-        :type: str
+        :param value: The value of this StorageFileRqOfEmailClientAccount.
+        :type: EmailClientAccount
         """
         self._value = value
+
+    @property
+    def storage_file(self) -> StorageFileLocation:
+        """Gets the storage_file of this StorageFileRqOfEmailClientAccount.
+
+
+        :return: The storage_file of this StorageFileRqOfEmailClientAccount.
+        :rtype: StorageFileLocation
+        """
+        return self._storage_file
+
+    @storage_file.setter
+    def storage_file(self, storage_file: StorageFileLocation):
+        """Sets the storage_file of this StorageFileRqOfEmailClientAccount.
+
+
+        :param storage_file: The storage_file of this StorageFileRqOfEmailClientAccount.
+        :type: StorageFileLocation
+        """
+        self._storage_file = storage_file
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -146,7 +145,7 @@ class NameValuePair(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, NameValuePair):
+        if not isinstance(other, StorageFileRqOfEmailClientAccount):
             return False
 
         return self.__dict__ == other.__dict__

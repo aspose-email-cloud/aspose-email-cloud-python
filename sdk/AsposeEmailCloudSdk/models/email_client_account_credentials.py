@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="NameValuePair.py">
+#  <copyright company="Aspose" file="EmailClientAccountCredentials.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -31,8 +31,8 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 
-class NameValuePair(object):
-    """Name-Value property             
+class EmailClientAccountCredentials(object):
+    """Represents email client account credentials             
     """
 
     """
@@ -43,74 +43,88 @@ class NameValuePair(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'value': 'str'
+        'login': 'str',
+        'discriminator': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'value': 'value'
+        'login': 'login',
+        'discriminator': 'discriminator'
     }
 
-    def __init__(self, name: str = None, value: str = None):
+    discriminator_value_class_map = {
+        'EmailClientAccountOauthCredentials': 'EmailClientAccountOauthCredentials',
+        'EmailClientAccountPasswordCredentials': 'EmailClientAccountPasswordCredentials'
+    }
+
+    def __init__(self, login: str = None, discriminator: str = None):
         """
-        Name-Value property             
-        :param name (str) Property name             
-        :param value (str) Property value             
+        Represents email client account credentials             
+        :param login (str) Email client account login             
+        :param discriminator (str) 
         """
 
-        self._name = None
-        self._value = None
-        self.discriminator = None
+        self._login = None
+        self._discriminator = None
+        self.discriminator = 'Type'
 
-        if name is not None:
-            self.name = name
-        if value is not None:
-            self.value = value
+        if login is not None:
+            self.login = login
+        if discriminator is not None:
+            self.discriminator = discriminator
 
     @property
-    def name(self) -> str:
-        """Gets the name of this NameValuePair.
+    def login(self) -> str:
+        """Gets the login of this EmailClientAccountCredentials.
 
-        Property name             
+        Email client account login             
 
-        :return: The name of this NameValuePair.
+        :return: The login of this EmailClientAccountCredentials.
         :rtype: str
         """
-        return self._name
+        return self._login
 
-    @name.setter
-    def name(self, name: str):
-        """Sets the name of this NameValuePair.
+    @login.setter
+    def login(self, login: str):
+        """Sets the login of this EmailClientAccountCredentials.
 
-        Property name             
+        Email client account login             
 
-        :param name: The name of this NameValuePair.
+        :param login: The login of this EmailClientAccountCredentials.
         :type: str
         """
-        self._name = name
+        if login is None:
+            raise ValueError("Invalid value for `login`, must not be `None`")
+        if login is not None and len(login) < 1:
+            raise ValueError("Invalid value for `login`, length must be greater than or equal to `1`")
+        self._login = login
 
     @property
-    def value(self) -> str:
-        """Gets the value of this NameValuePair.
+    def discriminator(self) -> str:
+        """Gets the discriminator of this EmailClientAccountCredentials.
 
-        Property value             
 
-        :return: The value of this NameValuePair.
+        :return: The discriminator of this EmailClientAccountCredentials.
         :rtype: str
         """
-        return self._value
+        return self._discriminator
 
-    @value.setter
-    def value(self, value: str):
-        """Sets the value of this NameValuePair.
+    @discriminator.setter
+    def discriminator(self, discriminator: str):
+        """Sets the discriminator of this EmailClientAccountCredentials.
 
-        Property value             
 
-        :param value: The value of this NameValuePair.
+        :param discriminator: The discriminator of this EmailClientAccountCredentials.
         :type: str
         """
-        self._value = value
+        if discriminator is None:
+            raise ValueError("Invalid value for `discriminator`, must not be `None`")
+        self._discriminator = discriminator
+
+    def get_real_child_model(self, data):
+        """Returns the real base class specified by the discriminator"""
+        discriminator_value = data.get(self.discriminator)
+        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -146,7 +160,7 @@ class NameValuePair(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, NameValuePair):
+        if not isinstance(other, EmailClientAccountCredentials):
             return False
 
         return self.__dict__ == other.__dict__

@@ -1,9 +1,9 @@
-# AsposeEmailCloudSdk.models.NameValuePair
+# AsposeEmailCloudSdk.models.StorageFileRqOfEmailClientAccount
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Property name              | [optional] 
-**value** | **str** | Property value              | [optional] 
+**value** | [**EmailClientAccount**](EmailClientAccount.md) |  | [optional] 
+**storage_file** | [**StorageFileLocation**](StorageFileLocation.md) |  | [optional] 
 
 
 

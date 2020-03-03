@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="SaveOAuthEmailAccountRequest.py">
+#  <copyright company="Aspose" file="EmailClientAccountOauthCredentials.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,12 +30,11 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
-from AsposeEmailCloudSdk.models.email_account_request import EmailAccountRequest
-from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
+from AsposeEmailCloudSdk.models.email_client_account_credentials import EmailClientAccountCredentials
 
 
-class SaveOAuthEmailAccountRequest(EmailAccountRequest):
-    """Save email account settings with OAuth request             
+class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
+    """Represents email client account OAuth 2.0 credentials             
     """
 
     """
@@ -46,13 +45,8 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'host': 'str',
-        'port': 'int',
         'login': 'str',
-        'security_options': 'str',
-        'protocol_type': 'str',
-        'description': 'str',
-        'storage_file': 'StorageFileLocation',
+        'discriminator': 'str',
         'client_id': 'str',
         'client_secret': 'str',
         'refresh_token': 'str',
@@ -60,35 +54,25 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
     }
 
     attribute_map = {
-        'host': 'host',
-        'port': 'port',
         'login': 'login',
-        'security_options': 'securityOptions',
-        'protocol_type': 'protocolType',
-        'description': 'description',
-        'storage_file': 'storageFile',
+        'discriminator': 'discriminator',
         'client_id': 'clientId',
         'client_secret': 'clientSecret',
         'refresh_token': 'refreshToken',
         'request_url': 'requestUrl'
     }
 
-    def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None, client_id: str = None, client_secret: str = None, refresh_token: str = None, request_url: str = None):
+    def __init__(self, login: str = None, discriminator: str = None, client_id: str = None, client_secret: str = None, refresh_token: str = None, request_url: str = None):
         """
-        Save email account settings with OAuth request             
-        :param host (str) Email account host             
-        :param port (int) Email account port             
-        :param login (str) Email account login             
-        :param security_options (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
-        :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
-        :param description (str) Email account description             
-        :param storage_file (StorageFileLocation) A storage file location info to store email account             
-        :param client_id (str) OAuth client identifier             
-        :param client_secret (str) OAuth client secret             
-        :param refresh_token (str) OAuth refresh token             
-        :param request_url (str) The url to obtain access token. If not specified, will try to discover from email account host.             
+        Represents email client account OAuth 2.0 credentials             
+        :param login (str) Email client account login             
+        :param discriminator (str) 
+        :param client_id (str) The client ID obtained from the Google Cloud Console during application registration.             
+        :param client_secret (str) The client secret obtained during application registration.             
+        :param refresh_token (str) OAuth 2.0 refresh token             
+        :param request_url (str) The url to obtain access token. If not specified, will try to discover from email client account host.             
         """
-        super(SaveOAuthEmailAccountRequest, self).__init__()
+        super(EmailClientAccountOauthCredentials, self).__init__()
 
         self._client_id = None
         self._client_secret = None
@@ -96,20 +80,10 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         self._request_url = None
         self.discriminator = None
 
-        if host is not None:
-            self.host = host
-        if port is not None:
-            self.port = port
         if login is not None:
             self.login = login
-        if security_options is not None:
-            self.security_options = security_options
-        if protocol_type is not None:
-            self.protocol_type = protocol_type
-        if description is not None:
-            self.description = description
-        if storage_file is not None:
-            self.storage_file = storage_file
+        if discriminator is not None:
+            self.discriminator = discriminator
         if client_id is not None:
             self.client_id = client_id
         if client_secret is not None:
@@ -121,22 +95,22 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
 
     @property
     def client_id(self) -> str:
-        """Gets the client_id of this SaveOAuthEmailAccountRequest.
+        """Gets the client_id of this EmailClientAccountOauthCredentials.
 
-        OAuth client identifier             
+        The client ID obtained from the Google Cloud Console during application registration.             
 
-        :return: The client_id of this SaveOAuthEmailAccountRequest.
+        :return: The client_id of this EmailClientAccountOauthCredentials.
         :rtype: str
         """
         return self._client_id
 
     @client_id.setter
     def client_id(self, client_id: str):
-        """Sets the client_id of this SaveOAuthEmailAccountRequest.
+        """Sets the client_id of this EmailClientAccountOauthCredentials.
 
-        OAuth client identifier             
+        The client ID obtained from the Google Cloud Console during application registration.             
 
-        :param client_id: The client_id of this SaveOAuthEmailAccountRequest.
+        :param client_id: The client_id of this EmailClientAccountOauthCredentials.
         :type: str
         """
         if client_id is None:
@@ -147,22 +121,22 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
 
     @property
     def client_secret(self) -> str:
-        """Gets the client_secret of this SaveOAuthEmailAccountRequest.
+        """Gets the client_secret of this EmailClientAccountOauthCredentials.
 
-        OAuth client secret             
+        The client secret obtained during application registration.             
 
-        :return: The client_secret of this SaveOAuthEmailAccountRequest.
+        :return: The client_secret of this EmailClientAccountOauthCredentials.
         :rtype: str
         """
         return self._client_secret
 
     @client_secret.setter
     def client_secret(self, client_secret: str):
-        """Sets the client_secret of this SaveOAuthEmailAccountRequest.
+        """Sets the client_secret of this EmailClientAccountOauthCredentials.
 
-        OAuth client secret             
+        The client secret obtained during application registration.             
 
-        :param client_secret: The client_secret of this SaveOAuthEmailAccountRequest.
+        :param client_secret: The client_secret of this EmailClientAccountOauthCredentials.
         :type: str
         """
         if client_secret is None:
@@ -173,22 +147,22 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
 
     @property
     def refresh_token(self) -> str:
-        """Gets the refresh_token of this SaveOAuthEmailAccountRequest.
+        """Gets the refresh_token of this EmailClientAccountOauthCredentials.
 
-        OAuth refresh token             
+        OAuth 2.0 refresh token             
 
-        :return: The refresh_token of this SaveOAuthEmailAccountRequest.
+        :return: The refresh_token of this EmailClientAccountOauthCredentials.
         :rtype: str
         """
         return self._refresh_token
 
     @refresh_token.setter
     def refresh_token(self, refresh_token: str):
-        """Sets the refresh_token of this SaveOAuthEmailAccountRequest.
+        """Sets the refresh_token of this EmailClientAccountOauthCredentials.
 
-        OAuth refresh token             
+        OAuth 2.0 refresh token             
 
-        :param refresh_token: The refresh_token of this SaveOAuthEmailAccountRequest.
+        :param refresh_token: The refresh_token of this EmailClientAccountOauthCredentials.
         :type: str
         """
         if refresh_token is None:
@@ -199,22 +173,22 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
 
     @property
     def request_url(self) -> str:
-        """Gets the request_url of this SaveOAuthEmailAccountRequest.
+        """Gets the request_url of this EmailClientAccountOauthCredentials.
 
-        The url to obtain access token. If not specified, will try to discover from email account host.             
+        The url to obtain access token. If not specified, will try to discover from email client account host.             
 
-        :return: The request_url of this SaveOAuthEmailAccountRequest.
+        :return: The request_url of this EmailClientAccountOauthCredentials.
         :rtype: str
         """
         return self._request_url
 
     @request_url.setter
     def request_url(self, request_url: str):
-        """Sets the request_url of this SaveOAuthEmailAccountRequest.
+        """Sets the request_url of this EmailClientAccountOauthCredentials.
 
-        The url to obtain access token. If not specified, will try to discover from email account host.             
+        The url to obtain access token. If not specified, will try to discover from email client account host.             
 
-        :param request_url: The request_url of this SaveOAuthEmailAccountRequest.
+        :param request_url: The request_url of this EmailClientAccountOauthCredentials.
         :type: str
         """
         self._request_url = request_url
@@ -253,7 +227,7 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, SaveOAuthEmailAccountRequest):
+        if not isinstance(other, EmailClientAccountOauthCredentials):
             return False
 
         return self.__dict__ == other.__dict__

@@ -73,7 +73,7 @@ class EmailAccountConfig(object):
         :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :param host (str) Email account host.             
         :param port (int) Port.             
-        :param socket_type (str) Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param socket_type (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :param authentication_types (List[str]) Supported authentication types.             
         :param extra_info (List[NameValuePair]) Extra account information.             
         :param is_validated (bool) Determines that configuration validated. Set to false if validation skipped.             
@@ -200,7 +200,7 @@ class EmailAccountConfig(object):
     def socket_type(self) -> str:
         """Gets the socket_type of this EmailAccountConfig.
 
-        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The socket_type of this EmailAccountConfig.
         :rtype: str
@@ -211,7 +211,7 @@ class EmailAccountConfig(object):
     def socket_type(self, socket_type: str):
         """Sets the socket_type of this EmailAccountConfig.
 
-        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param socket_type: The socket_type of this EmailAccountConfig.
         :type: str

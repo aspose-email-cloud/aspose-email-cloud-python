@@ -130,6 +130,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**get_email_as_file_async**](EmailApi.md#get_email_as_file_async) | **GET** /email/{fileName}/as-file/{format} | Converts email document from storage to specified format and returns as file             
 *EmailApi* | [**get_email_attachment**](EmailApi.md#get_email_attachment) | **GET** /email/{fileName}/attachments/{attachment} | Get email attachment by name             
 *EmailApi* | [**get_email_attachment_async**](EmailApi.md#get_email_attachment_async) | **GET** /email/{fileName}/attachments/{attachment} | Get email attachment by name             
+*EmailApi* | [**get_email_client_account**](EmailApi.md#get_email_client_account) | **GET** /email/client/email-client-account | Get email client account from storage             
+*EmailApi* | [**get_email_client_account_async**](EmailApi.md#get_email_client_account_async) | **GET** /email/client/email-client-account | Get email client account from storage             
 *EmailApi* | [**get_email_model**](EmailApi.md#get_email_model) | **GET** /email/model/{format}/{name} | Get email document.             
 *EmailApi* | [**get_email_model_async**](EmailApi.md#get_email_model_async) | **GET** /email/model/{format}/{name} | Get email document.             
 *EmailApi* | [**get_email_model_list**](EmailApi.md#get_email_model_list) | **GET** /email/model/{format} | Get email list from storage folder.             
@@ -166,6 +168,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**save_calendar_model_async**](EmailApi.md#save_calendar_model_async) | **PUT** /email/CalendarModel/{name} | Save iCalendar             
 *EmailApi* | [**save_contact_model**](EmailApi.md#save_contact_model) | **PUT** /email/ContactModel/{format}/{name} | Save contact.             
 *EmailApi* | [**save_contact_model_async**](EmailApi.md#save_contact_model_async) | **PUT** /email/ContactModel/{format}/{name} | Save contact.             
+*EmailApi* | [**save_email_client_account**](EmailApi.md#save_email_client_account) | **PUT** /email/client/email-client-account | Create email client account file (*.account) with any of supported credentials             
+*EmailApi* | [**save_email_client_account_async**](EmailApi.md#save_email_client_account_async) | **PUT** /email/client/email-client-account | Create email client account file (*.account) with any of supported credentials             
 *EmailApi* | [**save_email_model**](EmailApi.md#save_email_model) | **PUT** /email/model/{format}/{name} | Save email document.             
 *EmailApi* | [**save_email_model_async**](EmailApi.md#save_email_model_async) | **PUT** /email/model/{format}/{name} | Save email document.             
 *EmailApi* | [**save_mail_account**](EmailApi.md#save_mail_account) | **POST** /email/client/SaveMailAccount | Create email account file (*.account) with login/password authentication             
@@ -231,6 +235,8 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.EmailAccountConfig](EmailAccountConfig.md)
  - [AsposeEmailCloudSdk.models.EmailAccountRequest](EmailAccountRequest.md)
  - [AsposeEmailCloudSdk.models.EmailAddress](EmailAddress.md)
+ - [AsposeEmailCloudSdk.models.EmailClientAccount](EmailClientAccount.md)
+ - [AsposeEmailCloudSdk.models.EmailClientAccountCredentials](EmailClientAccountCredentials.md)
  - [AsposeEmailCloudSdk.models.EmailDocument](EmailDocument.md)
  - [AsposeEmailCloudSdk.models.EmailDocumentResponse](EmailDocumentResponse.md)
  - [AsposeEmailCloudSdk.models.EmailDto](EmailDto.md)
@@ -280,6 +286,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.SetEmailPropertyRequest](SetEmailPropertyRequest.md)
  - [AsposeEmailCloudSdk.models.StorageExist](StorageExist.md)
  - [AsposeEmailCloudSdk.models.StorageFile](StorageFile.md)
+ - [AsposeEmailCloudSdk.models.StorageFileRqOfEmailClientAccount](StorageFileRqOfEmailClientAccount.md)
  - [AsposeEmailCloudSdk.models.StorageFolderLocation](StorageFolderLocation.md)
  - [AsposeEmailCloudSdk.models.StorageModelOfCalendarDto](StorageModelOfCalendarDto.md)
  - [AsposeEmailCloudSdk.models.StorageModelOfContactDto](StorageModelOfContactDto.md)
@@ -307,6 +314,8 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md)
  - [AsposeEmailCloudSdk.models.DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md)
  - [AsposeEmailCloudSdk.models.EmailAccountConfigList](EmailAccountConfigList.md)
+ - [AsposeEmailCloudSdk.models.EmailClientAccountOauthCredentials](EmailClientAccountOauthCredentials.md)
+ - [AsposeEmailCloudSdk.models.EmailClientAccountPasswordCredentials](EmailClientAccountPasswordCredentials.md)
  - [AsposeEmailCloudSdk.models.EmailDtoList](EmailDtoList.md)
  - [AsposeEmailCloudSdk.models.FileVersion](FileVersion.md)
  - [AsposeEmailCloudSdk.models.HierarchicalObject](HierarchicalObject.md)

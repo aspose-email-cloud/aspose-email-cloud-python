@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="NameValuePair.py">
+#  <copyright company="Aspose" file="EmailClientAccountPasswordCredentials.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,9 +30,11 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
+from AsposeEmailCloudSdk.models.email_client_account_credentials import EmailClientAccountCredentials
 
-class NameValuePair(object):
-    """Name-Value property             
+
+class EmailClientAccountPasswordCredentials(EmailClientAccountCredentials):
+    """Represents email client account password credentials             
     """
 
     """
@@ -43,74 +45,61 @@ class NameValuePair(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'value': 'str'
+        'login': 'str',
+        'discriminator': 'str',
+        'password': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'value': 'value'
+        'login': 'login',
+        'discriminator': 'discriminator',
+        'password': 'password'
     }
 
-    def __init__(self, name: str = None, value: str = None):
+    def __init__(self, login: str = None, discriminator: str = None, password: str = None):
         """
-        Name-Value property             
-        :param name (str) Property name             
-        :param value (str) Property value             
+        Represents email client account password credentials             
+        :param login (str) Email client account login             
+        :param discriminator (str) 
+        :param password (str) Email client account password             
         """
+        super(EmailClientAccountPasswordCredentials, self).__init__()
 
-        self._name = None
-        self._value = None
+        self._password = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if value is not None:
-            self.value = value
+        if login is not None:
+            self.login = login
+        if discriminator is not None:
+            self.discriminator = discriminator
+        if password is not None:
+            self.password = password
 
     @property
-    def name(self) -> str:
-        """Gets the name of this NameValuePair.
+    def password(self) -> str:
+        """Gets the password of this EmailClientAccountPasswordCredentials.
 
-        Property name             
+        Email client account password             
 
-        :return: The name of this NameValuePair.
+        :return: The password of this EmailClientAccountPasswordCredentials.
         :rtype: str
         """
-        return self._name
+        return self._password
 
-    @name.setter
-    def name(self, name: str):
-        """Sets the name of this NameValuePair.
+    @password.setter
+    def password(self, password: str):
+        """Sets the password of this EmailClientAccountPasswordCredentials.
 
-        Property name             
+        Email client account password             
 
-        :param name: The name of this NameValuePair.
+        :param password: The password of this EmailClientAccountPasswordCredentials.
         :type: str
         """
-        self._name = name
-
-    @property
-    def value(self) -> str:
-        """Gets the value of this NameValuePair.
-
-        Property value             
-
-        :return: The value of this NameValuePair.
-        :rtype: str
-        """
-        return self._value
-
-    @value.setter
-    def value(self, value: str):
-        """Sets the value of this NameValuePair.
-
-        Property value             
-
-        :param value: The value of this NameValuePair.
-        :type: str
-        """
-        self._value = value
+        if password is None:
+            raise ValueError("Invalid value for `password`, must not be `None`")
+        if password is not None and len(password) < 1:
+            raise ValueError("Invalid value for `password`, length must be greater than or equal to `1`")
+        self._password = password
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -146,7 +135,7 @@ class NameValuePair(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, NameValuePair):
+        if not isinstance(other, EmailClientAccountPasswordCredentials):
             return False
 
         return self.__dict__ == other.__dict__
