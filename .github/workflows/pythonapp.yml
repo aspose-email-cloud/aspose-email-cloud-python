@@ -1,0 +1,27 @@
+name: tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install -r sdk/requirements.txt
+        python -m pip install -r tests/requirements.txt
+    - name: Test with pytest
+      env:
+        appSid: ${{secrets.appSid}}
+        appKey: ${{secrets.appKey}}
+        apiBaseUrl: "https://api-qa.aspose.cloud"
+      run: |
+        python -m pytest -m pipeline tests

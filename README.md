@@ -1,4 +1,4 @@
-﻿# Aspose.Email Cloud SDK for Python [![PYPI](https://img.shields.io/pypi/v/aspose-email-cloud)](https://pypi.org/project/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-python)](https://pypi.org/project/aspose-email-cloud/)
+﻿# Aspose.Email Cloud SDK for Python [![PYPI](https://img.shields.io/pypi/v/aspose-email-cloud)](https://pypi.org/project/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-python)](https://pypi.org/project/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-python/workflows/tests/badge.svg)
 This repository contains Aspose.Email Cloud SDK for Python source code. This SDK allows you to work with Aspose.Email Cloud REST APIs in your Python applications quickly and easily, with zero initial cost.
 
 [Aspose.Email Cloud home](https://products.aspose.cloud/email/family "Aspose.Email Cloud")  
