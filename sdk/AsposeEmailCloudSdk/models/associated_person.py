@@ -67,7 +67,6 @@ class AssociatedPerson(object):
         self._name = None
         self._category = None
         self._preferred = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name

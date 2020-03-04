@@ -87,7 +87,6 @@ class EmailAccountConfig(object):
         self._authentication_types = None
         self._extra_info = None
         self._is_validated = None
-        self.discriminator = None
 
         if display_name is not None:
             self.display_name = display_name

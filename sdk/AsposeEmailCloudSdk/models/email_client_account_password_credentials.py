@@ -66,7 +66,6 @@ class EmailClientAccountPasswordCredentials(EmailClientAccountCredentials):
         super(EmailClientAccountPasswordCredentials, self).__init__()
 
         self._password = None
-        self.discriminator = None
 
         if login is not None:
             self.login = login

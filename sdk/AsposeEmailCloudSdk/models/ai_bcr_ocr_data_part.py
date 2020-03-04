@@ -77,7 +77,6 @@ class AiBcrOcrDataPart(object):
         self._height = None
         self._text = None
         self._details = None
-        self.discriminator = None
 
         if x is not None:
             self.x = x

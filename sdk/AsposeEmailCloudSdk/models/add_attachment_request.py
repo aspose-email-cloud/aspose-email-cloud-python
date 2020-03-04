@@ -63,7 +63,6 @@ class AddAttachmentRequest(object):
 
         self._document_folder = None
         self._attachment_folder = None
-        self.discriminator = None
 
         if document_folder is not None:
             self.document_folder = document_folder

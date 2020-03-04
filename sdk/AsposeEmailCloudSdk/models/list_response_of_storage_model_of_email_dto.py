@@ -52,10 +52,6 @@ class ListResponseOfStorageModelOfEmailDto(object):
         'value': 'value'
     }
 
-    discriminator_value_class_map = {
-        'EmailDtoList': 'EmailDtoList'
-    }
-
     def __init__(self, value: List[StorageModelOfEmailDto] = None):
         """
         
@@ -63,7 +59,6 @@ class ListResponseOfStorageModelOfEmailDto(object):
         """
 
         self._value = None
-        self.discriminator = 'Type'
 
         if value is not None:
             self.value = value
@@ -87,11 +82,6 @@ class ListResponseOfStorageModelOfEmailDto(object):
         :type: list[StorageModelOfEmailDto]
         """
         self._value = value
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

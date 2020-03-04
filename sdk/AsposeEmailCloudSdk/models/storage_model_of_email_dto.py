@@ -64,7 +64,6 @@ class StorageModelOfEmailDto(object):
 
         self._storage_file = None
         self._value = None
-        self.discriminator = None
 
         if storage_file is not None:
             self.storage_file = storage_file

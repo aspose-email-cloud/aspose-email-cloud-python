@@ -78,7 +78,6 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
         self._client_secret = None
         self._refresh_token = None
         self._request_url = None
-        self.discriminator = None
 
         if login is not None:
             self.login = login

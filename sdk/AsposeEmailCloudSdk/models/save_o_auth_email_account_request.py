@@ -94,7 +94,6 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         self._client_secret = None
         self._refresh_token = None
         self._request_url = None
-        self.discriminator = None
 
         if host is not None:
             self.host = host

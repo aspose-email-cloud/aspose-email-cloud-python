@@ -66,7 +66,6 @@ class StorageFileLocation(StorageFolderLocation):
         super(StorageFileLocation, self).__init__()
 
         self._file_name = None
-        self.discriminator = None
 
         if storage is not None:
             self.storage = storage

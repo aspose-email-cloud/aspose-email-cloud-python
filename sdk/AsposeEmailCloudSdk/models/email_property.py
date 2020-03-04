@@ -67,7 +67,6 @@ class EmailProperty(object):
         self._link = None
         self._name = None
         self._value = None
-        self.discriminator = None
 
         if link is not None:
             self.link = link

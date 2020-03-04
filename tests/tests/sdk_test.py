@@ -344,6 +344,28 @@ def test_is_disposable_email(td: TestData):
         requests.IsEmailAddressDisposableRequest('example@gmail.com'))
     assert not regular.value
 
+@pytest.mark.pipeline
+def test_email_client_account(td: TestData):
+    account = models.EmailClientAccount(
+        'smtp.gmail.com',
+        551,
+        'SSLAuto',
+        'SMTP',
+        models.EmailClientAccountPasswordCredentials(
+            'login', None, 'password'))
+    name = str(uuid.uuid4())+ '.account'
+    td.email.save_email_client_account(
+        requests.SaveEmailClientAccountRequest(
+            models.StorageFileRqOfEmailClientAccount(
+                account, models.StorageFileLocation(
+                    td.storage, td.folder, name))))
+    result = td.email.get_email_client_account(
+        requests.GetEmailClientAccountRequest(
+            name, td.folder, td.storage))
+    assert account.host == result.host
+    assert account.credentials.discriminator == result.credentials.discriminator
+    assert account.credentials.password == result.credentials.password
+
 def _create_calendar(td, start_date_param=None):
     name = str(uuid.uuid4())+ '.ics'
     start_date = (

@@ -89,7 +89,6 @@ class Attachment(AttachmentBase):
         self._name = None
         self._name_encoding = None
         self._preferred_text_encoding = None
-        self.discriminator = None
 
         if base64_data is not None:
             self.base64_data = base64_data

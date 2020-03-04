@@ -67,7 +67,6 @@ class PhoneNumber(object):
         self._category = None
         self._number = None
         self._preferred = None
-        self.discriminator = None
 
         if category is not None:
             self.category = category

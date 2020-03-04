@@ -52,11 +52,6 @@ class EmailClientAccountCredentials(object):
         'discriminator': 'discriminator'
     }
 
-    discriminator_value_class_map = {
-        'EmailClientAccountOauthCredentials': 'EmailClientAccountOauthCredentials',
-        'EmailClientAccountPasswordCredentials': 'EmailClientAccountPasswordCredentials'
-    }
-
     def __init__(self, login: str = None, discriminator: str = None):
         """
         Represents email client account credentials             
@@ -65,8 +60,7 @@ class EmailClientAccountCredentials(object):
         """
 
         self._login = None
-        self._discriminator = None
-        self.discriminator = 'Type'
+        self._discriminator = self.__class__.__name__
 
         if login is not None:
             self.login = login
@@ -107,7 +101,7 @@ class EmailClientAccountCredentials(object):
         :return: The discriminator of this EmailClientAccountCredentials.
         :rtype: str
         """
-        return self._discriminator
+        return self.__class__.__name__
 
     @discriminator.setter
     def discriminator(self, discriminator: str):
@@ -119,12 +113,7 @@ class EmailClientAccountCredentials(object):
         """
         if discriminator is None:
             raise ValueError("Invalid value for `discriminator`, must not be `None`")
-        self._discriminator = discriminator
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
+        self._discriminator = self.__class__.__name__
 
     def to_dict(self):
         """Returns the model properties as a dict"""

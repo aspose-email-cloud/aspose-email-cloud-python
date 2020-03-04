@@ -79,7 +79,6 @@ class FileVersion(StorageFile):
 
         self._version_id = None
         self._is_latest = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name

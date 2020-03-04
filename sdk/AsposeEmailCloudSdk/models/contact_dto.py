@@ -207,7 +207,6 @@ class ContactDto(object):
         self._suffix = None
         self._surname = None
         self._urls = None
-        self.discriminator = None
 
         if associated_persons is not None:
             self.associated_persons = associated_persons

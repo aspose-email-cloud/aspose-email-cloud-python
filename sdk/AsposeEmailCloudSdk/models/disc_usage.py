@@ -61,7 +61,6 @@ class DiscUsage(object):
 
         self._used_size = None
         self._total_size = None
-        self.discriminator = None
 
         if used_size is not None:
             self.used_size = used_size

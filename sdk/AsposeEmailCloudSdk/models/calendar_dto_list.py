@@ -59,7 +59,6 @@ class CalendarDtoList(ListResponseOfStorageModelOfCalendarDto):
         :param value (List[StorageModelOfCalendarDto]) 
         """
         super(CalendarDtoList, self).__init__()
-        self.discriminator = None
 
         if value is not None:
             self.value = value

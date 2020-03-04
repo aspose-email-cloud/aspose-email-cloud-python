@@ -61,7 +61,6 @@ class AiNameGenderHypothesis(object):
 
         self._gender = None
         self._score = None
-        self.discriminator = None
 
         if gender is not None:
             self.gender = gender

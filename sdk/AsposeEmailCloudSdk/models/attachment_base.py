@@ -58,12 +58,6 @@ class AttachmentBase(object):
         'headers': 'headers'
     }
 
-    discriminator_value_class_map = {
-        'Attachment': 'Attachment',
-        'LinkedResource': 'LinkedResource',
-        'AlternateView': 'AlternateView'
-    }
-
     def __init__(self, base64_data: str = None, content_id: str = None, content_type: ContentType = None, headers: Dict[str, str] = None):
         """
         AttachmentBase class             
@@ -77,7 +71,6 @@ class AttachmentBase(object):
         self._content_id = None
         self._content_type = None
         self._headers = None
-        self.discriminator = 'Type'
 
         if base64_data is not None:
             self.base64_data = base64_data
@@ -175,11 +168,6 @@ class AttachmentBase(object):
         :type: dict(str, str)
         """
         self._headers = headers
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

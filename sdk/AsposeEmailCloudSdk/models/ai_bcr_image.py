@@ -50,11 +50,6 @@ class AiBcrImage(object):
         'is_single': 'isSingle'
     }
 
-    discriminator_value_class_map = {
-        'AiBcrImageStorageFile': 'AiBcrImageStorageFile',
-        'AiBcrBase64Image': 'AiBcrBase64Image'
-    }
-
     def __init__(self, is_single: bool = None):
         """
         Image for recognition             
@@ -62,7 +57,6 @@ class AiBcrImage(object):
         """
 
         self._is_single = None
-        self.discriminator = 'Type'
 
         if is_single is not None:
             self.is_single = is_single
@@ -90,11 +84,6 @@ class AiBcrImage(object):
         if is_single is None:
             raise ValueError("Invalid value for `is_single`, must not be `None`")
         self._is_single = is_single
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

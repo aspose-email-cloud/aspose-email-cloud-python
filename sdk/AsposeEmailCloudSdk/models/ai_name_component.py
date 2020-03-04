@@ -69,7 +69,6 @@ class AiNameComponent(object):
         self._category = None
         self._score = None
         self._position = None
-        self.discriminator = None
 
         if value is not None:
             self.value = value

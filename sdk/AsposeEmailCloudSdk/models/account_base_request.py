@@ -56,20 +56,6 @@ class AccountBaseRequest(object):
         'storage_folder': 'storageFolder'
     }
 
-    discriminator_value_class_map = {
-        'SendEmailModelRq': 'SendEmailModelRq',
-        'DeleteFolderBaseRequest': 'DeleteFolderBaseRequest',
-        'AppendEmailAccountBaseRequest': 'AppendEmailAccountBaseRequest',
-        'SendEmailBaseRequest': 'SendEmailBaseRequest',
-        'DeleteMessageBaseRequest': 'DeleteMessageBaseRequest',
-        'SendEmailMimeBaseRequest': 'SendEmailMimeBaseRequest',
-        'AppendEmailBaseRequest': 'AppendEmailBaseRequest',
-        'SetMessageReadFlagAccountBaseRequest': 'SetMessageReadFlagAccountBaseRequest',
-        'AppendEmailModelRq': 'AppendEmailModelRq',
-        'AppendEmailMimeBaseRequest': 'AppendEmailMimeBaseRequest',
-        'CreateFolderBaseRequest': 'CreateFolderBaseRequest'
-    }
-
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None):
         """
         EmailClient accounts request             
@@ -81,7 +67,6 @@ class AccountBaseRequest(object):
         self._first_account = None
         self._second_account = None
         self._storage_folder = None
-        self.discriminator = 'Type'
 
         if first_account is not None:
             self.first_account = first_account
@@ -159,11 +144,6 @@ class AccountBaseRequest(object):
         :type: StorageFolderLocation
         """
         self._storage_folder = storage_folder
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

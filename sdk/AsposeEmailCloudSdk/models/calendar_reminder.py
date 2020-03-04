@@ -88,7 +88,6 @@ class CalendarReminder(object):
         self._repeat = None
         self._summary = None
         self._trigger = None
-        self.discriminator = None
 
         if action is not None:
             self.action = action

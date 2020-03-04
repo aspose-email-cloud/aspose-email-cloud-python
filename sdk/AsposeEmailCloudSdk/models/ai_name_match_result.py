@@ -63,7 +63,6 @@ class AiNameMatchResult(object):
 
         self._similarity = None
         self._mismatches = None
-        self.discriminator = None
 
         if similarity is not None:
             self.similarity = similarity

@@ -61,7 +61,6 @@ class ContactPhoto(object):
 
         self._photo_image_format = None
         self._base64_data = None
-        self.discriminator = None
 
         if photo_image_format is not None:
             self.photo_image_format = photo_image_format

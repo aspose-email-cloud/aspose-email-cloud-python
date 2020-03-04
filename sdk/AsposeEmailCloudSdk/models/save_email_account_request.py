@@ -82,7 +82,6 @@ class SaveEmailAccountRequest(EmailAccountRequest):
         super(SaveEmailAccountRequest, self).__init__()
 
         self._password = None
-        self.discriminator = None
 
         if host is not None:
             self.host = host

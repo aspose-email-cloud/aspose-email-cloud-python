@@ -74,7 +74,6 @@ class CreateFolderBaseRequest(AccountBaseRequest):
 
         self._folder = None
         self._parent_folder = None
-        self.discriminator = None
 
         if first_account is not None:
             self.first_account = first_account

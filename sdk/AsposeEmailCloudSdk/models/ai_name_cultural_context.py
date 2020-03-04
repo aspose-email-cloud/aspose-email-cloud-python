@@ -73,7 +73,6 @@ class AiNameCulturalContext(object):
         self._script = None
         self._encoding = None
         self._style = None
-        self.discriminator = None
 
         if language is not None:
             self.language = language

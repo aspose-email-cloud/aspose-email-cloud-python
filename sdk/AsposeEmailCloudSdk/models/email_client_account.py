@@ -75,7 +75,6 @@ class EmailClientAccount(object):
         self._security_options = None
         self._protocol_type = None
         self._credentials = None
-        self.discriminator = None
 
         if host is not None:
             self.host = host

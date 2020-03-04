@@ -67,7 +67,6 @@ class InstantMessengerAddress(object):
         self._category = None
         self._address = None
         self._preferred = None
-        self.discriminator = None
 
         if category is not None:
             self.category = category

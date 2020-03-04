@@ -64,7 +64,6 @@ class HierarchicalObjectRequest(object):
 
         self._hierarchical_object = None
         self._storage_folder = None
-        self.discriminator = None
 
         if hierarchical_object is not None:
             self.hierarchical_object = hierarchical_object

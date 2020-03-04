@@ -63,7 +63,6 @@ class AiBcrBase64Image(AiBcrImage):
         super(AiBcrBase64Image, self).__init__()
 
         self._base64_data = None
-        self.discriminator = None
 
         if is_single is not None:
             self.is_single = is_single

@@ -64,7 +64,6 @@ class EmailDocument(object):
 
         self._links = None
         self._document_properties = None
-        self.discriminator = None
 
         if links is not None:
             self.links = links

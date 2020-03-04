@@ -74,7 +74,6 @@ class AppendEmailAccountBaseRequest(AccountBaseRequest):
 
         self._folder = None
         self._mark_as_sent = None
-        self.discriminator = None
 
         if first_account is not None:
             self.first_account = first_account

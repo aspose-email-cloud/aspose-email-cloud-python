@@ -59,7 +59,6 @@ class EmailDocumentResponse(object):
         """
 
         self._document = None
-        self.discriminator = None
 
         if document is not None:
             self.document = document

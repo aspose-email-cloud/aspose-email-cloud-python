@@ -77,7 +77,6 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
         super(AppendEmailModelRq, self).__init__()
 
         self._message = None
-        self.discriminator = None
 
         if first_account is not None:
             self.first_account = first_account

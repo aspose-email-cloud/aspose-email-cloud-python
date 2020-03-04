@@ -61,7 +61,6 @@ class EnumWithCustomOfEventCategory(object):
 
         self._value = None
         self._description = None
-        self.discriminator = None
 
         if value is not None:
             self.value = value

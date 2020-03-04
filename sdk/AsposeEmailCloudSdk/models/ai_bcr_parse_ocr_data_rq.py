@@ -65,7 +65,6 @@ class AiBcrParseOcrDataRq(AiBcrRq):
         super(AiBcrParseOcrDataRq, self).__init__()
 
         self._data = None
-        self.discriminator = None
 
         if options is not None:
             self.options = options

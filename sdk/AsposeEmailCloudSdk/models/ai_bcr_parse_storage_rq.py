@@ -69,7 +69,6 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
         super(AiBcrParseStorageRq, self).__init__()
 
         self._out_folder = None
-        self.discriminator = None
 
         if options is not None:
             self.options = options

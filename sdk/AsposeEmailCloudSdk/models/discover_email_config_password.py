@@ -69,7 +69,6 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRq):
         super(DiscoverEmailConfigPassword, self).__init__()
 
         self._password = None
-        self.discriminator = None
 
         if address is not None:
             self.address = address

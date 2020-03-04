@@ -99,7 +99,6 @@ class PostalAddress(object):
         self._preferred = None
         self._state_or_province = None
         self._street = None
-        self.discriminator = None
 
         if address is not None:
             self.address = address

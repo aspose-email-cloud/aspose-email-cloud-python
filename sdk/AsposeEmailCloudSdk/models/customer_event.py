@@ -63,7 +63,6 @@ class CustomerEvent(object):
 
         self._category = None
         self.__date = None
-        self.discriminator = None
 
         if category is not None:
             self.category = category

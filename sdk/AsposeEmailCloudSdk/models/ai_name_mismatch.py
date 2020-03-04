@@ -65,7 +65,6 @@ class AiNameMismatch(object):
         self._category = None
         self._similarity = None
         self._explanation = None
-        self.discriminator = None
 
         if category is not None:
             self.category = category

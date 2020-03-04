@@ -65,7 +65,6 @@ class AiBcrBase64Rq(AiBcrRq):
         super(AiBcrBase64Rq, self).__init__()
 
         self._images = None
-        self.discriminator = None
 
         if options is not None:
             self.options = options

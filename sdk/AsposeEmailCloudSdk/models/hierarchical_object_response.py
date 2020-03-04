@@ -64,7 +64,6 @@ class HierarchicalObjectResponse(object):
 
         self._hierarchical_object = None
         self._storage_file = None
-        self.discriminator = None
 
         if hierarchical_object is not None:
             self.hierarchical_object = hierarchical_object

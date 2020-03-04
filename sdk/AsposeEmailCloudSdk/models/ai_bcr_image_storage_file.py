@@ -64,7 +64,6 @@ class AiBcrImageStorageFile(AiBcrImage):
         super(AiBcrImageStorageFile, self).__init__()
 
         self._file = None
-        self.discriminator = None
 
         if is_single is not None:
             self.is_single = is_single

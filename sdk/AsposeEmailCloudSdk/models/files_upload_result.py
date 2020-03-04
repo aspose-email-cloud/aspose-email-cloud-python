@@ -63,7 +63,6 @@ class FilesUploadResult(object):
 
         self._uploaded = None
         self._errors = None
-        self.discriminator = None
 
         if uploaded is not None:
             self.uploaded = uploaded

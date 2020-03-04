@@ -64,7 +64,6 @@ class StorageModelRqOfCalendarDto(object):
 
         self._value = None
         self._storage_folder = None
-        self.discriminator = None
 
         if value is not None:
             self.value = value

@@ -71,7 +71,6 @@ class Error(object):
         self._message = None
         self._description = None
         self._inner_error = None
-        self.discriminator = None
 
         if code is not None:
             self.code = code
