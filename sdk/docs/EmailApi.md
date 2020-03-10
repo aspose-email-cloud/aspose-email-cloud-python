@@ -4812,6 +4812,81 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_email_client_multi_account"></a>
+# **get_email_client_multi_account**
+> get_email_client_multi_account(self, get_email_client_multi_account_request)
+
+Get email client multi account file (*.multi.account). Will respond error if file extension is not \".multi.account\".             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder, 
+    storage)
+```
+
+### Usage
+```python
+EmailApi.get_email_client_multi_account(
+    GetEmailClientMultiAccountRequest(
+        name, 
+        folder, 
+        storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| File name on storage | 
+ **folder** | **str**| Folder on storage | 
+ **storage** | **str**| Storage name | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_client_multi_account_async"></a>
+# **get_email_client_multi_account_async**
+> get_email_client_multi_account_async(self, get_email_client_multi_account_request)
+
+Get email client multi account file (*.multi.account). Will respond error if file extension is not \".multi.account\".             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_client_multi_account_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder, 
+    storage)
+```
+
+### Usage
+```python
+EmailApi.get_email_client_multi_account_async(
+    GetEmailClientMultiAccountRequest(
+        name, 
+        folder, 
+        storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| File name on storage | 
+ **folder** | **str**| Folder on storage | 
+ **storage** | **str**| Storage name | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_email_model"></a>
 # **get_email_model**
 > get_email_model(self, get_email_model_request)
@@ -6314,6 +6389,69 @@ EmailApi.save_email_client_account_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**StorageFileRqOfEmailClientAccount**](StorageFileRqOfEmailClientAccount.md)| Email account information | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_email_client_multi_account"></a>
+# **save_email_client_multi_account**
+> save_email_client_multi_account(self, save_email_client_multi_account_request)
+
+Create email client multi account file (*.multi.account). Will respond error if file extension is not \".multi.account\".             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.save_email_client_multi_account(
+    SaveEmailClientMultiAccountRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**StorageFileRqOfEmailClientMultiAccount**](StorageFileRqOfEmailClientMultiAccount.md)| Email accounts information | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_email_client_multi_account_async"></a>
+# **save_email_client_multi_account_async**
+> save_email_client_multi_account_async(self, save_email_client_multi_account_request)
+
+Create email client multi account file (*.multi.account). Will respond error if file extension is not \".multi.account\".             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_email_client_multi_account_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.save_email_client_multi_account_async(
+    SaveEmailClientMultiAccountRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**StorageFileRqOfEmailClientMultiAccount**](StorageFileRqOfEmailClientMultiAccount.md)| Email accounts information | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
