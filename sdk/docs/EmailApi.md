@@ -4820,7 +4820,7 @@ Get email client multi account file (*.multi.account). Will respond error if fil
 
 ### Return type
 
-void (empty response body)
+[**EmailClientMultiAccount**](EmailClientMultiAccount.md)
 
 ### Request Parameters
 ```python
@@ -4859,7 +4859,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-get_email_client_multi_account_async(request).get() returns void (empty response body)
+get_email_client_multi_account_async(request).get() returns [**EmailClientMultiAccount**](EmailClientMultiAccount.md)
 
 ### Request Parameters
 ```python
