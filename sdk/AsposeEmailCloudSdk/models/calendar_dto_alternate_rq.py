@@ -67,7 +67,6 @@ class CalendarDtoAlternateRq(object):
         self._value = None
         self._action = None
         self._sequence_id = None
-        self.discriminator = None
 
         if value is not None:
             self.value = value

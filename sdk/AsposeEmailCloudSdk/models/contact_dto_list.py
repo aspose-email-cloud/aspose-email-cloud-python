@@ -59,7 +59,6 @@ class ContactDtoList(ListResponseOfStorageModelOfContactDto):
         :param value (List[StorageModelOfContactDto]) 
         """
         super(ContactDtoList, self).__init__()
-        self.discriminator = None
 
         if value is not None:
             self.value = value

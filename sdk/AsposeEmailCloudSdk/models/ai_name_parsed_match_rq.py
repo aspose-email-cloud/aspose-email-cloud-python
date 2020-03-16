@@ -71,7 +71,6 @@ class AiNameParsedMatchRq(AiNameParsedRq):
         super(AiNameParsedMatchRq, self).__init__()
 
         self._other_parsed_name = None
-        self.discriminator = None
 
         if cultural_context is not None:
             self.cultural_context = cultural_context

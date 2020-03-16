@@ -52,13 +52,6 @@ class BaseObject(object):
         'type': 'type'
     }
 
-    discriminator_value_class_map = {
-        'PrimitiveObject': 'PrimitiveObject',
-        'HierarchicalObject': 'HierarchicalObject',
-        'IndexedPrimitiveObject': 'IndexedPrimitiveObject',
-        'IndexedHierarchicalObject': 'IndexedHierarchicalObject'
-    }
-
     def __init__(self, name: str = None, type: str = None):
         """
         Base property object             
@@ -68,7 +61,6 @@ class BaseObject(object):
 
         self._name = None
         self._type = self.__class__.__name__
-        self.discriminator = 'Type'
 
         if name is not None:
             self.name = name
@@ -118,11 +110,6 @@ class BaseObject(object):
         :type: str
         """
         self._type = self.__class__.__name__
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

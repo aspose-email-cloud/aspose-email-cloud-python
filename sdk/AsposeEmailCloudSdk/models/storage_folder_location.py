@@ -52,10 +52,6 @@ class StorageFolderLocation(object):
         'folder_path': 'folderPath'
     }
 
-    discriminator_value_class_map = {
-        'StorageFileLocation': 'StorageFileLocation'
-    }
-
     def __init__(self, storage: str = None, folder_path: str = None):
         """
         A storage folder location information             
@@ -65,7 +61,6 @@ class StorageFolderLocation(object):
 
         self._storage = None
         self._folder_path = None
-        self.discriminator = 'Type'
 
         if storage is not None:
             self.storage = storage
@@ -115,11 +110,6 @@ class StorageFolderLocation(object):
         :type: str
         """
         self._folder_path = folder_path
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -76,7 +76,6 @@ class AppendEmailMimeBaseRequest(AppendEmailAccountBaseRequest):
         super(AppendEmailMimeBaseRequest, self).__init__()
 
         self._base64_mime_message = None
-        self.discriminator = None
 
         if first_account is not None:
             self.first_account = first_account

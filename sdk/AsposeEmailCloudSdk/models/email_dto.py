@@ -186,7 +186,6 @@ class EmailDto(object):
         self._time_zone_offset = None
         self._to = None
         self._x_mailer = None
-        self.discriminator = None
 
         if alternate_views is not None:
             self.alternate_views = alternate_views

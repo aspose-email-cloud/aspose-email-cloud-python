@@ -52,13 +52,6 @@ class AiBcrRq(object):
         'options': 'options'
     }
 
-    discriminator_value_class_map = {
-        'AiBcrParseOcrDataRq': 'AiBcrParseOcrDataRq',
-        'AiBcrParseStorageRq': 'AiBcrParseStorageRq',
-        'AiBcrStorageImageRq': 'AiBcrStorageImageRq',
-        'AiBcrBase64Rq': 'AiBcrBase64Rq'
-    }
-
     def __init__(self, options: AiBcrOptions = None):
         """
         Business card recognition request             
@@ -66,7 +59,6 @@ class AiBcrRq(object):
         """
 
         self._options = None
-        self.discriminator = 'Type'
 
         if options is not None:
             self.options = options
@@ -92,11 +84,6 @@ class AiBcrRq(object):
         :type: AiBcrOptions
         """
         self._options = options
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

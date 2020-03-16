@@ -335,6 +335,67 @@ def test_mapi_get_properties(td: TestData):
         name, td.folder, td.storage))
     assert 'IPM.Schedule' in properties.hierarchical_object.name
 
+@pytest.mark.pipeline
+def test_is_disposable_email(td: TestData):
+    disposable = td.email.is_email_address_disposable(
+        requests.IsEmailAddressDisposableRequest('example@mailcatch.com'))
+    assert disposable.value
+    regular = td.email.is_email_address_disposable(
+        requests.IsEmailAddressDisposableRequest('example@gmail.com'))
+    assert not regular.value
+
+@pytest.mark.pipeline
+def test_email_client_account(td: TestData):
+    account = models.EmailClientAccount(
+        'smtp.gmail.com',
+        551,
+        'SSLAuto',
+        'SMTP',
+        models.EmailClientAccountPasswordCredentials(
+            'login', None, 'password'))
+    name = str(uuid.uuid4())+ '.account'
+    td.email.save_email_client_account(
+        requests.SaveEmailClientAccountRequest(
+            models.StorageFileRqOfEmailClientAccount(
+                account, models.StorageFileLocation(
+                    td.storage, td.folder, name))))
+    result = td.email.get_email_client_account(
+        requests.GetEmailClientAccountRequest(
+            name, td.folder, td.storage))
+    assert account.host == result.host
+    assert account.credentials.discriminator == result.credentials.discriminator
+    assert account.credentials.password == result.credentials.password
+
+@pytest.mark.pipeline
+def test_email_client_multi_account(td: TestData):
+    # Create multi account object 
+    multi_account = models.EmailClientMultiAccount(
+        [models.EmailClientAccount('imap.gmail.com', 993, 'SSLAuto', 'IMAP',
+            models.EmailClientAccountPasswordCredentials(
+                'example@gmail.com', None, 'password')),
+        models.EmailClientAccount('exchange.outlook.com', 443, 'SSLAuto', 'EWS',
+            models.EmailClientAccountOauthCredentials(
+                'example@outlook.com', None, 'client_id', 'client_secret', 'refresh_token'))],
+        models.EmailClientAccount('smtp.gmail.com', 465, 'SSLAuto', 'SMTP',
+            models.EmailClientAccountPasswordCredentials(
+                'example@gmail.com', None, 'password')))
+    file_name = str(uuid.uuid4()) + '.multi.account'
+    folder = td.folder
+    storage = td.storage
+    email = td.email
+    # Save multi account
+    email.save_email_client_multi_account(requests.SaveEmailClientMultiAccountRequest(
+        models.StorageFileRqOfEmailClientMultiAccount(
+            multi_account,
+            models.StorageFileLocation(storage, folder, file_name))))
+    # Get multi account object from storage
+    multi_account_from_storage = email.get_email_client_multi_account(requests.GetEmailClientMultiAccountRequest(
+        file_name, folder, storage))
+
+    assert len(multi_account_from_storage.receive_accounts) == 2
+    assert (multi_account_from_storage.send_account.credentials.discriminator ==
+        multi_account.send_account.credentials.discriminator)
+
 def _create_calendar(td, start_date_param=None):
     name = str(uuid.uuid4())+ '.ics'
     start_date = (

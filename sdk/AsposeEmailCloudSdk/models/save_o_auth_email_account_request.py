@@ -55,7 +55,8 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         'storage_file': 'StorageFileLocation',
         'client_id': 'str',
         'client_secret': 'str',
-        'refresh_token': 'str'
+        'refresh_token': 'str',
+        'request_url': 'str'
     }
 
     attribute_map = {
@@ -68,29 +69,31 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         'storage_file': 'storageFile',
         'client_id': 'clientId',
         'client_secret': 'clientSecret',
-        'refresh_token': 'refreshToken'
+        'refresh_token': 'refreshToken',
+        'request_url': 'requestUrl'
     }
 
-    def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None, client_id: str = None, client_secret: str = None, refresh_token: str = None):
+    def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None, client_id: str = None, client_secret: str = None, refresh_token: str = None, request_url: str = None):
         """
         Save email account settings with OAuth request             
         :param host (str) Email account host             
         :param port (int) Email account port             
         :param login (str) Email account login             
-        :param security_options (str) Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param security_options (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :param description (str) Email account description             
         :param storage_file (StorageFileLocation) A storage file location info to store email account             
         :param client_id (str) OAuth client identifier             
         :param client_secret (str) OAuth client secret             
         :param refresh_token (str) OAuth refresh token             
+        :param request_url (str) The url to obtain access token. If not specified, will try to discover from email account host.             
         """
         super(SaveOAuthEmailAccountRequest, self).__init__()
 
         self._client_id = None
         self._client_secret = None
         self._refresh_token = None
-        self.discriminator = None
+        self._request_url = None
 
         if host is not None:
             self.host = host
@@ -112,6 +115,8 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
             self.client_secret = client_secret
         if refresh_token is not None:
             self.refresh_token = refresh_token
+        if request_url is not None:
+            self.request_url = request_url
 
     @property
     def client_id(self) -> str:
@@ -190,6 +195,28 @@ class SaveOAuthEmailAccountRequest(EmailAccountRequest):
         if refresh_token is not None and len(refresh_token) < 1:
             raise ValueError("Invalid value for `refresh_token`, length must be greater than or equal to `1`")
         self._refresh_token = refresh_token
+
+    @property
+    def request_url(self) -> str:
+        """Gets the request_url of this SaveOAuthEmailAccountRequest.
+
+        The url to obtain access token. If not specified, will try to discover from email account host.             
+
+        :return: The request_url of this SaveOAuthEmailAccountRequest.
+        :rtype: str
+        """
+        return self._request_url
+
+    @request_url.setter
+    def request_url(self, request_url: str):
+        """Sets the request_url of this SaveOAuthEmailAccountRequest.
+
+        The url to obtain access token. If not specified, will try to discover from email account host.             
+
+        :param request_url: The request_url of this SaveOAuthEmailAccountRequest.
+        :type: str
+        """
+        self._request_url = request_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

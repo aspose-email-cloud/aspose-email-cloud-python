@@ -54,11 +54,6 @@ class DiscoverEmailConfigRq(object):
         'login': 'login'
     }
 
-    discriminator_value_class_map = {
-        'DiscoverEmailConfigPassword': 'DiscoverEmailConfigPassword',
-        'DiscoverEmailConfigOauth': 'DiscoverEmailConfigOauth'
-    }
-
     def __init__(self, address: str = None, fast_processing: bool = None, login: str = None):
         """
         Discover email configuration request.             
@@ -70,7 +65,6 @@ class DiscoverEmailConfigRq(object):
         self._address = None
         self._fast_processing = None
         self._login = None
-        self.discriminator = 'Type'
 
         if address is not None:
             self.address = address
@@ -150,11 +144,6 @@ class DiscoverEmailConfigRq(object):
         :type: str
         """
         self._login = login
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

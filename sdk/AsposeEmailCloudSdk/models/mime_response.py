@@ -57,7 +57,6 @@ class MimeResponse(object):
         """
 
         self._mime = None
-        self.discriminator = None
 
         if mime is not None:
             self.mime = mime

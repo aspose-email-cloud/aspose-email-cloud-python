@@ -57,10 +57,6 @@ class AiNameParsedRq(object):
         'parsed_name': 'parsedName'
     }
 
-    discriminator_value_class_map = {
-        'AiNameParsedMatchRq': 'AiNameParsedMatchRq'
-    }
-
     def __init__(self, cultural_context: AiNameCulturalContext = None, format: str = None, parsed_name: List[AiNameComponent] = None):
         """
         Parsed name request model             
@@ -72,7 +68,6 @@ class AiNameParsedRq(object):
         self._cultural_context = None
         self._format = None
         self._parsed_name = None
-        self.discriminator = 'Type'
 
         if cultural_context is not None:
             self.cultural_context = cultural_context
@@ -148,11 +143,6 @@ class AiNameParsedRq(object):
         if parsed_name is None:
             raise ValueError("Invalid value for `parsed_name`, must not be `None`")
         self._parsed_name = parsed_name
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

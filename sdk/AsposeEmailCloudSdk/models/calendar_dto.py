@@ -141,7 +141,6 @@ class CalendarDto(object):
         self._status = None
         self._summary = None
         self._transparency = None
-        self.discriminator = None
 
         if attachments is not None:
             self.attachments = attachments

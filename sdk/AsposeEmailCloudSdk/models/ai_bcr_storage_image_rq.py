@@ -65,7 +65,6 @@ class AiBcrStorageImageRq(AiBcrRq):
         super(AiBcrStorageImageRq, self).__init__()
 
         self._images = None
-        self.discriminator = None
 
         if options is not None:
             self.options = options

@@ -70,7 +70,6 @@ class IndexedHierarchicalObject(BaseObject):
 
         self._index = None
         self._internal_properties = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name

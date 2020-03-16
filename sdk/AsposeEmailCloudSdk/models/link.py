@@ -69,7 +69,6 @@ class Link(object):
         self._rel = None
         self._type = None
         self._title = None
-        self.discriminator = None
 
         if href is not None:
             self.href = href

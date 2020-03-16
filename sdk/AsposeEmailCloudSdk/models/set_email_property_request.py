@@ -64,7 +64,6 @@ class SetEmailPropertyRequest(object):
 
         self._email_property = None
         self._storage_folder = None
-        self.discriminator = None
 
         if email_property is not None:
             self.email_property = email_property

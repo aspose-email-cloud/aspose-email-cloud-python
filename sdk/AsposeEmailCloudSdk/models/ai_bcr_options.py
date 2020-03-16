@@ -61,7 +61,6 @@ class AiBcrOptions(object):
 
         self._languages = None
         self._countries = None
-        self.discriminator = None
 
         if languages is not None:
             self.languages = languages

@@ -71,7 +71,6 @@ class SendEmailBaseRequest(AccountBaseRequest):
         super(SendEmailBaseRequest, self).__init__()
 
         self._email_file = None
-        self.discriminator = None
 
         if first_account is not None:
             self.first_account = first_account

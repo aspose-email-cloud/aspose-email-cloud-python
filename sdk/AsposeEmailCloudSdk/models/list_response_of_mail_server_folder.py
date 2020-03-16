@@ -59,7 +59,6 @@ class ListResponseOfMailServerFolder(object):
         """
 
         self._value = None
-        self.discriminator = None
 
         if value is not None:
             self.value = value

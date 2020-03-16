@@ -61,7 +61,6 @@ class ObjectExist(object):
 
         self._exists = None
         self._is_folder = None
-        self.discriminator = None
 
         if exists is not None:
             self.exists = exists

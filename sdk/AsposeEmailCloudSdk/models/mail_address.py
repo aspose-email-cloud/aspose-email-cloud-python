@@ -65,7 +65,6 @@ class MailAddress(object):
         self._display_name = None
         self._address = None
         self._participation_status = None
-        self.discriminator = None
 
         if display_name is not None:
             self.display_name = display_name

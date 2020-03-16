@@ -61,7 +61,6 @@ class ErrorDetails(object):
 
         self._request_id = None
         self.__date = None
-        self.discriminator = None
 
         if request_id is not None:
             self.request_id = request_id

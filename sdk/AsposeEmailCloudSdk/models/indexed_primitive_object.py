@@ -70,7 +70,6 @@ class IndexedPrimitiveObject(BaseObject):
 
         self._index = None
         self._value = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name

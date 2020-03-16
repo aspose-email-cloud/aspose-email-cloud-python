@@ -63,7 +63,6 @@ class AiNameWeightedVariants(object):
 
         self._names = None
         self._comments = None
-        self.discriminator = None
 
         if names is not None:
             self.names = names

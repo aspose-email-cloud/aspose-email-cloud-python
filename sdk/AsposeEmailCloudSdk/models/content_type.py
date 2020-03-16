@@ -75,7 +75,6 @@ class ContentType(object):
         self._media_type = None
         self._name = None
         self._parameters = None
-        self.discriminator = None
 
         if boundary is not None:
             self.boundary = boundary

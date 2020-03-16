@@ -65,7 +65,6 @@ class ReminderTrigger(object):
         self._date_time = None
         self._duration = None
         self._related = None
-        self.discriminator = None
 
         if date_time is not None:
             self.date_time = date_time

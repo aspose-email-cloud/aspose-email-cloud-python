@@ -78,7 +78,6 @@ class AlternateView(AttachmentBase):
 
         self._base_uri = None
         self._linked_resources = None
-        self.discriminator = None
 
         if base64_data is not None:
             self.base64_data = base64_data

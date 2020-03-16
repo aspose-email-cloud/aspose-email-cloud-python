@@ -73,7 +73,6 @@ class LinkedResource(AttachmentBase):
         super(LinkedResource, self).__init__()
 
         self._content_link = None
-        self.discriminator = None
 
         if base64_data is not None:
             self.base64_data = base64_data

@@ -59,7 +59,6 @@ class EmailPropertyResponse(object):
         """
 
         self._email_property = None
-        self.discriminator = None
 
         if email_property is not None:
             self.email_property = email_property

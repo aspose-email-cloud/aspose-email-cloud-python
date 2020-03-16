@@ -73,7 +73,7 @@ class SaveEmailAccountRequest(EmailAccountRequest):
         :param host (str) Email account host             
         :param port (int) Email account port             
         :param login (str) Email account login             
-        :param security_options (str) Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param security_options (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :param description (str) Email account description             
         :param storage_file (StorageFileLocation) A storage file location info to store email account             
@@ -82,7 +82,6 @@ class SaveEmailAccountRequest(EmailAccountRequest):
         super(SaveEmailAccountRequest, self).__init__()
 
         self._password = None
-        self.discriminator = None
 
         if host is not None:
             self.host = host

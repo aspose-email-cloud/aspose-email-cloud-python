@@ -66,7 +66,6 @@ class PrimitiveObject(BaseObject):
         super(PrimitiveObject, self).__init__()
 
         self._value = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name

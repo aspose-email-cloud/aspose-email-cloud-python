@@ -1323,6 +1323,46 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
+    def get_email_client_account(self, request: requests.GetEmailClientAccountRequest)  -> EmailClientAccount:
+        """Get email client account from storage             
+
+
+        :param request GetEmailClientAccountRequest object with parameters
+        :return: EmailClientAccount
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailClientAccount')
+
+    def get_email_client_account_async(self, request: requests.GetEmailClientAccountRequest) -> multiprocessing.pool.AsyncResult:
+        """Get email client account from storage             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailClientAccountRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailClientAccount)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailClientAccount')
+
+    def get_email_client_multi_account(self, request: requests.GetEmailClientMultiAccountRequest)  -> EmailClientMultiAccount:
+        """Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+
+
+        :param request GetEmailClientMultiAccountRequest object with parameters
+        :return: EmailClientMultiAccount
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailClientMultiAccount')
+
+    def get_email_client_multi_account_async(self, request: requests.GetEmailClientMultiAccountRequest) -> multiprocessing.pool.AsyncResult:
+        """Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailClientMultiAccountRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailClientMultiAccount)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailClientMultiAccount')
+
     def get_email_model(self, request: requests.GetEmailModelRequest)  -> EmailDto:
         """Get email document.             
 
@@ -1503,6 +1543,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObjectResponse')
 
+    def is_email_address_disposable(self, request: requests.IsEmailAddressDisposableRequest)  -> ValueTOfBoolean:
+        """Check email address is disposable             
+
+
+        :param request IsEmailAddressDisposableRequest object with parameters
+        :return: ValueTOfBoolean
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ValueTOfBoolean')
+
+    def is_email_address_disposable_async(self, request: requests.IsEmailAddressDisposableRequest) -> multiprocessing.pool.AsyncResult:
+        """Check email address is disposable             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request IsEmailAddressDisposableRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ValueTOfBoolean)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ValueTOfBoolean')
+
     def list_email_folders(self, request: requests.ListEmailFoldersRequest)  -> ListResponseOfMailServerFolder:
         """Get folders list in email account             
 
@@ -1662,6 +1722,46 @@ class EmailApi(object):
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request SaveContactModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def save_email_client_account(self, request: requests.SaveEmailClientAccountRequest) :
+        """Create email client account file (*.account) with any of supported credentials             
+
+
+        :param request SaveEmailClientAccountRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def save_email_client_account_async(self, request: requests.SaveEmailClientAccountRequest) -> multiprocessing.pool.AsyncResult:
+        """Create email client account file (*.account) with any of supported credentials             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SaveEmailClientAccountRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def save_email_client_multi_account(self, request: requests.SaveEmailClientMultiAccountRequest) :
+        """Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+
+
+        :param request SaveEmailClientMultiAccountRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def save_email_client_multi_account_async(self, request: requests.SaveEmailClientMultiAccountRequest) -> multiprocessing.pool.AsyncResult:
+        """Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SaveEmailClientMultiAccountRequest object with parameters
         :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
         """
         http_request = request.to_http_info(self.api_client.configuration)

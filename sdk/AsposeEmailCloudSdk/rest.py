@@ -647,6 +647,8 @@ class ObjectHelper:
 
         #try get derived class by type field
         type_attribute = 'type'
+        if (not hasattr(klass, type_attribute)):
+            type_attribute = 'discriminator'
         if (hasattr(klass, type_attribute) and type_attribute in data):
             type_name = data[type_attribute]
             sub_klass = getattr(AsposeEmailCloudSdk.models, type_name, None)

@@ -61,7 +61,6 @@ class AiNameFormatted(object):
 
         self._name = None
         self._comments = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name

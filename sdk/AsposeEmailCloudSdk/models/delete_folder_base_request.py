@@ -74,7 +74,6 @@ class DeleteFolderBaseRequest(AccountBaseRequest):
 
         self._folder = None
         self._delete_permanently = None
-        self.discriminator = None
 
         if first_account is not None:
             self.first_account = first_account

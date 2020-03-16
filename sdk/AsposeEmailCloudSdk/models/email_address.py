@@ -75,7 +75,6 @@ class EmailAddress(object):
         self._preferred = None
         self._routing_type = None
         self._address = None
-        self.discriminator = None
 
         if category is not None:
             self.category = category

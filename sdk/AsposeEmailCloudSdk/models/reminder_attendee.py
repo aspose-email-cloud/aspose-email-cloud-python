@@ -57,7 +57,6 @@ class ReminderAttendee(object):
         """
 
         self._address = None
-        self.discriminator = None
 
         if address is not None:
             self.address = address

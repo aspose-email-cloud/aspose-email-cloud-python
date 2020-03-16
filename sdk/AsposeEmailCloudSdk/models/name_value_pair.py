@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class NameValuePair(object):
-    """
+    """Name-Value property             
     """
 
     """
@@ -43,55 +43,35 @@ class NameValuePair(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'value': 'str',
-        'name': 'str'
+        'name': 'str',
+        'value': 'str'
     }
 
     attribute_map = {
-        'value': 'value',
-        'name': 'name'
+        'name': 'name',
+        'value': 'value'
     }
 
-    def __init__(self, value: str = None, name: str = None):
+    def __init__(self, name: str = None, value: str = None):
         """
-        
-        :param value (str) 
-        :param name (str) 
+        Name-Value property             
+        :param name (str) Property name             
+        :param value (str) Property value             
         """
 
-        self._value = None
         self._name = None
-        self.discriminator = None
+        self._value = None
 
-        if value is not None:
-            self.value = value
         if name is not None:
             self.name = name
-
-    @property
-    def value(self) -> str:
-        """Gets the value of this NameValuePair.
-
-
-        :return: The value of this NameValuePair.
-        :rtype: str
-        """
-        return self._value
-
-    @value.setter
-    def value(self, value: str):
-        """Sets the value of this NameValuePair.
-
-
-        :param value: The value of this NameValuePair.
-        :type: str
-        """
-        self._value = value
+        if value is not None:
+            self.value = value
 
     @property
     def name(self) -> str:
         """Gets the name of this NameValuePair.
 
+        Property name             
 
         :return: The name of this NameValuePair.
         :rtype: str
@@ -102,11 +82,34 @@ class NameValuePair(object):
     def name(self, name: str):
         """Sets the name of this NameValuePair.
 
+        Property name             
 
         :param name: The name of this NameValuePair.
         :type: str
         """
         self._name = name
+
+    @property
+    def value(self) -> str:
+        """Gets the value of this NameValuePair.
+
+        Property value             
+
+        :return: The value of this NameValuePair.
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value: str):
+        """Sets the value of this NameValuePair.
+
+        Property value             
+
+        :param value: The value of this NameValuePair.
+        :type: str
+        """
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

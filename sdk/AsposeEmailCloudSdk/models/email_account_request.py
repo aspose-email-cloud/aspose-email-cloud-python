@@ -64,18 +64,13 @@ class EmailAccountRequest(object):
         'storage_file': 'storageFile'
     }
 
-    discriminator_value_class_map = {
-        'SaveEmailAccountRequest': 'SaveEmailAccountRequest',
-        'SaveOAuthEmailAccountRequest': 'SaveOAuthEmailAccountRequest'
-    }
-
     def __init__(self, host: str = None, port: int = None, login: str = None, security_options: str = None, protocol_type: str = None, description: str = None, storage_file: StorageFileLocation = None):
         """
         Email account settings request             
         :param host (str) Email account host             
         :param port (int) Email account port             
         :param login (str) Email account login             
-        :param security_options (str) Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param security_options (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :param description (str) Email account description             
         :param storage_file (StorageFileLocation) A storage file location info to store email account             
@@ -88,7 +83,6 @@ class EmailAccountRequest(object):
         self._protocol_type = None
         self._description = None
         self._storage_file = None
-        self.discriminator = 'Type'
 
         if host is not None:
             self.host = host
@@ -185,7 +179,7 @@ class EmailAccountRequest(object):
     def security_options(self) -> str:
         """Gets the security_options of this EmailAccountRequest.
 
-        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The security_options of this EmailAccountRequest.
         :rtype: str
@@ -196,7 +190,7 @@ class EmailAccountRequest(object):
     def security_options(self, security_options: str):
         """Sets the security_options of this EmailAccountRequest.
 
-        Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param security_options: The security_options of this EmailAccountRequest.
         :type: str
@@ -278,11 +272,6 @@ class EmailAccountRequest(object):
         if storage_file is None:
             raise ValueError("Invalid value for `storage_file`, must not be `None`")
         self._storage_file = storage_file
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data.get(self.discriminator)
-        return self.discriminator_value_class_map.get(discriminator_value.lower()) if discriminator_value else None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

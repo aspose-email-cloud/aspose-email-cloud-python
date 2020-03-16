@@ -64,7 +64,6 @@ class CreateEmailRequest(object):
 
         self._email_document = None
         self._storage_folder = None
-        self.discriminator = None
 
         if email_document is not None:
             self.email_document = email_document

@@ -71,7 +71,6 @@ class AiBcrOcrData(object):
         self._image = None
         self._details = None
         self._data = None
-        self.discriminator = None
 
         if id is not None:
             self.id = id

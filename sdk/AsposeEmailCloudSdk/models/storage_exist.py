@@ -57,7 +57,6 @@ class StorageExist(object):
         """
 
         self._exists = None
-        self.discriminator = None
 
         if exists is not None:
             self.exists = exists

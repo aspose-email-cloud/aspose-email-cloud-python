@@ -59,7 +59,6 @@ class EmailDtoList(ListResponseOfStorageModelOfEmailDto):
         :param value (List[StorageModelOfEmailDto]) 
         """
         super(EmailDtoList, self).__init__()
-        self.discriminator = None
 
         if value is not None:
             self.value = value

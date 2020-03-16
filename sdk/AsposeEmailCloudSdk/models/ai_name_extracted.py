@@ -63,7 +63,6 @@ class AiNameExtracted(object):
 
         self._name = None
         self._score = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name

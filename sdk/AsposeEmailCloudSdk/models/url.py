@@ -67,7 +67,6 @@ class Url(object):
         self._category = None
         self._preferred = None
         self._href = None
-        self.discriminator = None
 
         if category is not None:
             self.category = category

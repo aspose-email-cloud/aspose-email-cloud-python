@@ -61,7 +61,6 @@ class MailServerFolder(object):
 
         self._name = None
         self._id = None
-        self.discriminator = None
 
         if name is not None:
             self.name = name
