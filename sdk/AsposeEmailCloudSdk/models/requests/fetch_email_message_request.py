@@ -37,7 +37,7 @@ class FetchEmailMessageRequest(BaseRequest):
 
     :param message_id (str) Message identifier
     :param first_account (str) Email account
-    :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
     """
@@ -49,7 +49,7 @@ class FetchEmailMessageRequest(BaseRequest):
 
         :param message_id (str) Message identifier
         :param first_account (str) Email account
-        :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+        :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
         """

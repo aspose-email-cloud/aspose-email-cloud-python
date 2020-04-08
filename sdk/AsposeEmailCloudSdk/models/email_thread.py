@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AppendEmailModelRq.py">
+#  <copyright company="Aspose" file="EmailThread.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,13 +30,11 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
-from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
 from AsposeEmailCloudSdk.models.email_dto import EmailDto
-from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
-class AppendEmailModelRq(AppendEmailAccountBaseRequest):
-    """Append email request             
+class EmailThread(object):
+    """Email messages thread             
     """
 
     """
@@ -47,73 +45,101 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'first_account': 'str',
-        'second_account': 'str',
-        'storage_folder': 'StorageFolderLocation',
-        'folder': 'str',
-        'mark_as_sent': 'bool',
-        'message': 'EmailDto'
+        'id': 'str',
+        'subject': 'str',
+        'messages': 'list[EmailDto]'
     }
 
     attribute_map = {
-        'first_account': 'firstAccount',
-        'second_account': 'secondAccount',
-        'storage_folder': 'storageFolder',
-        'folder': 'folder',
-        'mark_as_sent': 'markAsSent',
-        'message': 'message'
+        'id': 'id',
+        'subject': 'subject',
+        'messages': 'messages'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: EmailDto = None):
+    def __init__(self, id: str = None, subject: str = None, messages: List[EmailDto] = None):
         """
-        Append email request             
-        :param first_account (str) First account storage file name             
-        :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
-        :param storage_folder (StorageFolderLocation) Storage folder location of account files             
-        :param folder (str) Email account folder to store a message             
-        :param mark_as_sent (bool) Mark message as sent             
-        :param message (EmailDto) Email document             
+        Email messages thread             
+        :param id (str) Thread identifier             
+        :param subject (str) Thread subject             
+        :param messages (List[EmailDto]) List of messages in thread             
         """
-        super(AppendEmailModelRq, self).__init__()
 
-        self._message = None
+        self._id = None
+        self._subject = None
+        self._messages = None
 
-        if first_account is not None:
-            self.first_account = first_account
-        if second_account is not None:
-            self.second_account = second_account
-        if storage_folder is not None:
-            self.storage_folder = storage_folder
-        if folder is not None:
-            self.folder = folder
-        if mark_as_sent is not None:
-            self.mark_as_sent = mark_as_sent
-        if message is not None:
-            self.message = message
+        if id is not None:
+            self.id = id
+        if subject is not None:
+            self.subject = subject
+        if messages is not None:
+            self.messages = messages
 
     @property
-    def message(self) -> EmailDto:
-        """Gets the message of this AppendEmailModelRq.
+    def id(self) -> str:
+        """Gets the id of this EmailThread.
 
-        Email document             
+        Thread identifier             
 
-        :return: The message of this AppendEmailModelRq.
-        :rtype: EmailDto
+        :return: The id of this EmailThread.
+        :rtype: str
         """
-        return self._message
+        return self._id
 
-    @message.setter
-    def message(self, message: EmailDto):
-        """Sets the message of this AppendEmailModelRq.
+    @id.setter
+    def id(self, id: str):
+        """Sets the id of this EmailThread.
 
-        Email document             
+        Thread identifier             
 
-        :param message: The message of this AppendEmailModelRq.
-        :type: EmailDto
+        :param id: The id of this EmailThread.
+        :type: str
         """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")
-        self._message = message
+        self._id = id
+
+    @property
+    def subject(self) -> str:
+        """Gets the subject of this EmailThread.
+
+        Thread subject             
+
+        :return: The subject of this EmailThread.
+        :rtype: str
+        """
+        return self._subject
+
+    @subject.setter
+    def subject(self, subject: str):
+        """Sets the subject of this EmailThread.
+
+        Thread subject             
+
+        :param subject: The subject of this EmailThread.
+        :type: str
+        """
+        self._subject = subject
+
+    @property
+    def messages(self) -> List[EmailDto]:
+        """Gets the messages of this EmailThread.
+
+        List of messages in thread             
+
+        :return: The messages of this EmailThread.
+        :rtype: list[EmailDto]
+        """
+        return self._messages
+
+    @messages.setter
+    def messages(self, messages: List[EmailDto]):
+        """Sets the messages of this EmailThread.
+
+        List of messages in thread             
+
+        :param messages: The messages of this EmailThread.
+        :type: list[EmailDto]
+        """
+        self._messages = messages
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -149,7 +175,7 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AppendEmailModelRq):
+        if not isinstance(other, EmailThread):
             return False
 
         return self.__dict__ == other.__dict__

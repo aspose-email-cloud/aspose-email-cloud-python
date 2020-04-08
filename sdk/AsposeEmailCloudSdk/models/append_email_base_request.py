@@ -67,8 +67,8 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, email_file: StorageFileLocation = None):
         """
         Append email from storage file to account request             
-        :param first_account (str) First account storage file name for receiving emails (or universal one)             
-        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param first_account (str) First account storage file name             
+        :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param folder (str) Email account folder to store a message             
         :param mark_as_sent (bool) Mark message as sent             

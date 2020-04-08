@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="list_email_folders_request.py">
+#  <copyright company="Aspose" file="list_email_threads_request.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,43 +23,46 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.list_email_folders_request import ListEmailFoldersRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.list_email_threads_request import ListEmailThreadsRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ListEmailFoldersRequest(BaseRequest):
+class ListEmailThreadsRequest(BaseRequest):
     """
-    Request model for list_email_folders operation.
+    Request model for list_email_threads operation.
     Initializes a new instance.
 
+    :param folder (str) A folder in email account
     :param first_account (str) Email account
     :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
-    :param parent_folder (str) Folder in which subfolders should be listed
+    :param update_folder_cache (bool) This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
     """
 
-    def __init__(self, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, parent_folder: str = None):
+    def __init__(self, folder: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, update_folder_cache: bool = None):
         """
-        Request model for list_email_folders operation.
+        Request model for list_email_threads operation.
         Initializes a new instance.
 
+        :param folder (str) A folder in email account
         :param first_account (str) Email account
         :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
-        :param parent_folder (str) Folder in which subfolders should be listed
+        :param update_folder_cache (bool) This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
         """
 
         BaseRequest.__init__(self)
+        self.folder = folder
         self.first_account = first_account
         self.second_account = second_account
         self.storage = storage
         self.storage_folder = storage_folder
-        self.parent_folder = parent_folder
+        self.update_folder_cache = update_folder_cache
 
     def to_http_info(self, config):
         """
@@ -70,15 +73,24 @@ class ListEmailFoldersRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
+        # verify the required parameter 'folder' is set
+        if self.folder is None:
+            raise ValueError("Missing the required parameter `folder` when calling `list_email_threads`")
         # verify the required parameter 'first_account' is set
         if self.first_account is None:
-            raise ValueError("Missing the required parameter `first_account` when calling `list_email_folders`")
+            raise ValueError("Missing the required parameter `first_account` when calling `list_email_threads`")
 
         collection_formats = {}
-        path = '/email/client/ListFolders'
+        path = '/email/client/threads'
         path_params = {}
 
         query_params = []
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.folder if self.folder is not None else '')
+        else:
+            if self.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), self.folder))
         path_parameter = '{' + self._lowercase_first_letter('firstAccount') + '}'
         if path_parameter in path:
             path = path.replace(path_parameter, self.first_account if self.first_account is not None else '')
@@ -103,12 +115,12 @@ class ListEmailFoldersRequest(BaseRequest):
         else:
             if self.storage_folder is not None:
                 query_params.append((self._lowercase_first_letter('storageFolder'), self.storage_folder))
-        path_parameter = '{' + self._lowercase_first_letter('parentFolder') + '}'
+        path_parameter = '{' + self._lowercase_first_letter('updateFolderCache') + '}'
         if path_parameter in path:
-            path = path.replace(path_parameter, self.parent_folder if self.parent_folder is not None else '')
+            path = path.replace(path_parameter, self.update_folder_cache if self.update_folder_cache is not None else '')
         else:
-            if self.parent_folder is not None:
-                query_params.append((self._lowercase_first_letter('parentFolder'), self.parent_folder))
+            if self.update_folder_cache is not None:
+                query_params.append((self._lowercase_first_letter('updateFolderCache'), self.update_folder_cache))
 
         header_params = {}
 

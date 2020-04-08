@@ -140,6 +140,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**get_email_model_list_async**](EmailApi.md#get_email_model_list_async) | **GET** /email/model/{format} | Get email list from storage folder.             
 *EmailApi* | [**get_email_property**](EmailApi.md#get_email_property) | **GET** /email/{fileName}/properties/{propertyName} | Get an email document property by its name             
 *EmailApi* | [**get_email_property_async**](EmailApi.md#get_email_property_async) | **GET** /email/{fileName}/properties/{propertyName} | Get an email document property by its name             
+*EmailApi* | [**get_email_thread**](EmailApi.md#get_email_thread) | **GET** /email/client/threads/{threadId} | Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+*EmailApi* | [**get_email_thread_async**](EmailApi.md#get_email_thread_async) | **GET** /email/client/threads/{threadId} | Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
 *EmailApi* | [**get_file_versions**](EmailApi.md#get_file_versions) | **GET** /email/storage/version/{path} | Get file versions
 *EmailApi* | [**get_file_versions_async**](EmailApi.md#get_file_versions_async) | **GET** /email/storage/version/{path} | Get file versions
 *EmailApi* | [**get_files_list**](EmailApi.md#get_files_list) | **GET** /email/storage/folder/{path} | Get all files and folders within a folder
@@ -160,6 +162,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**list_email_messages_async**](EmailApi.md#list_email_messages_async) | **GET** /email/client/ListMessages | Get messages from folder, filtered by query             
 *EmailApi* | [**list_email_models**](EmailApi.md#list_email_models) | **GET** /email/client/ListMessagesModel | Get messages from folder, filtered by query             
 *EmailApi* | [**list_email_models_async**](EmailApi.md#list_email_models_async) | **GET** /email/client/ListMessagesModel | Get messages from folder, filtered by query             
+*EmailApi* | [**list_email_threads**](EmailApi.md#list_email_threads) | **GET** /email/client/threads | Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+*EmailApi* | [**list_email_threads_async**](EmailApi.md#list_email_threads_async) | **GET** /email/client/threads | Get message threads from folder. All messages are partly fetched (without email body and other fields)             
 *EmailApi* | [**move_file**](EmailApi.md#move_file) | **PUT** /email/storage/file/move/{srcPath} | Move file
 *EmailApi* | [**move_file_async**](EmailApi.md#move_file_async) | **PUT** /email/storage/file/move/{srcPath} | Move file
 *EmailApi* | [**move_folder**](EmailApi.md#move_folder) | **PUT** /email/storage/folder/move/{srcPath} | Move folder
@@ -248,6 +252,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.EmailProperties](EmailProperties.md)
  - [AsposeEmailCloudSdk.models.EmailProperty](EmailProperty.md)
  - [AsposeEmailCloudSdk.models.EmailPropertyResponse](EmailPropertyResponse.md)
+ - [AsposeEmailCloudSdk.models.EmailThread](EmailThread.md)
  - [AsposeEmailCloudSdk.models.EnumWithCustomOfAssociatedPersonCategory](EnumWithCustomOfAssociatedPersonCategory.md)
  - [AsposeEmailCloudSdk.models.EnumWithCustomOfEmailAddressCategory](EnumWithCustomOfEmailAddressCategory.md)
  - [AsposeEmailCloudSdk.models.EnumWithCustomOfEventCategory](EnumWithCustomOfEventCategory.md)
@@ -271,6 +276,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.ListResponseOfContactDto](ListResponseOfContactDto.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfEmailAccountConfig](ListResponseOfEmailAccountConfig.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfEmailDto](ListResponseOfEmailDto.md)
+ - [AsposeEmailCloudSdk.models.ListResponseOfEmailThread](ListResponseOfEmailThread.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfHierarchicalObject](ListResponseOfHierarchicalObject.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfHierarchicalObjectResponse](ListResponseOfHierarchicalObjectResponse.md)
  - [AsposeEmailCloudSdk.models.ListResponseOfMailServerFolder](ListResponseOfMailServerFolder.md)
@@ -323,6 +329,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.EmailClientAccountOauthCredentials](EmailClientAccountOauthCredentials.md)
  - [AsposeEmailCloudSdk.models.EmailClientAccountPasswordCredentials](EmailClientAccountPasswordCredentials.md)
  - [AsposeEmailCloudSdk.models.EmailDtoList](EmailDtoList.md)
+ - [AsposeEmailCloudSdk.models.EmailThreadList](EmailThreadList.md)
  - [AsposeEmailCloudSdk.models.FileVersion](FileVersion.md)
  - [AsposeEmailCloudSdk.models.HierarchicalObject](HierarchicalObject.md)
  - [AsposeEmailCloudSdk.models.IndexedHierarchicalObject](IndexedHierarchicalObject.md)

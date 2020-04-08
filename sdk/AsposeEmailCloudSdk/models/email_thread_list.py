@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AppendEmailModelRq.py">
+#  <copyright company="Aspose" file="EmailThreadList.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,13 +30,12 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
-from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
-from AsposeEmailCloudSdk.models.email_dto import EmailDto
-from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
+from AsposeEmailCloudSdk.models.email_thread import EmailThread
+from AsposeEmailCloudSdk.models.list_response_of_email_thread import ListResponseOfEmailThread
 
 
-class AppendEmailModelRq(AppendEmailAccountBaseRequest):
-    """Append email request             
+class EmailThreadList(ListResponseOfEmailThread):
+    """List of email threads             
     """
 
     """
@@ -47,73 +46,22 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'first_account': 'str',
-        'second_account': 'str',
-        'storage_folder': 'StorageFolderLocation',
-        'folder': 'str',
-        'mark_as_sent': 'bool',
-        'message': 'EmailDto'
+        'value': 'list[EmailThread]'
     }
 
     attribute_map = {
-        'first_account': 'firstAccount',
-        'second_account': 'secondAccount',
-        'storage_folder': 'storageFolder',
-        'folder': 'folder',
-        'mark_as_sent': 'markAsSent',
-        'message': 'message'
+        'value': 'value'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: EmailDto = None):
+    def __init__(self, value: List[EmailThread] = None):
         """
-        Append email request             
-        :param first_account (str) First account storage file name             
-        :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
-        :param storage_folder (StorageFolderLocation) Storage folder location of account files             
-        :param folder (str) Email account folder to store a message             
-        :param mark_as_sent (bool) Mark message as sent             
-        :param message (EmailDto) Email document             
+        List of email threads             
+        :param value (List[EmailThread]) 
         """
-        super(AppendEmailModelRq, self).__init__()
+        super(EmailThreadList, self).__init__()
 
-        self._message = None
-
-        if first_account is not None:
-            self.first_account = first_account
-        if second_account is not None:
-            self.second_account = second_account
-        if storage_folder is not None:
-            self.storage_folder = storage_folder
-        if folder is not None:
-            self.folder = folder
-        if mark_as_sent is not None:
-            self.mark_as_sent = mark_as_sent
-        if message is not None:
-            self.message = message
-
-    @property
-    def message(self) -> EmailDto:
-        """Gets the message of this AppendEmailModelRq.
-
-        Email document             
-
-        :return: The message of this AppendEmailModelRq.
-        :rtype: EmailDto
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message: EmailDto):
-        """Sets the message of this AppendEmailModelRq.
-
-        Email document             
-
-        :param message: The message of this AppendEmailModelRq.
-        :type: EmailDto
-        """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")
-        self._message = message
+        if value is not None:
+            self.value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -149,7 +97,7 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AppendEmailModelRq):
+        if not isinstance(other, EmailThreadList):
             return False
 
         return self.__dict__ == other.__dict__

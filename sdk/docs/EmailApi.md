@@ -3396,7 +3396,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3441,7 +3441,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3483,7 +3483,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3528,7 +3528,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -5136,6 +5136,93 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_email_thread"></a>
+# **get_email_thread**
+> get_email_thread(self, get_email_thread_request)
+
+Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+### Return type
+
+[**EmailThread**](EmailThread.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.get_email_thread(
+    GetEmailThreadRequest(
+        thread_id, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_thread_async"></a>
+# **get_email_thread_async**
+> get_email_thread_async(self, get_email_thread_request)
+
+Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_thread_async(request).get() returns [**EmailThread**](EmailThread.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.get_email_thread_async(
+    GetEmailThreadRequest(
+        thread_id, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_file_versions"></a>
 # **get_file_versions**
 > get_file_versions(self, get_file_versions_request)
@@ -5684,7 +5771,7 @@ EmailApi.list_email_folders(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **parent_folder** | **str**| Folder in which subfolders should be listed | [optional] 
@@ -5729,7 +5816,7 @@ EmailApi.list_email_folders_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **parent_folder** | **str**| Folder in which subfolders should be listed | [optional] 
@@ -5779,7 +5866,7 @@ Name | Type | Description  | Notes
  **folder** | **str**| A folder in email account | 
  **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -5832,7 +5919,7 @@ Name | Type | Description  | Notes
  **folder** | **str**| A folder in email account | 
  **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -5882,7 +5969,7 @@ Name | Type | Description  | Notes
  **folder** | **str**| A folder in email account | 
  **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -5935,10 +6022,103 @@ Name | Type | Description  | Notes
  **folder** | **str**| A folder in email account | 
  **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="list_email_threads"></a>
+# **list_email_threads**
+> list_email_threads(self, list_email_threads_request)
+
+Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+### Return type
+
+[**EmailThreadList**](EmailThreadList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder, 
+    update_folder_cache=update_folder_cache)
+```
+
+### Usage
+```python
+EmailApi.list_email_threads(
+    ListEmailThreadsRequest(
+        folder, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        update_folder_cache=update_folder_cache))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| A folder in email account | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+ **update_folder_cache** | **bool**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="list_email_threads_async"></a>
+# **list_email_threads_async**
+> list_email_threads_async(self, list_email_threads_request)
+
+Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+list_email_threads_async(request).get() returns [**EmailThreadList**](EmailThreadList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder, 
+    update_folder_cache=update_folder_cache)
+```
+
+### Usage
+```python
+EmailApi.list_email_threads_async(
+    ListEmailThreadsRequest(
+        folder, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        update_folder_cache=update_folder_cache))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| A folder in email account | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+ **update_folder_cache** | **bool**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

@@ -1423,6 +1423,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
 
+    def get_email_thread(self, request: requests.GetEmailThreadRequest)  -> EmailThread:
+        """Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+
+        :param request GetEmailThreadRequest object with parameters
+        :return: EmailThread
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailThread')
+
+    def get_email_thread_async(self, request: requests.GetEmailThreadRequest) -> multiprocessing.pool.AsyncResult:
+        """Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailThreadRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailThread)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailThread')
+
     def get_file_versions(self, request: requests.GetFileVersionsRequest)  -> FileVersions:
         """Get file versions
 
@@ -1626,6 +1646,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfEmailDto')
+
+    def list_email_threads(self, request: requests.ListEmailThreadsRequest)  -> EmailThreadList:
+        """Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+
+        :param request ListEmailThreadsRequest object with parameters
+        :return: EmailThreadList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailThreadList')
+
+    def list_email_threads_async(self, request: requests.ListEmailThreadsRequest) -> multiprocessing.pool.AsyncResult:
+        """Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ListEmailThreadsRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailThreadList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailThreadList')
 
     def move_file(self, request: requests.MoveFileRequest) :
         """Move file

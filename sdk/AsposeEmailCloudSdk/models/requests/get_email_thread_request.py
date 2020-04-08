@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="list_email_folders_request.py">
+#  <copyright company="Aspose" file="get_email_thread_request.py">
 #    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,43 +23,43 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.list_email_folders_request import ListEmailFoldersRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.get_email_thread_request import GetEmailThreadRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ListEmailFoldersRequest(BaseRequest):
+class GetEmailThreadRequest(BaseRequest):
     """
-    Request model for list_email_folders operation.
+    Request model for get_email_thread operation.
     Initializes a new instance.
 
+    :param thread_id (str) Thread identifier
     :param first_account (str) Email account
     :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
-    :param parent_folder (str) Folder in which subfolders should be listed
     """
 
-    def __init__(self, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, parent_folder: str = None):
+    def __init__(self, thread_id: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None):
         """
-        Request model for list_email_folders operation.
+        Request model for get_email_thread operation.
         Initializes a new instance.
 
+        :param thread_id (str) Thread identifier
         :param first_account (str) Email account
         :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
-        :param parent_folder (str) Folder in which subfolders should be listed
         """
 
         BaseRequest.__init__(self)
+        self.thread_id = thread_id
         self.first_account = first_account
         self.second_account = second_account
         self.storage = storage
         self.storage_folder = storage_folder
-        self.parent_folder = parent_folder
 
     def to_http_info(self, config):
         """
@@ -70,13 +70,18 @@ class ListEmailFoldersRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
+        # verify the required parameter 'thread_id' is set
+        if self.thread_id is None:
+            raise ValueError("Missing the required parameter `thread_id` when calling `get_email_thread`")
         # verify the required parameter 'first_account' is set
         if self.first_account is None:
-            raise ValueError("Missing the required parameter `first_account` when calling `list_email_folders`")
+            raise ValueError("Missing the required parameter `first_account` when calling `get_email_thread`")
 
         collection_formats = {}
-        path = '/email/client/ListFolders'
+        path = '/email/client/threads/{threadId}'
         path_params = {}
+        if self.thread_id is not None:
+            path_params[self._lowercase_first_letter('threadId')] = self.thread_id
 
         query_params = []
         path_parameter = '{' + self._lowercase_first_letter('firstAccount') + '}'
@@ -103,12 +108,6 @@ class ListEmailFoldersRequest(BaseRequest):
         else:
             if self.storage_folder is not None:
                 query_params.append((self._lowercase_first_letter('storageFolder'), self.storage_folder))
-        path_parameter = '{' + self._lowercase_first_letter('parentFolder') + '}'
-        if path_parameter in path:
-            path = path.replace(path_parameter, self.parent_folder if self.parent_folder is not None else '')
-        else:
-            if self.parent_folder is not None:
-                query_params.append((self._lowercase_first_letter('parentFolder'), self.parent_folder))
 
         header_params = {}
 

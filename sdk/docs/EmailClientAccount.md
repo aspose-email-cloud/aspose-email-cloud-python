@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **security_options** | **str** | Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto | 
 **protocol_type** | **str** | Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav | 
 **credentials** | [**EmailClientAccountCredentials**](EmailClientAccountCredentials.md) | Email client account credentials              | 
+**cache_file** | [**StorageFileLocation**](StorageFileLocation.md) | File with messages cache. Used to provide extra functions, which are not supported by account              | [optional] 
 
 
 
