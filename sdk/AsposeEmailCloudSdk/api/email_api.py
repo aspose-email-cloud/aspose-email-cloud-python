@@ -823,6 +823,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
+    def delete_email_thread(self, request: requests.DeleteEmailThreadRequest) :
+        """Delete thread by id. All messages from thread will also be deleted             
+
+
+        :param request DeleteEmailThreadRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_email_thread_async(self, request: requests.DeleteEmailThreadRequest) -> multiprocessing.pool.AsyncResult:
+        """Delete thread by id. All messages from thread will also be deleted             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request DeleteEmailThreadRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
     def delete_file(self, request: requests.DeleteFileRequest) :
         """Delete file
 
@@ -1966,6 +1986,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', None)
+
+    def set_email_thread_read_flag(self, request: requests.SetEmailThreadReadFlagRequest) :
+        """Mar all messages in thread as read or unread             
+
+
+        :param request SetEmailThreadReadFlagRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def set_email_thread_read_flag_async(self, request: requests.SetEmailThreadReadFlagRequest) -> multiprocessing.pool.AsyncResult:
+        """Mar all messages in thread as read or unread             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SetEmailThreadReadFlagRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
 
     def storage_exists(self, request: requests.StorageExistsRequest)  -> StorageExist:
         """Check if storage exists

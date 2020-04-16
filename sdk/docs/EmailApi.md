@@ -2796,6 +2796,75 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="delete_email_thread"></a>
+# **delete_email_thread**
+> delete_email_thread(self, delete_email_thread_request)
+
+Delete thread by id. All messages from thread will also be deleted             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.delete_email_thread(
+    DeleteEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**DeleteEmailThreadAccountRq**](DeleteEmailThreadAccountRq.md)| Email account specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="delete_email_thread_async"></a>
+# **delete_email_thread_async**
+> delete_email_thread_async(self, delete_email_thread_request)
+
+Delete thread by id. All messages from thread will also be deleted             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+delete_email_thread_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.delete_email_thread_async(
+    DeleteEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**DeleteEmailThreadAccountRq**](DeleteEmailThreadAccountRq.md)| Email account specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="delete_file"></a>
 # **delete_file**
 > delete_file(self, delete_file_request)
@@ -5942,8 +6011,8 @@ The query string should have the following view.      The example of a simple ex
 ```python
 __init__(self, 
     folder, 
-    query_string, 
     first_account, 
+    query_string=query_string, 
     second_account=second_account, 
     storage=storage, 
     storage_folder=storage_folder, 
@@ -5955,8 +6024,8 @@ __init__(self,
 EmailApi.list_email_models(
     ListEmailModelsRequest(
         folder, 
-        query_string, 
         first_account, 
+        query_string=query_string, 
         second_account=second_account, 
         storage=storage, 
         storage_folder=storage_folder, 
@@ -5967,8 +6036,8 @@ EmailApi.list_email_models(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **str**| A folder in email account | 
- **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
+ **query_string** | **str**| A MailQuery search string | [optional] 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
@@ -5995,8 +6064,8 @@ list_email_models_async(request).get() returns [**ListResponseOfEmailDto**](List
 ```python
 __init__(self, 
     folder, 
-    query_string, 
     first_account, 
+    query_string=query_string, 
     second_account=second_account, 
     storage=storage, 
     storage_folder=storage_folder, 
@@ -6008,8 +6077,8 @@ __init__(self,
 EmailApi.list_email_models_async(
     ListEmailModelsRequest(
         folder, 
-        query_string, 
         first_account, 
+        query_string=query_string, 
         second_account=second_account, 
         storage=storage, 
         storage_folder=storage_folder, 
@@ -6020,8 +6089,8 @@ EmailApi.list_email_models_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **str**| A folder in email account | 
- **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
+ **query_string** | **str**| A MailQuery search string | [optional] 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
@@ -6047,7 +6116,8 @@ __init__(self,
     second_account=second_account, 
     storage=storage, 
     storage_folder=storage_folder, 
-    update_folder_cache=update_folder_cache)
+    update_folder_cache=update_folder_cache, 
+    messages_cache_limit=messages_cache_limit)
 ```
 
 ### Usage
@@ -6059,7 +6129,8 @@ EmailApi.list_email_threads(
         second_account=second_account, 
         storage=storage, 
         storage_folder=storage_folder, 
-        update_folder_cache=update_folder_cache))
+        update_folder_cache=update_folder_cache, 
+        messages_cache_limit=messages_cache_limit))
 ```
 
 
@@ -6071,6 +6142,7 @@ Name | Type | Description  | Notes
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **update_folder_cache** | **bool**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+ **messages_cache_limit** | **int**| Limit messages cache size if CacheFile is used. Ignored in accounts without limits support              | [optional] [default to 200]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6095,7 +6167,8 @@ __init__(self,
     second_account=second_account, 
     storage=storage, 
     storage_folder=storage_folder, 
-    update_folder_cache=update_folder_cache)
+    update_folder_cache=update_folder_cache, 
+    messages_cache_limit=messages_cache_limit)
 ```
 
 ### Usage
@@ -6107,7 +6180,8 @@ EmailApi.list_email_threads_async(
         second_account=second_account, 
         storage=storage, 
         storage_folder=storage_folder, 
-        update_folder_cache=update_folder_cache))
+        update_folder_cache=update_folder_cache, 
+        messages_cache_limit=messages_cache_limit))
 ```
 
 
@@ -6119,6 +6193,7 @@ Name | Type | Description  | Notes
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **update_folder_cache** | **bool**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+ **messages_cache_limit** | **int**| Limit messages cache size if CacheFile is used. Ignored in accounts without limits support              | [optional] [default to 200]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7160,6 +7235,75 @@ EmailApi.set_email_read_flag_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SetMessageReadFlagAccountBaseRequest**](SetMessageReadFlagAccountBaseRequest.md)| Message is read request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="set_email_thread_read_flag"></a>
+# **set_email_thread_read_flag**
+> set_email_thread_read_flag(self, set_email_thread_read_flag_request)
+
+Mar all messages in thread as read or unread             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.set_email_thread_read_flag(
+    SetEmailThreadReadFlagRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**EmailThreadReadFlagRq**](EmailThreadReadFlagRq.md)| Email account specifier and IsRead flag | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="set_email_thread_read_flag_async"></a>
+# **set_email_thread_read_flag_async**
+> set_email_thread_read_flag_async(self, set_email_thread_read_flag_request)
+
+Mar all messages in thread as read or unread             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+set_email_thread_read_flag_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.set_email_thread_read_flag_async(
+    SetEmailThreadReadFlagRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**EmailThreadReadFlagRq**](EmailThreadReadFlagRq.md)| Email account specifier and IsRead flag | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

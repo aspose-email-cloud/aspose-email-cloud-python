@@ -80,6 +80,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**delete_email_folder_async**](EmailApi.md#delete_email_folder_async) | **DELETE** /email/client/DeleteFolder | Delete a folder in email account             
 *EmailApi* | [**delete_email_message**](EmailApi.md#delete_email_message) | **DELETE** /email/client/DeleteMessage | Delete message from email account by id             
 *EmailApi* | [**delete_email_message_async**](EmailApi.md#delete_email_message_async) | **DELETE** /email/client/DeleteMessage | Delete message from email account by id             
+*EmailApi* | [**delete_email_thread**](EmailApi.md#delete_email_thread) | **DELETE** /email/client/threads/{threadId} | Delete thread by id. All messages from thread will also be deleted             
+*EmailApi* | [**delete_email_thread_async**](EmailApi.md#delete_email_thread_async) | **DELETE** /email/client/threads/{threadId} | Delete thread by id. All messages from thread will also be deleted             
 *EmailApi* | [**delete_file**](EmailApi.md#delete_file) | **DELETE** /email/storage/file/{path} | Delete file
 *EmailApi* | [**delete_file_async**](EmailApi.md#delete_file_async) | **DELETE** /email/storage/file/{path} | Delete file
 *EmailApi* | [**delete_folder**](EmailApi.md#delete_folder) | **DELETE** /email/storage/folder/{path} | Delete folder
@@ -194,6 +196,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**set_email_property_async**](EmailApi.md#set_email_property_async) | **PUT** /email/{fileName}/properties/{propertyName} | Set email document property value             
 *EmailApi* | [**set_email_read_flag**](EmailApi.md#set_email_read_flag) | **POST** /email/client/SetReadFlag | Sets \&quot;Message is read\&quot; flag             
 *EmailApi* | [**set_email_read_flag_async**](EmailApi.md#set_email_read_flag_async) | **POST** /email/client/SetReadFlag | Sets \&quot;Message is read\&quot; flag             
+*EmailApi* | [**set_email_thread_read_flag**](EmailApi.md#set_email_thread_read_flag) | **PUT** /email/client/threads/{threadId}/read-flag | Mar all messages in thread as read or unread             
+*EmailApi* | [**set_email_thread_read_flag_async**](EmailApi.md#set_email_thread_read_flag_async) | **PUT** /email/client/threads/{threadId}/read-flag | Mar all messages in thread as read or unread             
 *EmailApi* | [**storage_exists**](EmailApi.md#storage_exists) | **GET** /email/storage/{storageName}/exist | Check if storage exists
 *EmailApi* | [**storage_exists_async**](EmailApi.md#storage_exists_async) | **GET** /email/storage/{storageName}/exist | Check if storage exists
 *EmailApi* | [**update_calendar_properties**](EmailApi.md#update_calendar_properties) | **PUT** /email/Calendar/{name}/properties | Update calendar file properties             
@@ -321,6 +325,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.CalendarDtoList](CalendarDtoList.md)
  - [AsposeEmailCloudSdk.models.ContactDtoList](ContactDtoList.md)
  - [AsposeEmailCloudSdk.models.CreateFolderBaseRequest](CreateFolderBaseRequest.md)
+ - [AsposeEmailCloudSdk.models.DeleteEmailThreadAccountRq](DeleteEmailThreadAccountRq.md)
  - [AsposeEmailCloudSdk.models.DeleteFolderBaseRequest](DeleteFolderBaseRequest.md)
  - [AsposeEmailCloudSdk.models.DeleteMessageBaseRequest](DeleteMessageBaseRequest.md)
  - [AsposeEmailCloudSdk.models.DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md)
@@ -330,6 +335,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.EmailClientAccountPasswordCredentials](EmailClientAccountPasswordCredentials.md)
  - [AsposeEmailCloudSdk.models.EmailDtoList](EmailDtoList.md)
  - [AsposeEmailCloudSdk.models.EmailThreadList](EmailThreadList.md)
+ - [AsposeEmailCloudSdk.models.EmailThreadReadFlagRq](EmailThreadReadFlagRq.md)
  - [AsposeEmailCloudSdk.models.FileVersion](FileVersion.md)
  - [AsposeEmailCloudSdk.models.HierarchicalObject](HierarchicalObject.md)
  - [AsposeEmailCloudSdk.models.IndexedHierarchicalObject](IndexedHierarchicalObject.md)

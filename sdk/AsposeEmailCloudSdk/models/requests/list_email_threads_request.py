@@ -41,9 +41,10 @@ class ListEmailThreadsRequest(BaseRequest):
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
     :param update_folder_cache (bool) This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
+    :param messages_cache_limit (int) Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
     """
 
-    def __init__(self, folder: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, update_folder_cache: bool = None):
+    def __init__(self, folder: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, update_folder_cache: bool = None, messages_cache_limit: int = None):
         """
         Request model for list_email_threads operation.
         Initializes a new instance.
@@ -54,6 +55,7 @@ class ListEmailThreadsRequest(BaseRequest):
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
         :param update_folder_cache (bool) This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
+        :param messages_cache_limit (int) Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
         """
 
         BaseRequest.__init__(self)
@@ -63,6 +65,7 @@ class ListEmailThreadsRequest(BaseRequest):
         self.storage = storage
         self.storage_folder = storage_folder
         self.update_folder_cache = update_folder_cache
+        self.messages_cache_limit = messages_cache_limit
 
     def to_http_info(self, config):
         """
@@ -121,6 +124,12 @@ class ListEmailThreadsRequest(BaseRequest):
         else:
             if self.update_folder_cache is not None:
                 query_params.append((self._lowercase_first_letter('updateFolderCache'), self.update_folder_cache))
+        path_parameter = '{' + self._lowercase_first_letter('messagesCacheLimit') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.messages_cache_limit if self.messages_cache_limit is not None else '')
+        else:
+            if self.messages_cache_limit is not None:
+                query_params.append((self._lowercase_first_letter('messagesCacheLimit'), self.messages_cache_limit))
 
         header_params = {}
 
