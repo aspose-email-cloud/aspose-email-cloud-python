@@ -166,6 +166,10 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**list_email_models_async**](EmailApi.md#list_email_models_async) | **GET** /email/client/ListMessagesModel | Get messages from folder, filtered by query             
 *EmailApi* | [**list_email_threads**](EmailApi.md#list_email_threads) | **GET** /email/client/threads | Get message threads from folder. All messages are partly fetched (without email body and other fields)             
 *EmailApi* | [**list_email_threads_async**](EmailApi.md#list_email_threads_async) | **GET** /email/client/threads | Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+*EmailApi* | [**move_email_message**](EmailApi.md#move_email_message) | **PUT** /email/client/move | Move message to another folder             
+*EmailApi* | [**move_email_message_async**](EmailApi.md#move_email_message_async) | **PUT** /email/client/move | Move message to another folder             
+*EmailApi* | [**move_email_thread**](EmailApi.md#move_email_thread) | **PUT** /email/client/threads/{threadId}/move | Move thread to another folder             
+*EmailApi* | [**move_email_thread_async**](EmailApi.md#move_email_thread_async) | **PUT** /email/client/threads/{threadId}/move | Move thread to another folder             
 *EmailApi* | [**move_file**](EmailApi.md#move_file) | **PUT** /email/storage/file/move/{srcPath} | Move file
 *EmailApi* | [**move_file_async**](EmailApi.md#move_file_async) | **PUT** /email/storage/file/move/{srcPath} | Move file
 *EmailApi* | [**move_folder**](EmailApi.md#move_folder) | **PUT** /email/storage/folder/move/{srcPath} | Move folder
@@ -196,8 +200,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**set_email_property_async**](EmailApi.md#set_email_property_async) | **PUT** /email/{fileName}/properties/{propertyName} | Set email document property value             
 *EmailApi* | [**set_email_read_flag**](EmailApi.md#set_email_read_flag) | **POST** /email/client/SetReadFlag | Sets \&quot;Message is read\&quot; flag             
 *EmailApi* | [**set_email_read_flag_async**](EmailApi.md#set_email_read_flag_async) | **POST** /email/client/SetReadFlag | Sets \&quot;Message is read\&quot; flag             
-*EmailApi* | [**set_email_thread_read_flag**](EmailApi.md#set_email_thread_read_flag) | **PUT** /email/client/threads/{threadId}/read-flag | Mar all messages in thread as read or unread             
-*EmailApi* | [**set_email_thread_read_flag_async**](EmailApi.md#set_email_thread_read_flag_async) | **PUT** /email/client/threads/{threadId}/read-flag | Mar all messages in thread as read or unread             
+*EmailApi* | [**set_email_thread_read_flag**](EmailApi.md#set_email_thread_read_flag) | **PUT** /email/client/threads/{threadId}/read-flag | Mark all messages in thread as read or unread             
+*EmailApi* | [**set_email_thread_read_flag_async**](EmailApi.md#set_email_thread_read_flag_async) | **PUT** /email/client/threads/{threadId}/read-flag | Mark all messages in thread as read or unread             
 *EmailApi* | [**storage_exists**](EmailApi.md#storage_exists) | **GET** /email/storage/{storageName}/exist | Check if storage exists
 *EmailApi* | [**storage_exists_async**](EmailApi.md#storage_exists_async) | **GET** /email/storage/{storageName}/exist | Check if storage exists
 *EmailApi* | [**update_calendar_properties**](EmailApi.md#update_calendar_properties) | **PUT** /email/Calendar/{name}/properties | Update calendar file properties             
@@ -341,6 +345,8 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.IndexedHierarchicalObject](IndexedHierarchicalObject.md)
  - [AsposeEmailCloudSdk.models.IndexedPrimitiveObject](IndexedPrimitiveObject.md)
  - [AsposeEmailCloudSdk.models.LinkedResource](LinkedResource.md)
+ - [AsposeEmailCloudSdk.models.MoveEmailMessageRq](MoveEmailMessageRq.md)
+ - [AsposeEmailCloudSdk.models.MoveEmailThreadRq](MoveEmailThreadRq.md)
  - [AsposeEmailCloudSdk.models.PrimitiveObject](PrimitiveObject.md)
  - [AsposeEmailCloudSdk.models.SaveEmailAccountRequest](SaveEmailAccountRequest.md)
  - [AsposeEmailCloudSdk.models.SaveOAuthEmailAccountRequest](SaveOAuthEmailAccountRequest.md)

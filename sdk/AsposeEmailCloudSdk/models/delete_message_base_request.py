@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="DeleteMessageBaseRequest.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -50,6 +50,7 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
         'second_account': 'str',
         'storage_folder': 'StorageFolderLocation',
         'message_id': 'str',
+        'folder': 'str',
         'delete_permanently': 'bool'
     }
 
@@ -58,21 +59,24 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
         'second_account': 'secondAccount',
         'storage_folder': 'storageFolder',
         'message_id': 'messageId',
+        'folder': 'folder',
         'delete_permanently': 'deletePermanently'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, message_id: str = None, delete_permanently: bool = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, message_id: str = None, folder: str = None, delete_permanently: bool = None):
         """
         Delete message request             
         :param first_account (str) First account storage file name             
         :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param message_id (str) Message identifier             
+        :param folder (str) Account folder where message located. Should be specified for some accounts             
         :param delete_permanently (bool) Specifies that message should be deleted permanently             
         """
         super(DeleteMessageBaseRequest, self).__init__()
 
         self._message_id = None
+        self._folder = None
         self._delete_permanently = None
 
         if first_account is not None:
@@ -83,6 +87,8 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
             self.storage_folder = storage_folder
         if message_id is not None:
             self.message_id = message_id
+        if folder is not None:
+            self.folder = folder
         if delete_permanently is not None:
             self.delete_permanently = delete_permanently
 
@@ -111,6 +117,28 @@ class DeleteMessageBaseRequest(AccountBaseRequest):
         if message_id is not None and len(message_id) < 1:
             raise ValueError("Invalid value for `message_id`, length must be greater than or equal to `1`")
         self._message_id = message_id
+
+    @property
+    def folder(self) -> str:
+        """Gets the folder of this DeleteMessageBaseRequest.
+
+        Account folder where message located. Should be specified for some accounts             
+
+        :return: The folder of this DeleteMessageBaseRequest.
+        :rtype: str
+        """
+        return self._folder
+
+    @folder.setter
+    def folder(self, folder: str):
+        """Sets the folder of this DeleteMessageBaseRequest.
+
+        Account folder where message located. Should be specified for some accounts             
+
+        :param folder: The folder of this DeleteMessageBaseRequest.
+        :type: str
+        """
+        self._folder = folder
 
     @property
     def delete_permanently(self) -> bool:

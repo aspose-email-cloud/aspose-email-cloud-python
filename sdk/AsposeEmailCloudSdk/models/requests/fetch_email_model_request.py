@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="fetch_email_model_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -38,11 +38,12 @@ class FetchEmailModelRequest(BaseRequest):
     :param message_id (str) Message identifier
     :param first_account (str) Email account
     :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
+    :param folder (str) Account folder to fetch from (should be specified for some protocols such as IMAP)             
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
     """
 
-    def __init__(self, message_id: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None):
+    def __init__(self, message_id: str, first_account: str, second_account: str = None, folder: str = None, storage: str = None, storage_folder: str = None):
         """
         Request model for fetch_email_model operation.
         Initializes a new instance.
@@ -50,6 +51,7 @@ class FetchEmailModelRequest(BaseRequest):
         :param message_id (str) Message identifier
         :param first_account (str) Email account
         :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
+        :param folder (str) Account folder to fetch from (should be specified for some protocols such as IMAP)             
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
         """
@@ -58,6 +60,7 @@ class FetchEmailModelRequest(BaseRequest):
         self.message_id = message_id
         self.first_account = first_account
         self.second_account = second_account
+        self.folder = folder
         self.storage = storage
         self.storage_folder = storage_folder
 
@@ -100,6 +103,12 @@ class FetchEmailModelRequest(BaseRequest):
         else:
             if self.second_account is not None:
                 query_params.append((self._lowercase_first_letter('secondAccount'), self.second_account))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.folder if self.folder is not None else '')
+        else:
+            if self.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), self.folder))
         path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
         if path_parameter in path:
             path = path.replace(path_parameter, self.storage if self.storage is not None else '')

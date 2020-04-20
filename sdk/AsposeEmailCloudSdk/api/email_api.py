@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="email_api.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -1687,6 +1687,46 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailThreadList')
 
+    def move_email_message(self, request: requests.MoveEmailMessageRequest) :
+        """Move message to another folder             
+
+
+        :param request MoveEmailMessageRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def move_email_message_async(self, request: requests.MoveEmailMessageRequest) -> multiprocessing.pool.AsyncResult:
+        """Move message to another folder             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request MoveEmailMessageRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def move_email_thread(self, request: requests.MoveEmailThreadRequest) :
+        """Move thread to another folder             
+
+
+        :param request MoveEmailThreadRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def move_email_thread_async(self, request: requests.MoveEmailThreadRequest) -> multiprocessing.pool.AsyncResult:
+        """Move thread to another folder             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request MoveEmailThreadRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
     def move_file(self, request: requests.MoveFileRequest) :
         """Move file
 
@@ -1988,7 +2028,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'POST', None)
 
     def set_email_thread_read_flag(self, request: requests.SetEmailThreadReadFlagRequest) :
-        """Mar all messages in thread as read or unread             
+        """Mark all messages in thread as read or unread             
 
 
         :param request SetEmailThreadReadFlagRequest object with parameters
@@ -1998,7 +2038,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def set_email_thread_read_flag_async(self, request: requests.SetEmailThreadReadFlagRequest) -> multiprocessing.pool.AsyncResult:
-        """Mar all messages in thread as read or unread             
+        """Mark all messages in thread as read or unread             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request SetEmailThreadReadFlagRequest object with parameters

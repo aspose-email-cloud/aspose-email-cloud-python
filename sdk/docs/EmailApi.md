@@ -3445,6 +3445,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3456,6 +3457,7 @@ EmailApi.fetch_email_message(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3466,6 +3468,7 @@ Name | Type | Description  | Notes
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3490,6 +3493,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3501,6 +3505,7 @@ EmailApi.fetch_email_message_async(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3511,6 +3516,7 @@ Name | Type | Description  | Notes
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3532,6 +3538,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3543,6 +3550,7 @@ EmailApi.fetch_email_model(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3553,6 +3561,7 @@ Name | Type | Description  | Notes
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3577,6 +3586,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3588,6 +3598,7 @@ EmailApi.fetch_email_model_async(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3598,6 +3609,7 @@ Name | Type | Description  | Notes
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -6197,6 +6209,138 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="move_email_message"></a>
+# **move_email_message**
+> move_email_message(self, move_email_message_request)
+
+Move message to another folder             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_message(
+    MoveEmailMessageRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**MoveEmailMessageRq**](MoveEmailMessageRq.md)| Email account, folder and message specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="move_email_message_async"></a>
+# **move_email_message_async**
+> move_email_message_async(self, move_email_message_request)
+
+Move message to another folder             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+move_email_message_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_message_async(
+    MoveEmailMessageRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**MoveEmailMessageRq**](MoveEmailMessageRq.md)| Email account, folder and message specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="move_email_thread"></a>
+# **move_email_thread**
+> move_email_thread(self, move_email_thread_request)
+
+Move thread to another folder             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_thread(
+    MoveEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **request** | [**MoveEmailThreadRq**](MoveEmailThreadRq.md)| Move thread request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="move_email_thread_async"></a>
+# **move_email_thread_async**
+> move_email_thread_async(self, move_email_thread_request)
+
+Move thread to another folder             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+move_email_thread_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_thread_async(
+    MoveEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **request** | [**MoveEmailThreadRq**](MoveEmailThreadRq.md)| Move thread request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="move_file"></a>
 # **move_file**
 > move_file(self, move_file_request)
@@ -7242,7 +7386,7 @@ Name | Type | Description  | Notes
 # **set_email_thread_read_flag**
 > set_email_thread_read_flag(self, set_email_thread_read_flag_request)
 
-Mar all messages in thread as read or unread             
+Mark all messages in thread as read or unread             
 
 ### Return type
 
@@ -7275,7 +7419,7 @@ Name | Type | Description  | Notes
 # **set_email_thread_read_flag_async**
 > set_email_thread_read_flag_async(self, set_email_thread_read_flag_request)
 
-Mar all messages in thread as read or unread             
+Mark all messages in thread as read or unread             
 
 Performs operation asynchronously.
 

@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="EmailThread.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -47,26 +47,30 @@ class EmailThread(object):
     swagger_types = {
         'id': 'str',
         'subject': 'str',
-        'messages': 'list[EmailDto]'
+        'messages': 'list[EmailDto]',
+        'folder': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'subject': 'subject',
-        'messages': 'messages'
+        'messages': 'messages',
+        'folder': 'folder'
     }
 
-    def __init__(self, id: str = None, subject: str = None, messages: List[EmailDto] = None):
+    def __init__(self, id: str = None, subject: str = None, messages: List[EmailDto] = None, folder: str = None):
         """
         Email messages thread             
         :param id (str) Thread identifier             
         :param subject (str) Thread subject             
         :param messages (List[EmailDto]) List of messages in thread             
+        :param folder (str) Thread folder location             
         """
 
         self._id = None
         self._subject = None
         self._messages = None
+        self._folder = None
 
         if id is not None:
             self.id = id
@@ -74,6 +78,8 @@ class EmailThread(object):
             self.subject = subject
         if messages is not None:
             self.messages = messages
+        if folder is not None:
+            self.folder = folder
 
     @property
     def id(self) -> str:
@@ -140,6 +146,28 @@ class EmailThread(object):
         :type: list[EmailDto]
         """
         self._messages = messages
+
+    @property
+    def folder(self) -> str:
+        """Gets the folder of this EmailThread.
+
+        Thread folder location             
+
+        :return: The folder of this EmailThread.
+        :rtype: str
+        """
+        return self._folder
+
+    @folder.setter
+    def folder(self, folder: str):
+        """Sets the folder of this EmailThread.
+
+        Thread folder location             
+
+        :param folder: The folder of this EmailThread.
+        :type: str
+        """
+        self._folder = folder
 
     def to_dict(self):
         """Returns the model properties as a dict"""

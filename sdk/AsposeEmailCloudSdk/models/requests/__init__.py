@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="__init__.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -107,6 +107,8 @@ from AsposeEmailCloudSdk.models.requests.list_email_folders_request import ListE
 from AsposeEmailCloudSdk.models.requests.list_email_messages_request import ListEmailMessagesRequest
 from AsposeEmailCloudSdk.models.requests.list_email_models_request import ListEmailModelsRequest
 from AsposeEmailCloudSdk.models.requests.list_email_threads_request import ListEmailThreadsRequest
+from AsposeEmailCloudSdk.models.requests.move_email_message_request import MoveEmailMessageRequest
+from AsposeEmailCloudSdk.models.requests.move_email_thread_request import MoveEmailThreadRequest
 from AsposeEmailCloudSdk.models.requests.move_file_request import MoveFileRequest
 from AsposeEmailCloudSdk.models.requests.move_folder_request import MoveFolderRequest
 from AsposeEmailCloudSdk.models.requests.object_exists_request import ObjectExistsRequest
