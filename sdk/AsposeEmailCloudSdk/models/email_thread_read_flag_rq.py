@@ -49,27 +49,31 @@ class EmailThreadReadFlagRq(AccountBaseRequest):
         'first_account': 'str',
         'second_account': 'str',
         'storage_folder': 'StorageFolderLocation',
-        'is_read': 'bool'
+        'is_read': 'bool',
+        'folder': 'str'
     }
 
     attribute_map = {
         'first_account': 'firstAccount',
         'second_account': 'secondAccount',
         'storage_folder': 'storageFolder',
-        'is_read': 'isRead'
+        'is_read': 'isRead',
+        'folder': 'folder'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, is_read: bool = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, is_read: bool = None, folder: str = None):
         """
         Request to mark all messages in thread as read or unread             
         :param first_account (str) First account storage file name             
         :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param is_read (bool) Read flag to set. \"true\" by default             
+        :param folder (str) Specifies account folder to get thread from (required for some account types, such as EWS)             
         """
         super(EmailThreadReadFlagRq, self).__init__()
 
         self._is_read = None
+        self._folder = None
 
         if first_account is not None:
             self.first_account = first_account
@@ -79,6 +83,8 @@ class EmailThreadReadFlagRq(AccountBaseRequest):
             self.storage_folder = storage_folder
         if is_read is not None:
             self.is_read = is_read
+        if folder is not None:
+            self.folder = folder
 
     @property
     def is_read(self) -> bool:
@@ -103,6 +109,28 @@ class EmailThreadReadFlagRq(AccountBaseRequest):
         if is_read is None:
             raise ValueError("Invalid value for `is_read`, must not be `None`")
         self._is_read = is_read
+
+    @property
+    def folder(self) -> str:
+        """Gets the folder of this EmailThreadReadFlagRq.
+
+        Specifies account folder to get thread from (required for some account types, such as EWS)             
+
+        :return: The folder of this EmailThreadReadFlagRq.
+        :rtype: str
+        """
+        return self._folder
+
+    @folder.setter
+    def folder(self, folder: str):
+        """Sets the folder of this EmailThreadReadFlagRq.
+
+        Specifies account folder to get thread from (required for some account types, such as EWS)             
+
+        :param folder: The folder of this EmailThreadReadFlagRq.
+        :type: str
+        """
+        self._folder = folder
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -38,11 +38,12 @@ class GetEmailThreadRequest(BaseRequest):
     :param thread_id (str) Thread identifier
     :param first_account (str) Email account
     :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
+    :param folder (str) Specifies account folder to get thread from (required for some account types, such as EWS)             
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
     """
 
-    def __init__(self, thread_id: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None):
+    def __init__(self, thread_id: str, first_account: str, second_account: str = None, folder: str = None, storage: str = None, storage_folder: str = None):
         """
         Request model for get_email_thread operation.
         Initializes a new instance.
@@ -50,6 +51,7 @@ class GetEmailThreadRequest(BaseRequest):
         :param thread_id (str) Thread identifier
         :param first_account (str) Email account
         :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
+        :param folder (str) Specifies account folder to get thread from (required for some account types, such as EWS)             
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
         """
@@ -58,6 +60,7 @@ class GetEmailThreadRequest(BaseRequest):
         self.thread_id = thread_id
         self.first_account = first_account
         self.second_account = second_account
+        self.folder = folder
         self.storage = storage
         self.storage_folder = storage_folder
 
@@ -96,6 +99,12 @@ class GetEmailThreadRequest(BaseRequest):
         else:
             if self.second_account is not None:
                 query_params.append((self._lowercase_first_letter('secondAccount'), self.second_account))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.folder if self.folder is not None else '')
+        else:
+            if self.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), self.folder))
         path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
         if path_parameter in path:
             path = path.replace(path_parameter, self.storage if self.storage is not None else '')

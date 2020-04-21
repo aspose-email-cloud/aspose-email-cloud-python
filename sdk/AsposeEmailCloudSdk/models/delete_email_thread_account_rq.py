@@ -48,23 +48,28 @@ class DeleteEmailThreadAccountRq(AccountBaseRequest):
     swagger_types = {
         'first_account': 'str',
         'second_account': 'str',
-        'storage_folder': 'StorageFolderLocation'
+        'storage_folder': 'StorageFolderLocation',
+        'folder': 'str'
     }
 
     attribute_map = {
         'first_account': 'firstAccount',
         'second_account': 'secondAccount',
-        'storage_folder': 'storageFolder'
+        'storage_folder': 'storageFolder',
+        'folder': 'folder'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None):
         """
         Delete thread request             
         :param first_account (str) First account storage file name             
         :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
+        :param folder (str) Specifies account folder to get thread from (required for some account types, such as EWS)             
         """
         super(DeleteEmailThreadAccountRq, self).__init__()
+
+        self._folder = None
 
         if first_account is not None:
             self.first_account = first_account
@@ -72,6 +77,30 @@ class DeleteEmailThreadAccountRq(AccountBaseRequest):
             self.second_account = second_account
         if storage_folder is not None:
             self.storage_folder = storage_folder
+        if folder is not None:
+            self.folder = folder
+
+    @property
+    def folder(self) -> str:
+        """Gets the folder of this DeleteEmailThreadAccountRq.
+
+        Specifies account folder to get thread from (required for some account types, such as EWS)             
+
+        :return: The folder of this DeleteEmailThreadAccountRq.
+        :rtype: str
+        """
+        return self._folder
+
+    @folder.setter
+    def folder(self, folder: str):
+        """Sets the folder of this DeleteEmailThreadAccountRq.
+
+        Specifies account folder to get thread from (required for some account types, such as EWS)             
+
+        :param folder: The folder of this DeleteEmailThreadAccountRq.
+        :type: str
+        """
+        self._folder = folder
 
     def to_dict(self):
         """Returns the model properties as a dict"""

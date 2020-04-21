@@ -5233,6 +5233,7 @@ __init__(self,
     thread_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -5244,6 +5245,7 @@ EmailApi.get_email_thread(
         thread_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -5254,6 +5256,7 @@ Name | Type | Description  | Notes
  **thread_id** | **str**| Thread identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -5278,6 +5281,7 @@ __init__(self,
     thread_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -5289,6 +5293,7 @@ EmailApi.get_email_thread_async(
         thread_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -5299,6 +5304,7 @@ Name | Type | Description  | Notes
  **thread_id** | **str**| Thread identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
