@@ -49,27 +49,27 @@ class DeleteEmailThreadAccountRq(AccountBaseRequest):
         'first_account': 'str',
         'second_account': 'str',
         'storage_folder': 'StorageFolderLocation',
-        'folder': 'str'
+        'folder_id': 'str'
     }
 
     attribute_map = {
         'first_account': 'firstAccount',
         'second_account': 'secondAccount',
         'storage_folder': 'storageFolder',
-        'folder': 'folder'
+        'folder_id': 'folderId'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder_id: str = None):
         """
         Delete thread request             
         :param first_account (str) First account storage file name             
         :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
-        :param folder (str) Specifies account folder to get thread from (required for some account types, such as EWS)             
+        :param folder_id (str) Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
         """
         super(DeleteEmailThreadAccountRq, self).__init__()
 
-        self._folder = None
+        self._folder_id = None
 
         if first_account is not None:
             self.first_account = first_account
@@ -77,30 +77,30 @@ class DeleteEmailThreadAccountRq(AccountBaseRequest):
             self.second_account = second_account
         if storage_folder is not None:
             self.storage_folder = storage_folder
-        if folder is not None:
-            self.folder = folder
+        if folder_id is not None:
+            self.folder_id = folder_id
 
     @property
-    def folder(self) -> str:
-        """Gets the folder of this DeleteEmailThreadAccountRq.
+    def folder_id(self) -> str:
+        """Gets the folder_id of this DeleteEmailThreadAccountRq.
 
-        Specifies account folder to get thread from (required for some account types, such as EWS)             
+        Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
 
-        :return: The folder of this DeleteEmailThreadAccountRq.
+        :return: The folder_id of this DeleteEmailThreadAccountRq.
         :rtype: str
         """
-        return self._folder
+        return self._folder_id
 
-    @folder.setter
-    def folder(self, folder: str):
-        """Sets the folder of this DeleteEmailThreadAccountRq.
+    @folder_id.setter
+    def folder_id(self, folder_id: str):
+        """Sets the folder_id of this DeleteEmailThreadAccountRq.
 
-        Specifies account folder to get thread from (required for some account types, such as EWS)             
+        Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
 
-        :param folder: The folder of this DeleteEmailThreadAccountRq.
+        :param folder_id: The folder_id of this DeleteEmailThreadAccountRq.
         :type: str
         """
-        self._folder = folder
+        self._folder_id = folder_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

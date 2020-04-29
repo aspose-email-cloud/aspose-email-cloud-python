@@ -35,7 +35,7 @@ class ListEmailThreadsRequest(BaseRequest):
     Request model for list_email_threads operation.
     Initializes a new instance.
 
-    :param folder (str) A folder in email account
+    :param folder_id (str) A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
     :param first_account (str) Email account
     :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     :param storage (str) Storage name where account file(s) located
@@ -44,12 +44,12 @@ class ListEmailThreadsRequest(BaseRequest):
     :param messages_cache_limit (int) Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
     """
 
-    def __init__(self, folder: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, update_folder_cache: bool = None, messages_cache_limit: int = None):
+    def __init__(self, folder_id: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, update_folder_cache: bool = None, messages_cache_limit: int = None):
         """
         Request model for list_email_threads operation.
         Initializes a new instance.
 
-        :param folder (str) A folder in email account
+        :param folder_id (str) A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
         :param first_account (str) Email account
         :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
         :param storage (str) Storage name where account file(s) located
@@ -59,7 +59,7 @@ class ListEmailThreadsRequest(BaseRequest):
         """
 
         BaseRequest.__init__(self)
-        self.folder = folder
+        self.folder_id = folder_id
         self.first_account = first_account
         self.second_account = second_account
         self.storage = storage
@@ -76,9 +76,9 @@ class ListEmailThreadsRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'folder' is set
-        if self.folder is None:
-            raise ValueError("Missing the required parameter `folder` when calling `list_email_threads`")
+        # verify the required parameter 'folder_id' is set
+        if self.folder_id is None:
+            raise ValueError("Missing the required parameter `folder_id` when calling `list_email_threads`")
         # verify the required parameter 'first_account' is set
         if self.first_account is None:
             raise ValueError("Missing the required parameter `first_account` when calling `list_email_threads`")
@@ -88,12 +88,12 @@ class ListEmailThreadsRequest(BaseRequest):
         path_params = {}
 
         query_params = []
-        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        path_parameter = '{' + self._lowercase_first_letter('folderId') + '}'
         if path_parameter in path:
-            path = path.replace(path_parameter, self.folder if self.folder is not None else '')
+            path = path.replace(path_parameter, self.folder_id if self.folder_id is not None else '')
         else:
-            if self.folder is not None:
-                query_params.append((self._lowercase_first_letter('folder'), self.folder))
+            if self.folder_id is not None:
+                query_params.append((self._lowercase_first_letter('folderId'), self.folder_id))
         path_parameter = '{' + self._lowercase_first_letter('firstAccount') + '}'
         if path_parameter in path:
             path = path.replace(path_parameter, self.first_account if self.first_account is not None else '')

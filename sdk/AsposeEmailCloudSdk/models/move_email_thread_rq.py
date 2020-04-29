@@ -49,27 +49,27 @@ class MoveEmailThreadRq(AccountBaseRequest):
         'first_account': 'str',
         'second_account': 'str',
         'storage_folder': 'StorageFolderLocation',
-        'destination_folder': 'str'
+        'destination_folder_id': 'str'
     }
 
     attribute_map = {
         'first_account': 'firstAccount',
         'second_account': 'secondAccount',
         'storage_folder': 'storageFolder',
-        'destination_folder': 'destinationFolder'
+        'destination_folder_id': 'destinationFolderId'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, destination_folder: str = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, destination_folder_id: str = None):
         """
         Email thread move request             
         :param first_account (str) First account storage file name             
         :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
-        :param destination_folder (str) Email account folder to move thread to             
+        :param destination_folder_id (str) Email account folder id to move thread to. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
         """
         super(MoveEmailThreadRq, self).__init__()
 
-        self._destination_folder = None
+        self._destination_folder_id = None
 
         if first_account is not None:
             self.first_account = first_account
@@ -77,30 +77,30 @@ class MoveEmailThreadRq(AccountBaseRequest):
             self.second_account = second_account
         if storage_folder is not None:
             self.storage_folder = storage_folder
-        if destination_folder is not None:
-            self.destination_folder = destination_folder
+        if destination_folder_id is not None:
+            self.destination_folder_id = destination_folder_id
 
     @property
-    def destination_folder(self) -> str:
-        """Gets the destination_folder of this MoveEmailThreadRq.
+    def destination_folder_id(self) -> str:
+        """Gets the destination_folder_id of this MoveEmailThreadRq.
 
-        Email account folder to move thread to             
+        Email account folder id to move thread to. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
 
-        :return: The destination_folder of this MoveEmailThreadRq.
+        :return: The destination_folder_id of this MoveEmailThreadRq.
         :rtype: str
         """
-        return self._destination_folder
+        return self._destination_folder_id
 
-    @destination_folder.setter
-    def destination_folder(self, destination_folder: str):
-        """Sets the destination_folder of this MoveEmailThreadRq.
+    @destination_folder_id.setter
+    def destination_folder_id(self, destination_folder_id: str):
+        """Sets the destination_folder_id of this MoveEmailThreadRq.
 
-        Email account folder to move thread to             
+        Email account folder id to move thread to. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
 
-        :param destination_folder: The destination_folder of this MoveEmailThreadRq.
+        :param destination_folder_id: The destination_folder_id of this MoveEmailThreadRq.
         :type: str
         """
-        self._destination_folder = destination_folder
+        self._destination_folder_id = destination_folder_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

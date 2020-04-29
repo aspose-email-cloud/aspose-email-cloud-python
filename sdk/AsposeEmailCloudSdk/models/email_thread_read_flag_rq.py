@@ -50,7 +50,7 @@ class EmailThreadReadFlagRq(AccountBaseRequest):
         'second_account': 'str',
         'storage_folder': 'StorageFolderLocation',
         'is_read': 'bool',
-        'folder': 'str'
+        'folder_id': 'str'
     }
 
     attribute_map = {
@@ -58,22 +58,22 @@ class EmailThreadReadFlagRq(AccountBaseRequest):
         'second_account': 'secondAccount',
         'storage_folder': 'storageFolder',
         'is_read': 'isRead',
-        'folder': 'folder'
+        'folder_id': 'folderId'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, is_read: bool = None, folder: str = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, is_read: bool = None, folder_id: str = None):
         """
         Request to mark all messages in thread as read or unread             
         :param first_account (str) First account storage file name             
         :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param is_read (bool) Read flag to set. \"true\" by default             
-        :param folder (str) Specifies account folder to get thread from (required for some account types, such as EWS)             
+        :param folder_id (str) Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
         """
         super(EmailThreadReadFlagRq, self).__init__()
 
         self._is_read = None
-        self._folder = None
+        self._folder_id = None
 
         if first_account is not None:
             self.first_account = first_account
@@ -83,8 +83,8 @@ class EmailThreadReadFlagRq(AccountBaseRequest):
             self.storage_folder = storage_folder
         if is_read is not None:
             self.is_read = is_read
-        if folder is not None:
-            self.folder = folder
+        if folder_id is not None:
+            self.folder_id = folder_id
 
     @property
     def is_read(self) -> bool:
@@ -111,26 +111,26 @@ class EmailThreadReadFlagRq(AccountBaseRequest):
         self._is_read = is_read
 
     @property
-    def folder(self) -> str:
-        """Gets the folder of this EmailThreadReadFlagRq.
+    def folder_id(self) -> str:
+        """Gets the folder_id of this EmailThreadReadFlagRq.
 
-        Specifies account folder to get thread from (required for some account types, such as EWS)             
+        Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
 
-        :return: The folder of this EmailThreadReadFlagRq.
+        :return: The folder_id of this EmailThreadReadFlagRq.
         :rtype: str
         """
-        return self._folder
+        return self._folder_id
 
-    @folder.setter
-    def folder(self, folder: str):
-        """Sets the folder of this EmailThreadReadFlagRq.
+    @folder_id.setter
+    def folder_id(self, folder_id: str):
+        """Sets the folder_id of this EmailThreadReadFlagRq.
 
-        Specifies account folder to get thread from (required for some account types, such as EWS)             
+        Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.             
 
-        :param folder: The folder of this EmailThreadReadFlagRq.
+        :param folder_id: The folder_id of this EmailThreadReadFlagRq.
         :type: str
         """
-        self._folder = folder
+        self._folder_id = folder_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

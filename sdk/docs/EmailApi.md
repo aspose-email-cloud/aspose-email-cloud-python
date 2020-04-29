@@ -5233,7 +5233,7 @@ __init__(self,
     thread_id, 
     first_account, 
     second_account=second_account, 
-    folder=folder, 
+    folder_id=folder_id, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -5245,7 +5245,7 @@ EmailApi.get_email_thread(
         thread_id, 
         first_account, 
         second_account=second_account, 
-        folder=folder, 
+        folder_id=folder_id, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -5256,7 +5256,7 @@ Name | Type | Description  | Notes
  **thread_id** | **str**| Thread identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
- **folder** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS)              | [optional] 
+ **folder_id** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -5281,7 +5281,7 @@ __init__(self,
     thread_id, 
     first_account, 
     second_account=second_account, 
-    folder=folder, 
+    folder_id=folder_id, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -5293,7 +5293,7 @@ EmailApi.get_email_thread_async(
         thread_id, 
         first_account, 
         second_account=second_account, 
-        folder=folder, 
+        folder_id=folder_id, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -5304,7 +5304,7 @@ Name | Type | Description  | Notes
  **thread_id** | **str**| Thread identifier | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
- **folder** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS)              | [optional] 
+ **folder_id** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -6129,7 +6129,7 @@ Get message threads from folder. All messages are partly fetched (without email 
 ### Request Parameters
 ```python
 __init__(self, 
-    folder, 
+    folder_id, 
     first_account, 
     second_account=second_account, 
     storage=storage, 
@@ -6142,7 +6142,7 @@ __init__(self,
 ```python
 EmailApi.list_email_threads(
     ListEmailThreadsRequest(
-        folder, 
+        folder_id, 
         first_account, 
         second_account=second_account, 
         storage=storage, 
@@ -6154,7 +6154,7 @@ EmailApi.list_email_threads(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder** | **str**| A folder in email account | 
+ **folder_id** | **str**| A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
@@ -6180,7 +6180,7 @@ list_email_threads_async(request).get() returns [**EmailThreadList**](EmailThrea
 ### Request Parameters
 ```python
 __init__(self, 
-    folder, 
+    folder_id, 
     first_account, 
     second_account=second_account, 
     storage=storage, 
@@ -6193,7 +6193,7 @@ __init__(self,
 ```python
 EmailApi.list_email_threads_async(
     ListEmailThreadsRequest(
-        folder, 
+        folder_id, 
         first_account, 
         second_account=second_account, 
         storage=storage, 
@@ -6205,7 +6205,7 @@ EmailApi.list_email_threads_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder** | **str**| A folder in email account | 
+ **folder_id** | **str**| A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
@@ -6891,7 +6891,7 @@ EmailApi.save_email_model(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **name** | **str**| iCalendar file name in storage. | 
+ **name** | **str**| Email document file name in storage. | 
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -6930,7 +6930,7 @@ EmailApi.save_email_model_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **name** | **str**| iCalendar file name in storage. | 
+ **name** | **str**| Email document file name in storage. | 
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)

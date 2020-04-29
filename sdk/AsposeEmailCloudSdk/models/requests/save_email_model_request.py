@@ -36,7 +36,7 @@ class SaveEmailModelRequest(BaseRequest):
     Initializes a new instance.
 
     :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    :param name (str) iCalendar file name in storage.
+    :param name (str) Email document file name in storage.
     :param rq (StorageModelRqOfEmailDto) Calendar properties update request.
     """
 
@@ -46,7 +46,7 @@ class SaveEmailModelRequest(BaseRequest):
         Initializes a new instance.
 
         :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-        :param name (str) iCalendar file name in storage.
+        :param name (str) Email document file name in storage.
         :param rq (StorageModelRqOfEmailDto) Calendar properties update request.
         """
 
