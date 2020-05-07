@@ -3615,6 +3615,99 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="fetch_email_thread_messages"></a>
+# **fetch_email_thread_messages**
+> fetch_email_thread_messages(self, fetch_email_thread_messages_request)
+
+Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+### Return type
+
+[**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    first_account, 
+    second_account=second_account, 
+    folder=folder, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.fetch_email_thread_messages(
+    FetchEmailThreadMessagesRequest(
+        thread_id, 
+        first_account, 
+        second_account=second_account, 
+        folder=folder, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Specifies account folder to get thread from              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="fetch_email_thread_messages_async"></a>
+# **fetch_email_thread_messages_async**
+> fetch_email_thread_messages_async(self, fetch_email_thread_messages_request)
+
+Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+fetch_email_thread_messages_async(request).get() returns [**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    first_account, 
+    second_account=second_account, 
+    folder=folder, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.fetch_email_thread_messages_async(
+    FetchEmailThreadMessagesRequest(
+        thread_id, 
+        first_account, 
+        second_account=second_account, 
+        folder=folder, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Specifies account folder to get thread from              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_calendar"></a>
 # **get_calendar**
 > get_calendar(self, get_calendar_request)
@@ -5217,99 +5310,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-<a name="get_email_thread"></a>
-# **get_email_thread**
-> get_email_thread(self, get_email_thread_request)
-
-Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
-
-### Return type
-
-[**EmailThread**](EmailThread.md)
-
-### Request Parameters
-```python
-__init__(self, 
-    thread_id, 
-    first_account, 
-    second_account=second_account, 
-    folder_id=folder_id, 
-    storage=storage, 
-    storage_folder=storage_folder)
-```
-
-### Usage
-```python
-EmailApi.get_email_thread(
-    GetEmailThreadRequest(
-        thread_id, 
-        first_account, 
-        second_account=second_account, 
-        folder_id=folder_id, 
-        storage=storage, 
-        storage_folder=storage_folder))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **thread_id** | **str**| Thread identifier | 
- **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
- **folder_id** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | [optional] 
- **storage** | **str**| Storage name where account file(s) located | [optional] 
- **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-<a name="get_email_thread_async"></a>
-# **get_email_thread_async**
-> get_email_thread_async(self, get_email_thread_request)
-
-Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
-
-Performs operation asynchronously.
-
-### Return type
-
-Returns multiprocessing.pool.AsyncResult.
-get_email_thread_async(request).get() returns [**EmailThread**](EmailThread.md)
-
-### Request Parameters
-```python
-__init__(self, 
-    thread_id, 
-    first_account, 
-    second_account=second_account, 
-    folder_id=folder_id, 
-    storage=storage, 
-    storage_folder=storage_folder)
-```
-
-### Usage
-```python
-EmailApi.get_email_thread_async(
-    GetEmailThreadRequest(
-        thread_id, 
-        first_account, 
-        second_account=second_account, 
-        folder_id=folder_id, 
-        storage=storage, 
-        storage_folder=storage_folder))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **thread_id** | **str**| Thread identifier | 
- **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
- **folder_id** | **str**| Specifies account folder to get thread from (required for some account types, such as EWS). Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | [optional] 
- **storage** | **str**| Storage name where account file(s) located | [optional] 
- **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
 <a name="get_file_versions"></a>
 # **get_file_versions**
 > get_file_versions(self, get_file_versions_request)
@@ -6129,7 +6129,7 @@ Get message threads from folder. All messages are partly fetched (without email 
 ### Request Parameters
 ```python
 __init__(self, 
-    folder_id, 
+    folder, 
     first_account, 
     second_account=second_account, 
     storage=storage, 
@@ -6142,7 +6142,7 @@ __init__(self,
 ```python
 EmailApi.list_email_threads(
     ListEmailThreadsRequest(
-        folder_id, 
+        folder, 
         first_account, 
         second_account=second_account, 
         storage=storage, 
@@ -6154,7 +6154,7 @@ EmailApi.list_email_threads(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder_id** | **str**| A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | 
+ **folder** | **str**| A folder in email account.              | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
@@ -6180,7 +6180,7 @@ list_email_threads_async(request).get() returns [**EmailThreadList**](EmailThrea
 ### Request Parameters
 ```python
 __init__(self, 
-    folder_id, 
+    folder, 
     first_account, 
     second_account=second_account, 
     storage=storage, 
@@ -6193,7 +6193,7 @@ __init__(self,
 ```python
 EmailApi.list_email_threads_async(
     ListEmailThreadsRequest(
-        folder_id, 
+        folder, 
         first_account, 
         second_account=second_account, 
         storage=storage, 
@@ -6205,7 +6205,7 @@ EmailApi.list_email_threads_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **folder_id** | **str**| A folder id in email account. Use folder Id from ListEmailFolders (MailServerFolder.Id). For IMAP folder Id is always same as folder name.              | 
+ **folder** | **str**| A folder in email account.              | 
  **first_account** | **str**| Email account | 
  **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
