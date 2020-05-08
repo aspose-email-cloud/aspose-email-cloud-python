@@ -1043,6 +1043,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailDto')
 
+    def fetch_email_thread_messages(self, request: requests.FetchEmailThreadMessagesRequest)  -> ListResponseOfEmailDto:
+        """Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+
+        :param request FetchEmailThreadMessagesRequest object with parameters
+        :return: ListResponseOfEmailDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfEmailDto')
+
+    def fetch_email_thread_messages_async(self, request: requests.FetchEmailThreadMessagesRequest) -> multiprocessing.pool.AsyncResult:
+        """Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request FetchEmailThreadMessagesRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfEmailDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfEmailDto')
+
     def get_calendar(self, request: requests.GetCalendarRequest)  -> HierarchicalObject:
         """Get calendar file properties             
 
@@ -1442,26 +1462,6 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
-
-    def get_email_thread(self, request: requests.GetEmailThreadRequest)  -> EmailThread:
-        """Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
-
-
-        :param request GetEmailThreadRequest object with parameters
-        :return: EmailThread
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'GET', 'EmailThread')
-
-    def get_email_thread_async(self, request: requests.GetEmailThreadRequest) -> multiprocessing.pool.AsyncResult:
-        """Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
-        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
-
-        :param request GetEmailThreadRequest object with parameters
-        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailThread)
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'GET', 'EmailThread')
 
     def get_file_versions(self, request: requests.GetFileVersionsRequest)  -> FileVersions:
         """Get file versions

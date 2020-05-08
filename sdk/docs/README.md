@@ -102,6 +102,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**fetch_email_message_async**](EmailApi.md#fetch_email_message_async) | **GET** /email/client/Fetch | Fetch message mime from email account             
 *EmailApi* | [**fetch_email_model**](EmailApi.md#fetch_email_model) | **GET** /email/client/FetchModel | Fetch message model from email account             
 *EmailApi* | [**fetch_email_model_async**](EmailApi.md#fetch_email_model_async) | **GET** /email/client/FetchModel | Fetch message model from email account             
+*EmailApi* | [**fetch_email_thread_messages**](EmailApi.md#fetch_email_thread_messages) | **GET** /email/client/threads/{threadId}/messages | Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+*EmailApi* | [**fetch_email_thread_messages_async**](EmailApi.md#fetch_email_thread_messages_async) | **GET** /email/client/threads/{threadId}/messages | Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
 *EmailApi* | [**get_calendar**](EmailApi.md#get_calendar) | **GET** /email/Calendar/{name}/properties | Get calendar file properties             
 *EmailApi* | [**get_calendar_async**](EmailApi.md#get_calendar_async) | **GET** /email/Calendar/{name}/properties | Get calendar file properties             
 *EmailApi* | [**get_calendar_attachment**](EmailApi.md#get_calendar_attachment) | **GET** /email/Calendar/{name}/attachments/{attachment} | Get iCalendar document attachment by name             
@@ -142,8 +144,6 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**get_email_model_list_async**](EmailApi.md#get_email_model_list_async) | **GET** /email/model/{format} | Get email list from storage folder.             
 *EmailApi* | [**get_email_property**](EmailApi.md#get_email_property) | **GET** /email/{fileName}/properties/{propertyName} | Get an email document property by its name             
 *EmailApi* | [**get_email_property_async**](EmailApi.md#get_email_property_async) | **GET** /email/{fileName}/properties/{propertyName} | Get an email document property by its name             
-*EmailApi* | [**get_email_thread**](EmailApi.md#get_email_thread) | **GET** /email/client/threads/{threadId} | Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
-*EmailApi* | [**get_email_thread_async**](EmailApi.md#get_email_thread_async) | **GET** /email/client/threads/{threadId} | Get message thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
 *EmailApi* | [**get_file_versions**](EmailApi.md#get_file_versions) | **GET** /email/storage/version/{path} | Get file versions
 *EmailApi* | [**get_file_versions_async**](EmailApi.md#get_file_versions_async) | **GET** /email/storage/version/{path} | Get file versions
 *EmailApi* | [**get_files_list**](EmailApi.md#get_files_list) | **GET** /email/storage/folder/{path} | Get all files and folders within a folder
