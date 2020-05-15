@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="convert_email_request.py">
+#  <copyright company="Aspose" file="get_calendar_as_file_request.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,34 +23,40 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_email_request import ConvertEmailRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.get_calendar_as_file_request import GetCalendarAsFileRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ConvertEmailRequest(BaseRequest):
+class GetCalendarAsFileRequest(BaseRequest):
     """
-    Request model for convert_email operation.
+    Request model for get_calendar_as_file operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    :param file (str) File to convert
+    :param file_name (str) Calendar document file name
+    :param format (str) File format Enum, available values: Ics, Msg
+    :param storage (str) Storage name
+    :param folder (str) Path to folder in storage
     """
 
-    def __init__(self, format: str, file: str):
+    def __init__(self, file_name: str, format: str, storage: str = None, folder: str = None):
         """
-        Request model for convert_email operation.
+        Request model for get_calendar_as_file operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-        :param file (str) File to convert
+        :param file_name (str) Calendar document file name
+        :param format (str) File format Enum, available values: Ics, Msg
+        :param storage (str) Storage name
+        :param folder (str) Path to folder in storage
         """
 
         BaseRequest.__init__(self)
+        self.file_name = file_name
         self.format = format
-        self.file = file
+        self.storage = storage
+        self.folder = folder
 
     def to_http_info(self, config):
         """
@@ -61,33 +67,45 @@ class ConvertEmailRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
+        # verify the required parameter 'file_name' is set
+        if self.file_name is None:
+            raise ValueError("Missing the required parameter `file_name` when calling `get_calendar_as_file`")
         # verify the required parameter 'format' is set
         if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `convert_email`")
-        # verify the required parameter 'file' is set
-        if self.file is None:
-            raise ValueError("Missing the required parameter `file` when calling `convert_email`")
+            raise ValueError("Missing the required parameter `format` when calling `get_calendar_as_file`")
 
         collection_formats = {}
-        path = '/email/convert/{format}'
+        path = '/email/CalendarModel/{fileName}/as-file/{format}'
         path_params = {}
+        if self.file_name is not None:
+            path_params[self._lowercase_first_letter('fileName')] = self.file_name
         if self.format is not None:
             path_params[self._lowercase_first_letter('format')] = self.format
 
         query_params = []
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.storage if self.storage is not None else '')
+        else:
+            if self.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), self.storage))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.folder if self.folder is not None else '')
+        else:
+            if self.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), self.folder))
 
         header_params = {}
 
         form_params = []
         local_var_files = []
-        if self.file is not None:
-            local_var_files.append((self._lowercase_first_letter('File'), self.file))
 
         body_params = None
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(
-            ['application/json'])
+            ['multipart/form-data'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self._select_header_content_type(

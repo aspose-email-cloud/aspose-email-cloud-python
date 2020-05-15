@@ -543,6 +543,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'ValueResponse')
 
+    def convert_calendar(self, request: requests.ConvertCalendarRequest)  -> str:
+        """Converts calendar document to specified format and returns as file             
+
+
+        :param request ConvertCalendarRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_calendar_async(self, request: requests.ConvertCalendarRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertCalendarRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
     def convert_calendar_model_to_alternate(self, request: requests.ConvertCalendarModelToAlternateRequest)  -> AlternateView:
         """Convert iCalendar to AlternateView             
 
@@ -562,6 +582,66 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'AlternateView')
+
+    def convert_calendar_model_to_file(self, request: requests.ConvertCalendarModelToFileRequest)  -> str:
+        """Converts calendar model to specified format and returns as file             
+
+
+        :param request ConvertCalendarModelToFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_calendar_model_to_file_async(self, request: requests.ConvertCalendarModelToFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar model to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertCalendarModelToFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
+    def convert_contact(self, request: requests.ConvertContactRequest)  -> str:
+        """Converts contact document to specified format and returns as file             
+
+
+        :param request ConvertContactRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_contact_async(self, request: requests.ConvertContactRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts contact document to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertContactRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
+    def convert_contact_model_to_file(self, request: requests.ConvertContactModelToFileRequest)  -> str:
+        """Converts contact model to specified format and returns as file             
+
+
+        :param request ConvertContactModelToFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_contact_model_to_file_async(self, request: requests.ConvertContactModelToFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts contact model to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertContactModelToFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
 
     def convert_email(self, request: requests.ConvertEmailRequest)  -> str:
         """Converts email document to specified format and returns as file             
@@ -1083,6 +1163,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
 
+    def get_calendar_as_file(self, request: requests.GetCalendarAsFileRequest)  -> str:
+        """Converts calendar document from storage to specified format and returns as file             
+
+
+        :param request GetCalendarAsFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_calendar_as_file_async(self, request: requests.GetCalendarAsFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document from storage to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetCalendarAsFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
     def get_calendar_attachment(self, request: requests.GetCalendarAttachmentRequest)  -> str:
         """Get iCalendar document attachment by name             
 
@@ -1182,6 +1282,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'CalendarDtoList')
+
+    def get_contact_as_file(self, request: requests.GetContactAsFileRequest)  -> str:
+        """Converts calendar document from storage to specified format and returns as file             
+
+
+        :param request GetContactAsFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_contact_as_file_async(self, request: requests.GetContactAsFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document from storage to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetContactAsFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
 
     def get_contact_attachment(self, request: requests.GetContactAttachmentRequest)  -> str:
         """Get attachment file by name             

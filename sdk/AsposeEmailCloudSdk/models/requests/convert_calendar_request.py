@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="convert_email_request.py">
+#  <copyright company="Aspose" file="convert_calendar_request.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,28 +23,28 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_email_request import ConvertEmailRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_calendar_request import ConvertCalendarRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ConvertEmailRequest(BaseRequest):
+class ConvertCalendarRequest(BaseRequest):
     """
-    Request model for convert_email operation.
+    Request model for convert_calendar operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param format (str) File format Enum, available values: Ics, Msg
     :param file (str) File to convert
     """
 
     def __init__(self, format: str, file: str):
         """
-        Request model for convert_email operation.
+        Request model for convert_calendar operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param format (str) File format Enum, available values: Ics, Msg
         :param file (str) File to convert
         """
 
@@ -63,13 +63,13 @@ class ConvertEmailRequest(BaseRequest):
         """
         # verify the required parameter 'format' is set
         if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `convert_email`")
+            raise ValueError("Missing the required parameter `format` when calling `convert_calendar`")
         # verify the required parameter 'file' is set
         if self.file is None:
-            raise ValueError("Missing the required parameter `file` when calling `convert_email`")
+            raise ValueError("Missing the required parameter `file` when calling `convert_calendar`")
 
         collection_formats = {}
-        path = '/email/convert/{format}'
+        path = '/email/CalendarModel/convert/{format}'
         path_params = {}
         if self.format is not None:
             path_params[self._lowercase_first_letter('format')] = self.format

@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="convert_email_request.py">
+#  <copyright company="Aspose" file="convert_contact_request.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,32 +23,35 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_email_request import ConvertEmailRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_contact_request import ConvertContactRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ConvertEmailRequest(BaseRequest):
+class ConvertContactRequest(BaseRequest):
     """
-    Request model for convert_email operation.
+    Request model for convert_contact operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param destination_format (str) File format to convert to Enum, available values: VCard, WebDav, Msg
+    :param format (str) File format to convert from Enum, available values: VCard, WebDav, Msg
     :param file (str) File to convert
     """
 
-    def __init__(self, format: str, file: str):
+    def __init__(self, destination_format: str, format: str, file: str):
         """
-        Request model for convert_email operation.
+        Request model for convert_contact operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param destination_format (str) File format to convert to Enum, available values: VCard, WebDav, Msg
+        :param format (str) File format to convert from Enum, available values: VCard, WebDav, Msg
         :param file (str) File to convert
         """
 
         BaseRequest.__init__(self)
+        self.destination_format = destination_format
         self.format = format
         self.file = file
 
@@ -61,16 +64,21 @@ class ConvertEmailRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
+        # verify the required parameter 'destination_format' is set
+        if self.destination_format is None:
+            raise ValueError("Missing the required parameter `destination_format` when calling `convert_contact`")
         # verify the required parameter 'format' is set
         if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `convert_email`")
+            raise ValueError("Missing the required parameter `format` when calling `convert_contact`")
         # verify the required parameter 'file' is set
         if self.file is None:
-            raise ValueError("Missing the required parameter `file` when calling `convert_email`")
+            raise ValueError("Missing the required parameter `file` when calling `convert_contact`")
 
         collection_formats = {}
-        path = '/email/convert/{format}'
+        path = '/email/ContactModel/{format}/convert/{destinationFormat}'
         path_params = {}
+        if self.destination_format is not None:
+            path_params[self._lowercase_first_letter('destinationFormat')] = self.destination_format
         if self.format is not None:
             path_params[self._lowercase_first_letter('format')] = self.format
 

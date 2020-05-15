@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="convert_email_request.py">
+#  <copyright company="Aspose" file="convert_calendar_model_to_file_request.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,34 +23,34 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_email_request import ConvertEmailRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_calendar_model_to_file_request import ConvertCalendarModelToFileRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ConvertEmailRequest(BaseRequest):
+class ConvertCalendarModelToFileRequest(BaseRequest):
     """
-    Request model for convert_email operation.
+    Request model for convert_calendar_model_to_file operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    :param file (str) File to convert
+    :param format (str) File format Enum, available values: Ics, Msg
+    :param calendar_dto (CalendarDto) Calendar model to convert
     """
 
-    def __init__(self, format: str, file: str):
+    def __init__(self, format: str, calendar_dto: CalendarDto):
         """
-        Request model for convert_email operation.
+        Request model for convert_calendar_model_to_file operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-        :param file (str) File to convert
+        :param format (str) File format Enum, available values: Ics, Msg
+        :param calendar_dto (CalendarDto) Calendar model to convert
         """
 
         BaseRequest.__init__(self)
         self.format = format
-        self.file = file
+        self.calendar_dto = calendar_dto
 
     def to_http_info(self, config):
         """
@@ -63,13 +63,13 @@ class ConvertEmailRequest(BaseRequest):
         """
         # verify the required parameter 'format' is set
         if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `convert_email`")
-        # verify the required parameter 'file' is set
-        if self.file is None:
-            raise ValueError("Missing the required parameter `file` when calling `convert_email`")
+            raise ValueError("Missing the required parameter `format` when calling `convert_calendar_model_to_file`")
+        # verify the required parameter 'calendar_dto' is set
+        if self.calendar_dto is None:
+            raise ValueError("Missing the required parameter `calendar_dto` when calling `convert_calendar_model_to_file`")
 
         collection_formats = {}
-        path = '/email/convert/{format}'
+        path = '/email/CalendarModel/model-as-file/{format}'
         path_params = {}
         if self.format is not None:
             path_params[self._lowercase_first_letter('format')] = self.format
@@ -80,14 +80,14 @@ class ConvertEmailRequest(BaseRequest):
 
         form_params = []
         local_var_files = []
-        if self.file is not None:
-            local_var_files.append((self._lowercase_first_letter('File'), self.file))
 
         body_params = None
+        if self.calendar_dto is not None:
+            body_params = self.calendar_dto
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(
-            ['application/json'])
+            ['multipart/form-data'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self._select_header_content_type(

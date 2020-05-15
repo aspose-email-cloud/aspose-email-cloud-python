@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="convert_email_request.py">
+#  <copyright company="Aspose" file="convert_contact_model_to_file_request.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,34 +23,34 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_email_request import ConvertEmailRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_contact_model_to_file_request import ConvertContactModelToFileRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ConvertEmailRequest(BaseRequest):
+class ConvertContactModelToFileRequest(BaseRequest):
     """
-    Request model for convert_email operation.
+    Request model for convert_contact_model_to_file operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    :param file (str) File to convert
+    :param destination_format (str) File format Enum, available values: VCard, WebDav, Msg
+    :param contact_dto (ContactDto) Contact model to convert
     """
 
-    def __init__(self, format: str, file: str):
+    def __init__(self, destination_format: str, contact_dto: ContactDto):
         """
-        Request model for convert_email operation.
+        Request model for convert_contact_model_to_file operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-        :param file (str) File to convert
+        :param destination_format (str) File format Enum, available values: VCard, WebDav, Msg
+        :param contact_dto (ContactDto) Contact model to convert
         """
 
         BaseRequest.__init__(self)
-        self.format = format
-        self.file = file
+        self.destination_format = destination_format
+        self.contact_dto = contact_dto
 
     def to_http_info(self, config):
         """
@@ -61,18 +61,18 @@ class ConvertEmailRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'format' is set
-        if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `convert_email`")
-        # verify the required parameter 'file' is set
-        if self.file is None:
-            raise ValueError("Missing the required parameter `file` when calling `convert_email`")
+        # verify the required parameter 'destination_format' is set
+        if self.destination_format is None:
+            raise ValueError("Missing the required parameter `destination_format` when calling `convert_contact_model_to_file`")
+        # verify the required parameter 'contact_dto' is set
+        if self.contact_dto is None:
+            raise ValueError("Missing the required parameter `contact_dto` when calling `convert_contact_model_to_file`")
 
         collection_formats = {}
-        path = '/email/convert/{format}'
+        path = '/email/ContactModel/model-as-file/{destinationFormat}'
         path_params = {}
-        if self.format is not None:
-            path_params[self._lowercase_first_letter('format')] = self.format
+        if self.destination_format is not None:
+            path_params[self._lowercase_first_letter('destinationFormat')] = self.destination_format
 
         query_params = []
 
@@ -80,14 +80,14 @@ class ConvertEmailRequest(BaseRequest):
 
         form_params = []
         local_var_files = []
-        if self.file is not None:
-            local_var_files.append((self._lowercase_first_letter('File'), self.file))
 
         body_params = None
+        if self.contact_dto is not None:
+            body_params = self.contact_dto
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(
-            ['application/json'])
+            ['multipart/form-data'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self._select_header_content_type(

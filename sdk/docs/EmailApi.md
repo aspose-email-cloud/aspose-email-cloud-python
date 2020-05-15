@@ -1788,6 +1788,75 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="convert_calendar"></a>
+# **convert_calendar**
+> convert_calendar(self, convert_calendar_request)
+
+Converts calendar document to specified format and returns as file             
+
+### Return type
+
+[**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar(
+    ConvertCalendarRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_async"></a>
+# **convert_calendar_async**
+> convert_calendar_async(self, convert_calendar_request)
+
+Converts calendar document to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_calendar_async(request).get() returns [**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_async(
+    ConvertCalendarRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="convert_calendar_model_to_alternate"></a>
 # **convert_calendar_model_to_alternate**
 > convert_calendar_model_to_alternate(self, convert_calendar_model_to_alternate_request)
@@ -1851,6 +1920,219 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="convert_calendar_model_to_file"></a>
+# **convert_calendar_model_to_file**
+> convert_calendar_model_to_file(self, convert_calendar_model_to_file_request)
+
+Converts calendar model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_file(
+    ConvertCalendarModelToFileRequest(
+        format, 
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| Calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_model_to_file_async"></a>
+# **convert_calendar_model_to_file_async**
+> convert_calendar_model_to_file_async(self, convert_calendar_model_to_file_request)
+
+Converts calendar model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_calendar_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_file_async(
+    ConvertCalendarModelToFileRequest(
+        format, 
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| Calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact"></a>
+# **convert_contact**
+> convert_contact(self, convert_contact_request)
+
+Converts contact document to specified format and returns as file             
+
+### Return type
+
+[**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_contact(
+    ConvertContactRequest(
+        destination_format, 
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format to convert to Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact_async"></a>
+# **convert_contact_async**
+> convert_contact_async(self, convert_contact_request)
+
+Converts contact document to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_contact_async(request).get() returns [**file**](file.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_async(
+    ConvertContactRequest(
+        destination_format, 
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format to convert to Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact_model_to_file"></a>
+# **convert_contact_model_to_file**
+> convert_contact_model_to_file(self, convert_contact_model_to_file_request)
+
+Converts contact model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_model_to_file(
+    ConvertContactModelToFileRequest(
+        destination_format, 
+        contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **contact_dto** | [**ContactDto**](ContactDto.md)| Contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact_model_to_file_async"></a>
+# **convert_contact_model_to_file_async**
+> convert_contact_model_to_file_async(self, convert_contact_model_to_file_request)
+
+Converts contact model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_contact_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_model_to_file_async(
+    ConvertContactModelToFileRequest(
+        destination_format, 
+        contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **contact_dto** | [**ContactDto**](ContactDto.md)| Contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="convert_email"></a>
 # **convert_email**
 > convert_email(self, convert_email_request)
@@ -1880,7 +2162,7 @@ EmailApi.convert_email(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **file** | **file**| File to upload | 
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1916,7 +2198,7 @@ EmailApi.convert_email_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **file** | **file**| File to upload | 
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -3783,6 +4065,87 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_calendar_as_file"></a>
+# **get_calendar_as_file**
+> get_calendar_as_file(self, get_calendar_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_as_file(
+    GetCalendarAsFileRequest(
+        file_name, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_as_file_async"></a>
+# **get_calendar_as_file_async**
+> get_calendar_as_file_async(self, get_calendar_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_as_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_as_file_async(
+    GetCalendarAsFileRequest(
+        file_name, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_calendar_attachment"></a>
 # **get_calendar_attachment**
 > get_calendar_attachment(self, get_calendar_attachment_request)
@@ -4185,6 +4548,93 @@ Name | Type | Description  | Notes
  **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
  **page_number** | **int**| Page number | [optional] [default to 0]
  **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_as_file"></a>
+# **get_contact_as_file**
+> get_contact_as_file(self, get_contact_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    destination_format, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_contact_as_file(
+    GetContactAsFileRequest(
+        file_name, 
+        destination_format, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_as_file_async"></a>
+# **get_contact_as_file_async**
+> get_contact_as_file_async(self, get_contact_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_contact_as_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    destination_format, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_contact_as_file_async(
+    GetContactAsFileRequest(
+        file_name, 
+        destination_format, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
