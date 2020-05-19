@@ -64,6 +64,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**convert_contact_model_to_file_async**](EmailApi.md#convert_contact_model_to_file_async) | **PUT** /email/ContactModel/model-as-file/{destinationFormat} | Converts contact model to specified format and returns as file             
 *EmailApi* | [**convert_email**](EmailApi.md#convert_email) | **PUT** /email/convert/{format} | Converts email document to specified format and returns as file             
 *EmailApi* | [**convert_email_async**](EmailApi.md#convert_email_async) | **PUT** /email/convert/{format} | Converts email document to specified format and returns as file             
+*EmailApi* | [**convert_email_model_to_file**](EmailApi.md#convert_email_model_to_file) | **PUT** /email/model/model-as-file/{destinationFormat} | Converts Email model to specified format and returns as file             
+*EmailApi* | [**convert_email_model_to_file_async**](EmailApi.md#convert_email_model_to_file_async) | **PUT** /email/model/model-as-file/{destinationFormat} | Converts Email model to specified format and returns as file             
 *EmailApi* | [**copy_file**](EmailApi.md#copy_file) | **PUT** /email/storage/file/copy/{srcPath} | Copy file
 *EmailApi* | [**copy_file_async**](EmailApi.md#copy_file_async) | **PUT** /email/storage/file/copy/{srcPath} | Copy file
 *EmailApi* | [**copy_folder**](EmailApi.md#copy_folder) | **PUT** /email/storage/folder/copy/{srcPath} | Copy folder
@@ -118,6 +120,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**get_calendar_as_file_async**](EmailApi.md#get_calendar_as_file_async) | **GET** /email/CalendarModel/{fileName}/as-file/{format} | Converts calendar document from storage to specified format and returns as file             
 *EmailApi* | [**get_calendar_attachment**](EmailApi.md#get_calendar_attachment) | **GET** /email/Calendar/{name}/attachments/{attachment} | Get iCalendar document attachment by name             
 *EmailApi* | [**get_calendar_attachment_async**](EmailApi.md#get_calendar_attachment_async) | **GET** /email/Calendar/{name}/attachments/{attachment} | Get iCalendar document attachment by name             
+*EmailApi* | [**get_calendar_file_as_model**](EmailApi.md#get_calendar_file_as_model) | **PUT** /email/CalendarModel/file-as-model | Converts calendar document to a model representation             
+*EmailApi* | [**get_calendar_file_as_model_async**](EmailApi.md#get_calendar_file_as_model_async) | **PUT** /email/CalendarModel/file-as-model | Converts calendar document to a model representation             
 *EmailApi* | [**get_calendar_list**](EmailApi.md#get_calendar_list) | **GET** /email/Calendar | Get iCalendar files list in folder on storage             
 *EmailApi* | [**get_calendar_list_async**](EmailApi.md#get_calendar_list_async) | **GET** /email/Calendar | Get iCalendar files list in folder on storage             
 *EmailApi* | [**get_calendar_model**](EmailApi.md#get_calendar_model) | **GET** /email/CalendarModel/{name} | Get calendar file             
@@ -130,6 +134,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**get_contact_as_file_async**](EmailApi.md#get_contact_as_file_async) | **GET** /email/ContactModel/{format}/{fileName}/as-file/{destinationFormat} | Converts calendar document from storage to specified format and returns as file             
 *EmailApi* | [**get_contact_attachment**](EmailApi.md#get_contact_attachment) | **GET** /email/Contact/{format}/{name}/attachments/{attachment} | Get attachment file by name             
 *EmailApi* | [**get_contact_attachment_async**](EmailApi.md#get_contact_attachment_async) | **GET** /email/Contact/{format}/{name}/attachments/{attachment} | Get attachment file by name             
+*EmailApi* | [**get_contact_file_as_model**](EmailApi.md#get_contact_file_as_model) | **PUT** /email/ContactModel/{format}/file-as-model | Converts contact document to a model representation             
+*EmailApi* | [**get_contact_file_as_model_async**](EmailApi.md#get_contact_file_as_model_async) | **PUT** /email/ContactModel/{format}/file-as-model | Converts contact document to a model representation             
 *EmailApi* | [**get_contact_list**](EmailApi.md#get_contact_list) | **GET** /email/Contact/{format} | Get contact list from storage folder             
 *EmailApi* | [**get_contact_list_async**](EmailApi.md#get_contact_list_async) | **GET** /email/Contact/{format} | Get contact list from storage folder             
 *EmailApi* | [**get_contact_model**](EmailApi.md#get_contact_model) | **GET** /email/ContactModel/{format}/{name} | Get contact document.             
@@ -150,6 +156,8 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**get_email_client_account_async**](EmailApi.md#get_email_client_account_async) | **GET** /email/client/email-client-account | Get email client account from storage             
 *EmailApi* | [**get_email_client_multi_account**](EmailApi.md#get_email_client_multi_account) | **GET** /email/client/multi-account | Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 *EmailApi* | [**get_email_client_multi_account_async**](EmailApi.md#get_email_client_multi_account_async) | **GET** /email/client/multi-account | Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
+*EmailApi* | [**get_email_file_as_model**](EmailApi.md#get_email_file_as_model) | **PUT** /email/model/{format}/file-as-model | Converts email document to a model representation             
+*EmailApi* | [**get_email_file_as_model_async**](EmailApi.md#get_email_file_as_model_async) | **PUT** /email/model/{format}/file-as-model | Converts email document to a model representation             
 *EmailApi* | [**get_email_model**](EmailApi.md#get_email_model) | **GET** /email/model/{format}/{name} | Get email document.             
 *EmailApi* | [**get_email_model_async**](EmailApi.md#get_email_model_async) | **GET** /email/model/{format}/{name} | Get email document.             
 *EmailApi* | [**get_email_model_list**](EmailApi.md#get_email_model_list) | **GET** /email/model/{format} | Get email list from storage folder.             

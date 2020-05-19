@@ -1796,7 +1796,7 @@ Converts calendar document to specified format and returns as file
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -1832,7 +1832,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-convert_calendar_async(request).get() returns [**file**](file.md)
+convert_calendar_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -1997,7 +1997,7 @@ Converts contact document to specified format and returns as file
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -2036,7 +2036,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-convert_contact_async(request).get() returns [**file**](file.md)
+convert_contact_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -2141,7 +2141,7 @@ Converts email document to specified format and returns as file
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -2177,7 +2177,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-convert_email_async(request).get() returns [**file**](file.md)
+convert_email_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -2199,6 +2199,75 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
  **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email_model_to_file"></a>
+# **convert_email_model_to_file**
+> convert_email_model_to_file(self, convert_email_model_to_file_request)
+
+Converts Email model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    email_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_email_model_to_file(
+    ConvertEmailModelToFileRequest(
+        destination_format, 
+        email_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email_model_to_file_async"></a>
+# **convert_email_model_to_file_async**
+> convert_email_model_to_file_async(self, convert_email_model_to_file_request)
+
+Converts Email model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_email_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    email_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_email_model_to_file_async(
+    ConvertEmailModelToFileRequest(
+        destination_format, 
+        email_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -4227,6 +4296,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_calendar_file_as_model"></a>
+# **get_calendar_file_as_model**
+> get_calendar_file_as_model(self, get_calendar_file_as_model_request)
+
+Converts calendar document to a model representation             
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_file_as_model(
+    GetCalendarFileAsModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_file_as_model_async"></a>
+# **get_calendar_file_as_model_async**
+> get_calendar_file_as_model_async(self, get_calendar_file_as_model_request)
+
+Converts calendar document to a model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_file_as_model_async(request).get() returns [**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_file_as_model_async(
+    GetCalendarFileAsModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_calendar_list"></a>
 # **get_calendar_list**
 > get_calendar_list(self, get_calendar_list_request)
@@ -4722,6 +4854,75 @@ Name | Type | Description  | Notes
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_file_as_model"></a>
+# **get_contact_file_as_model**
+> get_contact_file_as_model(self, get_contact_file_as_model_request)
+
+Converts contact document to a model representation             
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_contact_file_as_model(
+    GetContactFileAsModelRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_file_as_model_async"></a>
+# **get_contact_file_as_model_async**
+> get_contact_file_as_model_async(self, get_contact_file_as_model_request)
+
+Converts contact document to a model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_contact_file_as_model_async(request).get() returns [**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_contact_file_as_model_async(
+    GetContactFileAsModelRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5508,6 +5709,75 @@ Name | Type | Description  | Notes
  **name** | **str**| File name on storage | 
  **folder** | **str**| Folder on storage | 
  **storage** | **str**| Storage name | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_file_as_model"></a>
+# **get_email_file_as_model**
+> get_email_file_as_model(self, get_email_file_as_model_request)
+
+Converts email document to a model representation             
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_email_file_as_model(
+    GetEmailFileAsModelRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_file_as_model_async"></a>
+# **get_email_file_as_model_async**
+> get_email_file_as_model_async(self, get_email_file_as_model_request)
+
+Converts email document to a model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_file_as_model_async(request).get() returns [**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_email_file_as_model_async(
+    GetEmailFileAsModelRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

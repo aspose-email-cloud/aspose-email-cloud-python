@@ -663,6 +663,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'file')
 
+    def convert_email_model_to_file(self, request: requests.ConvertEmailModelToFileRequest)  -> str:
+        """Converts Email model to specified format and returns as file             
+
+
+        :param request ConvertEmailModelToFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_email_model_to_file_async(self, request: requests.ConvertEmailModelToFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts Email model to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertEmailModelToFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
     def copy_file(self, request: requests.CopyFileRequest) :
         """Copy file
 
@@ -1203,6 +1223,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
 
+    def get_calendar_file_as_model(self, request: requests.GetCalendarFileAsModelRequest)  -> CalendarDto:
+        """Converts calendar document to a model representation             
+
+
+        :param request GetCalendarFileAsModelRequest object with parameters
+        :return: CalendarDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'CalendarDto')
+
+    def get_calendar_file_as_model_async(self, request: requests.GetCalendarFileAsModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document to a model representation             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetCalendarFileAsModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns CalendarDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'CalendarDto')
+
     def get_calendar_list(self, request: requests.GetCalendarListRequest)  -> ListResponseOfHierarchicalObjectResponse:
         """Get iCalendar files list in folder on storage             
 
@@ -1322,6 +1362,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
+
+    def get_contact_file_as_model(self, request: requests.GetContactFileAsModelRequest)  -> ContactDto:
+        """Converts contact document to a model representation             
+
+
+        :param request GetContactFileAsModelRequest object with parameters
+        :return: ContactDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'ContactDto')
+
+    def get_contact_file_as_model_async(self, request: requests.GetContactFileAsModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts contact document to a model representation             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetContactFileAsModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ContactDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'ContactDto')
 
     def get_contact_list(self, request: requests.GetContactListRequest)  -> ListResponseOfHierarchicalObjectResponse:
         """Get contact list from storage folder             
@@ -1522,6 +1582,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailClientMultiAccount')
+
+    def get_email_file_as_model(self, request: requests.GetEmailFileAsModelRequest)  -> EmailDto:
+        """Converts email document to a model representation             
+
+
+        :param request GetEmailFileAsModelRequest object with parameters
+        :return: EmailDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'EmailDto')
+
+    def get_email_file_as_model_async(self, request: requests.GetEmailFileAsModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts email document to a model representation             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailFileAsModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'EmailDto')
 
     def get_email_model(self, request: requests.GetEmailModelRequest)  -> EmailDto:
         """Get email document.             
