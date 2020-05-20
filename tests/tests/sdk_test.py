@@ -462,6 +462,43 @@ def test_calendar_converter(td: TestData):
     assert location == dto.location
 
 
+@pytest.mark.pipeline
+def test_contact_converter(td: TestData):
+    email = td.email
+    surname = 'Cane'
+    contact_dto = models.ContactDto()
+    contact_dto.surname = surname
+    contact_dto.given_name = 'John'
+    contact_dto.email_addresses = [models.EmailAddress(address='address@aspose.com')]
+    contact_dto.phone_numbers = [models.PhoneNumber(number='+473253657534')]
+    mapi = email.convert_contact_model_to_file(requests.ConvertContactModelToFileRequest('Msg', contact_dto))
+    vcard = email.convert_contact(requests.ConvertContactRequest('VCard', 'Msg', mapi))
+    with open(vcard, 'r') as f:
+        file_data = f.read()
+        assert surname in file_data
+    dto = email.get_contact_file_as_model(requests.GetContactFileAsModelRequest('VCard', vcard))
+    assert surname == dto.surname
+
+
+@pytest.mark.pipeline
+def test_email_converter(td: TestData):
+    email = td.email
+    _from = 'from@aspose.com'
+    email_dto = models.EmailDto()
+    email_dto._from = models.MailAddress(address=_from)
+    email_dto.to = [models.MailAddress(address='to@aspose.com')]
+    email_dto.subject = 'Some subject'
+    email_dto.body = 'Some body'
+    email_dto._date = datetime.today()
+    mapi = email.convert_email_model_to_file(requests.ConvertEmailModelToFileRequest('Msg', email_dto))
+    eml = email.convert_email(requests.ConvertEmailRequest('Eml', mapi))
+    with open(eml, 'r') as f:
+        file_data = f.read()
+        assert _from in file_data
+    dto = email.get_email_file_as_model(requests.GetEmailFileAsModelRequest(eml))
+    assert _from == dto._from.address
+
+
 def _create_calendar(td, start_date_param=None):
     name = str(uuid.uuid4()) + '.ics'
     start_date = (
