@@ -435,6 +435,33 @@ def test_email_client_multi_account(td: TestData):
             multi_account.send_account.credentials.discriminator)
 
 
+@pytest.mark.pipeline
+def test_calendar_converter(td: TestData):
+    email = td.email
+    location = 'Some location'
+    # Create DTO with specified location:
+    calendar_dto = models.CalendarDto()
+    calendar_dto.location = location
+    calendar_dto.summary = 'Some summary'
+    calendar_dto.description = 'Some description'
+    calendar_dto.start_date = datetime.today()
+    calendar_dto.end_date = datetime.today()
+    calendar_dto.organizer = models.MailAddress(address='organizer@aspose.com')
+    calendar_dto.attendees = [models.MailAddress(address='attendee@aspose.com')]
+    # We can convert this DTO to a MAPI or ICS file
+    mapi = email.convert_calendar_model_to_file(requests.ConvertCalendarModelToFileRequest('Msg', calendar_dto))
+    # Let's convert this file to ICS format:
+    ics = email.convert_calendar(requests.ConvertCalendarRequest('Ics', mapi))
+    # ICS is a text format. We can read the file to a string and check that it
+    # contains specified location as a substring:
+    with open(ics, 'r') as f:
+        file_data = f.read()
+        assert location in file_data
+    # We can also convert the file back to a CalendarDto
+    dto = email.get_calendar_file_as_model(requests.GetCalendarFileAsModelRequest(ics))
+    assert location == dto.location
+
+
 def _create_calendar(td, start_date_param=None):
     name = str(uuid.uuid4()) + '.ics'
     start_date = (

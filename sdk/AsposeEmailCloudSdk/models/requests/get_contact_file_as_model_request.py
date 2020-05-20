@@ -91,7 +91,7 @@ class GetContactFileAsModelRequest(BaseRequest):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self._select_header_content_type(
-            ['application/json'])
+            ['multipart/form-data'])
 
         # Authentication setting
         auth_settings = ['JWT']
