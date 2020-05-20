@@ -5725,7 +5725,6 @@ Converts email document to a model representation
 ### Request Parameters
 ```python
 __init__(self, 
-    format, 
     file)
 ```
 
@@ -5733,14 +5732,12 @@ __init__(self,
 ```python
 EmailApi.get_email_file_as_model(
     GetEmailFileAsModelRequest(
-        format, 
         file))
 ```
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -5761,7 +5758,6 @@ get_email_file_as_model_async(request).get() returns [**EmailDto**](EmailDto.md)
 ### Request Parameters
 ```python
 __init__(self, 
-    format, 
     file)
 ```
 
@@ -5769,14 +5765,12 @@ __init__(self,
 ```python
 EmailApi.get_email_file_as_model_async(
     GetEmailFileAsModelRequest(
-        format, 
         file))
 ```
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)

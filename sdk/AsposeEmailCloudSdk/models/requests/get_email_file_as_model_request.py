@@ -35,21 +35,18 @@ class GetEmailFileAsModelRequest(BaseRequest):
     Request model for get_email_file_as_model operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
     :param file (str) File to convert
     """
 
-    def __init__(self, format: str, file: str):
+    def __init__(self, file: str):
         """
         Request model for get_email_file_as_model operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
         :param file (str) File to convert
         """
 
         BaseRequest.__init__(self)
-        self.format = format
         self.file = file
 
     def to_http_info(self, config):
@@ -61,18 +58,13 @@ class GetEmailFileAsModelRequest(BaseRequest):
         :return: http_request configured http request
         :rtype: Configuration.models.requests.HttpRequest
         """
-        # verify the required parameter 'format' is set
-        if self.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `get_email_file_as_model`")
         # verify the required parameter 'file' is set
         if self.file is None:
             raise ValueError("Missing the required parameter `file` when calling `get_email_file_as_model`")
 
         collection_formats = {}
-        path = '/email/model/{format}/file-as-model'
+        path = '/email/model/file-as-model'
         path_params = {}
-        if self.format is not None:
-            path_params[self._lowercase_first_letter('format')] = self.format
 
         query_params = []
 
