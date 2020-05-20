@@ -129,8 +129,8 @@ def test_ai_bcr_parse_storage(td: TestData):
         contact_file.folder_path + "/" + contact_file.file_name,
         td.storage))
     with open(downloaded, 'r') as f:
-        filedata = f.read()
-        assert 'Thomas' in filedata
+        file_data = f.read()
+        assert 'Thomas' in file_data
     # 5) Get VCard object properties list, check that there are 3 properties or more
     contact_properties = td.email.get_contact_properties(requests.GetContactPropertiesRequest(
         'VCard', contact_file.file_name, contact_file.folder_path,
@@ -303,8 +303,8 @@ def test_contact_model(td: TestData):
 def test_ai_bcr_parse_model(td: TestData):
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
     with open(image_file, 'rb') as f:
-        filedata = f.read()
-        image_data = str(base64.b64encode(filedata), 'utf-8')
+        file_data = f.read()
+        image_data = str(base64.b64encode(file_data), 'utf-8')
     result = td.email.ai_bcr_parse_model(requests.AiBcrParseModelRequest(
         models.AiBcrBase64Rq(images=[models.AiBcrBase64Image(True, image_data)])))
     assert len(result.value) == 1
@@ -355,8 +355,8 @@ def test_mapi_add_attachment(td: TestData):
     attachment_downloaded = td.email.get_calendar_attachment(requests.GetCalendarAttachmentRequest(
         name, attachment, td.folder, td.storage))
     with open(attachment_downloaded, 'r') as f:
-        filedata = f.read()
-        assert 'Aspose Ltd' in filedata
+        file_data = f.read()
+        assert 'Aspose Ltd' in file_data
 
 
 @pytest.mark.pipeline
