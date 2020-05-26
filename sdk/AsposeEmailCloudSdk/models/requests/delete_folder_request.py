@@ -35,9 +35,9 @@ class DeleteFolderRequest(BaseRequest):
     Request model for delete_folder operation.
     Initializes a new instance.
 
-    :param path (str) Folder path e.g. '/folder'
-    :param storage_name (str) Storage name
-    :param recursive (bool) Enable to delete folders, subfolders and files
+    :param path (str) 
+    :param storage_name (str) 
+    :param recursive (bool) 
     """
 
     def __init__(self, path: str, storage_name: str = None, recursive: bool = None):
@@ -45,9 +45,9 @@ class DeleteFolderRequest(BaseRequest):
         Request model for delete_folder operation.
         Initializes a new instance.
 
-        :param path (str) Folder path e.g. '/folder'
-        :param storage_name (str) Storage name
-        :param recursive (bool) Enable to delete folders, subfolders and files
+        :param path (str) 
+        :param storage_name (str) 
+        :param recursive (bool) 
         """
 
         BaseRequest.__init__(self)

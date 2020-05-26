@@ -35,11 +35,11 @@ class MoveFileRequest(BaseRequest):
     Request model for move_file operation.
     Initializes a new instance.
 
-    :param src_path (str) Source file path e.g. '/src.ext'
-    :param dest_path (str) Destination file path e.g. '/dest.ext'
-    :param src_storage_name (str) Source storage name
-    :param dest_storage_name (str) Destination storage name
-    :param version_id (str) File version ID to move
+    :param src_path (str) 
+    :param dest_path (str) 
+    :param src_storage_name (str) 
+    :param dest_storage_name (str) 
+    :param version_id (str) 
     """
 
     def __init__(self, src_path: str, dest_path: str, src_storage_name: str = None, dest_storage_name: str = None, version_id: str = None):
@@ -47,11 +47,11 @@ class MoveFileRequest(BaseRequest):
         Request model for move_file operation.
         Initializes a new instance.
 
-        :param src_path (str) Source file path e.g. '/src.ext'
-        :param dest_path (str) Destination file path e.g. '/dest.ext'
-        :param src_storage_name (str) Source storage name
-        :param dest_storage_name (str) Destination storage name
-        :param version_id (str) File version ID to move
+        :param src_path (str) 
+        :param dest_path (str) 
+        :param src_storage_name (str) 
+        :param dest_storage_name (str) 
+        :param version_id (str) 
         """
 
         BaseRequest.__init__(self)

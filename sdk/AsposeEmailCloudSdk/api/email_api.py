@@ -684,7 +684,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', 'file')
 
     def copy_file(self, request: requests.CopyFileRequest) :
-        """Copy file
+        """copy_file
 
 
         :param request CopyFileRequest object with parameters
@@ -694,7 +694,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def copy_file_async(self, request: requests.CopyFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Copy file
+        """copy_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request CopyFileRequest object with parameters
@@ -704,7 +704,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def copy_folder(self, request: requests.CopyFolderRequest) :
-        """Copy folder
+        """copy_folder
 
 
         :param request CopyFolderRequest object with parameters
@@ -714,7 +714,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def copy_folder_async(self, request: requests.CopyFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Copy folder
+        """copy_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request CopyFolderRequest object with parameters
@@ -804,7 +804,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def create_folder(self, request: requests.CreateFolderRequest) :
-        """Create the folder
+        """create_folder
 
 
         :param request CreateFolderRequest object with parameters
@@ -814,7 +814,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def create_folder_async(self, request: requests.CreateFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Create the folder
+        """create_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request CreateFolderRequest object with parameters
@@ -944,7 +944,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'DELETE', None)
 
     def delete_file(self, request: requests.DeleteFileRequest) :
-        """Delete file
+        """delete_file
 
 
         :param request DeleteFileRequest object with parameters
@@ -954,7 +954,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'DELETE', None)
 
     def delete_file_async(self, request: requests.DeleteFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Delete file
+        """delete_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request DeleteFileRequest object with parameters
@@ -964,7 +964,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'DELETE', None)
 
     def delete_folder(self, request: requests.DeleteFolderRequest) :
-        """Delete folder
+        """delete_folder
 
 
         :param request DeleteFolderRequest object with parameters
@@ -974,7 +974,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'DELETE', None)
 
     def delete_folder_async(self, request: requests.DeleteFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Delete folder
+        """delete_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request DeleteFolderRequest object with parameters
@@ -1084,7 +1084,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'POST', 'EmailAccountConfigList')
 
     def download_file(self, request: requests.DownloadFileRequest)  -> str:
-        """Download file
+        """download_file
 
 
         :param request DownloadFileRequest object with parameters
@@ -1094,7 +1094,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'file')
 
     def download_file_async(self, request: requests.DownloadFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Download file
+        """download_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request DownloadFileRequest object with parameters
@@ -1464,7 +1464,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
 
     def get_disc_usage(self, request: requests.GetDiscUsageRequest)  -> DiscUsage:
-        """Get disc usage
+        """get_disc_usage
 
 
         :param request GetDiscUsageRequest object with parameters
@@ -1474,7 +1474,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'DiscUsage')
 
     def get_disc_usage_async(self, request: requests.GetDiscUsageRequest) -> multiprocessing.pool.AsyncResult:
-        """Get disc usage
+        """get_disc_usage
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetDiscUsageRequest object with parameters
@@ -1664,7 +1664,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
 
     def get_file_versions(self, request: requests.GetFileVersionsRequest)  -> FileVersions:
-        """Get file versions
+        """get_file_versions
 
 
         :param request GetFileVersionsRequest object with parameters
@@ -1674,7 +1674,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'FileVersions')
 
     def get_file_versions_async(self, request: requests.GetFileVersionsRequest) -> multiprocessing.pool.AsyncResult:
-        """Get file versions
+        """get_file_versions
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetFileVersionsRequest object with parameters
@@ -1684,7 +1684,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'FileVersions')
 
     def get_files_list(self, request: requests.GetFilesListRequest)  -> FilesList:
-        """Get all files and folders within a folder
+        """get_files_list
 
 
         :param request GetFilesListRequest object with parameters
@@ -1694,7 +1694,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'FilesList')
 
     def get_files_list_async(self, request: requests.GetFilesListRequest) -> multiprocessing.pool.AsyncResult:
-        """Get all files and folders within a folder
+        """get_files_list
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetFilesListRequest object with parameters
@@ -1928,7 +1928,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def move_file(self, request: requests.MoveFileRequest) :
-        """Move file
+        """move_file
 
 
         :param request MoveFileRequest object with parameters
@@ -1938,7 +1938,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def move_file_async(self, request: requests.MoveFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Move file
+        """move_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request MoveFileRequest object with parameters
@@ -1948,7 +1948,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def move_folder(self, request: requests.MoveFolderRequest) :
-        """Move folder
+        """move_folder
 
 
         :param request MoveFolderRequest object with parameters
@@ -1958,7 +1958,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def move_folder_async(self, request: requests.MoveFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Move folder
+        """move_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request MoveFolderRequest object with parameters
@@ -1968,7 +1968,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def object_exists(self, request: requests.ObjectExistsRequest)  -> ObjectExist:
-        """Check if file or folder exists
+        """object_exists
 
 
         :param request ObjectExistsRequest object with parameters
@@ -1978,7 +1978,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'ObjectExist')
 
     def object_exists_async(self, request: requests.ObjectExistsRequest) -> multiprocessing.pool.AsyncResult:
-        """Check if file or folder exists
+        """object_exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request ObjectExistsRequest object with parameters
@@ -2248,7 +2248,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def storage_exists(self, request: requests.StorageExistsRequest)  -> StorageExist:
-        """Check if storage exists
+        """storage_exists
 
 
         :param request StorageExistsRequest object with parameters
@@ -2258,7 +2258,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'StorageExist')
 
     def storage_exists_async(self, request: requests.StorageExistsRequest) -> multiprocessing.pool.AsyncResult:
-        """Check if storage exists
+        """storage_exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request StorageExistsRequest object with parameters
@@ -2328,7 +2328,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def upload_file(self, request: requests.UploadFileRequest)  -> FilesUploadResult:
-        """Upload file
+        """upload_file
 
 
         :param request UploadFileRequest object with parameters
@@ -2338,7 +2338,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', 'FilesUploadResult')
 
     def upload_file_async(self, request: requests.UploadFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Upload file
+        """upload_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request UploadFileRequest object with parameters

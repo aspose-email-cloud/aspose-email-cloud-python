@@ -31,7 +31,6 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.ai_bcr_image import AiBcrImage
-from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 
 
 class AiBcrImageStorageFile(AiBcrImage):
@@ -47,7 +46,7 @@ class AiBcrImageStorageFile(AiBcrImage):
     """
     swagger_types = {
         'is_single': 'bool',
-        'file': 'StorageFileLocation'
+        'file': 'object'
     }
 
     attribute_map = {
@@ -55,11 +54,11 @@ class AiBcrImageStorageFile(AiBcrImage):
         'file': 'file'
     }
 
-    def __init__(self, is_single: bool = None, file: StorageFileLocation = None):
+    def __init__(self, is_single: bool = None, file: object = None):
         """
         Image from storage for recognition             
         :param is_single (bool) Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
-        :param file (StorageFileLocation) Image location             
+        :param file (object) Image location             
         """
         super(AiBcrImageStorageFile, self).__init__()
 
@@ -71,24 +70,24 @@ class AiBcrImageStorageFile(AiBcrImage):
             self.file = file
 
     @property
-    def file(self) -> StorageFileLocation:
+    def file(self) -> object:
         """Gets the file of this AiBcrImageStorageFile.
 
         Image location             
 
         :return: The file of this AiBcrImageStorageFile.
-        :rtype: StorageFileLocation
+        :rtype: object
         """
         return self._file
 
     @file.setter
-    def file(self, file: StorageFileLocation):
+    def file(self, file: object):
         """Sets the file of this AiBcrImageStorageFile.
 
         Image location             
 
         :param file: The file of this AiBcrImageStorageFile.
-        :type: StorageFileLocation
+        :type: object
         """
         self._file = file
 

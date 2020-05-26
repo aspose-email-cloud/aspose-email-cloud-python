@@ -35,7 +35,7 @@ class GetDiscUsageRequest(BaseRequest):
     Request model for get_disc_usage operation.
     Initializes a new instance.
 
-    :param storage_name (str) Storage name
+    :param storage_name (str) 
     """
 
     def __init__(self, storage_name: str = None):
@@ -43,7 +43,7 @@ class GetDiscUsageRequest(BaseRequest):
         Request model for get_disc_usage operation.
         Initializes a new instance.
 
-        :param storage_name (str) Storage name
+        :param storage_name (str) 
         """
 
         BaseRequest.__init__(self)

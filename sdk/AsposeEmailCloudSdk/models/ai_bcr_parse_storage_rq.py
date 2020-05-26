@@ -33,7 +33,6 @@ from datetime import datetime
 from AsposeEmailCloudSdk.models.ai_bcr_image_storage_file import AiBcrImageStorageFile
 from AsposeEmailCloudSdk.models.ai_bcr_options import AiBcrOptions
 from AsposeEmailCloudSdk.models.ai_bcr_storage_image_rq import AiBcrStorageImageRq
-from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
 class AiBcrParseStorageRq(AiBcrStorageImageRq):
@@ -50,7 +49,7 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
     swagger_types = {
         'options': 'AiBcrOptions',
         'images': 'list[AiBcrImageStorageFile]',
-        'out_folder': 'StorageFolderLocation'
+        'out_folder': 'object'
     }
 
     attribute_map = {
@@ -59,12 +58,12 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
         'out_folder': 'outFolder'
     }
 
-    def __init__(self, options: AiBcrOptions = None, images: List[AiBcrImageStorageFile] = None, out_folder: StorageFolderLocation = None):
+    def __init__(self, options: AiBcrOptions = None, images: List[AiBcrImageStorageFile] = None, out_folder: object = None):
         """
         Parse business card images from Storage request             
         :param options (AiBcrOptions) Recognition options             
         :param images (List[AiBcrImageStorageFile]) List of images with business cards             
-        :param out_folder (StorageFolderLocation) Parse output folder location on storage             
+        :param out_folder (object) Parse output folder location on storage             
         """
         super(AiBcrParseStorageRq, self).__init__()
 
@@ -78,24 +77,24 @@ class AiBcrParseStorageRq(AiBcrStorageImageRq):
             self.out_folder = out_folder
 
     @property
-    def out_folder(self) -> StorageFolderLocation:
+    def out_folder(self) -> object:
         """Gets the out_folder of this AiBcrParseStorageRq.
 
         Parse output folder location on storage             
 
         :return: The out_folder of this AiBcrParseStorageRq.
-        :rtype: StorageFolderLocation
+        :rtype: object
         """
         return self._out_folder
 
     @out_folder.setter
-    def out_folder(self, out_folder: StorageFolderLocation):
+    def out_folder(self, out_folder: object):
         """Sets the out_folder of this AiBcrParseStorageRq.
 
         Parse output folder location on storage             
 
         :param out_folder: The out_folder of this AiBcrParseStorageRq.
-        :type: StorageFolderLocation
+        :type: object
         """
         if out_folder is None:
             raise ValueError("Invalid value for `out_folder`, must not be `None`")

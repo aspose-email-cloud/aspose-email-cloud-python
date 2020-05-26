@@ -35,9 +35,9 @@ class DownloadFileRequest(BaseRequest):
     Request model for download_file operation.
     Initializes a new instance.
 
-    :param path (str) File path e.g. '/folder/file.ext'
-    :param storage_name (str) Storage name
-    :param version_id (str) File version ID to download
+    :param path (str) 
+    :param storage_name (str) 
+    :param version_id (str) 
     """
 
     def __init__(self, path: str, storage_name: str = None, version_id: str = None):
@@ -45,9 +45,9 @@ class DownloadFileRequest(BaseRequest):
         Request model for download_file operation.
         Initializes a new instance.
 
-        :param path (str) File path e.g. '/folder/file.ext'
-        :param storage_name (str) Storage name
-        :param version_id (str) File version ID to download
+        :param path (str) 
+        :param storage_name (str) 
+        :param version_id (str) 
         """
 
         BaseRequest.__init__(self)

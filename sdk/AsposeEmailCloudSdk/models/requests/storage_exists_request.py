@@ -35,7 +35,7 @@ class StorageExistsRequest(BaseRequest):
     Request model for storage_exists operation.
     Initializes a new instance.
 
-    :param storage_name (str) Storage name
+    :param storage_name (str) 
     """
 
     def __init__(self, storage_name: str):
@@ -43,7 +43,7 @@ class StorageExistsRequest(BaseRequest):
         Request model for storage_exists operation.
         Initializes a new instance.
 
-        :param storage_name (str) Storage name
+        :param storage_name (str) 
         """
 
         BaseRequest.__init__(self)
