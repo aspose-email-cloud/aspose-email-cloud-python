@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="convert_email_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -36,7 +36,7 @@ class ConvertEmailRequest(BaseRequest):
     Initializes a new instance.
 
     :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    :param file (str) File to upload
+    :param file (str) File to convert
     """
 
     def __init__(self, format: str, file: str):
@@ -45,7 +45,7 @@ class ConvertEmailRequest(BaseRequest):
         Initializes a new instance.
 
         :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-        :param file (str) File to upload
+        :param file (str) File to convert
         """
 
         BaseRequest.__init__(self)
@@ -87,11 +87,11 @@ class ConvertEmailRequest(BaseRequest):
 
         # HTTP header `Accept`
         header_params['Accept'] = self._select_header_accept(
-            ['application/json'])
+            ['multipart/form-data'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self._select_header_content_type(
-            ['application/json'])
+            ['multipart/form-data'])
 
         # Authentication setting
         auth_settings = ['JWT']

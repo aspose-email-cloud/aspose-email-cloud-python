@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="download_file_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,9 +35,9 @@ class DownloadFileRequest(BaseRequest):
     Request model for download_file operation.
     Initializes a new instance.
 
-    :param path (str) File path e.g. '/folder/file.ext'
-    :param storage_name (str) Storage name
-    :param version_id (str) File version ID to download
+    :param path (str) 
+    :param storage_name (str) 
+    :param version_id (str) 
     """
 
     def __init__(self, path: str, storage_name: str = None, version_id: str = None):
@@ -45,9 +45,9 @@ class DownloadFileRequest(BaseRequest):
         Request model for download_file operation.
         Initializes a new instance.
 
-        :param path (str) File path e.g. '/folder/file.ext'
-        :param storage_name (str) Storage name
-        :param version_id (str) File version ID to download
+        :param path (str) 
+        :param storage_name (str) 
+        :param version_id (str) 
         """
 
         BaseRequest.__init__(self)

@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="AccountBaseRequest.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -59,8 +59,8 @@ class AccountBaseRequest(object):
     def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None):
         """
         EmailClient accounts request             
-        :param first_account (str) First account storage file name for receiving emails (or universal one)             
-        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param first_account (str) First account storage file name             
+        :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         """
 
@@ -79,7 +79,7 @@ class AccountBaseRequest(object):
     def first_account(self) -> str:
         """Gets the first_account of this AccountBaseRequest.
 
-        First account storage file name for receiving emails (or universal one)             
+        First account storage file name             
 
         :return: The first_account of this AccountBaseRequest.
         :rtype: str
@@ -90,7 +90,7 @@ class AccountBaseRequest(object):
     def first_account(self, first_account: str):
         """Sets the first_account of this AccountBaseRequest.
 
-        First account storage file name for receiving emails (or universal one)             
+        First account storage file name             
 
         :param first_account: The first_account of this AccountBaseRequest.
         :type: str
@@ -105,7 +105,7 @@ class AccountBaseRequest(object):
     def second_account(self) -> str:
         """Gets the second_account of this AccountBaseRequest.
 
-        Second account storage file name for sending emails (ignored if first is universal)             
+        Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
 
         :return: The second_account of this AccountBaseRequest.
         :rtype: str
@@ -116,7 +116,7 @@ class AccountBaseRequest(object):
     def second_account(self, second_account: str):
         """Sets the second_account of this AccountBaseRequest.
 
-        Second account storage file name for sending emails (ignored if first is universal)             
+        Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
 
         :param second_account: The second_account of this AccountBaseRequest.
         :type: str

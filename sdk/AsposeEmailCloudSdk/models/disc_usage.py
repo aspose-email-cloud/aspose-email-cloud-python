@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="DiscUsage.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class DiscUsage(object):
-    """Class for disc space information.
+    """
     """
 
     """
@@ -54,9 +54,9 @@ class DiscUsage(object):
 
     def __init__(self, used_size: int = None, total_size: int = None):
         """
-        Class for disc space information.
-        :param used_size (int) Application used disc space.
-        :param total_size (int) Total disc space.
+        
+        :param used_size (int) 
+        :param total_size (int) 
         """
 
         self._used_size = None
@@ -71,7 +71,6 @@ class DiscUsage(object):
     def used_size(self) -> int:
         """Gets the used_size of this DiscUsage.
 
-        Application used disc space.
 
         :return: The used_size of this DiscUsage.
         :rtype: int
@@ -82,7 +81,6 @@ class DiscUsage(object):
     def used_size(self, used_size: int):
         """Sets the used_size of this DiscUsage.
 
-        Application used disc space.
 
         :param used_size: The used_size of this DiscUsage.
         :type: int
@@ -95,7 +93,6 @@ class DiscUsage(object):
     def total_size(self) -> int:
         """Gets the total_size of this DiscUsage.
 
-        Total disc space.
 
         :return: The total_size of this DiscUsage.
         :rtype: int
@@ -106,7 +103,6 @@ class DiscUsage(object):
     def total_size(self, total_size: int):
         """Sets the total_size of this DiscUsage.
 
-        Total disc space.
 
         :param total_size: The total_size of this DiscUsage.
         :type: int

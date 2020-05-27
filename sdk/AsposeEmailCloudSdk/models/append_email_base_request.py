@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="AppendEmailBaseRequest.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -31,7 +31,6 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
-from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
@@ -52,7 +51,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
         'storage_folder': 'StorageFolderLocation',
         'folder': 'str',
         'mark_as_sent': 'bool',
-        'email_file': 'StorageFileLocation'
+        'email_file': 'object'
     }
 
     attribute_map = {
@@ -64,15 +63,15 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
         'email_file': 'emailFile'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, email_file: StorageFileLocation = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, email_file: object = None):
         """
         Append email from storage file to account request             
-        :param first_account (str) First account storage file name for receiving emails (or universal one)             
-        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param first_account (str) First account storage file name             
+        :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param folder (str) Email account folder to store a message             
         :param mark_as_sent (bool) Mark message as sent             
-        :param email_file (StorageFileLocation) Email document file location in storage             
+        :param email_file (object) Email document file location in storage             
         """
         super(AppendEmailBaseRequest, self).__init__()
 
@@ -92,24 +91,24 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
             self.email_file = email_file
 
     @property
-    def email_file(self) -> StorageFileLocation:
+    def email_file(self) -> object:
         """Gets the email_file of this AppendEmailBaseRequest.
 
         Email document file location in storage             
 
         :return: The email_file of this AppendEmailBaseRequest.
-        :rtype: StorageFileLocation
+        :rtype: object
         """
         return self._email_file
 
     @email_file.setter
-    def email_file(self, email_file: StorageFileLocation):
+    def email_file(self, email_file: object):
         """Sets the email_file of this AppendEmailBaseRequest.
 
         Email document file location in storage             
 
         :param email_file: The email_file of this AppendEmailBaseRequest.
-        :type: StorageFileLocation
+        :type: object
         """
         if email_file is None:
             raise ValueError("Invalid value for `email_file`, must not be `None`")

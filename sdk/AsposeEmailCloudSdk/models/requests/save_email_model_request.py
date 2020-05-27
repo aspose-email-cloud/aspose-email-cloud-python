@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="save_email_model_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -36,7 +36,7 @@ class SaveEmailModelRequest(BaseRequest):
     Initializes a new instance.
 
     :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-    :param name (str) iCalendar file name in storage.
+    :param name (str) Email document file name in storage.
     :param rq (StorageModelRqOfEmailDto) Calendar properties update request.
     """
 
@@ -46,7 +46,7 @@ class SaveEmailModelRequest(BaseRequest):
         Initializes a new instance.
 
         :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
-        :param name (str) iCalendar file name in storage.
+        :param name (str) Email document file name in storage.
         :param rq (StorageModelRqOfEmailDto) Calendar properties update request.
         """
 

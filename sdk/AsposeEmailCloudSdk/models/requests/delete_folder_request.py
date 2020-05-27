@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="delete_folder_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,9 +35,9 @@ class DeleteFolderRequest(BaseRequest):
     Request model for delete_folder operation.
     Initializes a new instance.
 
-    :param path (str) Folder path e.g. '/folder'
-    :param storage_name (str) Storage name
-    :param recursive (bool) Enable to delete folders, subfolders and files
+    :param path (str) 
+    :param storage_name (str) 
+    :param recursive (bool) 
     """
 
     def __init__(self, path: str, storage_name: str = None, recursive: bool = None):
@@ -45,9 +45,9 @@ class DeleteFolderRequest(BaseRequest):
         Request model for delete_folder operation.
         Initializes a new instance.
 
-        :param path (str) Folder path e.g. '/folder'
-        :param storage_name (str) Storage name
-        :param recursive (bool) Enable to delete folders, subfolders and files
+        :param path (str) 
+        :param storage_name (str) 
+        :param recursive (bool) 
         """
 
         BaseRequest.__init__(self)

@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="email_api.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -543,6 +543,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'ValueResponse')
 
+    def convert_calendar(self, request: requests.ConvertCalendarRequest)  -> str:
+        """Converts calendar document to specified format and returns as file             
+
+
+        :param request ConvertCalendarRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_calendar_async(self, request: requests.ConvertCalendarRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertCalendarRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
     def convert_calendar_model_to_alternate(self, request: requests.ConvertCalendarModelToAlternateRequest)  -> AlternateView:
         """Convert iCalendar to AlternateView             
 
@@ -562,6 +582,66 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'AlternateView')
+
+    def convert_calendar_model_to_file(self, request: requests.ConvertCalendarModelToFileRequest)  -> str:
+        """Converts calendar model to specified format and returns as file             
+
+
+        :param request ConvertCalendarModelToFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_calendar_model_to_file_async(self, request: requests.ConvertCalendarModelToFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar model to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertCalendarModelToFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
+    def convert_contact(self, request: requests.ConvertContactRequest)  -> str:
+        """Converts contact document to specified format and returns as file             
+
+
+        :param request ConvertContactRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_contact_async(self, request: requests.ConvertContactRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts contact document to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertContactRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
+    def convert_contact_model_to_file(self, request: requests.ConvertContactModelToFileRequest)  -> str:
+        """Converts contact model to specified format and returns as file             
+
+
+        :param request ConvertContactModelToFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_contact_model_to_file_async(self, request: requests.ConvertContactModelToFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts contact model to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertContactModelToFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
 
     def convert_email(self, request: requests.ConvertEmailRequest)  -> str:
         """Converts email document to specified format and returns as file             
@@ -583,8 +663,28 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'file')
 
+    def convert_email_model_to_file(self, request: requests.ConvertEmailModelToFileRequest)  -> str:
+        """Converts Email model to specified format and returns as file             
+
+
+        :param request ConvertEmailModelToFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'file')
+
+    def convert_email_model_to_file_async(self, request: requests.ConvertEmailModelToFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts Email model to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertEmailModelToFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'file')
+
     def copy_file(self, request: requests.CopyFileRequest) :
-        """Copy file
+        """copy_file
 
 
         :param request CopyFileRequest object with parameters
@@ -594,7 +694,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def copy_file_async(self, request: requests.CopyFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Copy file
+        """copy_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request CopyFileRequest object with parameters
@@ -604,7 +704,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def copy_folder(self, request: requests.CopyFolderRequest) :
-        """Copy folder
+        """copy_folder
 
 
         :param request CopyFolderRequest object with parameters
@@ -614,7 +714,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def copy_folder_async(self, request: requests.CopyFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Copy folder
+        """copy_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request CopyFolderRequest object with parameters
@@ -704,7 +804,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def create_folder(self, request: requests.CreateFolderRequest) :
-        """Create the folder
+        """create_folder
 
 
         :param request CreateFolderRequest object with parameters
@@ -714,7 +814,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def create_folder_async(self, request: requests.CreateFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Create the folder
+        """create_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request CreateFolderRequest object with parameters
@@ -823,8 +923,28 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'DELETE', None)
 
+    def delete_email_thread(self, request: requests.DeleteEmailThreadRequest) :
+        """Delete thread by id. All messages from thread will also be deleted             
+
+
+        :param request DeleteEmailThreadRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'DELETE', None)
+
+    def delete_email_thread_async(self, request: requests.DeleteEmailThreadRequest) -> multiprocessing.pool.AsyncResult:
+        """Delete thread by id. All messages from thread will also be deleted             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request DeleteEmailThreadRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'DELETE', None)
+
     def delete_file(self, request: requests.DeleteFileRequest) :
-        """Delete file
+        """delete_file
 
 
         :param request DeleteFileRequest object with parameters
@@ -834,7 +954,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'DELETE', None)
 
     def delete_file_async(self, request: requests.DeleteFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Delete file
+        """delete_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request DeleteFileRequest object with parameters
@@ -844,7 +964,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'DELETE', None)
 
     def delete_folder(self, request: requests.DeleteFolderRequest) :
-        """Delete folder
+        """delete_folder
 
 
         :param request DeleteFolderRequest object with parameters
@@ -854,7 +974,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'DELETE', None)
 
     def delete_folder_async(self, request: requests.DeleteFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Delete folder
+        """delete_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request DeleteFolderRequest object with parameters
@@ -964,7 +1084,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'POST', 'EmailAccountConfigList')
 
     def download_file(self, request: requests.DownloadFileRequest)  -> str:
-        """Download file
+        """download_file
 
 
         :param request DownloadFileRequest object with parameters
@@ -974,7 +1094,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'file')
 
     def download_file_async(self, request: requests.DownloadFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Download file
+        """download_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request DownloadFileRequest object with parameters
@@ -1023,6 +1143,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailDto')
 
+    def fetch_email_thread_messages(self, request: requests.FetchEmailThreadMessagesRequest)  -> ListResponseOfEmailDto:
+        """Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+
+        :param request FetchEmailThreadMessagesRequest object with parameters
+        :return: ListResponseOfEmailDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'ListResponseOfEmailDto')
+
+    def fetch_email_thread_messages_async(self, request: requests.FetchEmailThreadMessagesRequest) -> multiprocessing.pool.AsyncResult:
+        """Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request FetchEmailThreadMessagesRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ListResponseOfEmailDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'ListResponseOfEmailDto')
+
     def get_calendar(self, request: requests.GetCalendarRequest)  -> HierarchicalObject:
         """Get calendar file properties             
 
@@ -1043,6 +1183,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
 
+    def get_calendar_as_file(self, request: requests.GetCalendarAsFileRequest)  -> str:
+        """Converts calendar document from storage to specified format and returns as file             
+
+
+        :param request GetCalendarAsFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_calendar_as_file_async(self, request: requests.GetCalendarAsFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document from storage to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetCalendarAsFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
     def get_calendar_attachment(self, request: requests.GetCalendarAttachmentRequest)  -> str:
         """Get iCalendar document attachment by name             
 
@@ -1062,6 +1222,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
+
+    def get_calendar_file_as_model(self, request: requests.GetCalendarFileAsModelRequest)  -> CalendarDto:
+        """Converts calendar document to a model representation             
+
+
+        :param request GetCalendarFileAsModelRequest object with parameters
+        :return: CalendarDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'CalendarDto')
+
+    def get_calendar_file_as_model_async(self, request: requests.GetCalendarFileAsModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document to a model representation             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetCalendarFileAsModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns CalendarDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'CalendarDto')
 
     def get_calendar_list(self, request: requests.GetCalendarListRequest)  -> ListResponseOfHierarchicalObjectResponse:
         """Get iCalendar files list in folder on storage             
@@ -1143,6 +1323,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'CalendarDtoList')
 
+    def get_contact_as_file(self, request: requests.GetContactAsFileRequest)  -> str:
+        """Converts calendar document from storage to specified format and returns as file             
+
+
+        :param request GetContactAsFileRequest object with parameters
+        :return: str
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'file')
+
+    def get_contact_as_file_async(self, request: requests.GetContactAsFileRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts calendar document from storage to specified format and returns as file             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetContactAsFileRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns file)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'file')
+
     def get_contact_attachment(self, request: requests.GetContactAttachmentRequest)  -> str:
         """Get attachment file by name             
 
@@ -1162,6 +1362,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'file')
+
+    def get_contact_file_as_model(self, request: requests.GetContactFileAsModelRequest)  -> ContactDto:
+        """Converts contact document to a model representation             
+
+
+        :param request GetContactFileAsModelRequest object with parameters
+        :return: ContactDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'ContactDto')
+
+    def get_contact_file_as_model_async(self, request: requests.GetContactFileAsModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts contact document to a model representation             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetContactFileAsModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns ContactDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'ContactDto')
 
     def get_contact_list(self, request: requests.GetContactListRequest)  -> ListResponseOfHierarchicalObjectResponse:
         """Get contact list from storage folder             
@@ -1244,7 +1464,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'HierarchicalObject')
 
     def get_disc_usage(self, request: requests.GetDiscUsageRequest)  -> DiscUsage:
-        """Get disc usage
+        """get_disc_usage
 
 
         :param request GetDiscUsageRequest object with parameters
@@ -1254,7 +1474,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'DiscUsage')
 
     def get_disc_usage_async(self, request: requests.GetDiscUsageRequest) -> multiprocessing.pool.AsyncResult:
-        """Get disc usage
+        """get_disc_usage
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetDiscUsageRequest object with parameters
@@ -1363,6 +1583,26 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'EmailClientMultiAccount')
 
+    def get_email_file_as_model(self, request: requests.GetEmailFileAsModelRequest)  -> EmailDto:
+        """Converts email document to a model representation             
+
+
+        :param request GetEmailFileAsModelRequest object with parameters
+        :return: EmailDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'EmailDto')
+
+    def get_email_file_as_model_async(self, request: requests.GetEmailFileAsModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Converts email document to a model representation             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request GetEmailFileAsModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'EmailDto')
+
     def get_email_model(self, request: requests.GetEmailModelRequest)  -> EmailDto:
         """Get email document.             
 
@@ -1424,7 +1664,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'EmailPropertyResponse')
 
     def get_file_versions(self, request: requests.GetFileVersionsRequest)  -> FileVersions:
-        """Get file versions
+        """get_file_versions
 
 
         :param request GetFileVersionsRequest object with parameters
@@ -1434,7 +1674,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'FileVersions')
 
     def get_file_versions_async(self, request: requests.GetFileVersionsRequest) -> multiprocessing.pool.AsyncResult:
-        """Get file versions
+        """get_file_versions
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetFileVersionsRequest object with parameters
@@ -1444,7 +1684,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'FileVersions')
 
     def get_files_list(self, request: requests.GetFilesListRequest)  -> FilesList:
-        """Get all files and folders within a folder
+        """get_files_list
 
 
         :param request GetFilesListRequest object with parameters
@@ -1454,7 +1694,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'FilesList')
 
     def get_files_list_async(self, request: requests.GetFilesListRequest) -> multiprocessing.pool.AsyncResult:
-        """Get all files and folders within a folder
+        """get_files_list
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetFilesListRequest object with parameters
@@ -1627,8 +1867,68 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfEmailDto')
 
+    def list_email_threads(self, request: requests.ListEmailThreadsRequest)  -> EmailThreadList:
+        """Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+
+        :param request ListEmailThreadsRequest object with parameters
+        :return: EmailThreadList
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'GET', 'EmailThreadList')
+
+    def list_email_threads_async(self, request: requests.ListEmailThreadsRequest) -> multiprocessing.pool.AsyncResult:
+        """Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ListEmailThreadsRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns EmailThreadList)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'GET', 'EmailThreadList')
+
+    def move_email_message(self, request: requests.MoveEmailMessageRequest) :
+        """Move message to another folder             
+
+
+        :param request MoveEmailMessageRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def move_email_message_async(self, request: requests.MoveEmailMessageRequest) -> multiprocessing.pool.AsyncResult:
+        """Move message to another folder             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request MoveEmailMessageRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
+    def move_email_thread(self, request: requests.MoveEmailThreadRequest) :
+        """Move thread to another folder             
+
+
+        :param request MoveEmailThreadRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def move_email_thread_async(self, request: requests.MoveEmailThreadRequest) -> multiprocessing.pool.AsyncResult:
+        """Move thread to another folder             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request MoveEmailThreadRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
     def move_file(self, request: requests.MoveFileRequest) :
-        """Move file
+        """move_file
 
 
         :param request MoveFileRequest object with parameters
@@ -1638,7 +1938,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def move_file_async(self, request: requests.MoveFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Move file
+        """move_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request MoveFileRequest object with parameters
@@ -1648,7 +1948,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def move_folder(self, request: requests.MoveFolderRequest) :
-        """Move folder
+        """move_folder
 
 
         :param request MoveFolderRequest object with parameters
@@ -1658,7 +1958,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def move_folder_async(self, request: requests.MoveFolderRequest) -> multiprocessing.pool.AsyncResult:
-        """Move folder
+        """move_folder
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request MoveFolderRequest object with parameters
@@ -1668,7 +1968,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def object_exists(self, request: requests.ObjectExistsRequest)  -> ObjectExist:
-        """Check if file or folder exists
+        """object_exists
 
 
         :param request ObjectExistsRequest object with parameters
@@ -1678,7 +1978,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'ObjectExist')
 
     def object_exists_async(self, request: requests.ObjectExistsRequest) -> multiprocessing.pool.AsyncResult:
-        """Check if file or folder exists
+        """object_exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request ObjectExistsRequest object with parameters
@@ -1927,8 +2227,28 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'POST', None)
 
+    def set_email_thread_read_flag(self, request: requests.SetEmailThreadReadFlagRequest) :
+        """Mark all messages in thread as read or unread             
+
+
+        :param request SetEmailThreadReadFlagRequest object with parameters
+        :return: None
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', None)
+
+    def set_email_thread_read_flag_async(self, request: requests.SetEmailThreadReadFlagRequest) -> multiprocessing.pool.AsyncResult:
+        """Mark all messages in thread as read or unread             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request SetEmailThreadReadFlagRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns None)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', None)
+
     def storage_exists(self, request: requests.StorageExistsRequest)  -> StorageExist:
-        """Check if storage exists
+        """storage_exists
 
 
         :param request StorageExistsRequest object with parameters
@@ -1938,7 +2258,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'StorageExist')
 
     def storage_exists_async(self, request: requests.StorageExistsRequest) -> multiprocessing.pool.AsyncResult:
-        """Check if storage exists
+        """storage_exists
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request StorageExistsRequest object with parameters
@@ -2008,7 +2328,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def upload_file(self, request: requests.UploadFileRequest)  -> FilesUploadResult:
-        """Upload file
+        """upload_file
 
 
         :param request UploadFileRequest object with parameters
@@ -2018,7 +2338,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', 'FilesUploadResult')
 
     def upload_file_async(self, request: requests.UploadFileRequest) -> multiprocessing.pool.AsyncResult:
-        """Upload file
+        """upload_file
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request UploadFileRequest object with parameters

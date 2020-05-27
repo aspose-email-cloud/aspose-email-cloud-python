@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="upload_file_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,9 +35,9 @@ class UploadFileRequest(BaseRequest):
     Request model for upload_file operation.
     Initializes a new instance.
 
-    :param path (str) Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+    :param path (str) 
     :param file (str) File to upload
-    :param storage_name (str) Storage name
+    :param storage_name (str) 
     """
 
     def __init__(self, path: str, file: str, storage_name: str = None):
@@ -45,9 +45,9 @@ class UploadFileRequest(BaseRequest):
         Request model for upload_file operation.
         Initializes a new instance.
 
-        :param path (str) Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+        :param path (str) 
         :param file (str) File to upload
-        :param storage_name (str) Storage name
+        :param storage_name (str) 
         """
 
         BaseRequest.__init__(self)

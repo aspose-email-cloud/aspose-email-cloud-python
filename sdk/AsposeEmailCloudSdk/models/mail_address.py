@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="MailAddress.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -45,26 +45,30 @@ class MailAddress(object):
     swagger_types = {
         'display_name': 'str',
         'address': 'str',
-        'participation_status': 'str'
+        'participation_status': 'str',
+        'original_address_string': 'str'
     }
 
     attribute_map = {
         'display_name': 'displayName',
         'address': 'address',
-        'participation_status': 'participationStatus'
+        'participation_status': 'participationStatus',
+        'original_address_string': 'originalAddressString'
     }
 
-    def __init__(self, display_name: str = None, address: str = None, participation_status: str = None):
+    def __init__(self, display_name: str = None, address: str = None, participation_status: str = None, original_address_string: str = None):
         """
         Represents the address of a message.
         :param display_name (str) Display name             
         :param address (str) Address             
         :param participation_status (str) Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        :param original_address_string (str) The original e-mail address string             
         """
 
         self._display_name = None
         self._address = None
         self._participation_status = None
+        self._original_address_string = None
 
         if display_name is not None:
             self.display_name = display_name
@@ -72,6 +76,8 @@ class MailAddress(object):
             self.address = address
         if participation_status is not None:
             self.participation_status = participation_status
+        if original_address_string is not None:
+            self.original_address_string = original_address_string
 
     @property
     def display_name(self) -> str:
@@ -140,6 +146,28 @@ class MailAddress(object):
         if participation_status is None:
             raise ValueError("Invalid value for `participation_status`, must not be `None`")
         self._participation_status = participation_status
+
+    @property
+    def original_address_string(self) -> str:
+        """Gets the original_address_string of this MailAddress.
+
+        The original e-mail address string             
+
+        :return: The original_address_string of this MailAddress.
+        :rtype: str
+        """
+        return self._original_address_string
+
+    @original_address_string.setter
+    def original_address_string(self, original_address_string: str):
+        """Sets the original_address_string of this MailAddress.
+
+        The original e-mail address string             
+
+        :param original_address_string: The original_address_string of this MailAddress.
+        :type: str
+        """
+        self._original_address_string = original_address_string
 
     def to_dict(self):
         """Returns the model properties as a dict"""

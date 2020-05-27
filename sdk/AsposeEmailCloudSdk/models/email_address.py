@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="EmailAddress.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -49,7 +49,8 @@ class EmailAddress(object):
         'display_name': 'str',
         'preferred': 'bool',
         'routing_type': 'str',
-        'address': 'str'
+        'address': 'str',
+        'original_address_string': 'str'
     }
 
     attribute_map = {
@@ -57,10 +58,11 @@ class EmailAddress(object):
         'display_name': 'displayName',
         'preferred': 'preferred',
         'routing_type': 'routingType',
-        'address': 'address'
+        'address': 'address',
+        'original_address_string': 'originalAddressString'
     }
 
-    def __init__(self, category: EnumWithCustomOfEmailAddressCategory = None, display_name: str = None, preferred: bool = None, routing_type: str = None, address: str = None):
+    def __init__(self, category: EnumWithCustomOfEmailAddressCategory = None, display_name: str = None, preferred: bool = None, routing_type: str = None, address: str = None, original_address_string: str = None):
         """
         Email address.             
         :param category (EnumWithCustomOfEmailAddressCategory) Address category.             
@@ -68,6 +70,7 @@ class EmailAddress(object):
         :param preferred (bool) Defines whether email address is preferred.             
         :param routing_type (str) A routing type for an email.             
         :param address (str) Email address.             
+        :param original_address_string (str) The original e-mail address string             
         """
 
         self._category = None
@@ -75,6 +78,7 @@ class EmailAddress(object):
         self._preferred = None
         self._routing_type = None
         self._address = None
+        self._original_address_string = None
 
         if category is not None:
             self.category = category
@@ -86,6 +90,8 @@ class EmailAddress(object):
             self.routing_type = routing_type
         if address is not None:
             self.address = address
+        if original_address_string is not None:
+            self.original_address_string = original_address_string
 
     @property
     def category(self) -> EnumWithCustomOfEmailAddressCategory:
@@ -198,6 +204,28 @@ class EmailAddress(object):
         :type: str
         """
         self._address = address
+
+    @property
+    def original_address_string(self) -> str:
+        """Gets the original_address_string of this EmailAddress.
+
+        The original e-mail address string             
+
+        :return: The original_address_string of this EmailAddress.
+        :rtype: str
+        """
+        return self._original_address_string
+
+    @original_address_string.setter
+    def original_address_string(self, original_address_string: str):
+        """Sets the original_address_string of this EmailAddress.
+
+        The original e-mail address string             
+
+        :param original_address_string: The original_address_string of this EmailAddress.
+        :type: str
+        """
+        self._original_address_string = original_address_string
 
     def to_dict(self):
         """Returns the model properties as a dict"""

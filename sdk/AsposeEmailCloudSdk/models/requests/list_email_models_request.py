@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="list_email_models_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -36,23 +36,23 @@ class ListEmailModelsRequest(BaseRequest):
     Initializes a new instance.
 
     :param folder (str) A folder in email account
-    :param query_string (str) A MailQuery search string
     :param first_account (str) Email account
-    :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    :param query_string (str) A MailQuery search string
+    :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
     :param recursive (bool) Specifies that should message be searched in subfolders recursively
     """
 
-    def __init__(self, folder: str, query_string: str, first_account: str, second_account: str = None, storage: str = None, storage_folder: str = None, recursive: bool = None):
+    def __init__(self, folder: str, first_account: str, query_string: str = None, second_account: str = None, storage: str = None, storage_folder: str = None, recursive: bool = None):
         """
         Request model for list_email_models operation.
         Initializes a new instance.
 
         :param folder (str) A folder in email account
-        :param query_string (str) A MailQuery search string
         :param first_account (str) Email account
-        :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+        :param query_string (str) A MailQuery search string
+        :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
         :param recursive (bool) Specifies that should message be searched in subfolders recursively
@@ -60,8 +60,8 @@ class ListEmailModelsRequest(BaseRequest):
 
         BaseRequest.__init__(self)
         self.folder = folder
-        self.query_string = query_string
         self.first_account = first_account
+        self.query_string = query_string
         self.second_account = second_account
         self.storage = storage
         self.storage_folder = storage_folder
@@ -79,9 +79,6 @@ class ListEmailModelsRequest(BaseRequest):
         # verify the required parameter 'folder' is set
         if self.folder is None:
             raise ValueError("Missing the required parameter `folder` when calling `list_email_models`")
-        # verify the required parameter 'query_string' is set
-        if self.query_string is None:
-            raise ValueError("Missing the required parameter `query_string` when calling `list_email_models`")
         # verify the required parameter 'first_account' is set
         if self.first_account is None:
             raise ValueError("Missing the required parameter `first_account` when calling `list_email_models`")
@@ -97,18 +94,18 @@ class ListEmailModelsRequest(BaseRequest):
         else:
             if self.folder is not None:
                 query_params.append((self._lowercase_first_letter('folder'), self.folder))
-        path_parameter = '{' + self._lowercase_first_letter('queryString') + '}'
-        if path_parameter in path:
-            path = path.replace(path_parameter, self.query_string if self.query_string is not None else '')
-        else:
-            if self.query_string is not None:
-                query_params.append((self._lowercase_first_letter('queryString'), self.query_string))
         path_parameter = '{' + self._lowercase_first_letter('firstAccount') + '}'
         if path_parameter in path:
             path = path.replace(path_parameter, self.first_account if self.first_account is not None else '')
         else:
             if self.first_account is not None:
                 query_params.append((self._lowercase_first_letter('firstAccount'), self.first_account))
+        path_parameter = '{' + self._lowercase_first_letter('queryString') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, self.query_string if self.query_string is not None else '')
+        else:
+            if self.query_string is not None:
+                query_params.append((self._lowercase_first_letter('queryString'), self.query_string))
         path_parameter = '{' + self._lowercase_first_letter('secondAccount') + '}'
         if path_parameter in path:
             path = path.replace(path_parameter, self.second_account if self.second_account is not None else '')

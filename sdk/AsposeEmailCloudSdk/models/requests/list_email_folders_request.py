@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="list_email_folders_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -36,7 +36,7 @@ class ListEmailFoldersRequest(BaseRequest):
     Initializes a new instance.
 
     :param first_account (str) Email account
-    :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+    :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
     :param storage (str) Storage name where account file(s) located
     :param storage_folder (str) Folder in storage where account file(s) located
     :param parent_folder (str) Folder in which subfolders should be listed
@@ -48,7 +48,7 @@ class ListEmailFoldersRequest(BaseRequest):
         Initializes a new instance.
 
         :param first_account (str) Email account
-        :param second_account (str) Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)             
+        :param second_account (str) Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)             
         :param storage (str) Storage name where account file(s) located
         :param storage_folder (str) Folder in storage where account file(s) located
         :param parent_folder (str) Folder in which subfolders should be listed

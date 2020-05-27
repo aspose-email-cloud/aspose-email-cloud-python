@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="EmailClientAccount.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -31,6 +31,7 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.email_client_account_credentials import EmailClientAccountCredentials
+from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 
 
 class EmailClientAccount(object):
@@ -49,7 +50,8 @@ class EmailClientAccount(object):
         'port': 'int',
         'security_options': 'str',
         'protocol_type': 'str',
-        'credentials': 'EmailClientAccountCredentials'
+        'credentials': 'EmailClientAccountCredentials',
+        'cache_file': 'StorageFileLocation'
     }
 
     attribute_map = {
@@ -57,10 +59,11 @@ class EmailClientAccount(object):
         'port': 'port',
         'security_options': 'securityOptions',
         'protocol_type': 'protocolType',
-        'credentials': 'credentials'
+        'credentials': 'credentials',
+        'cache_file': 'cacheFile'
     }
 
-    def __init__(self, host: str = None, port: int = None, security_options: str = None, protocol_type: str = None, credentials: EmailClientAccountCredentials = None):
+    def __init__(self, host: str = None, port: int = None, security_options: str = None, protocol_type: str = None, credentials: EmailClientAccountCredentials = None, cache_file: StorageFileLocation = None):
         """
         A universal email client account             
         :param host (str) Mail server host name or IP address             
@@ -68,6 +71,7 @@ class EmailClientAccount(object):
         :param security_options (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :param credentials (EmailClientAccountCredentials) Email client account credentials             
+        :param cache_file (StorageFileLocation) File with messages cache. Used to provide extra functions, which are not supported by account             
         """
 
         self._host = None
@@ -75,6 +79,7 @@ class EmailClientAccount(object):
         self._security_options = None
         self._protocol_type = None
         self._credentials = None
+        self._cache_file = None
 
         if host is not None:
             self.host = host
@@ -86,6 +91,8 @@ class EmailClientAccount(object):
             self.protocol_type = protocol_type
         if credentials is not None:
             self.credentials = credentials
+        if cache_file is not None:
+            self.cache_file = cache_file
 
     @property
     def host(self) -> str:
@@ -212,6 +219,28 @@ class EmailClientAccount(object):
         if credentials is None:
             raise ValueError("Invalid value for `credentials`, must not be `None`")
         self._credentials = credentials
+
+    @property
+    def cache_file(self) -> StorageFileLocation:
+        """Gets the cache_file of this EmailClientAccount.
+
+        File with messages cache. Used to provide extra functions, which are not supported by account             
+
+        :return: The cache_file of this EmailClientAccount.
+        :rtype: StorageFileLocation
+        """
+        return self._cache_file
+
+    @cache_file.setter
+    def cache_file(self, cache_file: StorageFileLocation):
+        """Sets the cache_file of this EmailClientAccount.
+
+        File with messages cache. Used to provide extra functions, which are not supported by account             
+
+        :param cache_file: The cache_file of this EmailClientAccount.
+        :type: StorageFileLocation
+        """
+        self._cache_file = cache_file
 
     def to_dict(self):
         """Returns the model properties as a dict"""

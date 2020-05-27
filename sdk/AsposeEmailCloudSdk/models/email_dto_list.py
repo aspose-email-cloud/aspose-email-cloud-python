@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="EmailDtoList.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,7 +35,7 @@ from AsposeEmailCloudSdk.models.storage_model_of_email_dto import StorageModelOf
 
 
 class EmailDtoList(ListResponseOfStorageModelOfEmailDto):
-    """List of email documents             
+    """List of email documents from storage             
     """
 
     """
@@ -55,7 +55,7 @@ class EmailDtoList(ListResponseOfStorageModelOfEmailDto):
 
     def __init__(self, value: List[StorageModelOfEmailDto] = None):
         """
-        List of email documents             
+        List of email documents from storage             
         :param value (List[StorageModelOfEmailDto]) 
         """
         super(EmailDtoList, self).__init__()

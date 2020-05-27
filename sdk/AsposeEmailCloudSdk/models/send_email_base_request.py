@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="SendEmailBaseRequest.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -31,7 +31,6 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
-from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
@@ -50,7 +49,7 @@ class SendEmailBaseRequest(AccountBaseRequest):
         'first_account': 'str',
         'second_account': 'str',
         'storage_folder': 'StorageFolderLocation',
-        'email_file': 'StorageFileLocation'
+        'email_file': 'object'
     }
 
     attribute_map = {
@@ -60,13 +59,13 @@ class SendEmailBaseRequest(AccountBaseRequest):
         'email_file': 'emailFile'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, email_file: StorageFileLocation = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, email_file: object = None):
         """
         Send email file request             
-        :param first_account (str) First account storage file name for receiving emails (or universal one)             
-        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param first_account (str) First account storage file name             
+        :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
-        :param email_file (StorageFileLocation) Email document (*.eml) file location in storage             
+        :param email_file (object) Email document (*.eml) file location in storage             
         """
         super(SendEmailBaseRequest, self).__init__()
 
@@ -82,24 +81,24 @@ class SendEmailBaseRequest(AccountBaseRequest):
             self.email_file = email_file
 
     @property
-    def email_file(self) -> StorageFileLocation:
+    def email_file(self) -> object:
         """Gets the email_file of this SendEmailBaseRequest.
 
         Email document (*.eml) file location in storage             
 
         :return: The email_file of this SendEmailBaseRequest.
-        :rtype: StorageFileLocation
+        :rtype: object
         """
         return self._email_file
 
     @email_file.setter
-    def email_file(self, email_file: StorageFileLocation):
+    def email_file(self, email_file: object):
         """Sets the email_file of this SendEmailBaseRequest.
 
         Email document (*.eml) file location in storage             
 
         :param email_file: The email_file of this SendEmailBaseRequest.
-        :type: StorageFileLocation
+        :type: object
         """
         if email_file is None:
             raise ValueError("Invalid value for `email_file`, must not be `None`")

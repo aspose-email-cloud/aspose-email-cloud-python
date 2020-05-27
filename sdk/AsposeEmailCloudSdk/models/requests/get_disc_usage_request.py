@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="get_disc_usage_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,7 +35,7 @@ class GetDiscUsageRequest(BaseRequest):
     Request model for get_disc_usage operation.
     Initializes a new instance.
 
-    :param storage_name (str) Storage name
+    :param storage_name (str) 
     """
 
     def __init__(self, storage_name: str = None):
@@ -43,7 +43,7 @@ class GetDiscUsageRequest(BaseRequest):
         Request model for get_disc_usage operation.
         Initializes a new instance.
 
-        :param storage_name (str) Storage name
+        :param storage_name (str) 
         """
 
         BaseRequest.__init__(self)

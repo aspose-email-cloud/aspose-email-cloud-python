@@ -1788,6 +1788,75 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="convert_calendar"></a>
+# **convert_calendar**
+> convert_calendar(self, convert_calendar_request)
+
+Converts calendar document to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar(
+    ConvertCalendarRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_async"></a>
+# **convert_calendar_async**
+> convert_calendar_async(self, convert_calendar_request)
+
+Converts calendar document to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_calendar_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_async(
+    ConvertCalendarRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="convert_calendar_model_to_alternate"></a>
 # **convert_calendar_model_to_alternate**
 > convert_calendar_model_to_alternate(self, convert_calendar_model_to_alternate_request)
@@ -1851,6 +1920,219 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="convert_calendar_model_to_file"></a>
+# **convert_calendar_model_to_file**
+> convert_calendar_model_to_file(self, convert_calendar_model_to_file_request)
+
+Converts calendar model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_file(
+    ConvertCalendarModelToFileRequest(
+        format, 
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| Calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_model_to_file_async"></a>
+# **convert_calendar_model_to_file_async**
+> convert_calendar_model_to_file_async(self, convert_calendar_model_to_file_request)
+
+Converts calendar model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_calendar_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_file_async(
+    ConvertCalendarModelToFileRequest(
+        format, 
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| Calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact"></a>
+# **convert_contact**
+> convert_contact(self, convert_contact_request)
+
+Converts contact document to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_contact(
+    ConvertContactRequest(
+        destination_format, 
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format to convert to Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact_async"></a>
+# **convert_contact_async**
+> convert_contact_async(self, convert_contact_request)
+
+Converts contact document to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_contact_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_async(
+    ConvertContactRequest(
+        destination_format, 
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format to convert to Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact_model_to_file"></a>
+# **convert_contact_model_to_file**
+> convert_contact_model_to_file(self, convert_contact_model_to_file_request)
+
+Converts contact model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_model_to_file(
+    ConvertContactModelToFileRequest(
+        destination_format, 
+        contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **contact_dto** | [**ContactDto**](ContactDto.md)| Contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact_model_to_file_async"></a>
+# **convert_contact_model_to_file_async**
+> convert_contact_model_to_file_async(self, convert_contact_model_to_file_request)
+
+Converts contact model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_contact_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_model_to_file_async(
+    ConvertContactModelToFileRequest(
+        destination_format, 
+        contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **contact_dto** | [**ContactDto**](ContactDto.md)| Contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="convert_email"></a>
 # **convert_email**
 > convert_email(self, convert_email_request)
@@ -1859,7 +2141,7 @@ Converts email document to specified format and returns as file
 
 ### Return type
 
-[**file**](file.md)
+**file**
 
 ### Request Parameters
 ```python
@@ -1880,7 +2162,7 @@ EmailApi.convert_email(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **file** | **file**| File to upload | 
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1895,7 +2177,7 @@ Performs operation asynchronously.
 ### Return type
 
 Returns multiprocessing.pool.AsyncResult.
-convert_email_async(request).get() returns [**file**](file.md)
+convert_email_async(request).get() returns **file**
 
 ### Request Parameters
 ```python
@@ -1916,7 +2198,76 @@ EmailApi.convert_email_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **file** | **file**| File to upload | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email_model_to_file"></a>
+# **convert_email_model_to_file**
+> convert_email_model_to_file(self, convert_email_model_to_file_request)
+
+Converts Email model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    email_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_email_model_to_file(
+    ConvertEmailModelToFileRequest(
+        destination_format, 
+        email_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email_model_to_file_async"></a>
+# **convert_email_model_to_file_async**
+> convert_email_model_to_file_async(self, convert_email_model_to_file_request)
+
+Converts Email model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_email_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    email_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_email_model_to_file_async(
+    ConvertEmailModelToFileRequest(
+        destination_format, 
+        email_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1924,7 +2275,7 @@ Name | Type | Description  | Notes
 # **copy_file**
 > copy_file(self, copy_file_request)
 
-Copy file
+
 
 ### Return type
 
@@ -1954,11 +2305,11 @@ EmailApi.copy_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Source file path e.g. &#39;/folder/file.ext&#39; | 
- **dest_path** | **str**| Destination file path | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
- **version_id** | **str**| File version ID to copy | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -1966,7 +2317,7 @@ Name | Type | Description  | Notes
 # **copy_file_async**
 > copy_file_async(self, copy_file_request)
 
-Copy file
+
 
 Performs operation asynchronously.
 
@@ -1999,11 +2350,11 @@ EmailApi.copy_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Source file path e.g. &#39;/folder/file.ext&#39; | 
- **dest_path** | **str**| Destination file path | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
- **version_id** | **str**| File version ID to copy | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2011,7 +2362,7 @@ Name | Type | Description  | Notes
 # **copy_folder**
 > copy_folder(self, copy_folder_request)
 
-Copy folder
+
 
 ### Return type
 
@@ -2039,10 +2390,10 @@ EmailApi.copy_folder(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Source folder path e.g. &#39;/src&#39; | 
- **dest_path** | **str**| Destination folder path e.g. &#39;/dst&#39; | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2050,7 +2401,7 @@ Name | Type | Description  | Notes
 # **copy_folder_async**
 > copy_folder_async(self, copy_folder_request)
 
-Copy folder
+
 
 Performs operation asynchronously.
 
@@ -2081,10 +2432,10 @@ EmailApi.copy_folder_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Source folder path e.g. &#39;/src&#39; | 
- **dest_path** | **str**| Destination folder path e.g. &#39;/dst&#39; | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2368,7 +2719,7 @@ Name | Type | Description  | Notes
 # **create_folder**
 > create_folder(self, create_folder_request)
 
-Create the folder
+
 
 ### Return type
 
@@ -2392,8 +2743,8 @@ EmailApi.create_folder(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2401,7 +2752,7 @@ Name | Type | Description  | Notes
 # **create_folder_async**
 > create_folder_async(self, create_folder_request)
 
-Create the folder
+
 
 Performs operation asynchronously.
 
@@ -2428,8 +2779,8 @@ EmailApi.create_folder_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Folder path to create e.g. &#39;folder_1/folder_2/&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2796,11 +3147,80 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="delete_email_thread"></a>
+# **delete_email_thread**
+> delete_email_thread(self, delete_email_thread_request)
+
+Delete thread by id. All messages from thread will also be deleted             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.delete_email_thread(
+    DeleteEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**DeleteEmailThreadAccountRq**](DeleteEmailThreadAccountRq.md)| Email account specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="delete_email_thread_async"></a>
+# **delete_email_thread_async**
+> delete_email_thread_async(self, delete_email_thread_request)
+
+Delete thread by id. All messages from thread will also be deleted             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+delete_email_thread_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.delete_email_thread_async(
+    DeleteEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**DeleteEmailThreadAccountRq**](DeleteEmailThreadAccountRq.md)| Email account specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="delete_file"></a>
 # **delete_file**
 > delete_file(self, delete_file_request)
 
-Delete file
+
 
 ### Return type
 
@@ -2826,9 +3246,9 @@ EmailApi.delete_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **version_id** | **str**| File version ID to delete | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2836,7 +3256,7 @@ Name | Type | Description  | Notes
 # **delete_file_async**
 > delete_file_async(self, delete_file_request)
 
-Delete file
+
 
 Performs operation asynchronously.
 
@@ -2865,9 +3285,9 @@ EmailApi.delete_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **version_id** | **str**| File version ID to delete | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2875,7 +3295,7 @@ Name | Type | Description  | Notes
 # **delete_folder**
 > delete_folder(self, delete_folder_request)
 
-Delete folder
+
 
 ### Return type
 
@@ -2901,9 +3321,9 @@ EmailApi.delete_folder(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **recursive** | **bool**| Enable to delete folders, subfolders and files | [optional] [default to false]
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **recursive** | **bool**|  | [optional] [default to false]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -2911,7 +3331,7 @@ Name | Type | Description  | Notes
 # **delete_folder_async**
 > delete_folder_async(self, delete_folder_request)
 
-Delete folder
+
 
 Performs operation asynchronously.
 
@@ -2940,9 +3360,9 @@ EmailApi.delete_folder_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **recursive** | **bool**| Enable to delete folders, subfolders and files | [optional] [default to false]
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **recursive** | **bool**|  | [optional] [default to false]
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -3289,7 +3709,7 @@ Name | Type | Description  | Notes
 # **download_file**
 > download_file(self, download_file_request)
 
-Download file
+
 
 ### Return type
 
@@ -3315,9 +3735,9 @@ EmailApi.download_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **version_id** | **str**| File version ID to download | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -3325,7 +3745,7 @@ Name | Type | Description  | Notes
 # **download_file_async**
 > download_file_async(self, download_file_request)
 
-Download file
+
 
 Performs operation asynchronously.
 
@@ -3354,9 +3774,9 @@ EmailApi.download_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **version_id** | **str**| File version ID to download | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -3376,6 +3796,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3387,6 +3808,7 @@ EmailApi.fetch_email_message(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3396,7 +3818,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3421,6 +3844,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3432,6 +3856,7 @@ EmailApi.fetch_email_message_async(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3441,7 +3866,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3463,6 +3889,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3474,6 +3901,7 @@ EmailApi.fetch_email_model(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3483,7 +3911,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3508,6 +3937,7 @@ __init__(self,
     message_id, 
     first_account, 
     second_account=second_account, 
+    folder=folder, 
     storage=storage, 
     storage_folder=storage_folder)
 ```
@@ -3519,6 +3949,7 @@ EmailApi.fetch_email_model_async(
         message_id, 
         first_account, 
         second_account=second_account, 
+        folder=folder, 
         storage=storage, 
         storage_folder=storage_folder))
 ```
@@ -3528,7 +3959,101 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **str**| Message identifier | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Account folder to fetch from (should be specified for some protocols such as IMAP)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="fetch_email_thread_messages"></a>
+# **fetch_email_thread_messages**
+> fetch_email_thread_messages(self, fetch_email_thread_messages_request)
+
+Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+### Return type
+
+[**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    first_account, 
+    second_account=second_account, 
+    folder=folder, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.fetch_email_thread_messages(
+    FetchEmailThreadMessagesRequest(
+        thread_id, 
+        first_account, 
+        second_account=second_account, 
+        folder=folder, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Specifies account folder to get thread from              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="fetch_email_thread_messages_async"></a>
+# **fetch_email_thread_messages_async**
+> fetch_email_thread_messages_async(self, fetch_email_thread_messages_request)
+
+Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+fetch_email_thread_messages_async(request).get() returns [**ListResponseOfEmailDto**](ListResponseOfEmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    first_account, 
+    second_account=second_account, 
+    folder=folder, 
+    storage=storage, 
+    storage_folder=storage_folder)
+```
+
+### Usage
+```python
+EmailApi.fetch_email_thread_messages_async(
+    FetchEmailThreadMessagesRequest(
+        thread_id, 
+        first_account, 
+        second_account=second_account, 
+        folder=folder, 
+        storage=storage, 
+        storage_folder=storage_folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **folder** | **str**| Specifies account folder to get thread from              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
 
@@ -3606,6 +4131,87 @@ Name | Type | Description  | Notes
  **name** | **str**| iCalendar file name in storage | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_as_file"></a>
+# **get_calendar_as_file**
+> get_calendar_as_file(self, get_calendar_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_as_file(
+    GetCalendarAsFileRequest(
+        file_name, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_as_file_async"></a>
+# **get_calendar_as_file_async**
+> get_calendar_as_file_async(self, get_calendar_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_as_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_as_file_async(
+    GetCalendarAsFileRequest(
+        file_name, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -3687,6 +4293,69 @@ Name | Type | Description  | Notes
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_file_as_model"></a>
+# **get_calendar_file_as_model**
+> get_calendar_file_as_model(self, get_calendar_file_as_model_request)
+
+Converts calendar document to a model representation             
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_file_as_model(
+    GetCalendarFileAsModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_file_as_model_async"></a>
+# **get_calendar_file_as_model_async**
+> get_calendar_file_as_model_async(self, get_calendar_file_as_model_request)
+
+Converts calendar document to a model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_file_as_model_async(request).get() returns [**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_file_as_model_async(
+    GetCalendarFileAsModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -4014,6 +4683,93 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_contact_as_file"></a>
+# **get_contact_as_file**
+> get_contact_as_file(self, get_contact_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    destination_format, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_contact_as_file(
+    GetContactAsFileRequest(
+        file_name, 
+        destination_format, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_as_file_async"></a>
+# **get_contact_as_file_async**
+> get_contact_as_file_async(self, get_contact_as_file_request)
+
+Converts calendar document from storage to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_contact_as_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    file_name, 
+    destination_format, 
+    format, 
+    storage=storage, 
+    folder=folder)
+```
+
+### Usage
+```python
+EmailApi.get_contact_as_file_async(
+    GetContactAsFileRequest(
+        file_name, 
+        destination_format, 
+        format, 
+        storage=storage, 
+        folder=folder))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_name** | **str**| Calendar document file name | 
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **format** | **str**| File format to convert from Enum, available values: VCard, WebDav, Msg | 
+ **storage** | **str**| Storage name | [optional] 
+ **folder** | **str**| Path to folder in storage | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_contact_attachment"></a>
 # **get_contact_attachment**
 > get_contact_attachment(self, get_contact_attachment_request)
@@ -4098,6 +4854,75 @@ Name | Type | Description  | Notes
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_file_as_model"></a>
+# **get_contact_file_as_model**
+> get_contact_file_as_model(self, get_contact_file_as_model_request)
+
+Converts contact document to a model representation             
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_contact_file_as_model(
+    GetContactFileAsModelRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_file_as_model_async"></a>
+# **get_contact_file_as_model_async**
+> get_contact_file_as_model_async(self, get_contact_file_as_model_request)
+
+Converts contact document to a model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_contact_file_as_model_async(request).get() returns [**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_contact_file_as_model_async(
+    GetContactFileAsModelRequest(
+        format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -4441,7 +5266,7 @@ Name | Type | Description  | Notes
 # **get_disc_usage**
 > get_disc_usage(self, get_disc_usage_request)
 
-Get disc usage
+
 
 ### Return type
 
@@ -4463,7 +5288,7 @@ EmailApi.get_disc_usage(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage_name** | **str**| Storage name | [optional] 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -4471,7 +5296,7 @@ Name | Type | Description  | Notes
 # **get_disc_usage_async**
 > get_disc_usage_async(self, get_disc_usage_request)
 
-Get disc usage
+
 
 Performs operation asynchronously.
 
@@ -4496,7 +5321,7 @@ EmailApi.get_disc_usage_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage_name** | **str**| Storage name | [optional] 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -4887,6 +5712,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_email_file_as_model"></a>
+# **get_email_file_as_model**
+> get_email_file_as_model(self, get_email_file_as_model_request)
+
+Converts email document to a model representation             
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_email_file_as_model(
+    GetEmailFileAsModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_file_as_model_async"></a>
+# **get_email_file_as_model_async**
+> get_email_file_as_model_async(self, get_email_file_as_model_request)
+
+Converts email document to a model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_file_as_model_async(request).get() returns [**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_email_file_as_model_async(
+    GetEmailFileAsModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_email_model"></a>
 # **get_email_model**
 > get_email_model(self, get_email_model_request)
@@ -5140,7 +6028,7 @@ Name | Type | Description  | Notes
 # **get_file_versions**
 > get_file_versions(self, get_file_versions_request)
 
-Get file versions
+
 
 ### Return type
 
@@ -5164,8 +6052,8 @@ EmailApi.get_file_versions(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File path e.g. &#39;/file.ext&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5173,7 +6061,7 @@ Name | Type | Description  | Notes
 # **get_file_versions_async**
 > get_file_versions_async(self, get_file_versions_request)
 
-Get file versions
+
 
 Performs operation asynchronously.
 
@@ -5200,8 +6088,8 @@ EmailApi.get_file_versions_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File path e.g. &#39;/file.ext&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5209,7 +6097,7 @@ Name | Type | Description  | Notes
 # **get_files_list**
 > get_files_list(self, get_files_list_request)
 
-Get all files and folders within a folder
+
 
 ### Return type
 
@@ -5233,8 +6121,8 @@ EmailApi.get_files_list(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5242,7 +6130,7 @@ Name | Type | Description  | Notes
 # **get_files_list_async**
 > get_files_list_async(self, get_files_list_request)
 
-Get all files and folders within a folder
+
 
 Performs operation asynchronously.
 
@@ -5269,8 +6157,8 @@ EmailApi.get_files_list_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5684,7 +6572,7 @@ EmailApi.list_email_folders(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **parent_folder** | **str**| Folder in which subfolders should be listed | [optional] 
@@ -5729,7 +6617,7 @@ EmailApi.list_email_folders_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **parent_folder** | **str**| Folder in which subfolders should be listed | [optional] 
@@ -5779,7 +6667,7 @@ Name | Type | Description  | Notes
  **folder** | **str**| A folder in email account | 
  **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -5832,7 +6720,7 @@ Name | Type | Description  | Notes
  **folder** | **str**| A folder in email account | 
  **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -5855,8 +6743,8 @@ The query string should have the following view.      The example of a simple ex
 ```python
 __init__(self, 
     folder, 
-    query_string, 
     first_account, 
+    query_string=query_string, 
     second_account=second_account, 
     storage=storage, 
     storage_folder=storage_folder, 
@@ -5868,8 +6756,8 @@ __init__(self,
 EmailApi.list_email_models(
     ListEmailModelsRequest(
         folder, 
-        query_string, 
         first_account, 
+        query_string=query_string, 
         second_account=second_account, 
         storage=storage, 
         storage_folder=storage_folder, 
@@ -5880,9 +6768,9 @@ EmailApi.list_email_models(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **str**| A folder in email account | 
- **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **query_string** | **str**| A MailQuery search string | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
@@ -5908,8 +6796,8 @@ list_email_models_async(request).get() returns [**ListResponseOfEmailDto**](List
 ```python
 __init__(self, 
     folder, 
-    query_string, 
     first_account, 
+    query_string=query_string, 
     second_account=second_account, 
     storage=storage, 
     storage_folder=storage_folder, 
@@ -5921,8 +6809,8 @@ __init__(self,
 EmailApi.list_email_models_async(
     ListEmailModelsRequest(
         folder, 
-        query_string, 
         first_account, 
+        query_string=query_string, 
         second_account=second_account, 
         storage=storage, 
         storage_folder=storage_folder, 
@@ -5933,12 +6821,243 @@ EmailApi.list_email_models_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **folder** | **str**| A folder in email account | 
- **query_string** | **str**| A MailQuery search string | 
  **first_account** | **str**| Email account | 
- **second_account** | **str**| Additional email account (should be specified for POP/IMAP accounts and should be SMTP account)              | [optional] 
+ **query_string** | **str**| A MailQuery search string | [optional] 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
  **storage** | **str**| Storage name where account file(s) located | [optional] 
  **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
  **recursive** | **bool**| Specifies that should message be searched in subfolders recursively | [optional] [default to false]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="list_email_threads"></a>
+# **list_email_threads**
+> list_email_threads(self, list_email_threads_request)
+
+Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+### Return type
+
+[**EmailThreadList**](EmailThreadList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder, 
+    update_folder_cache=update_folder_cache, 
+    messages_cache_limit=messages_cache_limit)
+```
+
+### Usage
+```python
+EmailApi.list_email_threads(
+    ListEmailThreadsRequest(
+        folder, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        update_folder_cache=update_folder_cache, 
+        messages_cache_limit=messages_cache_limit))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| A folder in email account.              | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+ **update_folder_cache** | **bool**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+ **messages_cache_limit** | **int**| Limit messages cache size if CacheFile is used. Ignored in accounts without limits support              | [optional] [default to 200]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="list_email_threads_async"></a>
+# **list_email_threads_async**
+> list_email_threads_async(self, list_email_threads_request)
+
+Get message threads from folder. All messages are partly fetched (without email body and other fields)             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+list_email_threads_async(request).get() returns [**EmailThreadList**](EmailThreadList.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    folder, 
+    first_account, 
+    second_account=second_account, 
+    storage=storage, 
+    storage_folder=storage_folder, 
+    update_folder_cache=update_folder_cache, 
+    messages_cache_limit=messages_cache_limit)
+```
+
+### Usage
+```python
+EmailApi.list_email_threads_async(
+    ListEmailThreadsRequest(
+        folder, 
+        first_account, 
+        second_account=second_account, 
+        storage=storage, 
+        storage_folder=storage_folder, 
+        update_folder_cache=update_folder_cache, 
+        messages_cache_limit=messages_cache_limit))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **folder** | **str**| A folder in email account.              | 
+ **first_account** | **str**| Email account | 
+ **second_account** | **str**| Additional email account (for example, firstAccount could be IMAP, and second one could be SMTP)              | [optional] 
+ **storage** | **str**| Storage name where account file(s) located | [optional] 
+ **storage_folder** | **str**| Folder in storage where account file(s) located | [optional] 
+ **update_folder_cache** | **bool**| This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
+ **messages_cache_limit** | **int**| Limit messages cache size if CacheFile is used. Ignored in accounts without limits support              | [optional] [default to 200]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="move_email_message"></a>
+# **move_email_message**
+> move_email_message(self, move_email_message_request)
+
+Move message to another folder             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_message(
+    MoveEmailMessageRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**MoveEmailMessageRq**](MoveEmailMessageRq.md)| Email account, folder and message specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="move_email_message_async"></a>
+# **move_email_message_async**
+> move_email_message_async(self, move_email_message_request)
+
+Move message to another folder             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+move_email_message_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_message_async(
+    MoveEmailMessageRequest(
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**MoveEmailMessageRq**](MoveEmailMessageRq.md)| Email account, folder and message specifier | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="move_email_thread"></a>
+# **move_email_thread**
+> move_email_thread(self, move_email_thread_request)
+
+Move thread to another folder             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_thread(
+    MoveEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **request** | [**MoveEmailThreadRq**](MoveEmailThreadRq.md)| Move thread request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="move_email_thread_async"></a>
+# **move_email_thread_async**
+> move_email_thread_async(self, move_email_thread_request)
+
+Move thread to another folder             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+move_email_thread_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.move_email_thread_async(
+    MoveEmailThreadRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread identifier | 
+ **request** | [**MoveEmailThreadRq**](MoveEmailThreadRq.md)| Move thread request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5946,7 +7065,7 @@ Name | Type | Description  | Notes
 # **move_file**
 > move_file(self, move_file_request)
 
-Move file
+
 
 ### Return type
 
@@ -5976,11 +7095,11 @@ EmailApi.move_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Source file path e.g. &#39;/src.ext&#39; | 
- **dest_path** | **str**| Destination file path e.g. &#39;/dest.ext&#39; | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
- **version_id** | **str**| File version ID to move | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5988,7 +7107,7 @@ Name | Type | Description  | Notes
 # **move_file_async**
 > move_file_async(self, move_file_request)
 
-Move file
+
 
 Performs operation asynchronously.
 
@@ -6021,11 +7140,11 @@ EmailApi.move_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Source file path e.g. &#39;/src.ext&#39; | 
- **dest_path** | **str**| Destination file path e.g. &#39;/dest.ext&#39; | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
- **version_id** | **str**| File version ID to move | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6033,7 +7152,7 @@ Name | Type | Description  | Notes
 # **move_folder**
 > move_folder(self, move_folder_request)
 
-Move folder
+
 
 ### Return type
 
@@ -6061,10 +7180,10 @@ EmailApi.move_folder(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Folder path to move e.g. &#39;/folder&#39; | 
- **dest_path** | **str**| Destination folder path to move to e.g &#39;/dst&#39; | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6072,7 +7191,7 @@ Name | Type | Description  | Notes
 # **move_folder_async**
 > move_folder_async(self, move_folder_request)
 
-Move folder
+
 
 Performs operation asynchronously.
 
@@ -6103,10 +7222,10 @@ EmailApi.move_folder_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str**| Folder path to move e.g. &#39;/folder&#39; | 
- **dest_path** | **str**| Destination folder path to move to e.g &#39;/dst&#39; | 
- **src_storage_name** | **str**| Source storage name | [optional] 
- **dest_storage_name** | **str**| Destination storage name | [optional] 
+ **src_path** | **str**|  | 
+ **dest_path** | **str**|  | 
+ **src_storage_name** | **str**|  | [optional] 
+ **dest_storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6114,7 +7233,7 @@ Name | Type | Description  | Notes
 # **object_exists**
 > object_exists(self, object_exists_request)
 
-Check if file or folder exists
+
 
 ### Return type
 
@@ -6140,9 +7259,9 @@ EmailApi.object_exists(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **version_id** | **str**| File version ID | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6150,7 +7269,7 @@ Name | Type | Description  | Notes
 # **object_exists_async**
 > object_exists_async(self, object_exists_request)
 
-Check if file or folder exists
+
 
 Performs operation asynchronously.
 
@@ -6179,9 +7298,9 @@ EmailApi.object_exists_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; | 
- **storage_name** | **str**| Storage name | [optional] 
- **version_id** | **str**| File version ID | [optional] 
+ **path** | **str**|  | 
+ **storage_name** | **str**|  | [optional] 
+ **version_id** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -6486,7 +7605,7 @@ EmailApi.save_email_model(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **name** | **str**| iCalendar file name in storage. | 
+ **name** | **str**| Email document file name in storage. | 
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -6525,7 +7644,7 @@ EmailApi.save_email_model_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
- **name** | **str**| iCalendar file name in storage. | 
+ **name** | **str**| Email document file name in storage. | 
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -6983,11 +8102,80 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="set_email_thread_read_flag"></a>
+# **set_email_thread_read_flag**
+> set_email_thread_read_flag(self, set_email_thread_read_flag_request)
+
+Mark all messages in thread as read or unread             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.set_email_thread_read_flag(
+    SetEmailThreadReadFlagRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**EmailThreadReadFlagRq**](EmailThreadReadFlagRq.md)| Email account specifier and IsRead flag | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="set_email_thread_read_flag_async"></a>
+# **set_email_thread_read_flag_async**
+> set_email_thread_read_flag_async(self, set_email_thread_read_flag_request)
+
+Mark all messages in thread as read or unread             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+set_email_thread_read_flag_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    thread_id, 
+    request)
+```
+
+### Usage
+```python
+EmailApi.set_email_thread_read_flag_async(
+    SetEmailThreadReadFlagRequest(
+        thread_id, 
+        request))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **thread_id** | **str**| Thread id | 
+ **request** | [**EmailThreadReadFlagRq**](EmailThreadReadFlagRq.md)| Email account specifier and IsRead flag | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="storage_exists"></a>
 # **storage_exists**
 > storage_exists(self, storage_exists_request)
 
-Check if storage exists
+
 
 ### Return type
 
@@ -7009,7 +8197,7 @@ EmailApi.storage_exists(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage_name** | **str**| Storage name | 
+ **storage_name** | **str**|  | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7017,7 +8205,7 @@ Name | Type | Description  | Notes
 # **storage_exists_async**
 > storage_exists_async(self, storage_exists_request)
 
-Check if storage exists
+
 
 Performs operation asynchronously.
 
@@ -7042,7 +8230,7 @@ EmailApi.storage_exists_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage_name** | **str**| Storage name | 
+ **storage_name** | **str**|  | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7263,7 +8451,7 @@ Name | Type | Description  | Notes
 # **upload_file**
 > upload_file(self, upload_file_request)
 
-Upload file
+
 
 ### Return type
 
@@ -7289,9 +8477,9 @@ EmailApi.upload_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              | 
+ **path** | **str**|  | 
  **file** | **file**| File to upload | 
- **storage_name** | **str**| Storage name | [optional] 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7299,7 +8487,7 @@ Name | Type | Description  | Notes
 # **upload_file_async**
 > upload_file_async(self, upload_file_request)
 
-Upload file
+
 
 Performs operation asynchronously.
 
@@ -7328,9 +8516,9 @@ EmailApi.upload_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str**| Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              | 
+ **path** | **str**|  | 
  **file** | **file**| File to upload | 
- **storage_name** | **str**| Storage name | [optional] 
+ **storage_name** | **str**|  | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

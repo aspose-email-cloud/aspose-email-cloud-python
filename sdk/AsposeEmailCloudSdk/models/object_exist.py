@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="ObjectExist.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class ObjectExist(object):
-    """Object exists
+    """
     """
 
     """
@@ -54,9 +54,9 @@ class ObjectExist(object):
 
     def __init__(self, exists: bool = None, is_folder: bool = None):
         """
-        Object exists
-        :param exists (bool) Indicates that the file or folder exists.
-        :param is_folder (bool) True if it is a folder, false if it is a file.
+        
+        :param exists (bool) 
+        :param is_folder (bool) 
         """
 
         self._exists = None
@@ -71,7 +71,6 @@ class ObjectExist(object):
     def exists(self) -> bool:
         """Gets the exists of this ObjectExist.
 
-        Indicates that the file or folder exists.
 
         :return: The exists of this ObjectExist.
         :rtype: bool
@@ -82,7 +81,6 @@ class ObjectExist(object):
     def exists(self, exists: bool):
         """Sets the exists of this ObjectExist.
 
-        Indicates that the file or folder exists.
 
         :param exists: The exists of this ObjectExist.
         :type: bool
@@ -95,7 +93,6 @@ class ObjectExist(object):
     def is_folder(self) -> bool:
         """Gets the is_folder of this ObjectExist.
 
-        True if it is a folder, false if it is a file.
 
         :return: The is_folder of this ObjectExist.
         :rtype: bool
@@ -106,7 +103,6 @@ class ObjectExist(object):
     def is_folder(self, is_folder: bool):
         """Sets the is_folder of this ObjectExist.
 
-        True if it is a folder, false if it is a file.
 
         :param is_folder: The is_folder of this ObjectExist.
         :type: bool

@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="FileVersion.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -34,7 +34,7 @@ from AsposeEmailCloudSdk.models.storage_file import StorageFile
 
 
 class FileVersion(StorageFile):
-    """File Version
+    """
     """
 
     """
@@ -66,14 +66,14 @@ class FileVersion(StorageFile):
 
     def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None, version_id: str = None, is_latest: bool = None):
         """
-        File Version
-        :param name (str) File or folder name.
-        :param is_folder (bool) True if it is a folder.
-        :param modified_date (datetime) File or folder last modified DateTime.
-        :param size (int) File or folder size.
-        :param path (str) File or folder path.
-        :param version_id (str) File Version ID.
-        :param is_latest (bool) Specifies whether the file is (true) or is not (false) the latest version of an file.
+        
+        :param name (str) 
+        :param is_folder (bool) 
+        :param modified_date (datetime) 
+        :param size (int) 
+        :param path (str) 
+        :param version_id (str) 
+        :param is_latest (bool) 
         """
         super(FileVersion, self).__init__()
 
@@ -99,7 +99,6 @@ class FileVersion(StorageFile):
     def version_id(self) -> str:
         """Gets the version_id of this FileVersion.
 
-        File Version ID.
 
         :return: The version_id of this FileVersion.
         :rtype: str
@@ -110,7 +109,6 @@ class FileVersion(StorageFile):
     def version_id(self, version_id: str):
         """Sets the version_id of this FileVersion.
 
-        File Version ID.
 
         :param version_id: The version_id of this FileVersion.
         :type: str
@@ -121,7 +119,6 @@ class FileVersion(StorageFile):
     def is_latest(self) -> bool:
         """Gets the is_latest of this FileVersion.
 
-        Specifies whether the file is (true) or is not (false) the latest version of an file.
 
         :return: The is_latest of this FileVersion.
         :rtype: bool
@@ -132,7 +129,6 @@ class FileVersion(StorageFile):
     def is_latest(self, is_latest: bool):
         """Sets the is_latest of this FileVersion.
 
-        Specifies whether the file is (true) or is not (false) the latest version of an file.
 
         :param is_latest: The is_latest of this FileVersion.
         :type: bool

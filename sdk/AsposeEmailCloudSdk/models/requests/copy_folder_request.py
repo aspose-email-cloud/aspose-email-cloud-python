@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="copy_folder_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,10 +35,10 @@ class CopyFolderRequest(BaseRequest):
     Request model for copy_folder operation.
     Initializes a new instance.
 
-    :param src_path (str) Source folder path e.g. '/src'
-    :param dest_path (str) Destination folder path e.g. '/dst'
-    :param src_storage_name (str) Source storage name
-    :param dest_storage_name (str) Destination storage name
+    :param src_path (str) 
+    :param dest_path (str) 
+    :param src_storage_name (str) 
+    :param dest_storage_name (str) 
     """
 
     def __init__(self, src_path: str, dest_path: str, src_storage_name: str = None, dest_storage_name: str = None):
@@ -46,10 +46,10 @@ class CopyFolderRequest(BaseRequest):
         Request model for copy_folder operation.
         Initializes a new instance.
 
-        :param src_path (str) Source folder path e.g. '/src'
-        :param dest_path (str) Destination folder path e.g. '/dst'
-        :param src_storage_name (str) Source storage name
-        :param dest_storage_name (str) Destination storage name
+        :param src_path (str) 
+        :param dest_path (str) 
+        :param src_storage_name (str) 
+        :param dest_storage_name (str) 
         """
 
         BaseRequest.__init__(self)

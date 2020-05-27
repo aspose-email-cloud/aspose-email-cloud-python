@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="ErrorDetails.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class ErrorDetails(object):
-    """The error details
+    """
     """
 
     """
@@ -54,9 +54,9 @@ class ErrorDetails(object):
 
     def __init__(self, request_id: str = None, _date: datetime = None):
         """
-        The error details
-        :param request_id (str) The request id
-        :param _date (datetime) Date
+        
+        :param request_id (str) 
+        :param _date (datetime) 
         """
 
         self._request_id = None
@@ -71,7 +71,6 @@ class ErrorDetails(object):
     def request_id(self) -> str:
         """Gets the request_id of this ErrorDetails.
 
-        The request id
 
         :return: The request_id of this ErrorDetails.
         :rtype: str
@@ -82,7 +81,6 @@ class ErrorDetails(object):
     def request_id(self, request_id: str):
         """Sets the request_id of this ErrorDetails.
 
-        The request id
 
         :param request_id: The request_id of this ErrorDetails.
         :type: str
@@ -93,7 +91,6 @@ class ErrorDetails(object):
     def _date(self) -> datetime:
         """Gets the _date of this ErrorDetails.
 
-        Date
 
         :return: The _date of this ErrorDetails.
         :rtype: datetime
@@ -104,7 +101,6 @@ class ErrorDetails(object):
     def _date(self, _date: datetime):
         """Sets the _date of this ErrorDetails.
 
-        Date
 
         :param _date: The _date of this ErrorDetails.
         :type: datetime

@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="get_file_versions_request.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,8 +35,8 @@ class GetFileVersionsRequest(BaseRequest):
     Request model for get_file_versions operation.
     Initializes a new instance.
 
-    :param path (str) File path e.g. '/file.ext'
-    :param storage_name (str) Storage name
+    :param path (str) 
+    :param storage_name (str) 
     """
 
     def __init__(self, path: str, storage_name: str = None):
@@ -44,8 +44,8 @@ class GetFileVersionsRequest(BaseRequest):
         Request model for get_file_versions operation.
         Initializes a new instance.
 
-        :param path (str) File path e.g. '/file.ext'
-        :param storage_name (str) Storage name
+        :param path (str) 
+        :param storage_name (str) 
         """
 
         BaseRequest.__init__(self)

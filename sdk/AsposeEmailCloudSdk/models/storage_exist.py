@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="StorageExist.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class StorageExist(object):
-    """Storage exists
+    """
     """
 
     """
@@ -52,8 +52,8 @@ class StorageExist(object):
 
     def __init__(self, exists: bool = None):
         """
-        Storage exists
-        :param exists (bool) Shows that the storage exists.             
+        
+        :param exists (bool) 
         """
 
         self._exists = None
@@ -65,7 +65,6 @@ class StorageExist(object):
     def exists(self) -> bool:
         """Gets the exists of this StorageExist.
 
-        Shows that the storage exists.             
 
         :return: The exists of this StorageExist.
         :rtype: bool
@@ -76,7 +75,6 @@ class StorageExist(object):
     def exists(self, exists: bool):
         """Sets the exists of this StorageExist.
 
-        Shows that the storage exists.             
 
         :param exists: The exists of this StorageExist.
         :type: bool

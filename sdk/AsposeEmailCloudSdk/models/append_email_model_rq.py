@@ -1,7 +1,7 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="AppendEmailModelRq.py">
-#    Copyright (c) 2018-2019 Aspose Pty Ltd. All rights reserved.
+#    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
 #    Permission is hereby granted, free of charge, to any person obtaining a
@@ -31,7 +31,6 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
-from AsposeEmailCloudSdk.models.email_dto import EmailDto
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
@@ -52,7 +51,7 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
         'storage_folder': 'StorageFolderLocation',
         'folder': 'str',
         'mark_as_sent': 'bool',
-        'message': 'EmailDto'
+        'message': 'object'
     }
 
     attribute_map = {
@@ -64,15 +63,15 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
         'message': 'message'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: EmailDto = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: object = None):
         """
         Append email request             
-        :param first_account (str) First account storage file name for receiving emails (or universal one)             
-        :param second_account (str) Second account storage file name for sending emails (ignored if first is universal)             
+        :param first_account (str) First account storage file name             
+        :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param folder (str) Email account folder to store a message             
         :param mark_as_sent (bool) Mark message as sent             
-        :param message (EmailDto) Email document             
+        :param message (object) Email document             
         """
         super(AppendEmailModelRq, self).__init__()
 
@@ -92,24 +91,24 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
             self.message = message
 
     @property
-    def message(self) -> EmailDto:
+    def message(self) -> object:
         """Gets the message of this AppendEmailModelRq.
 
         Email document             
 
         :return: The message of this AppendEmailModelRq.
-        :rtype: EmailDto
+        :rtype: object
         """
         return self._message
 
     @message.setter
-    def message(self, message: EmailDto):
+    def message(self, message: object):
         """Sets the message of this AppendEmailModelRq.
 
         Email document             
 
         :param message: The message of this AppendEmailModelRq.
-        :type: EmailDto
+        :type: object
         """
         if message is None:
             raise ValueError("Invalid value for `message`, must not be `None`")
