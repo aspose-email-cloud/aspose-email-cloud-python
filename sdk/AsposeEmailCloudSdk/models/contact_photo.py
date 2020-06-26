@@ -44,28 +44,34 @@ class ContactPhoto(object):
     """
     swagger_types = {
         'photo_image_format': 'str',
-        'base64_data': 'str'
+        'base64_data': 'str',
+        'discriminator': 'str'
     }
 
     attribute_map = {
         'photo_image_format': 'photoImageFormat',
-        'base64_data': 'base64Data'
+        'base64_data': 'base64Data',
+        'discriminator': 'discriminator'
     }
 
-    def __init__(self, photo_image_format: str = None, base64_data: str = None):
+    def __init__(self, photo_image_format: str = None, base64_data: str = None, discriminator: str = None):
         """
         Person&#39;s photo.             
         :param photo_image_format (str) MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
         :param base64_data (str) Photo serialized as base64 string.             
+        :param discriminator (str) 
         """
 
         self._photo_image_format = None
         self._base64_data = None
+        self._discriminator = self.__class__.__name__
 
         if photo_image_format is not None:
             self.photo_image_format = photo_image_format
         if base64_data is not None:
             self.base64_data = base64_data
+        if discriminator is not None:
+            self.discriminator = discriminator
 
     @property
     def photo_image_format(self) -> str:
@@ -112,6 +118,28 @@ class ContactPhoto(object):
         :type: str
         """
         self._base64_data = base64_data
+
+    @property
+    def discriminator(self) -> str:
+        """Gets the discriminator of this ContactPhoto.
+
+
+        :return: The discriminator of this ContactPhoto.
+        :rtype: str
+        """
+        return self.__class__.__name__
+
+    @discriminator.setter
+    def discriminator(self, discriminator: str):
+        """Sets the discriminator of this ContactPhoto.
+
+
+        :param discriminator: The discriminator of this ContactPhoto.
+        :type: str
+        """
+        if discriminator is None:
+            raise ValueError("Invalid value for `discriminator`, must not be `None`")
+        self._discriminator = self.__class__.__name__
 
     def to_dict(self):
         """Returns the model properties as a dict"""

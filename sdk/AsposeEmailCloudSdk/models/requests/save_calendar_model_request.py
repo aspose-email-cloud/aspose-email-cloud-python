@@ -36,7 +36,7 @@ class SaveCalendarModelRequest(BaseRequest):
     Initializes a new instance.
 
     :param name (str) iCalendar file name in storage
-    :param rq (StorageModelRqOfCalendarDto) Calendar properties update request
+    :param rq (StorageModelRqOfCalendarDto) Calendar update request
     """
 
     def __init__(self, name: str, rq: StorageModelRqOfCalendarDto):
@@ -45,7 +45,7 @@ class SaveCalendarModelRequest(BaseRequest):
         Initializes a new instance.
 
         :param name (str) iCalendar file name in storage
-        :param rq (StorageModelRqOfCalendarDto) Calendar properties update request
+        :param rq (StorageModelRqOfCalendarDto) Calendar update request
         """
 
         BaseRequest.__init__(self)
