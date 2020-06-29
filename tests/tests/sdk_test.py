@@ -103,7 +103,6 @@ def test_date_time(td: TestData):
 
 
 @pytest.mark.ai
-@pytest.mark.pipeline
 def test_ai_bcr_parse_storage(td: TestData):
     file_name = str(uuid.uuid4()) + ".png"
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
@@ -139,7 +138,6 @@ def test_ai_bcr_parse_storage(td: TestData):
 
 
 @pytest.mark.ai
-@pytest.mark.pipeline
 def test_ai_bcr_parse(td: TestData):
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
     with open(image_file, 'rb') as f:
@@ -299,7 +297,6 @@ def test_contact_model(td: TestData):
 
 
 @pytest.mark.ai
-@pytest.mark.pipeline
 def test_ai_bcr_parse_model(td: TestData):
     image_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'test_single_0001.png')
     with open(image_file, 'rb') as f:
