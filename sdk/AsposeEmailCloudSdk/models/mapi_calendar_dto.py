@@ -81,7 +81,8 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         'sequence': 'int',
         'start_date': 'datetime',
         'start_date_time_zone': 'object',
-        'uid': 'str'
+        'uid': 'str',
+        'organizer': 'object'
     }
 
     attribute_map = {
@@ -118,10 +119,11 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         'sequence': 'sequence',
         'start_date': 'startDate',
         'start_date_time_zone': 'startDateTimeZone',
-        'uid': 'uid'
+        'uid': 'uid',
+        'organizer': 'organizer'
     }
 
-    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, appointment_counter_proposal: bool = None, attendees: object = None, busy_status: str = None, client_intent: List[str] = None, end_date: datetime = None, end_date_time_zone: object = None, is_all_day: bool = None, key_words: str = None, location: str = None, recurrence: object = None, reminder_delta: int = None, reminder_file_parameter: str = None, reminder_set: bool = None, sequence: int = None, start_date: datetime = None, start_date_time_zone: object = None, uid: str = None):
+    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, appointment_counter_proposal: bool = None, attendees: object = None, busy_status: str = None, client_intent: List[str] = None, end_date: datetime = None, end_date_time_zone: object = None, is_all_day: bool = None, key_words: str = None, location: str = None, recurrence: object = None, reminder_delta: int = None, reminder_file_parameter: str = None, reminder_set: bool = None, sequence: int = None, start_date: datetime = None, start_date_time_zone: object = None, uid: str = None, organizer: object = None):
         """
         Represents the mapi calendar object             
         :param attachments (List[MapiAttachmentDto]) Message item attachments.             
@@ -158,6 +160,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         :param start_date (datetime) Start date and time of the event. If the date is not set, default value for DateTime is returned.             
         :param start_date_time_zone (object) Time zone information that indicates the time zone of the StartDate property.             
         :param uid (str) Unique identifier.             
+        :param organizer (object) Organizer             
         """
         super(MapiCalendarDto, self).__init__()
 
@@ -178,6 +181,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         self._start_date = None
         self._start_date_time_zone = None
         self._uid = None
+        self._organizer = None
 
         if attachments is not None:
             self.attachments = attachments
@@ -247,6 +251,8 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
             self.start_date_time_zone = start_date_time_zone
         if uid is not None:
             self.uid = uid
+        if organizer is not None:
+            self.organizer = organizer
 
     @property
     def appointment_counter_proposal(self) -> bool:
@@ -637,6 +643,28 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         :type: str
         """
         self._uid = uid
+
+    @property
+    def organizer(self) -> object:
+        """Gets the organizer of this MapiCalendarDto.
+
+        Organizer             
+
+        :return: The organizer of this MapiCalendarDto.
+        :rtype: object
+        """
+        return self._organizer
+
+    @organizer.setter
+    def organizer(self, organizer: object):
+        """Sets the organizer of this MapiCalendarDto.
+
+        Organizer             
+
+        :param organizer: The organizer of this MapiCalendarDto.
+        :type: object
+        """
+        self._organizer = organizer
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,6 +33,7 @@ from datetime import datetime
 from AsposeEmailCloudSdk.models.attachment import Attachment
 from AsposeEmailCloudSdk.models.calendar_reminder import CalendarReminder
 from AsposeEmailCloudSdk.models.mail_address import MailAddress
+from AsposeEmailCloudSdk.models.recurrence_pattern_dto import RecurrencePatternDto
 
 
 class CalendarDto(object):
@@ -61,6 +62,7 @@ class CalendarDto(object):
         'optional_attendees': 'list[MailAddress]',
         'organizer': 'MailAddress',
         'recurrence_string': 'str',
+        'recurrence': 'RecurrencePatternDto',
         'reminders': 'list[CalendarReminder]',
         'sequence_id': 'str',
         'start_date': 'datetime',
@@ -85,6 +87,7 @@ class CalendarDto(object):
         'optional_attendees': 'optionalAttendees',
         'organizer': 'organizer',
         'recurrence_string': 'recurrenceString',
+        'recurrence': 'recurrence',
         'reminders': 'reminders',
         'sequence_id': 'sequenceId',
         'start_date': 'startDate',
@@ -94,7 +97,7 @@ class CalendarDto(object):
         'transparency': 'transparency'
     }
 
-    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None):
+    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, recurrence: RecurrencePatternDto = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None):
         """
         iCalendar document representation.             
         :param attachments (List[Attachment]) Document attachments.
@@ -110,7 +113,8 @@ class CalendarDto(object):
         :param microsoft_intended_status (str) Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
         :param optional_attendees (List[MailAddress]) Optional attendees.             
         :param organizer (MailAddress) Event organizer.             
-        :param recurrence_string (str) String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
+        :param recurrence_string (str) Deprecated, use 'Recurrence' property. String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
+        :param recurrence (RecurrencePatternDto) Recurrence pattern             
         :param reminders (List[CalendarReminder]) Reminders.
         :param sequence_id (str) The sequence id. Read only.
         :param start_date (datetime) Start date.
@@ -134,6 +138,7 @@ class CalendarDto(object):
         self._optional_attendees = None
         self._organizer = None
         self._recurrence_string = None
+        self._recurrence = None
         self._reminders = None
         self._sequence_id = None
         self._start_date = None
@@ -170,6 +175,8 @@ class CalendarDto(object):
             self.organizer = organizer
         if recurrence_string is not None:
             self.recurrence_string = recurrence_string
+        if recurrence is not None:
+            self.recurrence = recurrence
         if reminders is not None:
             self.reminders = reminders
         if sequence_id is not None:
@@ -493,7 +500,7 @@ class CalendarDto(object):
     def recurrence_string(self) -> str:
         """Gets the recurrence_string of this CalendarDto.
 
-        String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
+        Deprecated, use 'Recurrence' property. String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
 
         :return: The recurrence_string of this CalendarDto.
         :rtype: str
@@ -504,12 +511,34 @@ class CalendarDto(object):
     def recurrence_string(self, recurrence_string: str):
         """Sets the recurrence_string of this CalendarDto.
 
-        String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
+        Deprecated, use 'Recurrence' property. String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
 
         :param recurrence_string: The recurrence_string of this CalendarDto.
         :type: str
         """
         self._recurrence_string = recurrence_string
+
+    @property
+    def recurrence(self) -> RecurrencePatternDto:
+        """Gets the recurrence of this CalendarDto.
+
+        Recurrence pattern             
+
+        :return: The recurrence of this CalendarDto.
+        :rtype: RecurrencePatternDto
+        """
+        return self._recurrence
+
+    @recurrence.setter
+    def recurrence(self, recurrence: RecurrencePatternDto):
+        """Sets the recurrence of this CalendarDto.
+
+        Recurrence pattern             
+
+        :param recurrence: The recurrence of this CalendarDto.
+        :type: RecurrencePatternDto
+        """
+        self._recurrence = recurrence
 
     @property
     def reminders(self) -> List[CalendarReminder]:
