@@ -44,7 +44,7 @@ class MapiCalendarTimeZoneRuleDto(object):
     """
     swagger_types = {
         '_date': 'datetime',
-        'day_of_week': 'object',
+        'day_of_week': 'str',
         'hour': 'int',
         'milliseconds': 'int',
         'minute': 'int',
@@ -66,11 +66,11 @@ class MapiCalendarTimeZoneRuleDto(object):
         'year': 'year'
     }
 
-    def __init__(self, _date: datetime = None, day_of_week: object = None, hour: int = None, milliseconds: int = None, minute: int = None, month: int = None, position: str = None, seconds: int = None, year: int = None):
+    def __init__(self, _date: datetime = None, day_of_week: str = None, hour: int = None, milliseconds: int = None, minute: int = None, month: int = None, position: str = None, seconds: int = None, year: int = None):
         """
         Represents time zone rule that indicate when to begin using the Standard/Daylight time.             
         :param _date (datetime) Date and time that indicate when to begin using the Standard/Daylight time.             
-        :param day_of_week (object) Day of week.             
+        :param day_of_week (str) Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
         :param hour (int) Hour.             
         :param milliseconds (int) Milliseconds.             
         :param minute (int) Minute.             
@@ -134,24 +134,24 @@ class MapiCalendarTimeZoneRuleDto(object):
         self.__date = _date
 
     @property
-    def day_of_week(self) -> object:
+    def day_of_week(self) -> str:
         """Gets the day_of_week of this MapiCalendarTimeZoneRuleDto.
 
-        Day of week.             
+        Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :return: The day_of_week of this MapiCalendarTimeZoneRuleDto.
-        :rtype: object
+        :rtype: str
         """
         return self._day_of_week
 
     @day_of_week.setter
-    def day_of_week(self, day_of_week: object):
+    def day_of_week(self, day_of_week: str):
         """Sets the day_of_week of this MapiCalendarTimeZoneRuleDto.
 
-        Day of week.             
+        Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :param day_of_week: The day_of_week of this MapiCalendarTimeZoneRuleDto.
-        :type: object
+        :type: str
         """
         if day_of_week is None:
             raise ValueError("Invalid value for `day_of_week`, must not be `None`")

@@ -58,7 +58,7 @@ class MapiCalendarDailyRecurrencePatternDto(MapiCalendarRecurrencePatternDto):
         'period': 'int',
         'sliding_flag': 'bool',
         'start_date': 'datetime',
-        'week_start_day': 'object',
+        'week_start_day': 'str',
         'discriminator': 'str',
         'day_of_week': 'list[str]'
     }
@@ -81,7 +81,7 @@ class MapiCalendarDailyRecurrencePatternDto(MapiCalendarRecurrencePatternDto):
         'day_of_week': 'dayOfWeek'
     }
 
-    def __init__(self, calendar_type: str = None, deleted_instance_dates: List[datetime] = None, end_date: datetime = None, end_type: str = None, exceptions: List[MapiCalendarExceptionInfoDto] = None, frequency: str = None, modified_instance_dates: List[datetime] = None, occurrence_count: int = None, pattern_type: str = None, period: int = None, sliding_flag: bool = None, start_date: datetime = None, week_start_day: object = None, discriminator: str = None, day_of_week: List[str] = None):
+    def __init__(self, calendar_type: str = None, deleted_instance_dates: List[datetime] = None, end_date: datetime = None, end_type: str = None, exceptions: List[MapiCalendarExceptionInfoDto] = None, frequency: str = None, modified_instance_dates: List[datetime] = None, occurrence_count: int = None, pattern_type: str = None, period: int = None, sliding_flag: bool = None, start_date: datetime = None, week_start_day: str = None, discriminator: str = None, day_of_week: List[str] = None):
         """
         Represents the daily recurrence pattern of the mapi calendar.             
         :param calendar_type (str) Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
@@ -96,7 +96,7 @@ class MapiCalendarDailyRecurrencePatternDto(MapiCalendarRecurrencePatternDto):
         :param period (int) Interval at which the meeting pattern repeats.             
         :param sliding_flag (bool) Defines whether pattern is sliding or not.             
         :param start_date (datetime) Start date of an item recurrence pattern.             
-        :param week_start_day (object) First day of the calendar week.             
+        :param week_start_day (str) Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
         :param discriminator (str) 
         :param day_of_week (List[str]) Days of week at which the event occurs.             
         """
