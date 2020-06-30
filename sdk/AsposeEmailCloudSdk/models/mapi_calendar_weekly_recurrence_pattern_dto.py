@@ -96,7 +96,7 @@ class MapiCalendarWeeklyRecurrencePatternDto(MapiCalendarRecurrencePatternDto):
         :param period (int) Interval at which the meeting pattern repeats.             
         :param sliding_flag (bool) Defines whether pattern is sliding or not.             
         :param start_date (datetime) Start date of an item recurrence pattern.             
-        :param week_start_day (str) Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        :param week_start_day (str) Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
         :param discriminator (str) 
         :param day_of_week (List[str]) Days of week at which the event occurs.             
         """

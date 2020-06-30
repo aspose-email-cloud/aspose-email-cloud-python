@@ -2,7 +2,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email_file** | **object** | Email document (*.eml) file location in storage              | 
+**email_file** | [**StorageFileLocation**](StorageFileLocation.md) | Email document (*.eml) file location in storage              | 
 
  Parent class: [AccountBaseRequest](AccountBaseRequest.md)
 

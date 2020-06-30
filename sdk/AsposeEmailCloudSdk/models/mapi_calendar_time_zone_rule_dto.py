@@ -70,7 +70,7 @@ class MapiCalendarTimeZoneRuleDto(object):
         """
         Represents time zone rule that indicate when to begin using the Standard/Daylight time.             
         :param _date (datetime) Date and time that indicate when to begin using the Standard/Daylight time.             
-        :param day_of_week (str) Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        :param day_of_week (str) Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
         :param hour (int) Hour.             
         :param milliseconds (int) Milliseconds.             
         :param minute (int) Minute.             
@@ -137,7 +137,7 @@ class MapiCalendarTimeZoneRuleDto(object):
     def day_of_week(self) -> str:
         """Gets the day_of_week of this MapiCalendarTimeZoneRuleDto.
 
-        Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :return: The day_of_week of this MapiCalendarTimeZoneRuleDto.
         :rtype: str
@@ -148,7 +148,7 @@ class MapiCalendarTimeZoneRuleDto(object):
     def day_of_week(self, day_of_week: str):
         """Sets the day_of_week of this MapiCalendarTimeZoneRuleDto.
 
-        Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :param day_of_week: The day_of_week of this MapiCalendarTimeZoneRuleDto.
         :type: str

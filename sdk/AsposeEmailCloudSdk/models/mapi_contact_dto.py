@@ -31,6 +31,15 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.mapi_attachment_dto import MapiAttachmentDto
+from AsposeEmailCloudSdk.models.mapi_contact_electronic_address_property_set_dto import MapiContactElectronicAddressPropertySetDto
+from AsposeEmailCloudSdk.models.mapi_contact_event_property_set_dto import MapiContactEventPropertySetDto
+from AsposeEmailCloudSdk.models.mapi_contact_name_property_set_dto import MapiContactNamePropertySetDto
+from AsposeEmailCloudSdk.models.mapi_contact_other_property_set_dto import MapiContactOtherPropertySetDto
+from AsposeEmailCloudSdk.models.mapi_contact_personal_info_property_set_dto import MapiContactPersonalInfoPropertySetDto
+from AsposeEmailCloudSdk.models.mapi_contact_photo_dto import MapiContactPhotoDto
+from AsposeEmailCloudSdk.models.mapi_contact_physical_address_property_set_dto import MapiContactPhysicalAddressPropertySetDto
+from AsposeEmailCloudSdk.models.mapi_contact_professional_property_set_dto import MapiContactProfessionalPropertySetDto
+from AsposeEmailCloudSdk.models.mapi_contact_telephone_property_set_dto import MapiContactTelephonePropertySetDto
 from AsposeEmailCloudSdk.models.mapi_message_item_base_dto import MapiMessageItemBaseDto
 from AsposeEmailCloudSdk.models.mapi_property_dto import MapiPropertyDto
 from AsposeEmailCloudSdk.models.mapi_recipient_dto import MapiRecipientDto
@@ -65,15 +74,15 @@ class MapiContactDto(MapiMessageItemBaseDto):
         'subject_prefix': 'str',
         'properties': 'list[MapiPropertyDto]',
         'discriminator': 'str',
-        'electronic_addresses': 'object',
-        'events': 'object',
-        'name_info': 'object',
-        'other_fields': 'object',
-        'personal_info': 'object',
-        'photo': 'object',
-        'physical_addresses': 'object',
-        'professional_info': 'object',
-        'telephones': 'object'
+        'electronic_addresses': 'MapiContactElectronicAddressPropertySetDto',
+        'events': 'MapiContactEventPropertySetDto',
+        'name_info': 'MapiContactNamePropertySetDto',
+        'other_fields': 'MapiContactOtherPropertySetDto',
+        'personal_info': 'MapiContactPersonalInfoPropertySetDto',
+        'photo': 'MapiContactPhotoDto',
+        'physical_addresses': 'MapiContactPhysicalAddressPropertySetDto',
+        'professional_info': 'MapiContactProfessionalPropertySetDto',
+        'telephones': 'MapiContactTelephonePropertySetDto'
     }
 
     attribute_map = {
@@ -105,7 +114,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
         'telephones': 'telephones'
     }
 
-    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, electronic_addresses: object = None, events: object = None, name_info: object = None, other_fields: object = None, personal_info: object = None, photo: object = None, physical_addresses: object = None, professional_info: object = None, telephones: object = None):
+    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, electronic_addresses: MapiContactElectronicAddressPropertySetDto = None, events: MapiContactEventPropertySetDto = None, name_info: MapiContactNamePropertySetDto = None, other_fields: MapiContactOtherPropertySetDto = None, personal_info: MapiContactPersonalInfoPropertySetDto = None, photo: MapiContactPhotoDto = None, physical_addresses: MapiContactPhysicalAddressPropertySetDto = None, professional_info: MapiContactProfessionalPropertySetDto = None, telephones: MapiContactTelephonePropertySetDto = None):
         """
         Represents outlook contact information.             
         :param attachments (List[MapiAttachmentDto]) Message item attachments.             
@@ -125,15 +134,15 @@ class MapiContactDto(MapiMessageItemBaseDto):
         :param subject_prefix (str) Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
         :param properties (List[MapiPropertyDto]) List of MAPI properties             
         :param discriminator (str) 
-        :param electronic_addresses (object) Specify properties for up to three different e-mail addresses and three different fax addresses.             
-        :param events (object) Specify events associated with a contact.             
-        :param name_info (object) The properties are used to specify the name of the person represented by the contact.             
-        :param other_fields (object) Specify other fields of contact.             
-        :param personal_info (object) Specify other additional contact information.             
-        :param photo (object) Contact photo.             
-        :param physical_addresses (object) Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
-        :param professional_info (object) Properties are used to store professional details for the person represented by the contact.             
-        :param telephones (object) Specify telephone numbers for the contact.             
+        :param electronic_addresses (MapiContactElectronicAddressPropertySetDto) Specify properties for up to three different e-mail addresses and three different fax addresses.             
+        :param events (MapiContactEventPropertySetDto) Specify events associated with a contact.             
+        :param name_info (MapiContactNamePropertySetDto) The properties are used to specify the name of the person represented by the contact.             
+        :param other_fields (MapiContactOtherPropertySetDto) Specify other fields of contact.             
+        :param personal_info (MapiContactPersonalInfoPropertySetDto) Specify other additional contact information.             
+        :param photo (MapiContactPhotoDto) Contact photo.             
+        :param physical_addresses (MapiContactPhysicalAddressPropertySetDto) Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
+        :param professional_info (MapiContactProfessionalPropertySetDto) Properties are used to store professional details for the person represented by the contact.             
+        :param telephones (MapiContactTelephonePropertySetDto) Specify telephone numbers for the contact.             
         """
         super(MapiContactDto, self).__init__()
 
@@ -201,200 +210,200 @@ class MapiContactDto(MapiMessageItemBaseDto):
             self.telephones = telephones
 
     @property
-    def electronic_addresses(self) -> object:
+    def electronic_addresses(self) -> MapiContactElectronicAddressPropertySetDto:
         """Gets the electronic_addresses of this MapiContactDto.
 
         Specify properties for up to three different e-mail addresses and three different fax addresses.             
 
         :return: The electronic_addresses of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactElectronicAddressPropertySetDto
         """
         return self._electronic_addresses
 
     @electronic_addresses.setter
-    def electronic_addresses(self, electronic_addresses: object):
+    def electronic_addresses(self, electronic_addresses: MapiContactElectronicAddressPropertySetDto):
         """Sets the electronic_addresses of this MapiContactDto.
 
         Specify properties for up to three different e-mail addresses and three different fax addresses.             
 
         :param electronic_addresses: The electronic_addresses of this MapiContactDto.
-        :type: object
+        :type: MapiContactElectronicAddressPropertySetDto
         """
         self._electronic_addresses = electronic_addresses
 
     @property
-    def events(self) -> object:
+    def events(self) -> MapiContactEventPropertySetDto:
         """Gets the events of this MapiContactDto.
 
         Specify events associated with a contact.             
 
         :return: The events of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactEventPropertySetDto
         """
         return self._events
 
     @events.setter
-    def events(self, events: object):
+    def events(self, events: MapiContactEventPropertySetDto):
         """Sets the events of this MapiContactDto.
 
         Specify events associated with a contact.             
 
         :param events: The events of this MapiContactDto.
-        :type: object
+        :type: MapiContactEventPropertySetDto
         """
         self._events = events
 
     @property
-    def name_info(self) -> object:
+    def name_info(self) -> MapiContactNamePropertySetDto:
         """Gets the name_info of this MapiContactDto.
 
         The properties are used to specify the name of the person represented by the contact.             
 
         :return: The name_info of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactNamePropertySetDto
         """
         return self._name_info
 
     @name_info.setter
-    def name_info(self, name_info: object):
+    def name_info(self, name_info: MapiContactNamePropertySetDto):
         """Sets the name_info of this MapiContactDto.
 
         The properties are used to specify the name of the person represented by the contact.             
 
         :param name_info: The name_info of this MapiContactDto.
-        :type: object
+        :type: MapiContactNamePropertySetDto
         """
         self._name_info = name_info
 
     @property
-    def other_fields(self) -> object:
+    def other_fields(self) -> MapiContactOtherPropertySetDto:
         """Gets the other_fields of this MapiContactDto.
 
         Specify other fields of contact.             
 
         :return: The other_fields of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactOtherPropertySetDto
         """
         return self._other_fields
 
     @other_fields.setter
-    def other_fields(self, other_fields: object):
+    def other_fields(self, other_fields: MapiContactOtherPropertySetDto):
         """Sets the other_fields of this MapiContactDto.
 
         Specify other fields of contact.             
 
         :param other_fields: The other_fields of this MapiContactDto.
-        :type: object
+        :type: MapiContactOtherPropertySetDto
         """
         self._other_fields = other_fields
 
     @property
-    def personal_info(self) -> object:
+    def personal_info(self) -> MapiContactPersonalInfoPropertySetDto:
         """Gets the personal_info of this MapiContactDto.
 
         Specify other additional contact information.             
 
         :return: The personal_info of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactPersonalInfoPropertySetDto
         """
         return self._personal_info
 
     @personal_info.setter
-    def personal_info(self, personal_info: object):
+    def personal_info(self, personal_info: MapiContactPersonalInfoPropertySetDto):
         """Sets the personal_info of this MapiContactDto.
 
         Specify other additional contact information.             
 
         :param personal_info: The personal_info of this MapiContactDto.
-        :type: object
+        :type: MapiContactPersonalInfoPropertySetDto
         """
         self._personal_info = personal_info
 
     @property
-    def photo(self) -> object:
+    def photo(self) -> MapiContactPhotoDto:
         """Gets the photo of this MapiContactDto.
 
         Contact photo.             
 
         :return: The photo of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactPhotoDto
         """
         return self._photo
 
     @photo.setter
-    def photo(self, photo: object):
+    def photo(self, photo: MapiContactPhotoDto):
         """Sets the photo of this MapiContactDto.
 
         Contact photo.             
 
         :param photo: The photo of this MapiContactDto.
-        :type: object
+        :type: MapiContactPhotoDto
         """
         self._photo = photo
 
     @property
-    def physical_addresses(self) -> object:
+    def physical_addresses(self) -> MapiContactPhysicalAddressPropertySetDto:
         """Gets the physical_addresses of this MapiContactDto.
 
         Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
 
         :return: The physical_addresses of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactPhysicalAddressPropertySetDto
         """
         return self._physical_addresses
 
     @physical_addresses.setter
-    def physical_addresses(self, physical_addresses: object):
+    def physical_addresses(self, physical_addresses: MapiContactPhysicalAddressPropertySetDto):
         """Sets the physical_addresses of this MapiContactDto.
 
         Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
 
         :param physical_addresses: The physical_addresses of this MapiContactDto.
-        :type: object
+        :type: MapiContactPhysicalAddressPropertySetDto
         """
         self._physical_addresses = physical_addresses
 
     @property
-    def professional_info(self) -> object:
+    def professional_info(self) -> MapiContactProfessionalPropertySetDto:
         """Gets the professional_info of this MapiContactDto.
 
         Properties are used to store professional details for the person represented by the contact.             
 
         :return: The professional_info of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactProfessionalPropertySetDto
         """
         return self._professional_info
 
     @professional_info.setter
-    def professional_info(self, professional_info: object):
+    def professional_info(self, professional_info: MapiContactProfessionalPropertySetDto):
         """Sets the professional_info of this MapiContactDto.
 
         Properties are used to store professional details for the person represented by the contact.             
 
         :param professional_info: The professional_info of this MapiContactDto.
-        :type: object
+        :type: MapiContactProfessionalPropertySetDto
         """
         self._professional_info = professional_info
 
     @property
-    def telephones(self) -> object:
+    def telephones(self) -> MapiContactTelephonePropertySetDto:
         """Gets the telephones of this MapiContactDto.
 
         Specify telephone numbers for the contact.             
 
         :return: The telephones of this MapiContactDto.
-        :rtype: object
+        :rtype: MapiContactTelephonePropertySetDto
         """
         return self._telephones
 
     @telephones.setter
-    def telephones(self, telephones: object):
+    def telephones(self, telephones: MapiContactTelephonePropertySetDto):
         """Sets the telephones of this MapiContactDto.
 
         Specify telephone numbers for the contact.             
 
         :param telephones: The telephones of this MapiContactDto.
-        :type: object
+        :type: MapiContactTelephonePropertySetDto
         """
         self._telephones = telephones
 

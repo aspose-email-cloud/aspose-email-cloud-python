@@ -3,7 +3,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_date** | **datetime** | Date and time that indicate when to begin using the Standard/Daylight time.              | 
-**day_of_week** | **str** | Day of week Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday | 
+**day_of_week** | **str** | Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday | 
 **hour** | **int** | Hour.              | 
 **milliseconds** | **int** | Milliseconds.              | 
 **minute** | **int** | Minute.              | 
