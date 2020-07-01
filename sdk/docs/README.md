@@ -445,6 +445,7 @@ Class | Method | HTTP request | Description
  - [AsposeEmailCloudSdk.models.MapiLegacyFreeBusyPropertyDto](MapiLegacyFreeBusyPropertyDto.md)
  - [AsposeEmailCloudSdk.models.MapiMessageDto](MapiMessageDto.md)
  - [AsposeEmailCloudSdk.models.MapiMultiIntPropertyDto](MapiMultiIntPropertyDto.md)
+ - [AsposeEmailCloudSdk.models.MapiMultiStringPropertyDto](MapiMultiStringPropertyDto.md)
  - [AsposeEmailCloudSdk.models.MapiPhysicalAddressIndexPropertyDto](MapiPhysicalAddressIndexPropertyDto.md)
  - [AsposeEmailCloudSdk.models.MapiPidPropertyDescriptor](MapiPidPropertyDescriptor.md)
  - [AsposeEmailCloudSdk.models.MapiResponseTypePropertyDto](MapiResponseTypePropertyDto.md)

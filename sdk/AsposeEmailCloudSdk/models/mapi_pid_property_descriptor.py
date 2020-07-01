@@ -75,7 +75,6 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
         self._data_type = None
         self._multiple_values_data_type = None
         self._name = None
-        self._discriminator = self.__class__.__name__
 
         if discriminator is not None:
             self.discriminator = discriminator
@@ -179,28 +178,6 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
         :type: str
         """
         self._name = name
-
-    @property
-    def discriminator(self) -> str:
-        """Gets the discriminator of this MapiPidPropertyDescriptor.
-
-
-        :return: The discriminator of this MapiPidPropertyDescriptor.
-        :rtype: str
-        """
-        return self.__class__.__name__
-
-    @discriminator.setter
-    def discriminator(self, discriminator: str):
-        """Sets the discriminator of this MapiPidPropertyDescriptor.
-
-
-        :param discriminator: The discriminator of this MapiPidPropertyDescriptor.
-        :type: str
-        """
-        if discriminator is None:
-            raise ValueError("Invalid value for `discriminator`, must not be `None`")
-        self._discriminator = self.__class__.__name__
 
     def to_dict(self):
         """Returns the model properties as a dict"""
