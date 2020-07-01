@@ -563,26 +563,6 @@ class EmailApi(object):
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'file')
 
-    def convert_calendar_dto_to_mapi_model(self, request: requests.ConvertCalendarDtoToMapiModelRequest)  -> MapiCalendarDto:
-        """Convert CalendarDto to MapiCalendarDto             
-
-
-        :param request ConvertCalendarDtoToMapiModelRequest object with parameters
-        :return: MapiCalendarDto
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request(http_request, 'PUT', 'MapiCalendarDto')
-
-    def convert_calendar_dto_to_mapi_model_async(self, request: requests.ConvertCalendarDtoToMapiModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Convert CalendarDto to MapiCalendarDto             
-        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
-
-        :param request ConvertCalendarDtoToMapiModelRequest object with parameters
-        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns MapiCalendarDto)
-        """
-        http_request = request.to_http_info(self.api_client.configuration)
-        return self.__make_request_async(http_request, 'PUT', 'MapiCalendarDto')
-
     def convert_calendar_model_to_alternate(self, request: requests.ConvertCalendarModelToAlternateRequest)  -> AlternateView:
         """Convert iCalendar to AlternateView             
 
@@ -622,6 +602,26 @@ class EmailApi(object):
         """
         http_request = request.to_http_info(self.api_client.configuration)
         return self.__make_request_async(http_request, 'PUT', 'file')
+
+    def convert_calendar_model_to_mapi_model(self, request: requests.ConvertCalendarModelToMapiModelRequest)  -> MapiCalendarDto:
+        """Convert CalendarDto to MapiCalendarDto             
+
+
+        :param request ConvertCalendarModelToMapiModelRequest object with parameters
+        :return: MapiCalendarDto
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request(http_request, 'PUT', 'MapiCalendarDto')
+
+    def convert_calendar_model_to_mapi_model_async(self, request: requests.ConvertCalendarModelToMapiModelRequest) -> multiprocessing.pool.AsyncResult:
+        """Convert CalendarDto to MapiCalendarDto             
+        Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
+
+        :param request ConvertCalendarModelToMapiModelRequest object with parameters
+        :return: multiprocessing.pool.AsyncResult (AsyncResult.get() returns MapiCalendarDto)
+        """
+        http_request = request.to_http_info(self.api_client.configuration)
+        return self.__make_request_async(http_request, 'PUT', 'MapiCalendarDto')
 
     def convert_contact(self, request: requests.ConvertContactRequest)  -> str:
         """Converts contact document to specified format and returns as file             

@@ -1857,69 +1857,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
-<a name="convert_calendar_dto_to_mapi_model"></a>
-# **convert_calendar_dto_to_mapi_model**
-> convert_calendar_dto_to_mapi_model(self, convert_calendar_dto_to_mapi_model_request)
-
-Convert CalendarDto to MapiCalendarDto             
-
-### Return type
-
-[**MapiCalendarDto**](MapiCalendarDto.md)
-
-### Request Parameters
-```python
-__init__(self, 
-    calendar_dto)
-```
-
-### Usage
-```python
-EmailApi.convert_calendar_dto_to_mapi_model(
-    ConvertCalendarDtoToMapiModelRequest(
-        calendar_dto))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **calendar_dto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation | 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-<a name="convert_calendar_dto_to_mapi_model_async"></a>
-# **convert_calendar_dto_to_mapi_model_async**
-> convert_calendar_dto_to_mapi_model_async(self, convert_calendar_dto_to_mapi_model_request)
-
-Convert CalendarDto to MapiCalendarDto             
-
-Performs operation asynchronously.
-
-### Return type
-
-Returns multiprocessing.pool.AsyncResult.
-convert_calendar_dto_to_mapi_model_async(request).get() returns [**MapiCalendarDto**](MapiCalendarDto.md)
-
-### Request Parameters
-```python
-__init__(self, 
-    calendar_dto)
-```
-
-### Usage
-```python
-EmailApi.convert_calendar_dto_to_mapi_model_async(
-    ConvertCalendarDtoToMapiModelRequest(
-        calendar_dto))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **calendar_dto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation | 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
 <a name="convert_calendar_model_to_alternate"></a>
 # **convert_calendar_model_to_alternate**
 > convert_calendar_model_to_alternate(self, convert_calendar_model_to_alternate_request)
@@ -2049,6 +1986,69 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| File format Enum, available values: Ics, Msg | 
  **calendar_dto** | [**CalendarDto**](CalendarDto.md)| Calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_model_to_mapi_model"></a>
+# **convert_calendar_model_to_mapi_model**
+> convert_calendar_model_to_mapi_model(self, convert_calendar_model_to_mapi_model_request)
+
+Convert CalendarDto to MapiCalendarDto             
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_mapi_model(
+    ConvertCalendarModelToMapiModelRequest(
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_model_to_mapi_model_async"></a>
+# **convert_calendar_model_to_mapi_model_async**
+> convert_calendar_model_to_mapi_model_async(self, convert_calendar_model_to_mapi_model_request)
+
+Convert CalendarDto to MapiCalendarDto             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_calendar_model_to_mapi_model_async(request).get() returns [**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_mapi_model_async(
+    ConvertCalendarModelToMapiModelRequest(
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="convert_calendar_dto_to_mapi_model_request.py">
+#  <copyright company="Aspose" file="convert_calendar_model_to_mapi_model_request.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -23,16 +23,16 @@
 #   DEALINGS IN THE SOFTWARE.
 #  </summary>
 #  ----------------------------------------------------------------------------
-##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_calendar_dto_to_mapi_model_request import ConvertCalendarDtoToMapiModelRequest
+##for __init__.py:from AsposeEmailCloudSdk.models.requests.convert_calendar_model_to_mapi_model_request import ConvertCalendarModelToMapiModelRequest
 
 from AsposeEmailCloudSdk.models.requests.base_request import BaseRequest
 from AsposeEmailCloudSdk.models.requests.http_request import HttpRequest
 from AsposeEmailCloudSdk.models import *
 
 
-class ConvertCalendarDtoToMapiModelRequest(BaseRequest):
+class ConvertCalendarModelToMapiModelRequest(BaseRequest):
     """
-    Request model for convert_calendar_dto_to_mapi_model operation.
+    Request model for convert_calendar_model_to_mapi_model operation.
     Initializes a new instance.
 
     :param calendar_dto (CalendarDto) iCalendar model calendar representation
@@ -40,7 +40,7 @@ class ConvertCalendarDtoToMapiModelRequest(BaseRequest):
 
     def __init__(self, calendar_dto: CalendarDto):
         """
-        Request model for convert_calendar_dto_to_mapi_model operation.
+        Request model for convert_calendar_model_to_mapi_model operation.
         Initializes a new instance.
 
         :param calendar_dto (CalendarDto) iCalendar model calendar representation
@@ -60,7 +60,7 @@ class ConvertCalendarDtoToMapiModelRequest(BaseRequest):
         """
         # verify the required parameter 'calendar_dto' is set
         if self.calendar_dto is None:
-            raise ValueError("Missing the required parameter `calendar_dto` when calling `convert_calendar_dto_to_mapi_model`")
+            raise ValueError("Missing the required parameter `calendar_dto` when calling `convert_calendar_model_to_mapi_model`")
 
         collection_formats = {}
         path = '/email/CalendarModel/model-as-mapi-model'
