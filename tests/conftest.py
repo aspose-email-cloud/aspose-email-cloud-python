@@ -43,10 +43,13 @@ class EmailApiData:
                         ])
                     ])
                 ]),
-                models.StorageFolderLocation(self.storage, self.folder)
+                self.storage_folder()
             ))
         self.email.create_calendar(request)
         return name
+
+    def storage_folder(self):
+        return models.StorageFolderLocation(self.storage, self.folder)
 
 
 def pytest_addoption(parser):
