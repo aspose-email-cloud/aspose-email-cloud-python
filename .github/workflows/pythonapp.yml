@@ -24,4 +24,4 @@ jobs:
         appKey: ${{secrets.appKey}}
         apiBaseUrl: "https://api-qa.aspose.cloud"
       run: |
-        python -m pytest -m pipeline tests
+        python -m pytest -m pipeline tests -- --verbose --color=yes
