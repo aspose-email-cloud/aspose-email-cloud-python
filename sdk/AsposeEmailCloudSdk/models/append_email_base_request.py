@@ -31,6 +31,7 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
+from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
@@ -51,7 +52,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
         'storage_folder': 'StorageFolderLocation',
         'folder': 'str',
         'mark_as_sent': 'bool',
-        'email_file': 'object'
+        'email_file': 'StorageFileLocation'
     }
 
     attribute_map = {
@@ -63,7 +64,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
         'email_file': 'emailFile'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, email_file: object = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, email_file: StorageFileLocation = None):
         """
         Append email from storage file to account request             
         :param first_account (str) First account storage file name             
@@ -71,7 +72,7 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param folder (str) Email account folder to store a message             
         :param mark_as_sent (bool) Mark message as sent             
-        :param email_file (object) Email document file location in storage             
+        :param email_file (StorageFileLocation) Email document file location in storage             
         """
         super(AppendEmailBaseRequest, self).__init__()
 
@@ -91,24 +92,24 @@ class AppendEmailBaseRequest(AppendEmailAccountBaseRequest):
             self.email_file = email_file
 
     @property
-    def email_file(self) -> object:
+    def email_file(self) -> StorageFileLocation:
         """Gets the email_file of this AppendEmailBaseRequest.
 
         Email document file location in storage             
 
         :return: The email_file of this AppendEmailBaseRequest.
-        :rtype: object
+        :rtype: StorageFileLocation
         """
         return self._email_file
 
     @email_file.setter
-    def email_file(self, email_file: object):
+    def email_file(self, email_file: StorageFileLocation):
         """Sets the email_file of this AppendEmailBaseRequest.
 
         Email document file location in storage             
 
         :param email_file: The email_file of this AppendEmailBaseRequest.
-        :type: object
+        :type: StorageFileLocation
         """
         if email_file is None:
             raise ValueError("Invalid value for `email_file`, must not be `None`")

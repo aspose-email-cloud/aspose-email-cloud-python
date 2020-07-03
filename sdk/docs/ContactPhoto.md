@@ -4,6 +4,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **photo_image_format** | **str** | MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff | 
 **base64_data** | **str** | Photo serialized as base64 string.              | [optional] 
+**discriminator** | **str** |  | 
 
 
 
