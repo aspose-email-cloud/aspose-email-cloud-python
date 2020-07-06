@@ -1,6 +1,7 @@
 import os
 import sys
 import uuid
+
 import dateutil.parser
 import pytest
 
@@ -127,6 +128,7 @@ def test_convert_model_to_mapi_model(td: EmailApiData):
     mapi_calendar = td.email.convert_calendar_model_to_mapi_model(
         requests.ConvertCalendarModelToMapiModelRequest(calendar))
     assert calendar.location == mapi_calendar.location
+    assert 'MapiCalendarDailyRecurrencePatternDto' == mapi_calendar.recurrence.recurrence_pattern.discriminator
 
 
 def calendar_dto():
@@ -138,4 +140,5 @@ def calendar_dto():
     calendar.start_date = datetime.today() + timedelta(days=1)
     calendar.end_date = calendar.start_date + timedelta(hours=1)
     calendar.location = 'Some location'
+    calendar.recurrence = models.DailyRecurrencePatternDto(None, 10, None, 'Monday')
     return calendar
