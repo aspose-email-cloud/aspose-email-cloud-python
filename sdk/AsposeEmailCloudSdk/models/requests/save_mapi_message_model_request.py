@@ -35,7 +35,7 @@ class SaveMapiMessageModelRequest(BaseRequest):
     Request model for save_mapi_message_model operation.
     Initializes a new instance.
 
-    :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     :param name (str) Message file name in storage.
     :param rq (StorageModelRqOfMapiMessageDto) Message create/update request.
     """
@@ -45,7 +45,7 @@ class SaveMapiMessageModelRequest(BaseRequest):
         Request model for save_mapi_message_model operation.
         Initializes a new instance.
 
-        :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
         :param name (str) Message file name in storage.
         :param rq (StorageModelRqOfMapiMessageDto) Message create/update request.
         """

@@ -35,7 +35,7 @@ class ConvertMapiMessageModelToFileRequest(BaseRequest):
     Request model for convert_mapi_message_model_to_file operation.
     Initializes a new instance.
 
-    :param destination_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param destination_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     :param mapi_message (MapiMessageDto) MAPI message model to convert
     """
 
@@ -44,7 +44,7 @@ class ConvertMapiMessageModelToFileRequest(BaseRequest):
         Request model for convert_mapi_message_model_to_file operation.
         Initializes a new instance.
 
-        :param destination_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param destination_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
         :param mapi_message (MapiMessageDto) MAPI message model to convert
         """
 

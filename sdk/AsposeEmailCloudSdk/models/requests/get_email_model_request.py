@@ -35,7 +35,7 @@ class GetEmailModelRequest(BaseRequest):
     Request model for get_email_model operation.
     Initializes a new instance.
 
-    :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     :param name (str) Email document file name.
     :param folder (str) Path to folder in storage.
     :param storage (str) Storage name.
@@ -46,7 +46,7 @@ class GetEmailModelRequest(BaseRequest):
         Request model for get_email_model operation.
         Initializes a new instance.
 
-        :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
         :param name (str) Email document file name.
         :param folder (str) Path to folder in storage.
         :param storage (str) Storage name.

@@ -35,7 +35,7 @@ class GetEmailFileAsMapiModelRequest(BaseRequest):
     Request model for get_email_file_as_mapi_model operation.
     Initializes a new instance.
 
-    :param file_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param file_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     :param file (str) File to convert
     """
 
@@ -44,7 +44,7 @@ class GetEmailFileAsMapiModelRequest(BaseRequest):
         Request model for get_email_file_as_mapi_model operation.
         Initializes a new instance.
 
-        :param file_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param file_format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
         :param file (str) File to convert
         """
 

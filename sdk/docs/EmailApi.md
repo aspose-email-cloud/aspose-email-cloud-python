@@ -2287,7 +2287,7 @@ EmailApi.convert_email(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2323,7 +2323,7 @@ EmailApi.convert_email_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2356,7 +2356,7 @@ EmailApi.convert_email_model_to_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2392,7 +2392,7 @@ EmailApi.convert_email_model_to_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2815,7 +2815,7 @@ EmailApi.convert_mapi_message_model_to_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **mapi_message** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2851,7 +2851,7 @@ EmailApi.convert_mapi_message_model_to_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **mapi_message** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -6150,7 +6150,7 @@ EmailApi.get_email_as_file(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name | 
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **storage** | **str**| Storage name | [optional] 
  **folder** | **str**| Path to folder in storage | [optional] 
 
@@ -6192,7 +6192,7 @@ EmailApi.get_email_as_file_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name | 
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **storage** | **str**| Storage name | [optional] 
  **folder** | **str**| Path to folder in storage | [optional] 
 
@@ -6457,7 +6457,7 @@ EmailApi.get_email_file_as_mapi_model(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **file_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -6493,7 +6493,7 @@ EmailApi.get_email_file_as_mapi_model_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **file_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -6593,7 +6593,7 @@ EmailApi.get_email_model(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name. | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
@@ -6635,7 +6635,7 @@ EmailApi.get_email_model_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name. | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
@@ -6676,7 +6676,7 @@ EmailApi.get_email_model_list(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
  **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
@@ -6721,7 +6721,7 @@ EmailApi.get_email_model_list_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
  **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
@@ -7373,7 +7373,7 @@ EmailApi.get_mapi_message_model(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name. | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
@@ -7415,7 +7415,7 @@ EmailApi.get_mapi_message_model_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name. | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
@@ -8627,7 +8627,7 @@ EmailApi.save_email_model(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name in storage. | 
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Email document create/update request. | 
 
@@ -8666,7 +8666,7 @@ EmailApi.save_email_model_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name in storage. | 
  **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Email document create/update request. | 
 
@@ -8978,7 +8978,7 @@ EmailApi.save_mapi_message_model(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Message file name in storage. | 
  **rq** | [**StorageModelRqOfMapiMessageDto**](StorageModelRqOfMapiMessageDto.md)| Message create/update request. | 
 
@@ -9017,7 +9017,7 @@ EmailApi.save_mapi_message_model_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Message file name in storage. | 
  **rq** | [**StorageModelRqOfMapiMessageDto**](StorageModelRqOfMapiMessageDto.md)| Message create/update request. | 
 
