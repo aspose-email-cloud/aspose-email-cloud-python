@@ -604,7 +604,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', 'file')
 
     def convert_calendar_model_to_mapi_model(self, request: requests.ConvertCalendarModelToMapiModelRequest)  -> MapiCalendarDto:
-        """Convert CalendarDto to MapiCalendarDto             
+        """Converts CalendarDto to MapiCalendarDto.             
 
 
         :param request ConvertCalendarModelToMapiModelRequest object with parameters
@@ -614,7 +614,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', 'MapiCalendarDto')
 
     def convert_calendar_model_to_mapi_model_async(self, request: requests.ConvertCalendarModelToMapiModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Convert CalendarDto to MapiCalendarDto             
+        """Converts CalendarDto to MapiCalendarDto.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request ConvertCalendarModelToMapiModelRequest object with parameters
@@ -664,7 +664,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', 'file')
 
     def convert_contact_model_to_mapi_model(self, request: requests.ConvertContactModelToMapiModelRequest)  -> MapiContactDto:
-        """Convert contact model to MAPI model contact representation             
+        """Converts ContactDto to MapiContactDto.             
 
 
         :param request ConvertContactModelToMapiModelRequest object with parameters
@@ -674,7 +674,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', 'MapiContactDto')
 
     def convert_contact_model_to_mapi_model_async(self, request: requests.ConvertContactModelToMapiModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Convert contact model to MAPI model contact representation             
+        """Converts ContactDto to MapiContactDto.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request ConvertContactModelToMapiModelRequest object with parameters
@@ -724,7 +724,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', 'file')
 
     def convert_email_model_to_mapi_model(self, request: requests.ConvertEmailModelToMapiModelRequest)  -> MapiMessageDto:
-        """Converts Email model to MAPI model message representation             
+        """Converts EmailDto to MapiMessageDto.             
 
 
         :param request ConvertEmailModelToMapiModelRequest object with parameters
@@ -734,7 +734,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', 'MapiMessageDto')
 
     def convert_email_model_to_mapi_model_async(self, request: requests.ConvertEmailModelToMapiModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Converts Email model to MAPI model message representation             
+        """Converts EmailDto to MapiMessageDto.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request ConvertEmailModelToMapiModelRequest object with parameters
@@ -784,7 +784,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', 'file')
 
     def convert_mapi_contact_model_to_contact_model(self, request: requests.ConvertMapiContactModelToContactModelRequest)  -> ContactDto:
-        """Converts MAPI contact model to Contact model             
+        """Converts MAPI contact model to ContactDto model             
 
 
         :param request ConvertMapiContactModelToContactModelRequest object with parameters
@@ -794,7 +794,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', 'ContactDto')
 
     def convert_mapi_contact_model_to_contact_model_async(self, request: requests.ConvertMapiContactModelToContactModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Converts MAPI contact model to Contact model             
+        """Converts MAPI contact model to ContactDto model             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request ConvertMapiContactModelToContactModelRequest object with parameters
@@ -1984,7 +1984,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfString')
 
     def get_mapi_calendar_model(self, request: requests.GetMapiCalendarModelRequest)  -> MapiCalendarDto:
-        """Get calendar file             
+        """Get MAPI calendar document.             
 
 
         :param request GetMapiCalendarModelRequest object with parameters
@@ -1994,7 +1994,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'MapiCalendarDto')
 
     def get_mapi_calendar_model_async(self, request: requests.GetMapiCalendarModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Get calendar file             
+        """Get MAPI calendar document.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetMapiCalendarModelRequest object with parameters
@@ -2004,7 +2004,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'MapiCalendarDto')
 
     def get_mapi_contact_model(self, request: requests.GetMapiContactModelRequest)  -> MapiContactDto:
-        """Get contact document.             
+        """Get MAPI contact document.             
 
 
         :param request GetMapiContactModelRequest object with parameters
@@ -2014,7 +2014,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'MapiContactDto')
 
     def get_mapi_contact_model_async(self, request: requests.GetMapiContactModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Get contact document.             
+        """Get MAPI contact document.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetMapiContactModelRequest object with parameters
@@ -2044,7 +2044,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'GET', 'ListResponseOfHierarchicalObjectResponse')
 
     def get_mapi_message_model(self, request: requests.GetMapiMessageModelRequest)  -> MapiMessageDto:
-        """MAPI message document.             
+        """Get MAPI message document.             
 
 
         :param request GetMapiMessageModelRequest object with parameters
@@ -2054,7 +2054,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'GET', 'MapiMessageDto')
 
     def get_mapi_message_model_async(self, request: requests.GetMapiMessageModelRequest) -> multiprocessing.pool.AsyncResult:
-        """MAPI message document.             
+        """Get MAPI message document.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request GetMapiMessageModelRequest object with parameters
@@ -2448,7 +2448,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def save_mapi_contact_model(self, request: requests.SaveMapiContactModelRequest) :
-        """Save contact.             
+        """Save MAPI Contact to storage.             
 
 
         :param request SaveMapiContactModelRequest object with parameters
@@ -2458,7 +2458,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def save_mapi_contact_model_async(self, request: requests.SaveMapiContactModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Save contact.             
+        """Save MAPI Contact to storage.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request SaveMapiContactModelRequest object with parameters
@@ -2468,7 +2468,7 @@ class EmailApi(object):
         return self.__make_request_async(http_request, 'PUT', None)
 
     def save_mapi_message_model(self, request: requests.SaveMapiMessageModelRequest) :
-        """Save MAPI message.             
+        """Save MAPI message to storage.             
 
 
         :param request SaveMapiMessageModelRequest object with parameters
@@ -2478,7 +2478,7 @@ class EmailApi(object):
         return self.__make_request(http_request, 'PUT', None)
 
     def save_mapi_message_model_async(self, request: requests.SaveMapiMessageModelRequest) -> multiprocessing.pool.AsyncResult:
-        """Save MAPI message.             
+        """Save MAPI message to storage.             
         Performs operation asynchronously. Returns multiprocessing.pool.AsyncResult
 
         :param request SaveMapiMessageModelRequest object with parameters
