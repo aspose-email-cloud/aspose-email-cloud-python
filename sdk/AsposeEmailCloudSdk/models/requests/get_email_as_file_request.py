@@ -36,7 +36,7 @@ class GetEmailAsFileRequest(BaseRequest):
     Initializes a new instance.
 
     :param file_name (str) Email document file name
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     :param storage (str) Storage name
     :param folder (str) Path to folder in storage
     """
@@ -47,7 +47,7 @@ class GetEmailAsFileRequest(BaseRequest):
         Initializes a new instance.
 
         :param file_name (str) Email document file name
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
         :param storage (str) Storage name
         :param folder (str) Path to folder in storage
         """

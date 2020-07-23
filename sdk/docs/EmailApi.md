@@ -1989,6 +1989,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="convert_calendar_model_to_mapi_model"></a>
+# **convert_calendar_model_to_mapi_model**
+> convert_calendar_model_to_mapi_model(self, convert_calendar_model_to_mapi_model_request)
+
+Converts CalendarDto to MapiCalendarDto.             
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_mapi_model(
+    ConvertCalendarModelToMapiModelRequest(
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_calendar_model_to_mapi_model_async"></a>
+# **convert_calendar_model_to_mapi_model_async**
+> convert_calendar_model_to_mapi_model_async(self, convert_calendar_model_to_mapi_model_request)
+
+Converts CalendarDto to MapiCalendarDto.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_calendar_model_to_mapi_model_async(request).get() returns [**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_calendar_model_to_mapi_model_async(
+    ConvertCalendarModelToMapiModelRequest(
+        calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **calendar_dto** | [**CalendarDto**](CalendarDto.md)| iCalendar model calendar representation | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="convert_contact"></a>
 # **convert_contact**
 > convert_contact(self, convert_contact_request)
@@ -2133,6 +2196,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="convert_contact_model_to_mapi_model"></a>
+# **convert_contact_model_to_mapi_model**
+> convert_contact_model_to_mapi_model(self, convert_contact_model_to_mapi_model_request)
+
+Converts ContactDto to MapiContactDto.             
+
+### Return type
+
+[**MapiContactDto**](MapiContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_model_to_mapi_model(
+    ConvertContactModelToMapiModelRequest(
+        contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contact_dto** | [**ContactDto**](ContactDto.md)| Contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_contact_model_to_mapi_model_async"></a>
+# **convert_contact_model_to_mapi_model_async**
+> convert_contact_model_to_mapi_model_async(self, convert_contact_model_to_mapi_model_request)
+
+Converts ContactDto to MapiContactDto.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_contact_model_to_mapi_model_async(request).get() returns [**MapiContactDto**](MapiContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_contact_model_to_mapi_model_async(
+    ConvertContactModelToMapiModelRequest(
+        contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contact_dto** | [**ContactDto**](ContactDto.md)| Contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="convert_email"></a>
 # **convert_email**
 > convert_email(self, convert_email_request)
@@ -2161,7 +2287,7 @@ EmailApi.convert_email(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2197,7 +2323,7 @@ EmailApi.convert_email_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2230,7 +2356,7 @@ EmailApi.convert_email_model_to_file(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2266,8 +2392,467 @@ EmailApi.convert_email_model_to_file_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email_model_to_mapi_model"></a>
+# **convert_email_model_to_mapi_model**
+> convert_email_model_to_mapi_model(self, convert_email_model_to_mapi_model_request)
+
+Converts EmailDto to MapiMessageDto.             
+
+### Return type
+
+[**MapiMessageDto**](MapiMessageDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    email_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_email_model_to_mapi_model(
+    ConvertEmailModelToMapiModelRequest(
+        email_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_email_model_to_mapi_model_async"></a>
+# **convert_email_model_to_mapi_model_async**
+> convert_email_model_to_mapi_model_async(self, convert_email_model_to_mapi_model_request)
+
+Converts EmailDto to MapiMessageDto.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_email_model_to_mapi_model_async(request).get() returns [**MapiMessageDto**](MapiMessageDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    email_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_email_model_to_mapi_model_async(
+    ConvertEmailModelToMapiModelRequest(
+        email_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email_dto** | [**EmailDto**](EmailDto.md)| Email model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_calendar_model_to_calendar_model"></a>
+# **convert_mapi_calendar_model_to_calendar_model**
+> convert_mapi_calendar_model_to_calendar_model(self, convert_mapi_calendar_model_to_calendar_model_request)
+
+Converts MAPI calendar model to CalendarDto model             
+
+### Return type
+
+[**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    mapi_calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_calendar_model_to_calendar_model(
+    ConvertMapiCalendarModelToCalendarModelRequest(
+        mapi_calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapi_calendar_dto** | [**MapiCalendarDto**](MapiCalendarDto.md)| MAPI calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_calendar_model_to_calendar_model_async"></a>
+# **convert_mapi_calendar_model_to_calendar_model_async**
+> convert_mapi_calendar_model_to_calendar_model_async(self, convert_mapi_calendar_model_to_calendar_model_request)
+
+Converts MAPI calendar model to CalendarDto model             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_mapi_calendar_model_to_calendar_model_async(request).get() returns [**CalendarDto**](CalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    mapi_calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_calendar_model_to_calendar_model_async(
+    ConvertMapiCalendarModelToCalendarModelRequest(
+        mapi_calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapi_calendar_dto** | [**MapiCalendarDto**](MapiCalendarDto.md)| MAPI calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_calendar_model_to_file"></a>
+# **convert_mapi_calendar_model_to_file**
+> convert_mapi_calendar_model_to_file(self, convert_mapi_calendar_model_to_file_request)
+
+Converts MAPI calendar model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    mapi_calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_calendar_model_to_file(
+    ConvertMapiCalendarModelToFileRequest(
+        destination_format, 
+        mapi_calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Ics, Msg | 
+ **mapi_calendar_dto** | [**MapiCalendarDto**](MapiCalendarDto.md)| MAPI calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_calendar_model_to_file_async"></a>
+# **convert_mapi_calendar_model_to_file_async**
+> convert_mapi_calendar_model_to_file_async(self, convert_mapi_calendar_model_to_file_request)
+
+Converts MAPI calendar model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_mapi_calendar_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    mapi_calendar_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_calendar_model_to_file_async(
+    ConvertMapiCalendarModelToFileRequest(
+        destination_format, 
+        mapi_calendar_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Ics, Msg | 
+ **mapi_calendar_dto** | [**MapiCalendarDto**](MapiCalendarDto.md)| MAPI calendar model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_contact_model_to_contact_model"></a>
+# **convert_mapi_contact_model_to_contact_model**
+> convert_mapi_contact_model_to_contact_model(self, convert_mapi_contact_model_to_contact_model_request)
+
+Converts MAPI contact model to ContactDto model             
+
+### Return type
+
+[**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    mapi_contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_contact_model_to_contact_model(
+    ConvertMapiContactModelToContactModelRequest(
+        mapi_contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapi_contact_dto** | [**MapiContactDto**](MapiContactDto.md)| MAPI contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_contact_model_to_contact_model_async"></a>
+# **convert_mapi_contact_model_to_contact_model_async**
+> convert_mapi_contact_model_to_contact_model_async(self, convert_mapi_contact_model_to_contact_model_request)
+
+Converts MAPI contact model to ContactDto model             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_mapi_contact_model_to_contact_model_async(request).get() returns [**ContactDto**](ContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    mapi_contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_contact_model_to_contact_model_async(
+    ConvertMapiContactModelToContactModelRequest(
+        mapi_contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapi_contact_dto** | [**MapiContactDto**](MapiContactDto.md)| MAPI contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_contact_model_to_file"></a>
+# **convert_mapi_contact_model_to_file**
+> convert_mapi_contact_model_to_file(self, convert_mapi_contact_model_to_file_request)
+
+Converts MAPI contact model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    mapi_contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_contact_model_to_file(
+    ConvertMapiContactModelToFileRequest(
+        destination_format, 
+        mapi_contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **mapi_contact_dto** | [**MapiContactDto**](MapiContactDto.md)| MAPI contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_contact_model_to_file_async"></a>
+# **convert_mapi_contact_model_to_file_async**
+> convert_mapi_contact_model_to_file_async(self, convert_mapi_contact_model_to_file_request)
+
+Converts MAPI contact model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_mapi_contact_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    mapi_contact_dto)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_contact_model_to_file_async(
+    ConvertMapiContactModelToFileRequest(
+        destination_format, 
+        mapi_contact_dto))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **mapi_contact_dto** | [**MapiContactDto**](MapiContactDto.md)| MAPI contact model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_message_model_to_email_model"></a>
+# **convert_mapi_message_model_to_email_model**
+> convert_mapi_message_model_to_email_model(self, convert_mapi_message_model_to_email_model_request)
+
+Converts MAPI message model to EmailDto model             
+
+### Return type
+
+[**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    mapi_message)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_message_model_to_email_model(
+    ConvertMapiMessageModelToEmailModelRequest(
+        mapi_message))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapi_message** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_message_model_to_email_model_async"></a>
+# **convert_mapi_message_model_to_email_model_async**
+> convert_mapi_message_model_to_email_model_async(self, convert_mapi_message_model_to_email_model_request)
+
+Converts MAPI message model to EmailDto model             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_mapi_message_model_to_email_model_async(request).get() returns [**EmailDto**](EmailDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    mapi_message)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_message_model_to_email_model_async(
+    ConvertMapiMessageModelToEmailModelRequest(
+        mapi_message))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mapi_message** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_message_model_to_file"></a>
+# **convert_mapi_message_model_to_file**
+> convert_mapi_message_model_to_file(self, convert_mapi_message_model_to_file_request)
+
+Converts MAPI message model to specified format and returns as file             
+
+### Return type
+
+**file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    mapi_message)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_message_model_to_file(
+    ConvertMapiMessageModelToFileRequest(
+        destination_format, 
+        mapi_message))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **mapi_message** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="convert_mapi_message_model_to_file_async"></a>
+# **convert_mapi_message_model_to_file_async**
+> convert_mapi_message_model_to_file_async(self, convert_mapi_message_model_to_file_request)
+
+Converts MAPI message model to specified format and returns as file             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+convert_mapi_message_model_to_file_async(request).get() returns **file**
+
+### Request Parameters
+```python
+__init__(self, 
+    destination_format, 
+    mapi_message)
+```
+
+### Usage
+```python
+EmailApi.convert_mapi_message_model_to_file_async(
+    ConvertMapiMessageModelToFileRequest(
+        destination_format, 
+        mapi_message))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **mapi_message** | [**MapiMessageDto**](MapiMessageDto.md)| MAPI message model to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -4296,6 +4881,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_calendar_file_as_mapi_model"></a>
+# **get_calendar_file_as_mapi_model**
+> get_calendar_file_as_mapi_model(self, get_calendar_file_as_mapi_model_request)
+
+Converts calendar file to a MAPI model representation             
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_file_as_mapi_model(
+    GetCalendarFileAsMapiModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_calendar_file_as_mapi_model_async"></a>
+# **get_calendar_file_as_mapi_model_async**
+> get_calendar_file_as_mapi_model_async(self, get_calendar_file_as_mapi_model_request)
+
+Converts calendar file to a MAPI model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_calendar_file_as_mapi_model_async(request).get() returns [**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_calendar_file_as_mapi_model_async(
+    GetCalendarFileAsMapiModelRequest(
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_calendar_file_as_model"></a>
 # **get_calendar_file_as_model**
 > get_calendar_file_as_model(self, get_calendar_file_as_model_request)
@@ -4854,6 +5502,75 @@ Name | Type | Description  | Notes
  **attachment** | **str**| Attachment name or index | 
  **folder** | **str**| Path to folder in storage | [optional] 
  **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_file_as_mapi_model"></a>
+# **get_contact_file_as_mapi_model**
+> get_contact_file_as_mapi_model(self, get_contact_file_as_mapi_model_request)
+
+Converts contact file to a MAPI model representation             
+
+### Return type
+
+[**MapiContactDto**](MapiContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file_format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_contact_file_as_mapi_model(
+    GetContactFileAsMapiModelRequest(
+        file_format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_contact_file_as_mapi_model_async"></a>
+# **get_contact_file_as_mapi_model_async**
+> get_contact_file_as_mapi_model_async(self, get_contact_file_as_mapi_model_request)
+
+Converts contact file to a MAPI model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_contact_file_as_mapi_model_async(request).get() returns [**MapiContactDto**](MapiContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file_format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_contact_file_as_mapi_model_async(
+    GetContactFileAsMapiModelRequest(
+        file_format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_format** | **str**| File format Enum, available values: VCard, WebDav, Msg | 
+ **file** | **file**| File to convert | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -5433,7 +6150,7 @@ EmailApi.get_email_as_file(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name | 
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **storage** | **str**| Storage name | [optional] 
  **folder** | **str**| Path to folder in storage | [optional] 
 
@@ -5475,7 +6192,7 @@ EmailApi.get_email_as_file_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str**| Email document file name | 
- **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **storage** | **str**| Storage name | [optional] 
  **folder** | **str**| Path to folder in storage | [optional] 
 
@@ -5712,6 +6429,75 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_email_file_as_mapi_model"></a>
+# **get_email_file_as_mapi_model**
+> get_email_file_as_mapi_model(self, get_email_file_as_mapi_model_request)
+
+Converts email file to a MAPI model representation             
+
+### Return type
+
+[**MapiMessageDto**](MapiMessageDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file_format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_email_file_as_mapi_model(
+    GetEmailFileAsMapiModelRequest(
+        file_format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_email_file_as_mapi_model_async"></a>
+# **get_email_file_as_mapi_model_async**
+> get_email_file_as_mapi_model_async(self, get_email_file_as_mapi_model_request)
+
+Converts email file to a MAPI model representation             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_email_file_as_mapi_model_async(request).get() returns [**MapiMessageDto**](MapiMessageDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    file_format, 
+    file)
+```
+
+### Usage
+```python
+EmailApi.get_email_file_as_mapi_model_async(
+    GetEmailFileAsMapiModelRequest(
+        file_format, 
+        file))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_format** | **str**| File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **file** | **file**| File to convert | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_email_file_as_model"></a>
 # **get_email_file_as_model**
 > get_email_file_as_model(self, get_email_file_as_model_request)
@@ -5807,7 +6593,7 @@ EmailApi.get_email_model(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name. | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
@@ -5849,7 +6635,7 @@ EmailApi.get_email_model_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name. | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
@@ -5890,7 +6676,7 @@ EmailApi.get_email_model_list(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
  **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
@@ -5935,7 +6721,7 @@ EmailApi.get_email_model_list_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **folder** | **str**| Path to folder in storage. | [optional] 
  **storage** | **str**| Storage name. | [optional] 
  **items_per_page** | **int**| Count of items on page. | [optional] [default to 10]
@@ -6318,6 +7104,162 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+<a name="get_mapi_calendar_model"></a>
+# **get_mapi_calendar_model**
+> get_mapi_calendar_model(self, get_mapi_calendar_model_request)
+
+Get MAPI calendar document.             
+
+### Return type
+
+[**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_mapi_calendar_model(
+    GetMapiCalendarModelRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Calendar file name in storage | 
+ **folder** | **str**| Path to folder in storage | [optional] 
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_mapi_calendar_model_async"></a>
+# **get_mapi_calendar_model_async**
+> get_mapi_calendar_model_async(self, get_mapi_calendar_model_request)
+
+Get MAPI calendar document.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_mapi_calendar_model_async(request).get() returns [**MapiCalendarDto**](MapiCalendarDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_mapi_calendar_model_async(
+    GetMapiCalendarModelRequest(
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Calendar file name in storage | 
+ **folder** | **str**| Path to folder in storage | [optional] 
+ **storage** | **str**| Storage name | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_mapi_contact_model"></a>
+# **get_mapi_contact_model**
+> get_mapi_contact_model(self, get_mapi_contact_model_request)
+
+Get MAPI contact document.             
+
+### Return type
+
+[**MapiContactDto**](MapiContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_mapi_contact_model(
+    GetMapiContactModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_mapi_contact_model_async"></a>
+# **get_mapi_contact_model_async**
+> get_mapi_contact_model_async(self, get_mapi_contact_model_request)
+
+Get MAPI contact document.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_mapi_contact_model_async(request).get() returns [**MapiContactDto**](MapiContactDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_mapi_contact_model_async(
+    GetMapiContactModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 <a name="get_mapi_list"></a>
 # **get_mapi_list**
 > get_mapi_list(self, get_mapi_list_request)
@@ -6396,6 +7338,87 @@ Name | Type | Description  | Notes
  **storage** | **str**| Storage name | [optional] 
  **items_per_page** | **int**| Count of items on page | [optional] [default to 10]
  **page_number** | **int**| Page number | [optional] [default to 0]
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_mapi_message_model"></a>
+# **get_mapi_message_model**
+> get_mapi_message_model(self, get_mapi_message_model_request)
+
+Get MAPI message document.             
+
+### Return type
+
+[**MapiMessageDto**](MapiMessageDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_mapi_message_model(
+    GetMapiMessageModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **name** | **str**| Email document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="get_mapi_message_model_async"></a>
+# **get_mapi_message_model_async**
+> get_mapi_message_model_async(self, get_mapi_message_model_request)
+
+Get MAPI message document.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+get_mapi_message_model_async(request).get() returns [**MapiMessageDto**](MapiMessageDto.md)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    folder=folder, 
+    storage=storage)
+```
+
+### Usage
+```python
+EmailApi.get_mapi_message_model_async(
+    GetMapiMessageModelRequest(
+        format, 
+        name, 
+        folder=folder, 
+        storage=storage))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **name** | **str**| Email document file name. | 
+ **folder** | **str**| Path to folder in storage. | [optional] 
+ **storage** | **str**| Storage name. | [optional] 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7333,7 +8356,7 @@ EmailApi.save_calendar_model(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| iCalendar file name in storage | 
- **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar properties update request | 
+ **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar update request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7369,7 +8392,7 @@ EmailApi.save_calendar_model_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| iCalendar file name in storage | 
- **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar properties update request | 
+ **rq** | [**StorageModelRqOfCalendarDto**](StorageModelRqOfCalendarDto.md)| Calendar update request | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7405,7 +8428,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name. | 
- **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create contact request. | 
+ **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create/Update contact request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7444,7 +8467,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
  **name** | **str**| Contact document file name. | 
- **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create contact request. | 
+ **rq** | [**StorageModelRqOfContactDto**](StorageModelRqOfContactDto.md)| Create/Update contact request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7604,9 +8627,9 @@ EmailApi.save_email_model(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name in storage. | 
- **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
+ **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Email document create/update request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7643,9 +8666,9 @@ EmailApi.save_email_model_async(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html | 
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
  **name** | **str**| Email document file name in storage. | 
- **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Calendar properties update request. | 
+ **rq** | [**StorageModelRqOfEmailDto**](StorageModelRqOfEmailDto.md)| Email document create/update request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
@@ -7772,6 +8795,231 @@ EmailApi.save_mail_o_auth_account_async(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**SaveOAuthEmailAccountRequest**](SaveOAuthEmailAccountRequest.md)| Email account information | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_mapi_calendar_model"></a>
+# **save_mapi_calendar_model**
+> save_mapi_calendar_model(self, save_mapi_calendar_model_request)
+
+Save MAPI Calendar to storage.             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    format, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_mapi_calendar_model(
+    SaveMapiCalendarModelRequest(
+        name, 
+        format, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Calendar file name in storage | 
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **rq** | [**StorageModelRqOfMapiCalendarDto**](StorageModelRqOfMapiCalendarDto.md)| Calendar update request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_mapi_calendar_model_async"></a>
+# **save_mapi_calendar_model_async**
+> save_mapi_calendar_model_async(self, save_mapi_calendar_model_request)
+
+Save MAPI Calendar to storage.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_mapi_calendar_model_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    name, 
+    format, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_mapi_calendar_model_async(
+    SaveMapiCalendarModelRequest(
+        name, 
+        format, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Calendar file name in storage | 
+ **format** | **str**| File format Enum, available values: Ics, Msg | 
+ **rq** | [**StorageModelRqOfMapiCalendarDto**](StorageModelRqOfMapiCalendarDto.md)| Calendar update request | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_mapi_contact_model"></a>
+# **save_mapi_contact_model**
+> save_mapi_contact_model(self, save_mapi_contact_model_request)
+
+Save MAPI Contact to storage.             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_mapi_contact_model(
+    SaveMapiContactModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **rq** | [**StorageModelRqOfMapiContactDto**](StorageModelRqOfMapiContactDto.md)| Create/Update contact request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_mapi_contact_model_async"></a>
+# **save_mapi_contact_model_async**
+> save_mapi_contact_model_async(self, save_mapi_contact_model_request)
+
+Save MAPI Contact to storage.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_mapi_contact_model_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_mapi_contact_model_async(
+    SaveMapiContactModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| Contact document format. Enum, available values: VCard, WebDav, Msg | 
+ **name** | **str**| Contact document file name. | 
+ **rq** | [**StorageModelRqOfMapiContactDto**](StorageModelRqOfMapiContactDto.md)| Create/Update contact request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_mapi_message_model"></a>
+# **save_mapi_message_model**
+> save_mapi_message_model(self, save_mapi_message_model_request)
+
+Save MAPI message to storage.             
+
+### Return type
+
+void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_mapi_message_model(
+    SaveMapiMessageModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **name** | **str**| Message file name in storage. | 
+ **rq** | [**StorageModelRqOfMapiMessageDto**](StorageModelRqOfMapiMessageDto.md)| Message create/update request. | 
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+<a name="save_mapi_message_model_async"></a>
+# **save_mapi_message_model_async**
+> save_mapi_message_model_async(self, save_mapi_message_model_request)
+
+Save MAPI message to storage.             
+
+Performs operation asynchronously.
+
+### Return type
+
+Returns multiprocessing.pool.AsyncResult.
+save_mapi_message_model_async(request).get() returns void (empty response body)
+
+### Request Parameters
+```python
+__init__(self, 
+    format, 
+    name, 
+    rq)
+```
+
+### Usage
+```python
+EmailApi.save_mapi_message_model_async(
+    SaveMapiMessageModelRequest(
+        format, 
+        name, 
+        rq))
+```
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**| File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **name** | **str**| Message file name in storage. | 
+ **rq** | [**StorageModelRqOfMapiMessageDto**](StorageModelRqOfMapiMessageDto.md)| Message create/update request. | 
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

@@ -31,6 +31,7 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.append_email_account_base_request import AppendEmailAccountBaseRequest
+from AsposeEmailCloudSdk.models.email_dto import EmailDto
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
@@ -51,7 +52,7 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
         'storage_folder': 'StorageFolderLocation',
         'folder': 'str',
         'mark_as_sent': 'bool',
-        'message': 'object'
+        'message': 'EmailDto'
     }
 
     attribute_map = {
@@ -63,7 +64,7 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
         'message': 'message'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: object = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, folder: str = None, mark_as_sent: bool = None, message: EmailDto = None):
         """
         Append email request             
         :param first_account (str) First account storage file name             
@@ -71,7 +72,7 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
         :param folder (str) Email account folder to store a message             
         :param mark_as_sent (bool) Mark message as sent             
-        :param message (object) Email document             
+        :param message (EmailDto) Email document             
         """
         super(AppendEmailModelRq, self).__init__()
 
@@ -91,24 +92,24 @@ class AppendEmailModelRq(AppendEmailAccountBaseRequest):
             self.message = message
 
     @property
-    def message(self) -> object:
+    def message(self) -> EmailDto:
         """Gets the message of this AppendEmailModelRq.
 
         Email document             
 
         :return: The message of this AppendEmailModelRq.
-        :rtype: object
+        :rtype: EmailDto
         """
         return self._message
 
     @message.setter
-    def message(self, message: object):
+    def message(self, message: EmailDto):
         """Sets the message of this AppendEmailModelRq.
 
         Email document             
 
         :param message: The message of this AppendEmailModelRq.
-        :type: object
+        :type: EmailDto
         """
         if message is None:
             raise ValueError("Invalid value for `message`, must not be `None`")

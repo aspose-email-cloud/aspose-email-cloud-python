@@ -44,7 +44,6 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
-venv/
 .python-version
 
 # Translations
@@ -70,3 +69,4 @@ target/
 .idea/
 .vscode/
 .pytest_cache/
+.venv/

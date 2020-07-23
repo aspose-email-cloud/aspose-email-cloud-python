@@ -35,7 +35,7 @@ class ConvertEmailRequest(BaseRequest):
     Request model for convert_email operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     :param file (str) File to convert
     """
 
@@ -44,7 +44,7 @@ class ConvertEmailRequest(BaseRequest):
         Request model for convert_email operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param format (str) File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
         :param file (str) File to convert
         """
 

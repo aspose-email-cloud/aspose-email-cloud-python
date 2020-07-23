@@ -37,7 +37,7 @@ class SaveContactModelRequest(BaseRequest):
 
     :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
     :param name (str) Contact document file name.
-    :param rq (StorageModelRqOfContactDto) Create contact request.
+    :param rq (StorageModelRqOfContactDto) Create/Update contact request.
     """
 
     def __init__(self, format: str, name: str, rq: StorageModelRqOfContactDto):
@@ -47,7 +47,7 @@ class SaveContactModelRequest(BaseRequest):
 
         :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
         :param name (str) Contact document file name.
-        :param rq (StorageModelRqOfContactDto) Create contact request.
+        :param rq (StorageModelRqOfContactDto) Create/Update contact request.
         """
 
         BaseRequest.__init__(self)

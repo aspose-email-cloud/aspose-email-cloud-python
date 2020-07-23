@@ -35,9 +35,9 @@ class SaveEmailModelRequest(BaseRequest):
     Request model for save_email_model operation.
     Initializes a new instance.
 
-    :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+    :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
     :param name (str) Email document file name in storage.
-    :param rq (StorageModelRqOfEmailDto) Calendar properties update request.
+    :param rq (StorageModelRqOfEmailDto) Email document create/update request.
     """
 
     def __init__(self, format: str, name: str, rq: StorageModelRqOfEmailDto):
@@ -45,9 +45,9 @@ class SaveEmailModelRequest(BaseRequest):
         Request model for save_email_model operation.
         Initializes a new instance.
 
-        :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html
+        :param format (str) File format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
         :param name (str) Email document file name in storage.
-        :param rq (StorageModelRqOfEmailDto) Calendar properties update request.
+        :param rq (StorageModelRqOfEmailDto) Email document create/update request.
         """
 
         BaseRequest.__init__(self)

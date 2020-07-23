@@ -31,6 +31,7 @@ from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
 from AsposeEmailCloudSdk.models.account_base_request import AccountBaseRequest
+from AsposeEmailCloudSdk.models.email_dto import EmailDto
 from AsposeEmailCloudSdk.models.storage_folder_location import StorageFolderLocation
 
 
@@ -49,7 +50,7 @@ class SendEmailModelRq(AccountBaseRequest):
         'first_account': 'str',
         'second_account': 'str',
         'storage_folder': 'StorageFolderLocation',
-        'message': 'object'
+        'message': 'EmailDto'
     }
 
     attribute_map = {
@@ -59,13 +60,13 @@ class SendEmailModelRq(AccountBaseRequest):
         'message': 'message'
     }
 
-    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, message: object = None):
+    def __init__(self, first_account: str = None, second_account: str = None, storage_folder: StorageFolderLocation = None, message: EmailDto = None):
         """
         Send email model request             
         :param first_account (str) First account storage file name             
         :param second_account (str) Additional email account (for example, FirstAccount could be IMAP, and second one could be SMTP)             
         :param storage_folder (StorageFolderLocation) Storage folder location of account files             
-        :param message (object) Message to send             
+        :param message (EmailDto) Message to send             
         """
         super(SendEmailModelRq, self).__init__()
 
@@ -81,24 +82,24 @@ class SendEmailModelRq(AccountBaseRequest):
             self.message = message
 
     @property
-    def message(self) -> object:
+    def message(self) -> EmailDto:
         """Gets the message of this SendEmailModelRq.
 
         Message to send             
 
         :return: The message of this SendEmailModelRq.
-        :rtype: object
+        :rtype: EmailDto
         """
         return self._message
 
     @message.setter
-    def message(self, message: object):
+    def message(self, message: EmailDto):
         """Sets the message of this SendEmailModelRq.
 
         Message to send             
 
         :param message: The message of this SendEmailModelRq.
-        :type: object
+        :type: EmailDto
         """
         self._message = message
 
