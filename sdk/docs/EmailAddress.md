@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **display_name** | **str** | Display name.              | [optional] 
 **preferred** | **bool** | Defines whether email address is preferred.              | 
 **routing_type** | **str** | A routing type for an email.              | [optional] 
-**address** | **str** | Email address.              | [optional] 
+**address** | **str** | Email address.              | 
 **original_address_string** | **str** | The original e-mail address string              | [optional] 
 
 

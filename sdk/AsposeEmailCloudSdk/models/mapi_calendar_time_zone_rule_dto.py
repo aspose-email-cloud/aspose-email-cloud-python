@@ -251,6 +251,10 @@ class MapiCalendarTimeZoneRuleDto(object):
         """
         if month is None:
             raise ValueError("Invalid value for `month`, must not be `None`")
+        if month is not None and month > 12:
+            raise ValueError("Invalid value for `month`, must be a value less than or equal to `12`")
+        if month is not None and month < 0:
+            raise ValueError("Invalid value for `month`, must be a value greater than or equal to `0`")
         self._month = month
 
     @property

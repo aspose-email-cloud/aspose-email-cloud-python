@@ -89,6 +89,8 @@ class EnumWithCustomOfInstantMessengerCategory(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
+        if value is not None and len(value) < 1:
+            raise ValueError("Invalid value for `value`, length must be greater than or equal to `1`")
         self._value = value
 
     @property

@@ -2,7 +2,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | [**list[FileVersion]**](FileVersion.md) |  | [optional] 
+**value** | [**list[FileVersion]**](FileVersion.md) | File versions FileVersion. | [optional] 
 
 
 

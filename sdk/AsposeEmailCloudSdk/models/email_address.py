@@ -203,6 +203,10 @@ class EmailAddress(object):
         :param address: The address of this EmailAddress.
         :type: str
         """
+        if address is None:
+            raise ValueError("Invalid value for `address`, must not be `None`")
+        if address is not None and len(address) < 1:
+            raise ValueError("Invalid value for `address`, length must be greater than or equal to `1`")
         self._address = address
 
     @property

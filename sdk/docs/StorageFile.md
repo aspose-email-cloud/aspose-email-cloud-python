@@ -2,11 +2,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
-**is_folder** | **bool** |  | 
-**modified_date** | **datetime** |  | [optional] 
-**size** | **int** |  | 
-**path** | **str** |  | [optional] 
+**name** | **str** | File or folder name. | [optional] 
+**is_folder** | **bool** | True if it is a folder. | 
+**modified_date** | **datetime** | File or folder last modified DateTime. | [optional] 
+**size** | **int** | File or folder size. | 
+**path** | **str** | File or folder path. | [optional] 
 
 
 

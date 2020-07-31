@@ -8,7 +8,6 @@ import pytest
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../sdk"))
 from AsposeEmailCloudSdk import models
-from AsposeEmailCloudSdk.models import requests
 from conftest import EmailApiData
 
 

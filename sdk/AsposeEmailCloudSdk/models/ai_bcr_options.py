@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class AiBcrOptions(object):
-    """Recognition options             
+    """Recognition options.             
     """
 
     """
@@ -54,9 +54,9 @@ class AiBcrOptions(object):
 
     def __init__(self, languages: str = None, countries: str = None):
         """
-        Recognition options             
-        :param languages (str) Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default             
-        :param countries (str) Comma-separated codes of countries             
+        Recognition options.             
+        :param languages (str) Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
+        :param countries (str) Comma-separated codes of countries.             
         """
 
         self._languages = None
@@ -71,7 +71,7 @@ class AiBcrOptions(object):
     def languages(self) -> str:
         """Gets the languages of this AiBcrOptions.
 
-        Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default             
+        Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
 
         :return: The languages of this AiBcrOptions.
         :rtype: str
@@ -82,7 +82,7 @@ class AiBcrOptions(object):
     def languages(self, languages: str):
         """Sets the languages of this AiBcrOptions.
 
-        Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default             
+        Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
 
         :param languages: The languages of this AiBcrOptions.
         :type: str
@@ -93,7 +93,7 @@ class AiBcrOptions(object):
     def countries(self) -> str:
         """Gets the countries of this AiBcrOptions.
 
-        Comma-separated codes of countries             
+        Comma-separated codes of countries.             
 
         :return: The countries of this AiBcrOptions.
         :rtype: str
@@ -104,7 +104,7 @@ class AiBcrOptions(object):
     def countries(self, countries: str):
         """Sets the countries of this AiBcrOptions.
 
-        Comma-separated codes of countries             
+        Comma-separated codes of countries.             
 
         :param countries: The countries of this AiBcrOptions.
         :type: str

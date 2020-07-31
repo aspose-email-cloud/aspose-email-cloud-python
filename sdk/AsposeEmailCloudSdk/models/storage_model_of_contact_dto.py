@@ -88,6 +88,8 @@ class StorageModelOfContactDto(object):
         :param storage_file: The storage_file of this StorageModelOfContactDto.
         :type: StorageFileLocation
         """
+        if storage_file is None:
+            raise ValueError("Invalid value for `storage_file`, must not be `None`")
         self._storage_file = storage_file
 
     @property
@@ -108,6 +110,8 @@ class StorageModelOfContactDto(object):
         :param value: The value of this StorageModelOfContactDto.
         :type: ContactDto
         """
+        if value is None:
+            raise ValueError("Invalid value for `value`, must not be `None`")
         self._value = value
 
     def to_dict(self):

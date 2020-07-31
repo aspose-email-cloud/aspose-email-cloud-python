@@ -2,7 +2,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | **str** | Contains the email address. | [optional] 
+**address** | **str** | Contains the email address. | 
 
 
 

@@ -53,7 +53,7 @@ class AiBcrImage(object):
     def __init__(self, is_single: bool = None):
         """
         Image for recognition             
-        :param is_single (bool) Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+        :param is_single (bool) Determines that image contains single VCard or more.             
         """
 
         self._is_single = None
@@ -65,7 +65,7 @@ class AiBcrImage(object):
     def is_single(self) -> bool:
         """Gets the is_single of this AiBcrImage.
 
-        Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+        Determines that image contains single VCard or more.             
 
         :return: The is_single of this AiBcrImage.
         :rtype: bool
@@ -76,7 +76,7 @@ class AiBcrImage(object):
     def is_single(self, is_single: bool):
         """Sets the is_single of this AiBcrImage.
 
-        Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
+        Determines that image contains single VCard or more.             
 
         :param is_single: The is_single of this AiBcrImage.
         :type: bool

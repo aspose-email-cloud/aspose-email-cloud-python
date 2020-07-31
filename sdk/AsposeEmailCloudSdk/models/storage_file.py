@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class StorageFile(object):
-    """
+    """File or folder information
     """
 
     """
@@ -60,12 +60,12 @@ class StorageFile(object):
 
     def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None):
         """
-        
-        :param name (str) 
-        :param is_folder (bool) 
-        :param modified_date (datetime) 
-        :param size (int) 
-        :param path (str) 
+        File or folder information
+        :param name (str) File or folder name.
+        :param is_folder (bool) True if it is a folder.
+        :param modified_date (datetime) File or folder last modified DateTime.
+        :param size (int) File or folder size.
+        :param path (str) File or folder path.
         """
 
         self._name = None
@@ -89,6 +89,7 @@ class StorageFile(object):
     def name(self) -> str:
         """Gets the name of this StorageFile.
 
+        File or folder name.
 
         :return: The name of this StorageFile.
         :rtype: str
@@ -99,6 +100,7 @@ class StorageFile(object):
     def name(self, name: str):
         """Sets the name of this StorageFile.
 
+        File or folder name.
 
         :param name: The name of this StorageFile.
         :type: str
@@ -109,6 +111,7 @@ class StorageFile(object):
     def is_folder(self) -> bool:
         """Gets the is_folder of this StorageFile.
 
+        True if it is a folder.
 
         :return: The is_folder of this StorageFile.
         :rtype: bool
@@ -119,6 +122,7 @@ class StorageFile(object):
     def is_folder(self, is_folder: bool):
         """Sets the is_folder of this StorageFile.
 
+        True if it is a folder.
 
         :param is_folder: The is_folder of this StorageFile.
         :type: bool
@@ -131,6 +135,7 @@ class StorageFile(object):
     def modified_date(self) -> datetime:
         """Gets the modified_date of this StorageFile.
 
+        File or folder last modified DateTime.
 
         :return: The modified_date of this StorageFile.
         :rtype: datetime
@@ -141,6 +146,7 @@ class StorageFile(object):
     def modified_date(self, modified_date: datetime):
         """Sets the modified_date of this StorageFile.
 
+        File or folder last modified DateTime.
 
         :param modified_date: The modified_date of this StorageFile.
         :type: datetime
@@ -151,6 +157,7 @@ class StorageFile(object):
     def size(self) -> int:
         """Gets the size of this StorageFile.
 
+        File or folder size.
 
         :return: The size of this StorageFile.
         :rtype: int
@@ -161,6 +168,7 @@ class StorageFile(object):
     def size(self, size: int):
         """Sets the size of this StorageFile.
 
+        File or folder size.
 
         :param size: The size of this StorageFile.
         :type: int
@@ -173,6 +181,7 @@ class StorageFile(object):
     def path(self) -> str:
         """Gets the path of this StorageFile.
 
+        File or folder path.
 
         :return: The path of this StorageFile.
         :rtype: str
@@ -183,6 +192,7 @@ class StorageFile(object):
     def path(self, path: str):
         """Sets the path of this StorageFile.
 
+        File or folder path.
 
         :param path: The path of this StorageFile.
         :type: str

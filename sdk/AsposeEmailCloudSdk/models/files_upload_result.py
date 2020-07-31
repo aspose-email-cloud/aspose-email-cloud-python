@@ -34,7 +34,7 @@ from AsposeEmailCloudSdk.models.error import Error
 
 
 class FilesUploadResult(object):
-    """
+    """File upload result
     """
 
     """
@@ -56,9 +56,9 @@ class FilesUploadResult(object):
 
     def __init__(self, uploaded: List[str] = None, errors: List[Error] = None):
         """
-        
-        :param uploaded (List[str]) 
-        :param errors (List[Error]) 
+        File upload result
+        :param uploaded (List[str]) List of uploaded file names
+        :param errors (List[Error]) List of errors.
         """
 
         self._uploaded = None
@@ -73,6 +73,7 @@ class FilesUploadResult(object):
     def uploaded(self) -> List[str]:
         """Gets the uploaded of this FilesUploadResult.
 
+        List of uploaded file names
 
         :return: The uploaded of this FilesUploadResult.
         :rtype: list[str]
@@ -83,6 +84,7 @@ class FilesUploadResult(object):
     def uploaded(self, uploaded: List[str]):
         """Sets the uploaded of this FilesUploadResult.
 
+        List of uploaded file names
 
         :param uploaded: The uploaded of this FilesUploadResult.
         :type: list[str]
@@ -93,6 +95,7 @@ class FilesUploadResult(object):
     def errors(self) -> List[Error]:
         """Gets the errors of this FilesUploadResult.
 
+        List of errors.
 
         :return: The errors of this FilesUploadResult.
         :rtype: list[Error]
@@ -103,6 +106,7 @@ class FilesUploadResult(object):
     def errors(self, errors: List[Error]):
         """Sets the errors of this FilesUploadResult.
 
+        List of errors.
 
         :param errors: The errors of this FilesUploadResult.
         :type: list[Error]

@@ -117,6 +117,10 @@ class ContactPhoto(object):
         :param base64_data: The base64_data of this ContactPhoto.
         :type: str
         """
+        if base64_data is None:
+            raise ValueError("Invalid value for `base64_data`, must not be `None`")
+        if base64_data is not None and len(base64_data) < 1:
+            raise ValueError("Invalid value for `base64_data`, length must be greater than or equal to `1`")
         self._base64_data = base64_data
 
     @property
