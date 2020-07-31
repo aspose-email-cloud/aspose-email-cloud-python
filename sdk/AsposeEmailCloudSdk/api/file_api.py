@@ -38,7 +38,7 @@ class FileApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(FileApi, self).__init__(api_client)
             
     def copy_file(self, request: CopyFileRequest):
         """Copy file
@@ -56,16 +56,35 @@ class FileApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/file/copy/{srcPath}'
+        path_params = {}
+        if request.src_path is not None:
+            path_params[self._lowercase_first_letter('srcPath')] = request.src_path
 
         query_params = []
-        if request.dest_path is not None:
-            query_params.append((self._lowercase_first_letter('destPath'), request.dest_path))
-        if request.src_storage_name is not None:
-            query_params.append((self._lowercase_first_letter('srcStorageName'), request.src_storage_name))
-        if request.dest_storage_name is not None:
-            query_params.append((self._lowercase_first_letter('destStorageName'), request.dest_storage_name))
-        if request.version_id is not None:
-            query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
+        path_parameter = '{' + self._lowercase_first_letter('destPath') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.dest_path if request.dest_path is not None else '')
+        else:
+            if request.dest_path is not None:
+                query_params.append((self._lowercase_first_letter('destPath'), request.dest_path))
+        path_parameter = '{' + self._lowercase_first_letter('srcStorageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.src_storage_name if request.src_storage_name is not None else '')
+        else:
+            if request.src_storage_name is not None:
+                query_params.append((self._lowercase_first_letter('srcStorageName'), request.src_storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('destStorageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.dest_storage_name if request.dest_storage_name is not None else '')
+        else:
+            if request.dest_storage_name is not None:
+                query_params.append((self._lowercase_first_letter('destStorageName'), request.dest_storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('versionId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.version_id if request.version_id is not None else '')
+        else:
+            if request.version_id is not None:
+                query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
 
         form_params = []
         local_var_files = []
@@ -82,7 +101,7 @@ class FileApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
@@ -100,12 +119,23 @@ class FileApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/file/{path}'
+        path_params = {}
+        if request.path is not None:
+            path_params[self._lowercase_first_letter('path')] = request.path
 
         query_params = []
-        if request.storage_name is not None:
-            query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
-        if request.version_id is not None:
-            query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
+        path_parameter = '{' + self._lowercase_first_letter('storageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage_name if request.storage_name is not None else '')
+        else:
+            if request.storage_name is not None:
+                query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('versionId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.version_id if request.version_id is not None else '')
+        else:
+            if request.version_id is not None:
+                query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
 
         form_params = []
         local_var_files = []
@@ -122,7 +152,7 @@ class FileApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'DELETE', None)
@@ -140,12 +170,23 @@ class FileApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/file/{path}'
+        path_params = {}
+        if request.path is not None:
+            path_params[self._lowercase_first_letter('path')] = request.path
 
         query_params = []
-        if request.storage_name is not None:
-            query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
-        if request.version_id is not None:
-            query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
+        path_parameter = '{' + self._lowercase_first_letter('storageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage_name if request.storage_name is not None else '')
+        else:
+            if request.storage_name is not None:
+                query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('versionId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.version_id if request.version_id is not None else '')
+        else:
+            if request.version_id is not None:
+                query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
 
         form_params = []
         local_var_files = []
@@ -162,7 +203,7 @@ class FileApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'file')
@@ -183,16 +224,35 @@ class FileApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/file/move/{srcPath}'
+        path_params = {}
+        if request.src_path is not None:
+            path_params[self._lowercase_first_letter('srcPath')] = request.src_path
 
         query_params = []
-        if request.dest_path is not None:
-            query_params.append((self._lowercase_first_letter('destPath'), request.dest_path))
-        if request.src_storage_name is not None:
-            query_params.append((self._lowercase_first_letter('srcStorageName'), request.src_storage_name))
-        if request.dest_storage_name is not None:
-            query_params.append((self._lowercase_first_letter('destStorageName'), request.dest_storage_name))
-        if request.version_id is not None:
-            query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
+        path_parameter = '{' + self._lowercase_first_letter('destPath') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.dest_path if request.dest_path is not None else '')
+        else:
+            if request.dest_path is not None:
+                query_params.append((self._lowercase_first_letter('destPath'), request.dest_path))
+        path_parameter = '{' + self._lowercase_first_letter('srcStorageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.src_storage_name if request.src_storage_name is not None else '')
+        else:
+            if request.src_storage_name is not None:
+                query_params.append((self._lowercase_first_letter('srcStorageName'), request.src_storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('destStorageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.dest_storage_name if request.dest_storage_name is not None else '')
+        else:
+            if request.dest_storage_name is not None:
+                query_params.append((self._lowercase_first_letter('destStorageName'), request.dest_storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('versionId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.version_id if request.version_id is not None else '')
+        else:
+            if request.version_id is not None:
+                query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
 
         form_params = []
         local_var_files = []
@@ -209,7 +269,7 @@ class FileApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
@@ -230,10 +290,17 @@ class FileApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/file/{path}'
+        path_params = {}
+        if request.path is not None:
+            path_params[self._lowercase_first_letter('path')] = request.path
 
         query_params = []
-        if request.storage_name is not None:
-            query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('storageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage_name if request.storage_name is not None else '')
+        else:
+            if request.storage_name is not None:
+                query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
 
         form_params = []
         local_var_files = []
@@ -252,7 +319,7 @@ class FileApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'FilesUploadResult')

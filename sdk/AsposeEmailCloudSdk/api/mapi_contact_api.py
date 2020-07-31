@@ -38,7 +38,7 @@ class MapiContactApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(MapiContactApi, self).__init__(api_client)
             
     def as_contact_dto(self, mapi_contact_dto: MapiContactDto) -> ContactDto:
         """Converts MAPI contact model to ContactDto model.             
@@ -112,10 +112,15 @@ class MapiContactApi(ApiBase):
 
         collection_formats = {}
         path = '/email/MapiContact/from-file'
+        path_params = {}
 
         query_params = []
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
 
         form_params = []
         local_var_files = []
@@ -134,7 +139,7 @@ class MapiContactApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiContactDto')
@@ -155,16 +160,33 @@ class MapiContactApi(ApiBase):
 
         collection_formats = {}
         path = '/email/MapiContact'
+        path_params = {}
 
         query_params = []
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
-        if request.file_name is not None:
-            query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('fileName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.file_name if request.file_name is not None else '')
+        else:
+            if request.file_name is not None:
+                query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
 
         form_params = []
         local_var_files = []
@@ -181,7 +203,7 @@ class MapiContactApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MapiContactDto')

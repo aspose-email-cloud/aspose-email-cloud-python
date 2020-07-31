@@ -38,7 +38,7 @@ class AiNameApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(AiNameApi, self).__init__(api_client)
             
     def complete(self, request: AiNameCompleteRequest) -> AiNameWeightedVariants:
         """The call proposes k most probable names for given starting characters.             
@@ -53,20 +53,45 @@ class AiNameApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiName/complete'
+        path_params = {}
 
         query_params = []
-        if request.name is not None:
-            query_params.append((self._lowercase_first_letter('name'), request.name))
-        if request.language is not None:
-            query_params.append((self._lowercase_first_letter('language'), request.language))
-        if request.location is not None:
-            query_params.append((self._lowercase_first_letter('location'), request.location))
-        if request.encoding is not None:
-            query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
-        if request.script is not None:
-            query_params.append((self._lowercase_first_letter('script'), request.script))
-        if request.style is not None:
-            query_params.append((self._lowercase_first_letter('style'), request.style))
+        path_parameter = '{' + self._lowercase_first_letter('name') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.name if request.name is not None else '')
+        else:
+            if request.name is not None:
+                query_params.append((self._lowercase_first_letter('name'), request.name))
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.language if request.language is not None else '')
+        else:
+            if request.language is not None:
+                query_params.append((self._lowercase_first_letter('language'), request.language))
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.location if request.location is not None else '')
+        else:
+            if request.location is not None:
+                query_params.append((self._lowercase_first_letter('location'), request.location))
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.encoding if request.encoding is not None else '')
+        else:
+            if request.encoding is not None:
+                query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.script if request.script is not None else '')
+        else:
+            if request.script is not None:
+                query_params.append((self._lowercase_first_letter('script'), request.script))
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.style if request.style is not None else '')
+        else:
+            if request.style is not None:
+                query_params.append((self._lowercase_first_letter('style'), request.style))
 
         form_params = []
         local_var_files = []
@@ -83,7 +108,7 @@ class AiNameApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameWeightedVariants')
@@ -101,20 +126,45 @@ class AiNameApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiName/expand'
+        path_params = {}
 
         query_params = []
-        if request.name is not None:
-            query_params.append((self._lowercase_first_letter('name'), request.name))
-        if request.language is not None:
-            query_params.append((self._lowercase_first_letter('language'), request.language))
-        if request.location is not None:
-            query_params.append((self._lowercase_first_letter('location'), request.location))
-        if request.encoding is not None:
-            query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
-        if request.script is not None:
-            query_params.append((self._lowercase_first_letter('script'), request.script))
-        if request.style is not None:
-            query_params.append((self._lowercase_first_letter('style'), request.style))
+        path_parameter = '{' + self._lowercase_first_letter('name') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.name if request.name is not None else '')
+        else:
+            if request.name is not None:
+                query_params.append((self._lowercase_first_letter('name'), request.name))
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.language if request.language is not None else '')
+        else:
+            if request.language is not None:
+                query_params.append((self._lowercase_first_letter('language'), request.language))
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.location if request.location is not None else '')
+        else:
+            if request.location is not None:
+                query_params.append((self._lowercase_first_letter('location'), request.location))
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.encoding if request.encoding is not None else '')
+        else:
+            if request.encoding is not None:
+                query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.script if request.script is not None else '')
+        else:
+            if request.script is not None:
+                query_params.append((self._lowercase_first_letter('script'), request.script))
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.style if request.style is not None else '')
+        else:
+            if request.style is not None:
+                query_params.append((self._lowercase_first_letter('style'), request.style))
 
         form_params = []
         local_var_files = []
@@ -131,7 +181,7 @@ class AiNameApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameWeightedVariants')
@@ -177,22 +227,51 @@ class AiNameApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiName/format'
+        path_params = {}
 
         query_params = []
-        if request.name is not None:
-            query_params.append((self._lowercase_first_letter('name'), request.name))
-        if request.language is not None:
-            query_params.append((self._lowercase_first_letter('language'), request.language))
-        if request.location is not None:
-            query_params.append((self._lowercase_first_letter('location'), request.location))
-        if request.encoding is not None:
-            query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
-        if request.script is not None:
-            query_params.append((self._lowercase_first_letter('script'), request.script))
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
-        if request.style is not None:
-            query_params.append((self._lowercase_first_letter('style'), request.style))
+        path_parameter = '{' + self._lowercase_first_letter('name') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.name if request.name is not None else '')
+        else:
+            if request.name is not None:
+                query_params.append((self._lowercase_first_letter('name'), request.name))
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.language if request.language is not None else '')
+        else:
+            if request.language is not None:
+                query_params.append((self._lowercase_first_letter('language'), request.language))
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.location if request.location is not None else '')
+        else:
+            if request.location is not None:
+                query_params.append((self._lowercase_first_letter('location'), request.location))
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.encoding if request.encoding is not None else '')
+        else:
+            if request.encoding is not None:
+                query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.script if request.script is not None else '')
+        else:
+            if request.script is not None:
+                query_params.append((self._lowercase_first_letter('script'), request.script))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.style if request.style is not None else '')
+        else:
+            if request.style is not None:
+                query_params.append((self._lowercase_first_letter('style'), request.style))
 
         form_params = []
         local_var_files = []
@@ -209,7 +288,7 @@ class AiNameApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameFormatted')
@@ -255,20 +334,45 @@ class AiNameApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiName/genderize'
+        path_params = {}
 
         query_params = []
-        if request.name is not None:
-            query_params.append((self._lowercase_first_letter('name'), request.name))
-        if request.language is not None:
-            query_params.append((self._lowercase_first_letter('language'), request.language))
-        if request.location is not None:
-            query_params.append((self._lowercase_first_letter('location'), request.location))
-        if request.encoding is not None:
-            query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
-        if request.script is not None:
-            query_params.append((self._lowercase_first_letter('script'), request.script))
-        if request.style is not None:
-            query_params.append((self._lowercase_first_letter('style'), request.style))
+        path_parameter = '{' + self._lowercase_first_letter('name') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.name if request.name is not None else '')
+        else:
+            if request.name is not None:
+                query_params.append((self._lowercase_first_letter('name'), request.name))
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.language if request.language is not None else '')
+        else:
+            if request.language is not None:
+                query_params.append((self._lowercase_first_letter('language'), request.language))
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.location if request.location is not None else '')
+        else:
+            if request.location is not None:
+                query_params.append((self._lowercase_first_letter('location'), request.location))
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.encoding if request.encoding is not None else '')
+        else:
+            if request.encoding is not None:
+                query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.script if request.script is not None else '')
+        else:
+            if request.script is not None:
+                query_params.append((self._lowercase_first_letter('script'), request.script))
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.style if request.style is not None else '')
+        else:
+            if request.style is not None:
+                query_params.append((self._lowercase_first_letter('style'), request.style))
 
         form_params = []
         local_var_files = []
@@ -285,7 +389,7 @@ class AiNameApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameGenderHypothesisList')
@@ -334,22 +438,51 @@ class AiNameApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiName/match'
+        path_params = {}
 
         query_params = []
-        if request.name is not None:
-            query_params.append((self._lowercase_first_letter('name'), request.name))
-        if request.other_name is not None:
-            query_params.append((self._lowercase_first_letter('otherName'), request.other_name))
-        if request.language is not None:
-            query_params.append((self._lowercase_first_letter('language'), request.language))
-        if request.location is not None:
-            query_params.append((self._lowercase_first_letter('location'), request.location))
-        if request.encoding is not None:
-            query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
-        if request.script is not None:
-            query_params.append((self._lowercase_first_letter('script'), request.script))
-        if request.style is not None:
-            query_params.append((self._lowercase_first_letter('style'), request.style))
+        path_parameter = '{' + self._lowercase_first_letter('name') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.name if request.name is not None else '')
+        else:
+            if request.name is not None:
+                query_params.append((self._lowercase_first_letter('name'), request.name))
+        path_parameter = '{' + self._lowercase_first_letter('otherName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.other_name if request.other_name is not None else '')
+        else:
+            if request.other_name is not None:
+                query_params.append((self._lowercase_first_letter('otherName'), request.other_name))
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.language if request.language is not None else '')
+        else:
+            if request.language is not None:
+                query_params.append((self._lowercase_first_letter('language'), request.language))
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.location if request.location is not None else '')
+        else:
+            if request.location is not None:
+                query_params.append((self._lowercase_first_letter('location'), request.location))
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.encoding if request.encoding is not None else '')
+        else:
+            if request.encoding is not None:
+                query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.script if request.script is not None else '')
+        else:
+            if request.script is not None:
+                query_params.append((self._lowercase_first_letter('script'), request.script))
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.style if request.style is not None else '')
+        else:
+            if request.style is not None:
+                query_params.append((self._lowercase_first_letter('style'), request.style))
 
         form_params = []
         local_var_files = []
@@ -366,7 +499,7 @@ class AiNameApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameMatchResult')
@@ -412,20 +545,45 @@ class AiNameApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiName/parse'
+        path_params = {}
 
         query_params = []
-        if request.name is not None:
-            query_params.append((self._lowercase_first_letter('name'), request.name))
-        if request.language is not None:
-            query_params.append((self._lowercase_first_letter('language'), request.language))
-        if request.location is not None:
-            query_params.append((self._lowercase_first_letter('location'), request.location))
-        if request.encoding is not None:
-            query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
-        if request.script is not None:
-            query_params.append((self._lowercase_first_letter('script'), request.script))
-        if request.style is not None:
-            query_params.append((self._lowercase_first_letter('style'), request.style))
+        path_parameter = '{' + self._lowercase_first_letter('name') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.name if request.name is not None else '')
+        else:
+            if request.name is not None:
+                query_params.append((self._lowercase_first_letter('name'), request.name))
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.language if request.language is not None else '')
+        else:
+            if request.language is not None:
+                query_params.append((self._lowercase_first_letter('language'), request.language))
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.location if request.location is not None else '')
+        else:
+            if request.location is not None:
+                query_params.append((self._lowercase_first_letter('location'), request.location))
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.encoding if request.encoding is not None else '')
+        else:
+            if request.encoding is not None:
+                query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.script if request.script is not None else '')
+        else:
+            if request.script is not None:
+                query_params.append((self._lowercase_first_letter('script'), request.script))
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.style if request.style is not None else '')
+        else:
+            if request.style is not None:
+                query_params.append((self._lowercase_first_letter('style'), request.style))
 
         form_params = []
         local_var_files = []
@@ -442,7 +600,7 @@ class AiNameApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameComponentList')
@@ -460,20 +618,45 @@ class AiNameApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiName/parse-email-address'
+        path_params = {}
 
         query_params = []
-        if request.email_address is not None:
-            query_params.append((self._lowercase_first_letter('emailAddress'), request.email_address))
-        if request.language is not None:
-            query_params.append((self._lowercase_first_letter('language'), request.language))
-        if request.location is not None:
-            query_params.append((self._lowercase_first_letter('location'), request.location))
-        if request.encoding is not None:
-            query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
-        if request.script is not None:
-            query_params.append((self._lowercase_first_letter('script'), request.script))
-        if request.style is not None:
-            query_params.append((self._lowercase_first_letter('style'), request.style))
+        path_parameter = '{' + self._lowercase_first_letter('emailAddress') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.email_address if request.email_address is not None else '')
+        else:
+            if request.email_address is not None:
+                query_params.append((self._lowercase_first_letter('emailAddress'), request.email_address))
+        path_parameter = '{' + self._lowercase_first_letter('language') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.language if request.language is not None else '')
+        else:
+            if request.language is not None:
+                query_params.append((self._lowercase_first_letter('language'), request.language))
+        path_parameter = '{' + self._lowercase_first_letter('location') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.location if request.location is not None else '')
+        else:
+            if request.location is not None:
+                query_params.append((self._lowercase_first_letter('location'), request.location))
+        path_parameter = '{' + self._lowercase_first_letter('encoding') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.encoding if request.encoding is not None else '')
+        else:
+            if request.encoding is not None:
+                query_params.append((self._lowercase_first_letter('encoding'), request.encoding))
+        path_parameter = '{' + self._lowercase_first_letter('script') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.script if request.script is not None else '')
+        else:
+            if request.script is not None:
+                query_params.append((self._lowercase_first_letter('script'), request.script))
+        path_parameter = '{' + self._lowercase_first_letter('style') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.style if request.style is not None else '')
+        else:
+            if request.style is not None:
+                query_params.append((self._lowercase_first_letter('style'), request.style))
 
         form_params = []
         local_var_files = []
@@ -490,7 +673,7 @@ class AiNameApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameExtractedList')

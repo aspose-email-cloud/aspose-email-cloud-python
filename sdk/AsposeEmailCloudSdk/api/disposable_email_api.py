@@ -38,7 +38,7 @@ class DisposableEmailApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(DisposableEmailApi, self).__init__(api_client)
             
     def is_disposable(self, request: DisposableEmailIsDisposableRequest) -> ValueTOfBoolean:
         """Check email address is disposable             
@@ -53,10 +53,15 @@ class DisposableEmailApi(ApiBase):
 
         collection_formats = {}
         path = '/email/disposable/is-disposable'
+        path_params = {}
 
         query_params = []
-        if request.address is not None:
-            query_params.append((self._lowercase_first_letter('address'), request.address))
+        path_parameter = '{' + self._lowercase_first_letter('address') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.address if request.address is not None else '')
+        else:
+            if request.address is not None:
+                query_params.append((self._lowercase_first_letter('address'), request.address))
 
         form_params = []
         local_var_files = []
@@ -73,7 +78,7 @@ class DisposableEmailApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'ValueTOfBoolean')

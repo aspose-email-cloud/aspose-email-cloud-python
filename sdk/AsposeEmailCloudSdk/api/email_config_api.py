@@ -38,7 +38,7 @@ class EmailConfigApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(EmailConfigApi, self).__init__(api_client)
             
     def discover(self, request: EmailConfigDiscoverRequest) -> EmailAccountConfigList:
         """Discover email accounts by email address. Does not validate discovered accounts.             
@@ -53,12 +53,21 @@ class EmailConfigApi(ApiBase):
 
         collection_formats = {}
         path = '/email/config/discover'
+        path_params = {}
 
         query_params = []
-        if request.address is not None:
-            query_params.append((self._lowercase_first_letter('address'), request.address))
-        if request.fast_processing is not None:
-            query_params.append((self._lowercase_first_letter('fastProcessing'), request.fast_processing))
+        path_parameter = '{' + self._lowercase_first_letter('address') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.address if request.address is not None else '')
+        else:
+            if request.address is not None:
+                query_params.append((self._lowercase_first_letter('address'), request.address))
+        path_parameter = '{' + self._lowercase_first_letter('fastProcessing') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.fast_processing if request.fast_processing is not None else '')
+        else:
+            if request.fast_processing is not None:
+                query_params.append((self._lowercase_first_letter('fastProcessing'), request.fast_processing))
 
         form_params = []
         local_var_files = []
@@ -75,7 +84,7 @@ class EmailConfigApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailAccountConfigList')

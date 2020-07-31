@@ -38,7 +38,7 @@ class MapiCalendarApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(MapiCalendarApi, self).__init__(api_client)
             
     def as_calendar_dto(self, mapi_calendar_dto: MapiCalendarDto) -> CalendarDto:
         """Converts MAPI calendar model to CalendarDto model.             
@@ -109,6 +109,7 @@ class MapiCalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/MapiCalendar/from-file'
+        path_params = {}
 
         query_params = []
 
@@ -129,7 +130,7 @@ class MapiCalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiCalendarDto')
@@ -147,14 +148,27 @@ class MapiCalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/MapiCalendar'
+        path_params = {}
 
         query_params = []
-        if request.file_name is not None:
-            query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('fileName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.file_name if request.file_name is not None else '')
+        else:
+            if request.file_name is not None:
+                query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
 
         form_params = []
         local_var_files = []
@@ -171,7 +185,7 @@ class MapiCalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MapiCalendarDto')

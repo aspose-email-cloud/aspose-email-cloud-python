@@ -38,7 +38,7 @@ class CalendarApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(CalendarApi, self).__init__(api_client)
             
     def as_alternate(self, request: CalendarAsAlternateRequest) -> AlternateView:
         """Convert iCalendar to AlternateView             
@@ -140,10 +140,15 @@ class CalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/Calendar/convert'
+        path_params = {}
 
         query_params = []
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
 
         form_params = []
         local_var_files = []
@@ -162,7 +167,7 @@ class CalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
@@ -180,6 +185,7 @@ class CalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/Calendar/from-file'
+        path_params = {}
 
         query_params = []
 
@@ -200,7 +206,7 @@ class CalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'CalendarDto')
@@ -218,14 +224,27 @@ class CalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/Calendar'
+        path_params = {}
 
         query_params = []
-        if request.file_name is not None:
-            query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('fileName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.file_name if request.file_name is not None else '')
+        else:
+            if request.file_name is not None:
+                query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
 
         form_params = []
         local_var_files = []
@@ -242,7 +261,7 @@ class CalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'CalendarDto')
@@ -263,18 +282,39 @@ class CalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/Calendar/as-alternate'
+        path_params = {}
 
         query_params = []
-        if request.file_name is not None:
-            query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
-        if request.calendar_action is not None:
-            query_params.append((self._lowercase_first_letter('calendarAction'), request.calendar_action))
-        if request.sequence_id is not None:
-            query_params.append((self._lowercase_first_letter('sequenceId'), request.sequence_id))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('fileName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.file_name if request.file_name is not None else '')
+        else:
+            if request.file_name is not None:
+                query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
+        path_parameter = '{' + self._lowercase_first_letter('calendarAction') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.calendar_action if request.calendar_action is not None else '')
+        else:
+            if request.calendar_action is not None:
+                query_params.append((self._lowercase_first_letter('calendarAction'), request.calendar_action))
+        path_parameter = '{' + self._lowercase_first_letter('sequenceId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.sequence_id if request.sequence_id is not None else '')
+        else:
+            if request.sequence_id is not None:
+                query_params.append((self._lowercase_first_letter('sequenceId'), request.sequence_id))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
 
         form_params = []
         local_var_files = []
@@ -291,7 +331,7 @@ class CalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AlternateView')
@@ -312,16 +352,33 @@ class CalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/Calendar/as-file'
+        path_params = {}
 
         query_params = []
-        if request.file_name is not None:
-            query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('fileName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.file_name if request.file_name is not None else '')
+        else:
+            if request.file_name is not None:
+                query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
 
         form_params = []
         local_var_files = []
@@ -338,7 +395,7 @@ class CalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'file')
@@ -356,16 +413,33 @@ class CalendarApi(ApiBase):
 
         collection_formats = {}
         path = '/email/Calendar/list'
+        path_params = {}
 
         query_params = []
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.items_per_page is not None:
-            query_params.append((self._lowercase_first_letter('itemsPerPage'), request.items_per_page))
-        if request.page_number is not None:
-            query_params.append((self._lowercase_first_letter('pageNumber'), request.page_number))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('itemsPerPage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.items_per_page if request.items_per_page is not None else '')
+        else:
+            if request.items_per_page is not None:
+                query_params.append((self._lowercase_first_letter('itemsPerPage'), request.items_per_page))
+        path_parameter = '{' + self._lowercase_first_letter('pageNumber') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.page_number if request.page_number is not None else '')
+        else:
+            if request.page_number is not None:
+                query_params.append((self._lowercase_first_letter('pageNumber'), request.page_number))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
 
         form_params = []
         local_var_files = []
@@ -382,7 +456,7 @@ class CalendarApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'CalendarStorageList')

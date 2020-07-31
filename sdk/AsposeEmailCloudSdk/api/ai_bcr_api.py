@@ -38,7 +38,7 @@ class AiBcrApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(AiBcrApi, self).__init__(api_client)
             
     def parse(self, request: AiBcrParseRequest) -> ContactList:
         """Parse images to vCard document models             
@@ -53,14 +53,27 @@ class AiBcrApi(ApiBase):
 
         collection_formats = {}
         path = '/email/AiBcr/parse'
+        path_params = {}
 
         query_params = []
-        if request.countries is not None:
-            query_params.append((self._lowercase_first_letter('countries'), request.countries))
-        if request.languages is not None:
-            query_params.append((self._lowercase_first_letter('languages'), request.languages))
-        if request.is_single is not None:
-            query_params.append((self._lowercase_first_letter('isSingle'), request.is_single))
+        path_parameter = '{' + self._lowercase_first_letter('countries') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.countries if request.countries is not None else '')
+        else:
+            if request.countries is not None:
+                query_params.append((self._lowercase_first_letter('countries'), request.countries))
+        path_parameter = '{' + self._lowercase_first_letter('languages') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.languages if request.languages is not None else '')
+        else:
+            if request.languages is not None:
+                query_params.append((self._lowercase_first_letter('languages'), request.languages))
+        path_parameter = '{' + self._lowercase_first_letter('isSingle') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.is_single if request.is_single is not None else '')
+        else:
+            if request.is_single is not None:
+                query_params.append((self._lowercase_first_letter('isSingle'), request.is_single))
 
         form_params = []
         local_var_files = []
@@ -79,7 +92,7 @@ class AiBcrApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'ContactList')

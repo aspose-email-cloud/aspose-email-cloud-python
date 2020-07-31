@@ -38,7 +38,7 @@ class ClientMessageApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(ClientMessageApi, self).__init__(api_client)
             
     def append(self, request: ClientMessageAppendRequest) -> ValueTOfString:
         """Add email message to specified folder in email account.             
@@ -84,20 +84,45 @@ class ClientMessageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/message/file/append'
+        path_params = {}
 
         query_params = []
-        if request.account is not None:
-            query_params.append((self._lowercase_first_letter('account'), request.account))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.account_storage_folder is not None:
-            query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.mark_as_sent is not None:
-            query_params.append((self._lowercase_first_letter('markAsSent'), request.mark_as_sent))
+        path_parameter = '{' + self._lowercase_first_letter('account') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account if request.account is not None else '')
+        else:
+            if request.account is not None:
+                query_params.append((self._lowercase_first_letter('account'), request.account))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('accountStorageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account_storage_folder if request.account_storage_folder is not None else '')
+        else:
+            if request.account_storage_folder is not None:
+                query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('markAsSent') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.mark_as_sent if request.mark_as_sent is not None else '')
+        else:
+            if request.mark_as_sent is not None:
+                query_params.append((self._lowercase_first_letter('markAsSent'), request.mark_as_sent))
 
         form_params = []
         local_var_files = []
@@ -116,7 +141,7 @@ class ClientMessageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'POST', 'ValueTOfString')
@@ -165,22 +190,51 @@ class ClientMessageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/message'
+        path_params = {}
 
         query_params = []
-        if request.message_id is not None:
-            query_params.append((self._lowercase_first_letter('messageId'), request.message_id))
-        if request.account is not None:
-            query_params.append((self._lowercase_first_letter('account'), request.account))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.account_storage_folder is not None:
-            query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
-        if request.type is not None:
-            query_params.append((self._lowercase_first_letter('type'), request.type))
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('messageId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.message_id if request.message_id is not None else '')
+        else:
+            if request.message_id is not None:
+                query_params.append((self._lowercase_first_letter('messageId'), request.message_id))
+        path_parameter = '{' + self._lowercase_first_letter('account') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account if request.account is not None else '')
+        else:
+            if request.account is not None:
+                query_params.append((self._lowercase_first_letter('account'), request.account))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('accountStorageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account_storage_folder if request.account_storage_folder is not None else '')
+        else:
+            if request.account_storage_folder is not None:
+                query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
+        path_parameter = '{' + self._lowercase_first_letter('type') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.type if request.type is not None else '')
+        else:
+            if request.type is not None:
+                query_params.append((self._lowercase_first_letter('type'), request.type))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
 
         form_params = []
         local_var_files = []
@@ -197,7 +251,7 @@ class ClientMessageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MailMessageBase')
@@ -218,20 +272,45 @@ class ClientMessageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/message/file'
+        path_params = {}
 
         query_params = []
-        if request.message_id is not None:
-            query_params.append((self._lowercase_first_letter('messageId'), request.message_id))
-        if request.account is not None:
-            query_params.append((self._lowercase_first_letter('account'), request.account))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.account_storage_folder is not None:
-            query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('messageId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.message_id if request.message_id is not None else '')
+        else:
+            if request.message_id is not None:
+                query_params.append((self._lowercase_first_letter('messageId'), request.message_id))
+        path_parameter = '{' + self._lowercase_first_letter('account') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account if request.account is not None else '')
+        else:
+            if request.account is not None:
+                query_params.append((self._lowercase_first_letter('account'), request.account))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('accountStorageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account_storage_folder if request.account_storage_folder is not None else '')
+        else:
+            if request.account_storage_folder is not None:
+                query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
 
         form_params = []
         local_var_files = []
@@ -248,7 +327,7 @@ class ClientMessageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'file')
@@ -270,24 +349,57 @@ class ClientMessageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/message/list'
+        path_params = {}
 
         query_params = []
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.account is not None:
-            query_params.append((self._lowercase_first_letter('account'), request.account))
-        if request.query_string is not None:
-            query_params.append((self._lowercase_first_letter('queryString'), request.query_string))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.account_storage_folder is not None:
-            query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
-        if request.recursive is not None:
-            query_params.append((self._lowercase_first_letter('recursive'), request.recursive))
-        if request.type is not None:
-            query_params.append((self._lowercase_first_letter('type'), request.type))
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('account') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account if request.account is not None else '')
+        else:
+            if request.account is not None:
+                query_params.append((self._lowercase_first_letter('account'), request.account))
+        path_parameter = '{' + self._lowercase_first_letter('queryString') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.query_string if request.query_string is not None else '')
+        else:
+            if request.query_string is not None:
+                query_params.append((self._lowercase_first_letter('queryString'), request.query_string))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('accountStorageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account_storage_folder if request.account_storage_folder is not None else '')
+        else:
+            if request.account_storage_folder is not None:
+                query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
+        path_parameter = '{' + self._lowercase_first_letter('recursive') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.recursive if request.recursive is not None else '')
+        else:
+            if request.recursive is not None:
+                query_params.append((self._lowercase_first_letter('recursive'), request.recursive))
+        path_parameter = '{' + self._lowercase_first_letter('type') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.type if request.type is not None else '')
+        else:
+            if request.type is not None:
+                query_params.append((self._lowercase_first_letter('type'), request.type))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
 
         form_params = []
         local_var_files = []
@@ -304,7 +416,7 @@ class ClientMessageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MailMessageBaseList')
@@ -381,16 +493,33 @@ class ClientMessageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/message/file'
+        path_params = {}
 
         query_params = []
-        if request.account is not None:
-            query_params.append((self._lowercase_first_letter('account'), request.account))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.account_storage_folder is not None:
-            query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
-        if request.format is not None:
-            query_params.append((self._lowercase_first_letter('format'), request.format))
+        path_parameter = '{' + self._lowercase_first_letter('account') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account if request.account is not None else '')
+        else:
+            if request.account is not None:
+                query_params.append((self._lowercase_first_letter('account'), request.account))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('accountStorageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account_storage_folder if request.account_storage_folder is not None else '')
+        else:
+            if request.account_storage_folder is not None:
+                query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
+        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.format if request.format is not None else '')
+        else:
+            if request.format is not None:
+                query_params.append((self._lowercase_first_letter('format'), request.format))
 
         form_params = []
         local_var_files = []
@@ -409,7 +538,7 @@ class ClientMessageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'POST', None)

@@ -38,7 +38,7 @@ class ClientAccountApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(ClientAccountApi, self).__init__(api_client)
             
     def get(self, request: ClientAccountGetRequest) -> EmailClientAccount:
         """Get email client account from storage.             
@@ -53,14 +53,27 @@ class ClientAccountApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/account'
+        path_params = {}
 
         query_params = []
-        if request.file_name is not None:
-            query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('fileName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.file_name if request.file_name is not None else '')
+        else:
+            if request.file_name is not None:
+                query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
 
         form_params = []
         local_var_files = []
@@ -77,7 +90,7 @@ class ClientAccountApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailClientAccount')
@@ -95,14 +108,27 @@ class ClientAccountApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/account/multi'
+        path_params = {}
 
         query_params = []
-        if request.file_name is not None:
-            query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('fileName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.file_name if request.file_name is not None else '')
+        else:
+            if request.file_name is not None:
+                query_params.append((self._lowercase_first_letter('fileName'), request.file_name))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
 
         form_params = []
         local_var_files = []
@@ -119,7 +145,7 @@ class ClientAccountApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailClientMultiAccount')

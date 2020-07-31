@@ -38,7 +38,7 @@ class ClientThreadApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(ClientThreadApi, self).__init__(api_client)
             
     def delete(self, request: ClientThreadDeleteRequest):
         """Delete thread by id. All messages from thread will also be deleted.             
@@ -84,20 +84,45 @@ class ClientThreadApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/thread/list'
+        path_params = {}
 
         query_params = []
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.account is not None:
-            query_params.append((self._lowercase_first_letter('account'), request.account))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.account_storage_folder is not None:
-            query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
-        if request.update_folder_cache is not None:
-            query_params.append((self._lowercase_first_letter('updateFolderCache'), request.update_folder_cache))
-        if request.messages_cache_limit is not None:
-            query_params.append((self._lowercase_first_letter('messagesCacheLimit'), request.messages_cache_limit))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('account') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account if request.account is not None else '')
+        else:
+            if request.account is not None:
+                query_params.append((self._lowercase_first_letter('account'), request.account))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('accountStorageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account_storage_folder if request.account_storage_folder is not None else '')
+        else:
+            if request.account_storage_folder is not None:
+                query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
+        path_parameter = '{' + self._lowercase_first_letter('updateFolderCache') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.update_folder_cache if request.update_folder_cache is not None else '')
+        else:
+            if request.update_folder_cache is not None:
+                query_params.append((self._lowercase_first_letter('updateFolderCache'), request.update_folder_cache))
+        path_parameter = '{' + self._lowercase_first_letter('messagesCacheLimit') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.messages_cache_limit if request.messages_cache_limit is not None else '')
+        else:
+            if request.messages_cache_limit is not None:
+                query_params.append((self._lowercase_first_letter('messagesCacheLimit'), request.messages_cache_limit))
 
         form_params = []
         local_var_files = []
@@ -114,7 +139,7 @@ class ClientThreadApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailThreadList')
@@ -135,18 +160,39 @@ class ClientThreadApi(ApiBase):
 
         collection_formats = {}
         path = '/email/client/thread/messages'
+        path_params = {}
 
         query_params = []
-        if request.thread_id is not None:
-            query_params.append((self._lowercase_first_letter('threadId'), request.thread_id))
-        if request.account is not None:
-            query_params.append((self._lowercase_first_letter('account'), request.account))
-        if request.folder is not None:
-            query_params.append((self._lowercase_first_letter('folder'), request.folder))
-        if request.storage is not None:
-            query_params.append((self._lowercase_first_letter('storage'), request.storage))
-        if request.account_storage_folder is not None:
-            query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
+        path_parameter = '{' + self._lowercase_first_letter('threadId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.thread_id if request.thread_id is not None else '')
+        else:
+            if request.thread_id is not None:
+                query_params.append((self._lowercase_first_letter('threadId'), request.thread_id))
+        path_parameter = '{' + self._lowercase_first_letter('account') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account if request.account is not None else '')
+        else:
+            if request.account is not None:
+                query_params.append((self._lowercase_first_letter('account'), request.account))
+        path_parameter = '{' + self._lowercase_first_letter('folder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.folder if request.folder is not None else '')
+        else:
+            if request.folder is not None:
+                query_params.append((self._lowercase_first_letter('folder'), request.folder))
+        path_parameter = '{' + self._lowercase_first_letter('storage') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage if request.storage is not None else '')
+        else:
+            if request.storage is not None:
+                query_params.append((self._lowercase_first_letter('storage'), request.storage))
+        path_parameter = '{' + self._lowercase_first_letter('accountStorageFolder') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.account_storage_folder if request.account_storage_folder is not None else '')
+        else:
+            if request.account_storage_folder is not None:
+                query_params.append((self._lowercase_first_letter('accountStorageFolder'), request.account_storage_folder))
 
         form_params = []
         local_var_files = []
@@ -163,7 +209,7 @@ class ClientThreadApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailList')

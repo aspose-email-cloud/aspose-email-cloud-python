@@ -41,7 +41,7 @@ class Configuration(object):
 
     default_base_url = 'https://api.aspose.cloud'
 
-    default_api_version = 'v3.0'
+    default_api_version = 'v4.0'
 
     def __init__(self, app_key=None, app_sid=None, base_url=None,
                  api_version=None, debug=False):

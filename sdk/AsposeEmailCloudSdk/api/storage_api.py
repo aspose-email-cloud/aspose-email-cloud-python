@@ -38,7 +38,7 @@ class StorageApi(ApiBase):
     """
 
     def __init__(self, api_client):
-        super(ApiBase, self).__init__(api_client)
+        super(StorageApi, self).__init__(api_client)
             
     def get_disc_usage(self, request: GetDiscUsageRequest) -> DiscUsage:
         """Get disc usage
@@ -50,10 +50,15 @@ class StorageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/disc'
+        path_params = {}
 
         query_params = []
-        if request.storage_name is not None:
-            query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('storageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage_name if request.storage_name is not None else '')
+        else:
+            if request.storage_name is not None:
+                query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
 
         form_params = []
         local_var_files = []
@@ -70,7 +75,7 @@ class StorageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'DiscUsage')
@@ -88,10 +93,17 @@ class StorageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/version/{path}'
+        path_params = {}
+        if request.path is not None:
+            path_params[self._lowercase_first_letter('path')] = request.path
 
         query_params = []
-        if request.storage_name is not None:
-            query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('storageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage_name if request.storage_name is not None else '')
+        else:
+            if request.storage_name is not None:
+                query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
 
         form_params = []
         local_var_files = []
@@ -108,7 +120,7 @@ class StorageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'FileVersions')
@@ -126,12 +138,23 @@ class StorageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/exist/{path}'
+        path_params = {}
+        if request.path is not None:
+            path_params[self._lowercase_first_letter('path')] = request.path
 
         query_params = []
-        if request.storage_name is not None:
-            query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
-        if request.version_id is not None:
-            query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
+        path_parameter = '{' + self._lowercase_first_letter('storageName') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.storage_name if request.storage_name is not None else '')
+        else:
+            if request.storage_name is not None:
+                query_params.append((self._lowercase_first_letter('storageName'), request.storage_name))
+        path_parameter = '{' + self._lowercase_first_letter('versionId') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.version_id if request.version_id is not None else '')
+        else:
+            if request.version_id is not None:
+                query_params.append((self._lowercase_first_letter('versionId'), request.version_id))
 
         form_params = []
         local_var_files = []
@@ -148,7 +171,7 @@ class StorageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'ObjectExist')
@@ -166,6 +189,9 @@ class StorageApi(ApiBase):
 
         collection_formats = {}
         path = '/email/storage/{storageName}/exist'
+        path_params = {}
+        if request.storage_name is not None:
+            path_params[self._lowercase_first_letter('storageName')] = request.storage_name
 
         query_params = []
 
@@ -184,7 +210,7 @@ class StorageApi(ApiBase):
         # Authentication setting
         auth_settings = ['JWT']
 
-        http_request_object = HttpRequest(path, None, query_params, header_params, form_params, None, local_var_files,
+        http_request_object = HttpRequest(path, path_params, query_params, header_params, form_params, None, local_var_files,
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'StorageExist')
