@@ -14,7 +14,7 @@ from conftest import EmailApiData
 @pytest.mark.pipeline
 def test_mapi_model_to_general_model(td: EmailApiData):
     mapi_calendar = mapi_calendar_dto()
-    calendar = td.email.convert_mapi_calendar_model_to_calendar_model(
+    calendar = td.api.convert_mapi_calendar_model_to_calendar_model(
         requests.ConvertMapiCalendarModelToCalendarModelRequest(mapi_calendar))
     assert mapi_calendar.subject == calendar.summary
     assert mapi_calendar.location == calendar.location
@@ -23,12 +23,12 @@ def test_mapi_model_to_general_model(td: EmailApiData):
 @pytest.mark.pipeline
 def test_mapi_model_to_file(td: EmailApiData):
     mapi_calendar = mapi_calendar_dto()
-    ics_file = td.email.convert_mapi_calendar_model_to_file(
+    ics_file = td.api.convert_mapi_calendar_model_to_file(
         requests.ConvertMapiCalendarModelToFileRequest('Ics', mapi_calendar))
     with open(ics_file, 'r') as f:
         file_data = f.read()
         assert mapi_calendar.location in file_data
-    mapi_calendar_converted = td.email.get_calendar_file_as_mapi_model(
+    mapi_calendar_converted = td.api.get_calendar_file_as_mapi_model(
         requests.GetCalendarFileAsMapiModelRequest(ics_file))
     assert mapi_calendar.location == mapi_calendar_converted.location
 
@@ -37,11 +37,11 @@ def test_mapi_model_to_file(td: EmailApiData):
 def test_storage_support(td: EmailApiData):
     file_name = str(uuid.uuid4()) + '.msg'
     mapi_calendar = mapi_calendar_dto()
-    td.email.save_mapi_calendar_model(
+    td.api.save_mapi_calendar_model(
         requests.SaveMapiCalendarModelRequest(
             file_name, 'Msg',
             models.StorageModelRqOfMapiCalendarDto(mapi_calendar, td.storage_folder())))
-    mapi_calendar_from_storage = td.email.get_mapi_calendar_model(
+    mapi_calendar_from_storage = td.api.get_mapi_calendar_model(
         requests.GetMapiCalendarModelRequest(file_name, td.folder, td.storage))
     assert mapi_calendar.location == mapi_calendar_from_storage.location
 

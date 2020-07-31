@@ -21,7 +21,7 @@ def test_hierarchical(td: EmailApiData):
     and properly used in serialization and deserialization
     """
     calendar_file = td.create_calendar()
-    calendar = td.email.get_calendar(requests.GetCalendarRequest(calendar_file, td.folder, td.storage))
+    calendar = td.api.get_calendar(requests.GetCalendarRequest(calendar_file, td.folder, td.storage))
     assert calendar.name == 'CALENDAR'
     assert calendar.type == 'HierarchicalObject'
     primitive_properties = list(filter(lambda x: x.type == 'PrimitiveObject', calendar.internal_properties))
@@ -37,7 +37,7 @@ def test_async(td: EmailApiData):
     Asynchronous API call test
     """
     calendar_file = td.create_calendar()
-    calendar = td.email.get_calendar_async(requests.GetCalendarRequest(calendar_file, td.folder, td.storage)).get()
+    calendar = td.api.get_calendar_async(requests.GetCalendarRequest(calendar_file, td.folder, td.storage)).get()
     assert calendar.name == 'CALENDAR'
 
 
@@ -51,7 +51,7 @@ def test_date_time(td: EmailApiData):
     start_date = datetime.today() + timedelta(days=1)
     start_date = start_date.replace(microsecond=0, tzinfo=tz.tzutc())
     calendar_storage = td.create_calendar(start_date)
-    calendar = td.email.get_calendar(requests.GetCalendarRequest(
+    calendar = td.api.get_calendar(requests.GetCalendarRequest(
         calendar_storage,
         td.folder,
         td.storage))  # type: models.HierarchicalObject
@@ -68,15 +68,15 @@ def test_create_calendar_email(td: EmailApiData):
 
     folder_location = models.StorageFolderLocation(td.storage, td.folder)
     calendar_file = str(uuid.uuid4()) + '.ics'
-    td.email.save_calendar_model(
+    td.api.save_calendar_model(
         requests.SaveCalendarModelRequest(
             calendar_file,
             models.StorageModelRqOfCalendarDto(calendar, folder_location)))
-    exist_result = td.email.object_exists(
+    exist_result = td.api.object_exists(
         requests.ObjectExistsRequest(td.folder + '/' + calendar_file, td.storage))
     assert exist_result.exists
 
-    alternate = td.email.convert_calendar_model_to_alternate(
+    alternate = td.api.convert_calendar_model_to_alternate(
         requests.ConvertCalendarModelToAlternateRequest(
             models.CalendarDtoAlternateRq(calendar, 'Create')))
 
@@ -89,12 +89,12 @@ def test_create_calendar_email(td: EmailApiData):
         body='Some body')
 
     email_file = str(uuid.uuid4()) + '.eml'
-    td.email.save_email_model(
+    td.api.save_email_model(
         requests.SaveEmailModelRequest(
             'Eml', email_file,
             models.StorageModelRqOfEmailDto(email, folder_location)))
 
-    downloaded = td.email.download_file(
+    downloaded = td.api.download_file(
         requests.DownloadFileRequest(
             td.folder + '/' + email_file,
             td.storage))
@@ -105,7 +105,7 @@ def test_create_calendar_email(td: EmailApiData):
 
 @pytest.mark.pipeline
 def test_calendar_converter(td: EmailApiData):
-    email = td.email
+    email = td.api
     # Create DTO with specified location:
     calendar = calendar_dto()
     # We can convert this DTO to a MAPI or ICS file
@@ -125,7 +125,7 @@ def test_calendar_converter(td: EmailApiData):
 @pytest.mark.pipeline
 def test_convert_model_to_mapi_model(td: EmailApiData):
     calendar = calendar_dto()
-    mapi_calendar = td.email.convert_calendar_model_to_mapi_model(
+    mapi_calendar = td.api.convert_calendar_model_to_mapi_model(
         requests.ConvertCalendarModelToMapiModelRequest(calendar))
     assert calendar.location == mapi_calendar.location
     assert 'MapiCalendarDailyRecurrencePatternDto' == mapi_calendar.recurrence.recurrence_pattern.discriminator

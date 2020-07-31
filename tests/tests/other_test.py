@@ -18,8 +18,8 @@ def test_file(td: EmailApiData):
     sample = os.path.join(os.path.dirname(__file__), '..', 'data', 'sample.ics')
     file_name = str(uuid.uuid4()) + ".ics"
     storage_location = td.folder + "/" + file_name
-    td.email.upload_file(requests.UploadFileRequest(storage_location, sample, td.storage))
-    downloaded = td.email.download_file(requests.DownloadFileRequest(storage_location, td.storage))
+    td.api.upload_file(requests.UploadFileRequest(storage_location, sample, td.storage))
+    downloaded = td.api.download_file(requests.DownloadFileRequest(storage_location, td.storage))
     with open(downloaded, 'r') as f:
         file_data = f.read()
         assert 'Broadway' in file_data
@@ -27,7 +27,7 @@ def test_file(td: EmailApiData):
 
 @pytest.mark.pipeline
 def test_discover_email_config(td: EmailApiData):
-    configs = td.email.discover_email_config(requests.DiscoverEmailConfigRequest('example@gmail.com', True))
+    configs = td.api.discover_email_config(requests.DiscoverEmailConfigRequest('example@gmail.com', True))
     assert len(configs.value) >= 2
     smtp = list(filter(lambda x: x.protocol_type == 'SMTP', configs.value))[0]  # type: models.EmailAccountConfig
     assert smtp.host == 'smtp.gmail.com'
@@ -35,10 +35,10 @@ def test_discover_email_config(td: EmailApiData):
 
 @pytest.mark.pipeline
 def test_is_disposable_email(td: EmailApiData):
-    disposable = td.email.is_email_address_disposable(
+    disposable = td.api.is_email_address_disposable(
         requests.IsEmailAddressDisposableRequest('example@mailcatch.com'))
     assert disposable.value
-    regular = td.email.is_email_address_disposable(
+    regular = td.api.is_email_address_disposable(
         requests.IsEmailAddressDisposableRequest('example@gmail.com'))
     assert not regular.value
 
@@ -53,12 +53,12 @@ def test_email_client_account(td: EmailApiData):
         models.EmailClientAccountPasswordCredentials(
             'login', None, 'password'))
     name = str(uuid.uuid4()) + '.account'
-    td.email.save_email_client_account(
+    td.api.save_email_client_account(
         requests.SaveEmailClientAccountRequest(
             models.StorageFileRqOfEmailClientAccount(
                 account, models.StorageFileLocation(
                     td.storage, td.folder, name))))
-    result = td.email.get_email_client_account(
+    result = td.api.get_email_client_account(
         requests.GetEmailClientAccountRequest(
             name, td.folder, td.storage))
     assert account.host == result.host
@@ -86,7 +86,7 @@ def test_email_client_multi_account(td: EmailApiData):
     file_name = str(uuid.uuid4()) + '.multi.account'
     folder = td.folder
     storage = td.storage
-    email = td.email
+    email = td.api
     # Save multi account
     email.save_email_client_multi_account(requests.SaveEmailClientMultiAccountRequest(
         models.StorageFileRqOfEmailClientMultiAccount(

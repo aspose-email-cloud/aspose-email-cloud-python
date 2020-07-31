@@ -10,7 +10,7 @@ import pytest
 
 class EmailApiData:
     def __init__(self, email_cloud: api.EmailCloud, folder, storage):
-        self.email = email_cloud  # type: api.EmailCloud
+        self.api = email_cloud
         self.folder = folder
         self.storage = storage
 
@@ -34,7 +34,7 @@ def td(request):
     app_sid = config["appsid"]
     app_key = config["appkey"]
     api_base_url = config.get("apibaseurl", "https://api-qa.aspose.cloud")
-    email_cloud = api.EmailCloud(app_key, app_sid, api_base_url, 'v4.0')
+    email_cloud = api.EmailCloud(app_key, app_sid, api_base_url)
     auth_url = config.get("authurl")
     if auth_url:
         email_cloud.email.api_client.configuration.auth_url = auth_url

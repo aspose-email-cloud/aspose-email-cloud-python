@@ -13,7 +13,7 @@ from conftest import EmailApiData
 @pytest.mark.pipeline
 def test_mapi_model_to_general_model(td: EmailApiData):
     mapi_contact = mapi_contact_dto()
-    contact = td.email.convert_mapi_contact_model_to_contact_model(
+    contact = td.api.convert_mapi_contact_model_to_contact_model(
         requests.ConvertMapiContactModelToContactModelRequest(mapi_contact))
 
     assert mapi_contact.name_info.given_name == contact.given_name
@@ -23,12 +23,12 @@ def test_mapi_model_to_general_model(td: EmailApiData):
 @pytest.mark.pipeline
 def test_mapi_model_to_file(td: EmailApiData):
     mapi_contact = mapi_contact_dto()
-    vcard_file = td.email.convert_mapi_contact_model_to_file(
+    vcard_file = td.api.convert_mapi_contact_model_to_file(
         requests.ConvertMapiContactModelToFileRequest('VCard', mapi_contact))
     with open(vcard_file, 'r') as f:
         file_data = f.read()
         assert mapi_contact.name_info.given_name in file_data
-    mapi_contact_converted = td.email.get_contact_file_as_mapi_model(
+    mapi_contact_converted = td.api.get_contact_file_as_mapi_model(
         requests.GetContactFileAsMapiModelRequest('VCard', vcard_file))
     assert mapi_contact.name_info.surname == mapi_contact_converted.name_info.surname
 
@@ -38,12 +38,12 @@ def test_storage_support(td: EmailApiData):
     file_name = str(uuid.uuid4()) + '.msg'
     mapi_contact = mapi_contact_dto()
 
-    td.email.save_mapi_contact_model(
+    td.api.save_mapi_contact_model(
         requests.SaveMapiContactModelRequest(
             'Msg', file_name,
             models.StorageModelRqOfMapiContactDto(mapi_contact, td.storage_folder())))
 
-    mapi_contact_from_storage = td.email.get_mapi_contact_model(
+    mapi_contact_from_storage = td.api.get_mapi_contact_model(
         requests.GetMapiContactModelRequest('Msg', file_name, td.folder, td.storage))
     assert mapi_contact.name_info.surname == mapi_contact_from_storage.name_info.surname
 

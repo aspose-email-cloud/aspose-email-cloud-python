@@ -12,7 +12,7 @@ from conftest import EmailApiData
 
 @pytest.mark.pipeline
 def test_email_converter(td: EmailApiData):
-    email = td.email
+    email = td.api
     email_document = email_dto()
     mapi = email.convert_email_model_to_file(requests.ConvertEmailModelToFileRequest('Msg', email_document))
     eml = email.convert_email(requests.ConvertEmailRequest('Eml', mapi))
@@ -26,7 +26,7 @@ def test_email_converter(td: EmailApiData):
 @pytest.mark.pipeline
 def test_convert_model_to_mapi_model(td: EmailApiData):
     email_document = email_dto()
-    mapi_message = td.email.convert_email_model_to_mapi_model(
+    mapi_message = td.api.convert_email_model_to_mapi_model(
         requests.ConvertEmailModelToMapiModelRequest(email_document))
     assert email_document.subject == mapi_message.subject
 
