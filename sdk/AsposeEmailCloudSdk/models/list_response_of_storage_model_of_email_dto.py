@@ -56,7 +56,7 @@ class ListResponseOfStorageModelOfEmailDto(object):
         """
         
         :param value: 
-        :type ListResponseOfStorageModelOfEmailDto: 
+        :type value: List[StorageModelOfEmailDto]
         """
 
         self._value = None

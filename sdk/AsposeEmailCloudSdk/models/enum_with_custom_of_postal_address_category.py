@@ -56,8 +56,9 @@ class EnumWithCustomOfPostalAddressCategory(object):
         """
         
         :param value: Address category. Enum, available values: Home, Work, Custom
+        :type value: str
         :param description: 
-        :type EnumWithCustomOfPostalAddressCategory: 
+        :type description: str
         """
 
         self._value = None

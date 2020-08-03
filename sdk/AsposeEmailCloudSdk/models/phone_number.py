@@ -60,9 +60,11 @@ class PhoneNumber(object):
         """
         A phone number.             
         :param category: Phone number category.             
+        :type category: EnumWithCustomOfPhoneNumberCategory
         :param number: Phone number.             
+        :type number: str
         :param preferred: Defines whether phone number is preferred.             
-        :type PhoneNumber: 
+        :type preferred: bool
         """
 
         self._category = None

@@ -68,13 +68,19 @@ class FileVersion(StorageFile):
         """
         File Version
         :param name: File or folder name.
+        :type name: str
         :param is_folder: True if it is a folder.
+        :type is_folder: bool
         :param modified_date: File or folder last modified DateTime.
+        :type modified_date: datetime
         :param size: File or folder size.
+        :type size: int
         :param path: File or folder path.
+        :type path: str
         :param version_id: File Version ID.
+        :type version_id: str
         :param is_latest: Specifies whether the file is (true) or is not (false) the latest version of an file.
-        :type FileVersion: 
+        :type is_latest: bool
         """
         super(FileVersion, self).__init__()
 

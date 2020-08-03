@@ -73,15 +73,23 @@ class Attachment(AttachmentBase):
         """
         Document attachment.             
         :param base64_data: Attachment file content as Base64 string.             
+        :type base64_data: str
         :param content_id: Attachment content id             
+        :type content_id: str
         :param content_type: Content type             
+        :type content_type: ContentType
         :param headers: Attachment headers.             
+        :type headers: Dict[str, str]
         :param content_disposition: Content-Disposition header. Read only.             
+        :type content_disposition: str
         :param is_embedded_message: Determines if attachment is an embedded message. Read only.             
+        :type is_embedded_message: bool
         :param name: Attachment name.             
+        :type name: str
         :param name_encoding: Encoding of attachment name.             
+        :type name_encoding: str
         :param preferred_text_encoding: Preferred text encoding.             
-        :type Attachment: 
+        :type preferred_text_encoding: str
         """
         super(Attachment, self).__init__()
 

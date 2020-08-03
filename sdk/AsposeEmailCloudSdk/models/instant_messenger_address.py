@@ -60,9 +60,11 @@ class InstantMessengerAddress(object):
         """
         Instant messenger address.             
         :param category: Address category.             
+        :type category: EnumWithCustomOfInstantMessengerCategory
         :param address: Address.             
+        :type address: str
         :param preferred: Determines whether this address is preferred.             
-        :type InstantMessengerAddress: 
+        :type preferred: bool
         """
 
         self._category = None

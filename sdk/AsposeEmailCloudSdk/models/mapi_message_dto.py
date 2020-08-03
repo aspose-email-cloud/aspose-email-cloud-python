@@ -141,48 +141,89 @@ class MapiMessageDto(MapiMessageItemBaseDto):
         """
         Represents an Outlook Message format document.             
         :param attachments: Message item attachments.             
+        :type attachments: List[MapiAttachmentDto]
         :param billing: Billing information associated with an item.             
+        :type billing: str
         :param body: Message text.             
+        :type body: str
         :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :type body_html: str
         :param body_rtf: RTF formatted message text.             
+        :type body_rtf: str
         :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :type body_type: str
         :param categories: Contains keywords or categories for the message object.             
+        :type categories: List[str]
         :param companies: Contains the names of the companies that are associated with an item.             
+        :type companies: List[str]
         :param item_id: The item id, uses with a server.             
+        :type item_id: str
         :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :type message_class: str
         :param mileage: Contains the mileage information that is associated with an item.             
+        :type mileage: str
         :param recipients: Recipients of the message.             
+        :type recipients: List[MapiRecipientDto]
         :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :type sensitivity: str
         :param subject: Subject of the message.             
+        :type subject: str
         :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :type subject_prefix: str
         :param properties: List of MAPI properties             
+        :type properties: List[MapiPropertyDto]
         :param discriminator: 
+        :type discriminator: str
         :param message_body: Message text             
+        :type message_body: str
         :param client_submit_time: Date and time the message sender submitted a message.             
+        :type client_submit_time: datetime
         :param conversation_topic: Topic of the first message in a conversation thread.             
+        :type conversation_topic: str
         :param delivery_time: Date and time a message was delivered.             
+        :type delivery_time: datetime
         :param display_bcc: List of the display names of any blind carbon copy (BCC) message recipients, separated by semicolons (;).             
+        :type display_bcc: str
         :param display_cc: List of the display names of any carbon copy (CC) message recipients, separated by semicolons (;).             
+        :type display_cc: str
         :param display_name: Display name for the message.             
+        :type display_name: str
         :param display_name_prefix: Prefix of the display name.             
+        :type display_name_prefix: str
         :param display_to: List of the display names of the primary (To) message recipients, separated by semicolons (;).             
+        :type display_to: str
         :param flags: Message flags.             
+        :type flags: List[str]
         :param headers: Transport message headers             
+        :type headers: Dict[str, str]
         :param internet_message_id: Internet message id of the message.             
+        :type internet_message_id: str
         :param message_format: Represents outlook message format. Enum, available values: Ascii, Unicode
+        :type message_format: str
         :param normalized_subject: Normalized subject of the message.             
+        :type normalized_subject: str
         :param read_receipt_requested: Value indicating whether the read receipt is requested.
+        :type read_receipt_requested: bool
         :param reply_to: Reply to names.
+        :type reply_to: str
         :param sender_address_type: Message sender's e-mail address type.
+        :type sender_address_type: str
         :param sender_email_address: Message sender's e-mail address.
+        :type sender_email_address: str
         :param sender_name: Message sender's display name.
+        :type sender_name: str
         :param sender_smtp_address: Message sender's e-mail address.
+        :type sender_smtp_address: str
         :param sent_representing_address_type: Address type for the messaging user represented by the sender.
+        :type sent_representing_address_type: str
         :param sent_representing_email_address: E-mail address for the messaging user represented by the sender.
+        :type sent_representing_email_address: str
         :param sent_representing_name: Display name for the messaging user represented by the sender.
+        :type sent_representing_name: str
         :param sent_representing_smtp_address: E-mail address for the messaging user represented by the sender.
+        :type sent_representing_smtp_address: str
         :param transport_message_headers: Transport-specific message envelope information.
-        :type MapiMessageDto: 
+        :type transport_message_headers: str
         """
         super(MapiMessageDto, self).__init__()
 

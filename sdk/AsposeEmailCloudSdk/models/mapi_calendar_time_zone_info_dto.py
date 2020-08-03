@@ -68,13 +68,19 @@ class MapiCalendarTimeZoneInfoDto(object):
         """
         Represents the mapi calendar time zone rule.             
         :param bias: Time zone's offset in minutes from UTC.             
+        :type bias: int
         :param daylight_bias: Offset in minutes from lBias during daylight saving time.             
+        :type daylight_bias: int
         :param daylight_date: Date and local time that indicate when to begin using the DaylightBias.             
+        :type daylight_date: MapiCalendarTimeZoneRuleDto
         :param standard_bias: Offset in minutes from lBias during standard time.             
+        :type standard_bias: int
         :param standard_date: Date and local time that indicate when to begin using the StandardBias.             
+        :type standard_date: MapiCalendarTimeZoneRuleDto
         :param time_zone_flags: Individual bit flags that specify information about this TimeZoneRule.             
+        :type time_zone_flags: List[str]
         :param year: Year in which this rule is scheduled to take effect.             
-        :type MapiCalendarTimeZoneInfoDto: 
+        :type year: int
         """
 
         self._bias = None

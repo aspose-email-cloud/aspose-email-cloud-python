@@ -90,25 +90,43 @@ class MapiContactPersonalInfoPropertySetDto(object):
         """
         Specify other additional contact information.             
         :param spouse_name: Specifies the name of the contact's spouse/partner             
+        :type spouse_name: str
         :param personal_home_page: Specifies the contact's personal web page URL             
+        :type personal_home_page: str
         :param language: Specifies the language that the contact uses             
+        :type language: str
         :param notes: Specifies the additional notes             
+        :type notes: str
         :param hobbies: Specifies the hobbies of the contact             
+        :type hobbies: str
         :param location: Specifies the location of the contact             
+        :type location: str
         :param instant_messaging_address: Specifies the contact's instant messaging address             
+        :type instant_messaging_address: str
         :param organizational_id_number: Specifies an organizational ID number for the contact             
+        :type organizational_id_number: str
         :param customer_id: Specifies the contact's customer ID number             
+        :type customer_id: str
         :param government_id_number: Specifies the contact's government ID number             
+        :type government_id_number: str
         :param free_busy_location: Specifies a URL path from which a client can retrieve free/busy information for the contact as an iCal file             
+        :type free_busy_location: str
         :param account: Specifies the account name of the contact             
+        :type account: str
         :param html: Specifies the contact's business web page URL             
+        :type html: str
         :param business_home_page: Specifies the contact's business web page URL             
+        :type business_home_page: str
         :param ftp_site: Specifies the contact's File Transfer Protocol (FTP) URL             
+        :type ftp_site: str
         :param computer_network_name: Specifies the name of the network to which the contact's computer is connected             
+        :type computer_network_name: str
         :param gender: Gender of the contact Enum, available values: Unspecified, Female, Male
+        :type gender: str
         :param referred_by_name: Specifies the name of the person who referred this contact to the user             
+        :type referred_by_name: str
         :param children: Contains a list of names of children.             
-        :type MapiContactPersonalInfoPropertySetDto: 
+        :type children: List[str]
         """
 
         self._spouse_name = None

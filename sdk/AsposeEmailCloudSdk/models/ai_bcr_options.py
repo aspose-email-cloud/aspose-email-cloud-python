@@ -56,8 +56,9 @@ class AiBcrOptions(object):
         """
         Recognition options.             
         :param languages: Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
+        :type languages: str
         :param countries: Comma-separated codes of countries.             
-        :type AiBcrOptions: 
+        :type countries: str
         """
 
         self._languages = None

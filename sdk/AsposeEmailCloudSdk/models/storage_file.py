@@ -62,11 +62,15 @@ class StorageFile(object):
         """
         File or folder information
         :param name: File or folder name.
+        :type name: str
         :param is_folder: True if it is a folder.
+        :type is_folder: bool
         :param modified_date: File or folder last modified DateTime.
+        :type modified_date: datetime
         :param size: File or folder size.
+        :type size: int
         :param path: File or folder path.
-        :type StorageFile: 
+        :type path: str
         """
 
         self._name = None

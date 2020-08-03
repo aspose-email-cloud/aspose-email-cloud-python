@@ -54,7 +54,7 @@ class MailMessageBase(object):
         """
         Universal object that stores email messages in different formats.             
         :param discriminator: 
-        :type MailMessageBase: 
+        :type discriminator: str
         """
 
         self._discriminator = self.__class__.__name__

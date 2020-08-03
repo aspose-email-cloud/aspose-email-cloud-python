@@ -59,8 +59,9 @@ class MailMessageMapi(MailMessageBase):
         """
         Email message represented as MAPI object.             
         :param discriminator: 
+        :type discriminator: str
         :param value: Email message object.             
-        :type MailMessageMapi: 
+        :type value: MapiMessageDto
         """
         super(MailMessageMapi, self).__init__()
 

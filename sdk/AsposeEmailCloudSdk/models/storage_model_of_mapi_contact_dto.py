@@ -59,8 +59,9 @@ class StorageModelOfMapiContactDto(object):
         """
         
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
-        :type StorageModelOfMapiContactDto: 
+        :type value: MapiContactDto
         """
 
         self._storage_file = None

@@ -62,11 +62,15 @@ class MapiElectronicAddressDto(object):
         """
         Refers to the group of properties that define the e-mail address or fax address.             
         :param address_type: Address type.             
+        :type address_type: str
         :param email_address: Email address.             
+        :type email_address: str
         :param display_name: User-readable display name for the e-mail address.             
+        :type display_name: str
         :param fax_number: Telephone number of the mail user's primary fax machine.             
+        :type fax_number: str
         :param original_display_name: SMTP e-mail address that  corresponds to the e-mail address.             
-        :type MapiElectronicAddressDto: 
+        :type original_display_name: str
         """
 
         self._address_type = None

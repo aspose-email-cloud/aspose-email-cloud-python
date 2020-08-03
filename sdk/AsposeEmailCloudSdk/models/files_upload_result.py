@@ -58,8 +58,9 @@ class FilesUploadResult(object):
         """
         File upload result
         :param uploaded: List of uploaded file names
+        :type uploaded: List[str]
         :param errors: List of errors.
-        :type FilesUploadResult: 
+        :type errors: List[Error]
         """
 
         self._uploaded = None

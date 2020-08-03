@@ -62,9 +62,11 @@ class MapiContactSaveRequest(StorageModelOfMapiContactDto):
         """
         MapiContact save to storage request.             
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
+        :type value: MapiContactDto
         :param format: Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
-        :type MapiContactSaveRequest: 
+        :type format: str
         """
         super(MapiContactSaveRequest, self).__init__()
 

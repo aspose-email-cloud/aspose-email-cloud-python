@@ -58,8 +58,9 @@ class MapiMessageAsFileRequest(object):
         """
         Convert MapiMessage to file request.             
         :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
         :param value: MAPI message model.             
-        :type MapiMessageAsFileRequest: 
+        :type value: MapiMessageDto
         """
 
         self._format = None

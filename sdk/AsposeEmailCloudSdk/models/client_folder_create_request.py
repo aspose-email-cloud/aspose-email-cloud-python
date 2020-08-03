@@ -61,9 +61,11 @@ class ClientFolderCreateRequest(ClientAccountBaseRequest):
         """
         Email Client create folder request.             
         :param account_location: Email client account configuration location on storage.             
+        :type account_location: StorageFileLocation
         :param parent_folder: Path to parent folder.             
+        :type parent_folder: str
         :param folder_name: Folder name.             
-        :type ClientFolderCreateRequest: 
+        :type folder_name: str
         """
         super(ClientFolderCreateRequest, self).__init__()
 

@@ -58,9 +58,11 @@ class DiscoverEmailConfigRequest(object):
         """
         Discover email configuration request.             
         :param address: Email address to discover.             
+        :type address: str
         :param fast_processing: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :type fast_processing: bool
         :param login: Email account login. If not specified, address used as a login.             
-        :type DiscoverEmailConfigRequest: 
+        :type login: str
         """
 
         self._address = None

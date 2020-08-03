@@ -58,8 +58,9 @@ class EmailAsFileRequest(object):
         """
         Convert email model to file request.             
         :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
         :param value: Email model.             
-        :type EmailAsFileRequest: 
+        :type value: EmailDto
         """
 
         self._format = None

@@ -59,8 +59,9 @@ class StorageModelOfMapiCalendarDto(object):
         """
         
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
-        :type StorageModelOfMapiCalendarDto: 
+        :type value: MapiCalendarDto
         """
 
         self._storage_file = None

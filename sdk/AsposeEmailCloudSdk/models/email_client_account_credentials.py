@@ -56,8 +56,9 @@ class EmailClientAccountCredentials(object):
         """
         Represents email client account credentials             
         :param login: Email client account login             
+        :type login: str
         :param discriminator: 
-        :type EmailClientAccountCredentials: 
+        :type discriminator: str
         """
 
         self._login = None

@@ -57,7 +57,7 @@ class CalendarStorageList(ListResponseOfStorageModelOfCalendarDto):
         """
         iCalendar models list with corresponding storage locations.             
         :param value: 
-        :type CalendarStorageList: 
+        :type value: List[StorageModelOfCalendarDto]
         """
         super(CalendarStorageList, self).__init__()
 

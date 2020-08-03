@@ -57,7 +57,7 @@ class ContactStorageList(ListResponseOfStorageModelOfContactDto):
         """
         Contact models list with corresponding storage locations.             
         :param value: 
-        :type ContactStorageList: 
+        :type value: List[StorageModelOfContactDto]
         """
         super(ContactStorageList, self).__init__()
 

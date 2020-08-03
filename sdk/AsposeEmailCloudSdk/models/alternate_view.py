@@ -68,12 +68,17 @@ class AlternateView(AttachmentBase):
         """
         Represents the format to view a message.             
         :param base64_data: Attachment file content as Base64 string.             
+        :type base64_data: str
         :param content_id: Attachment content id             
+        :type content_id: str
         :param content_type: Content type             
+        :type content_type: ContentType
         :param headers: Attachment headers.             
+        :type headers: Dict[str, str]
         :param base_uri: Base URI.             
+        :type base_uri: str
         :param linked_resources: Embedded resources referred to by this alternate view.             
-        :type AlternateView: 
+        :type linked_resources: List[LinkedResource]
         """
         super(AlternateView, self).__init__()
 

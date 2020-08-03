@@ -61,9 +61,11 @@ class MapiStringPropertyDto(MapiPropertyDto):
         """
         Mapi property with string value             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param value: Property value             
-        :type MapiStringPropertyDto: 
+        :type value: str
         """
         super(MapiStringPropertyDto, self).__init__()
 

@@ -54,7 +54,7 @@ class ValueTOfString(object):
         """
         
         :param value: 
-        :type ValueTOfString: 
+        :type value: str
         """
 
         self._value = None

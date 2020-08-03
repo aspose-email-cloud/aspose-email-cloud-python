@@ -64,11 +64,15 @@ class ContentType(object):
         """
         Represents a Content-Type header.             
         :param boundary: The boundary parameter included in the Content-Type header.             
+        :type boundary: str
         :param char_set: CharSet parameter.             
+        :type char_set: str
         :param media_type: The internet media type.             
+        :type media_type: str
         :param name: Name parameter.             
+        :type name: str
         :param parameters: Full list of parameters             
-        :type ContentType: 
+        :type parameters: List[ContentTypeParameter]
         """
 
         self._boundary = None

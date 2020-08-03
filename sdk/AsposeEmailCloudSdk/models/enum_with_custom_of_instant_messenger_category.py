@@ -56,8 +56,9 @@ class EnumWithCustomOfInstantMessengerCategory(object):
         """
         
         :param value: Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+        :type value: str
         :param description: 
-        :type EnumWithCustomOfInstantMessengerCategory: 
+        :type description: str
         """
 
         self._value = None

@@ -58,9 +58,11 @@ class ContactPhoto(object):
         """
         Person&#39;s photo.             
         :param photo_image_format: MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+        :type photo_image_format: str
         :param base64_data: Photo serialized as base64 string.             
+        :type base64_data: str
         :param discriminator: 
-        :type ContactPhoto: 
+        :type discriminator: str
         """
 
         self._photo_image_format = None

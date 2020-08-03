@@ -62,10 +62,13 @@ class MapiCalendarAttendeesDto(object):
         """
         Mapi calendar attendees.             
         :param appointment_recipients: List of attendees.             
+        :type appointment_recipients: List[MapiRecipientDto]
         :param appointment_unsendable_recipients: List of unsendable attendees.             
+        :type appointment_unsendable_recipients: List[MapiRecipientDto]
         :param not_allow_propose: Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
+        :type not_allow_propose: bool
         :param response_requested: Value indicating whether a response is requested to a Message object.             
-        :type MapiCalendarAttendeesDto: 
+        :type response_requested: bool
         """
 
         self._appointment_recipients = None

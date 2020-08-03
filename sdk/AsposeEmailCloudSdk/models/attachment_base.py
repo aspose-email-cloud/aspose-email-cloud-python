@@ -62,10 +62,13 @@ class AttachmentBase(object):
         """
         AttachmentBase class             
         :param base64_data: Attachment file content as Base64 string.             
+        :type base64_data: str
         :param content_id: Attachment content id             
+        :type content_id: str
         :param content_type: Content type             
+        :type content_type: ContentType
         :param headers: Attachment headers.             
-        :type AttachmentBase: 
+        :type headers: Dict[str, str]
         """
 
         self._base64_data = None

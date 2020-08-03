@@ -67,12 +67,17 @@ class EmailClientAccount(object):
         """
         A universal email client account             
         :param host: Mail server host name or IP address             
+        :type host: str
         :param port: Mail server port             
+        :type port: int
         :param security_options: Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :type security_options: str
         :param protocol_type: Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :type protocol_type: str
         :param credentials: Email client account credentials             
+        :type credentials: EmailClientAccountCredentials
         :param cache_file: File with messages cache. Used to provide extra functions, which are not supported by account             
-        :type EmailClientAccount: 
+        :type cache_file: StorageFileLocation
         """
 
         self._host = None

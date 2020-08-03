@@ -66,12 +66,17 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
         """
         Represents email client account OAuth 2.0 credentials             
         :param login: Email client account login             
+        :type login: str
         :param discriminator: 
+        :type discriminator: str
         :param client_id: The client ID obtained from the Google Cloud Console during application registration.             
+        :type client_id: str
         :param client_secret: The client secret obtained during application registration.             
+        :type client_secret: str
         :param refresh_token: OAuth 2.0 refresh token             
+        :type refresh_token: str
         :param request_url: The url to obtain access token. If not specified, will try to discover from email client account host.             
-        :type EmailClientAccountOauthCredentials: 
+        :type request_url: str
         """
         super(EmailClientAccountOauthCredentials, self).__init__()
 

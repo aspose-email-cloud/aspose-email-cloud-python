@@ -60,9 +60,11 @@ class Url(object):
         """
         Url and its category.             
         :param category: Url category.             
+        :type category: EnumWithCustomOfUrlCategory
         :param preferred: Defines whether url is preferred.             
+        :type preferred: bool
         :param href: URL.             
-        :type Url: 
+        :type href: str
         """
 
         self._category = None

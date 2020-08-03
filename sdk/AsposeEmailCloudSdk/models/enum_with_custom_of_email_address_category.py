@@ -56,8 +56,9 @@ class EnumWithCustomOfEmailAddressCategory(object):
         """
         
         :param value: Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+        :type value: str
         :param description: 
-        :type EnumWithCustomOfEmailAddressCategory: 
+        :type description: str
         """
 
         self._value = None

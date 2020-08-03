@@ -60,9 +60,11 @@ class EmailClientAccountPasswordCredentials(EmailClientAccountCredentials):
         """
         Represents email client account password credentials             
         :param login: Email client account login             
+        :type login: str
         :param discriminator: 
+        :type discriminator: str
         :param password: Email client account password             
-        :type EmailClientAccountPasswordCredentials: 
+        :type password: str
         """
         super(EmailClientAccountPasswordCredentials, self).__init__()
 

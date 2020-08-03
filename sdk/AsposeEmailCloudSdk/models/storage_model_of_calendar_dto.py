@@ -59,8 +59,9 @@ class StorageModelOfCalendarDto(object):
         """
         
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
-        :type StorageModelOfCalendarDto: 
+        :type value: CalendarDto
         """
 
         self._storage_file = None

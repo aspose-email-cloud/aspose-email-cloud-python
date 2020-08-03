@@ -61,9 +61,11 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
         """
         Email client move thread request.             
         :param account_location: Email client account configuration location on storage.             
+        :type account_location: StorageFileLocation
         :param thread_id: Thread identifier.             
+        :type thread_id: str
         :param destination_folder: Email account folder to move thread to.             
-        :type ClientThreadMoveRequest: 
+        :type destination_folder: str
         """
         super(ClientThreadMoveRequest, self).__init__()
 

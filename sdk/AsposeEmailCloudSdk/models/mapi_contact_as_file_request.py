@@ -58,8 +58,9 @@ class MapiContactAsFileRequest(object):
         """
         Convert MapiContact to file request.             
         :param format: Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+        :type format: str
         :param value: MAPI contact model.             
-        :type MapiContactAsFileRequest: 
+        :type value: MapiContactDto
         """
 
         self._format = None

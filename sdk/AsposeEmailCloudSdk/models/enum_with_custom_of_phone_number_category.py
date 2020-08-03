@@ -56,8 +56,9 @@ class EnumWithCustomOfPhoneNumberCategory(object):
         """
         
         :param value: Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+        :type value: str
         :param description: 
-        :type EnumWithCustomOfPhoneNumberCategory: 
+        :type description: str
         """
 
         self._value = None

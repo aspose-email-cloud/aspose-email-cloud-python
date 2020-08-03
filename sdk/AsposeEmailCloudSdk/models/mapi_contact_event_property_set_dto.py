@@ -56,8 +56,9 @@ class MapiContactEventPropertySetDto(object):
         """
         Specify events associated with a contact.             
         :param birthday: Specifies the birthday of the contact.
+        :type birthday: datetime
         :param wedding_anniversary: Specifies the wedding anniversary of the contact.             
-        :type MapiContactEventPropertySetDto: 
+        :type wedding_anniversary: datetime
         """
 
         self._birthday = None

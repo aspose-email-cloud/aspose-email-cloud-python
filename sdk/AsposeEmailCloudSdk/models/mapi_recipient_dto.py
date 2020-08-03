@@ -60,10 +60,13 @@ class MapiRecipientDto(object):
         """
         Represents the recipient information in the Microsoft Outlook Message.             
         :param email_address: Email address of the message recipient or sender.             
+        :type email_address: str
         :param address_type: Type of the address of the message recipient or sender.             
+        :type address_type: str
         :param display_name: Display name of the message recipient or sender.             
+        :type display_name: str
         :param recipient_type: Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
-        :type MapiRecipientDto: 
+        :type recipient_type: str
         """
 
         self._email_address = None

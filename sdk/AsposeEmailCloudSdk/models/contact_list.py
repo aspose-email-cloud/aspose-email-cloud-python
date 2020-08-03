@@ -57,7 +57,7 @@ class ContactList(ListResponseOfContactDto):
         """
         List of VCard documents             
         :param value: 
-        :type ContactList: 
+        :type value: List[ContactDto]
         """
         super(ContactList, self).__init__()
 

@@ -56,7 +56,7 @@ class ListResponseOfEmailDto(object):
         """
         
         :param value: 
-        :type ListResponseOfEmailDto: 
+        :type value: List[EmailDto]
         """
 
         self._value = None

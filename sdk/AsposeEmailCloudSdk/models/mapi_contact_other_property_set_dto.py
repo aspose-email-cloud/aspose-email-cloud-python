@@ -68,14 +68,21 @@ class MapiContactOtherPropertySetDto(object):
         """
         The properties are used to specify additional properties of contact.             
         :param private: Indicates whether the end-user wants this message object hidden from other users who have access to the message object.             
+        :type private: bool
         :param journal: Specifies whether to create a journal for each action associated with this contact.             
+        :type journal: bool
         :param reminder_time: Specifies the initial signal time for a reminder.             
+        :type reminder_time: datetime
         :param reminder_topic: Represents the status of a meeting request.             
+        :type reminder_topic: str
         :param user_field1: Specifies the first field on the contact that is intended for miscellaneous use for the contact.             
+        :type user_field1: str
         :param user_field2: Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
+        :type user_field2: str
         :param user_field3: Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
+        :type user_field3: str
         :param user_field4: Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
-        :type MapiContactOtherPropertySetDto: 
+        :type user_field4: str
         """
 
         self._private = None

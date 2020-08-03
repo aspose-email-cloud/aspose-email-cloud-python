@@ -59,8 +59,9 @@ class ClientFolderDeleteRequest(ClientAccountBaseRequest):
         """
         Email client delete folder request.             
         :param account_location: Email client account configuration location on storage.             
+        :type account_location: StorageFileLocation
         :param folder: Path to folder to delete.             
-        :type ClientFolderDeleteRequest: 
+        :type folder: str
         """
         super(ClientFolderDeleteRequest, self).__init__()
 

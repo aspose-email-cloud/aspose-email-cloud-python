@@ -57,7 +57,7 @@ class EmailList(ListResponseOfEmailDto):
         """
         Email document list.             
         :param value: 
-        :type EmailList: 
+        :type value: List[EmailDto]
         """
         super(EmailList, self).__init__()
 

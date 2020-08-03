@@ -61,9 +61,11 @@ class MapiLegacyFreeBusyPropertyDto(MapiPropertyDto):
         """
         Mapi property with LegacyFreeBusyType value             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param value: Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
-        :type MapiLegacyFreeBusyPropertyDto: 
+        :type value: str
         """
         super(MapiLegacyFreeBusyPropertyDto, self).__init__()
 

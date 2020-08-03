@@ -101,28 +101,49 @@ class CalendarDto(object):
         """
         iCalendar document representation.             
         :param attachments: Document attachments.
+        :type attachments: List[Attachment]
         :param attendees: Event attendees.
+        :type attendees: List[MailAddress]
         :param description: Description.
+        :type description: str
         :param end_date: End date.
+        :type end_date: datetime
         :param end_time_zone: End time zone.
+        :type end_time_zone: str
         :param flags: Appointment flags.
+        :type flags: List[str]
         :param is_description_html: Indicates if description is in HTML format.
+        :type is_description_html: bool
         :param location: Location.
+        :type location: str
         :param method: Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+        :type method: str
         :param microsoft_busy_status: Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        :type microsoft_busy_status: str
         :param microsoft_intended_status: Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        :type microsoft_intended_status: str
         :param optional_attendees: Optional attendees.             
+        :type optional_attendees: List[MailAddress]
         :param organizer: Event organizer.             
+        :type organizer: MailAddress
         :param recurrence_string: Deprecated, use 'Recurrence' property. String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
+        :type recurrence_string: str
         :param recurrence: Recurrence pattern             
+        :type recurrence: RecurrencePatternDto
         :param reminders: Reminders.
+        :type reminders: List[CalendarReminder]
         :param sequence_id: The sequence id. Read only.
+        :type sequence_id: str
         :param start_date: Start date.
+        :type start_date: datetime
         :param start_time_zone: Start time zone.
+        :type start_time_zone: str
         :param status: Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+        :type status: str
         :param summary: Summary.
+        :type summary: str
         :param transparency: Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
-        :type CalendarDto: 
+        :type transparency: str
         """
 
         self._attachments = None

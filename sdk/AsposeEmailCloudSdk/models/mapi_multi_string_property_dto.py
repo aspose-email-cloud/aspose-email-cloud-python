@@ -61,9 +61,11 @@ class MapiMultiStringPropertyDto(MapiPropertyDto):
         """
         Mapi property with Multiple String values             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param values: Property values             
-        :type MapiMultiStringPropertyDto: 
+        :type values: List[str]
         """
         super(MapiMultiStringPropertyDto, self).__init__()
 

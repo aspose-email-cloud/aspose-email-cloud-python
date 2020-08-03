@@ -56,7 +56,7 @@ class ListResponseOfStorageFileLocation(object):
         """
         
         :param value: 
-        :type ListResponseOfStorageFileLocation: 
+        :type value: List[StorageFileLocation]
         """
 
         self._value = None

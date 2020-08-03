@@ -56,8 +56,9 @@ class DiscUsage(object):
         """
         Class for disc space information.
         :param used_size: Application used disc space.
+        :type used_size: int
         :param total_size: Total disc space.
-        :type DiscUsage: 
+        :type total_size: int
         """
 
         self._used_size = None

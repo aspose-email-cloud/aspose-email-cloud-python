@@ -62,10 +62,13 @@ class EmailThread(object):
         """
         Email messages thread             
         :param id: Thread identifier             
+        :type id: str
         :param subject: Thread subject             
+        :type subject: str
         :param messages: List of messages in thread             
+        :type messages: List[EmailDto]
         :param folder: Thread folder location             
-        :type EmailThread: 
+        :type folder: str
         """
 
         self._id = None

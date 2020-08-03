@@ -66,12 +66,17 @@ class WeeklyRecurrencePatternDto(RecurrencePatternDto):
         """
         Weekly recurrence pattern.             
         :param interval: Number of recurrence units.             
+        :type interval: int
         :param occurs: Number of occurrences of the recurrence pattern.             
+        :type occurs: int
         :param end_date: End date.             
+        :type end_date: datetime
         :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :type week_start: str
         :param discriminator: 
+        :type discriminator: str
         :param start_days: Start days             
-        :type WeeklyRecurrencePatternDto: 
+        :type start_days: List[str]
         """
         super(WeeklyRecurrencePatternDto, self).__init__()
 

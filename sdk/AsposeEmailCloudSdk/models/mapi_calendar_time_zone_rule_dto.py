@@ -70,15 +70,23 @@ class MapiCalendarTimeZoneRuleDto(object):
         """
         Represents time zone rule that indicate when to begin using the Standard/Daylight time.             
         :param _date: Date and time that indicate when to begin using the Standard/Daylight time.             
+        :type _date: datetime
         :param day_of_week: Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        :type day_of_week: str
         :param hour: Hour.             
+        :type hour: int
         :param milliseconds: Milliseconds.             
+        :type milliseconds: int
         :param minute: Minute.             
+        :type minute: int
         :param month: Month.             
+        :type month: int
         :param position: Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        :type position: str
         :param seconds: Seconds.             
+        :type seconds: int
         :param year: Year.             
-        :type MapiCalendarTimeZoneRuleDto: 
+        :type year: int
         """
 
         self.__date = None

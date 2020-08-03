@@ -56,7 +56,7 @@ class ClientAccountBaseRequest(object):
         """
         Base request for Email client. Stores information about email account location.             
         :param account_location: Email client account configuration location on storage.             
-        :type ClientAccountBaseRequest: 
+        :type account_location: StorageFileLocation
         """
 
         self._account_location = None

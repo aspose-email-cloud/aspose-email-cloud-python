@@ -63,10 +63,13 @@ class ClientMessageMoveRequest(ClientMessageBaseRequest):
         """
         Email client move message request.             
         :param account_location: Email client account configuration location on storage.             
+        :type account_location: StorageFileLocation
         :param message_id: Message identifier.             
+        :type message_id: str
         :param source_folder: Folder to move message from.             
+        :type source_folder: str
         :param destination_folder: Folder to move message to.             
-        :type ClientMessageMoveRequest: 
+        :type destination_folder: str
         """
         super(ClientMessageMoveRequest, self).__init__()
 

@@ -60,10 +60,13 @@ class MailAddress(object):
         """
         Represents the address of a message.
         :param display_name: Display name             
+        :type display_name: str
         :param address: Address             
+        :type address: str
         :param participation_status: Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        :type participation_status: str
         :param original_address_string: The original e-mail address string             
-        :type MailAddress: 
+        :type original_address_string: str
         """
 
         self._display_name = None

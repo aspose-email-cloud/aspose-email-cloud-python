@@ -56,7 +56,7 @@ class ListResponseOfMailServerFolder(object):
         """
         
         :param value: 
-        :type ListResponseOfMailServerFolder: 
+        :type value: List[MailServerFolder]
         """
 
         self._value = None

@@ -65,11 +65,15 @@ class LinkedResource(AttachmentBase):
         """
         Represents an embedded resource in a message.             
         :param base64_data: Attachment file content as Base64 string.             
+        :type base64_data: str
         :param content_id: Attachment content id             
+        :type content_id: str
         :param content_type: Content type             
+        :type content_type: ContentType
         :param headers: Attachment headers.             
+        :type headers: Dict[str, str]
         :param content_link: URI that the resource must match.             
-        :type LinkedResource: 
+        :type content_link: str
         """
         super(LinkedResource, self).__init__()
 

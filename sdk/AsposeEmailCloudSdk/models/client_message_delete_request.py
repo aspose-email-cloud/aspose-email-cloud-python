@@ -61,9 +61,11 @@ class ClientMessageDeleteRequest(ClientMessageBaseRequest):
         """
         Email client delete message request.             
         :param account_location: Email client account configuration location on storage.             
+        :type account_location: StorageFileLocation
         :param message_id: Message identifier.             
+        :type message_id: str
         :param folder: Folder to delete message from.             
-        :type ClientMessageDeleteRequest: 
+        :type folder: str
         """
         super(ClientMessageDeleteRequest, self).__init__()
 

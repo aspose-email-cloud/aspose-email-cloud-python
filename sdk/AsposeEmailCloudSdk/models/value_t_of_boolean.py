@@ -54,7 +54,7 @@ class ValueTOfBoolean(object):
         """
         
         :param value: 
-        :type ValueTOfBoolean: 
+        :type value: bool
         """
 
         self._value = None

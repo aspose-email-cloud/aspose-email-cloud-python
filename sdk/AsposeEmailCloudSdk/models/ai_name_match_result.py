@@ -58,8 +58,9 @@ class AiNameMatchResult(object):
         """
         Two names match result             
         :param similarity: Similarity score             
+        :type similarity: float
         :param mismatches: Detailed description of mismatches             
-        :type AiNameMatchResult: 
+        :type mismatches: List[AiNameMismatch]
         """
 
         self._similarity = None

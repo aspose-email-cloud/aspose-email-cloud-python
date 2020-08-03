@@ -61,9 +61,11 @@ class MapiDateTimePropertyDto(MapiPropertyDto):
         """
         Mapi property with DateTime value             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param value: Property value             
-        :type MapiDateTimePropertyDto: 
+        :type value: datetime
         """
         super(MapiDateTimePropertyDto, self).__init__()
 

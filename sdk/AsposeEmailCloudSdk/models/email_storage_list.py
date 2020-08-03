@@ -57,7 +57,7 @@ class EmailStorageList(ListResponseOfStorageModelOfEmailDto):
         """
         Email models list with corresponding storage locations.             
         :param value: 
-        :type EmailStorageList: 
+        :type value: List[StorageModelOfEmailDto]
         """
         super(EmailStorageList, self).__init__()
 

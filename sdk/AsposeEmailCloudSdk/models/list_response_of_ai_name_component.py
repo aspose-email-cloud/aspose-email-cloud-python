@@ -56,7 +56,7 @@ class ListResponseOfAiNameComponent(object):
         """
         
         :param value: 
-        :type ListResponseOfAiNameComponent: 
+        :type value: List[AiNameComponent]
         """
 
         self._value = None

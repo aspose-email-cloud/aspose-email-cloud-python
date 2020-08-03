@@ -54,7 +54,7 @@ class MapiPropertyDescriptor(object):
         """
         Mapi property descriptor             
         :param discriminator: 
-        :type MapiPropertyDescriptor: 
+        :type discriminator: str
         """
 
         self._discriminator = self.__class__.__name__

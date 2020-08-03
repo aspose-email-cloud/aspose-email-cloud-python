@@ -58,9 +58,11 @@ class AiNameMismatch(object):
         """
         Names mismatch detailed description             
         :param category: Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+        :type category: str
         :param similarity: Similarity score             
+        :type similarity: float
         :param explanation: Explanation or mismatch subtype             
-        :type AiNameMismatch: 
+        :type explanation: str
         """
 
         self._category = None

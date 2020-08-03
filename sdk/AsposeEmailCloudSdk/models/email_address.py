@@ -66,12 +66,17 @@ class EmailAddress(object):
         """
         Email address.             
         :param category: Address category.             
+        :type category: EnumWithCustomOfEmailAddressCategory
         :param display_name: Display name.             
+        :type display_name: str
         :param preferred: Defines whether email address is preferred.             
+        :type preferred: bool
         :param routing_type: A routing type for an email.             
+        :type routing_type: str
         :param address: Email address.             
+        :type address: str
         :param original_address_string: The original e-mail address string             
-        :type EmailAddress: 
+        :type original_address_string: str
         """
 
         self._category = None

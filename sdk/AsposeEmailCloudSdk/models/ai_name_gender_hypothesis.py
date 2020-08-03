@@ -56,8 +56,9 @@ class AiNameGenderHypothesis(object):
         """
         Name gender hypothesis             
         :param gender: Recognized name gender. Enum, available values: Male, Female, Unknown
+        :type gender: str
         :param score: Hypothesis score             
-        :type AiNameGenderHypothesis: 
+        :type score: float
         """
 
         self._gender = None

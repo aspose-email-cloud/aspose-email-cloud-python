@@ -56,8 +56,9 @@ class ErrorDetails(object):
         """
         The error details
         :param request_id: The request id
+        :type request_id: str
         :param _date: Date
-        :type ErrorDetails: 
+        :type _date: datetime
         """
 
         self._request_id = None

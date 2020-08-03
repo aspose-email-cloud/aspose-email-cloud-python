@@ -64,12 +64,17 @@ class MapiContactElectronicAddressDto(object):
         """
         Refers to the group of properties that define the e-mail address or fax address for a contact.             
         :param address_type: Address type of an electronic address
+        :type address_type: str
         :param display_name: User-readable display name for the e-mail address
+        :type display_name: str
         :param email_address: E-mail address of the contact
+        :type email_address: str
         :param fax_number: Telephone number of the mail user's primary fax machine
+        :type fax_number: str
         :param is_empty: Shows if MapiContactElectronicAddress is empty
+        :type is_empty: bool
         :param original_display_name: SMTP e-mail address that corresponds to the e-mail address for the Contact object.
-        :type MapiContactElectronicAddressDto: 
+        :type original_display_name: str
         """
 
         self._address_type = None

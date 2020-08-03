@@ -56,8 +56,9 @@ class AiNameWeighted(object):
         """
         Name with score             
         :param name: Name             
+        :type name: str
         :param score: Score of name             
-        :type AiNameWeighted: 
+        :type score: float
         """
 
         self._name = None

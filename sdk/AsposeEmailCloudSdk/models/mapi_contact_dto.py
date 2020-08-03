@@ -118,32 +118,57 @@ class MapiContactDto(MapiMessageItemBaseDto):
         """
         Represents outlook contact information.             
         :param attachments: Message item attachments.             
+        :type attachments: List[MapiAttachmentDto]
         :param billing: Billing information associated with an item.             
+        :type billing: str
         :param body: Message text.             
+        :type body: str
         :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :type body_html: str
         :param body_rtf: RTF formatted message text.             
+        :type body_rtf: str
         :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :type body_type: str
         :param categories: Contains keywords or categories for the message object.             
+        :type categories: List[str]
         :param companies: Contains the names of the companies that are associated with an item.             
+        :type companies: List[str]
         :param item_id: The item id, uses with a server.             
+        :type item_id: str
         :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :type message_class: str
         :param mileage: Contains the mileage information that is associated with an item.             
+        :type mileage: str
         :param recipients: Recipients of the message.             
+        :type recipients: List[MapiRecipientDto]
         :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :type sensitivity: str
         :param subject: Subject of the message.             
+        :type subject: str
         :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :type subject_prefix: str
         :param properties: List of MAPI properties             
+        :type properties: List[MapiPropertyDto]
         :param discriminator: 
+        :type discriminator: str
         :param electronic_addresses: Specify properties for up to three different e-mail addresses and three different fax addresses.             
+        :type electronic_addresses: MapiContactElectronicAddressPropertySetDto
         :param events: Specify events associated with a contact.             
+        :type events: MapiContactEventPropertySetDto
         :param name_info: The properties are used to specify the name of the person represented by the contact.             
+        :type name_info: MapiContactNamePropertySetDto
         :param other_fields: Specify other fields of contact.             
+        :type other_fields: MapiContactOtherPropertySetDto
         :param personal_info: Specify other additional contact information.             
+        :type personal_info: MapiContactPersonalInfoPropertySetDto
         :param photo: Contact photo.             
+        :type photo: MapiContactPhotoDto
         :param physical_addresses: Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
+        :type physical_addresses: MapiContactPhysicalAddressPropertySetDto
         :param professional_info: Properties are used to store professional details for the person represented by the contact.             
+        :type professional_info: MapiContactProfessionalPropertySetDto
         :param telephones: Specify telephone numbers for the contact.             
-        :type MapiContactDto: 
+        :type telephones: MapiContactTelephonePropertySetDto
         """
         super(MapiContactDto, self).__init__()
 

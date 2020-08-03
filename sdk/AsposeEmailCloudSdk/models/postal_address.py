@@ -76,17 +76,27 @@ class PostalAddress(object):
         """
         A postal address             
         :param address: Address.             
+        :type address: str
         :param category: Address category.             
+        :type category: EnumWithCustomOfPostalAddressCategory
         :param city: Address's city.             
+        :type city: str
         :param country: Address's country.             
+        :type country: str
         :param country_code: Country code.             
+        :type country_code: str
         :param is_mailing_address: Defines whether address may be used for mailing.             
+        :type is_mailing_address: bool
         :param postal_code: Postal code.             
+        :type postal_code: str
         :param post_office_box: Post Office box.             
+        :type post_office_box: str
         :param preferred: Defines whether postal address is preferred.             
+        :type preferred: bool
         :param state_or_province: Address's region.             
+        :type state_or_province: str
         :param street: Address's street.             
-        :type PostalAddress: 
+        :type street: str
         """
 
         self._address = None

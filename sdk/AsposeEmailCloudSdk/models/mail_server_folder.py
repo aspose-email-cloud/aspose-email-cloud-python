@@ -56,8 +56,9 @@ class MailServerFolder(object):
         """
         Email account folder             
         :param name: Gets or sets mail folder name             
+        :type name: str
         :param id: Gets or sets mail folder id             
-        :type MailServerFolder: 
+        :type id: str
         """
 
         self._name = None

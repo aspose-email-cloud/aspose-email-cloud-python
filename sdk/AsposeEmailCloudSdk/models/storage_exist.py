@@ -54,7 +54,7 @@ class StorageExist(object):
         """
         Storage exists
         :param exists: Shows that the storage exists.             
-        :type StorageExist: 
+        :type exists: bool
         """
 
         self._exists = None

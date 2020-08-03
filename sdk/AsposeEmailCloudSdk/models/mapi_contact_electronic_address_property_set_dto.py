@@ -72,15 +72,23 @@ class MapiContactElectronicAddressPropertySetDto(object):
         """
         Specify properties for up to three different e-mail addresses (Email1, Email2, and Email3) and three different fax addresses (Primary Fax, Business Fax, and Home Fax)             
         :param business_fax: Refers to the group of properties that define the business fax address for a contact.
+        :type business_fax: MapiContactElectronicAddressDto
         :param default_email_address: Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
+        :type default_email_address: MapiContactElectronicAddressDto
         :param email1: Refers to the group of properties that define the first e-mail address for a contact.             
+        :type email1: MapiContactElectronicAddressDto
         :param email2: Refers to the group of properties that define the second e-mail address for a contact.             
+        :type email2: MapiContactElectronicAddressDto
         :param email3: Refers to the group of properties that define the third e-mail address for a contact.             
+        :type email3: MapiContactElectronicAddressDto
         :param home_fax: Refers to the group of properties that define the home fax address for a contact.             
+        :type home_fax: MapiContactElectronicAddressDto
         :param is_empty: Shows if MapiContactElectronicAddressPropertySetDto is empty
+        :type is_empty: bool
         :param primary_fax: Refers to the group of properties that define the primary fax address for a contact.             
+        :type primary_fax: MapiContactElectronicAddressDto
         :param use_autocomplete: Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
-        :type MapiContactElectronicAddressPropertySetDto: 
+        :type use_autocomplete: bool
         """
 
         self._business_fax = None

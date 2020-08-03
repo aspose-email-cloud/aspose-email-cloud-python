@@ -57,7 +57,7 @@ class AiNameGenderHypothesisList(ListResponseOfAiNameGenderHypothesis):
         """
         Hypotheses about person&#39;s gender             
         :param value: 
-        :type AiNameGenderHypothesisList: 
+        :type value: List[AiNameGenderHypothesis]
         """
         super(AiNameGenderHypothesisList, self).__init__()
 

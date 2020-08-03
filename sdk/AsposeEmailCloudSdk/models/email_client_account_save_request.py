@@ -60,8 +60,9 @@ class EmailClientAccountSaveRequest(StorageModelOfEmailClientAccount):
         """
         Email client account save request             
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
-        :type EmailClientAccountSaveRequest: 
+        :type value: EmailClientAccount
         """
         super(EmailClientAccountSaveRequest, self).__init__()
 

@@ -90,23 +90,39 @@ class MapiMessageItemBaseDto(object):
         """
         Base Dto for MapiMessage, MapiCalendar or MapiContact             
         :param attachments: Message item attachments.             
+        :type attachments: List[MapiAttachmentDto]
         :param billing: Billing information associated with an item.             
+        :type billing: str
         :param body: Message text.             
+        :type body: str
         :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :type body_html: str
         :param body_rtf: RTF formatted message text.             
+        :type body_rtf: str
         :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :type body_type: str
         :param categories: Contains keywords or categories for the message object.             
+        :type categories: List[str]
         :param companies: Contains the names of the companies that are associated with an item.             
+        :type companies: List[str]
         :param item_id: The item id, uses with a server.             
+        :type item_id: str
         :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :type message_class: str
         :param mileage: Contains the mileage information that is associated with an item.             
+        :type mileage: str
         :param recipients: Recipients of the message.             
+        :type recipients: List[MapiRecipientDto]
         :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :type sensitivity: str
         :param subject: Subject of the message.             
+        :type subject: str
         :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :type subject_prefix: str
         :param properties: List of MAPI properties             
+        :type properties: List[MapiPropertyDto]
         :param discriminator: 
-        :type MapiMessageItemBaseDto: 
+        :type discriminator: str
         """
 
         self._attachments = None

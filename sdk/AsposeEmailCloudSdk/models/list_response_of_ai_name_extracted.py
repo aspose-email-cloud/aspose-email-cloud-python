@@ -56,7 +56,7 @@ class ListResponseOfAiNameExtracted(object):
         """
         
         :param value: 
-        :type ListResponseOfAiNameExtracted: 
+        :type value: List[AiNameExtracted]
         """
 
         self._value = None

@@ -57,7 +57,7 @@ class MailMessageBaseList(ListResponseOfMailMessageBase):
         """
         List of messages.             
         :param value: 
-        :type MailMessageBaseList: 
+        :type value: List[MailMessageBase]
         """
         super(MailMessageBaseList, self).__init__()
 

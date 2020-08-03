@@ -57,7 +57,7 @@ class AiNameExtractedList(ListResponseOfAiNameExtracted):
         """
         Extracted name list.             
         :param value: 
-        :type AiNameExtractedList: 
+        :type value: List[AiNameExtracted]
         """
         super(AiNameExtractedList, self).__init__()
 

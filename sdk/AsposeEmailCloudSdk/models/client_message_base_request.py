@@ -59,8 +59,9 @@ class ClientMessageBaseRequest(ClientAccountBaseRequest):
         """
         Email client message request.             
         :param account_location: Email client account configuration location on storage.             
+        :type account_location: StorageFileLocation
         :param message_id: Message identifier.             
-        :type ClientMessageBaseRequest: 
+        :type message_id: str
         """
         super(ClientMessageBaseRequest, self).__init__()
 

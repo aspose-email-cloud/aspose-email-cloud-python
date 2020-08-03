@@ -56,8 +56,9 @@ class AiNameFormatted(object):
         """
         Formatted name             
         :param name: Formatted name value             
+        :type name: str
         :param comments: Usually empty; can contain extra message describing some issue occurred during the formatting             
-        :type AiNameFormatted: 
+        :type comments: str
         """
 
         self._name = None

@@ -54,7 +54,7 @@ class AiBcrImage(object):
         """
         Image for recognition             
         :param is_single: Determines that image contains single VCard or more.             
-        :type AiBcrImage: 
+        :type is_single: bool
         """
 
         self._is_single = None

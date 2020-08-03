@@ -62,9 +62,11 @@ class MapiCalendarSaveRequest(StorageModelOfMapiCalendarDto):
         """
         Save MapiCalendar to storage request.             
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
+        :type value: MapiCalendarDto
         :param format: Calendar file format Enum, available values: Ics, Msg
-        :type MapiCalendarSaveRequest: 
+        :type format: str
         """
         super(MapiCalendarSaveRequest, self).__init__()
 

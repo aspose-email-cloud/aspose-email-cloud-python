@@ -62,10 +62,13 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
         """
         
         :param address: Email address to discover.             
+        :type address: str
         :param fast_processing: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :type fast_processing: bool
         :param login: Email account login. If not specified, address used as a login.             
+        :type login: str
         :param password: Email account password.             
-        :type DiscoverEmailConfigPassword: 
+        :type password: str
         """
         super(DiscoverEmailConfigPassword, self).__init__()
 

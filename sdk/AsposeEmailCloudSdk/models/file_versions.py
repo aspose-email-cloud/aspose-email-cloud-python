@@ -56,7 +56,7 @@ class FileVersions(object):
         """
         File versions FileVersion.
         :param value: File versions FileVersion.
-        :type FileVersions: 
+        :type value: List[FileVersion]
         """
 
         self._value = None

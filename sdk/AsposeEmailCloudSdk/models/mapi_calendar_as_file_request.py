@@ -58,8 +58,9 @@ class MapiCalendarAsFileRequest(object):
         """
         Convert MapiCalendar to file request.             
         :param format: Calendar file format Enum, available values: Ics, Msg
+        :type format: str
         :param value: MAPI calendar model.             
-        :type MapiCalendarAsFileRequest: 
+        :type value: MapiCalendarDto
         """
 
         self._format = None

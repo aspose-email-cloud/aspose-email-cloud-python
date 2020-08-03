@@ -56,7 +56,7 @@ class FilesList(object):
         """
         Files list
         :param value: Files and folders contained by folder StorageFile.
-        :type FilesList: 
+        :type value: List[StorageFile]
         """
 
         self._value = None

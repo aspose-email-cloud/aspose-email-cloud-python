@@ -56,7 +56,7 @@ class ListResponseOfAiNameGenderHypothesis(object):
         """
         
         :param value: 
-        :type ListResponseOfAiNameGenderHypothesis: 
+        :type value: List[AiNameGenderHypothesis]
         """
 
         self._value = None

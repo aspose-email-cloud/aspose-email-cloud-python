@@ -56,8 +56,9 @@ class ContentTypeParameter(object):
         """
         Content-Type header parameter             
         :param name: Parameter name             
+        :type name: str
         :param value: Parameter value             
-        :type ContentTypeParameter: 
+        :type value: str
         """
 
         self._name = None

@@ -56,7 +56,7 @@ class ListResponseOfEmailAccountConfig(object):
         """
         
         :param value: 
-        :type ListResponseOfEmailAccountConfig: 
+        :type value: List[EmailAccountConfig]
         """
 
         self._value = None

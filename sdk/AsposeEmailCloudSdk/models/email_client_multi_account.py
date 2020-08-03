@@ -58,8 +58,9 @@ class EmailClientMultiAccount(object):
         """
         Email client virtual account, which contains several accounts             
         :param receive_accounts: Email client receive accounts             
+        :type receive_accounts: List[EmailClientAccount]
         :param send_account: Email client send account             
-        :type EmailClientMultiAccount: 
+        :type send_account: EmailClientAccount
         """
 
         self._receive_accounts = None

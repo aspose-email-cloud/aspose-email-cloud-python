@@ -56,8 +56,9 @@ class EnumWithCustomOfEventCategory(object):
         """
         
         :param value: Event category. Enum, available values: Custom, Birthday, Anniversary
+        :type value: str
         :param description: 
-        :type EnumWithCustomOfEventCategory: 
+        :type description: str
         """
 
         self._value = None

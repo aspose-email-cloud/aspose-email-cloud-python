@@ -60,9 +60,11 @@ class MapiContactPhysicalAddressPropertySetDto(object):
         """
         Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address             
         :param work_address: Specifies the address of the contact's work             
+        :type work_address: MapiContactPhysicalAddressDto
         :param home_address: Specifies the address of the contact's home             
+        :type home_address: MapiContactPhysicalAddressDto
         :param other_address: Specifies the other contact's address             
-        :type MapiContactPhysicalAddressPropertySetDto: 
+        :type other_address: MapiContactPhysicalAddressDto
         """
 
         self._work_address = None

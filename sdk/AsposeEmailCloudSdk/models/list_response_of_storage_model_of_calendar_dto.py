@@ -56,7 +56,7 @@ class ListResponseOfStorageModelOfCalendarDto(object):
         """
         
         :param value: 
-        :type ListResponseOfStorageModelOfCalendarDto: 
+        :type value: List[StorageModelOfCalendarDto]
         """
 
         self._value = None

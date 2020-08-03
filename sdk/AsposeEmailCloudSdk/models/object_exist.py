@@ -56,8 +56,9 @@ class ObjectExist(object):
         """
         Object exists
         :param exists: Indicates that the file or folder exists.
+        :type exists: bool
         :param is_folder: True if it is a folder, false if it is a file.
-        :type ObjectExist: 
+        :type is_folder: bool
         """
 
         self._exists = None

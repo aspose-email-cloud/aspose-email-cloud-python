@@ -58,8 +58,9 @@ class AiNameWeightedVariants(object):
         """
         Name variants             
         :param names: List of name variations             
+        :type names: List[AiNameWeighted]
         :param comments: Usually empty; can contain extra message describing some issue occurred during processing             
-        :type AiNameWeightedVariants: 
+        :type comments: str
         """
 
         self._names = None

@@ -71,14 +71,21 @@ class CalendarReminder(object):
         """
         Provides a grouping of component properties that define an alarm.             
         :param action: Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
+        :type action: str
         :param attachments: Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
+        :type attachments: List[str]
         :param attendees: Contains collection of ReminderAttendee objects.             
+        :type attendees: List[ReminderAttendee]
         :param description: Provides a more complete description of the alarm.
+        :type description: str
         :param duration: Specifies the delay period in ticks, after which the alarm will repeat.             
+        :type duration: int
         :param repeat: Defines the number of time the alarm should be repeated, after the initial trigger.             
+        :type repeat: int
         :param summary: Defines a short summary or subject for the alarm.
+        :type summary: str
         :param trigger: Specifies when an alarm will trigger.
-        :type CalendarReminder: 
+        :type trigger: ReminderTrigger
         """
 
         self._action = None

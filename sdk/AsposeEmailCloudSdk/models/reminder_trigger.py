@@ -58,9 +58,11 @@ class ReminderTrigger(object):
         """
         Specifies when an alarm will trigger.
         :param date_time: A trigger set to an absolute date/time.
+        :type date_time: datetime
         :param duration: Specifies a relative time in ticks for the trigger of the alarm.             
+        :type duration: int
         :param related: Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
-        :type ReminderTrigger: 
+        :type related: str
         """
 
         self._date_time = None

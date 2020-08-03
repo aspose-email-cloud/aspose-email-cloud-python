@@ -68,13 +68,19 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         
         :param address: Email address to discover.             
+        :type address: str
         :param fast_processing: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :type fast_processing: bool
         :param login: Email account login. If not specified, address used as a login.             
+        :type login: str
         :param client_id: OAuth client id.             
+        :type client_id: str
         :param client_secret: OAuth client secret.             
+        :type client_secret: str
         :param refresh_token: OAuth refresh token.             
+        :type refresh_token: str
         :param request_url: The url to obtain access token. If not specified, will be discovered from email configuration.             
-        :type DiscoverEmailConfigOauth: 
+        :type request_url: str
         """
         super(DiscoverEmailConfigOauth, self).__init__()
 

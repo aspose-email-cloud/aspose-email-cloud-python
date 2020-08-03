@@ -72,15 +72,23 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
         """
         Yearly recurrence pattern.             
         :param interval: Number of recurrence units.             
+        :type interval: int
         :param occurs: Number of occurrences of the recurrence pattern.             
+        :type occurs: int
         :param end_date: End date.             
+        :type end_date: datetime
         :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :type week_start: str
         :param discriminator: 
+        :type discriminator: str
         :param start_day: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :type start_day: str
         :param start_month: Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
+        :type start_month: str
         :param start_offset: Start offset.             
+        :type start_offset: int
         :param start_position: Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
-        :type YearlyRecurrencePatternDto: 
+        :type start_position: str
         """
         super(YearlyRecurrencePatternDto, self).__init__()
 

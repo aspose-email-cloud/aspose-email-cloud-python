@@ -56,8 +56,9 @@ class EnumWithCustomOfUrlCategory(object):
         """
         
         :param value: Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+        :type value: str
         :param description: 
-        :type EnumWithCustomOfUrlCategory: 
+        :type description: str
         """
 
         self._value = None

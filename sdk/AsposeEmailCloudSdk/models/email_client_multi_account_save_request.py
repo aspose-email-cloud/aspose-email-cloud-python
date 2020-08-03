@@ -60,8 +60,9 @@ class EmailClientMultiAccountSaveRequest(StorageModelOfEmailClientMultiAccount):
         """
         Email client multi account save request.             
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
-        :type EmailClientMultiAccountSaveRequest: 
+        :type value: EmailClientMultiAccount
         """
         super(EmailClientMultiAccountSaveRequest, self).__init__()
 

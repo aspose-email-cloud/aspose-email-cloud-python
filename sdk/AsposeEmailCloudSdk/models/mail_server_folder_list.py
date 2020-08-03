@@ -57,7 +57,7 @@ class MailServerFolderList(ListResponseOfMailServerFolder):
         """
         List of email client folders.             
         :param value: 
-        :type MailServerFolderList: 
+        :type value: List[MailServerFolder]
         """
         super(MailServerFolderList, self).__init__()
 

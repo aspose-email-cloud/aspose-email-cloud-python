@@ -121,38 +121,69 @@ class EmailDto(object):
         """
         Email message representation.             
         :param alternate_views: Collection of alternate views of message.             
+        :type alternate_views: List[AlternateView]
         :param attachments: Email message attachments.             
+        :type attachments: List[Attachment]
         :param bcc: BCC recipients.             
+        :type bcc: List[MailAddress]
         :param body: Email message body as plain text.             
+        :type body: str
         :param body_encoding: Body encoding.             
+        :type body_encoding: str
         :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :type body_type: str
         :param cc: CC recipients.             
+        :type cc: List[MailAddress]
         :param _date: Message date.             
+        :type _date: datetime
         :param delivery_notification_options: Delivery notifications.
+        :type delivery_notification_options: List[str]
         :param _from: From address.             
+        :type _from: MailAddress
         :param headers: Document headers.             
+        :type headers: Dict[str, str]
         :param html_body: HTML body.             
+        :type html_body: str
         :param html_body_text: Html body as plain text. Read only.             
+        :type html_body_text: str
         :param is_body_html: Indicates whether the message body is in Html.             
+        :type is_body_html: bool
         :param is_draft: Indicates whether or not a message has been sent.             
+        :type is_draft: bool
         :param is_encrypted: Indicates whether the message is encrypted. Read only.             
+        :type is_encrypted: bool
         :param is_signed: Indicates whether the message is signed. Read only.             
+        :type is_signed: bool
         :param linked_resources: Linked resources of message.             
+        :type linked_resources: List[LinkedResource]
         :param message_id: Message id.             
+        :type message_id: str
         :param original_is_tnef: Indicates whether original EML message is in TNEF format. Read only.             
+        :type original_is_tnef: bool
         :param preferred_text_encoding: Preferred encoding.             
+        :type preferred_text_encoding: str
         :param priority: Email priority status. Enum, available values: High, Low, Normal
+        :type priority: str
         :param read_receipt_to: Read receipt addresses.             
+        :type read_receipt_to: List[MailAddress]
         :param reply_to_list: The list of addresses to reply to for the mail message.             
+        :type reply_to_list: List[MailAddress]
         :param reverse_path: ReversePath address.             
+        :type reverse_path: MailAddress
         :param sender: Sender address.             
+        :type sender: MailAddress
         :param sensitivity: Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+        :type sensitivity: str
         :param subject: Message subject.             
+        :type subject: str
         :param subject_encoding: Subject encoding.             
+        :type subject_encoding: str
         :param time_zone_offset: Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
+        :type time_zone_offset: int
         :param to: The address collection that contains the recipients of message.             
+        :type to: List[MailAddress]
         :param x_mailer: The X-Mailer the software that created the e-mail message.             
-        :type EmailDto: 
+        :type x_mailer: str
         """
 
         self._alternate_views = None

@@ -58,8 +58,9 @@ class AiNameExtracted(object):
         """
         Extracted name             
         :param name: Extracted name components             
+        :type name: List[AiNameExtractedComponent]
         :param score: Extracted name score             
-        :type AiNameExtracted: 
+        :type score: float
         """
 
         self._name = None

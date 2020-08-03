@@ -59,8 +59,9 @@ class StorageModelOfEmailDto(object):
         """
         
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
-        :type StorageModelOfEmailDto: 
+        :type value: EmailDto
         """
 
         self._storage_file = None

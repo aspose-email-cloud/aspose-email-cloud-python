@@ -58,8 +58,9 @@ class CustomerEvent(object):
         """
         Event.             
         :param category: Event category.             
+        :type category: EnumWithCustomOfEventCategory
         :param _date: Event date.             
-        :type CustomerEvent: 
+        :type _date: datetime
         """
 
         self._category = None

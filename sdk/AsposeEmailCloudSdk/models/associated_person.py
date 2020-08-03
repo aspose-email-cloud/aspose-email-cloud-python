@@ -60,9 +60,11 @@ class AssociatedPerson(object):
         """
         Describes associated person.             
         :param name: Associated person's name.             
+        :type name: str
         :param category: Associated person's category.             
+        :type category: EnumWithCustomOfAssociatedPersonCategory
         :param preferred: Defines whether associated person is preferred.             
-        :type AssociatedPerson: 
+        :type preferred: bool
         """
 
         self._name = None

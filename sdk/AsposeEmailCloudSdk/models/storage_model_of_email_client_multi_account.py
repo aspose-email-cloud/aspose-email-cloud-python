@@ -59,8 +59,9 @@ class StorageModelOfEmailClientMultiAccount(object):
         """
         
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
-        :type StorageModelOfEmailClientMultiAccount: 
+        :type value: EmailClientMultiAccount
         """
 
         self._storage_file = None

@@ -58,8 +58,9 @@ class MapiCalendarTimeZoneDto(object):
         """
         Represents the mapi calendar time zone information.             
         :param key_name: Human-readable description of the time zone.             
+        :type key_name: str
         :param time_zone_rules: Time zone rules             
-        :type MapiCalendarTimeZoneDto: 
+        :type time_zone_rules: List[MapiCalendarTimeZoneInfoDto]
         """
 
         self._key_name = None

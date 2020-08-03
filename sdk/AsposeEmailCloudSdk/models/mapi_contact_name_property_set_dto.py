@@ -72,16 +72,25 @@ class MapiContactNamePropertySetDto(object):
         """
         The properties are used to specify the name of the person represented by the contact             
         :param display_name: Full name of the contact             
+        :type display_name: str
         :param display_name_prefix: Title of the contact             
+        :type display_name_prefix: str
         :param file_under: Name under which to file this contact when displaying a list of contacts             
+        :type file_under: str
         :param file_under_id: Value specifying how to generate and recompute the property when other properties are changed             
+        :type file_under_id: int
         :param generation: Generation suffix of the contact             
+        :type generation: str
         :param given_name: Given name (first name) of the contact             
+        :type given_name: str
         :param initials: Initials of the contact             
+        :type initials: str
         :param middle_name: Middle name of the contact             
+        :type middle_name: str
         :param nickname: Nickname of the contact             
+        :type nickname: str
         :param surname: Surname (family name) of the contact             
-        :type MapiContactNamePropertySetDto: 
+        :type surname: str
         """
 
         self._display_name = None

@@ -62,11 +62,15 @@ class AiNameCulturalContext(object):
         """
         AiName cultural context             
         :param language: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
+        :type language: str
         :param location: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
+        :type location: str
         :param script: A writing system code; starts with the ISO-15924 script name             
+        :type script: str
         :param encoding: A character encoding name             
+        :type encoding: str
         :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
-        :type AiNameCulturalContext: 
+        :type style: str
         """
 
         self._language = None

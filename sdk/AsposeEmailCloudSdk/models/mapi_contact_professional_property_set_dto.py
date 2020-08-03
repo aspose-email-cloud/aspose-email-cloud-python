@@ -66,13 +66,19 @@ class MapiContactProfessionalPropertySetDto(object):
         """
         Properties are used to store professional details for the person represented by the contact             
         :param title: Gets or sets the job title of the contact             
+        :type title: str
         :param company_name: Gets or sets the company that employs the contact             
+        :type company_name: str
         :param department_name: Gets or sets the name of the department to which the contact belongs             
+        :type department_name: str
         :param office_location: Gets or sets the location of the office that the contact works in             
+        :type office_location: str
         :param manager_name: Gets or sets the name of the contact's manager             
+        :type manager_name: str
         :param assistant: Gets or sets the name of the contact's assistant             
+        :type assistant: str
         :param profession: Gets or sets the profession of the contact             
-        :type MapiContactProfessionalPropertySetDto: 
+        :type profession: str
         """
 
         self._title = None

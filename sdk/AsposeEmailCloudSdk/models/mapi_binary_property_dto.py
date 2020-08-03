@@ -61,9 +61,11 @@ class MapiBinaryPropertyDto(MapiPropertyDto):
         """
         Mapi property with Binary value represented as a Base64 string             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param value_base64: Property value converted to Base64             
-        :type MapiBinaryPropertyDto: 
+        :type value_base64: str
         """
         super(MapiBinaryPropertyDto, self).__init__()
 

@@ -56,7 +56,7 @@ class ListResponseOfEmailThread(object):
         """
         
         :param value: 
-        :type ListResponseOfEmailThread: 
+        :type value: List[EmailThread]
         """
 
         self._value = None

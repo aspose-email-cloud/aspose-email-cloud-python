@@ -82,20 +82,33 @@ class MapiCalendarExceptionInfoDto(object):
         """
         An exception specifies changes to an instance of a recurring series.             
         :param attachments: Attachments in the recurrence exception.             
+        :type attachments: List[MapiAttachmentDto]
         :param body: Body.             
+        :type body: str
         :param busy_status: Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        :type busy_status: str
         :param end_date_time: End date.             
+        :type end_date_time: datetime
         :param has_attachment: Value of this field specifies whether the Exception Embedded Message object contains attachments.             
+        :type has_attachment: bool
         :param location: Location.             
+        :type location: str
         :param meeting_type: Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+        :type meeting_type: str
         :param original_start_date: Original start date.             
+        :type original_start_date: datetime
         :param override_flags: Override flags.             
+        :type override_flags: List[str]
         :param reminder_delta: Reminder delta.             
+        :type reminder_delta: int
         :param reminder_set: Value for the PidLidReminderSet property.             
+        :type reminder_set: bool
         :param start_date_time: Start date.             
+        :type start_date_time: datetime
         :param subject: Subject.             
+        :type subject: str
         :param sub_type: SubType.             
-        :type MapiCalendarExceptionInfoDto: 
+        :type sub_type: int
         """
 
         self._attachments = None

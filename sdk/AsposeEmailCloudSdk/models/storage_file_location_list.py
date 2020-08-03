@@ -57,7 +57,7 @@ class StorageFileLocationList(ListResponseOfStorageFileLocation):
         """
         List of files located on storage.             
         :param value: 
-        :type StorageFileLocationList: 
+        :type value: List[StorageFileLocation]
         """
         super(StorageFileLocationList, self).__init__()
 

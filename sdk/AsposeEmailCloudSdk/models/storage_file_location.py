@@ -60,9 +60,11 @@ class StorageFileLocation(StorageFolderLocation):
         """
         A storage file location information             
         :param storage: A storage name             
+        :type storage: str
         :param folder_path: A path to a folder in specified storage             
+        :type folder_path: str
         :param file_name: A file name in storage             
-        :type StorageFileLocation: 
+        :type file_name: str
         """
         super(StorageFileLocation, self).__init__()
 

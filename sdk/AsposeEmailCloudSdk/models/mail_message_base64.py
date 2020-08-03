@@ -60,9 +60,11 @@ class MailMessageBase64(MailMessageBase):
         """
         Email message represented as file, encoded to Base64 format.             
         :param discriminator: 
+        :type discriminator: str
         :param value_base64: Email message file data encoded to Base64 string.             
+        :type value_base64: str
         :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-        :type MailMessageBase64: 
+        :type format: str
         """
         super(MailMessageBase64, self).__init__()
 

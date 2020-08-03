@@ -59,8 +59,9 @@ class MailMessageDto(MailMessageBase):
         """
         Represents email message, stored as an EmailDto object.             
         :param discriminator: 
+        :type discriminator: str
         :param value: Message document object.             
-        :type MailMessageDto: 
+        :type value: EmailDto
         """
         super(MailMessageDto, self).__init__()
 

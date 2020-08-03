@@ -62,10 +62,13 @@ class Error(object):
         """
         Error
         :param code: Code             
+        :type code: str
         :param message: Message             
+        :type message: str
         :param description: Description             
+        :type description: str
         :param inner_error: Inner Error             
-        :type Error: 
+        :type inner_error: ErrorDetails
         """
 
         self._code = None

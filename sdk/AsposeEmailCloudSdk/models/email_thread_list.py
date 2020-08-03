@@ -57,7 +57,7 @@ class EmailThreadList(ListResponseOfEmailThread):
         """
         List of email threads             
         :param value: 
-        :type EmailThreadList: 
+        :type value: List[EmailThread]
         """
         super(EmailThreadList, self).__init__()
 

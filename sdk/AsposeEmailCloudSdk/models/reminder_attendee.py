@@ -54,7 +54,7 @@ class ReminderAttendee(object):
         """
         Defines an \&quot;Attendee\&quot; within a alarm.
         :param address: Contains the email address.
-        :type ReminderAttendee: 
+        :type address: str
         """
 
         self._address = None

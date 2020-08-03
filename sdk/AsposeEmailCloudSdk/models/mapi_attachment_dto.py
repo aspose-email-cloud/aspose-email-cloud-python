@@ -56,8 +56,9 @@ class MapiAttachmentDto(object):
         """
         Mapi attachment             
         :param name: Attachment's name             
+        :type name: str
         :param data_base64: Attachment data represented as Base64 string.             
-        :type MapiAttachmentDto: 
+        :type data_base64: str
         """
 
         self._name = None

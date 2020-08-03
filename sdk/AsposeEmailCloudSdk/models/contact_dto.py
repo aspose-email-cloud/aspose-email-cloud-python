@@ -134,42 +134,77 @@ class ContactDto(object):
         """
         VCard document representation.             
         :param associated_persons: Associated persons.             
+        :type associated_persons: List[AssociatedPerson]
         :param attachments: Document attachments.             
+        :type attachments: List[Attachment]
         :param company_name: Company name.             
+        :type company_name: str
         :param computer_network_name: Computer network.             
+        :type computer_network_name: str
         :param customer_id: Customer id.             
+        :type customer_id: str
         :param department_name: Department name.             
+        :type department_name: str
         :param display_name: Display name.             
+        :type display_name: str
         :param email_addresses: Person's email addresses.             
+        :type email_addresses: List[EmailAddress]
         :param events: Person's events.             
+        :type events: List[CustomerEvent]
         :param file_as: A name used for sorting.             
+        :type file_as: str
         :param file_as_mapping: Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+        :type file_as_mapping: str
         :param free_busy_location: URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
+        :type free_busy_location: str
         :param gender: Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+        :type gender: str
         :param given_name: Person's given name.             
+        :type given_name: str
         :param government_id_number: Government id number.             
+        :type government_id_number: str
         :param hobbies: Person's hobbies.             
+        :type hobbies: str
         :param initials: Person's initials.             
+        :type initials: str
         :param instant_messengers: Person's instant messenger addresses.             
+        :type instant_messengers: List[InstantMessengerAddress]
         :param job_title: Person's job title.             
+        :type job_title: str
         :param language: Language.             
+        :type language: str
         :param location: Person's location.             
+        :type location: str
         :param middle_name: Person's middle name.             
+        :type middle_name: str
         :param nickname: Person's nickname.             
+        :type nickname: str
         :param notes: Notes.             
+        :type notes: str
         :param notes_format: Defines format of a text. Enum, available values: Text, Html
+        :type notes_format: str
         :param office_location: Office location.             
+        :type office_location: str
         :param organizational_id_number: Contains an identifier for the mail user used within the mail user's organization.             
+        :type organizational_id_number: str
         :param phone_numbers: Person's phone numbers.             
+        :type phone_numbers: List[PhoneNumber]
         :param photo: Person's photo.             
+        :type photo: ContactPhoto
         :param physical_addresses: Person's physical addresses.             
+        :type physical_addresses: List[PostalAddress]
         :param preferred_text_encoding: Encoding for all text properties.             
+        :type preferred_text_encoding: str
         :param prefix: A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
+        :type prefix: str
         :param profession: A job position of a person in a company.             
+        :type profession: str
         :param suffix: A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
+        :type suffix: str
         :param surname: Person's surname.             
+        :type surname: str
         :param urls: Person's urls.             
-        :type ContactDto: 
+        :type urls: List[Url]
         """
 
         self._associated_persons = None

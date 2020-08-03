@@ -56,8 +56,9 @@ class NameValuePair(object):
         """
         Name-Value property             
         :param name: Property name             
+        :type name: str
         :param value: Property value             
-        :type NameValuePair: 
+        :type value: str
         """
 
         self._name = None

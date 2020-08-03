@@ -58,8 +58,9 @@ class CalendarAsFileRequest(object):
         """
         iCalendar model to file request.             
         :param format: Calendar file format Enum, available values: Ics, Msg
+        :type format: str
         :param value: iCalendar model             
-        :type CalendarAsFileRequest: 
+        :type value: CalendarDto
         """
 
         self._format = None

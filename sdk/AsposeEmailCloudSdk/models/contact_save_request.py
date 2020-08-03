@@ -62,9 +62,11 @@ class ContactSaveRequest(StorageModelOfContactDto):
         """
         Contact save to storage request             
         :param storage_file: 
+        :type storage_file: StorageFileLocation
         :param value: 
+        :type value: ContactDto
         :param format: Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
-        :type ContactSaveRequest: 
+        :type format: str
         """
         super(ContactSaveRequest, self).__init__()
 

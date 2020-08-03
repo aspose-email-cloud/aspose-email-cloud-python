@@ -58,8 +58,9 @@ class ContactAsFileRequest(object):
         """
         Convert contact model to file request.             
         :param format: Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+        :type format: str
         :param value: Contact model.             
-        :type ContactAsFileRequest: 
+        :type value: ContactDto
         """
 
         self._format = None

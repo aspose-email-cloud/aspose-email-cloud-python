@@ -61,9 +61,11 @@ class MapiResponseTypePropertyDto(MapiPropertyDto):
         """
         Mapi property with response type value             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param value: Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
-        :type MapiResponseTypePropertyDto: 
+        :type value: str
         """
         super(MapiResponseTypePropertyDto, self).__init__()
 

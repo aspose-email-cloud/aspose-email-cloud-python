@@ -56,8 +56,9 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
         """
         
         :param value: Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+        :type value: str
         :param description: 
-        :type EnumWithCustomOfAssociatedPersonCategory: 
+        :type description: str
         """
 
         self._value = None

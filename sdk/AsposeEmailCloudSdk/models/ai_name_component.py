@@ -60,10 +60,13 @@ class AiNameComponent(object):
         """
         Parsed name component             
         :param value: Component value             
+        :type value: str
         :param category: Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
+        :type category: str
         :param score: Score from 0.0 to 1.0             
+        :type score: float
         :param position: Component position from 0             
-        :type AiNameComponent: 
+        :type position: int
         """
 
         self._value = None

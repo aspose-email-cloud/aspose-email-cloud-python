@@ -58,8 +58,9 @@ class MapiPropertyDto(object):
         """
         Mapi property             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
-        :type MapiPropertyDto: 
+        :type discriminator: str
         """
 
         self._descriptor = None

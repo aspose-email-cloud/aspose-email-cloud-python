@@ -56,7 +56,7 @@ class ListResponseOfContactDto(object):
         """
         
         :param value: 
-        :type ListResponseOfContactDto: 
+        :type value: List[ContactDto]
         """
 
         self._value = None

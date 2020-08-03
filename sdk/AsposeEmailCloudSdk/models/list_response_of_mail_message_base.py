@@ -56,7 +56,7 @@ class ListResponseOfMailMessageBase(object):
         """
         
         :param value: 
-        :type ListResponseOfMailMessageBase: 
+        :type value: List[MailMessageBase]
         """
 
         self._value = None

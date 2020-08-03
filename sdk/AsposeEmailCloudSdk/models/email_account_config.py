@@ -70,14 +70,21 @@ class EmailAccountConfig(object):
         """
         Email account configuration.             
         :param display_name: Email account display name             
+        :type display_name: str
         :param protocol_type: Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :type protocol_type: str
         :param host: Email account host.             
+        :type host: str
         :param port: Port.             
+        :type port: int
         :param socket_type: Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :type socket_type: str
         :param authentication_types: Supported authentication types.             
+        :type authentication_types: List[str]
         :param extra_info: Extra account information.             
+        :type extra_info: List[NameValuePair]
         :param is_validated: Determines that configuration validated. Set to false if validation skipped.             
-        :type EmailAccountConfig: 
+        :type is_validated: bool
         """
 
         self._display_name = None

@@ -56,8 +56,9 @@ class AiNameExtractedComponent(object):
         """
         Extracted name component             
         :param category: Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+        :type category: str
         :param value: Extracted value             
-        :type AiNameExtractedComponent: 
+        :type value: str
         """
 
         self._category = None

@@ -56,7 +56,7 @@ class ListResponseOfStorageModelOfContactDto(object):
         """
         
         :param value: 
-        :type ListResponseOfStorageModelOfContactDto: 
+        :type value: List[StorageModelOfContactDto]
         """
 
         self._value = None

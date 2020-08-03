@@ -61,9 +61,11 @@ class MapiImportancePropertyDto(MapiPropertyDto):
         """
         Mapi property with ImportanceChoicesType value             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param value: Levels of importance for an item. Enum, available values: Low, Normal, High
-        :type MapiImportancePropertyDto: 
+        :type value: str
         """
         super(MapiImportancePropertyDto, self).__init__()
 

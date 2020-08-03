@@ -62,9 +62,11 @@ class AiBcrParseStorageRequest(object):
         """
         Parse business card images from Storage request             
         :param out_folder: Parse output folder location on storage             
+        :type out_folder: StorageFolderLocation
         :param images: Images to parse.             
+        :type images: List[AiBcrImageStorageFile]
         :param options: Recognition options.             
-        :type AiBcrParseStorageRequest: 
+        :type options: AiBcrOptions
         """
 
         self._out_folder = None

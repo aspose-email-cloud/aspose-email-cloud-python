@@ -61,9 +61,11 @@ class MapiIntPropertyDto(MapiPropertyDto):
         """
         Mapi property with Integer value             
         :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
         :param discriminator: 
+        :type discriminator: str
         :param value: Property value             
-        :type MapiIntPropertyDto: 
+        :type value: int
         """
         super(MapiIntPropertyDto, self).__init__()
 

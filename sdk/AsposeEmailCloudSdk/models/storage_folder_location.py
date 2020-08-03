@@ -56,8 +56,9 @@ class StorageFolderLocation(object):
         """
         A storage folder location information             
         :param storage: A storage name             
+        :type storage: str
         :param folder_path: A path to a folder in specified storage             
-        :type StorageFolderLocation: 
+        :type folder_path: str
         """
 
         self._storage = None

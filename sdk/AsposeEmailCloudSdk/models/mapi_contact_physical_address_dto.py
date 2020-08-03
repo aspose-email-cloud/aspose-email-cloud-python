@@ -70,15 +70,23 @@ class MapiContactPhysicalAddressDto(object):
         """
         Refers to the group of properties that define physical address for a contact.             
         :param is_mailing_address: Gets or sets a value indicating whether this address is mailing address             
+        :type is_mailing_address: bool
         :param street: Specifies the street portion of the contact's address             
+        :type street: str
         :param city: Specifies the city or locality portion of the contact's address             
+        :type city: str
         :param state_or_province: Specifies the state or province portion of the contact's address             
+        :type state_or_province: str
         :param postal_code: Specifies the postal code (ZIP code) portion of the contact's address             
+        :type postal_code: str
         :param country: Specifies the country or region portion of the contact's address             
+        :type country: str
         :param country_code: Specifies the country code portion of the contact's address             
+        :type country_code: str
         :param address: Specifies the complete address of the contact's address             
+        :type address: str
         :param post_office_box: Gets or sets the post office box             
-        :type MapiContactPhysicalAddressDto: 
+        :type post_office_box: str
         """
 
         self._is_mailing_address = None
