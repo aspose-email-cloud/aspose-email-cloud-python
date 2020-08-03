@@ -56,7 +56,8 @@ class AiNameExtractedList(ListResponseOfAiNameExtracted):
     def __init__(self, value: List[AiNameExtracted] = None):
         """
         Extracted name list.             
-        :param value (List[AiNameExtracted]) 
+        :param value: 
+        :type AiNameExtractedList: 
         """
         super(AiNameExtractedList, self).__init__()
 

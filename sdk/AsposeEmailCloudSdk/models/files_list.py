@@ -55,7 +55,8 @@ class FilesList(object):
     def __init__(self, value: List[StorageFile] = None):
         """
         Files list
-        :param value (List[StorageFile]) Files and folders contained by folder StorageFile.
+        :param value: Files and folders contained by folder StorageFile.
+        :type FilesList: 
         """
 
         self._value = None

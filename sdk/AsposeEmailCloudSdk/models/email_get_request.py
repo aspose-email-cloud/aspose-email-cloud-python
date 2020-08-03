@@ -33,10 +33,14 @@ class EmailGetRequest(object):
     Request model for email_get operation.
     Initializes a new instance.
 
-    :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    :param file_name (str) Email document file name.
-    :param folder (str) Path to folder in storage.
-    :param storage (str) Storage name.
+    :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :type format: str
+    :param file_name: Email document file name.
+    :type file_name: str
+    :param folder: Path to folder in storage.
+    :type folder: str
+    :param storage: Storage name.
+    :type storage: str
     """
 
     def __init__(self, format: str, file_name: str, folder: str = None, storage: str = None):
@@ -44,10 +48,14 @@ class EmailGetRequest(object):
         Request model for email_get operation.
         Initializes a new instance.
 
-        :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-        :param file_name (str) Email document file name.
-        :param folder (str) Path to folder in storage.
-        :param storage (str) Storage name.
+        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
+        :param file_name: Email document file name.
+        :type file_name: str
+        :param folder: Path to folder in storage.
+        :type folder: str
+        :param storage: Storage name.
+        :type storage: str
         """
 
         self.format = format

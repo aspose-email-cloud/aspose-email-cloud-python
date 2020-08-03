@@ -58,8 +58,9 @@ class MailMessageMapi(MailMessageBase):
     def __init__(self, discriminator: str = None, value: MapiMessageDto = None):
         """
         Email message represented as MAPI object.             
-        :param discriminator (str) 
-        :param value (MapiMessageDto) Email message object.             
+        :param discriminator: 
+        :param value: Email message object.             
+        :type MailMessageMapi: 
         """
         super(MailMessageMapi, self).__init__()
 

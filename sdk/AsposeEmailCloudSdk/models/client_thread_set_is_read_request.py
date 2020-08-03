@@ -62,10 +62,11 @@ class ClientThreadSetIsReadRequest(ClientThreadBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, thread_id: str = None, is_read: bool = None, folder: str = None):
         """
         Mark thread messages as read or unread request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param thread_id (str) Thread identifier.             
-        :param is_read (bool) Message is read flag.             
-        :param folder (str) Folder on email server, where thread is stored.             
+        :param account_location: Email client account configuration location on storage.             
+        :param thread_id: Thread identifier.             
+        :param is_read: Message is read flag.             
+        :param folder: Folder on email server, where thread is stored.             
+        :type ClientThreadSetIsReadRequest: 
         """
         super(ClientThreadSetIsReadRequest, self).__init__()
 

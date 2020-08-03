@@ -43,7 +43,8 @@ class MapiMessageApi(ApiBase):
     def as_email_dto(self, mapi_message: MapiMessageDto) -> EmailDto:
         """Converts MAPI message model to EmailDto model             
 
-        :param mapi_message MapiMessageDto MAPI message model to convert
+        :param mapi_message: MAPI message model to convert
+        :type mapi_message: MapiMessageDto
         :return: EmailDto
         """
         # verify the required parameter 'mapi_message' is set
@@ -71,7 +72,8 @@ class MapiMessageApi(ApiBase):
     def as_file(self, request: MapiMessageAsFileRequest) -> str:
         """Converts MAPI message model to specified format and returns as file.             
 
-        :param request MapiMessageAsFileRequest MAPI message model to convert.
+        :param request: MAPI message model to convert.
+        :type request: MapiMessageAsFileRequest
         :return: str
         """
         # verify the required parameter 'request' is set
@@ -100,7 +102,8 @@ class MapiMessageApi(ApiBase):
         """Converts email file to a MAPI model representation             
 
 
-        :param request MapiMessageFromFileRequest object with parameters
+        :param request: MapiMessageFromFileRequest object with parameters
+        :type request: MapiMessageFromFileRequest
         :return: MapiMessageDto
         """
         # verify the required parameter 'format' is set
@@ -148,7 +151,8 @@ class MapiMessageApi(ApiBase):
         """Get MAPI message document.             
 
 
-        :param request MapiMessageGetRequest object with parameters
+        :param request: MapiMessageGetRequest object with parameters
+        :type request: MapiMessageGetRequest
         :return: MapiMessageDto
         """
         # verify the required parameter 'format' is set
@@ -211,7 +215,8 @@ class MapiMessageApi(ApiBase):
     def save(self, request: MapiMessageSaveRequest):
         """Save MAPI message to storage.             
 
-        :param request MapiMessageSaveRequest Message create/update request.
+        :param request: Message create/update request.
+        :type request: MapiMessageSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set

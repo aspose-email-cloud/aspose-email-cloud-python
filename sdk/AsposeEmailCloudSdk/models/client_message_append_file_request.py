@@ -33,13 +33,20 @@ class ClientMessageAppendFileRequest(object):
     Request model for client_message_append_file operation.
     Initializes a new instance.
 
-    :param account (str) Email account.
-    :param file (str) Message file to append.
-    :param storage (str) Storage name where account file located.
-    :param account_storage_folder (str) Folder in storage where account file located.
-    :param format (str) Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    :param folder (str) Path to folder on email server to append message to.
-    :param mark_as_sent (bool) Determines that appended message should be market as sent or not.
+    :param account: Email account.
+    :type account: str
+    :param file: Message file to append.
+    :type file: str
+    :param storage: Storage name where account file located.
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located.
+    :type account_storage_folder: str
+    :param format: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :type format: str
+    :param folder: Path to folder on email server to append message to.
+    :type folder: str
+    :param mark_as_sent: Determines that appended message should be market as sent or not.
+    :type mark_as_sent: bool
     """
 
     def __init__(self, account: str, file: str, storage: str = None, account_storage_folder: str = None, format: str = None, folder: str = None, mark_as_sent: bool = None):
@@ -47,13 +54,20 @@ class ClientMessageAppendFileRequest(object):
         Request model for client_message_append_file operation.
         Initializes a new instance.
 
-        :param account (str) Email account.
-        :param file (str) Message file to append.
-        :param storage (str) Storage name where account file located.
-        :param account_storage_folder (str) Folder in storage where account file located.
-        :param format (str) Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-        :param folder (str) Path to folder on email server to append message to.
-        :param mark_as_sent (bool) Determines that appended message should be market as sent or not.
+        :param account: Email account.
+        :type account: str
+        :param file: Message file to append.
+        :type file: str
+        :param storage: Storage name where account file located.
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located.
+        :type account_storage_folder: str
+        :param format: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
+        :param folder: Path to folder on email server to append message to.
+        :type folder: str
+        :param mark_as_sent: Determines that appended message should be market as sent or not.
+        :type mark_as_sent: bool
         """
 
         self.account = account

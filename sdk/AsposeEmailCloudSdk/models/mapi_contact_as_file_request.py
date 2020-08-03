@@ -57,8 +57,9 @@ class MapiContactAsFileRequest(object):
     def __init__(self, format: str = None, value: MapiContactDto = None):
         """
         Convert MapiContact to file request.             
-        :param format (str) Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
-        :param value (MapiContactDto) MAPI contact model.             
+        :param format: Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+        :param value: MAPI contact model.             
+        :type MapiContactAsFileRequest: 
         """
 
         self._format = None

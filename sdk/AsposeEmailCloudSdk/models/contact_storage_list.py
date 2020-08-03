@@ -56,7 +56,8 @@ class ContactStorageList(ListResponseOfStorageModelOfContactDto):
     def __init__(self, value: List[StorageModelOfContactDto] = None):
         """
         Contact models list with corresponding storage locations.             
-        :param value (List[StorageModelOfContactDto]) 
+        :param value: 
+        :type ContactStorageList: 
         """
         super(ContactStorageList, self).__init__()
 

@@ -56,7 +56,8 @@ class MailMessageBaseList(ListResponseOfMailMessageBase):
     def __init__(self, value: List[MailMessageBase] = None):
         """
         List of messages.             
-        :param value (List[MailMessageBase]) 
+        :param value: 
+        :type MailMessageBaseList: 
         """
         super(MailMessageBaseList, self).__init__()
 

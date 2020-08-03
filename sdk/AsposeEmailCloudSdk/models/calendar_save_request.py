@@ -61,9 +61,10 @@ class CalendarSaveRequest(StorageModelOfCalendarDto):
     def __init__(self, storage_file: StorageFileLocation = None, value: CalendarDto = None, format: str = None):
         """
         Save iCalendar to storage request.             
-        :param storage_file (StorageFileLocation) 
-        :param value (CalendarDto) 
-        :param format (str) Calendar file format Enum, available values: Ics, Msg
+        :param storage_file: 
+        :param value: 
+        :param format: Calendar file format Enum, available values: Ics, Msg
+        :type CalendarSaveRequest: 
         """
         super(CalendarSaveRequest, self).__init__()
 

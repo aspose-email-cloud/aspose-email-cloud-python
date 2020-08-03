@@ -89,25 +89,26 @@ class MapiContactPersonalInfoPropertySetDto(object):
     def __init__(self, spouse_name: str = None, personal_home_page: str = None, language: str = None, notes: str = None, hobbies: str = None, location: str = None, instant_messaging_address: str = None, organizational_id_number: str = None, customer_id: str = None, government_id_number: str = None, free_busy_location: str = None, account: str = None, html: str = None, business_home_page: str = None, ftp_site: str = None, computer_network_name: str = None, gender: str = None, referred_by_name: str = None, children: List[str] = None):
         """
         Specify other additional contact information.             
-        :param spouse_name (str) Specifies the name of the contact's spouse/partner             
-        :param personal_home_page (str) Specifies the contact's personal web page URL             
-        :param language (str) Specifies the language that the contact uses             
-        :param notes (str) Specifies the additional notes             
-        :param hobbies (str) Specifies the hobbies of the contact             
-        :param location (str) Specifies the location of the contact             
-        :param instant_messaging_address (str) Specifies the contact's instant messaging address             
-        :param organizational_id_number (str) Specifies an organizational ID number for the contact             
-        :param customer_id (str) Specifies the contact's customer ID number             
-        :param government_id_number (str) Specifies the contact's government ID number             
-        :param free_busy_location (str) Specifies a URL path from which a client can retrieve free/busy information for the contact as an iCal file             
-        :param account (str) Specifies the account name of the contact             
-        :param html (str) Specifies the contact's business web page URL             
-        :param business_home_page (str) Specifies the contact's business web page URL             
-        :param ftp_site (str) Specifies the contact's File Transfer Protocol (FTP) URL             
-        :param computer_network_name (str) Specifies the name of the network to which the contact's computer is connected             
-        :param gender (str) Gender of the contact Enum, available values: Unspecified, Female, Male
-        :param referred_by_name (str) Specifies the name of the person who referred this contact to the user             
-        :param children (List[str]) Contains a list of names of children.             
+        :param spouse_name: Specifies the name of the contact's spouse/partner             
+        :param personal_home_page: Specifies the contact's personal web page URL             
+        :param language: Specifies the language that the contact uses             
+        :param notes: Specifies the additional notes             
+        :param hobbies: Specifies the hobbies of the contact             
+        :param location: Specifies the location of the contact             
+        :param instant_messaging_address: Specifies the contact's instant messaging address             
+        :param organizational_id_number: Specifies an organizational ID number for the contact             
+        :param customer_id: Specifies the contact's customer ID number             
+        :param government_id_number: Specifies the contact's government ID number             
+        :param free_busy_location: Specifies a URL path from which a client can retrieve free/busy information for the contact as an iCal file             
+        :param account: Specifies the account name of the contact             
+        :param html: Specifies the contact's business web page URL             
+        :param business_home_page: Specifies the contact's business web page URL             
+        :param ftp_site: Specifies the contact's File Transfer Protocol (FTP) URL             
+        :param computer_network_name: Specifies the name of the network to which the contact's computer is connected             
+        :param gender: Gender of the contact Enum, available values: Unspecified, Female, Male
+        :param referred_by_name: Specifies the name of the person who referred this contact to the user             
+        :param children: Contains a list of names of children.             
+        :type MapiContactPersonalInfoPropertySetDto: 
         """
 
         self._spouse_name = None

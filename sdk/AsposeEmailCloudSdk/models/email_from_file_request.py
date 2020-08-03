@@ -33,8 +33,10 @@ class EmailFromFileRequest(object):
     Request model for email_from_file operation.
     Initializes a new instance.
 
-    :param format (str)  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-    :param file (str) File to convert
+    :param format:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :type format: str
+    :param file: File to convert
+    :type file: str
     """
 
     def __init__(self, format: str, file: str):
@@ -42,8 +44,10 @@ class EmailFromFileRequest(object):
         Request model for email_from_file operation.
         Initializes a new instance.
 
-        :param format (str)  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-        :param file (str) File to convert
+        :param format:  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
+        :param file: File to convert
+        :type file: str
         """
 
         self.format = format

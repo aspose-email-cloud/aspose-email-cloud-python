@@ -59,9 +59,10 @@ class PhoneNumber(object):
     def __init__(self, category: EnumWithCustomOfPhoneNumberCategory = None, number: str = None, preferred: bool = None):
         """
         A phone number.             
-        :param category (EnumWithCustomOfPhoneNumberCategory) Phone number category.             
-        :param number (str) Phone number.             
-        :param preferred (bool) Defines whether phone number is preferred.             
+        :param category: Phone number category.             
+        :param number: Phone number.             
+        :param preferred: Defines whether phone number is preferred.             
+        :type PhoneNumber: 
         """
 
         self._category = None

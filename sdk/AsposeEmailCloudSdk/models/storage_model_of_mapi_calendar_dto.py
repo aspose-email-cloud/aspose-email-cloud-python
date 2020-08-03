@@ -58,8 +58,9 @@ class StorageModelOfMapiCalendarDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: MapiCalendarDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (MapiCalendarDto) 
+        :param storage_file: 
+        :param value: 
+        :type StorageModelOfMapiCalendarDto: 
         """
 
         self._storage_file = None

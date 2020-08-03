@@ -33,7 +33,8 @@ class StorageExistsRequest(object):
     Request model for storage_exists operation.
     Initializes a new instance.
 
-    :param storage_name (str) Storage name
+    :param storage_name: Storage name
+    :type storage_name: str
     """
 
     def __init__(self, storage_name: str):
@@ -41,7 +42,8 @@ class StorageExistsRequest(object):
         Request model for storage_exists operation.
         Initializes a new instance.
 
-        :param storage_name (str) Storage name
+        :param storage_name: Storage name
+        :type storage_name: str
         """
 
         self.storage_name = storage_name

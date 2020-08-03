@@ -55,8 +55,9 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
-        :param description (str) 
+        :param value: Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+        :param description: 
+        :type EnumWithCustomOfAssociatedPersonCategory: 
         """
 
         self._value = None

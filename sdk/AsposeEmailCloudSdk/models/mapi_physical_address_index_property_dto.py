@@ -60,9 +60,10 @@ class MapiPhysicalAddressIndexPropertyDto(MapiPropertyDto):
     def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
         """
         Mapi property with PhysicalAddressIndexType value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (str) Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
+        :param descriptor: Property descriptor             
+        :param discriminator: 
+        :param value: Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
+        :type MapiPhysicalAddressIndexPropertyDto: 
         """
         super(MapiPhysicalAddressIndexPropertyDto, self).__init__()
 

@@ -58,8 +58,9 @@ class MailMessageDto(MailMessageBase):
     def __init__(self, discriminator: str = None, value: EmailDto = None):
         """
         Represents email message, stored as an EmailDto object.             
-        :param discriminator (str) 
-        :param value (EmailDto) Message document object.             
+        :param discriminator: 
+        :param value: Message document object.             
+        :type MailMessageDto: 
         """
         super(MailMessageDto, self).__init__()
 

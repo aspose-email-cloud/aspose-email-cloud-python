@@ -60,9 +60,10 @@ class MapiFileAsPropertyDto(MapiPropertyDto):
     def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
         """
         Mapi property with FileAsMapping value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (str) Defines how to construct what is displayed for a contact in the FileAs property. Enum, available values: None, LastCommaFirst, FirstSpaceLast, Company, LastCommaFirstCompany, CompanyLastFirst, LastFirst, LastFirstCompany, CompanyLastCommaFirst, LastFirstSuffix, LastSpaceFirstCompany, CompanyLastSpaceFirst, LastSpaceFirst, DisplayName, FirstName, LastFirstMiddleSuffix, LastName, Empty
+        :param descriptor: Property descriptor             
+        :param discriminator: 
+        :param value: Defines how to construct what is displayed for a contact in the FileAs property. Enum, available values: None, LastCommaFirst, FirstSpaceLast, Company, LastCommaFirstCompany, CompanyLastFirst, LastFirst, LastFirstCompany, CompanyLastCommaFirst, LastFirstSuffix, LastSpaceFirstCompany, CompanyLastSpaceFirst, LastSpaceFirst, DisplayName, FirstName, LastFirstMiddleSuffix, LastName, Empty
+        :type MapiFileAsPropertyDto: 
         """
         super(MapiFileAsPropertyDto, self).__init__()
 

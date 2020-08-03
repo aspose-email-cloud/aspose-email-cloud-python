@@ -61,10 +61,11 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
     def __init__(self, address: str = None, fast_processing: bool = None, login: str = None, password: str = None):
         """
         
-        :param address (str) Email address to discover.             
-        :param fast_processing (bool) Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
-        :param login (str) Email account login. If not specified, address used as a login.             
-        :param password (str) Email account password.             
+        :param address: Email address to discover.             
+        :param fast_processing: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :param login: Email account login. If not specified, address used as a login.             
+        :param password: Email account password.             
+        :type DiscoverEmailConfigPassword: 
         """
         super(DiscoverEmailConfigPassword, self).__init__()
 

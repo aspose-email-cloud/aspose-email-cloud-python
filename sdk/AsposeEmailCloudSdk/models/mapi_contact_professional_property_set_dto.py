@@ -65,13 +65,14 @@ class MapiContactProfessionalPropertySetDto(object):
     def __init__(self, title: str = None, company_name: str = None, department_name: str = None, office_location: str = None, manager_name: str = None, assistant: str = None, profession: str = None):
         """
         Properties are used to store professional details for the person represented by the contact             
-        :param title (str) Gets or sets the job title of the contact             
-        :param company_name (str) Gets or sets the company that employs the contact             
-        :param department_name (str) Gets or sets the name of the department to which the contact belongs             
-        :param office_location (str) Gets or sets the location of the office that the contact works in             
-        :param manager_name (str) Gets or sets the name of the contact's manager             
-        :param assistant (str) Gets or sets the name of the contact's assistant             
-        :param profession (str) Gets or sets the profession of the contact             
+        :param title: Gets or sets the job title of the contact             
+        :param company_name: Gets or sets the company that employs the contact             
+        :param department_name: Gets or sets the name of the department to which the contact belongs             
+        :param office_location: Gets or sets the location of the office that the contact works in             
+        :param manager_name: Gets or sets the name of the contact's manager             
+        :param assistant: Gets or sets the name of the contact's assistant             
+        :param profession: Gets or sets the profession of the contact             
+        :type MapiContactProfessionalPropertySetDto: 
         """
 
         self._title = None

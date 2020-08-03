@@ -57,8 +57,9 @@ class FilesUploadResult(object):
     def __init__(self, uploaded: List[str] = None, errors: List[Error] = None):
         """
         File upload result
-        :param uploaded (List[str]) List of uploaded file names
-        :param errors (List[Error]) List of errors.
+        :param uploaded: List of uploaded file names
+        :param errors: List of errors.
+        :type FilesUploadResult: 
         """
 
         self._uploaded = None

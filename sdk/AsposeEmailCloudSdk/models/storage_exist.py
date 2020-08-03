@@ -53,7 +53,8 @@ class StorageExist(object):
     def __init__(self, exists: bool = None):
         """
         Storage exists
-        :param exists (bool) Shows that the storage exists.             
+        :param exists: Shows that the storage exists.             
+        :type StorageExist: 
         """
 
         self._exists = None

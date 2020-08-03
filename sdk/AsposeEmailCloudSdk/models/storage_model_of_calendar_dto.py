@@ -58,8 +58,9 @@ class StorageModelOfCalendarDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: CalendarDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (CalendarDto) 
+        :param storage_file: 
+        :param value: 
+        :type StorageModelOfCalendarDto: 
         """
 
         self._storage_file = None

@@ -63,10 +63,11 @@ class ClientMessageAppendRequest(ClientAccountBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, folder: str = None, message: MailMessageBase = None, mark_as_sent: bool = None):
         """
         Email client append message request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param folder (str) Path to folder on email server to append message to.             
-        :param message (MailMessageBase) Message to append.             
-        :param mark_as_sent (bool) Determines that appended message should be market as sent or not.             
+        :param account_location: Email client account configuration location on storage.             
+        :param folder: Path to folder on email server to append message to.             
+        :param message: Message to append.             
+        :param mark_as_sent: Determines that appended message should be market as sent or not.             
+        :type ClientMessageAppendRequest: 
         """
         super(ClientMessageAppendRequest, self).__init__()
 

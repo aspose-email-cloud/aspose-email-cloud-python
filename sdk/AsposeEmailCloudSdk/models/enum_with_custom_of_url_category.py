@@ -55,8 +55,9 @@ class EnumWithCustomOfUrlCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
-        :param description (str) 
+        :param value: Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+        :param description: 
+        :type EnumWithCustomOfUrlCategory: 
         """
 
         self._value = None

@@ -58,8 +58,9 @@ class ClientThreadBaseRequest(ClientAccountBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, thread_id: str = None):
         """
         Email client thread request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param thread_id (str) Thread identifier.             
+        :param account_location: Email client account configuration location on storage.             
+        :param thread_id: Thread identifier.             
+        :type ClientThreadBaseRequest: 
         """
         super(ClientThreadBaseRequest, self).__init__()
 

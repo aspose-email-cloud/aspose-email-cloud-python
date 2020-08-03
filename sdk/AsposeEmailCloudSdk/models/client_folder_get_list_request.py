@@ -33,10 +33,14 @@ class ClientFolderGetListRequest(object):
     Request model for client_folder_get_list operation.
     Initializes a new instance.
 
-    :param account (str) Email account
-    :param storage (str) Storage name where account file located
-    :param account_storage_folder (str) Folder in storage where account file located
-    :param parent_folder (str) Folder in which subfolders should be listed
+    :param account: Email account
+    :type account: str
+    :param storage: Storage name where account file located
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located
+    :type account_storage_folder: str
+    :param parent_folder: Folder in which subfolders should be listed
+    :type parent_folder: str
     """
 
     def __init__(self, account: str, storage: str = None, account_storage_folder: str = None, parent_folder: str = None):
@@ -44,10 +48,14 @@ class ClientFolderGetListRequest(object):
         Request model for client_folder_get_list operation.
         Initializes a new instance.
 
-        :param account (str) Email account
-        :param storage (str) Storage name where account file located
-        :param account_storage_folder (str) Folder in storage where account file located
-        :param parent_folder (str) Folder in which subfolders should be listed
+        :param account: Email account
+        :type account: str
+        :param storage: Storage name where account file located
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located
+        :type account_storage_folder: str
+        :param parent_folder: Folder in which subfolders should be listed
+        :type parent_folder: str
         """
 
         self.account = account

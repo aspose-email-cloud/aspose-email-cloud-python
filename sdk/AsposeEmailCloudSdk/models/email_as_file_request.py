@@ -57,8 +57,9 @@ class EmailAsFileRequest(object):
     def __init__(self, format: str = None, value: EmailDto = None):
         """
         Convert email model to file request.             
-        :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
-        :param value (EmailDto) Email model.             
+        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param value: Email model.             
+        :type EmailAsFileRequest: 
         """
 
         self._format = None

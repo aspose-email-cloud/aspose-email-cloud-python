@@ -59,10 +59,11 @@ class AiNameComponent(object):
     def __init__(self, value: str = None, category: str = None, score: float = None, position: int = None):
         """
         Parsed name component             
-        :param value (str) Component value             
-        :param category (str) Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
-        :param score (float) Score from 0.0 to 1.0             
-        :param position (int) Component position from 0             
+        :param value: Component value             
+        :param category: Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
+        :param score: Score from 0.0 to 1.0             
+        :param position: Component position from 0             
+        :type AiNameComponent: 
         """
 
         self._value = None

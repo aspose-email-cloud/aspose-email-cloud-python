@@ -69,15 +69,16 @@ class MapiContactPhysicalAddressDto(object):
     def __init__(self, is_mailing_address: bool = None, street: str = None, city: str = None, state_or_province: str = None, postal_code: str = None, country: str = None, country_code: str = None, address: str = None, post_office_box: str = None):
         """
         Refers to the group of properties that define physical address for a contact.             
-        :param is_mailing_address (bool) Gets or sets a value indicating whether this address is mailing address             
-        :param street (str) Specifies the street portion of the contact's address             
-        :param city (str) Specifies the city or locality portion of the contact's address             
-        :param state_or_province (str) Specifies the state or province portion of the contact's address             
-        :param postal_code (str) Specifies the postal code (ZIP code) portion of the contact's address             
-        :param country (str) Specifies the country or region portion of the contact's address             
-        :param country_code (str) Specifies the country code portion of the contact's address             
-        :param address (str) Specifies the complete address of the contact's address             
-        :param post_office_box (str) Gets or sets the post office box             
+        :param is_mailing_address: Gets or sets a value indicating whether this address is mailing address             
+        :param street: Specifies the street portion of the contact's address             
+        :param city: Specifies the city or locality portion of the contact's address             
+        :param state_or_province: Specifies the state or province portion of the contact's address             
+        :param postal_code: Specifies the postal code (ZIP code) portion of the contact's address             
+        :param country: Specifies the country or region portion of the contact's address             
+        :param country_code: Specifies the country code portion of the contact's address             
+        :param address: Specifies the complete address of the contact's address             
+        :param post_office_box: Gets or sets the post office box             
+        :type MapiContactPhysicalAddressDto: 
         """
 
         self._is_mailing_address = None

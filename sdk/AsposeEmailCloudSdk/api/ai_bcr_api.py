@@ -44,7 +44,8 @@ class AiBcrApi(ApiBase):
         """Parse images to vCard document models             
 
 
-        :param request AiBcrParseRequest object with parameters
+        :param request: AiBcrParseRequest object with parameters
+        :type request: AiBcrParseRequest
         :return: ContactList
         """
         # verify the required parameter 'file' is set
@@ -100,7 +101,8 @@ class AiBcrApi(ApiBase):
     def parse_storage(self, request: AiBcrParseStorageRequest) -> StorageFileLocationList:
         """Parse images from storage to vCard files             
 
-        :param request AiBcrParseStorageRequest Request with images located on storage
+        :param request: Request with images located on storage
+        :type request: AiBcrParseStorageRequest
         :return: StorageFileLocationList
         """
         # verify the required parameter 'request' is set

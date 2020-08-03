@@ -55,8 +55,9 @@ class ContentTypeParameter(object):
     def __init__(self, name: str = None, value: str = None):
         """
         Content-Type header parameter             
-        :param name (str) Parameter name             
-        :param value (str) Parameter value             
+        :param name: Parameter name             
+        :param value: Parameter value             
+        :type ContentTypeParameter: 
         """
 
         self._name = None

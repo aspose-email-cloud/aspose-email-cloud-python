@@ -60,9 +60,10 @@ class MapiBooleanPropertyDto(MapiPropertyDto):
     def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: bool = None):
         """
         Mapi property with Boolean value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (bool) Property value             
+        :param descriptor: Property descriptor             
+        :param discriminator: 
+        :param value: Property value             
+        :type MapiBooleanPropertyDto: 
         """
         super(MapiBooleanPropertyDto, self).__init__()
 

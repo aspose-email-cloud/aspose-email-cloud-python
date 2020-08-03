@@ -130,41 +130,42 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
     def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, appointment_counter_proposal: bool = None, attendees: MapiCalendarAttendeesDto = None, busy_status: str = None, client_intent: List[str] = None, end_date: datetime = None, end_date_time_zone: MapiCalendarTimeZoneDto = None, is_all_day: bool = None, key_words: str = None, location: str = None, recurrence: MapiCalendarEventRecurrenceDto = None, reminder_delta: int = None, reminder_file_parameter: str = None, reminder_set: bool = None, sequence: int = None, start_date: datetime = None, start_date_time_zone: MapiCalendarTimeZoneDto = None, uid: str = None, organizer: MapiElectronicAddressDto = None):
         """
         Represents the mapi calendar object             
-        :param attachments (List[MapiAttachmentDto]) Message item attachments.             
-        :param billing (str) Billing information associated with an item.             
-        :param body (str) Message text.             
-        :param body_html (str) Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
-        :param body_rtf (str) RTF formatted message text.             
-        :param body_type (str) The content type of message body. Enum, available values: PlainText, Html, Rtf
-        :param categories (List[str]) Contains keywords or categories for the message object.             
-        :param companies (List[str]) Contains the names of the companies that are associated with an item.             
-        :param item_id (str) The item id, uses with a server.             
-        :param message_class (str) Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
-        :param mileage (str) Contains the mileage information that is associated with an item.             
-        :param recipients (List[MapiRecipientDto]) Recipients of the message.             
-        :param sensitivity (str) Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
-        :param subject (str) Subject of the message.             
-        :param subject_prefix (str) Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
-        :param properties (List[MapiPropertyDto]) List of MAPI properties             
-        :param discriminator (str) 
-        :param appointment_counter_proposal (bool) Value indicating whether a Meeting Response object is a counter proposal.             
-        :param attendees (MapiCalendarAttendeesDto) Attendees             
-        :param busy_status (str) Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
-        :param client_intent (List[str]) Actions the user has taken on this Meeting object.             
-        :param end_date (datetime) End date and time of the event. If the date is not set, default value for DateTime is returned.             
-        :param end_date_time_zone (MapiCalendarTimeZoneDto) Time zone information that indicates the time zone of the EndDate property.             
-        :param is_all_day (bool) Value indicating whether the event is an all-day event.             
-        :param key_words (str) Categories of the calendar object.             
-        :param location (str) Location of the event.             
-        :param recurrence (MapiCalendarEventRecurrenceDto) Recurrence properties.             
-        :param reminder_delta (int) Interval, in minutes, between the time at which the reminder first becomes overdue and the start time of the Calendar object.             
-        :param reminder_file_parameter (str) Full path of the sound that a client SHOULD play when the reminder becomes overdue.             
-        :param reminder_set (bool) Value indicating whether a reminder is set on the object.             
-        :param sequence (int) Sequence number.             
-        :param start_date (datetime) Start date and time of the event. If the date is not set, default value for DateTime is returned.             
-        :param start_date_time_zone (MapiCalendarTimeZoneDto) Time zone information that indicates the time zone of the StartDate property.             
-        :param uid (str) Unique identifier.             
-        :param organizer (MapiElectronicAddressDto) Organizer             
+        :param attachments: Message item attachments.             
+        :param billing: Billing information associated with an item.             
+        :param body: Message text.             
+        :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :param body_rtf: RTF formatted message text.             
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :param categories: Contains keywords or categories for the message object.             
+        :param companies: Contains the names of the companies that are associated with an item.             
+        :param item_id: The item id, uses with a server.             
+        :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :param mileage: Contains the mileage information that is associated with an item.             
+        :param recipients: Recipients of the message.             
+        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :param subject: Subject of the message.             
+        :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :param properties: List of MAPI properties             
+        :param discriminator: 
+        :param appointment_counter_proposal: Value indicating whether a Meeting Response object is a counter proposal.             
+        :param attendees: Attendees             
+        :param busy_status: Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        :param client_intent: Actions the user has taken on this Meeting object.             
+        :param end_date: End date and time of the event. If the date is not set, default value for DateTime is returned.             
+        :param end_date_time_zone: Time zone information that indicates the time zone of the EndDate property.             
+        :param is_all_day: Value indicating whether the event is an all-day event.             
+        :param key_words: Categories of the calendar object.             
+        :param location: Location of the event.             
+        :param recurrence: Recurrence properties.             
+        :param reminder_delta: Interval, in minutes, between the time at which the reminder first becomes overdue and the start time of the Calendar object.             
+        :param reminder_file_parameter: Full path of the sound that a client SHOULD play when the reminder becomes overdue.             
+        :param reminder_set: Value indicating whether a reminder is set on the object.             
+        :param sequence: Sequence number.             
+        :param start_date: Start date and time of the event. If the date is not set, default value for DateTime is returned.             
+        :param start_date_time_zone: Time zone information that indicates the time zone of the StartDate property.             
+        :param uid: Unique identifier.             
+        :param organizer: Organizer             
+        :type MapiCalendarDto: 
         """
         super(MapiCalendarDto, self).__init__()
 

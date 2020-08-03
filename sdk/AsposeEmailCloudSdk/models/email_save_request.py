@@ -61,9 +61,10 @@ class EmailSaveRequest(StorageModelOfEmailDto):
     def __init__(self, storage_file: StorageFileLocation = None, value: EmailDto = None, format: str = None):
         """
         Email save to storage request             
-        :param storage_file (StorageFileLocation) 
-        :param value (EmailDto) 
-        :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param storage_file: 
+        :param value: 
+        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type EmailSaveRequest: 
         """
         super(EmailSaveRequest, self).__init__()
 

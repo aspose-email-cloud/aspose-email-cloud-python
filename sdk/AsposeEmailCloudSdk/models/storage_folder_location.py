@@ -55,8 +55,9 @@ class StorageFolderLocation(object):
     def __init__(self, storage: str = None, folder_path: str = None):
         """
         A storage folder location information             
-        :param storage (str) A storage name             
-        :param folder_path (str) A path to a folder in specified storage             
+        :param storage: A storage name             
+        :param folder_path: A path to a folder in specified storage             
+        :type StorageFolderLocation: 
         """
 
         self._storage = None

@@ -33,7 +33,8 @@ class CalendarFromFileRequest(object):
     Request model for calendar_from_file operation.
     Initializes a new instance.
 
-    :param file (str) File to convert
+    :param file: File to convert
+    :type file: str
     """
 
     def __init__(self, file: str):
@@ -41,7 +42,8 @@ class CalendarFromFileRequest(object):
         Request model for calendar_from_file operation.
         Initializes a new instance.
 
-        :param file (str) File to convert
+        :param file: File to convert
+        :type file: str
         """
 
         self.file = file

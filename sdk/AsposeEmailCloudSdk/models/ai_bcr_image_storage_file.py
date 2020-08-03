@@ -58,8 +58,9 @@ class AiBcrImageStorageFile(AiBcrImage):
     def __init__(self, is_single: bool = None, file: StorageFileLocation = None):
         """
         Image from storage for recognition             
-        :param is_single (bool) Determines that image contains single VCard or more.             
-        :param file (StorageFileLocation) Image location             
+        :param is_single: Determines that image contains single VCard or more.             
+        :param file: Image location             
+        :type AiBcrImageStorageFile: 
         """
         super(AiBcrImageStorageFile, self).__init__()
 

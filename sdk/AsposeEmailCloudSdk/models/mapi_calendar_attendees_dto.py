@@ -61,10 +61,11 @@ class MapiCalendarAttendeesDto(object):
     def __init__(self, appointment_recipients: List[MapiRecipientDto] = None, appointment_unsendable_recipients: List[MapiRecipientDto] = None, not_allow_propose: bool = None, response_requested: bool = None):
         """
         Mapi calendar attendees.             
-        :param appointment_recipients (List[MapiRecipientDto]) List of attendees.             
-        :param appointment_unsendable_recipients (List[MapiRecipientDto]) List of unsendable attendees.             
-        :param not_allow_propose (bool) Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
-        :param response_requested (bool) Value indicating whether a response is requested to a Message object.             
+        :param appointment_recipients: List of attendees.             
+        :param appointment_unsendable_recipients: List of unsendable attendees.             
+        :param not_allow_propose: Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
+        :param response_requested: Value indicating whether a response is requested to a Message object.             
+        :type MapiCalendarAttendeesDto: 
         """
 
         self._appointment_recipients = None

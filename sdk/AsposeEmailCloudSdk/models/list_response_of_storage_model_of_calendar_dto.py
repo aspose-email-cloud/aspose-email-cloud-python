@@ -55,7 +55,8 @@ class ListResponseOfStorageModelOfCalendarDto(object):
     def __init__(self, value: List[StorageModelOfCalendarDto] = None):
         """
         
-        :param value (List[StorageModelOfCalendarDto]) 
+        :param value: 
+        :type ListResponseOfStorageModelOfCalendarDto: 
         """
 
         self._value = None

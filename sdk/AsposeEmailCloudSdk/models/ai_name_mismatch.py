@@ -57,9 +57,10 @@ class AiNameMismatch(object):
     def __init__(self, category: str = None, similarity: float = None, explanation: str = None):
         """
         Names mismatch detailed description             
-        :param category (str) Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
-        :param similarity (float) Similarity score             
-        :param explanation (str) Explanation or mismatch subtype             
+        :param category: Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+        :param similarity: Similarity score             
+        :param explanation: Explanation or mismatch subtype             
+        :type AiNameMismatch: 
         """
 
         self._category = None

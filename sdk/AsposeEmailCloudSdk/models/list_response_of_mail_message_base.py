@@ -55,7 +55,8 @@ class ListResponseOfMailMessageBase(object):
     def __init__(self, value: List[MailMessageBase] = None):
         """
         
-        :param value (List[MailMessageBase]) 
+        :param value: 
+        :type ListResponseOfMailMessageBase: 
         """
 
         self._value = None

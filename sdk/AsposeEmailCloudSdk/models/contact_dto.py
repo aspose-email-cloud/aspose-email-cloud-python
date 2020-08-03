@@ -133,42 +133,43 @@ class ContactDto(object):
     def __init__(self, associated_persons: List[AssociatedPerson] = None, attachments: List[Attachment] = None, company_name: str = None, computer_network_name: str = None, customer_id: str = None, department_name: str = None, display_name: str = None, email_addresses: List[EmailAddress] = None, events: List[CustomerEvent] = None, file_as: str = None, file_as_mapping: str = None, free_busy_location: str = None, gender: str = None, given_name: str = None, government_id_number: str = None, hobbies: str = None, initials: str = None, instant_messengers: List[InstantMessengerAddress] = None, job_title: str = None, language: str = None, location: str = None, middle_name: str = None, nickname: str = None, notes: str = None, notes_format: str = None, office_location: str = None, organizational_id_number: str = None, phone_numbers: List[PhoneNumber] = None, photo: ContactPhoto = None, physical_addresses: List[PostalAddress] = None, preferred_text_encoding: str = None, prefix: str = None, profession: str = None, suffix: str = None, surname: str = None, urls: List[Url] = None):
         """
         VCard document representation.             
-        :param associated_persons (List[AssociatedPerson]) Associated persons.             
-        :param attachments (List[Attachment]) Document attachments.             
-        :param company_name (str) Company name.             
-        :param computer_network_name (str) Computer network.             
-        :param customer_id (str) Customer id.             
-        :param department_name (str) Department name.             
-        :param display_name (str) Display name.             
-        :param email_addresses (List[EmailAddress]) Person's email addresses.             
-        :param events (List[CustomerEvent]) Person's events.             
-        :param file_as (str) A name used for sorting.             
-        :param file_as_mapping (str) Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
-        :param free_busy_location (str) URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
-        :param gender (str) Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
-        :param given_name (str) Person's given name.             
-        :param government_id_number (str) Government id number.             
-        :param hobbies (str) Person's hobbies.             
-        :param initials (str) Person's initials.             
-        :param instant_messengers (List[InstantMessengerAddress]) Person's instant messenger addresses.             
-        :param job_title (str) Person's job title.             
-        :param language (str) Language.             
-        :param location (str) Person's location.             
-        :param middle_name (str) Person's middle name.             
-        :param nickname (str) Person's nickname.             
-        :param notes (str) Notes.             
-        :param notes_format (str) Defines format of a text. Enum, available values: Text, Html
-        :param office_location (str) Office location.             
-        :param organizational_id_number (str) Contains an identifier for the mail user used within the mail user's organization.             
-        :param phone_numbers (List[PhoneNumber]) Person's phone numbers.             
-        :param photo (ContactPhoto) Person's photo.             
-        :param physical_addresses (List[PostalAddress]) Person's physical addresses.             
-        :param preferred_text_encoding (str) Encoding for all text properties.             
-        :param prefix (str) A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
-        :param profession (str) A job position of a person in a company.             
-        :param suffix (str) A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
-        :param surname (str) Person's surname.             
-        :param urls (List[Url]) Person's urls.             
+        :param associated_persons: Associated persons.             
+        :param attachments: Document attachments.             
+        :param company_name: Company name.             
+        :param computer_network_name: Computer network.             
+        :param customer_id: Customer id.             
+        :param department_name: Department name.             
+        :param display_name: Display name.             
+        :param email_addresses: Person's email addresses.             
+        :param events: Person's events.             
+        :param file_as: A name used for sorting.             
+        :param file_as_mapping: Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+        :param free_busy_location: URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
+        :param gender: Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+        :param given_name: Person's given name.             
+        :param government_id_number: Government id number.             
+        :param hobbies: Person's hobbies.             
+        :param initials: Person's initials.             
+        :param instant_messengers: Person's instant messenger addresses.             
+        :param job_title: Person's job title.             
+        :param language: Language.             
+        :param location: Person's location.             
+        :param middle_name: Person's middle name.             
+        :param nickname: Person's nickname.             
+        :param notes: Notes.             
+        :param notes_format: Defines format of a text. Enum, available values: Text, Html
+        :param office_location: Office location.             
+        :param organizational_id_number: Contains an identifier for the mail user used within the mail user's organization.             
+        :param phone_numbers: Person's phone numbers.             
+        :param photo: Person's photo.             
+        :param physical_addresses: Person's physical addresses.             
+        :param preferred_text_encoding: Encoding for all text properties.             
+        :param prefix: A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
+        :param profession: A job position of a person in a company.             
+        :param suffix: A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
+        :param surname: Person's surname.             
+        :param urls: Person's urls.             
+        :type ContactDto: 
         """
 
         self._associated_persons = None

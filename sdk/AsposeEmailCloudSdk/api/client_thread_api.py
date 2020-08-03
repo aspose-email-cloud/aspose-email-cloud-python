@@ -43,7 +43,8 @@ class ClientThreadApi(ApiBase):
     def delete(self, request: ClientThreadDeleteRequest):
         """Delete thread by id. All messages from thread will also be deleted.             
 
-        :param request ClientThreadDeleteRequest Delete email thread request.
+        :param request: Delete email thread request.
+        :type request: ClientThreadDeleteRequest
         :return: None
         """
         # verify the required parameter 'request' is set
@@ -72,7 +73,8 @@ class ClientThreadApi(ApiBase):
         """Get message threads from folder. All messages are partly fetched (without email body and some other fields).             
 
 
-        :param request ClientThreadGetListRequest object with parameters
+        :param request: ClientThreadGetListRequest object with parameters
+        :type request: ClientThreadGetListRequest
         :return: EmailThreadList
         """
         # verify the required parameter 'folder' is set
@@ -148,7 +150,8 @@ class ClientThreadApi(ApiBase):
         """Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
 
 
-        :param request ClientThreadGetMessagesRequest object with parameters
+        :param request: ClientThreadGetMessagesRequest object with parameters
+        :type request: ClientThreadGetMessagesRequest
         :return: EmailList
         """
         # verify the required parameter 'thread_id' is set
@@ -217,7 +220,8 @@ class ClientThreadApi(ApiBase):
     def move(self, request: ClientThreadMoveRequest):
         """Move thread to another folder.             
 
-        :param request ClientThreadMoveRequest Move thread request.
+        :param request: Move thread request.
+        :type request: ClientThreadMoveRequest
         :return: None
         """
         # verify the required parameter 'request' is set
@@ -245,7 +249,8 @@ class ClientThreadApi(ApiBase):
     def set_is_read(self, request: ClientThreadSetIsReadRequest):
         """Mark all messages in thread as read or unread.             
 
-        :param request ClientThreadSetIsReadRequest Email account specifier and IsRead flag.
+        :param request: Email account specifier and IsRead flag.
+        :type request: ClientThreadSetIsReadRequest
         :return: None
         """
         # verify the required parameter 'request' is set

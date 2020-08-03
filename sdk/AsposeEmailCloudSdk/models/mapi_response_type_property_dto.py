@@ -60,9 +60,10 @@ class MapiResponseTypePropertyDto(MapiPropertyDto):
     def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
         """
         Mapi property with response type value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (str) Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+        :param descriptor: Property descriptor             
+        :param discriminator: 
+        :param value: Represents the types of recipient responses that are received for a meeting. Enum, available values: Unknown, Organizer, Tentative, Accept, Decline, NoResponseReceived
+        :type MapiResponseTypePropertyDto: 
         """
         super(MapiResponseTypePropertyDto, self).__init__()
 

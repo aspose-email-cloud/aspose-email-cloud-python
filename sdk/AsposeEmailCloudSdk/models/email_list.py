@@ -56,7 +56,8 @@ class EmailList(ListResponseOfEmailDto):
     def __init__(self, value: List[EmailDto] = None):
         """
         Email document list.             
-        :param value (List[EmailDto]) 
+        :param value: 
+        :type EmailList: 
         """
         super(EmailList, self).__init__()
 

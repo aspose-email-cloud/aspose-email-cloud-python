@@ -33,9 +33,12 @@ class ContactConvertRequest(object):
     Request model for contact_convert operation.
     Initializes a new instance.
 
-    :param to_format (str) File format to convert to Enum, available values: VCard, WebDav, Msg
-    :param from_format (str) File format to convert from Enum, available values: VCard, WebDav, Msg
-    :param file (str) File to convert
+    :param to_format: File format to convert to Enum, available values: VCard, WebDav, Msg
+    :type to_format: str
+    :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+    :type from_format: str
+    :param file: File to convert
+    :type file: str
     """
 
     def __init__(self, to_format: str, from_format: str, file: str):
@@ -43,9 +46,12 @@ class ContactConvertRequest(object):
         Request model for contact_convert operation.
         Initializes a new instance.
 
-        :param to_format (str) File format to convert to Enum, available values: VCard, WebDav, Msg
-        :param from_format (str) File format to convert from Enum, available values: VCard, WebDav, Msg
-        :param file (str) File to convert
+        :param to_format: File format to convert to Enum, available values: VCard, WebDav, Msg
+        :type to_format: str
+        :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+        :type from_format: str
+        :param file: File to convert
+        :type file: str
         """
 
         self.to_format = to_format

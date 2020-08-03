@@ -61,11 +61,12 @@ class MapiElectronicAddressDto(object):
     def __init__(self, address_type: str = None, email_address: str = None, display_name: str = None, fax_number: str = None, original_display_name: str = None):
         """
         Refers to the group of properties that define the e-mail address or fax address.             
-        :param address_type (str) Address type.             
-        :param email_address (str) Email address.             
-        :param display_name (str) User-readable display name for the e-mail address.             
-        :param fax_number (str) Telephone number of the mail user's primary fax machine.             
-        :param original_display_name (str) SMTP e-mail address that  corresponds to the e-mail address.             
+        :param address_type: Address type.             
+        :param email_address: Email address.             
+        :param display_name: User-readable display name for the e-mail address.             
+        :param fax_number: Telephone number of the mail user's primary fax machine.             
+        :param original_display_name: SMTP e-mail address that  corresponds to the e-mail address.             
+        :type MapiElectronicAddressDto: 
         """
 
         self._address_type = None

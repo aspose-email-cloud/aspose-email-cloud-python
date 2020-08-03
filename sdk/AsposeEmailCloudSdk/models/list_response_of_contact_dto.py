@@ -55,7 +55,8 @@ class ListResponseOfContactDto(object):
     def __init__(self, value: List[ContactDto] = None):
         """
         
-        :param value (List[ContactDto]) 
+        :param value: 
+        :type ListResponseOfContactDto: 
         """
 
         self._value = None

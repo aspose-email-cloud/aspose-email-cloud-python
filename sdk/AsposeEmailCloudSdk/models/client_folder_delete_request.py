@@ -58,8 +58,9 @@ class ClientFolderDeleteRequest(ClientAccountBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, folder: str = None):
         """
         Email client delete folder request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param folder (str) Path to folder to delete.             
+        :param account_location: Email client account configuration location on storage.             
+        :param folder: Path to folder to delete.             
+        :type ClientFolderDeleteRequest: 
         """
         super(ClientFolderDeleteRequest, self).__init__()
 

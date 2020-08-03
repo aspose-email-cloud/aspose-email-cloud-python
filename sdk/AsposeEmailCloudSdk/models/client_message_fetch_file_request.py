@@ -33,12 +33,18 @@ class ClientMessageFetchFileRequest(object):
     Request model for client_message_fetch_file operation.
     Initializes a new instance.
 
-    :param message_id (str) Message identifier
-    :param account (str) Email account
-    :param folder (str) Account folder to fetch from (should be specified for some protocols such as IMAP)             
-    :param storage (str) Storage name where account file located.
-    :param account_storage_folder (str) Folder in storage where account file located.
-    :param format (str) Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :param message_id: Message identifier
+    :type message_id: str
+    :param account: Email account
+    :type account: str
+    :param folder: Account folder to fetch from (should be specified for some protocols such as IMAP)             
+    :type folder: str
+    :param storage: Storage name where account file located.
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located.
+    :type account_storage_folder: str
+    :param format: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :type format: str
     """
 
     def __init__(self, message_id: str, account: str, folder: str = None, storage: str = None, account_storage_folder: str = None, format: str = None):
@@ -46,12 +52,18 @@ class ClientMessageFetchFileRequest(object):
         Request model for client_message_fetch_file operation.
         Initializes a new instance.
 
-        :param message_id (str) Message identifier
-        :param account (str) Email account
-        :param folder (str) Account folder to fetch from (should be specified for some protocols such as IMAP)             
-        :param storage (str) Storage name where account file located.
-        :param account_storage_folder (str) Folder in storage where account file located.
-        :param format (str) Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param message_id: Message identifier
+        :type message_id: str
+        :param account: Email account
+        :type account: str
+        :param folder: Account folder to fetch from (should be specified for some protocols such as IMAP)             
+        :type folder: str
+        :param storage: Storage name where account file located.
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located.
+        :type account_storage_folder: str
+        :param format: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
         """
 
         self.message_id = message_id

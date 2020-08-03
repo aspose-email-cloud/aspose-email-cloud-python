@@ -33,13 +33,20 @@ class AiNameMatchRequest(object):
     Request model for ai_name_match operation.
     Initializes a new instance.
 
-    :param name (str) A name to match.
-    :param other_name (str) Another name to match.
-    :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
-    :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
-    :param encoding (str) A character encoding name.
-    :param script (str) A writing system code; starts with the ISO-15924 script name.
-    :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+    :param name: A name to match.
+    :type name: str
+    :param other_name: Another name to match.
+    :type other_name: str
+    :param language: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+    :type language: str
+    :param location: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+    :type location: str
+    :param encoding: A character encoding name.
+    :type encoding: str
+    :param script: A writing system code; starts with the ISO-15924 script name.
+    :type script: str
+    :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+    :type style: str
     """
 
     def __init__(self, name: str, other_name: str, language: str = None, location: str = None, encoding: str = None, script: str = None, style: str = None):
@@ -47,13 +54,20 @@ class AiNameMatchRequest(object):
         Request model for ai_name_match operation.
         Initializes a new instance.
 
-        :param name (str) A name to match.
-        :param other_name (str) Another name to match.
-        :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
-        :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
-        :param encoding (str) A character encoding name.
-        :param script (str) A writing system code; starts with the ISO-15924 script name.
-        :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        :param name: A name to match.
+        :type name: str
+        :param other_name: Another name to match.
+        :type other_name: str
+        :param language: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+        :type language: str
+        :param location: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+        :type location: str
+        :param encoding: A character encoding name.
+        :type encoding: str
+        :param script: A writing system code; starts with the ISO-15924 script name.
+        :type script: str
+        :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        :type style: str
         """
 
         self.name = name

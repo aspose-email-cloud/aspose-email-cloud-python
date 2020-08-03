@@ -89,25 +89,26 @@ class MapiContactTelephonePropertySetDto(object):
     def __init__(self, is_empty: bool = None, default_telephone_number: str = None, use_autocomplete: bool = None, callback_telephone_number: str = None, business_telephone_number: str = None, home_telephone_number: str = None, primary_telephone_number: str = None, business2_telephone_number: str = None, mobile_telephone_number: str = None, radio_telephone_number: str = None, car_telephone_number: str = None, other_telephone_number: str = None, assistant_telephone_number: str = None, home2_telephone_number: str = None, tty_tdd_phone_number: str = None, company_main_telephone_number: str = None, telex_number: str = None, isdn_number: str = None, pager_telephone_number: str = None):
         """
         Specify optional telephone numbers for the contact.             
-        :param is_empty (bool) Shows if MapiContactTelephonePropertySet is empty             
-        :param default_telephone_number (str) Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
-        :param use_autocomplete (bool) Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
-        :param callback_telephone_number (str) Gets or sets the callback telephone number             
-        :param business_telephone_number (str) Gets or sets the business telephone number             
-        :param home_telephone_number (str) Gets or sets the home telephone number             
-        :param primary_telephone_number (str) Gets or sets the primary telephone number             
-        :param business2_telephone_number (str) Gets or sets the second business telephone number             
-        :param mobile_telephone_number (str) Gets or sets the mobile telephone number             
-        :param radio_telephone_number (str) Gets or sets the radio telephone number             
-        :param car_telephone_number (str) Gets or sets the car telephone number             
-        :param other_telephone_number (str) Gets or sets an alternate telephone number             
-        :param assistant_telephone_number (str) Gets or sets the telephone number of the contact's assistant             
-        :param home2_telephone_number (str) Gets or sets a second home telephone number             
-        :param tty_tdd_phone_number (str) Gets or sets the telephone number for the contact's text telephone (TTY) or telecommunication device for the deaf (TDD)             
-        :param company_main_telephone_number (str) Gets or sets the company phone number             
-        :param telex_number (str) Gets or sets the telex number             
-        :param isdn_number (str) Gets or sets the integrated services digital network (ISDN) number             
-        :param pager_telephone_number (str) Gets or sets a pager telephone number             
+        :param is_empty: Shows if MapiContactTelephonePropertySet is empty             
+        :param default_telephone_number: Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
+        :param use_autocomplete: Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
+        :param callback_telephone_number: Gets or sets the callback telephone number             
+        :param business_telephone_number: Gets or sets the business telephone number             
+        :param home_telephone_number: Gets or sets the home telephone number             
+        :param primary_telephone_number: Gets or sets the primary telephone number             
+        :param business2_telephone_number: Gets or sets the second business telephone number             
+        :param mobile_telephone_number: Gets or sets the mobile telephone number             
+        :param radio_telephone_number: Gets or sets the radio telephone number             
+        :param car_telephone_number: Gets or sets the car telephone number             
+        :param other_telephone_number: Gets or sets an alternate telephone number             
+        :param assistant_telephone_number: Gets or sets the telephone number of the contact's assistant             
+        :param home2_telephone_number: Gets or sets a second home telephone number             
+        :param tty_tdd_phone_number: Gets or sets the telephone number for the contact's text telephone (TTY) or telecommunication device for the deaf (TDD)             
+        :param company_main_telephone_number: Gets or sets the company phone number             
+        :param telex_number: Gets or sets the telex number             
+        :param isdn_number: Gets or sets the integrated services digital network (ISDN) number             
+        :param pager_telephone_number: Gets or sets a pager telephone number             
+        :type MapiContactTelephonePropertySetDto: 
         """
 
         self._is_empty = None

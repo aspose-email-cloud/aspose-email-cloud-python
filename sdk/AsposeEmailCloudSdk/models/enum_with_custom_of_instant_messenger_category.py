@@ -55,8 +55,9 @@ class EnumWithCustomOfInstantMessengerCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
-        :param description (str) 
+        :param value: Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+        :param description: 
+        :type EnumWithCustomOfInstantMessengerCategory: 
         """
 
         self._value = None

@@ -55,8 +55,9 @@ class DiscUsage(object):
     def __init__(self, used_size: int = None, total_size: int = None):
         """
         Class for disc space information.
-        :param used_size (int) Application used disc space.
-        :param total_size (int) Total disc space.
+        :param used_size: Application used disc space.
+        :param total_size: Total disc space.
+        :type DiscUsage: 
         """
 
         self._used_size = None

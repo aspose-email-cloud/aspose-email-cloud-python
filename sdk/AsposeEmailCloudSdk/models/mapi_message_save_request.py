@@ -61,9 +61,10 @@ class MapiMessageSaveRequest(StorageModelOfMapiMessageDto):
     def __init__(self, storage_file: StorageFileLocation = None, value: MapiMessageDto = None, format: str = None):
         """
         MapiMessage save to storage request.             
-        :param storage_file (StorageFileLocation) 
-        :param value (MapiMessageDto) 
-        :param format (str) Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param storage_file: 
+        :param value: 
+        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type MapiMessageSaveRequest: 
         """
         super(MapiMessageSaveRequest, self).__init__()
 

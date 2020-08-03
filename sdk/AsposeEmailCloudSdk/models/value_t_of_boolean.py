@@ -53,7 +53,8 @@ class ValueTOfBoolean(object):
     def __init__(self, value: bool = None):
         """
         
-        :param value (bool) 
+        :param value: 
+        :type ValueTOfBoolean: 
         """
 
         self._value = None

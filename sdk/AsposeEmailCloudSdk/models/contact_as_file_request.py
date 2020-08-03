@@ -57,8 +57,9 @@ class ContactAsFileRequest(object):
     def __init__(self, format: str = None, value: ContactDto = None):
         """
         Convert contact model to file request.             
-        :param format (str) Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
-        :param value (ContactDto) Contact model.             
+        :param format: Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+        :param value: Contact model.             
+        :type ContactAsFileRequest: 
         """
 
         self._format = None

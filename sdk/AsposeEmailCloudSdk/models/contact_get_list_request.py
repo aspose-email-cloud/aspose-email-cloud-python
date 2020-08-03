@@ -33,11 +33,16 @@ class ContactGetListRequest(object):
     Request model for contact_get_list operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
-    :param folder (str) Path to folder in storage.
-    :param storage (str) Storage name.
-    :param items_per_page (int) Count of items on page.
-    :param page_number (int) Page number.
+    :param format: Contact document format. Enum, available values: VCard, WebDav, Msg
+    :type format: str
+    :param folder: Path to folder in storage.
+    :type folder: str
+    :param storage: Storage name.
+    :type storage: str
+    :param items_per_page: Count of items on page.
+    :type items_per_page: int
+    :param page_number: Page number.
+    :type page_number: int
     """
 
     def __init__(self, format: str, folder: str = None, storage: str = None, items_per_page: int = None, page_number: int = None):
@@ -45,11 +50,16 @@ class ContactGetListRequest(object):
         Request model for contact_get_list operation.
         Initializes a new instance.
 
-        :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
-        :param folder (str) Path to folder in storage.
-        :param storage (str) Storage name.
-        :param items_per_page (int) Count of items on page.
-        :param page_number (int) Page number.
+        :param format: Contact document format. Enum, available values: VCard, WebDav, Msg
+        :type format: str
+        :param folder: Path to folder in storage.
+        :type folder: str
+        :param storage: Storage name.
+        :type storage: str
+        :param items_per_page: Count of items on page.
+        :type items_per_page: int
+        :param page_number: Page number.
+        :type page_number: int
         """
 
         self.format = format

@@ -55,8 +55,9 @@ class MailServerFolder(object):
     def __init__(self, name: str = None, id: str = None):
         """
         Email account folder             
-        :param name (str) Gets or sets mail folder name             
-        :param id (str) Gets or sets mail folder id             
+        :param name: Gets or sets mail folder name             
+        :param id: Gets or sets mail folder id             
+        :type MailServerFolder: 
         """
 
         self._name = None

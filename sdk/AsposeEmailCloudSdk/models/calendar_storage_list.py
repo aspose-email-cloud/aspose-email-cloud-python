@@ -56,7 +56,8 @@ class CalendarStorageList(ListResponseOfStorageModelOfCalendarDto):
     def __init__(self, value: List[StorageModelOfCalendarDto] = None):
         """
         iCalendar models list with corresponding storage locations.             
-        :param value (List[StorageModelOfCalendarDto]) 
+        :param value: 
+        :type CalendarStorageList: 
         """
         super(CalendarStorageList, self).__init__()
 

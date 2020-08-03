@@ -61,10 +61,11 @@ class Error(object):
     def __init__(self, code: str = None, message: str = None, description: str = None, inner_error: ErrorDetails = None):
         """
         Error
-        :param code (str) Code             
-        :param message (str) Message             
-        :param description (str) Description             
-        :param inner_error (ErrorDetails) Inner Error             
+        :param code: Code             
+        :param message: Message             
+        :param description: Description             
+        :param inner_error: Inner Error             
+        :type Error: 
         """
 
         self._code = None

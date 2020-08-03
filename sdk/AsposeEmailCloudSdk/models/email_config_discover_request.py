@@ -33,8 +33,10 @@ class EmailConfigDiscoverRequest(object):
     Request model for email_config_discover operation.
     Initializes a new instance.
 
-    :param address (str) Email address.
-    :param fast_processing (bool) Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+    :param address: Email address.
+    :type address: str
+    :param fast_processing: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+    :type fast_processing: bool
     """
 
     def __init__(self, address: str, fast_processing: bool = None):
@@ -42,8 +44,10 @@ class EmailConfigDiscoverRequest(object):
         Request model for email_config_discover operation.
         Initializes a new instance.
 
-        :param address (str) Email address.
-        :param fast_processing (bool) Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :param address: Email address.
+        :type address: str
+        :param fast_processing: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :type fast_processing: bool
         """
 
         self.address = address

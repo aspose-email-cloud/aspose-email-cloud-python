@@ -33,11 +33,16 @@ class ContactGetAsFileRequest(object):
     Request model for contact_get_as_file operation.
     Initializes a new instance.
 
-    :param file_name (str) Calendar document file name
-    :param to_format (str) File format Enum, available values: VCard, WebDav, Msg
-    :param from_format (str) File format to convert from Enum, available values: VCard, WebDav, Msg
-    :param storage (str) Storage name
-    :param folder (str) Path to folder in storage
+    :param file_name: Calendar document file name
+    :type file_name: str
+    :param to_format: File format Enum, available values: VCard, WebDav, Msg
+    :type to_format: str
+    :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+    :type from_format: str
+    :param storage: Storage name
+    :type storage: str
+    :param folder: Path to folder in storage
+    :type folder: str
     """
 
     def __init__(self, file_name: str, to_format: str, from_format: str, storage: str = None, folder: str = None):
@@ -45,11 +50,16 @@ class ContactGetAsFileRequest(object):
         Request model for contact_get_as_file operation.
         Initializes a new instance.
 
-        :param file_name (str) Calendar document file name
-        :param to_format (str) File format Enum, available values: VCard, WebDav, Msg
-        :param from_format (str) File format to convert from Enum, available values: VCard, WebDav, Msg
-        :param storage (str) Storage name
-        :param folder (str) Path to folder in storage
+        :param file_name: Calendar document file name
+        :type file_name: str
+        :param to_format: File format Enum, available values: VCard, WebDav, Msg
+        :type to_format: str
+        :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+        :type from_format: str
+        :param storage: Storage name
+        :type storage: str
+        :param folder: Path to folder in storage
+        :type folder: str
         """
 
         self.file_name = file_name

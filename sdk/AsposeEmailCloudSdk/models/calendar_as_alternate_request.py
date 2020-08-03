@@ -59,9 +59,10 @@ class CalendarAsAlternateRequest(object):
     def __init__(self, value: CalendarDto = None, action: str = None, sequence_id: str = None):
         """
         Convert iCalendar to AlternateView request             
-        :param value (CalendarDto) iCalendar document model             
-        :param action (str) iCalendar actions. Enum, available values: Create, Update, Cancel
-        :param sequence_id (str) iCalendar sequence id             
+        :param value: iCalendar document model             
+        :param action: iCalendar actions. Enum, available values: Create, Update, Cancel
+        :param sequence_id: iCalendar sequence id             
+        :type CalendarAsAlternateRequest: 
         """
 
         self._value = None

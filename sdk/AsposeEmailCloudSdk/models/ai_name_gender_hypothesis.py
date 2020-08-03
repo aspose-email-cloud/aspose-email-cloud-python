@@ -55,8 +55,9 @@ class AiNameGenderHypothesis(object):
     def __init__(self, gender: str = None, score: float = None):
         """
         Name gender hypothesis             
-        :param gender (str) Recognized name gender. Enum, available values: Male, Female, Unknown
-        :param score (float) Hypothesis score             
+        :param gender: Recognized name gender. Enum, available values: Male, Female, Unknown
+        :param score: Hypothesis score             
+        :type AiNameGenderHypothesis: 
         """
 
         self._gender = None

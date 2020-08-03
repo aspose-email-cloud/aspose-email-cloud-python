@@ -58,8 +58,9 @@ class StorageModelOfEmailDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: EmailDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (EmailDto) 
+        :param storage_file: 
+        :param value: 
+        :type StorageModelOfEmailDto: 
         """
 
         self._storage_file = None

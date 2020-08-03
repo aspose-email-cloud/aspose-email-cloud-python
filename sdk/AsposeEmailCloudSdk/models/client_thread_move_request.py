@@ -60,9 +60,10 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, thread_id: str = None, destination_folder: str = None):
         """
         Email client move thread request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param thread_id (str) Thread identifier.             
-        :param destination_folder (str) Email account folder to move thread to.             
+        :param account_location: Email client account configuration location on storage.             
+        :param thread_id: Thread identifier.             
+        :param destination_folder: Email account folder to move thread to.             
+        :type ClientThreadMoveRequest: 
         """
         super(ClientThreadMoveRequest, self).__init__()
 

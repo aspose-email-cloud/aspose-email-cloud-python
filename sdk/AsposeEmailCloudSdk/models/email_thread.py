@@ -61,10 +61,11 @@ class EmailThread(object):
     def __init__(self, id: str = None, subject: str = None, messages: List[EmailDto] = None, folder: str = None):
         """
         Email messages thread             
-        :param id (str) Thread identifier             
-        :param subject (str) Thread subject             
-        :param messages (List[EmailDto]) List of messages in thread             
-        :param folder (str) Thread folder location             
+        :param id: Thread identifier             
+        :param subject: Thread subject             
+        :param messages: List of messages in thread             
+        :param folder: Thread folder location             
+        :type EmailThread: 
         """
 
         self._id = None

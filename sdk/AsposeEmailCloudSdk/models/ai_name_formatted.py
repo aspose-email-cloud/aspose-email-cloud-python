@@ -55,8 +55,9 @@ class AiNameFormatted(object):
     def __init__(self, name: str = None, comments: str = None):
         """
         Formatted name             
-        :param name (str) Formatted name value             
-        :param comments (str) Usually empty; can contain extra message describing some issue occurred during the formatting             
+        :param name: Formatted name value             
+        :param comments: Usually empty; can contain extra message describing some issue occurred during the formatting             
+        :type AiNameFormatted: 
         """
 
         self._name = None

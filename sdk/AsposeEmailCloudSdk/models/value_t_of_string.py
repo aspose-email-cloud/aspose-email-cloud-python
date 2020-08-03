@@ -53,7 +53,8 @@ class ValueTOfString(object):
     def __init__(self, value: str = None):
         """
         
-        :param value (str) 
+        :param value: 
+        :type ValueTOfString: 
         """
 
         self._value = None

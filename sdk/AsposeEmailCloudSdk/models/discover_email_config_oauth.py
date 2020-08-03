@@ -67,13 +67,14 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
     def __init__(self, address: str = None, fast_processing: bool = None, login: str = None, client_id: str = None, client_secret: str = None, refresh_token: str = None, request_url: str = None):
         """
         
-        :param address (str) Email address to discover.             
-        :param fast_processing (bool) Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
-        :param login (str) Email account login. If not specified, address used as a login.             
-        :param client_id (str) OAuth client id.             
-        :param client_secret (str) OAuth client secret.             
-        :param refresh_token (str) OAuth refresh token.             
-        :param request_url (str) The url to obtain access token. If not specified, will be discovered from email configuration.             
+        :param address: Email address to discover.             
+        :param fast_processing: Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
+        :param login: Email account login. If not specified, address used as a login.             
+        :param client_id: OAuth client id.             
+        :param client_secret: OAuth client secret.             
+        :param refresh_token: OAuth refresh token.             
+        :param request_url: The url to obtain access token. If not specified, will be discovered from email configuration.             
+        :type DiscoverEmailConfigOauth: 
         """
         super(DiscoverEmailConfigOauth, self).__init__()
 

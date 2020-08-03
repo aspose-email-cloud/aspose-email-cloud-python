@@ -140,48 +140,49 @@ class MapiMessageDto(MapiMessageItemBaseDto):
     def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, message_body: str = None, client_submit_time: datetime = None, conversation_topic: str = None, delivery_time: datetime = None, display_bcc: str = None, display_cc: str = None, display_name: str = None, display_name_prefix: str = None, display_to: str = None, flags: List[str] = None, headers: Dict[str, str] = None, internet_message_id: str = None, message_format: str = None, normalized_subject: str = None, read_receipt_requested: bool = None, reply_to: str = None, sender_address_type: str = None, sender_email_address: str = None, sender_name: str = None, sender_smtp_address: str = None, sent_representing_address_type: str = None, sent_representing_email_address: str = None, sent_representing_name: str = None, sent_representing_smtp_address: str = None, transport_message_headers: str = None):
         """
         Represents an Outlook Message format document.             
-        :param attachments (List[MapiAttachmentDto]) Message item attachments.             
-        :param billing (str) Billing information associated with an item.             
-        :param body (str) Message text.             
-        :param body_html (str) Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
-        :param body_rtf (str) RTF formatted message text.             
-        :param body_type (str) The content type of message body. Enum, available values: PlainText, Html, Rtf
-        :param categories (List[str]) Contains keywords or categories for the message object.             
-        :param companies (List[str]) Contains the names of the companies that are associated with an item.             
-        :param item_id (str) The item id, uses with a server.             
-        :param message_class (str) Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
-        :param mileage (str) Contains the mileage information that is associated with an item.             
-        :param recipients (List[MapiRecipientDto]) Recipients of the message.             
-        :param sensitivity (str) Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
-        :param subject (str) Subject of the message.             
-        :param subject_prefix (str) Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
-        :param properties (List[MapiPropertyDto]) List of MAPI properties             
-        :param discriminator (str) 
-        :param message_body (str) Message text             
-        :param client_submit_time (datetime) Date and time the message sender submitted a message.             
-        :param conversation_topic (str) Topic of the first message in a conversation thread.             
-        :param delivery_time (datetime) Date and time a message was delivered.             
-        :param display_bcc (str) List of the display names of any blind carbon copy (BCC) message recipients, separated by semicolons (;).             
-        :param display_cc (str) List of the display names of any carbon copy (CC) message recipients, separated by semicolons (;).             
-        :param display_name (str) Display name for the message.             
-        :param display_name_prefix (str) Prefix of the display name.             
-        :param display_to (str) List of the display names of the primary (To) message recipients, separated by semicolons (;).             
-        :param flags (List[str]) Message flags.             
-        :param headers (Dict[str, str]) Transport message headers             
-        :param internet_message_id (str) Internet message id of the message.             
-        :param message_format (str) Represents outlook message format. Enum, available values: Ascii, Unicode
-        :param normalized_subject (str) Normalized subject of the message.             
-        :param read_receipt_requested (bool) Value indicating whether the read receipt is requested.
-        :param reply_to (str) Reply to names.
-        :param sender_address_type (str) Message sender's e-mail address type.
-        :param sender_email_address (str) Message sender's e-mail address.
-        :param sender_name (str) Message sender's display name.
-        :param sender_smtp_address (str) Message sender's e-mail address.
-        :param sent_representing_address_type (str) Address type for the messaging user represented by the sender.
-        :param sent_representing_email_address (str) E-mail address for the messaging user represented by the sender.
-        :param sent_representing_name (str) Display name for the messaging user represented by the sender.
-        :param sent_representing_smtp_address (str) E-mail address for the messaging user represented by the sender.
-        :param transport_message_headers (str) Transport-specific message envelope information.
+        :param attachments: Message item attachments.             
+        :param billing: Billing information associated with an item.             
+        :param body: Message text.             
+        :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :param body_rtf: RTF formatted message text.             
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :param categories: Contains keywords or categories for the message object.             
+        :param companies: Contains the names of the companies that are associated with an item.             
+        :param item_id: The item id, uses with a server.             
+        :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :param mileage: Contains the mileage information that is associated with an item.             
+        :param recipients: Recipients of the message.             
+        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :param subject: Subject of the message.             
+        :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :param properties: List of MAPI properties             
+        :param discriminator: 
+        :param message_body: Message text             
+        :param client_submit_time: Date and time the message sender submitted a message.             
+        :param conversation_topic: Topic of the first message in a conversation thread.             
+        :param delivery_time: Date and time a message was delivered.             
+        :param display_bcc: List of the display names of any blind carbon copy (BCC) message recipients, separated by semicolons (;).             
+        :param display_cc: List of the display names of any carbon copy (CC) message recipients, separated by semicolons (;).             
+        :param display_name: Display name for the message.             
+        :param display_name_prefix: Prefix of the display name.             
+        :param display_to: List of the display names of the primary (To) message recipients, separated by semicolons (;).             
+        :param flags: Message flags.             
+        :param headers: Transport message headers             
+        :param internet_message_id: Internet message id of the message.             
+        :param message_format: Represents outlook message format. Enum, available values: Ascii, Unicode
+        :param normalized_subject: Normalized subject of the message.             
+        :param read_receipt_requested: Value indicating whether the read receipt is requested.
+        :param reply_to: Reply to names.
+        :param sender_address_type: Message sender's e-mail address type.
+        :param sender_email_address: Message sender's e-mail address.
+        :param sender_name: Message sender's display name.
+        :param sender_smtp_address: Message sender's e-mail address.
+        :param sent_representing_address_type: Address type for the messaging user represented by the sender.
+        :param sent_representing_email_address: E-mail address for the messaging user represented by the sender.
+        :param sent_representing_name: Display name for the messaging user represented by the sender.
+        :param sent_representing_smtp_address: E-mail address for the messaging user represented by the sender.
+        :param transport_message_headers: Transport-specific message envelope information.
+        :type MapiMessageDto: 
         """
         super(MapiMessageDto, self).__init__()
 

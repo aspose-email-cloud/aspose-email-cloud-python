@@ -43,7 +43,8 @@ class ClientFolderApi(ApiBase):
     def create(self, request: ClientFolderCreateRequest):
         """Create new folder in email account             
 
-        :param request ClientFolderCreateRequest Create folder request
+        :param request: Create folder request
+        :type request: ClientFolderCreateRequest
         :return: None
         """
         # verify the required parameter 'request' is set
@@ -71,7 +72,8 @@ class ClientFolderApi(ApiBase):
     def delete(self, request: ClientFolderDeleteRequest):
         """Delete a folder in email account             
 
-        :param request ClientFolderDeleteRequest Delete folder request
+        :param request: Delete folder request
+        :type request: ClientFolderDeleteRequest
         :return: None
         """
         # verify the required parameter 'request' is set
@@ -100,7 +102,8 @@ class ClientFolderApi(ApiBase):
         """Get folders list in email account             
 
 
-        :param request ClientFolderGetListRequest object with parameters
+        :param request: ClientFolderGetListRequest object with parameters
+        :type request: ClientFolderGetListRequest
         :return: MailServerFolderList
         """
         # verify the required parameter 'account' is set

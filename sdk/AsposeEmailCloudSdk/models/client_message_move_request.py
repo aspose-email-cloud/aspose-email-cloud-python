@@ -62,10 +62,11 @@ class ClientMessageMoveRequest(ClientMessageBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, message_id: str = None, source_folder: str = None, destination_folder: str = None):
         """
         Email client move message request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param message_id (str) Message identifier.             
-        :param source_folder (str) Folder to move message from.             
-        :param destination_folder (str) Folder to move message to.             
+        :param account_location: Email client account configuration location on storage.             
+        :param message_id: Message identifier.             
+        :param source_folder: Folder to move message from.             
+        :param destination_folder: Folder to move message to.             
+        :type ClientMessageMoveRequest: 
         """
         super(ClientMessageMoveRequest, self).__init__()
 

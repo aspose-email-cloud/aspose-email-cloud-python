@@ -57,8 +57,9 @@ class MapiPropertyDto(object):
     def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None):
         """
         Mapi property             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
+        :param descriptor: Property descriptor             
+        :param discriminator: 
+        :type MapiPropertyDto: 
         """
 
         self._descriptor = None

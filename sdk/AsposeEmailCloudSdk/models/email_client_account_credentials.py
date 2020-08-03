@@ -55,8 +55,9 @@ class EmailClientAccountCredentials(object):
     def __init__(self, login: str = None, discriminator: str = None):
         """
         Represents email client account credentials             
-        :param login (str) Email client account login             
-        :param discriminator (str) 
+        :param login: Email client account login             
+        :param discriminator: 
+        :type EmailClientAccountCredentials: 
         """
 
         self._login = None

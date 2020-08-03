@@ -33,7 +33,8 @@ class DisposableEmailIsDisposableRequest(object):
     Request model for disposable_email_is_disposable operation.
     Initializes a new instance.
 
-    :param address (str) An email address to check
+    :param address: An email address to check
+    :type address: str
     """
 
     def __init__(self, address: str):
@@ -41,7 +42,8 @@ class DisposableEmailIsDisposableRequest(object):
         Request model for disposable_email_is_disposable operation.
         Initializes a new instance.
 
-        :param address (str) An email address to check
+        :param address: An email address to check
+        :type address: str
         """
 
         self.address = address

@@ -84,21 +84,22 @@ class MapiCalendarWeeklyRecurrencePatternDto(MapiCalendarRecurrencePatternDto):
     def __init__(self, calendar_type: str = None, deleted_instance_dates: List[datetime] = None, end_date: datetime = None, end_type: str = None, exceptions: List[MapiCalendarExceptionInfoDto] = None, frequency: str = None, modified_instance_dates: List[datetime] = None, occurrence_count: int = None, pattern_type: str = None, period: int = None, sliding_flag: bool = None, start_date: datetime = None, week_start_day: str = None, discriminator: str = None, day_of_week: List[str] = None):
         """
         Represents the weekly recurrence pattern of the mapi calendar             
-        :param calendar_type (str) Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
-        :param deleted_instance_dates (List[datetime]) An array of dates, each of which is the original instance date of either a deleted instance or a modified instance for this recurrence.             
-        :param end_date (datetime) End date of an item recurrence pattern.             
-        :param end_type (str) Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
-        :param exceptions (List[MapiCalendarExceptionInfoDto]) An exception specifies changes to an instance of a recurring series.             
-        :param frequency (str) Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
-        :param modified_instance_dates (List[datetime]) An array of dates, each of which is the date of a modified instance.             
-        :param occurrence_count (int) Number of occurrences in a recurrence.             
-        :param pattern_type (str) Enumerates the mapi calendar recurrence pattern types Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
-        :param period (int) Interval at which the meeting pattern repeats.             
-        :param sliding_flag (bool) Defines whether pattern is sliding or not.             
-        :param start_date (datetime) Start date of an item recurrence pattern.             
-        :param week_start_day (str) Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-        :param discriminator (str) 
-        :param day_of_week (List[str]) Days of week at which the event occurs.             
+        :param calendar_type: Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+        :param deleted_instance_dates: An array of dates, each of which is the original instance date of either a deleted instance or a modified instance for this recurrence.             
+        :param end_date: End date of an item recurrence pattern.             
+        :param end_type: Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
+        :param exceptions: An exception specifies changes to an instance of a recurring series.             
+        :param frequency: Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
+        :param modified_instance_dates: An array of dates, each of which is the date of a modified instance.             
+        :param occurrence_count: Number of occurrences in a recurrence.             
+        :param pattern_type: Enumerates the mapi calendar recurrence pattern types Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+        :param period: Interval at which the meeting pattern repeats.             
+        :param sliding_flag: Defines whether pattern is sliding or not.             
+        :param start_date: Start date of an item recurrence pattern.             
+        :param week_start_day: Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        :param discriminator: 
+        :param day_of_week: Days of week at which the event occurs.             
+        :type MapiCalendarWeeklyRecurrencePatternDto: 
         """
         super(MapiCalendarWeeklyRecurrencePatternDto, self).__init__()
 

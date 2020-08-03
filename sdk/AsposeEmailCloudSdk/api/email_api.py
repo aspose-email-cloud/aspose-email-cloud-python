@@ -43,7 +43,8 @@ class EmailApi(ApiBase):
     def as_file(self, request: EmailAsFileRequest) -> str:
         """Converts Email model to specified format and returns as file.             
 
-        :param request EmailAsFileRequest Email model and format to convert.
+        :param request: Email model and format to convert.
+        :type request: EmailAsFileRequest
         :return: str
         """
         # verify the required parameter 'request' is set
@@ -71,7 +72,8 @@ class EmailApi(ApiBase):
     def as_mapi(self, email_dto: EmailDto) -> MapiMessageDto:
         """Converts EmailDto to MapiMessageDto.             
 
-        :param email_dto EmailDto Email model to convert
+        :param email_dto: Email model to convert
+        :type email_dto: EmailDto
         :return: MapiMessageDto
         """
         # verify the required parameter 'email_dto' is set
@@ -100,7 +102,8 @@ class EmailApi(ApiBase):
         """Converts email document to specified format and returns as file             
 
 
-        :param request EmailConvertRequest object with parameters
+        :param request: EmailConvertRequest object with parameters
+        :type request: EmailConvertRequest
         :return: str
         """
         # verify the required parameter 'format' is set
@@ -148,7 +151,8 @@ class EmailApi(ApiBase):
         """Converts email document to a model representation             
 
 
-        :param request EmailFromFileRequest object with parameters
+        :param request: EmailFromFileRequest object with parameters
+        :type request: EmailFromFileRequest
         :return: EmailDto
         """
         # verify the required parameter 'format' is set
@@ -196,7 +200,8 @@ class EmailApi(ApiBase):
         """Get email document from storage.             
 
 
-        :param request EmailGetRequest object with parameters
+        :param request: EmailGetRequest object with parameters
+        :type request: EmailGetRequest
         :return: EmailDto
         """
         # verify the required parameter 'format' is set
@@ -260,7 +265,8 @@ class EmailApi(ApiBase):
         """Converts email document from storage to specified format and returns as file             
 
 
-        :param request EmailGetAsFileRequest object with parameters
+        :param request: EmailGetAsFileRequest object with parameters
+        :type request: EmailGetAsFileRequest
         :return: str
         """
         # verify the required parameter 'file_name' is set
@@ -324,7 +330,8 @@ class EmailApi(ApiBase):
         """Get email list from storage folder.             
 
 
-        :param request EmailGetListRequest object with parameters
+        :param request: EmailGetListRequest object with parameters
+        :type request: EmailGetListRequest
         :return: EmailStorageList
         """
         # verify the required parameter 'format' is set
@@ -390,7 +397,8 @@ class EmailApi(ApiBase):
     def save(self, request: EmailSaveRequest):
         """Save email document to storage.             
 
-        :param request EmailSaveRequest Email document create/update request.
+        :param request: Email document create/update request.
+        :type request: EmailSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set

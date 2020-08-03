@@ -58,8 +58,9 @@ class StorageModelOfEmailClientMultiAccount(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: EmailClientMultiAccount = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (EmailClientMultiAccount) 
+        :param storage_file: 
+        :param value: 
+        :type StorageModelOfEmailClientMultiAccount: 
         """
 
         self._storage_file = None

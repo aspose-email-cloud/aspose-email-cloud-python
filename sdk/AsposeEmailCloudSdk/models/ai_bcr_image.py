@@ -53,7 +53,8 @@ class AiBcrImage(object):
     def __init__(self, is_single: bool = None):
         """
         Image for recognition             
-        :param is_single (bool) Determines that image contains single VCard or more.             
+        :param is_single: Determines that image contains single VCard or more.             
+        :type AiBcrImage: 
         """
 
         self._is_single = None

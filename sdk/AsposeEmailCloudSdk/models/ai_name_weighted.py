@@ -55,8 +55,9 @@ class AiNameWeighted(object):
     def __init__(self, name: str = None, score: float = None):
         """
         Name with score             
-        :param name (str) Name             
-        :param score (float) Score of name             
+        :param name: Name             
+        :param score: Score of name             
+        :type AiNameWeighted: 
         """
 
         self._name = None

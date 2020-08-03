@@ -67,13 +67,14 @@ class FileVersion(StorageFile):
     def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None, version_id: str = None, is_latest: bool = None):
         """
         File Version
-        :param name (str) File or folder name.
-        :param is_folder (bool) True if it is a folder.
-        :param modified_date (datetime) File or folder last modified DateTime.
-        :param size (int) File or folder size.
-        :param path (str) File or folder path.
-        :param version_id (str) File Version ID.
-        :param is_latest (bool) Specifies whether the file is (true) or is not (false) the latest version of an file.
+        :param name: File or folder name.
+        :param is_folder: True if it is a folder.
+        :param modified_date: File or folder last modified DateTime.
+        :param size: File or folder size.
+        :param path: File or folder path.
+        :param version_id: File Version ID.
+        :param is_latest: Specifies whether the file is (true) or is not (false) the latest version of an file.
+        :type FileVersion: 
         """
         super(FileVersion, self).__init__()
 

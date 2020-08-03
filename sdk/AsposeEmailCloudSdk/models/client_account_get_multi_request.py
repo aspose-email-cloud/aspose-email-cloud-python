@@ -33,9 +33,12 @@ class ClientAccountGetMultiRequest(object):
     Request model for client_account_get_multi operation.
     Initializes a new instance.
 
-    :param file_name (str) File name on storage
-    :param folder (str) Folder on storage
-    :param storage (str) Storage name
+    :param file_name: File name on storage
+    :type file_name: str
+    :param folder: Folder on storage
+    :type folder: str
+    :param storage: Storage name
+    :type storage: str
     """
 
     def __init__(self, file_name: str, folder: str = None, storage: str = None):
@@ -43,9 +46,12 @@ class ClientAccountGetMultiRequest(object):
         Request model for client_account_get_multi operation.
         Initializes a new instance.
 
-        :param file_name (str) File name on storage
-        :param folder (str) Folder on storage
-        :param storage (str) Storage name
+        :param file_name: File name on storage
+        :type file_name: str
+        :param folder: Folder on storage
+        :type folder: str
+        :param storage: Storage name
+        :type storage: str
         """
 
         self.file_name = file_name

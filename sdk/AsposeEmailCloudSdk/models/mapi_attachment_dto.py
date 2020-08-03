@@ -55,8 +55,9 @@ class MapiAttachmentDto(object):
     def __init__(self, name: str = None, data_base64: str = None):
         """
         Mapi attachment             
-        :param name (str) Attachment's name             
-        :param data_base64 (str) Attachment data represented as Base64 string.             
+        :param name: Attachment's name             
+        :param data_base64: Attachment data represented as Base64 string.             
+        :type MapiAttachmentDto: 
         """
 
         self._name = None

@@ -67,13 +67,14 @@ class MapiCalendarTimeZoneInfoDto(object):
     def __init__(self, bias: int = None, daylight_bias: int = None, daylight_date: MapiCalendarTimeZoneRuleDto = None, standard_bias: int = None, standard_date: MapiCalendarTimeZoneRuleDto = None, time_zone_flags: List[str] = None, year: int = None):
         """
         Represents the mapi calendar time zone rule.             
-        :param bias (int) Time zone's offset in minutes from UTC.             
-        :param daylight_bias (int) Offset in minutes from lBias during daylight saving time.             
-        :param daylight_date (MapiCalendarTimeZoneRuleDto) Date and local time that indicate when to begin using the DaylightBias.             
-        :param standard_bias (int) Offset in minutes from lBias during standard time.             
-        :param standard_date (MapiCalendarTimeZoneRuleDto) Date and local time that indicate when to begin using the StandardBias.             
-        :param time_zone_flags (List[str]) Individual bit flags that specify information about this TimeZoneRule.             
-        :param year (int) Year in which this rule is scheduled to take effect.             
+        :param bias: Time zone's offset in minutes from UTC.             
+        :param daylight_bias: Offset in minutes from lBias during daylight saving time.             
+        :param daylight_date: Date and local time that indicate when to begin using the DaylightBias.             
+        :param standard_bias: Offset in minutes from lBias during standard time.             
+        :param standard_date: Date and local time that indicate when to begin using the StandardBias.             
+        :param time_zone_flags: Individual bit flags that specify information about this TimeZoneRule.             
+        :param year: Year in which this rule is scheduled to take effect.             
+        :type MapiCalendarTimeZoneInfoDto: 
         """
 
         self._bias = None

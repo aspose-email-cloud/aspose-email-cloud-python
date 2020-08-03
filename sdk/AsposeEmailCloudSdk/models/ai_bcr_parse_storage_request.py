@@ -61,9 +61,10 @@ class AiBcrParseStorageRequest(object):
     def __init__(self, out_folder: StorageFolderLocation = None, images: List[AiBcrImageStorageFile] = None, options: AiBcrOptions = None):
         """
         Parse business card images from Storage request             
-        :param out_folder (StorageFolderLocation) Parse output folder location on storage             
-        :param images (List[AiBcrImageStorageFile]) Images to parse.             
-        :param options (AiBcrOptions) Recognition options.             
+        :param out_folder: Parse output folder location on storage             
+        :param images: Images to parse.             
+        :param options: Recognition options.             
+        :type AiBcrParseStorageRequest: 
         """
 
         self._out_folder = None

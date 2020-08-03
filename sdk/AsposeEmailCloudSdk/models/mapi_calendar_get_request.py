@@ -33,9 +33,12 @@ class MapiCalendarGetRequest(object):
     Request model for mapi_calendar_get operation.
     Initializes a new instance.
 
-    :param file_name (str) Calendar file name in storage.
-    :param folder (str) Path to folder in storage.
-    :param storage (str) Storage name.
+    :param file_name: Calendar file name in storage.
+    :type file_name: str
+    :param folder: Path to folder in storage.
+    :type folder: str
+    :param storage: Storage name.
+    :type storage: str
     """
 
     def __init__(self, file_name: str, folder: str = None, storage: str = None):
@@ -43,9 +46,12 @@ class MapiCalendarGetRequest(object):
         Request model for mapi_calendar_get operation.
         Initializes a new instance.
 
-        :param file_name (str) Calendar file name in storage.
-        :param folder (str) Path to folder in storage.
-        :param storage (str) Storage name.
+        :param file_name: Calendar file name in storage.
+        :type file_name: str
+        :param folder: Path to folder in storage.
+        :type folder: str
+        :param storage: Storage name.
+        :type storage: str
         """
 
         self.file_name = file_name

@@ -57,8 +57,9 @@ class MapiCalendarTimeZoneDto(object):
     def __init__(self, key_name: str = None, time_zone_rules: List[MapiCalendarTimeZoneInfoDto] = None):
         """
         Represents the mapi calendar time zone information.             
-        :param key_name (str) Human-readable description of the time zone.             
-        :param time_zone_rules (List[MapiCalendarTimeZoneInfoDto]) Time zone rules             
+        :param key_name: Human-readable description of the time zone.             
+        :param time_zone_rules: Time zone rules             
+        :type MapiCalendarTimeZoneDto: 
         """
 
         self._key_name = None

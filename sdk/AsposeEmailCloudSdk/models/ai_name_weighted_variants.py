@@ -57,8 +57,9 @@ class AiNameWeightedVariants(object):
     def __init__(self, names: List[AiNameWeighted] = None, comments: str = None):
         """
         Name variants             
-        :param names (List[AiNameWeighted]) List of name variations             
-        :param comments (str) Usually empty; can contain extra message describing some issue occurred during processing             
+        :param names: List of name variations             
+        :param comments: Usually empty; can contain extra message describing some issue occurred during processing             
+        :type AiNameWeightedVariants: 
         """
 
         self._names = None

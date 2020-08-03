@@ -55,7 +55,8 @@ class ClientAccountBaseRequest(object):
     def __init__(self, account_location: StorageFileLocation = None):
         """
         Base request for Email client. Stores information about email account location.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
+        :param account_location: Email client account configuration location on storage.             
+        :type ClientAccountBaseRequest: 
         """
 
         self._account_location = None

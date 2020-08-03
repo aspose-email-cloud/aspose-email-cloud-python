@@ -55,7 +55,8 @@ class ListResponseOfAiNameExtracted(object):
     def __init__(self, value: List[AiNameExtracted] = None):
         """
         
-        :param value (List[AiNameExtracted]) 
+        :param value: 
+        :type ListResponseOfAiNameExtracted: 
         """
 
         self._value = None

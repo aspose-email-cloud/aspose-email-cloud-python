@@ -55,8 +55,9 @@ class EnumWithCustomOfEventCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Event category. Enum, available values: Custom, Birthday, Anniversary
-        :param description (str) 
+        :param value: Event category. Enum, available values: Custom, Birthday, Anniversary
+        :param description: 
+        :type EnumWithCustomOfEventCategory: 
         """
 
         self._value = None

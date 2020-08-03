@@ -55,7 +55,8 @@ class ListResponseOfStorageModelOfContactDto(object):
     def __init__(self, value: List[StorageModelOfContactDto] = None):
         """
         
-        :param value (List[StorageModelOfContactDto]) 
+        :param value: 
+        :type ListResponseOfStorageModelOfContactDto: 
         """
 
         self._value = None

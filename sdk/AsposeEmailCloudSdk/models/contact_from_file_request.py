@@ -33,8 +33,10 @@ class ContactFromFileRequest(object):
     Request model for contact_from_file operation.
     Initializes a new instance.
 
-    :param format (str) File format Enum, available values: VCard, WebDav, Msg
-    :param file (str) File to convert
+    :param format: File format Enum, available values: VCard, WebDav, Msg
+    :type format: str
+    :param file: File to convert
+    :type file: str
     """
 
     def __init__(self, format: str, file: str):
@@ -42,8 +44,10 @@ class ContactFromFileRequest(object):
         Request model for contact_from_file operation.
         Initializes a new instance.
 
-        :param format (str) File format Enum, available values: VCard, WebDav, Msg
-        :param file (str) File to convert
+        :param format: File format Enum, available values: VCard, WebDav, Msg
+        :type format: str
+        :param file: File to convert
+        :type file: str
         """
 
         self.format = format

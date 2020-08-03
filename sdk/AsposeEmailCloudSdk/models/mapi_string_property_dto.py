@@ -60,9 +60,10 @@ class MapiStringPropertyDto(MapiPropertyDto):
     def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
         """
         Mapi property with string value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (str) Property value             
+        :param descriptor: Property descriptor             
+        :param discriminator: 
+        :param value: Property value             
+        :type MapiStringPropertyDto: 
         """
         super(MapiStringPropertyDto, self).__init__()
 

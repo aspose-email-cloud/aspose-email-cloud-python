@@ -33,9 +33,12 @@ class CalendarGetRequest(object):
     Request model for calendar_get operation.
     Initializes a new instance.
 
-    :param file_name (str) iCalendar file name in storage.
-    :param folder (str) Path to folder in storage.
-    :param storage (str) Storage name.
+    :param file_name: iCalendar file name in storage.
+    :type file_name: str
+    :param folder: Path to folder in storage.
+    :type folder: str
+    :param storage: Storage name.
+    :type storage: str
     """
 
     def __init__(self, file_name: str, folder: str = None, storage: str = None):
@@ -43,9 +46,12 @@ class CalendarGetRequest(object):
         Request model for calendar_get operation.
         Initializes a new instance.
 
-        :param file_name (str) iCalendar file name in storage.
-        :param folder (str) Path to folder in storage.
-        :param storage (str) Storage name.
+        :param file_name: iCalendar file name in storage.
+        :type file_name: str
+        :param folder: Path to folder in storage.
+        :type folder: str
+        :param storage: Storage name.
+        :type storage: str
         """
 
         self.file_name = file_name

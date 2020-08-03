@@ -40,10 +40,15 @@ class EmailCloud(object):
         Initializes a new instance of the EmailCloud class.
         
         :param app_key: The app key.
+        :type app_key: str
         :param app_sid: The app sid.
+        :type app_sid: str
         :param base_url: The base URL.
+        :type base_url: str
         :param api_version: API version.
+        :type api_version: str
         :param debug: If debug mode is enabled. False by default.
+        :type debug: bool
         """
         configuration = Configuration(app_key=app_key,
                                       app_sid=app_sid,

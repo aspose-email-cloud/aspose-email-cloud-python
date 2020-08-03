@@ -60,9 +60,10 @@ class ClientThreadDeleteRequest(ClientThreadBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, thread_id: str = None, folder: str = None):
         """
         Delete email client thread request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param thread_id (str) Thread identifier.             
-        :param folder (str) Folder on email server, where thread is stored.             
+        :param account_location: Email client account configuration location on storage.             
+        :param thread_id: Thread identifier.             
+        :param folder: Folder on email server, where thread is stored.             
+        :type ClientThreadDeleteRequest: 
         """
         super(ClientThreadDeleteRequest, self).__init__()
 

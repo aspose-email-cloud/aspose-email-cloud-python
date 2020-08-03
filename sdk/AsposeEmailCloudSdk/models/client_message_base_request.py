@@ -58,8 +58,9 @@ class ClientMessageBaseRequest(ClientAccountBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, message_id: str = None):
         """
         Email client message request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param message_id (str) Message identifier.             
+        :param account_location: Email client account configuration location on storage.             
+        :param message_id: Message identifier.             
+        :type ClientMessageBaseRequest: 
         """
         super(ClientMessageBaseRequest, self).__init__()
 

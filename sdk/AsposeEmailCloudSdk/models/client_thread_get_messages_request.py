@@ -33,11 +33,16 @@ class ClientThreadGetMessagesRequest(object):
     Request model for client_thread_get_messages operation.
     Initializes a new instance.
 
-    :param thread_id (str) Thread identifier
-    :param account (str) Email account
-    :param folder (str) Specifies account folder to get thread from             
-    :param storage (str) Storage name where account file located
-    :param account_storage_folder (str) Folder in storage where account file located
+    :param thread_id: Thread identifier
+    :type thread_id: str
+    :param account: Email account
+    :type account: str
+    :param folder: Specifies account folder to get thread from             
+    :type folder: str
+    :param storage: Storage name where account file located
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located
+    :type account_storage_folder: str
     """
 
     def __init__(self, thread_id: str, account: str, folder: str = None, storage: str = None, account_storage_folder: str = None):
@@ -45,11 +50,16 @@ class ClientThreadGetMessagesRequest(object):
         Request model for client_thread_get_messages operation.
         Initializes a new instance.
 
-        :param thread_id (str) Thread identifier
-        :param account (str) Email account
-        :param folder (str) Specifies account folder to get thread from             
-        :param storage (str) Storage name where account file located
-        :param account_storage_folder (str) Folder in storage where account file located
+        :param thread_id: Thread identifier
+        :type thread_id: str
+        :param account: Email account
+        :type account: str
+        :param folder: Specifies account folder to get thread from             
+        :type folder: str
+        :param storage: Storage name where account file located
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located
+        :type account_storage_folder: str
         """
 
         self.thread_id = thread_id

@@ -58,8 +58,9 @@ class StorageModelOfMapiMessageDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: MapiMessageDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (MapiMessageDto) 
+        :param storage_file: 
+        :param value: 
+        :type StorageModelOfMapiMessageDto: 
         """
 
         self._storage_file = None

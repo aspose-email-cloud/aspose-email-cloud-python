@@ -43,7 +43,8 @@ class CalendarApi(ApiBase):
     def as_alternate(self, request: CalendarAsAlternateRequest) -> AlternateView:
         """Convert iCalendar to AlternateView             
 
-        :param request CalendarAsAlternateRequest iCalendar to AlternateView request
+        :param request: iCalendar to AlternateView request
+        :type request: CalendarAsAlternateRequest
         :return: AlternateView
         """
         # verify the required parameter 'request' is set
@@ -71,7 +72,8 @@ class CalendarApi(ApiBase):
     def as_file(self, request: CalendarAsFileRequest) -> str:
         """Converts calendar model to specified format and returns as file.             
 
-        :param request CalendarAsFileRequest Calendar model and format to convert.
+        :param request: Calendar model and format to convert.
+        :type request: CalendarAsFileRequest
         :return: str
         """
         # verify the required parameter 'request' is set
@@ -99,7 +101,8 @@ class CalendarApi(ApiBase):
     def as_mapi(self, calendar_dto: CalendarDto) -> MapiCalendarDto:
         """Converts CalendarDto to MapiCalendarDto.             
 
-        :param calendar_dto CalendarDto iCalendar model calendar representation.
+        :param calendar_dto: iCalendar model calendar representation.
+        :type calendar_dto: CalendarDto
         :return: MapiCalendarDto
         """
         # verify the required parameter 'calendar_dto' is set
@@ -128,7 +131,8 @@ class CalendarApi(ApiBase):
         """Converts calendar document to specified format and returns as file.             
 
 
-        :param request CalendarConvertRequest object with parameters
+        :param request: CalendarConvertRequest object with parameters
+        :type request: CalendarConvertRequest
         :return: str
         """
         # verify the required parameter 'format' is set
@@ -176,7 +180,8 @@ class CalendarApi(ApiBase):
         """Converts calendar document to a model representation.             
 
 
-        :param request CalendarFromFileRequest object with parameters
+        :param request: CalendarFromFileRequest object with parameters
+        :type request: CalendarFromFileRequest
         :return: CalendarDto
         """
         # verify the required parameter 'file' is set
@@ -215,7 +220,8 @@ class CalendarApi(ApiBase):
         """Get calendar file from storage.             
 
 
-        :param request CalendarGetRequest object with parameters
+        :param request: CalendarGetRequest object with parameters
+        :type request: CalendarGetRequest
         :return: CalendarDto
         """
         # verify the required parameter 'file_name' is set
@@ -270,7 +276,8 @@ class CalendarApi(ApiBase):
         """Get iCalendar from storage as AlternateView             
 
 
-        :param request CalendarGetAsAlternateRequest object with parameters
+        :param request: CalendarGetAsAlternateRequest object with parameters
+        :type request: CalendarGetAsAlternateRequest
         :return: AlternateView
         """
         # verify the required parameter 'file_name' is set
@@ -340,7 +347,8 @@ class CalendarApi(ApiBase):
         """Converts calendar document from storage to specified format and returns as file.             
 
 
-        :param request CalendarGetAsFileRequest object with parameters
+        :param request: CalendarGetAsFileRequest object with parameters
+        :type request: CalendarGetAsFileRequest
         :return: str
         """
         # verify the required parameter 'file_name' is set
@@ -404,7 +412,8 @@ class CalendarApi(ApiBase):
         """Get iCalendar list from storage folder.             
 
 
-        :param request CalendarGetListRequest object with parameters
+        :param request: CalendarGetListRequest object with parameters
+        :type request: CalendarGetListRequest
         :return: CalendarStorageList
         """
         # verify the required parameter 'folder' is set
@@ -464,7 +473,8 @@ class CalendarApi(ApiBase):
     def save(self, request: CalendarSaveRequest):
         """Save iCalendar             
 
-        :param request CalendarSaveRequest iCalendar create/update request
+        :param request: iCalendar create/update request
+        :type request: CalendarSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set

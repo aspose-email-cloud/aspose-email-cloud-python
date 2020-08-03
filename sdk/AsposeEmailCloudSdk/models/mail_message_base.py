@@ -53,7 +53,8 @@ class MailMessageBase(object):
     def __init__(self, discriminator: str = None):
         """
         Universal object that stores email messages in different formats.             
-        :param discriminator (str) 
+        :param discriminator: 
+        :type MailMessageBase: 
         """
 
         self._discriminator = self.__class__.__name__

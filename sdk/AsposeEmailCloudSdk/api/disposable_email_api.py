@@ -44,7 +44,8 @@ class DisposableEmailApi(ApiBase):
         """Check email address is disposable             
 
 
-        :param request DisposableEmailIsDisposableRequest object with parameters
+        :param request: DisposableEmailIsDisposableRequest object with parameters
+        :type request: DisposableEmailIsDisposableRequest
         :return: ValueTOfBoolean
         """
         # verify the required parameter 'address' is set

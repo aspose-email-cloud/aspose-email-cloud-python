@@ -55,8 +55,9 @@ class ErrorDetails(object):
     def __init__(self, request_id: str = None, _date: datetime = None):
         """
         The error details
-        :param request_id (str) The request id
-        :param _date (datetime) Date
+        :param request_id: The request id
+        :param _date: Date
+        :type ErrorDetails: 
         """
 
         self._request_id = None

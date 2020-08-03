@@ -33,10 +33,14 @@ class CalendarGetListRequest(object):
     Request model for calendar_get_list operation.
     Initializes a new instance.
 
-    :param folder (str) Path to folder in storage.
-    :param items_per_page (int) Count of items on page.
-    :param page_number (int) Page number.
-    :param storage (str) Storage name.
+    :param folder: Path to folder in storage.
+    :type folder: str
+    :param items_per_page: Count of items on page.
+    :type items_per_page: int
+    :param page_number: Page number.
+    :type page_number: int
+    :param storage: Storage name.
+    :type storage: str
     """
 
     def __init__(self, folder: str, items_per_page: int = None, page_number: int = None, storage: str = None):
@@ -44,10 +48,14 @@ class CalendarGetListRequest(object):
         Request model for calendar_get_list operation.
         Initializes a new instance.
 
-        :param folder (str) Path to folder in storage.
-        :param items_per_page (int) Count of items on page.
-        :param page_number (int) Page number.
-        :param storage (str) Storage name.
+        :param folder: Path to folder in storage.
+        :type folder: str
+        :param items_per_page: Count of items on page.
+        :type items_per_page: int
+        :param page_number: Page number.
+        :type page_number: int
+        :param storage: Storage name.
+        :type storage: str
         """
 
         self.folder = folder

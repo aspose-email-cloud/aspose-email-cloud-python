@@ -55,8 +55,9 @@ class ObjectExist(object):
     def __init__(self, exists: bool = None, is_folder: bool = None):
         """
         Object exists
-        :param exists (bool) Indicates that the file or folder exists.
-        :param is_folder (bool) True if it is a folder, false if it is a file.
+        :param exists: Indicates that the file or folder exists.
+        :param is_folder: True if it is a folder, false if it is a file.
+        :type ObjectExist: 
         """
 
         self._exists = None

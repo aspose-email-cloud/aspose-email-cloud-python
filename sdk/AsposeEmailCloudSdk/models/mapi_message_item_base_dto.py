@@ -89,23 +89,24 @@ class MapiMessageItemBaseDto(object):
     def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None):
         """
         Base Dto for MapiMessage, MapiCalendar or MapiContact             
-        :param attachments (List[MapiAttachmentDto]) Message item attachments.             
-        :param billing (str) Billing information associated with an item.             
-        :param body (str) Message text.             
-        :param body_html (str) Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
-        :param body_rtf (str) RTF formatted message text.             
-        :param body_type (str) The content type of message body. Enum, available values: PlainText, Html, Rtf
-        :param categories (List[str]) Contains keywords or categories for the message object.             
-        :param companies (List[str]) Contains the names of the companies that are associated with an item.             
-        :param item_id (str) The item id, uses with a server.             
-        :param message_class (str) Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
-        :param mileage (str) Contains the mileage information that is associated with an item.             
-        :param recipients (List[MapiRecipientDto]) Recipients of the message.             
-        :param sensitivity (str) Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
-        :param subject (str) Subject of the message.             
-        :param subject_prefix (str) Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
-        :param properties (List[MapiPropertyDto]) List of MAPI properties             
-        :param discriminator (str) 
+        :param attachments: Message item attachments.             
+        :param billing: Billing information associated with an item.             
+        :param body: Message text.             
+        :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :param body_rtf: RTF formatted message text.             
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :param categories: Contains keywords or categories for the message object.             
+        :param companies: Contains the names of the companies that are associated with an item.             
+        :param item_id: The item id, uses with a server.             
+        :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :param mileage: Contains the mileage information that is associated with an item.             
+        :param recipients: Recipients of the message.             
+        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :param subject: Subject of the message.             
+        :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :param properties: List of MAPI properties             
+        :param discriminator: 
+        :type MapiMessageItemBaseDto: 
         """
 
         self._attachments = None

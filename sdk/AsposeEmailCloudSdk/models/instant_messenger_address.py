@@ -59,9 +59,10 @@ class InstantMessengerAddress(object):
     def __init__(self, category: EnumWithCustomOfInstantMessengerCategory = None, address: str = None, preferred: bool = None):
         """
         Instant messenger address.             
-        :param category (EnumWithCustomOfInstantMessengerCategory) Address category.             
-        :param address (str) Address.             
-        :param preferred (bool) Determines whether this address is preferred.             
+        :param category: Address category.             
+        :param address: Address.             
+        :param preferred: Determines whether this address is preferred.             
+        :type InstantMessengerAddress: 
         """
 
         self._category = None

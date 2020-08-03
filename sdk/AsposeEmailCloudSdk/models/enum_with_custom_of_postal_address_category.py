@@ -55,8 +55,9 @@ class EnumWithCustomOfPostalAddressCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Address category. Enum, available values: Home, Work, Custom
-        :param description (str) 
+        :param value: Address category. Enum, available values: Home, Work, Custom
+        :param description: 
+        :type EnumWithCustomOfPostalAddressCategory: 
         """
 
         self._value = None

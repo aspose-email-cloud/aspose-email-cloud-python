@@ -44,7 +44,8 @@ class AiNameApi(ApiBase):
         """The call proposes k most probable names for given starting characters.             
 
 
-        :param request AiNameCompleteRequest object with parameters
+        :param request: AiNameCompleteRequest object with parameters
+        :type request: AiNameCompleteRequest
         :return: AiNameWeightedVariants
         """
         # verify the required parameter 'name' is set
@@ -117,7 +118,8 @@ class AiNameApi(ApiBase):
         """Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions.             
 
 
-        :param request AiNameExpandRequest object with parameters
+        :param request: AiNameExpandRequest object with parameters
+        :type request: AiNameExpandRequest
         :return: AiNameWeightedVariants
         """
         # verify the required parameter 'name' is set
@@ -189,7 +191,8 @@ class AiNameApi(ApiBase):
     def expand_parsed(self, request: AiNameParsedRequest) -> AiNameWeightedVariants:
         """Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions.             
 
-        :param request AiNameParsedRequest Parsed name with options.
+        :param request: Parsed name with options.
+        :type request: AiNameParsedRequest
         :return: AiNameWeightedVariants
         """
         # verify the required parameter 'request' is set
@@ -218,7 +221,8 @@ class AiNameApi(ApiBase):
         """Formats a person&#39;s name in correct case and name order using options for formatting instructions.             
 
 
-        :param request AiNameFormatRequest object with parameters
+        :param request: AiNameFormatRequest object with parameters
+        :type request: AiNameFormatRequest
         :return: AiNameFormatted
         """
         # verify the required parameter 'name' is set
@@ -296,7 +300,8 @@ class AiNameApi(ApiBase):
     def format_parsed(self, request: AiNameParsedRequest) -> AiNameFormatted:
         """Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions.             
 
-        :param request AiNameParsedRequest Parsed name with options.
+        :param request: Parsed name with options.
+        :type request: AiNameParsedRequest
         :return: AiNameFormatted
         """
         # verify the required parameter 'request' is set
@@ -325,7 +330,8 @@ class AiNameApi(ApiBase):
         """Detect person&#39;s gender from name string.             
 
 
-        :param request AiNameGenderizeRequest object with parameters
+        :param request: AiNameGenderizeRequest object with parameters
+        :type request: AiNameGenderizeRequest
         :return: AiNameGenderHypothesisList
         """
         # verify the required parameter 'name' is set
@@ -397,7 +403,8 @@ class AiNameApi(ApiBase):
     def genderize_parsed(self, request: AiNameParsedRequest) -> AiNameGenderHypothesisList:
         """Detect person&#39;s gender from parsed name.             
 
-        :param request AiNameParsedRequest Gender detection request data.
+        :param request: Gender detection request data.
+        :type request: AiNameParsedRequest
         :return: AiNameGenderHypothesisList
         """
         # verify the required parameter 'request' is set
@@ -426,7 +433,8 @@ class AiNameApi(ApiBase):
         """Compare people&#39;s names. Uses options for comparing instructions.             
 
 
-        :param request AiNameMatchRequest object with parameters
+        :param request: AiNameMatchRequest object with parameters
+        :type request: AiNameMatchRequest
         :return: AiNameMatchResult
         """
         # verify the required parameter 'name' is set
@@ -507,7 +515,8 @@ class AiNameApi(ApiBase):
     def match_parsed(self, request: AiNameParsedMatchRequest) -> AiNameMatchResult:
         """Compare people&#39;s parsed names and attributes. Uses options for comparing instructions.             
 
-        :param request AiNameParsedMatchRequest Parsed names to match.
+        :param request: Parsed names to match.
+        :type request: AiNameParsedMatchRequest
         :return: AiNameMatchResult
         """
         # verify the required parameter 'request' is set
@@ -536,7 +545,8 @@ class AiNameApi(ApiBase):
         """Parse name to components.             
 
 
-        :param request AiNameParseRequest object with parameters
+        :param request: AiNameParseRequest object with parameters
+        :type request: AiNameParseRequest
         :return: AiNameComponentList
         """
         # verify the required parameter 'name' is set
@@ -609,7 +619,8 @@ class AiNameApi(ApiBase):
         """Parse person&#39;s name out of an email address.             
 
 
-        :param request AiNameParseEmailAddressRequest object with parameters
+        :param request: AiNameParseEmailAddressRequest object with parameters
+        :type request: AiNameParseEmailAddressRequest
         :return: AiNameExtractedList
         """
         # verify the required parameter 'email_address' is set

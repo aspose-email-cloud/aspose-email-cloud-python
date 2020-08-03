@@ -33,13 +33,20 @@ class ClientMessageFetchRequest(object):
     Request model for client_message_fetch operation.
     Initializes a new instance.
 
-    :param message_id (str) Message identifier
-    :param account (str) Email account
-    :param folder (str) Account folder to fetch from (should be specified for some protocols such as IMAP)             
-    :param storage (str) Storage name where account file located.
-    :param account_storage_folder (str) Folder in storage where account file located.
-    :param type (str) MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
-    :param format (str) Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :param message_id: Message identifier
+    :type message_id: str
+    :param account: Email account
+    :type account: str
+    :param folder: Account folder to fetch from (should be specified for some protocols such as IMAP)             
+    :type folder: str
+    :param storage: Storage name where account file located.
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located.
+    :type account_storage_folder: str
+    :param type: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+    :type type: str
+    :param format: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :type format: str
     """
 
     def __init__(self, message_id: str, account: str, folder: str = None, storage: str = None, account_storage_folder: str = None, type: str = None, format: str = None):
@@ -47,13 +54,20 @@ class ClientMessageFetchRequest(object):
         Request model for client_message_fetch operation.
         Initializes a new instance.
 
-        :param message_id (str) Message identifier
-        :param account (str) Email account
-        :param folder (str) Account folder to fetch from (should be specified for some protocols such as IMAP)             
-        :param storage (str) Storage name where account file located.
-        :param account_storage_folder (str) Folder in storage where account file located.
-        :param type (str) MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
-        :param format (str) Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param message_id: Message identifier
+        :type message_id: str
+        :param account: Email account
+        :type account: str
+        :param folder: Account folder to fetch from (should be specified for some protocols such as IMAP)             
+        :type folder: str
+        :param storage: Storage name where account file located.
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located.
+        :type account_storage_folder: str
+        :param type: MailMessageBase type. Using this property you can fetch message in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+        :type type: str
+        :param format: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
         """
 
         self.message_id = message_id

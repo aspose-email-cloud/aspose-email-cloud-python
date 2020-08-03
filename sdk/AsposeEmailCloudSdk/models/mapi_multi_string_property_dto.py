@@ -60,9 +60,10 @@ class MapiMultiStringPropertyDto(MapiPropertyDto):
     def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, values: List[str] = None):
         """
         Mapi property with Multiple String values             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param values (List[str]) Property values             
+        :param descriptor: Property descriptor             
+        :param discriminator: 
+        :param values: Property values             
+        :type MapiMultiStringPropertyDto: 
         """
         super(MapiMultiStringPropertyDto, self).__init__()
 

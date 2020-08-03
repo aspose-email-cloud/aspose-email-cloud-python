@@ -33,8 +33,10 @@ class CreateFolderRequest(object):
     Request model for create_folder operation.
     Initializes a new instance.
 
-    :param path (str) Folder path to create e.g. 'folder_1/folder_2/'
-    :param storage_name (str) Storage name
+    :param path: Folder path to create e.g. 'folder_1/folder_2/'
+    :type path: str
+    :param storage_name: Storage name
+    :type storage_name: str
     """
 
     def __init__(self, path: str, storage_name: str = None):
@@ -42,8 +44,10 @@ class CreateFolderRequest(object):
         Request model for create_folder operation.
         Initializes a new instance.
 
-        :param path (str) Folder path to create e.g. 'folder_1/folder_2/'
-        :param storage_name (str) Storage name
+        :param path: Folder path to create e.g. 'folder_1/folder_2/'
+        :type path: str
+        :param storage_name: Storage name
+        :type storage_name: str
         """
 
         self.path = path

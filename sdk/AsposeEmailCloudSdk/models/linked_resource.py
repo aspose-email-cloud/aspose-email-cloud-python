@@ -64,11 +64,12 @@ class LinkedResource(AttachmentBase):
     def __init__(self, base64_data: str = None, content_id: str = None, content_type: ContentType = None, headers: Dict[str, str] = None, content_link: str = None):
         """
         Represents an embedded resource in a message.             
-        :param base64_data (str) Attachment file content as Base64 string.             
-        :param content_id (str) Attachment content id             
-        :param content_type (ContentType) Content type             
-        :param headers (Dict[str, str]) Attachment headers.             
-        :param content_link (str) URI that the resource must match.             
+        :param base64_data: Attachment file content as Base64 string.             
+        :param content_id: Attachment content id             
+        :param content_type: Content type             
+        :param headers: Attachment headers.             
+        :param content_link: URI that the resource must match.             
+        :type LinkedResource: 
         """
         super(LinkedResource, self).__init__()
 

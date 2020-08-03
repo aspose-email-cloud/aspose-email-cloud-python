@@ -61,11 +61,12 @@ class RecurrencePatternDto(object):
     def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, discriminator: str = None):
         """
         iCalendar recurrence pattern.             
-        :param interval (int) Number of recurrence units.             
-        :param occurs (int) Number of occurrences of the recurrence pattern.             
-        :param end_date (datetime) End date.             
-        :param week_start (str) Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-        :param discriminator (str) 
+        :param interval: Number of recurrence units.             
+        :param occurs: Number of occurrences of the recurrence pattern.             
+        :param end_date: End date.             
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param discriminator: 
+        :type RecurrencePatternDto: 
         """
 
         self._interval = None

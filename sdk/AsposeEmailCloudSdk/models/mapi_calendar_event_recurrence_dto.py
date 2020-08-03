@@ -66,12 +66,13 @@ class MapiCalendarEventRecurrenceDto(object):
     def __init__(self, appointment_time_zone_definition_recur: MapiCalendarTimeZoneDto = None, clip_end: datetime = None, clip_start: datetime = None, is_exception: bool = None, recurrence_pattern: MapiCalendarRecurrencePatternDto = None, time_zone_struct: MapiCalendarTimeZoneDto = None):
         """
         Recurrence properties of calendar object.             
-        :param appointment_time_zone_definition_recur (MapiCalendarTimeZoneDto) Time zone information that describes how to convert the meeting date and time on a recurring series to and from UTC.             
-        :param clip_end (datetime) Date of the last instance.             
-        :param clip_start (datetime) Date of the first instance.             
-        :param is_exception (bool) Value indicating whether the object represents an exception.             
-        :param recurrence_pattern (MapiCalendarRecurrencePatternDto) Recurrence pattern.             
-        :param time_zone_struct (MapiCalendarTimeZoneDto) Time zone information for a recurring meeting.             
+        :param appointment_time_zone_definition_recur: Time zone information that describes how to convert the meeting date and time on a recurring series to and from UTC.             
+        :param clip_end: Date of the last instance.             
+        :param clip_start: Date of the first instance.             
+        :param is_exception: Value indicating whether the object represents an exception.             
+        :param recurrence_pattern: Recurrence pattern.             
+        :param time_zone_struct: Time zone information for a recurring meeting.             
+        :type MapiCalendarEventRecurrenceDto: 
         """
 
         self._appointment_time_zone_definition_recur = None

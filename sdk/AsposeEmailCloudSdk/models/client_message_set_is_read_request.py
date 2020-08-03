@@ -60,9 +60,10 @@ class ClientMessageSetIsReadRequest(ClientMessageBaseRequest):
     def __init__(self, account_location: StorageFileLocation = None, message_id: str = None, is_read: bool = None):
         """
         Email client mark message is read/unread request.             
-        :param account_location (StorageFileLocation) Email client account configuration location on storage.             
-        :param message_id (str) Message identifier.             
-        :param is_read (bool) Message is read flag.             
+        :param account_location: Email client account configuration location on storage.             
+        :param message_id: Message identifier.             
+        :param is_read: Message is read flag.             
+        :type ClientMessageSetIsReadRequest: 
         """
         super(ClientMessageSetIsReadRequest, self).__init__()
 

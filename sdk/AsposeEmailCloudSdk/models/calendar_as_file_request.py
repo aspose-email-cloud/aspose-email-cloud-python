@@ -57,8 +57,9 @@ class CalendarAsFileRequest(object):
     def __init__(self, format: str = None, value: CalendarDto = None):
         """
         iCalendar model to file request.             
-        :param format (str) Calendar file format Enum, available values: Ics, Msg
-        :param value (CalendarDto) iCalendar model             
+        :param format: Calendar file format Enum, available values: Ics, Msg
+        :param value: iCalendar model             
+        :type CalendarAsFileRequest: 
         """
 
         self._format = None

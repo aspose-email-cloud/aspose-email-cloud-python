@@ -55,8 +55,9 @@ class AiBcrOptions(object):
     def __init__(self, languages: str = None, countries: str = None):
         """
         Recognition options.             
-        :param languages (str) Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
-        :param countries (str) Comma-separated codes of countries.             
+        :param languages: Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \"it\" or \"ita\" for Italian); it's \"\" by default.             
+        :param countries: Comma-separated codes of countries.             
+        :type AiBcrOptions: 
         """
 
         self._languages = None

@@ -43,7 +43,8 @@ class MapiCalendarApi(ApiBase):
     def as_calendar_dto(self, mapi_calendar_dto: MapiCalendarDto) -> CalendarDto:
         """Converts MAPI calendar model to CalendarDto model.             
 
-        :param mapi_calendar_dto MapiCalendarDto MAPI calendar model to convert.
+        :param mapi_calendar_dto: MAPI calendar model to convert.
+        :type mapi_calendar_dto: MapiCalendarDto
         :return: CalendarDto
         """
         # verify the required parameter 'mapi_calendar_dto' is set
@@ -71,7 +72,8 @@ class MapiCalendarApi(ApiBase):
     def as_file(self, request: MapiCalendarAsFileRequest) -> str:
         """Converts MAPI calendar model to specified format and returns as file.             
 
-        :param request MapiCalendarAsFileRequest MAPI calendar model to convert.
+        :param request: MAPI calendar model to convert.
+        :type request: MapiCalendarAsFileRequest
         :return: str
         """
         # verify the required parameter 'request' is set
@@ -100,7 +102,8 @@ class MapiCalendarApi(ApiBase):
         """Converts calendar file to a MAPI model representation.             
 
 
-        :param request MapiCalendarFromFileRequest object with parameters
+        :param request: MapiCalendarFromFileRequest object with parameters
+        :type request: MapiCalendarFromFileRequest
         :return: MapiCalendarDto
         """
         # verify the required parameter 'file' is set
@@ -139,7 +142,8 @@ class MapiCalendarApi(ApiBase):
         """Get MAPI calendar document.             
 
 
-        :param request MapiCalendarGetRequest object with parameters
+        :param request: MapiCalendarGetRequest object with parameters
+        :type request: MapiCalendarGetRequest
         :return: MapiCalendarDto
         """
         # verify the required parameter 'file_name' is set
@@ -193,7 +197,8 @@ class MapiCalendarApi(ApiBase):
     def save(self, request: MapiCalendarSaveRequest):
         """Save MAPI Calendar to storage.             
 
-        :param request MapiCalendarSaveRequest Calendar create/update request.
+        :param request: Calendar create/update request.
+        :type request: MapiCalendarSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set

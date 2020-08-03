@@ -33,10 +33,14 @@ class MoveFolderRequest(object):
     Request model for move_folder operation.
     Initializes a new instance.
 
-    :param src_path (str) Folder path to move e.g. '/folder'
-    :param dest_path (str) Destination folder path to move to e.g '/dst'
-    :param src_storage_name (str) Source storage name
-    :param dest_storage_name (str) Destination storage name
+    :param src_path: Folder path to move e.g. '/folder'
+    :type src_path: str
+    :param dest_path: Destination folder path to move to e.g '/dst'
+    :type dest_path: str
+    :param src_storage_name: Source storage name
+    :type src_storage_name: str
+    :param dest_storage_name: Destination storage name
+    :type dest_storage_name: str
     """
 
     def __init__(self, src_path: str, dest_path: str, src_storage_name: str = None, dest_storage_name: str = None):
@@ -44,10 +48,14 @@ class MoveFolderRequest(object):
         Request model for move_folder operation.
         Initializes a new instance.
 
-        :param src_path (str) Folder path to move e.g. '/folder'
-        :param dest_path (str) Destination folder path to move to e.g '/dst'
-        :param src_storage_name (str) Source storage name
-        :param dest_storage_name (str) Destination storage name
+        :param src_path: Folder path to move e.g. '/folder'
+        :type src_path: str
+        :param dest_path: Destination folder path to move to e.g '/dst'
+        :type dest_path: str
+        :param src_storage_name: Source storage name
+        :type src_storage_name: str
+        :param dest_storage_name: Destination storage name
+        :type dest_storage_name: str
         """
 
         self.src_path = src_path

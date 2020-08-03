@@ -57,8 +57,9 @@ class EmailClientMultiAccount(object):
     def __init__(self, receive_accounts: List[EmailClientAccount] = None, send_account: EmailClientAccount = None):
         """
         Email client virtual account, which contains several accounts             
-        :param receive_accounts (List[EmailClientAccount]) Email client receive accounts             
-        :param send_account (EmailClientAccount) Email client send account             
+        :param receive_accounts: Email client receive accounts             
+        :param send_account: Email client send account             
+        :type EmailClientMultiAccount: 
         """
 
         self._receive_accounts = None

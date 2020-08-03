@@ -33,8 +33,10 @@ class GetFileVersionsRequest(object):
     Request model for get_file_versions operation.
     Initializes a new instance.
 
-    :param path (str) File path e.g. '/file.ext'
-    :param storage_name (str) Storage name
+    :param path: File path e.g. '/file.ext'
+    :type path: str
+    :param storage_name: Storage name
+    :type storage_name: str
     """
 
     def __init__(self, path: str, storage_name: str = None):
@@ -42,8 +44,10 @@ class GetFileVersionsRequest(object):
         Request model for get_file_versions operation.
         Initializes a new instance.
 
-        :param path (str) File path e.g. '/file.ext'
-        :param storage_name (str) Storage name
+        :param path: File path e.g. '/file.ext'
+        :type path: str
+        :param storage_name: Storage name
+        :type storage_name: str
         """
 
         self.path = path

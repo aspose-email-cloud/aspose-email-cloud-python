@@ -55,8 +55,9 @@ class NameValuePair(object):
     def __init__(self, name: str = None, value: str = None):
         """
         Name-Value property             
-        :param name (str) Property name             
-        :param value (str) Property value             
+        :param name: Property name             
+        :param value: Property value             
+        :type NameValuePair: 
         """
 
         self._name = None

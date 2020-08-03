@@ -33,11 +33,16 @@ class CalendarGetAsAlternateRequest(object):
     Request model for calendar_get_as_alternate operation.
     Initializes a new instance.
 
-    :param file_name (str) iCalendar file name in storage
-    :param calendar_action (str) iCalendar method type Enum, available values: Create, Update, Cancel
-    :param sequence_id (str) The sequence id
-    :param folder (str) Path to folder in storage
-    :param storage (str) Storage name
+    :param file_name: iCalendar file name in storage
+    :type file_name: str
+    :param calendar_action: iCalendar method type Enum, available values: Create, Update, Cancel
+    :type calendar_action: str
+    :param sequence_id: The sequence id
+    :type sequence_id: str
+    :param folder: Path to folder in storage
+    :type folder: str
+    :param storage: Storage name
+    :type storage: str
     """
 
     def __init__(self, file_name: str, calendar_action: str, sequence_id: str = None, folder: str = None, storage: str = None):
@@ -45,11 +50,16 @@ class CalendarGetAsAlternateRequest(object):
         Request model for calendar_get_as_alternate operation.
         Initializes a new instance.
 
-        :param file_name (str) iCalendar file name in storage
-        :param calendar_action (str) iCalendar method type Enum, available values: Create, Update, Cancel
-        :param sequence_id (str) The sequence id
-        :param folder (str) Path to folder in storage
-        :param storage (str) Storage name
+        :param file_name: iCalendar file name in storage
+        :type file_name: str
+        :param calendar_action: iCalendar method type Enum, available values: Create, Update, Cancel
+        :type calendar_action: str
+        :param sequence_id: The sequence id
+        :type sequence_id: str
+        :param folder: Path to folder in storage
+        :type folder: str
+        :param storage: Storage name
+        :type storage: str
         """
 
         self.file_name = file_name

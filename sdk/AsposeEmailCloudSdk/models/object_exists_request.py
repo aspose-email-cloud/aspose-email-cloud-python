@@ -33,9 +33,12 @@ class ObjectExistsRequest(object):
     Request model for object_exists operation.
     Initializes a new instance.
 
-    :param path (str) File or folder path e.g. '/file.ext' or '/folder'
-    :param storage_name (str) Storage name
-    :param version_id (str) File version ID
+    :param path: File or folder path e.g. '/file.ext' or '/folder'
+    :type path: str
+    :param storage_name: Storage name
+    :type storage_name: str
+    :param version_id: File version ID
+    :type version_id: str
     """
 
     def __init__(self, path: str, storage_name: str = None, version_id: str = None):
@@ -43,9 +46,12 @@ class ObjectExistsRequest(object):
         Request model for object_exists operation.
         Initializes a new instance.
 
-        :param path (str) File or folder path e.g. '/file.ext' or '/folder'
-        :param storage_name (str) Storage name
-        :param version_id (str) File version ID
+        :param path: File or folder path e.g. '/file.ext' or '/folder'
+        :type path: str
+        :param storage_name: Storage name
+        :type storage_name: str
+        :param version_id: File version ID
+        :type version_id: str
         """
 
         self.path = path

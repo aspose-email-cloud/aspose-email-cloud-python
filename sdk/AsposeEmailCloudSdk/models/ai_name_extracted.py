@@ -57,8 +57,9 @@ class AiNameExtracted(object):
     def __init__(self, name: List[AiNameExtractedComponent] = None, score: float = None):
         """
         Extracted name             
-        :param name (List[AiNameExtractedComponent]) Extracted name components             
-        :param score (float) Extracted name score             
+        :param name: Extracted name components             
+        :param score: Extracted name score             
+        :type AiNameExtracted: 
         """
 
         self._name = None

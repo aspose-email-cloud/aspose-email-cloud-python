@@ -33,10 +33,14 @@ class MapiContactGetRequest(object):
     Request model for mapi_contact_get operation.
     Initializes a new instance.
 
-    :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
-    :param file_name (str) Contact document file name.
-    :param folder (str) Path to folder in storage.
-    :param storage (str) Storage name.
+    :param format: Contact document format. Enum, available values: VCard, WebDav, Msg
+    :type format: str
+    :param file_name: Contact document file name.
+    :type file_name: str
+    :param folder: Path to folder in storage.
+    :type folder: str
+    :param storage: Storage name.
+    :type storage: str
     """
 
     def __init__(self, format: str, file_name: str, folder: str = None, storage: str = None):
@@ -44,10 +48,14 @@ class MapiContactGetRequest(object):
         Request model for mapi_contact_get operation.
         Initializes a new instance.
 
-        :param format (str) Contact document format. Enum, available values: VCard, WebDav, Msg
-        :param file_name (str) Contact document file name.
-        :param folder (str) Path to folder in storage.
-        :param storage (str) Storage name.
+        :param format: Contact document format. Enum, available values: VCard, WebDav, Msg
+        :type format: str
+        :param file_name: Contact document file name.
+        :type file_name: str
+        :param folder: Path to folder in storage.
+        :type folder: str
+        :param storage: Storage name.
+        :type storage: str
         """
 
         self.format = format

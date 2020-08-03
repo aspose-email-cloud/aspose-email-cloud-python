@@ -44,7 +44,8 @@ class ClientAccountApi(ApiBase):
         """Get email client account from storage.             
 
 
-        :param request ClientAccountGetRequest object with parameters
+        :param request: ClientAccountGetRequest object with parameters
+        :type request: ClientAccountGetRequest
         :return: EmailClientAccount
         """
         # verify the required parameter 'file_name' is set
@@ -99,7 +100,8 @@ class ClientAccountApi(ApiBase):
         """Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
 
-        :param request ClientAccountGetMultiRequest object with parameters
+        :param request: ClientAccountGetMultiRequest object with parameters
+        :type request: ClientAccountGetMultiRequest
         :return: EmailClientMultiAccount
         """
         # verify the required parameter 'file_name' is set
@@ -153,7 +155,8 @@ class ClientAccountApi(ApiBase):
     def save(self, request: EmailClientAccountSaveRequest):
         """Create/update email client account file (*.account) with credentials             
 
-        :param request EmailClientAccountSaveRequest Email account information
+        :param request: Email account information
+        :type request: EmailClientAccountSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set
@@ -181,7 +184,8 @@ class ClientAccountApi(ApiBase):
     def save_multi(self, request: EmailClientMultiAccountSaveRequest):
         """Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
-        :param request EmailClientMultiAccountSaveRequest Email accounts information.
+        :param request: Email accounts information.
+        :type request: EmailClientMultiAccountSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set

@@ -33,14 +33,22 @@ class ClientMessageListRequest(object):
     Request model for client_message_list operation.
     Initializes a new instance.
 
-    :param folder (str) A folder in email account
-    :param account (str) Email account
-    :param query_string (str) A MailQuery search string
-    :param storage (str) Storage name where account file located
-    :param account_storage_folder (str) Folder in storage where account file located
-    :param recursive (bool) Specifies that should message be searched in subfolders recursively
-    :param type (str) MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
-    :param format (str) Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :param folder: A folder in email account
+    :type folder: str
+    :param account: Email account
+    :type account: str
+    :param query_string: A MailQuery search string
+    :type query_string: str
+    :param storage: Storage name where account file located
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located
+    :type account_storage_folder: str
+    :param recursive: Specifies that should message be searched in subfolders recursively
+    :type recursive: bool
+    :param type: MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+    :type type: str
+    :param format: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :type format: str
     """
 
     def __init__(self, folder: str, account: str, query_string: str = None, storage: str = None, account_storage_folder: str = None, recursive: bool = None, type: str = None, format: str = None):
@@ -48,14 +56,22 @@ class ClientMessageListRequest(object):
         Request model for client_message_list operation.
         Initializes a new instance.
 
-        :param folder (str) A folder in email account
-        :param account (str) Email account
-        :param query_string (str) A MailQuery search string
-        :param storage (str) Storage name where account file located
-        :param account_storage_folder (str) Folder in storage where account file located
-        :param recursive (bool) Specifies that should message be searched in subfolders recursively
-        :param type (str) MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
-        :param format (str) Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param folder: A folder in email account
+        :type folder: str
+        :param account: Email account
+        :type account: str
+        :param query_string: A MailQuery search string
+        :type query_string: str
+        :param storage: Storage name where account file located
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located
+        :type account_storage_folder: str
+        :param recursive: Specifies that should message be searched in subfolders recursively
+        :type recursive: bool
+        :param type: MailMessageBase type. Using this property you can get messages in different formats (as EmailDto, MapiMessageDto or a file represented as Base64 string).              Enum, available values: Dto, Mapi, Base64
+        :type type: str
+        :param format: Base64 data format. Used only if type is set to Base64. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
         """
 
         self.folder = folder

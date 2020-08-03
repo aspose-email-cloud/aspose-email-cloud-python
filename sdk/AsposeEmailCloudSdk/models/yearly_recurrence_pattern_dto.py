@@ -71,15 +71,16 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
     def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, discriminator: str = None, start_day: str = None, start_month: str = None, start_offset: int = None, start_position: str = None):
         """
         Yearly recurrence pattern.             
-        :param interval (int) Number of recurrence units.             
-        :param occurs (int) Number of occurrences of the recurrence pattern.             
-        :param end_date (datetime) End date.             
-        :param week_start (str) Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-        :param discriminator (str) 
-        :param start_day (str) Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-        :param start_month (str) Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
-        :param start_offset (int) Start offset.             
-        :param start_position (str) Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        :param interval: Number of recurrence units.             
+        :param occurs: Number of occurrences of the recurrence pattern.             
+        :param end_date: End date.             
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param discriminator: 
+        :param start_day: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param start_month: Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
+        :param start_offset: Start offset.             
+        :param start_position: Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        :type YearlyRecurrencePatternDto: 
         """
         super(YearlyRecurrencePatternDto, self).__init__()
 

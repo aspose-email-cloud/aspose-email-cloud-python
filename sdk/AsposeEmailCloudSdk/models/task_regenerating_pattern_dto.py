@@ -65,12 +65,13 @@ class TaskRegeneratingPatternDto(RecurrencePatternDto):
     def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, discriminator: str = None, regenerating_type: str = None):
         """
         Represents the regenerating recurrence pattern that specifies how many days, weeks, months or years after the completion of the current task the next occurrence will be due.             
-        :param interval (int) Number of recurrence units.             
-        :param occurs (int) Number of occurrences of the recurrence pattern.             
-        :param end_date (datetime) End date.             
-        :param week_start (str) Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-        :param discriminator (str) 
-        :param regenerating_type (str) Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
+        :param interval: Number of recurrence units.             
+        :param occurs: Number of occurrences of the recurrence pattern.             
+        :param end_date: End date.             
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param discriminator: 
+        :param regenerating_type: Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
+        :type TaskRegeneratingPatternDto: 
         """
         super(TaskRegeneratingPatternDto, self).__init__()
 

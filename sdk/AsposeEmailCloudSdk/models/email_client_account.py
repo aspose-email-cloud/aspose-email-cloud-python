@@ -66,12 +66,13 @@ class EmailClientAccount(object):
     def __init__(self, host: str = None, port: int = None, security_options: str = None, protocol_type: str = None, credentials: EmailClientAccountCredentials = None, cache_file: StorageFileLocation = None):
         """
         A universal email client account             
-        :param host (str) Mail server host name or IP address             
-        :param port (int) Mail server port             
-        :param security_options (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
-        :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
-        :param credentials (EmailClientAccountCredentials) Email client account credentials             
-        :param cache_file (StorageFileLocation) File with messages cache. Used to provide extra functions, which are not supported by account             
+        :param host: Mail server host name or IP address             
+        :param port: Mail server port             
+        :param security_options: Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param protocol_type: Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :param credentials: Email client account credentials             
+        :param cache_file: File with messages cache. Used to provide extra functions, which are not supported by account             
+        :type EmailClientAccount: 
         """
 
         self._host = None

@@ -55,7 +55,8 @@ class ListResponseOfMailServerFolder(object):
     def __init__(self, value: List[MailServerFolder] = None):
         """
         
-        :param value (List[MailServerFolder]) 
+        :param value: 
+        :type ListResponseOfMailServerFolder: 
         """
 
         self._value = None

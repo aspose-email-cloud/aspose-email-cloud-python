@@ -67,14 +67,15 @@ class MapiContactOtherPropertySetDto(object):
     def __init__(self, private: bool = None, journal: bool = None, reminder_time: datetime = None, reminder_topic: str = None, user_field1: str = None, user_field2: str = None, user_field3: str = None, user_field4: str = None):
         """
         The properties are used to specify additional properties of contact.             
-        :param private (bool) Indicates whether the end-user wants this message object hidden from other users who have access to the message object.             
-        :param journal (bool) Specifies whether to create a journal for each action associated with this contact.             
-        :param reminder_time (datetime) Specifies the initial signal time for a reminder.             
-        :param reminder_topic (str) Represents the status of a meeting request.             
-        :param user_field1 (str) Specifies the first field on the contact that is intended for miscellaneous use for the contact.             
-        :param user_field2 (str) Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
-        :param user_field3 (str) Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
-        :param user_field4 (str) Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
+        :param private: Indicates whether the end-user wants this message object hidden from other users who have access to the message object.             
+        :param journal: Specifies whether to create a journal for each action associated with this contact.             
+        :param reminder_time: Specifies the initial signal time for a reminder.             
+        :param reminder_topic: Represents the status of a meeting request.             
+        :param user_field1: Specifies the first field on the contact that is intended for miscellaneous use for the contact.             
+        :param user_field2: Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
+        :param user_field3: Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
+        :param user_field4: Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
+        :type MapiContactOtherPropertySetDto: 
         """
 
         self._private = None

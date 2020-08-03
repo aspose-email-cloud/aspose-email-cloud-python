@@ -59,9 +59,10 @@ class AssociatedPerson(object):
     def __init__(self, name: str = None, category: EnumWithCustomOfAssociatedPersonCategory = None, preferred: bool = None):
         """
         Describes associated person.             
-        :param name (str) Associated person's name.             
-        :param category (EnumWithCustomOfAssociatedPersonCategory) Associated person's category.             
-        :param preferred (bool) Defines whether associated person is preferred.             
+        :param name: Associated person's name.             
+        :param category: Associated person's category.             
+        :param preferred: Defines whether associated person is preferred.             
+        :type AssociatedPerson: 
         """
 
         self._name = None

@@ -56,7 +56,8 @@ class EmailAccountConfigList(ListResponseOfEmailAccountConfig):
     def __init__(self, value: List[EmailAccountConfig] = None):
         """
         List of email accounts             
-        :param value (List[EmailAccountConfig]) 
+        :param value: 
+        :type EmailAccountConfigList: 
         """
         super(EmailAccountConfigList, self).__init__()
 

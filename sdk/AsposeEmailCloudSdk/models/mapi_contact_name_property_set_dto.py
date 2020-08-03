@@ -71,16 +71,17 @@ class MapiContactNamePropertySetDto(object):
     def __init__(self, display_name: str = None, display_name_prefix: str = None, file_under: str = None, file_under_id: int = None, generation: str = None, given_name: str = None, initials: str = None, middle_name: str = None, nickname: str = None, surname: str = None):
         """
         The properties are used to specify the name of the person represented by the contact             
-        :param display_name (str) Full name of the contact             
-        :param display_name_prefix (str) Title of the contact             
-        :param file_under (str) Name under which to file this contact when displaying a list of contacts             
-        :param file_under_id (int) Value specifying how to generate and recompute the property when other properties are changed             
-        :param generation (str) Generation suffix of the contact             
-        :param given_name (str) Given name (first name) of the contact             
-        :param initials (str) Initials of the contact             
-        :param middle_name (str) Middle name of the contact             
-        :param nickname (str) Nickname of the contact             
-        :param surname (str) Surname (family name) of the contact             
+        :param display_name: Full name of the contact             
+        :param display_name_prefix: Title of the contact             
+        :param file_under: Name under which to file this contact when displaying a list of contacts             
+        :param file_under_id: Value specifying how to generate and recompute the property when other properties are changed             
+        :param generation: Generation suffix of the contact             
+        :param given_name: Given name (first name) of the contact             
+        :param initials: Initials of the contact             
+        :param middle_name: Middle name of the contact             
+        :param nickname: Nickname of the contact             
+        :param surname: Surname (family name) of the contact             
+        :type MapiContactNamePropertySetDto: 
         """
 
         self._display_name = None

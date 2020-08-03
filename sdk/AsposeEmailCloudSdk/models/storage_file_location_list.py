@@ -56,7 +56,8 @@ class StorageFileLocationList(ListResponseOfStorageFileLocation):
     def __init__(self, value: List[StorageFileLocation] = None):
         """
         List of files located on storage.             
-        :param value (List[StorageFileLocation]) 
+        :param value: 
+        :type StorageFileLocationList: 
         """
         super(StorageFileLocationList, self).__init__()
 

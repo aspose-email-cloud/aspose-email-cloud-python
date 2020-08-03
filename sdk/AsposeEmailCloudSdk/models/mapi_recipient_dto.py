@@ -59,10 +59,11 @@ class MapiRecipientDto(object):
     def __init__(self, email_address: str = None, address_type: str = None, display_name: str = None, recipient_type: str = None):
         """
         Represents the recipient information in the Microsoft Outlook Message.             
-        :param email_address (str) Email address of the message recipient or sender.             
-        :param address_type (str) Type of the address of the message recipient or sender.             
-        :param display_name (str) Display name of the message recipient or sender.             
-        :param recipient_type (str) Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+        :param email_address: Email address of the message recipient or sender.             
+        :param address_type: Type of the address of the message recipient or sender.             
+        :param display_name: Display name of the message recipient or sender.             
+        :param recipient_type: Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+        :type MapiRecipientDto: 
         """
 
         self._email_address = None

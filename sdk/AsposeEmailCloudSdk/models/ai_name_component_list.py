@@ -56,7 +56,8 @@ class AiNameComponentList(ListResponseOfAiNameComponent):
     def __init__(self, value: List[AiNameComponent] = None):
         """
         List of name components             
-        :param value (List[AiNameComponent]) 
+        :param value: 
+        :type AiNameComponentList: 
         """
         super(AiNameComponentList, self).__init__()
 

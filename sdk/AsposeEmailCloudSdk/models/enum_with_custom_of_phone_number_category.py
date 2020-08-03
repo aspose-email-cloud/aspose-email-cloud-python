@@ -55,8 +55,9 @@ class EnumWithCustomOfPhoneNumberCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
-        :param description (str) 
+        :param value: Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+        :param description: 
+        :type EnumWithCustomOfPhoneNumberCategory: 
         """
 
         self._value = None

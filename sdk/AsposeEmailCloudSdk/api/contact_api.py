@@ -43,7 +43,8 @@ class ContactApi(ApiBase):
     def as_file(self, request: ContactAsFileRequest) -> str:
         """Converts contact model to specified format and returns as file             
 
-        :param request ContactAsFileRequest Contact model and format to convert
+        :param request: Contact model and format to convert
+        :type request: ContactAsFileRequest
         :return: str
         """
         # verify the required parameter 'request' is set
@@ -71,7 +72,8 @@ class ContactApi(ApiBase):
     def as_mapi(self, contact_dto: ContactDto) -> MapiContactDto:
         """Converts ContactDto to MapiContactDto.             
 
-        :param contact_dto ContactDto Contact model to convert
+        :param contact_dto: Contact model to convert
+        :type contact_dto: ContactDto
         :return: MapiContactDto
         """
         # verify the required parameter 'contact_dto' is set
@@ -100,7 +102,8 @@ class ContactApi(ApiBase):
         """Converts contact document to specified format and returns as file             
 
 
-        :param request ContactConvertRequest object with parameters
+        :param request: ContactConvertRequest object with parameters
+        :type request: ContactConvertRequest
         :return: str
         """
         # verify the required parameter 'to_format' is set
@@ -157,7 +160,8 @@ class ContactApi(ApiBase):
         """Converts contact document to a model representation             
 
 
-        :param request ContactFromFileRequest object with parameters
+        :param request: ContactFromFileRequest object with parameters
+        :type request: ContactFromFileRequest
         :return: ContactDto
         """
         # verify the required parameter 'format' is set
@@ -205,7 +209,8 @@ class ContactApi(ApiBase):
         """Get contact document from storage.             
 
 
-        :param request ContactGetRequest object with parameters
+        :param request: ContactGetRequest object with parameters
+        :type request: ContactGetRequest
         :return: ContactDto
         """
         # verify the required parameter 'format' is set
@@ -269,7 +274,8 @@ class ContactApi(ApiBase):
         """Converts contact document from storage to specified format and returns as file             
 
 
-        :param request ContactGetAsFileRequest object with parameters
+        :param request: ContactGetAsFileRequest object with parameters
+        :type request: ContactGetAsFileRequest
         :return: str
         """
         # verify the required parameter 'file_name' is set
@@ -342,7 +348,8 @@ class ContactApi(ApiBase):
         """Get contact list from storage folder.             
 
 
-        :param request ContactGetListRequest object with parameters
+        :param request: ContactGetListRequest object with parameters
+        :type request: ContactGetListRequest
         :return: ContactStorageList
         """
         # verify the required parameter 'format' is set
@@ -408,7 +415,8 @@ class ContactApi(ApiBase):
     def save(self, request: ContactSaveRequest):
         """Save contact to storage.             
 
-        :param request ContactSaveRequest Create/Update contact request.
+        :param request: Create/Update contact request.
+        :type request: ContactSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set

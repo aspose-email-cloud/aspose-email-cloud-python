@@ -33,12 +33,18 @@ class AiNameParseEmailAddressRequest(object):
     Request model for ai_name_parse_email_address operation.
     Initializes a new instance.
 
-    :param email_address (str) Email address to parse.
-    :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
-    :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
-    :param encoding (str) A character encoding name.
-    :param script (str) A writing system code; starts with the ISO-15924 script name.
-    :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+    :param email_address: Email address to parse.
+    :type email_address: str
+    :param language: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+    :type language: str
+    :param location: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+    :type location: str
+    :param encoding: A character encoding name.
+    :type encoding: str
+    :param script: A writing system code; starts with the ISO-15924 script name.
+    :type script: str
+    :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+    :type style: str
     """
 
     def __init__(self, email_address: str, language: str = None, location: str = None, encoding: str = None, script: str = None, style: str = None):
@@ -46,12 +52,18 @@ class AiNameParseEmailAddressRequest(object):
         Request model for ai_name_parse_email_address operation.
         Initializes a new instance.
 
-        :param email_address (str) Email address to parse.
-        :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
-        :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
-        :param encoding (str) A character encoding name.
-        :param script (str) A writing system code; starts with the ISO-15924 script name.
-        :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        :param email_address: Email address to parse.
+        :type email_address: str
+        :param language: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian).             
+        :type language: str
+        :param location: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France.             
+        :type location: str
+        :param encoding: A character encoding name.
+        :type encoding: str
+        :param script: A writing system code; starts with the ISO-15924 script name.
+        :type script: str
+        :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        :type style: str
         """
 
         self.email_address = email_address

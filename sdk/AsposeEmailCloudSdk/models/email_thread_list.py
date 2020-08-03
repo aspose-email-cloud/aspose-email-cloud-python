@@ -56,7 +56,8 @@ class EmailThreadList(ListResponseOfEmailThread):
     def __init__(self, value: List[EmailThread] = None):
         """
         List of email threads             
-        :param value (List[EmailThread]) 
+        :param value: 
+        :type EmailThreadList: 
         """
         super(EmailThreadList, self).__init__()
 

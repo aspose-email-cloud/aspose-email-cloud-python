@@ -81,20 +81,21 @@ class MapiCalendarExceptionInfoDto(object):
     def __init__(self, attachments: List[MapiAttachmentDto] = None, body: str = None, busy_status: str = None, end_date_time: datetime = None, has_attachment: bool = None, location: str = None, meeting_type: str = None, original_start_date: datetime = None, override_flags: List[str] = None, reminder_delta: int = None, reminder_set: bool = None, start_date_time: datetime = None, subject: str = None, sub_type: int = None):
         """
         An exception specifies changes to an instance of a recurring series.             
-        :param attachments (List[MapiAttachmentDto]) Attachments in the recurrence exception.             
-        :param body (str) Body.             
-        :param busy_status (str) Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
-        :param end_date_time (datetime) End date.             
-        :param has_attachment (bool) Value of this field specifies whether the Exception Embedded Message object contains attachments.             
-        :param location (str) Location.             
-        :param meeting_type (str) Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
-        :param original_start_date (datetime) Original start date.             
-        :param override_flags (List[str]) Override flags.             
-        :param reminder_delta (int) Reminder delta.             
-        :param reminder_set (bool) Value for the PidLidReminderSet property.             
-        :param start_date_time (datetime) Start date.             
-        :param subject (str) Subject.             
-        :param sub_type (int) SubType.             
+        :param attachments: Attachments in the recurrence exception.             
+        :param body: Body.             
+        :param busy_status: Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        :param end_date_time: End date.             
+        :param has_attachment: Value of this field specifies whether the Exception Embedded Message object contains attachments.             
+        :param location: Location.             
+        :param meeting_type: Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+        :param original_start_date: Original start date.             
+        :param override_flags: Override flags.             
+        :param reminder_delta: Reminder delta.             
+        :param reminder_set: Value for the PidLidReminderSet property.             
+        :param start_date_time: Start date.             
+        :param subject: Subject.             
+        :param sub_type: SubType.             
+        :type MapiCalendarExceptionInfoDto: 
         """
 
         self._attachments = None

@@ -63,11 +63,12 @@ class ContentType(object):
     def __init__(self, boundary: str = None, char_set: str = None, media_type: str = None, name: str = None, parameters: List[ContentTypeParameter] = None):
         """
         Represents a Content-Type header.             
-        :param boundary (str) The boundary parameter included in the Content-Type header.             
-        :param char_set (str) CharSet parameter.             
-        :param media_type (str) The internet media type.             
-        :param name (str) Name parameter.             
-        :param parameters (List[ContentTypeParameter]) Full list of parameters             
+        :param boundary: The boundary parameter included in the Content-Type header.             
+        :param char_set: CharSet parameter.             
+        :param media_type: The internet media type.             
+        :param name: Name parameter.             
+        :param parameters: Full list of parameters             
+        :type ContentType: 
         """
 
         self._boundary = None

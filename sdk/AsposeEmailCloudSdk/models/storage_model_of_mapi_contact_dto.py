@@ -58,8 +58,9 @@ class StorageModelOfMapiContactDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: MapiContactDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (MapiContactDto) 
+        :param storage_file: 
+        :param value: 
+        :type StorageModelOfMapiContactDto: 
         """
 
         self._storage_file = None

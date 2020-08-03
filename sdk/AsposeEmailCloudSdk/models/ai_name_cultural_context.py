@@ -61,11 +61,12 @@ class AiNameCulturalContext(object):
     def __init__(self, language: str = None, location: str = None, script: str = None, encoding: str = None, style: str = None):
         """
         AiName cultural context             
-        :param language (str) An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
-        :param location (str) A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
-        :param script (str) A writing system code; starts with the ISO-15924 script name             
-        :param encoding (str) A character encoding name             
-        :param style (str) Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        :param language: An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
+        :param location: A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
+        :param script: A writing system code; starts with the ISO-15924 script name             
+        :param encoding: A character encoding name             
+        :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        :type AiNameCulturalContext: 
         """
 
         self._language = None

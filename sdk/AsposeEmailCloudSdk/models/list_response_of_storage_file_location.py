@@ -55,7 +55,8 @@ class ListResponseOfStorageFileLocation(object):
     def __init__(self, value: List[StorageFileLocation] = None):
         """
         
-        :param value (List[StorageFileLocation]) 
+        :param value: 
+        :type ListResponseOfStorageFileLocation: 
         """
 
         self._value = None

@@ -57,8 +57,9 @@ class CustomerEvent(object):
     def __init__(self, category: EnumWithCustomOfEventCategory = None, _date: datetime = None):
         """
         Event.             
-        :param category (EnumWithCustomOfEventCategory) Event category.             
-        :param _date (datetime) Event date.             
+        :param category: Event category.             
+        :param _date: Event date.             
+        :type CustomerEvent: 
         """
 
         self._category = None

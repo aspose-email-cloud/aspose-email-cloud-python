@@ -53,7 +53,8 @@ class ReminderAttendee(object):
     def __init__(self, address: str = None):
         """
         Defines an \&quot;Attendee\&quot; within a alarm.
-        :param address (str) Contains the email address.
+        :param address: Contains the email address.
+        :type ReminderAttendee: 
         """
 
         self._address = None

@@ -33,11 +33,16 @@ class ClientMessageSendFileRequest(object):
     Request model for client_message_send_file operation.
     Initializes a new instance.
 
-    :param account (str) Email account
-    :param file (str) File to send
-    :param storage (str) Storage name where account file located.
-    :param account_storage_folder (str) Folder in storage where account file located.
-    :param format (str) Email file format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :param account: Email account
+    :type account: str
+    :param file: File to send
+    :type file: str
+    :param storage: Storage name where account file located.
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located.
+    :type account_storage_folder: str
+    :param format: Email file format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :type format: str
     """
 
     def __init__(self, account: str, file: str, storage: str = None, account_storage_folder: str = None, format: str = None):
@@ -45,11 +50,16 @@ class ClientMessageSendFileRequest(object):
         Request model for client_message_send_file operation.
         Initializes a new instance.
 
-        :param account (str) Email account
-        :param file (str) File to send
-        :param storage (str) Storage name where account file located.
-        :param account_storage_folder (str) Folder in storage where account file located.
-        :param format (str) Email file format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param account: Email account
+        :type account: str
+        :param file: File to send
+        :type file: str
+        :param storage: Storage name where account file located.
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located.
+        :type account_storage_folder: str
+        :param format: Email file format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :type format: str
         """
 
         self.account = account

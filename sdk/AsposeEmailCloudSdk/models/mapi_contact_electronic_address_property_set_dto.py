@@ -71,15 +71,16 @@ class MapiContactElectronicAddressPropertySetDto(object):
     def __init__(self, business_fax: MapiContactElectronicAddressDto = None, default_email_address: MapiContactElectronicAddressDto = None, email1: MapiContactElectronicAddressDto = None, email2: MapiContactElectronicAddressDto = None, email3: MapiContactElectronicAddressDto = None, home_fax: MapiContactElectronicAddressDto = None, is_empty: bool = None, primary_fax: MapiContactElectronicAddressDto = None, use_autocomplete: bool = None):
         """
         Specify properties for up to three different e-mail addresses (Email1, Email2, and Email3) and three different fax addresses (Primary Fax, Business Fax, and Home Fax)             
-        :param business_fax (MapiContactElectronicAddressDto) Refers to the group of properties that define the business fax address for a contact.
-        :param default_email_address (MapiContactElectronicAddressDto) Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
-        :param email1 (MapiContactElectronicAddressDto) Refers to the group of properties that define the first e-mail address for a contact.             
-        :param email2 (MapiContactElectronicAddressDto) Refers to the group of properties that define the second e-mail address for a contact.             
-        :param email3 (MapiContactElectronicAddressDto) Refers to the group of properties that define the third e-mail address for a contact.             
-        :param home_fax (MapiContactElectronicAddressDto) Refers to the group of properties that define the home fax address for a contact.             
-        :param is_empty (bool) Shows if MapiContactElectronicAddressPropertySetDto is empty
-        :param primary_fax (MapiContactElectronicAddressDto) Refers to the group of properties that define the primary fax address for a contact.             
-        :param use_autocomplete (bool) Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
+        :param business_fax: Refers to the group of properties that define the business fax address for a contact.
+        :param default_email_address: Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
+        :param email1: Refers to the group of properties that define the first e-mail address for a contact.             
+        :param email2: Refers to the group of properties that define the second e-mail address for a contact.             
+        :param email3: Refers to the group of properties that define the third e-mail address for a contact.             
+        :param home_fax: Refers to the group of properties that define the home fax address for a contact.             
+        :param is_empty: Shows if MapiContactElectronicAddressPropertySetDto is empty
+        :param primary_fax: Refers to the group of properties that define the primary fax address for a contact.             
+        :param use_autocomplete: Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
+        :type MapiContactElectronicAddressPropertySetDto: 
         """
 
         self._business_fax = None

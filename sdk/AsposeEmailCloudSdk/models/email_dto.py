@@ -120,38 +120,39 @@ class EmailDto(object):
     def __init__(self, alternate_views: List[AlternateView] = None, attachments: List[Attachment] = None, bcc: List[MailAddress] = None, body: str = None, body_encoding: str = None, body_type: str = None, cc: List[MailAddress] = None, _date: datetime = None, delivery_notification_options: List[str] = None, _from: MailAddress = None, headers: Dict[str, str] = None, html_body: str = None, html_body_text: str = None, is_body_html: bool = None, is_draft: bool = None, is_encrypted: bool = None, is_signed: bool = None, linked_resources: List[LinkedResource] = None, message_id: str = None, original_is_tnef: bool = None, preferred_text_encoding: str = None, priority: str = None, read_receipt_to: List[MailAddress] = None, reply_to_list: List[MailAddress] = None, reverse_path: MailAddress = None, sender: MailAddress = None, sensitivity: str = None, subject: str = None, subject_encoding: str = None, time_zone_offset: int = None, to: List[MailAddress] = None, x_mailer: str = None):
         """
         Email message representation.             
-        :param alternate_views (List[AlternateView]) Collection of alternate views of message.             
-        :param attachments (List[Attachment]) Email message attachments.             
-        :param bcc (List[MailAddress]) BCC recipients.             
-        :param body (str) Email message body as plain text.             
-        :param body_encoding (str) Body encoding.             
-        :param body_type (str) The content type of message body. Enum, available values: PlainText, Html, Rtf
-        :param cc (List[MailAddress]) CC recipients.             
-        :param _date (datetime) Message date.             
-        :param delivery_notification_options (List[str]) Delivery notifications.
-        :param _from (MailAddress) From address.             
-        :param headers (Dict[str, str]) Document headers.             
-        :param html_body (str) HTML body.             
-        :param html_body_text (str) Html body as plain text. Read only.             
-        :param is_body_html (bool) Indicates whether the message body is in Html.             
-        :param is_draft (bool) Indicates whether or not a message has been sent.             
-        :param is_encrypted (bool) Indicates whether the message is encrypted. Read only.             
-        :param is_signed (bool) Indicates whether the message is signed. Read only.             
-        :param linked_resources (List[LinkedResource]) Linked resources of message.             
-        :param message_id (str) Message id.             
-        :param original_is_tnef (bool) Indicates whether original EML message is in TNEF format. Read only.             
-        :param preferred_text_encoding (str) Preferred encoding.             
-        :param priority (str) Email priority status. Enum, available values: High, Low, Normal
-        :param read_receipt_to (List[MailAddress]) Read receipt addresses.             
-        :param reply_to_list (List[MailAddress]) The list of addresses to reply to for the mail message.             
-        :param reverse_path (MailAddress) ReversePath address.             
-        :param sender (MailAddress) Sender address.             
-        :param sensitivity (str) Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
-        :param subject (str) Message subject.             
-        :param subject_encoding (str) Subject encoding.             
-        :param time_zone_offset (int) Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
-        :param to (List[MailAddress]) The address collection that contains the recipients of message.             
-        :param x_mailer (str) The X-Mailer the software that created the e-mail message.             
+        :param alternate_views: Collection of alternate views of message.             
+        :param attachments: Email message attachments.             
+        :param bcc: BCC recipients.             
+        :param body: Email message body as plain text.             
+        :param body_encoding: Body encoding.             
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :param cc: CC recipients.             
+        :param _date: Message date.             
+        :param delivery_notification_options: Delivery notifications.
+        :param _from: From address.             
+        :param headers: Document headers.             
+        :param html_body: HTML body.             
+        :param html_body_text: Html body as plain text. Read only.             
+        :param is_body_html: Indicates whether the message body is in Html.             
+        :param is_draft: Indicates whether or not a message has been sent.             
+        :param is_encrypted: Indicates whether the message is encrypted. Read only.             
+        :param is_signed: Indicates whether the message is signed. Read only.             
+        :param linked_resources: Linked resources of message.             
+        :param message_id: Message id.             
+        :param original_is_tnef: Indicates whether original EML message is in TNEF format. Read only.             
+        :param preferred_text_encoding: Preferred encoding.             
+        :param priority: Email priority status. Enum, available values: High, Low, Normal
+        :param read_receipt_to: Read receipt addresses.             
+        :param reply_to_list: The list of addresses to reply to for the mail message.             
+        :param reverse_path: ReversePath address.             
+        :param sender: Sender address.             
+        :param sensitivity: Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
+        :param subject: Message subject.             
+        :param subject_encoding: Subject encoding.             
+        :param time_zone_offset: Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
+        :param to: The address collection that contains the recipients of message.             
+        :param x_mailer: The X-Mailer the software that created the e-mail message.             
+        :type EmailDto: 
         """
 
         self._alternate_views = None

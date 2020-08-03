@@ -63,12 +63,13 @@ class MapiContactElectronicAddressDto(object):
     def __init__(self, address_type: str = None, display_name: str = None, email_address: str = None, fax_number: str = None, is_empty: bool = None, original_display_name: str = None):
         """
         Refers to the group of properties that define the e-mail address or fax address for a contact.             
-        :param address_type (str) Address type of an electronic address
-        :param display_name (str) User-readable display name for the e-mail address
-        :param email_address (str) E-mail address of the contact
-        :param fax_number (str) Telephone number of the mail user's primary fax machine
-        :param is_empty (bool) Shows if MapiContactElectronicAddress is empty
-        :param original_display_name (str) SMTP e-mail address that corresponds to the e-mail address for the Contact object.
+        :param address_type: Address type of an electronic address
+        :param display_name: User-readable display name for the e-mail address
+        :param email_address: E-mail address of the contact
+        :param fax_number: Telephone number of the mail user's primary fax machine
+        :param is_empty: Shows if MapiContactElectronicAddress is empty
+        :param original_display_name: SMTP e-mail address that corresponds to the e-mail address for the Contact object.
+        :type MapiContactElectronicAddressDto: 
         """
 
         self._address_type = None

@@ -59,9 +59,10 @@ class MapiContactPhotoDto(ContactPhoto):
     def __init__(self, photo_image_format: str = None, base64_data: str = None, discriminator: str = None):
         """
         Contains data and type of contact&#39;s photo.             
-        :param photo_image_format (str) MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
-        :param base64_data (str) Photo serialized as base64 string.             
-        :param discriminator (str) 
+        :param photo_image_format: MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+        :param base64_data: Photo serialized as base64 string.             
+        :param discriminator: 
+        :type MapiContactPhotoDto: 
         """
         super(MapiContactPhotoDto, self).__init__()
 

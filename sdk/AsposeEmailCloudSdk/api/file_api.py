@@ -44,7 +44,8 @@ class FileApi(ApiBase):
         """Copy file
 
 
-        :param request CopyFileRequest object with parameters
+        :param request: CopyFileRequest object with parameters
+        :type request: CopyFileRequest
         :return: None
         """
         # verify the required parameter 'src_path' is set
@@ -110,7 +111,8 @@ class FileApi(ApiBase):
         """Delete file
 
 
-        :param request DeleteFileRequest object with parameters
+        :param request: DeleteFileRequest object with parameters
+        :type request: DeleteFileRequest
         :return: None
         """
         # verify the required parameter 'path' is set
@@ -161,7 +163,8 @@ class FileApi(ApiBase):
         """Download file
 
 
-        :param request DownloadFileRequest object with parameters
+        :param request: DownloadFileRequest object with parameters
+        :type request: DownloadFileRequest
         :return: str
         """
         # verify the required parameter 'path' is set
@@ -212,7 +215,8 @@ class FileApi(ApiBase):
         """Move file
 
 
-        :param request MoveFileRequest object with parameters
+        :param request: MoveFileRequest object with parameters
+        :type request: MoveFileRequest
         :return: None
         """
         # verify the required parameter 'src_path' is set
@@ -278,7 +282,8 @@ class FileApi(ApiBase):
         """Upload file
 
 
-        :param request UploadFileRequest object with parameters
+        :param request: UploadFileRequest object with parameters
+        :type request: UploadFileRequest
         :return: FilesUploadResult
         """
         # verify the required parameter 'path' is set

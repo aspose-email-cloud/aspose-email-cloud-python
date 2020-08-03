@@ -65,12 +65,13 @@ class EmailAddress(object):
     def __init__(self, category: EnumWithCustomOfEmailAddressCategory = None, display_name: str = None, preferred: bool = None, routing_type: str = None, address: str = None, original_address_string: str = None):
         """
         Email address.             
-        :param category (EnumWithCustomOfEmailAddressCategory) Address category.             
-        :param display_name (str) Display name.             
-        :param preferred (bool) Defines whether email address is preferred.             
-        :param routing_type (str) A routing type for an email.             
-        :param address (str) Email address.             
-        :param original_address_string (str) The original e-mail address string             
+        :param category: Address category.             
+        :param display_name: Display name.             
+        :param preferred: Defines whether email address is preferred.             
+        :param routing_type: A routing type for an email.             
+        :param address: Email address.             
+        :param original_address_string: The original e-mail address string             
+        :type EmailAddress: 
         """
 
         self._category = None

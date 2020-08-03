@@ -67,12 +67,13 @@ class AlternateView(AttachmentBase):
     def __init__(self, base64_data: str = None, content_id: str = None, content_type: ContentType = None, headers: Dict[str, str] = None, base_uri: str = None, linked_resources: List[LinkedResource] = None):
         """
         Represents the format to view a message.             
-        :param base64_data (str) Attachment file content as Base64 string.             
-        :param content_id (str) Attachment content id             
-        :param content_type (ContentType) Content type             
-        :param headers (Dict[str, str]) Attachment headers.             
-        :param base_uri (str) Base URI.             
-        :param linked_resources (List[LinkedResource]) Embedded resources referred to by this alternate view.             
+        :param base64_data: Attachment file content as Base64 string.             
+        :param content_id: Attachment content id             
+        :param content_type: Content type             
+        :param headers: Attachment headers.             
+        :param base_uri: Base URI.             
+        :param linked_resources: Embedded resources referred to by this alternate view.             
+        :type AlternateView: 
         """
         super(AlternateView, self).__init__()
 

@@ -55,8 +55,9 @@ class EnumWithCustomOfEmailAddressCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
-        :param description (str) 
+        :param value: Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+        :param description: 
+        :type EnumWithCustomOfEmailAddressCategory: 
         """
 
         self._value = None

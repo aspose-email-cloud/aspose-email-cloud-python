@@ -33,8 +33,10 @@ class CalendarConvertRequest(object):
     Request model for calendar_convert operation.
     Initializes a new instance.
 
-    :param format (str) File format. Enum, available values: Ics, Msg
-    :param file (str) File to convert
+    :param format: File format. Enum, available values: Ics, Msg
+    :type format: str
+    :param file: File to convert
+    :type file: str
     """
 
     def __init__(self, format: str, file: str):
@@ -42,8 +44,10 @@ class CalendarConvertRequest(object):
         Request model for calendar_convert operation.
         Initializes a new instance.
 
-        :param format (str) File format. Enum, available values: Ics, Msg
-        :param file (str) File to convert
+        :param format: File format. Enum, available values: Ics, Msg
+        :type format: str
+        :param file: File to convert
+        :type file: str
         """
 
         self.format = format

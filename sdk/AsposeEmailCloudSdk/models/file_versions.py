@@ -55,7 +55,8 @@ class FileVersions(object):
     def __init__(self, value: List[FileVersion] = None):
         """
         File versions FileVersion.
-        :param value (List[FileVersion]) File versions FileVersion.
+        :param value: File versions FileVersion.
+        :type FileVersions: 
         """
 
         self._value = None

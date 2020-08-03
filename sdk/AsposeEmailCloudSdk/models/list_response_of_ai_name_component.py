@@ -55,7 +55,8 @@ class ListResponseOfAiNameComponent(object):
     def __init__(self, value: List[AiNameComponent] = None):
         """
         
-        :param value (List[AiNameComponent]) 
+        :param value: 
+        :type ListResponseOfAiNameComponent: 
         """
 
         self._value = None

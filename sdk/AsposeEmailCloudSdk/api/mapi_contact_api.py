@@ -43,7 +43,8 @@ class MapiContactApi(ApiBase):
     def as_contact_dto(self, mapi_contact_dto: MapiContactDto) -> ContactDto:
         """Converts MAPI contact model to ContactDto model.             
 
-        :param mapi_contact_dto MapiContactDto MAPI contact model to convert.
+        :param mapi_contact_dto: MAPI contact model to convert.
+        :type mapi_contact_dto: MapiContactDto
         :return: ContactDto
         """
         # verify the required parameter 'mapi_contact_dto' is set
@@ -71,7 +72,8 @@ class MapiContactApi(ApiBase):
     def as_file(self, request: MapiContactAsFileRequest) -> str:
         """Converts MAPI contact model to specified format and returns as file.             
 
-        :param request MapiContactAsFileRequest MAPI contact model to convert.
+        :param request: MAPI contact model to convert.
+        :type request: MapiContactAsFileRequest
         :return: str
         """
         # verify the required parameter 'request' is set
@@ -100,7 +102,8 @@ class MapiContactApi(ApiBase):
         """Converts contact file to a MAPI model representation.             
 
 
-        :param request MapiContactFromFileRequest object with parameters
+        :param request: MapiContactFromFileRequest object with parameters
+        :type request: MapiContactFromFileRequest
         :return: MapiContactDto
         """
         # verify the required parameter 'format' is set
@@ -148,7 +151,8 @@ class MapiContactApi(ApiBase):
         """Get MAPI contact document.             
 
 
-        :param request MapiContactGetRequest object with parameters
+        :param request: MapiContactGetRequest object with parameters
+        :type request: MapiContactGetRequest
         :return: MapiContactDto
         """
         # verify the required parameter 'format' is set
@@ -211,7 +215,8 @@ class MapiContactApi(ApiBase):
     def save(self, request: MapiContactSaveRequest):
         """Save MAPI Contact to storage.             
 
-        :param request MapiContactSaveRequest Create/Update contact request.
+        :param request: Create/Update contact request.
+        :type request: MapiContactSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set

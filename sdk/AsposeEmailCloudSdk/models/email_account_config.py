@@ -69,14 +69,15 @@ class EmailAccountConfig(object):
     def __init__(self, display_name: str = None, protocol_type: str = None, host: str = None, port: int = None, socket_type: str = None, authentication_types: List[str] = None, extra_info: List[NameValuePair] = None, is_validated: bool = None):
         """
         Email account configuration.             
-        :param display_name (str) Email account display name             
-        :param protocol_type (str) Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
-        :param host (str) Email account host.             
-        :param port (int) Port.             
-        :param socket_type (str) Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
-        :param authentication_types (List[str]) Supported authentication types.             
-        :param extra_info (List[NameValuePair]) Extra account information.             
-        :param is_validated (bool) Determines that configuration validated. Set to false if validation skipped.             
+        :param display_name: Email account display name             
+        :param protocol_type: Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :param host: Email account host.             
+        :param port: Port.             
+        :param socket_type: Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param authentication_types: Supported authentication types.             
+        :param extra_info: Extra account information.             
+        :param is_validated: Determines that configuration validated. Set to false if validation skipped.             
+        :type EmailAccountConfig: 
         """
 
         self._display_name = None

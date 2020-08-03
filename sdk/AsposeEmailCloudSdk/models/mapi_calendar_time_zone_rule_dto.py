@@ -69,15 +69,16 @@ class MapiCalendarTimeZoneRuleDto(object):
     def __init__(self, _date: datetime = None, day_of_week: str = None, hour: int = None, milliseconds: int = None, minute: int = None, month: int = None, position: str = None, seconds: int = None, year: int = None):
         """
         Represents time zone rule that indicate when to begin using the Standard/Daylight time.             
-        :param _date (datetime) Date and time that indicate when to begin using the Standard/Daylight time.             
-        :param day_of_week (str) Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-        :param hour (int) Hour.             
-        :param milliseconds (int) Milliseconds.             
-        :param minute (int) Minute.             
-        :param month (int) Month.             
-        :param position (str) Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
-        :param seconds (int) Seconds.             
-        :param year (int) Year.             
+        :param _date: Date and time that indicate when to begin using the Standard/Daylight time.             
+        :param day_of_week: Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        :param hour: Hour.             
+        :param milliseconds: Milliseconds.             
+        :param minute: Minute.             
+        :param month: Month.             
+        :param position: Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        :param seconds: Seconds.             
+        :param year: Year.             
+        :type MapiCalendarTimeZoneRuleDto: 
         """
 
         self.__date = None

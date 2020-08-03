@@ -59,10 +59,11 @@ class MailAddress(object):
     def __init__(self, display_name: str = None, address: str = None, participation_status: str = None, original_address_string: str = None):
         """
         Represents the address of a message.
-        :param display_name (str) Display name             
-        :param address (str) Address             
-        :param participation_status (str) Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
-        :param original_address_string (str) The original e-mail address string             
+        :param display_name: Display name             
+        :param address: Address             
+        :param participation_status: Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        :param original_address_string: The original e-mail address string             
+        :type MailAddress: 
         """
 
         self._display_name = None

@@ -55,8 +55,9 @@ class AiNameExtractedComponent(object):
     def __init__(self, category: str = None, value: str = None):
         """
         Extracted name component             
-        :param category (str) Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
-        :param value (str) Extracted value             
+        :param category: Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+        :param value: Extracted value             
+        :type AiNameExtractedComponent: 
         """
 
         self._category = None

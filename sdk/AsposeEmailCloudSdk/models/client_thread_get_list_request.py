@@ -33,12 +33,18 @@ class ClientThreadGetListRequest(object):
     Request model for client_thread_get_list operation.
     Initializes a new instance.
 
-    :param folder (str) A folder in email account.             
-    :param account (str) Email account
-    :param storage (str) Storage name where account file located
-    :param account_storage_folder (str) Folder in storage where account file located
-    :param update_folder_cache (bool) This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
-    :param messages_cache_limit (int) Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
+    :param folder: A folder in email account.             
+    :type folder: str
+    :param account: Email account
+    :type account: str
+    :param storage: Storage name where account file located
+    :type storage: str
+    :param account_storage_folder: Folder in storage where account file located
+    :type account_storage_folder: str
+    :param update_folder_cache: This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
+    :type update_folder_cache: bool
+    :param messages_cache_limit: Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
+    :type messages_cache_limit: int
     """
 
     def __init__(self, folder: str, account: str, storage: str = None, account_storage_folder: str = None, update_folder_cache: bool = None, messages_cache_limit: int = None):
@@ -46,12 +52,18 @@ class ClientThreadGetListRequest(object):
         Request model for client_thread_get_list operation.
         Initializes a new instance.
 
-        :param folder (str) A folder in email account.             
-        :param account (str) Email account
-        :param storage (str) Storage name where account file located
-        :param account_storage_folder (str) Folder in storage where account file located
-        :param update_folder_cache (bool) This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
-        :param messages_cache_limit (int) Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
+        :param folder: A folder in email account.             
+        :type folder: str
+        :param account: Email account
+        :type account: str
+        :param storage: Storage name where account file located
+        :type storage: str
+        :param account_storage_folder: Folder in storage where account file located
+        :type account_storage_folder: str
+        :param update_folder_cache: This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account             
+        :type update_folder_cache: bool
+        :param messages_cache_limit: Limit messages cache size if CacheFile is used. Ignored in accounts without limits support             
+        :type messages_cache_limit: int
         """
 
         self.folder = folder

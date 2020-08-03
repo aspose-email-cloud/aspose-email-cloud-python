@@ -56,7 +56,8 @@ class EmailStorageList(ListResponseOfStorageModelOfEmailDto):
     def __init__(self, value: List[StorageModelOfEmailDto] = None):
         """
         Email models list with corresponding storage locations.             
-        :param value (List[StorageModelOfEmailDto]) 
+        :param value: 
+        :type EmailStorageList: 
         """
         super(EmailStorageList, self).__init__()
 

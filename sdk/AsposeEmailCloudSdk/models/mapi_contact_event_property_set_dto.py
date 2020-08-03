@@ -55,8 +55,9 @@ class MapiContactEventPropertySetDto(object):
     def __init__(self, birthday: datetime = None, wedding_anniversary: datetime = None):
         """
         Specify events associated with a contact.             
-        :param birthday (datetime) Specifies the birthday of the contact.
-        :param wedding_anniversary (datetime) Specifies the wedding anniversary of the contact.             
+        :param birthday: Specifies the birthday of the contact.
+        :param wedding_anniversary: Specifies the wedding anniversary of the contact.             
+        :type MapiContactEventPropertySetDto: 
         """
 
         self._birthday = None

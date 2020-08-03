@@ -59,9 +59,10 @@ class MapiContactPhysicalAddressPropertySetDto(object):
     def __init__(self, work_address: MapiContactPhysicalAddressDto = None, home_address: MapiContactPhysicalAddressDto = None, other_address: MapiContactPhysicalAddressDto = None):
         """
         Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address             
-        :param work_address (MapiContactPhysicalAddressDto) Specifies the address of the contact's work             
-        :param home_address (MapiContactPhysicalAddressDto) Specifies the address of the contact's home             
-        :param other_address (MapiContactPhysicalAddressDto) Specifies the other contact's address             
+        :param work_address: Specifies the address of the contact's work             
+        :param home_address: Specifies the address of the contact's home             
+        :param other_address: Specifies the other contact's address             
+        :type MapiContactPhysicalAddressPropertySetDto: 
         """
 
         self._work_address = None

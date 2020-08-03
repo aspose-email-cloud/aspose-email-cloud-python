@@ -57,8 +57,9 @@ class AiNameMatchResult(object):
     def __init__(self, similarity: float = None, mismatches: List[AiNameMismatch] = None):
         """
         Two names match result             
-        :param similarity (float) Similarity score             
-        :param mismatches (List[AiNameMismatch]) Detailed description of mismatches             
+        :param similarity: Similarity score             
+        :param mismatches: Detailed description of mismatches             
+        :type AiNameMatchResult: 
         """
 
         self._similarity = None

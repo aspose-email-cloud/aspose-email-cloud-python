@@ -44,7 +44,8 @@ class FolderApi(ApiBase):
         """Copy folder
 
 
-        :param request CopyFolderRequest object with parameters
+        :param request: CopyFolderRequest object with parameters
+        :type request: CopyFolderRequest
         :return: None
         """
         # verify the required parameter 'src_path' is set
@@ -104,7 +105,8 @@ class FolderApi(ApiBase):
         """Create the folder
 
 
-        :param request CreateFolderRequest object with parameters
+        :param request: CreateFolderRequest object with parameters
+        :type request: CreateFolderRequest
         :return: None
         """
         # verify the required parameter 'path' is set
@@ -149,7 +151,8 @@ class FolderApi(ApiBase):
         """Delete folder
 
 
-        :param request DeleteFolderRequest object with parameters
+        :param request: DeleteFolderRequest object with parameters
+        :type request: DeleteFolderRequest
         :return: None
         """
         # verify the required parameter 'path' is set
@@ -200,7 +203,8 @@ class FolderApi(ApiBase):
         """Get all files and folders within a folder
 
 
-        :param request GetFilesListRequest object with parameters
+        :param request: GetFilesListRequest object with parameters
+        :type request: GetFilesListRequest
         :return: FilesList
         """
         # verify the required parameter 'path' is set
@@ -245,7 +249,8 @@ class FolderApi(ApiBase):
         """Move folder
 
 
-        :param request MoveFolderRequest object with parameters
+        :param request: MoveFolderRequest object with parameters
+        :type request: MoveFolderRequest
         :return: None
         """
         # verify the required parameter 'src_path' is set

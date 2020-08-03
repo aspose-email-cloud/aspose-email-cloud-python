@@ -56,7 +56,8 @@ class AiNameGenderHypothesisList(ListResponseOfAiNameGenderHypothesis):
     def __init__(self, value: List[AiNameGenderHypothesis] = None):
         """
         Hypotheses about person&#39;s gender             
-        :param value (List[AiNameGenderHypothesis]) 
+        :param value: 
+        :type AiNameGenderHypothesisList: 
         """
         super(AiNameGenderHypothesisList, self).__init__()
 

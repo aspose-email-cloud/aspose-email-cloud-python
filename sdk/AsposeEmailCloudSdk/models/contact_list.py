@@ -56,7 +56,8 @@ class ContactList(ListResponseOfContactDto):
     def __init__(self, value: List[ContactDto] = None):
         """
         List of VCard documents             
-        :param value (List[ContactDto]) 
+        :param value: 
+        :type ContactList: 
         """
         super(ContactList, self).__init__()
 

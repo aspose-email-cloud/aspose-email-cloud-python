@@ -44,7 +44,8 @@ class StorageApi(ApiBase):
         """Get disc usage
 
 
-        :param request GetDiscUsageRequest object with parameters
+        :param request: GetDiscUsageRequest object with parameters
+        :type request: GetDiscUsageRequest
         :return: DiscUsage
         """
 
@@ -84,7 +85,8 @@ class StorageApi(ApiBase):
         """Get file versions
 
 
-        :param request GetFileVersionsRequest object with parameters
+        :param request: GetFileVersionsRequest object with parameters
+        :type request: GetFileVersionsRequest
         :return: FileVersions
         """
         # verify the required parameter 'path' is set
@@ -129,7 +131,8 @@ class StorageApi(ApiBase):
         """Check if file or folder exists
 
 
-        :param request ObjectExistsRequest object with parameters
+        :param request: ObjectExistsRequest object with parameters
+        :type request: ObjectExistsRequest
         :return: ObjectExist
         """
         # verify the required parameter 'path' is set
@@ -180,7 +183,8 @@ class StorageApi(ApiBase):
         """Check if storage exists
 
 
-        :param request StorageExistsRequest object with parameters
+        :param request: StorageExistsRequest object with parameters
+        :type request: StorageExistsRequest
         :return: StorageExist
         """
         # verify the required parameter 'storage_name' is set

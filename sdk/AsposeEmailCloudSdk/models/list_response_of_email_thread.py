@@ -55,7 +55,8 @@ class ListResponseOfEmailThread(object):
     def __init__(self, value: List[EmailThread] = None):
         """
         
-        :param value (List[EmailThread]) 
+        :param value: 
+        :type ListResponseOfEmailThread: 
         """
 
         self._value = None

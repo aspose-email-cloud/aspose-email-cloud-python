@@ -59,8 +59,9 @@ class EmailClientMultiAccountSaveRequest(StorageModelOfEmailClientMultiAccount):
     def __init__(self, storage_file: StorageFileLocation = None, value: EmailClientMultiAccount = None):
         """
         Email client multi account save request.             
-        :param storage_file (StorageFileLocation) 
-        :param value (EmailClientMultiAccount) 
+        :param storage_file: 
+        :param value: 
+        :type EmailClientMultiAccountSaveRequest: 
         """
         super(EmailClientMultiAccountSaveRequest, self).__init__()
 
