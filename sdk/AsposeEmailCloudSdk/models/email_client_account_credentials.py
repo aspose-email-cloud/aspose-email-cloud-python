@@ -52,27 +52,22 @@ class EmailClientAccountCredentials(object):
         'discriminator': 'discriminator'
     }
 
-    def __init__(self, login: str = None, discriminator: str = None):
+    def __init__(self, login: str = None):
         """
         Represents email client account credentials             
         :param login: Email client account login             
         :type login: str
-        :param discriminator: 
-        :type discriminator: str
         """
 
         self._login = None
-        self._discriminator = self.__class__.__name__
 
         if login is not None:
             self.login = login
-        if discriminator is not None:
-            self.discriminator = discriminator
+
 
     @property
     def login(self) -> str:
-        """Gets the login of this EmailClientAccountCredentials.
-
+        """
         Email client account login             
 
         :return: The login of this EmailClientAccountCredentials.
@@ -82,8 +77,7 @@ class EmailClientAccountCredentials(object):
 
     @login.setter
     def login(self, login: str):
-        """Sets the login of this EmailClientAccountCredentials.
-
+        """
         Email client account login             
 
         :param login: The login of this EmailClientAccountCredentials.
@@ -97,8 +91,8 @@ class EmailClientAccountCredentials(object):
 
     @property
     def discriminator(self) -> str:
-        """Gets the discriminator of this EmailClientAccountCredentials.
-
+        """
+        Gets the discriminator of this EmailClientAccountCredentials.
 
         :return: The discriminator of this EmailClientAccountCredentials.
         :rtype: str
@@ -107,15 +101,13 @@ class EmailClientAccountCredentials(object):
 
     @discriminator.setter
     def discriminator(self, discriminator: str):
-        """Sets the discriminator of this EmailClientAccountCredentials.
-
+        """
+        Sets the discriminator of this EmailClientAccountCredentials.
 
         :param discriminator: The discriminator of this EmailClientAccountCredentials.
         :type: str
         """
-        if discriminator is None:
-            raise ValueError("Invalid value for `discriminator`, must not be `None`")
-        self._discriminator = self.__class__.__name__
+        pass    # setter is ignored for discriminator property
 
     def to_dict(self):
         """Returns the model properties as a dict"""

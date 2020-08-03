@@ -79,10 +79,10 @@ class CalendarSaveRequest(StorageModelOfCalendarDto):
         if format is not None:
             self.format = format
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this CalendarSaveRequest.
-
+        """
         Calendar file format Enum, available values: Ics, Msg
 
         :return: The format of this CalendarSaveRequest.
@@ -92,8 +92,7 @@ class CalendarSaveRequest(StorageModelOfCalendarDto):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this CalendarSaveRequest.
-
+        """
         Calendar file format Enum, available values: Ics, Msg
 
         :param format: The format of this CalendarSaveRequest.

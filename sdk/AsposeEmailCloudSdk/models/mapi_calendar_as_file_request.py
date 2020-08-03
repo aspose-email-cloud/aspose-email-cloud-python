@@ -71,10 +71,10 @@ class MapiCalendarAsFileRequest(object):
         if value is not None:
             self.value = value
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this MapiCalendarAsFileRequest.
-
+        """
         Calendar file format Enum, available values: Ics, Msg
 
         :return: The format of this MapiCalendarAsFileRequest.
@@ -84,8 +84,7 @@ class MapiCalendarAsFileRequest(object):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this MapiCalendarAsFileRequest.
-
+        """
         Calendar file format Enum, available values: Ics, Msg
 
         :param format: The format of this MapiCalendarAsFileRequest.
@@ -97,8 +96,7 @@ class MapiCalendarAsFileRequest(object):
 
     @property
     def value(self) -> MapiCalendarDto:
-        """Gets the value of this MapiCalendarAsFileRequest.
-
+        """
         MAPI calendar model.             
 
         :return: The value of this MapiCalendarAsFileRequest.
@@ -108,8 +106,7 @@ class MapiCalendarAsFileRequest(object):
 
     @value.setter
     def value(self, value: MapiCalendarDto):
-        """Sets the value of this MapiCalendarAsFileRequest.
-
+        """
         MAPI calendar model.             
 
         :param value: The value of this MapiCalendarAsFileRequest.

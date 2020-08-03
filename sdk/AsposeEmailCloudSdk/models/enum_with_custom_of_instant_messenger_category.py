@@ -69,10 +69,10 @@ class EnumWithCustomOfInstantMessengerCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
         Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
 
         :return: The value of this EnumWithCustomOfInstantMessengerCategory.
@@ -82,8 +82,7 @@ class EnumWithCustomOfInstantMessengerCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
         Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
 
         :param value: The value of this EnumWithCustomOfInstantMessengerCategory.
@@ -97,8 +96,8 @@ class EnumWithCustomOfInstantMessengerCategory(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfInstantMessengerCategory.
 
         :return: The description of this EnumWithCustomOfInstantMessengerCategory.
         :rtype: str
@@ -107,8 +106,8 @@ class EnumWithCustomOfInstantMessengerCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfInstantMessengerCategory.
 
         :param description: The description of this EnumWithCustomOfInstantMessengerCategory.
         :type: str

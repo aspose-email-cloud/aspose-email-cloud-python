@@ -78,10 +78,10 @@ class CalendarAsAlternateRequest(object):
         if sequence_id is not None:
             self.sequence_id = sequence_id
 
+
     @property
     def value(self) -> CalendarDto:
-        """Gets the value of this CalendarAsAlternateRequest.
-
+        """
         iCalendar document model             
 
         :return: The value of this CalendarAsAlternateRequest.
@@ -91,8 +91,7 @@ class CalendarAsAlternateRequest(object):
 
     @value.setter
     def value(self, value: CalendarDto):
-        """Sets the value of this CalendarAsAlternateRequest.
-
+        """
         iCalendar document model             
 
         :param value: The value of this CalendarAsAlternateRequest.
@@ -104,8 +103,7 @@ class CalendarAsAlternateRequest(object):
 
     @property
     def action(self) -> str:
-        """Gets the action of this CalendarAsAlternateRequest.
-
+        """
         iCalendar actions. Enum, available values: Create, Update, Cancel
 
         :return: The action of this CalendarAsAlternateRequest.
@@ -115,8 +113,7 @@ class CalendarAsAlternateRequest(object):
 
     @action.setter
     def action(self, action: str):
-        """Sets the action of this CalendarAsAlternateRequest.
-
+        """
         iCalendar actions. Enum, available values: Create, Update, Cancel
 
         :param action: The action of this CalendarAsAlternateRequest.
@@ -130,8 +127,7 @@ class CalendarAsAlternateRequest(object):
 
     @property
     def sequence_id(self) -> str:
-        """Gets the sequence_id of this CalendarAsAlternateRequest.
-
+        """
         iCalendar sequence id             
 
         :return: The sequence_id of this CalendarAsAlternateRequest.
@@ -141,8 +137,7 @@ class CalendarAsAlternateRequest(object):
 
     @sequence_id.setter
     def sequence_id(self, sequence_id: str):
-        """Sets the sequence_id of this CalendarAsAlternateRequest.
-
+        """
         iCalendar sequence id             
 
         :param sequence_id: The sequence_id of this CalendarAsAlternateRequest.

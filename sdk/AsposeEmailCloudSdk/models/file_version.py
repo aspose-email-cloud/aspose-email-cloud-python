@@ -102,10 +102,10 @@ class FileVersion(StorageFile):
         if is_latest is not None:
             self.is_latest = is_latest
 
+
     @property
     def version_id(self) -> str:
-        """Gets the version_id of this FileVersion.
-
+        """
         File Version ID.
 
         :return: The version_id of this FileVersion.
@@ -115,8 +115,7 @@ class FileVersion(StorageFile):
 
     @version_id.setter
     def version_id(self, version_id: str):
-        """Sets the version_id of this FileVersion.
-
+        """
         File Version ID.
 
         :param version_id: The version_id of this FileVersion.
@@ -126,8 +125,7 @@ class FileVersion(StorageFile):
 
     @property
     def is_latest(self) -> bool:
-        """Gets the is_latest of this FileVersion.
-
+        """
         Specifies whether the file is (true) or is not (false) the latest version of an file.
 
         :return: The is_latest of this FileVersion.
@@ -137,8 +135,7 @@ class FileVersion(StorageFile):
 
     @is_latest.setter
     def is_latest(self, is_latest: bool):
-        """Sets the is_latest of this FileVersion.
-
+        """
         Specifies whether the file is (true) or is not (false) the latest version of an file.
 
         :param is_latest: The is_latest of this FileVersion.

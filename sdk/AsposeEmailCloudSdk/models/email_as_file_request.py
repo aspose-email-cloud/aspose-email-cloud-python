@@ -71,10 +71,10 @@ class EmailAsFileRequest(object):
         if value is not None:
             self.value = value
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this EmailAsFileRequest.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :return: The format of this EmailAsFileRequest.
@@ -84,8 +84,7 @@ class EmailAsFileRequest(object):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this EmailAsFileRequest.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :param format: The format of this EmailAsFileRequest.
@@ -97,8 +96,7 @@ class EmailAsFileRequest(object):
 
     @property
     def value(self) -> EmailDto:
-        """Gets the value of this EmailAsFileRequest.
-
+        """
         Email model.             
 
         :return: The value of this EmailAsFileRequest.
@@ -108,8 +106,7 @@ class EmailAsFileRequest(object):
 
     @value.setter
     def value(self, value: EmailDto):
-        """Sets the value of this EmailAsFileRequest.
-
+        """
         Email model.             
 
         :param value: The value of this EmailAsFileRequest.

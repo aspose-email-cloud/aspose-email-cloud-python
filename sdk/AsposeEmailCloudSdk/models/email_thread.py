@@ -85,10 +85,10 @@ class EmailThread(object):
         if folder is not None:
             self.folder = folder
 
+
     @property
     def id(self) -> str:
-        """Gets the id of this EmailThread.
-
+        """
         Thread identifier             
 
         :return: The id of this EmailThread.
@@ -98,8 +98,7 @@ class EmailThread(object):
 
     @id.setter
     def id(self, id: str):
-        """Sets the id of this EmailThread.
-
+        """
         Thread identifier             
 
         :param id: The id of this EmailThread.
@@ -109,8 +108,7 @@ class EmailThread(object):
 
     @property
     def subject(self) -> str:
-        """Gets the subject of this EmailThread.
-
+        """
         Thread subject             
 
         :return: The subject of this EmailThread.
@@ -120,8 +118,7 @@ class EmailThread(object):
 
     @subject.setter
     def subject(self, subject: str):
-        """Sets the subject of this EmailThread.
-
+        """
         Thread subject             
 
         :param subject: The subject of this EmailThread.
@@ -131,8 +128,7 @@ class EmailThread(object):
 
     @property
     def messages(self) -> List[EmailDto]:
-        """Gets the messages of this EmailThread.
-
+        """
         List of messages in thread             
 
         :return: The messages of this EmailThread.
@@ -142,8 +138,7 @@ class EmailThread(object):
 
     @messages.setter
     def messages(self, messages: List[EmailDto]):
-        """Sets the messages of this EmailThread.
-
+        """
         List of messages in thread             
 
         :param messages: The messages of this EmailThread.
@@ -153,8 +148,7 @@ class EmailThread(object):
 
     @property
     def folder(self) -> str:
-        """Gets the folder of this EmailThread.
-
+        """
         Thread folder location             
 
         :return: The folder of this EmailThread.
@@ -164,8 +158,7 @@ class EmailThread(object):
 
     @folder.setter
     def folder(self, folder: str):
-        """Sets the folder of this EmailThread.
-
+        """
         Thread folder location             
 
         :param folder: The folder of this EmailThread.

@@ -79,10 +79,10 @@ class ClientFolderCreateRequest(ClientAccountBaseRequest):
         if folder_name is not None:
             self.folder_name = folder_name
 
+
     @property
     def parent_folder(self) -> str:
-        """Gets the parent_folder of this ClientFolderCreateRequest.
-
+        """
         Path to parent folder.             
 
         :return: The parent_folder of this ClientFolderCreateRequest.
@@ -92,8 +92,7 @@ class ClientFolderCreateRequest(ClientAccountBaseRequest):
 
     @parent_folder.setter
     def parent_folder(self, parent_folder: str):
-        """Sets the parent_folder of this ClientFolderCreateRequest.
-
+        """
         Path to parent folder.             
 
         :param parent_folder: The parent_folder of this ClientFolderCreateRequest.
@@ -103,8 +102,7 @@ class ClientFolderCreateRequest(ClientAccountBaseRequest):
 
     @property
     def folder_name(self) -> str:
-        """Gets the folder_name of this ClientFolderCreateRequest.
-
+        """
         Folder name.             
 
         :return: The folder_name of this ClientFolderCreateRequest.
@@ -114,8 +112,7 @@ class ClientFolderCreateRequest(ClientAccountBaseRequest):
 
     @folder_name.setter
     def folder_name(self, folder_name: str):
-        """Sets the folder_name of this ClientFolderCreateRequest.
-
+        """
         Folder name.             
 
         :param folder_name: The folder_name of this ClientFolderCreateRequest.

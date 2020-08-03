@@ -57,13 +57,11 @@ class MapiBinaryPropertyDto(MapiPropertyDto):
         'value_base64': 'valueBase64'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value_base64: str = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value_base64: str = None):
         """
         Mapi property with Binary value represented as a Base64 string             
         :param descriptor: Property descriptor             
         :type descriptor: MapiPropertyDescriptor
-        :param discriminator: 
-        :type discriminator: str
         :param value_base64: Property value converted to Base64             
         :type value_base64: str
         """
@@ -73,15 +71,13 @@ class MapiBinaryPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value_base64 is not None:
             self.value_base64 = value_base64
 
+
     @property
     def value_base64(self) -> str:
-        """Gets the value_base64 of this MapiBinaryPropertyDto.
-
+        """
         Property value converted to Base64             
 
         :return: The value_base64 of this MapiBinaryPropertyDto.
@@ -91,8 +87,7 @@ class MapiBinaryPropertyDto(MapiPropertyDto):
 
     @value_base64.setter
     def value_base64(self, value_base64: str):
-        """Sets the value_base64 of this MapiBinaryPropertyDto.
-
+        """
         Property value converted to Base64             
 
         :param value_base64: The value_base64 of this MapiBinaryPropertyDto.

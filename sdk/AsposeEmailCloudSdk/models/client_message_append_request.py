@@ -87,10 +87,10 @@ class ClientMessageAppendRequest(ClientAccountBaseRequest):
         if mark_as_sent is not None:
             self.mark_as_sent = mark_as_sent
 
+
     @property
     def folder(self) -> str:
-        """Gets the folder of this ClientMessageAppendRequest.
-
+        """
         Path to folder on email server to append message to.             
 
         :return: The folder of this ClientMessageAppendRequest.
@@ -100,8 +100,7 @@ class ClientMessageAppendRequest(ClientAccountBaseRequest):
 
     @folder.setter
     def folder(self, folder: str):
-        """Sets the folder of this ClientMessageAppendRequest.
-
+        """
         Path to folder on email server to append message to.             
 
         :param folder: The folder of this ClientMessageAppendRequest.
@@ -111,8 +110,7 @@ class ClientMessageAppendRequest(ClientAccountBaseRequest):
 
     @property
     def message(self) -> MailMessageBase:
-        """Gets the message of this ClientMessageAppendRequest.
-
+        """
         Message to append.             
 
         :return: The message of this ClientMessageAppendRequest.
@@ -122,8 +120,7 @@ class ClientMessageAppendRequest(ClientAccountBaseRequest):
 
     @message.setter
     def message(self, message: MailMessageBase):
-        """Sets the message of this ClientMessageAppendRequest.
-
+        """
         Message to append.             
 
         :param message: The message of this ClientMessageAppendRequest.
@@ -135,8 +132,7 @@ class ClientMessageAppendRequest(ClientAccountBaseRequest):
 
     @property
     def mark_as_sent(self) -> bool:
-        """Gets the mark_as_sent of this ClientMessageAppendRequest.
-
+        """
         Determines that appended message should be market as sent or not.             
 
         :return: The mark_as_sent of this ClientMessageAppendRequest.
@@ -146,8 +142,7 @@ class ClientMessageAppendRequest(ClientAccountBaseRequest):
 
     @mark_as_sent.setter
     def mark_as_sent(self, mark_as_sent: bool):
-        """Sets the mark_as_sent of this ClientMessageAppendRequest.
-
+        """
         Determines that appended message should be market as sent or not.             
 
         :param mark_as_sent: The mark_as_sent of this ClientMessageAppendRequest.

@@ -69,10 +69,10 @@ class EnumWithCustomOfEventCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfEventCategory.
-
+        """
         Event category. Enum, available values: Custom, Birthday, Anniversary
 
         :return: The value of this EnumWithCustomOfEventCategory.
@@ -82,8 +82,7 @@ class EnumWithCustomOfEventCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfEventCategory.
-
+        """
         Event category. Enum, available values: Custom, Birthday, Anniversary
 
         :param value: The value of this EnumWithCustomOfEventCategory.
@@ -97,8 +96,8 @@ class EnumWithCustomOfEventCategory(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfEventCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfEventCategory.
 
         :return: The description of this EnumWithCustomOfEventCategory.
         :rtype: str
@@ -107,8 +106,8 @@ class EnumWithCustomOfEventCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfEventCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfEventCategory.
 
         :param description: The description of this EnumWithCustomOfEventCategory.
         :type: str

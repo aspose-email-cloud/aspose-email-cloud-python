@@ -69,10 +69,10 @@ class NameValuePair(object):
         if value is not None:
             self.value = value
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this NameValuePair.
-
+        """
         Property name             
 
         :return: The name of this NameValuePair.
@@ -82,8 +82,7 @@ class NameValuePair(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this NameValuePair.
-
+        """
         Property name             
 
         :param name: The name of this NameValuePair.
@@ -93,8 +92,7 @@ class NameValuePair(object):
 
     @property
     def value(self) -> str:
-        """Gets the value of this NameValuePair.
-
+        """
         Property value             
 
         :return: The value of this NameValuePair.
@@ -104,8 +102,7 @@ class NameValuePair(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this NameValuePair.
-
+        """
         Property value             
 
         :param value: The value of this NameValuePair.

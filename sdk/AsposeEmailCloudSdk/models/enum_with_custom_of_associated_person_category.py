@@ -69,10 +69,10 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfAssociatedPersonCategory.
-
+        """
         Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
 
         :return: The value of this EnumWithCustomOfAssociatedPersonCategory.
@@ -82,8 +82,7 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfAssociatedPersonCategory.
-
+        """
         Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
 
         :param value: The value of this EnumWithCustomOfAssociatedPersonCategory.
@@ -97,8 +96,8 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfAssociatedPersonCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfAssociatedPersonCategory.
 
         :return: The description of this EnumWithCustomOfAssociatedPersonCategory.
         :rtype: str
@@ -107,8 +106,8 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfAssociatedPersonCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfAssociatedPersonCategory.
 
         :param description: The description of this EnumWithCustomOfAssociatedPersonCategory.
         :type: str

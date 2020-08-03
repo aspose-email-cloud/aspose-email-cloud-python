@@ -90,10 +90,10 @@ class MapiElectronicAddressDto(object):
         if original_display_name is not None:
             self.original_display_name = original_display_name
 
+
     @property
     def address_type(self) -> str:
-        """Gets the address_type of this MapiElectronicAddressDto.
-
+        """
         Address type.             
 
         :return: The address_type of this MapiElectronicAddressDto.
@@ -103,8 +103,7 @@ class MapiElectronicAddressDto(object):
 
     @address_type.setter
     def address_type(self, address_type: str):
-        """Sets the address_type of this MapiElectronicAddressDto.
-
+        """
         Address type.             
 
         :param address_type: The address_type of this MapiElectronicAddressDto.
@@ -114,8 +113,7 @@ class MapiElectronicAddressDto(object):
 
     @property
     def email_address(self) -> str:
-        """Gets the email_address of this MapiElectronicAddressDto.
-
+        """
         Email address.             
 
         :return: The email_address of this MapiElectronicAddressDto.
@@ -125,8 +123,7 @@ class MapiElectronicAddressDto(object):
 
     @email_address.setter
     def email_address(self, email_address: str):
-        """Sets the email_address of this MapiElectronicAddressDto.
-
+        """
         Email address.             
 
         :param email_address: The email_address of this MapiElectronicAddressDto.
@@ -136,8 +133,7 @@ class MapiElectronicAddressDto(object):
 
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this MapiElectronicAddressDto.
-
+        """
         User-readable display name for the e-mail address.             
 
         :return: The display_name of this MapiElectronicAddressDto.
@@ -147,8 +143,7 @@ class MapiElectronicAddressDto(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this MapiElectronicAddressDto.
-
+        """
         User-readable display name for the e-mail address.             
 
         :param display_name: The display_name of this MapiElectronicAddressDto.
@@ -158,8 +153,7 @@ class MapiElectronicAddressDto(object):
 
     @property
     def fax_number(self) -> str:
-        """Gets the fax_number of this MapiElectronicAddressDto.
-
+        """
         Telephone number of the mail user's primary fax machine.             
 
         :return: The fax_number of this MapiElectronicAddressDto.
@@ -169,8 +163,7 @@ class MapiElectronicAddressDto(object):
 
     @fax_number.setter
     def fax_number(self, fax_number: str):
-        """Sets the fax_number of this MapiElectronicAddressDto.
-
+        """
         Telephone number of the mail user's primary fax machine.             
 
         :param fax_number: The fax_number of this MapiElectronicAddressDto.
@@ -180,8 +173,7 @@ class MapiElectronicAddressDto(object):
 
     @property
     def original_display_name(self) -> str:
-        """Gets the original_display_name of this MapiElectronicAddressDto.
-
+        """
         SMTP e-mail address that  corresponds to the e-mail address.             
 
         :return: The original_display_name of this MapiElectronicAddressDto.
@@ -191,8 +183,7 @@ class MapiElectronicAddressDto(object):
 
     @original_display_name.setter
     def original_display_name(self, original_display_name: str):
-        """Sets the original_display_name of this MapiElectronicAddressDto.
-
+        """
         SMTP e-mail address that  corresponds to the e-mail address.             
 
         :param original_display_name: The original_display_name of this MapiElectronicAddressDto.

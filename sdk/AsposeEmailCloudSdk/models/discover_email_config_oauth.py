@@ -104,10 +104,10 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         if request_url is not None:
             self.request_url = request_url
 
+
     @property
     def client_id(self) -> str:
-        """Gets the client_id of this DiscoverEmailConfigOauth.
-
+        """
         OAuth client id.             
 
         :return: The client_id of this DiscoverEmailConfigOauth.
@@ -117,8 +117,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     @client_id.setter
     def client_id(self, client_id: str):
-        """Sets the client_id of this DiscoverEmailConfigOauth.
-
+        """
         OAuth client id.             
 
         :param client_id: The client_id of this DiscoverEmailConfigOauth.
@@ -132,8 +131,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     @property
     def client_secret(self) -> str:
-        """Gets the client_secret of this DiscoverEmailConfigOauth.
-
+        """
         OAuth client secret.             
 
         :return: The client_secret of this DiscoverEmailConfigOauth.
@@ -143,8 +141,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     @client_secret.setter
     def client_secret(self, client_secret: str):
-        """Sets the client_secret of this DiscoverEmailConfigOauth.
-
+        """
         OAuth client secret.             
 
         :param client_secret: The client_secret of this DiscoverEmailConfigOauth.
@@ -158,8 +155,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     @property
     def refresh_token(self) -> str:
-        """Gets the refresh_token of this DiscoverEmailConfigOauth.
-
+        """
         OAuth refresh token.             
 
         :return: The refresh_token of this DiscoverEmailConfigOauth.
@@ -169,8 +165,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     @refresh_token.setter
     def refresh_token(self, refresh_token: str):
-        """Sets the refresh_token of this DiscoverEmailConfigOauth.
-
+        """
         OAuth refresh token.             
 
         :param refresh_token: The refresh_token of this DiscoverEmailConfigOauth.
@@ -184,8 +179,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     @property
     def request_url(self) -> str:
-        """Gets the request_url of this DiscoverEmailConfigOauth.
-
+        """
         The url to obtain access token. If not specified, will be discovered from email configuration.             
 
         :return: The request_url of this DiscoverEmailConfigOauth.
@@ -195,8 +189,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     @request_url.setter
     def request_url(self, request_url: str):
-        """Sets the request_url of this DiscoverEmailConfigOauth.
-
+        """
         The url to obtain access token. If not specified, will be discovered from email configuration.             
 
         :param request_url: The request_url of this DiscoverEmailConfigOauth.

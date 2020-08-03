@@ -56,15 +56,13 @@ class MapiContactPhotoDto(ContactPhoto):
         'discriminator': 'discriminator'
     }
 
-    def __init__(self, photo_image_format: str = None, base64_data: str = None, discriminator: str = None):
+    def __init__(self, photo_image_format: str = None, base64_data: str = None):
         """
         Contains data and type of contact&#39;s photo.             
         :param photo_image_format: MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
         :type photo_image_format: str
         :param base64_data: Photo serialized as base64 string.             
         :type base64_data: str
-        :param discriminator: 
-        :type discriminator: str
         """
         super(MapiContactPhotoDto, self).__init__()
 
@@ -72,8 +70,7 @@ class MapiContactPhotoDto(ContactPhoto):
             self.photo_image_format = photo_image_format
         if base64_data is not None:
             self.base64_data = base64_data
-        if discriminator is not None:
-            self.discriminator = discriminator
+
 
     def to_dict(self):
         """Returns the model properties as a dict"""

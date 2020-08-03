@@ -85,10 +85,10 @@ class AttachmentBase(object):
         if headers is not None:
             self.headers = headers
 
+
     @property
     def base64_data(self) -> str:
-        """Gets the base64_data of this AttachmentBase.
-
+        """
         Attachment file content as Base64 string.             
 
         :return: The base64_data of this AttachmentBase.
@@ -98,8 +98,7 @@ class AttachmentBase(object):
 
     @base64_data.setter
     def base64_data(self, base64_data: str):
-        """Sets the base64_data of this AttachmentBase.
-
+        """
         Attachment file content as Base64 string.             
 
         :param base64_data: The base64_data of this AttachmentBase.
@@ -109,8 +108,7 @@ class AttachmentBase(object):
 
     @property
     def content_id(self) -> str:
-        """Gets the content_id of this AttachmentBase.
-
+        """
         Attachment content id             
 
         :return: The content_id of this AttachmentBase.
@@ -120,8 +118,7 @@ class AttachmentBase(object):
 
     @content_id.setter
     def content_id(self, content_id: str):
-        """Sets the content_id of this AttachmentBase.
-
+        """
         Attachment content id             
 
         :param content_id: The content_id of this AttachmentBase.
@@ -131,8 +128,7 @@ class AttachmentBase(object):
 
     @property
     def content_type(self) -> ContentType:
-        """Gets the content_type of this AttachmentBase.
-
+        """
         Content type             
 
         :return: The content_type of this AttachmentBase.
@@ -142,8 +138,7 @@ class AttachmentBase(object):
 
     @content_type.setter
     def content_type(self, content_type: ContentType):
-        """Sets the content_type of this AttachmentBase.
-
+        """
         Content type             
 
         :param content_type: The content_type of this AttachmentBase.
@@ -153,8 +148,7 @@ class AttachmentBase(object):
 
     @property
     def headers(self) -> Dict[str, str]:
-        """Gets the headers of this AttachmentBase.
-
+        """
         Attachment headers.             
 
         :return: The headers of this AttachmentBase.
@@ -164,8 +158,7 @@ class AttachmentBase(object):
 
     @headers.setter
     def headers(self, headers: Dict[str, str]):
-        """Sets the headers of this AttachmentBase.
-
+        """
         Attachment headers.             
 
         :param headers: The headers of this AttachmentBase.

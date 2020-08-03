@@ -76,10 +76,10 @@ class DiscoverEmailConfigRequest(object):
         if login is not None:
             self.login = login
 
+
     @property
     def address(self) -> str:
-        """Gets the address of this DiscoverEmailConfigRequest.
-
+        """
         Email address to discover.             
 
         :return: The address of this DiscoverEmailConfigRequest.
@@ -89,8 +89,7 @@ class DiscoverEmailConfigRequest(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this DiscoverEmailConfigRequest.
-
+        """
         Email address to discover.             
 
         :param address: The address of this DiscoverEmailConfigRequest.
@@ -104,8 +103,7 @@ class DiscoverEmailConfigRequest(object):
 
     @property
     def fast_processing(self) -> bool:
-        """Gets the fast_processing of this DiscoverEmailConfigRequest.
-
+        """
         Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
 
         :return: The fast_processing of this DiscoverEmailConfigRequest.
@@ -115,8 +113,7 @@ class DiscoverEmailConfigRequest(object):
 
     @fast_processing.setter
     def fast_processing(self, fast_processing: bool):
-        """Sets the fast_processing of this DiscoverEmailConfigRequest.
-
+        """
         Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.             
 
         :param fast_processing: The fast_processing of this DiscoverEmailConfigRequest.
@@ -128,8 +125,7 @@ class DiscoverEmailConfigRequest(object):
 
     @property
     def login(self) -> str:
-        """Gets the login of this DiscoverEmailConfigRequest.
-
+        """
         Email account login. If not specified, address used as a login.             
 
         :return: The login of this DiscoverEmailConfigRequest.
@@ -139,8 +135,7 @@ class DiscoverEmailConfigRequest(object):
 
     @login.setter
     def login(self, login: str):
-        """Sets the login of this DiscoverEmailConfigRequest.
-
+        """
         Email account login. If not specified, address used as a login.             
 
         :param login: The login of this DiscoverEmailConfigRequest.

@@ -71,10 +71,10 @@ class MapiContactAsFileRequest(object):
         if value is not None:
             self.value = value
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this MapiContactAsFileRequest.
-
+        """
         Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
 
         :return: The format of this MapiContactAsFileRequest.
@@ -84,8 +84,7 @@ class MapiContactAsFileRequest(object):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this MapiContactAsFileRequest.
-
+        """
         Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
 
         :param format: The format of this MapiContactAsFileRequest.
@@ -97,8 +96,7 @@ class MapiContactAsFileRequest(object):
 
     @property
     def value(self) -> MapiContactDto:
-        """Gets the value of this MapiContactAsFileRequest.
-
+        """
         MAPI contact model.             
 
         :return: The value of this MapiContactAsFileRequest.
@@ -108,8 +106,7 @@ class MapiContactAsFileRequest(object):
 
     @value.setter
     def value(self, value: MapiContactDto):
-        """Sets the value of this MapiContactAsFileRequest.
-
+        """
         MAPI contact model.             
 
         :param value: The value of this MapiContactAsFileRequest.

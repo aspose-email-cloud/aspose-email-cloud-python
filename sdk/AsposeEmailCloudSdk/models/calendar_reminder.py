@@ -114,10 +114,10 @@ class CalendarReminder(object):
         if trigger is not None:
             self.trigger = trigger
 
+
     @property
     def action(self) -> str:
-        """Gets the action of this CalendarReminder.
-
+        """
         Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
 
         :return: The action of this CalendarReminder.
@@ -127,8 +127,7 @@ class CalendarReminder(object):
 
     @action.setter
     def action(self, action: str):
-        """Sets the action of this CalendarReminder.
-
+        """
         Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
 
         :param action: The action of this CalendarReminder.
@@ -140,8 +139,7 @@ class CalendarReminder(object):
 
     @property
     def attachments(self) -> List[str]:
-        """Gets the attachments of this CalendarReminder.
-
+        """
         Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
 
         :return: The attachments of this CalendarReminder.
@@ -151,8 +149,7 @@ class CalendarReminder(object):
 
     @attachments.setter
     def attachments(self, attachments: List[str]):
-        """Sets the attachments of this CalendarReminder.
-
+        """
         Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
 
         :param attachments: The attachments of this CalendarReminder.
@@ -162,8 +159,7 @@ class CalendarReminder(object):
 
     @property
     def attendees(self) -> List[ReminderAttendee]:
-        """Gets the attendees of this CalendarReminder.
-
+        """
         Contains collection of ReminderAttendee objects.             
 
         :return: The attendees of this CalendarReminder.
@@ -173,8 +169,7 @@ class CalendarReminder(object):
 
     @attendees.setter
     def attendees(self, attendees: List[ReminderAttendee]):
-        """Sets the attendees of this CalendarReminder.
-
+        """
         Contains collection of ReminderAttendee objects.             
 
         :param attendees: The attendees of this CalendarReminder.
@@ -184,8 +179,7 @@ class CalendarReminder(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this CalendarReminder.
-
+        """
         Provides a more complete description of the alarm.
 
         :return: The description of this CalendarReminder.
@@ -195,8 +189,7 @@ class CalendarReminder(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this CalendarReminder.
-
+        """
         Provides a more complete description of the alarm.
 
         :param description: The description of this CalendarReminder.
@@ -206,8 +199,7 @@ class CalendarReminder(object):
 
     @property
     def duration(self) -> int:
-        """Gets the duration of this CalendarReminder.
-
+        """
         Specifies the delay period in ticks, after which the alarm will repeat.             
 
         :return: The duration of this CalendarReminder.
@@ -217,8 +209,7 @@ class CalendarReminder(object):
 
     @duration.setter
     def duration(self, duration: int):
-        """Sets the duration of this CalendarReminder.
-
+        """
         Specifies the delay period in ticks, after which the alarm will repeat.             
 
         :param duration: The duration of this CalendarReminder.
@@ -228,8 +219,7 @@ class CalendarReminder(object):
 
     @property
     def repeat(self) -> int:
-        """Gets the repeat of this CalendarReminder.
-
+        """
         Defines the number of time the alarm should be repeated, after the initial trigger.             
 
         :return: The repeat of this CalendarReminder.
@@ -239,8 +229,7 @@ class CalendarReminder(object):
 
     @repeat.setter
     def repeat(self, repeat: int):
-        """Sets the repeat of this CalendarReminder.
-
+        """
         Defines the number of time the alarm should be repeated, after the initial trigger.             
 
         :param repeat: The repeat of this CalendarReminder.
@@ -252,8 +241,7 @@ class CalendarReminder(object):
 
     @property
     def summary(self) -> str:
-        """Gets the summary of this CalendarReminder.
-
+        """
         Defines a short summary or subject for the alarm.
 
         :return: The summary of this CalendarReminder.
@@ -263,8 +251,7 @@ class CalendarReminder(object):
 
     @summary.setter
     def summary(self, summary: str):
-        """Sets the summary of this CalendarReminder.
-
+        """
         Defines a short summary or subject for the alarm.
 
         :param summary: The summary of this CalendarReminder.
@@ -274,8 +261,7 @@ class CalendarReminder(object):
 
     @property
     def trigger(self) -> ReminderTrigger:
-        """Gets the trigger of this CalendarReminder.
-
+        """
         Specifies when an alarm will trigger.
 
         :return: The trigger of this CalendarReminder.
@@ -285,8 +271,7 @@ class CalendarReminder(object):
 
     @trigger.setter
     def trigger(self, trigger: ReminderTrigger):
-        """Sets the trigger of this CalendarReminder.
-
+        """
         Specifies when an alarm will trigger.
 
         :param trigger: The trigger of this CalendarReminder.

@@ -72,10 +72,10 @@ class ClientMessageBaseRequest(ClientAccountBaseRequest):
         if message_id is not None:
             self.message_id = message_id
 
+
     @property
     def message_id(self) -> str:
-        """Gets the message_id of this ClientMessageBaseRequest.
-
+        """
         Message identifier.             
 
         :return: The message_id of this ClientMessageBaseRequest.
@@ -85,8 +85,7 @@ class ClientMessageBaseRequest(ClientAccountBaseRequest):
 
     @message_id.setter
     def message_id(self, message_id: str):
-        """Sets the message_id of this ClientMessageBaseRequest.
-
+        """
         Message identifier.             
 
         :param message_id: The message_id of this ClientMessageBaseRequest.

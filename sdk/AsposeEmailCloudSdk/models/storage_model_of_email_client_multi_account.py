@@ -72,10 +72,11 @@ class StorageModelOfEmailClientMultiAccount(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfEmailClientMultiAccount.
-
+        """
+        Gets the storage_file of this StorageModelOfEmailClientMultiAccount.
 
         :return: The storage_file of this StorageModelOfEmailClientMultiAccount.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfEmailClientMultiAccount(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfEmailClientMultiAccount.
-
+        """
+        Sets the storage_file of this StorageModelOfEmailClientMultiAccount.
 
         :param storage_file: The storage_file of this StorageModelOfEmailClientMultiAccount.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfEmailClientMultiAccount(object):
 
     @property
     def value(self) -> EmailClientMultiAccount:
-        """Gets the value of this StorageModelOfEmailClientMultiAccount.
-
+        """
+        Gets the value of this StorageModelOfEmailClientMultiAccount.
 
         :return: The value of this StorageModelOfEmailClientMultiAccount.
         :rtype: EmailClientMultiAccount
@@ -106,8 +107,8 @@ class StorageModelOfEmailClientMultiAccount(object):
 
     @value.setter
     def value(self, value: EmailClientMultiAccount):
-        """Sets the value of this StorageModelOfEmailClientMultiAccount.
-
+        """
+        Sets the value of this StorageModelOfEmailClientMultiAccount.
 
         :param value: The value of this StorageModelOfEmailClientMultiAccount.
         :type: EmailClientMultiAccount

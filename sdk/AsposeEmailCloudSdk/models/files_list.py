@@ -64,10 +64,10 @@ class FilesList(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[StorageFile]:
-        """Gets the value of this FilesList.
-
+        """
         Files and folders contained by folder StorageFile.
 
         :return: The value of this FilesList.
@@ -77,8 +77,7 @@ class FilesList(object):
 
     @value.setter
     def value(self, value: List[StorageFile]):
-        """Sets the value of this FilesList.
-
+        """
         Files and folders contained by folder StorageFile.
 
         :param value: The value of this FilesList.

@@ -64,10 +64,10 @@ class ClientAccountBaseRequest(object):
         if account_location is not None:
             self.account_location = account_location
 
+
     @property
     def account_location(self) -> StorageFileLocation:
-        """Gets the account_location of this ClientAccountBaseRequest.
-
+        """
         Email client account configuration location on storage.             
 
         :return: The account_location of this ClientAccountBaseRequest.
@@ -77,8 +77,7 @@ class ClientAccountBaseRequest(object):
 
     @account_location.setter
     def account_location(self, account_location: StorageFileLocation):
-        """Sets the account_location of this ClientAccountBaseRequest.
-
+        """
         Email client account configuration location on storage.             
 
         :param account_location: The account_location of this ClientAccountBaseRequest.

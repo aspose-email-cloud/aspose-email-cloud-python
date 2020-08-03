@@ -79,10 +79,10 @@ class EmailSaveRequest(StorageModelOfEmailDto):
         if format is not None:
             self.format = format
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this EmailSaveRequest.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :return: The format of this EmailSaveRequest.
@@ -92,8 +92,7 @@ class EmailSaveRequest(StorageModelOfEmailDto):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this EmailSaveRequest.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :param format: The format of this EmailSaveRequest.

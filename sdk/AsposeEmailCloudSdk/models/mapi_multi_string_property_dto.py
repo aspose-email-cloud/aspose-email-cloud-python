@@ -57,13 +57,11 @@ class MapiMultiStringPropertyDto(MapiPropertyDto):
         'values': 'values'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, values: List[str] = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, values: List[str] = None):
         """
         Mapi property with Multiple String values             
         :param descriptor: Property descriptor             
         :type descriptor: MapiPropertyDescriptor
-        :param discriminator: 
-        :type discriminator: str
         :param values: Property values             
         :type values: List[str]
         """
@@ -73,15 +71,13 @@ class MapiMultiStringPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if values is not None:
             self.values = values
 
+
     @property
     def values(self) -> List[str]:
-        """Gets the values of this MapiMultiStringPropertyDto.
-
+        """
         Property values             
 
         :return: The values of this MapiMultiStringPropertyDto.
@@ -91,8 +87,7 @@ class MapiMultiStringPropertyDto(MapiPropertyDto):
 
     @values.setter
     def values(self, values: List[str]):
-        """Sets the values of this MapiMultiStringPropertyDto.
-
+        """
         Property values             
 
         :param values: The values of this MapiMultiStringPropertyDto.

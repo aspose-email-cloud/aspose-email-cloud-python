@@ -72,10 +72,10 @@ class ClientThreadBaseRequest(ClientAccountBaseRequest):
         if thread_id is not None:
             self.thread_id = thread_id
 
+
     @property
     def thread_id(self) -> str:
-        """Gets the thread_id of this ClientThreadBaseRequest.
-
+        """
         Thread identifier.             
 
         :return: The thread_id of this ClientThreadBaseRequest.
@@ -85,8 +85,7 @@ class ClientThreadBaseRequest(ClientAccountBaseRequest):
 
     @thread_id.setter
     def thread_id(self, thread_id: str):
-        """Sets the thread_id of this ClientThreadBaseRequest.
-
+        """
         Thread identifier.             
 
         :param thread_id: The thread_id of this ClientThreadBaseRequest.

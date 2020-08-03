@@ -62,10 +62,10 @@ class ReminderAttendee(object):
         if address is not None:
             self.address = address
 
+
     @property
     def address(self) -> str:
-        """Gets the address of this ReminderAttendee.
-
+        """
         Contains the email address.
 
         :return: The address of this ReminderAttendee.
@@ -75,8 +75,7 @@ class ReminderAttendee(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this ReminderAttendee.
-
+        """
         Contains the email address.
 
         :param address: The address of this ReminderAttendee.

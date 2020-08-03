@@ -90,10 +90,10 @@ class AiNameCulturalContext(object):
         if style is not None:
             self.style = style
 
+
     @property
     def language(self) -> str:
-        """Gets the language of this AiNameCulturalContext.
-
+        """
         An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
 
         :return: The language of this AiNameCulturalContext.
@@ -103,8 +103,7 @@ class AiNameCulturalContext(object):
 
     @language.setter
     def language(self, language: str):
-        """Sets the language of this AiNameCulturalContext.
-
+        """
         An ISO-639 code of the language; either 639-1 or 639-3 (e.g. \"it\" or \"ita\" for Italian)             
 
         :param language: The language of this AiNameCulturalContext.
@@ -114,8 +113,7 @@ class AiNameCulturalContext(object):
 
     @property
     def location(self) -> str:
-        """Gets the location of this AiNameCulturalContext.
-
+        """
         A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
 
         :return: The location of this AiNameCulturalContext.
@@ -125,8 +123,7 @@ class AiNameCulturalContext(object):
 
     @location.setter
     def location(self, location: str):
-        """Sets the location of this AiNameCulturalContext.
-
+        """
         A geographic code such as an ISO-3166 two letter country code, for example \"FR\" for France             
 
         :param location: The location of this AiNameCulturalContext.
@@ -136,8 +133,7 @@ class AiNameCulturalContext(object):
 
     @property
     def script(self) -> str:
-        """Gets the script of this AiNameCulturalContext.
-
+        """
         A writing system code; starts with the ISO-15924 script name             
 
         :return: The script of this AiNameCulturalContext.
@@ -147,8 +143,7 @@ class AiNameCulturalContext(object):
 
     @script.setter
     def script(self, script: str):
-        """Sets the script of this AiNameCulturalContext.
-
+        """
         A writing system code; starts with the ISO-15924 script name             
 
         :param script: The script of this AiNameCulturalContext.
@@ -158,8 +153,7 @@ class AiNameCulturalContext(object):
 
     @property
     def encoding(self) -> str:
-        """Gets the encoding of this AiNameCulturalContext.
-
+        """
         A character encoding name             
 
         :return: The encoding of this AiNameCulturalContext.
@@ -169,8 +163,7 @@ class AiNameCulturalContext(object):
 
     @encoding.setter
     def encoding(self, encoding: str):
-        """Sets the encoding of this AiNameCulturalContext.
-
+        """
         A character encoding name             
 
         :param encoding: The encoding of this AiNameCulturalContext.
@@ -180,8 +173,7 @@ class AiNameCulturalContext(object):
 
     @property
     def style(self) -> str:
-        """Gets the style of this AiNameCulturalContext.
-
+        """
         Name writing style. Enum, available values: Formal, Informal, Legal, Academic
 
         :return: The style of this AiNameCulturalContext.
@@ -191,8 +183,7 @@ class AiNameCulturalContext(object):
 
     @style.setter
     def style(self, style: str):
-        """Sets the style of this AiNameCulturalContext.
-
+        """
         Name writing style. Enum, available values: Formal, Informal, Legal, Academic
 
         :param style: The style of this AiNameCulturalContext.

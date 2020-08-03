@@ -118,10 +118,10 @@ class MapiCalendarTimeZoneRuleDto(object):
         if year is not None:
             self.year = year
 
+
     @property
     def _date(self) -> datetime:
-        """Gets the _date of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Date and time that indicate when to begin using the Standard/Daylight time.             
 
         :return: The _date of this MapiCalendarTimeZoneRuleDto.
@@ -131,8 +131,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @_date.setter
     def _date(self, _date: datetime):
-        """Sets the _date of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Date and time that indicate when to begin using the Standard/Daylight time.             
 
         :param _date: The _date of this MapiCalendarTimeZoneRuleDto.
@@ -144,8 +143,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def day_of_week(self) -> str:
-        """Gets the day_of_week of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :return: The day_of_week of this MapiCalendarTimeZoneRuleDto.
@@ -155,8 +153,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @day_of_week.setter
     def day_of_week(self, day_of_week: str):
-        """Sets the day_of_week of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :param day_of_week: The day_of_week of this MapiCalendarTimeZoneRuleDto.
@@ -168,8 +165,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def hour(self) -> int:
-        """Gets the hour of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Hour.             
 
         :return: The hour of this MapiCalendarTimeZoneRuleDto.
@@ -179,8 +175,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @hour.setter
     def hour(self, hour: int):
-        """Sets the hour of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Hour.             
 
         :param hour: The hour of this MapiCalendarTimeZoneRuleDto.
@@ -192,8 +187,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def milliseconds(self) -> int:
-        """Gets the milliseconds of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Milliseconds.             
 
         :return: The milliseconds of this MapiCalendarTimeZoneRuleDto.
@@ -203,8 +197,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @milliseconds.setter
     def milliseconds(self, milliseconds: int):
-        """Sets the milliseconds of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Milliseconds.             
 
         :param milliseconds: The milliseconds of this MapiCalendarTimeZoneRuleDto.
@@ -216,8 +209,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def minute(self) -> int:
-        """Gets the minute of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Minute.             
 
         :return: The minute of this MapiCalendarTimeZoneRuleDto.
@@ -227,8 +219,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @minute.setter
     def minute(self, minute: int):
-        """Sets the minute of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Minute.             
 
         :param minute: The minute of this MapiCalendarTimeZoneRuleDto.
@@ -240,8 +231,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def month(self) -> int:
-        """Gets the month of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Month.             
 
         :return: The month of this MapiCalendarTimeZoneRuleDto.
@@ -251,8 +241,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @month.setter
     def month(self, month: int):
-        """Sets the month of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Month.             
 
         :param month: The month of this MapiCalendarTimeZoneRuleDto.
@@ -268,8 +257,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def position(self) -> str:
-        """Gets the position of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
 
         :return: The position of this MapiCalendarTimeZoneRuleDto.
@@ -279,8 +267,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @position.setter
     def position(self, position: str):
-        """Sets the position of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
 
         :param position: The position of this MapiCalendarTimeZoneRuleDto.
@@ -292,8 +279,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def seconds(self) -> int:
-        """Gets the seconds of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Seconds.             
 
         :return: The seconds of this MapiCalendarTimeZoneRuleDto.
@@ -303,8 +289,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @seconds.setter
     def seconds(self, seconds: int):
-        """Sets the seconds of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Seconds.             
 
         :param seconds: The seconds of this MapiCalendarTimeZoneRuleDto.
@@ -316,8 +301,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @property
     def year(self) -> int:
-        """Gets the year of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Year.             
 
         :return: The year of this MapiCalendarTimeZoneRuleDto.
@@ -327,8 +311,7 @@ class MapiCalendarTimeZoneRuleDto(object):
 
     @year.setter
     def year(self, year: int):
-        """Sets the year of this MapiCalendarTimeZoneRuleDto.
-
+        """
         Year.             
 
         :param year: The year of this MapiCalendarTimeZoneRuleDto.

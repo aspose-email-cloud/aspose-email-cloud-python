@@ -214,10 +214,10 @@ class CalendarDto(object):
         if transparency is not None:
             self.transparency = transparency
 
+
     @property
     def attachments(self) -> List[Attachment]:
-        """Gets the attachments of this CalendarDto.
-
+        """
         Document attachments.
 
         :return: The attachments of this CalendarDto.
@@ -227,8 +227,7 @@ class CalendarDto(object):
 
     @attachments.setter
     def attachments(self, attachments: List[Attachment]):
-        """Sets the attachments of this CalendarDto.
-
+        """
         Document attachments.
 
         :param attachments: The attachments of this CalendarDto.
@@ -238,8 +237,7 @@ class CalendarDto(object):
 
     @property
     def attendees(self) -> List[MailAddress]:
-        """Gets the attendees of this CalendarDto.
-
+        """
         Event attendees.
 
         :return: The attendees of this CalendarDto.
@@ -249,8 +247,7 @@ class CalendarDto(object):
 
     @attendees.setter
     def attendees(self, attendees: List[MailAddress]):
-        """Sets the attendees of this CalendarDto.
-
+        """
         Event attendees.
 
         :param attendees: The attendees of this CalendarDto.
@@ -262,8 +259,7 @@ class CalendarDto(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this CalendarDto.
-
+        """
         Description.
 
         :return: The description of this CalendarDto.
@@ -273,8 +269,7 @@ class CalendarDto(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this CalendarDto.
-
+        """
         Description.
 
         :param description: The description of this CalendarDto.
@@ -284,8 +279,7 @@ class CalendarDto(object):
 
     @property
     def end_date(self) -> datetime:
-        """Gets the end_date of this CalendarDto.
-
+        """
         End date.
 
         :return: The end_date of this CalendarDto.
@@ -295,8 +289,7 @@ class CalendarDto(object):
 
     @end_date.setter
     def end_date(self, end_date: datetime):
-        """Sets the end_date of this CalendarDto.
-
+        """
         End date.
 
         :param end_date: The end_date of this CalendarDto.
@@ -308,8 +301,7 @@ class CalendarDto(object):
 
     @property
     def end_time_zone(self) -> str:
-        """Gets the end_time_zone of this CalendarDto.
-
+        """
         End time zone.
 
         :return: The end_time_zone of this CalendarDto.
@@ -319,8 +311,7 @@ class CalendarDto(object):
 
     @end_time_zone.setter
     def end_time_zone(self, end_time_zone: str):
-        """Sets the end_time_zone of this CalendarDto.
-
+        """
         End time zone.
 
         :param end_time_zone: The end_time_zone of this CalendarDto.
@@ -330,8 +321,7 @@ class CalendarDto(object):
 
     @property
     def flags(self) -> List[str]:
-        """Gets the flags of this CalendarDto.
-
+        """
         Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
 
         :return: The flags of this CalendarDto.
@@ -341,8 +331,7 @@ class CalendarDto(object):
 
     @flags.setter
     def flags(self, flags: List[str]):
-        """Sets the flags of this CalendarDto.
-
+        """
         Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
 
         :param flags: The flags of this CalendarDto.
@@ -352,8 +341,7 @@ class CalendarDto(object):
 
     @property
     def is_description_html(self) -> bool:
-        """Gets the is_description_html of this CalendarDto.
-
+        """
         Indicates if description is in HTML format.
 
         :return: The is_description_html of this CalendarDto.
@@ -363,8 +351,7 @@ class CalendarDto(object):
 
     @is_description_html.setter
     def is_description_html(self, is_description_html: bool):
-        """Sets the is_description_html of this CalendarDto.
-
+        """
         Indicates if description is in HTML format.
 
         :param is_description_html: The is_description_html of this CalendarDto.
@@ -376,8 +363,7 @@ class CalendarDto(object):
 
     @property
     def location(self) -> str:
-        """Gets the location of this CalendarDto.
-
+        """
         Location.
 
         :return: The location of this CalendarDto.
@@ -387,8 +373,7 @@ class CalendarDto(object):
 
     @location.setter
     def location(self, location: str):
-        """Sets the location of this CalendarDto.
-
+        """
         Location.
 
         :param location: The location of this CalendarDto.
@@ -402,8 +387,7 @@ class CalendarDto(object):
 
     @property
     def method(self) -> str:
-        """Gets the method of this CalendarDto.
-
+        """
         Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
 
         :return: The method of this CalendarDto.
@@ -413,8 +397,7 @@ class CalendarDto(object):
 
     @method.setter
     def method(self, method: str):
-        """Sets the method of this CalendarDto.
-
+        """
         Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
 
         :param method: The method of this CalendarDto.
@@ -426,8 +409,7 @@ class CalendarDto(object):
 
     @property
     def microsoft_busy_status(self) -> str:
-        """Gets the microsoft_busy_status of this CalendarDto.
-
+        """
         Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :return: The microsoft_busy_status of this CalendarDto.
@@ -437,8 +419,7 @@ class CalendarDto(object):
 
     @microsoft_busy_status.setter
     def microsoft_busy_status(self, microsoft_busy_status: str):
-        """Sets the microsoft_busy_status of this CalendarDto.
-
+        """
         Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :param microsoft_busy_status: The microsoft_busy_status of this CalendarDto.
@@ -450,8 +431,7 @@ class CalendarDto(object):
 
     @property
     def microsoft_intended_status(self) -> str:
-        """Gets the microsoft_intended_status of this CalendarDto.
-
+        """
         Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :return: The microsoft_intended_status of this CalendarDto.
@@ -461,8 +441,7 @@ class CalendarDto(object):
 
     @microsoft_intended_status.setter
     def microsoft_intended_status(self, microsoft_intended_status: str):
-        """Sets the microsoft_intended_status of this CalendarDto.
-
+        """
         Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :param microsoft_intended_status: The microsoft_intended_status of this CalendarDto.
@@ -474,8 +453,7 @@ class CalendarDto(object):
 
     @property
     def optional_attendees(self) -> List[MailAddress]:
-        """Gets the optional_attendees of this CalendarDto.
-
+        """
         Optional attendees.             
 
         :return: The optional_attendees of this CalendarDto.
@@ -485,8 +463,7 @@ class CalendarDto(object):
 
     @optional_attendees.setter
     def optional_attendees(self, optional_attendees: List[MailAddress]):
-        """Sets the optional_attendees of this CalendarDto.
-
+        """
         Optional attendees.             
 
         :param optional_attendees: The optional_attendees of this CalendarDto.
@@ -496,8 +473,7 @@ class CalendarDto(object):
 
     @property
     def organizer(self) -> MailAddress:
-        """Gets the organizer of this CalendarDto.
-
+        """
         Event organizer.             
 
         :return: The organizer of this CalendarDto.
@@ -507,8 +483,7 @@ class CalendarDto(object):
 
     @organizer.setter
     def organizer(self, organizer: MailAddress):
-        """Sets the organizer of this CalendarDto.
-
+        """
         Event organizer.             
 
         :param organizer: The organizer of this CalendarDto.
@@ -520,8 +495,7 @@ class CalendarDto(object):
 
     @property
     def recurrence_string(self) -> str:
-        """Gets the recurrence_string of this CalendarDto.
-
+        """
         Deprecated, use 'Recurrence' property. String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
 
         :return: The recurrence_string of this CalendarDto.
@@ -531,8 +505,7 @@ class CalendarDto(object):
 
     @recurrence_string.setter
     def recurrence_string(self, recurrence_string: str):
-        """Sets the recurrence_string of this CalendarDto.
-
+        """
         Deprecated, use 'Recurrence' property. String representation of recurrence pattern (See iCalendar RFC, \"Recurrence rule\" section). For example:               For daily recurrence:         \"FREQ=DAILY;COUNT=10;WKST=MO\"                   For monthly recurrence:         \"BYSETPOS=1;BYDAY=MO,TU,WE,TH,FR;FREQ=MONTHLY;INTERVAL=10;WKST=MO\"                   For yearly recurrence:         \"BYMONTHDAY=30;BYMONTH=1;FREQ=YEARLY;WKST=MO\"                   
 
         :param recurrence_string: The recurrence_string of this CalendarDto.
@@ -542,8 +515,7 @@ class CalendarDto(object):
 
     @property
     def recurrence(self) -> RecurrencePatternDto:
-        """Gets the recurrence of this CalendarDto.
-
+        """
         Recurrence pattern             
 
         :return: The recurrence of this CalendarDto.
@@ -553,8 +525,7 @@ class CalendarDto(object):
 
     @recurrence.setter
     def recurrence(self, recurrence: RecurrencePatternDto):
-        """Sets the recurrence of this CalendarDto.
-
+        """
         Recurrence pattern             
 
         :param recurrence: The recurrence of this CalendarDto.
@@ -564,8 +535,7 @@ class CalendarDto(object):
 
     @property
     def reminders(self) -> List[CalendarReminder]:
-        """Gets the reminders of this CalendarDto.
-
+        """
         Reminders.
 
         :return: The reminders of this CalendarDto.
@@ -575,8 +545,7 @@ class CalendarDto(object):
 
     @reminders.setter
     def reminders(self, reminders: List[CalendarReminder]):
-        """Sets the reminders of this CalendarDto.
-
+        """
         Reminders.
 
         :param reminders: The reminders of this CalendarDto.
@@ -586,8 +555,7 @@ class CalendarDto(object):
 
     @property
     def sequence_id(self) -> str:
-        """Gets the sequence_id of this CalendarDto.
-
+        """
         The sequence id. Read only.
 
         :return: The sequence_id of this CalendarDto.
@@ -597,8 +565,7 @@ class CalendarDto(object):
 
     @sequence_id.setter
     def sequence_id(self, sequence_id: str):
-        """Sets the sequence_id of this CalendarDto.
-
+        """
         The sequence id. Read only.
 
         :param sequence_id: The sequence_id of this CalendarDto.
@@ -608,8 +575,7 @@ class CalendarDto(object):
 
     @property
     def start_date(self) -> datetime:
-        """Gets the start_date of this CalendarDto.
-
+        """
         Start date.
 
         :return: The start_date of this CalendarDto.
@@ -619,8 +585,7 @@ class CalendarDto(object):
 
     @start_date.setter
     def start_date(self, start_date: datetime):
-        """Sets the start_date of this CalendarDto.
-
+        """
         Start date.
 
         :param start_date: The start_date of this CalendarDto.
@@ -632,8 +597,7 @@ class CalendarDto(object):
 
     @property
     def start_time_zone(self) -> str:
-        """Gets the start_time_zone of this CalendarDto.
-
+        """
         Start time zone.
 
         :return: The start_time_zone of this CalendarDto.
@@ -643,8 +607,7 @@ class CalendarDto(object):
 
     @start_time_zone.setter
     def start_time_zone(self, start_time_zone: str):
-        """Sets the start_time_zone of this CalendarDto.
-
+        """
         Start time zone.
 
         :param start_time_zone: The start_time_zone of this CalendarDto.
@@ -654,8 +617,7 @@ class CalendarDto(object):
 
     @property
     def status(self) -> str:
-        """Gets the status of this CalendarDto.
-
+        """
         Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
 
         :return: The status of this CalendarDto.
@@ -665,8 +627,7 @@ class CalendarDto(object):
 
     @status.setter
     def status(self, status: str):
-        """Sets the status of this CalendarDto.
-
+        """
         Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
 
         :param status: The status of this CalendarDto.
@@ -678,8 +639,7 @@ class CalendarDto(object):
 
     @property
     def summary(self) -> str:
-        """Gets the summary of this CalendarDto.
-
+        """
         Summary.
 
         :return: The summary of this CalendarDto.
@@ -689,8 +649,7 @@ class CalendarDto(object):
 
     @summary.setter
     def summary(self, summary: str):
-        """Sets the summary of this CalendarDto.
-
+        """
         Summary.
 
         :param summary: The summary of this CalendarDto.
@@ -700,8 +659,7 @@ class CalendarDto(object):
 
     @property
     def transparency(self) -> str:
-        """Gets the transparency of this CalendarDto.
-
+        """
         Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
 
         :return: The transparency of this CalendarDto.
@@ -711,8 +669,7 @@ class CalendarDto(object):
 
     @transparency.setter
     def transparency(self, transparency: str):
-        """Sets the transparency of this CalendarDto.
-
+        """
         Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
 
         :param transparency: The transparency of this CalendarDto.

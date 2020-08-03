@@ -100,10 +100,10 @@ class EmailClientAccount(object):
         if cache_file is not None:
             self.cache_file = cache_file
 
+
     @property
     def host(self) -> str:
-        """Gets the host of this EmailClientAccount.
-
+        """
         Mail server host name or IP address             
 
         :return: The host of this EmailClientAccount.
@@ -113,8 +113,7 @@ class EmailClientAccount(object):
 
     @host.setter
     def host(self, host: str):
-        """Sets the host of this EmailClientAccount.
-
+        """
         Mail server host name or IP address             
 
         :param host: The host of this EmailClientAccount.
@@ -128,8 +127,7 @@ class EmailClientAccount(object):
 
     @property
     def port(self) -> int:
-        """Gets the port of this EmailClientAccount.
-
+        """
         Mail server port             
 
         :return: The port of this EmailClientAccount.
@@ -139,8 +137,7 @@ class EmailClientAccount(object):
 
     @port.setter
     def port(self, port: int):
-        """Sets the port of this EmailClientAccount.
-
+        """
         Mail server port             
 
         :param port: The port of this EmailClientAccount.
@@ -156,8 +153,7 @@ class EmailClientAccount(object):
 
     @property
     def security_options(self) -> str:
-        """Gets the security_options of this EmailClientAccount.
-
+        """
         Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The security_options of this EmailClientAccount.
@@ -167,8 +163,7 @@ class EmailClientAccount(object):
 
     @security_options.setter
     def security_options(self, security_options: str):
-        """Sets the security_options of this EmailClientAccount.
-
+        """
         Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param security_options: The security_options of this EmailClientAccount.
@@ -180,8 +175,7 @@ class EmailClientAccount(object):
 
     @property
     def protocol_type(self) -> str:
-        """Gets the protocol_type of this EmailClientAccount.
-
+        """
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :return: The protocol_type of this EmailClientAccount.
@@ -191,8 +185,7 @@ class EmailClientAccount(object):
 
     @protocol_type.setter
     def protocol_type(self, protocol_type: str):
-        """Sets the protocol_type of this EmailClientAccount.
-
+        """
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :param protocol_type: The protocol_type of this EmailClientAccount.
@@ -204,8 +197,7 @@ class EmailClientAccount(object):
 
     @property
     def credentials(self) -> EmailClientAccountCredentials:
-        """Gets the credentials of this EmailClientAccount.
-
+        """
         Email client account credentials             
 
         :return: The credentials of this EmailClientAccount.
@@ -215,8 +207,7 @@ class EmailClientAccount(object):
 
     @credentials.setter
     def credentials(self, credentials: EmailClientAccountCredentials):
-        """Sets the credentials of this EmailClientAccount.
-
+        """
         Email client account credentials             
 
         :param credentials: The credentials of this EmailClientAccount.
@@ -228,8 +219,7 @@ class EmailClientAccount(object):
 
     @property
     def cache_file(self) -> StorageFileLocation:
-        """Gets the cache_file of this EmailClientAccount.
-
+        """
         File with messages cache. Used to provide extra functions, which are not supported by account             
 
         :return: The cache_file of this EmailClientAccount.
@@ -239,8 +229,7 @@ class EmailClientAccount(object):
 
     @cache_file.setter
     def cache_file(self, cache_file: StorageFileLocation):
-        """Sets the cache_file of this EmailClientAccount.
-
+        """
         File with messages cache. Used to provide extra functions, which are not supported by account             
 
         :param cache_file: The cache_file of this EmailClientAccount.

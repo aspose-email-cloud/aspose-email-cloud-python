@@ -69,10 +69,10 @@ class EnumWithCustomOfPhoneNumberCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
         Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
 
         :return: The value of this EnumWithCustomOfPhoneNumberCategory.
@@ -82,8 +82,7 @@ class EnumWithCustomOfPhoneNumberCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
         Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
 
         :param value: The value of this EnumWithCustomOfPhoneNumberCategory.
@@ -97,8 +96,8 @@ class EnumWithCustomOfPhoneNumberCategory(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfPhoneNumberCategory.
 
         :return: The description of this EnumWithCustomOfPhoneNumberCategory.
         :rtype: str
@@ -107,8 +106,8 @@ class EnumWithCustomOfPhoneNumberCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfPhoneNumberCategory.
 
         :param description: The description of this EnumWithCustomOfPhoneNumberCategory.
         :type: str

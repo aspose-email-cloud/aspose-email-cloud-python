@@ -69,10 +69,10 @@ class ContentTypeParameter(object):
         if value is not None:
             self.value = value
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this ContentTypeParameter.
-
+        """
         Parameter name             
 
         :return: The name of this ContentTypeParameter.
@@ -82,8 +82,7 @@ class ContentTypeParameter(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this ContentTypeParameter.
-
+        """
         Parameter name             
 
         :param name: The name of this ContentTypeParameter.
@@ -93,8 +92,7 @@ class ContentTypeParameter(object):
 
     @property
     def value(self) -> str:
-        """Gets the value of this ContentTypeParameter.
-
+        """
         Parameter value             
 
         :return: The value of this ContentTypeParameter.
@@ -104,8 +102,7 @@ class ContentTypeParameter(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this ContentTypeParameter.
-
+        """
         Parameter value             
 
         :param value: The value of this ContentTypeParameter.

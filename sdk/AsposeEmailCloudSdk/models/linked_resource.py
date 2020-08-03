@@ -90,10 +90,10 @@ class LinkedResource(AttachmentBase):
         if content_link is not None:
             self.content_link = content_link
 
+
     @property
     def content_link(self) -> str:
-        """Gets the content_link of this LinkedResource.
-
+        """
         URI that the resource must match.             
 
         :return: The content_link of this LinkedResource.
@@ -103,8 +103,7 @@ class LinkedResource(AttachmentBase):
 
     @content_link.setter
     def content_link(self, content_link: str):
-        """Sets the content_link of this LinkedResource.
-
+        """
         URI that the resource must match.             
 
         :param content_link: The content_link of this LinkedResource.

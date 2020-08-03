@@ -64,10 +64,11 @@ class ListResponseOfStorageFileLocation(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[StorageFileLocation]:
-        """Gets the value of this ListResponseOfStorageFileLocation.
-
+        """
+        Gets the value of this ListResponseOfStorageFileLocation.
 
         :return: The value of this ListResponseOfStorageFileLocation.
         :rtype: list[StorageFileLocation]
@@ -76,8 +77,8 @@ class ListResponseOfStorageFileLocation(object):
 
     @value.setter
     def value(self, value: List[StorageFileLocation]):
-        """Sets the value of this ListResponseOfStorageFileLocation.
-
+        """
+        Sets the value of this ListResponseOfStorageFileLocation.
 
         :param value: The value of this ListResponseOfStorageFileLocation.
         :type: list[StorageFileLocation]

@@ -34,7 +34,8 @@ def test_discover_email_config(td: EmailApiData):
 
 @pytest.mark.pipeline
 def test_is_disposable_email(td: EmailApiData):
-    disposable = td.api.disposable_email.is_disposable(models.DisposableEmailIsDisposableRequest('example@mailcatch.com'))
+    disposable = td.api.disposable_email.is_disposable(
+        models.DisposableEmailIsDisposableRequest('example@mailcatch.com'))
     assert disposable.value
     regular = td.api.disposable_email.is_disposable(models.DisposableEmailIsDisposableRequest('example@gmail.com'))
     assert not regular.value
@@ -48,7 +49,7 @@ def test_email_client_account(td: EmailApiData):
         'SSLAuto',
         'SMTP',
         models.EmailClientAccountPasswordCredentials(
-            'login', None, 'password'))
+            'login', 'password'))
     name = str(uuid.uuid4()) + '.account'
     td.api.client.account.save(models.EmailClientAccountSaveRequest(
         models.StorageFileLocation(td.storage, td.folder, name),
@@ -69,13 +70,13 @@ def test_email_client_multi_account(td: EmailApiData):
     multi_account = models.EmailClientMultiAccount(
         [models.EmailClientAccount('imap.gmail.com', 993, 'SSLAuto', 'IMAP',
                                    models.EmailClientAccountPasswordCredentials(
-                                       'example@gmail.com', None, 'password')),
+                                       'example@gmail.com', 'password')),
          models.EmailClientAccount('exchange.outlook.com', 443, 'SSLAuto', 'EWS',
                                    models.EmailClientAccountOauthCredentials(
                                        'example@outlook.com', None, 'client_id', 'client_secret', 'refresh_token'))],
         models.EmailClientAccount('smtp.gmail.com', 465, 'SSLAuto', 'SMTP',
                                   models.EmailClientAccountPasswordCredentials(
-                                      'example@gmail.com', None, 'password')))
+                                      'example@gmail.com', 'password')))
     file_name = str(uuid.uuid4()) + '.multi.account'
     # Save multi account
     td.api.client.account.save_multi(models.EmailClientMultiAccountSaveRequest(

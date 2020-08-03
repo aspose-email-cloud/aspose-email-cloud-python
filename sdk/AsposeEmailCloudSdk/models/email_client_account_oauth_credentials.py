@@ -62,13 +62,11 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
         'request_url': 'requestUrl'
     }
 
-    def __init__(self, login: str = None, discriminator: str = None, client_id: str = None, client_secret: str = None, refresh_token: str = None, request_url: str = None):
+    def __init__(self, login: str = None, client_id: str = None, client_secret: str = None, refresh_token: str = None, request_url: str = None):
         """
         Represents email client account OAuth 2.0 credentials             
         :param login: Email client account login             
         :type login: str
-        :param discriminator: 
-        :type discriminator: str
         :param client_id: The client ID obtained from the Google Cloud Console during application registration.             
         :type client_id: str
         :param client_secret: The client secret obtained during application registration.             
@@ -87,8 +85,6 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
         if login is not None:
             self.login = login
-        if discriminator is not None:
-            self.discriminator = discriminator
         if client_id is not None:
             self.client_id = client_id
         if client_secret is not None:
@@ -98,10 +94,10 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
         if request_url is not None:
             self.request_url = request_url
 
+
     @property
     def client_id(self) -> str:
-        """Gets the client_id of this EmailClientAccountOauthCredentials.
-
+        """
         The client ID obtained from the Google Cloud Console during application registration.             
 
         :return: The client_id of this EmailClientAccountOauthCredentials.
@@ -111,8 +107,7 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
     @client_id.setter
     def client_id(self, client_id: str):
-        """Sets the client_id of this EmailClientAccountOauthCredentials.
-
+        """
         The client ID obtained from the Google Cloud Console during application registration.             
 
         :param client_id: The client_id of this EmailClientAccountOauthCredentials.
@@ -126,8 +121,7 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
     @property
     def client_secret(self) -> str:
-        """Gets the client_secret of this EmailClientAccountOauthCredentials.
-
+        """
         The client secret obtained during application registration.             
 
         :return: The client_secret of this EmailClientAccountOauthCredentials.
@@ -137,8 +131,7 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
     @client_secret.setter
     def client_secret(self, client_secret: str):
-        """Sets the client_secret of this EmailClientAccountOauthCredentials.
-
+        """
         The client secret obtained during application registration.             
 
         :param client_secret: The client_secret of this EmailClientAccountOauthCredentials.
@@ -152,8 +145,7 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
     @property
     def refresh_token(self) -> str:
-        """Gets the refresh_token of this EmailClientAccountOauthCredentials.
-
+        """
         OAuth 2.0 refresh token             
 
         :return: The refresh_token of this EmailClientAccountOauthCredentials.
@@ -163,8 +155,7 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
     @refresh_token.setter
     def refresh_token(self, refresh_token: str):
-        """Sets the refresh_token of this EmailClientAccountOauthCredentials.
-
+        """
         OAuth 2.0 refresh token             
 
         :param refresh_token: The refresh_token of this EmailClientAccountOauthCredentials.
@@ -178,8 +169,7 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
     @property
     def request_url(self) -> str:
-        """Gets the request_url of this EmailClientAccountOauthCredentials.
-
+        """
         The url to obtain access token. If not specified, will try to discover from email client account host.             
 
         :return: The request_url of this EmailClientAccountOauthCredentials.
@@ -189,8 +179,7 @@ class EmailClientAccountOauthCredentials(EmailClientAccountCredentials):
 
     @request_url.setter
     def request_url(self, request_url: str):
-        """Sets the request_url of this EmailClientAccountOauthCredentials.
-
+        """
         The url to obtain access token. If not specified, will try to discover from email client account host.             
 
         :param request_url: The request_url of this EmailClientAccountOauthCredentials.

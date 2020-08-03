@@ -78,10 +78,10 @@ class ClientThreadDeleteRequest(ClientThreadBaseRequest):
         if folder is not None:
             self.folder = folder
 
+
     @property
     def folder(self) -> str:
-        """Gets the folder of this ClientThreadDeleteRequest.
-
+        """
         Folder on email server, where thread is stored.             
 
         :return: The folder of this ClientThreadDeleteRequest.
@@ -91,8 +91,7 @@ class ClientThreadDeleteRequest(ClientThreadBaseRequest):
 
     @folder.setter
     def folder(self, folder: str):
-        """Sets the folder of this ClientThreadDeleteRequest.
-
+        """
         Folder on email server, where thread is stored.             
 
         :param folder: The folder of this ClientThreadDeleteRequest.

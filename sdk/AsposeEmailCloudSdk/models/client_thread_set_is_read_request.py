@@ -85,10 +85,10 @@ class ClientThreadSetIsReadRequest(ClientThreadBaseRequest):
         if folder is not None:
             self.folder = folder
 
+
     @property
     def is_read(self) -> bool:
-        """Gets the is_read of this ClientThreadSetIsReadRequest.
-
+        """
         Message is read flag.             
 
         :return: The is_read of this ClientThreadSetIsReadRequest.
@@ -98,8 +98,7 @@ class ClientThreadSetIsReadRequest(ClientThreadBaseRequest):
 
     @is_read.setter
     def is_read(self, is_read: bool):
-        """Sets the is_read of this ClientThreadSetIsReadRequest.
-
+        """
         Message is read flag.             
 
         :param is_read: The is_read of this ClientThreadSetIsReadRequest.
@@ -111,8 +110,7 @@ class ClientThreadSetIsReadRequest(ClientThreadBaseRequest):
 
     @property
     def folder(self) -> str:
-        """Gets the folder of this ClientThreadSetIsReadRequest.
-
+        """
         Folder on email server, where thread is stored.             
 
         :return: The folder of this ClientThreadSetIsReadRequest.
@@ -122,8 +120,7 @@ class ClientThreadSetIsReadRequest(ClientThreadBaseRequest):
 
     @folder.setter
     def folder(self, folder: str):
-        """Sets the folder of this ClientThreadSetIsReadRequest.
-
+        """
         Folder on email server, where thread is stored.             
 
         :param folder: The folder of this ClientThreadSetIsReadRequest.

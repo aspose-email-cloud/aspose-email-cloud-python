@@ -80,10 +80,10 @@ class AiBcrParseStorageRequest(object):
         if options is not None:
             self.options = options
 
+
     @property
     def out_folder(self) -> StorageFolderLocation:
-        """Gets the out_folder of this AiBcrParseStorageRequest.
-
+        """
         Parse output folder location on storage             
 
         :return: The out_folder of this AiBcrParseStorageRequest.
@@ -93,8 +93,7 @@ class AiBcrParseStorageRequest(object):
 
     @out_folder.setter
     def out_folder(self, out_folder: StorageFolderLocation):
-        """Sets the out_folder of this AiBcrParseStorageRequest.
-
+        """
         Parse output folder location on storage             
 
         :param out_folder: The out_folder of this AiBcrParseStorageRequest.
@@ -106,8 +105,7 @@ class AiBcrParseStorageRequest(object):
 
     @property
     def images(self) -> List[AiBcrImageStorageFile]:
-        """Gets the images of this AiBcrParseStorageRequest.
-
+        """
         Images to parse.             
 
         :return: The images of this AiBcrParseStorageRequest.
@@ -117,8 +115,7 @@ class AiBcrParseStorageRequest(object):
 
     @images.setter
     def images(self, images: List[AiBcrImageStorageFile]):
-        """Sets the images of this AiBcrParseStorageRequest.
-
+        """
         Images to parse.             
 
         :param images: The images of this AiBcrParseStorageRequest.
@@ -130,8 +127,7 @@ class AiBcrParseStorageRequest(object):
 
     @property
     def options(self) -> AiBcrOptions:
-        """Gets the options of this AiBcrParseStorageRequest.
-
+        """
         Recognition options.             
 
         :return: The options of this AiBcrParseStorageRequest.
@@ -141,8 +137,7 @@ class AiBcrParseStorageRequest(object):
 
     @options.setter
     def options(self, options: AiBcrOptions):
-        """Sets the options of this AiBcrParseStorageRequest.
-
+        """
         Recognition options.             
 
         :param options: The options of this AiBcrParseStorageRequest.

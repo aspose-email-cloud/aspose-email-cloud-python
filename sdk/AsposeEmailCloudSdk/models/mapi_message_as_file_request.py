@@ -71,10 +71,10 @@ class MapiMessageAsFileRequest(object):
         if value is not None:
             self.value = value
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this MapiMessageAsFileRequest.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :return: The format of this MapiMessageAsFileRequest.
@@ -84,8 +84,7 @@ class MapiMessageAsFileRequest(object):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this MapiMessageAsFileRequest.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :param format: The format of this MapiMessageAsFileRequest.
@@ -97,8 +96,7 @@ class MapiMessageAsFileRequest(object):
 
     @property
     def value(self) -> MapiMessageDto:
-        """Gets the value of this MapiMessageAsFileRequest.
-
+        """
         MAPI message model.             
 
         :return: The value of this MapiMessageAsFileRequest.
@@ -108,8 +106,7 @@ class MapiMessageAsFileRequest(object):
 
     @value.setter
     def value(self, value: MapiMessageDto):
-        """Sets the value of this MapiMessageAsFileRequest.
-
+        """
         MAPI message model.             
 
         :param value: The value of this MapiMessageAsFileRequest.

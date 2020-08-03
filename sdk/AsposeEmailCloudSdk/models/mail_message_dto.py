@@ -55,27 +55,22 @@ class MailMessageDto(MailMessageBase):
         'value': 'value'
     }
 
-    def __init__(self, discriminator: str = None, value: EmailDto = None):
+    def __init__(self, value: EmailDto = None):
         """
         Represents email message, stored as an EmailDto object.             
-        :param discriminator: 
-        :type discriminator: str
         :param value: Message document object.             
         :type value: EmailDto
         """
         super(MailMessageDto, self).__init__()
 
         self._value = None
-
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> EmailDto:
-        """Gets the value of this MailMessageDto.
-
+        """
         Message document object.             
 
         :return: The value of this MailMessageDto.
@@ -85,8 +80,7 @@ class MailMessageDto(MailMessageBase):
 
     @value.setter
     def value(self, value: EmailDto):
-        """Sets the value of this MailMessageDto.
-
+        """
         Message document object.             
 
         :param value: The value of this MailMessageDto.

@@ -79,10 +79,10 @@ class MapiContactSaveRequest(StorageModelOfMapiContactDto):
         if format is not None:
             self.format = format
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this MapiContactSaveRequest.
-
+        """
         Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
 
         :return: The format of this MapiContactSaveRequest.
@@ -92,8 +92,7 @@ class MapiContactSaveRequest(StorageModelOfMapiContactDto):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this MapiContactSaveRequest.
-
+        """
         Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
 
         :param format: The format of this MapiContactSaveRequest.

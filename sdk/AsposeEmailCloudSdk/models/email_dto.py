@@ -284,10 +284,10 @@ class EmailDto(object):
         if x_mailer is not None:
             self.x_mailer = x_mailer
 
+
     @property
     def alternate_views(self) -> List[AlternateView]:
-        """Gets the alternate_views of this EmailDto.
-
+        """
         Collection of alternate views of message.             
 
         :return: The alternate_views of this EmailDto.
@@ -297,8 +297,7 @@ class EmailDto(object):
 
     @alternate_views.setter
     def alternate_views(self, alternate_views: List[AlternateView]):
-        """Sets the alternate_views of this EmailDto.
-
+        """
         Collection of alternate views of message.             
 
         :param alternate_views: The alternate_views of this EmailDto.
@@ -308,8 +307,7 @@ class EmailDto(object):
 
     @property
     def attachments(self) -> List[Attachment]:
-        """Gets the attachments of this EmailDto.
-
+        """
         Email message attachments.             
 
         :return: The attachments of this EmailDto.
@@ -319,8 +317,7 @@ class EmailDto(object):
 
     @attachments.setter
     def attachments(self, attachments: List[Attachment]):
-        """Sets the attachments of this EmailDto.
-
+        """
         Email message attachments.             
 
         :param attachments: The attachments of this EmailDto.
@@ -330,8 +327,7 @@ class EmailDto(object):
 
     @property
     def bcc(self) -> List[MailAddress]:
-        """Gets the bcc of this EmailDto.
-
+        """
         BCC recipients.             
 
         :return: The bcc of this EmailDto.
@@ -341,8 +337,7 @@ class EmailDto(object):
 
     @bcc.setter
     def bcc(self, bcc: List[MailAddress]):
-        """Sets the bcc of this EmailDto.
-
+        """
         BCC recipients.             
 
         :param bcc: The bcc of this EmailDto.
@@ -352,8 +347,7 @@ class EmailDto(object):
 
     @property
     def body(self) -> str:
-        """Gets the body of this EmailDto.
-
+        """
         Email message body as plain text.             
 
         :return: The body of this EmailDto.
@@ -363,8 +357,7 @@ class EmailDto(object):
 
     @body.setter
     def body(self, body: str):
-        """Sets the body of this EmailDto.
-
+        """
         Email message body as plain text.             
 
         :param body: The body of this EmailDto.
@@ -374,8 +367,7 @@ class EmailDto(object):
 
     @property
     def body_encoding(self) -> str:
-        """Gets the body_encoding of this EmailDto.
-
+        """
         Body encoding.             
 
         :return: The body_encoding of this EmailDto.
@@ -385,8 +377,7 @@ class EmailDto(object):
 
     @body_encoding.setter
     def body_encoding(self, body_encoding: str):
-        """Sets the body_encoding of this EmailDto.
-
+        """
         Body encoding.             
 
         :param body_encoding: The body_encoding of this EmailDto.
@@ -396,8 +387,7 @@ class EmailDto(object):
 
     @property
     def body_type(self) -> str:
-        """Gets the body_type of this EmailDto.
-
+        """
         The content type of message body. Enum, available values: PlainText, Html, Rtf
 
         :return: The body_type of this EmailDto.
@@ -407,8 +397,7 @@ class EmailDto(object):
 
     @body_type.setter
     def body_type(self, body_type: str):
-        """Sets the body_type of this EmailDto.
-
+        """
         The content type of message body. Enum, available values: PlainText, Html, Rtf
 
         :param body_type: The body_type of this EmailDto.
@@ -420,8 +409,7 @@ class EmailDto(object):
 
     @property
     def cc(self) -> List[MailAddress]:
-        """Gets the cc of this EmailDto.
-
+        """
         CC recipients.             
 
         :return: The cc of this EmailDto.
@@ -431,8 +419,7 @@ class EmailDto(object):
 
     @cc.setter
     def cc(self, cc: List[MailAddress]):
-        """Sets the cc of this EmailDto.
-
+        """
         CC recipients.             
 
         :param cc: The cc of this EmailDto.
@@ -442,8 +429,7 @@ class EmailDto(object):
 
     @property
     def _date(self) -> datetime:
-        """Gets the _date of this EmailDto.
-
+        """
         Message date.             
 
         :return: The _date of this EmailDto.
@@ -453,8 +439,7 @@ class EmailDto(object):
 
     @_date.setter
     def _date(self, _date: datetime):
-        """Sets the _date of this EmailDto.
-
+        """
         Message date.             
 
         :param _date: The _date of this EmailDto.
@@ -466,8 +451,7 @@ class EmailDto(object):
 
     @property
     def delivery_notification_options(self) -> List[str]:
-        """Gets the delivery_notification_options of this EmailDto.
-
+        """
         Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
 
         :return: The delivery_notification_options of this EmailDto.
@@ -477,8 +461,7 @@ class EmailDto(object):
 
     @delivery_notification_options.setter
     def delivery_notification_options(self, delivery_notification_options: List[str]):
-        """Sets the delivery_notification_options of this EmailDto.
-
+        """
         Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
 
         :param delivery_notification_options: The delivery_notification_options of this EmailDto.
@@ -488,8 +471,7 @@ class EmailDto(object):
 
     @property
     def _from(self) -> MailAddress:
-        """Gets the _from of this EmailDto.
-
+        """
         From address.             
 
         :return: The _from of this EmailDto.
@@ -499,8 +481,7 @@ class EmailDto(object):
 
     @_from.setter
     def _from(self, _from: MailAddress):
-        """Sets the _from of this EmailDto.
-
+        """
         From address.             
 
         :param _from: The _from of this EmailDto.
@@ -510,8 +491,7 @@ class EmailDto(object):
 
     @property
     def headers(self) -> Dict[str, str]:
-        """Gets the headers of this EmailDto.
-
+        """
         Document headers.             
 
         :return: The headers of this EmailDto.
@@ -521,8 +501,7 @@ class EmailDto(object):
 
     @headers.setter
     def headers(self, headers: Dict[str, str]):
-        """Sets the headers of this EmailDto.
-
+        """
         Document headers.             
 
         :param headers: The headers of this EmailDto.
@@ -532,8 +511,7 @@ class EmailDto(object):
 
     @property
     def html_body(self) -> str:
-        """Gets the html_body of this EmailDto.
-
+        """
         HTML body.             
 
         :return: The html_body of this EmailDto.
@@ -543,8 +521,7 @@ class EmailDto(object):
 
     @html_body.setter
     def html_body(self, html_body: str):
-        """Sets the html_body of this EmailDto.
-
+        """
         HTML body.             
 
         :param html_body: The html_body of this EmailDto.
@@ -554,8 +531,7 @@ class EmailDto(object):
 
     @property
     def html_body_text(self) -> str:
-        """Gets the html_body_text of this EmailDto.
-
+        """
         Html body as plain text. Read only.             
 
         :return: The html_body_text of this EmailDto.
@@ -565,8 +541,7 @@ class EmailDto(object):
 
     @html_body_text.setter
     def html_body_text(self, html_body_text: str):
-        """Sets the html_body_text of this EmailDto.
-
+        """
         Html body as plain text. Read only.             
 
         :param html_body_text: The html_body_text of this EmailDto.
@@ -576,8 +551,7 @@ class EmailDto(object):
 
     @property
     def is_body_html(self) -> bool:
-        """Gets the is_body_html of this EmailDto.
-
+        """
         Indicates whether the message body is in Html.             
 
         :return: The is_body_html of this EmailDto.
@@ -587,8 +561,7 @@ class EmailDto(object):
 
     @is_body_html.setter
     def is_body_html(self, is_body_html: bool):
-        """Sets the is_body_html of this EmailDto.
-
+        """
         Indicates whether the message body is in Html.             
 
         :param is_body_html: The is_body_html of this EmailDto.
@@ -600,8 +573,7 @@ class EmailDto(object):
 
     @property
     def is_draft(self) -> bool:
-        """Gets the is_draft of this EmailDto.
-
+        """
         Indicates whether or not a message has been sent.             
 
         :return: The is_draft of this EmailDto.
@@ -611,8 +583,7 @@ class EmailDto(object):
 
     @is_draft.setter
     def is_draft(self, is_draft: bool):
-        """Sets the is_draft of this EmailDto.
-
+        """
         Indicates whether or not a message has been sent.             
 
         :param is_draft: The is_draft of this EmailDto.
@@ -624,8 +595,7 @@ class EmailDto(object):
 
     @property
     def is_encrypted(self) -> bool:
-        """Gets the is_encrypted of this EmailDto.
-
+        """
         Indicates whether the message is encrypted. Read only.             
 
         :return: The is_encrypted of this EmailDto.
@@ -635,8 +605,7 @@ class EmailDto(object):
 
     @is_encrypted.setter
     def is_encrypted(self, is_encrypted: bool):
-        """Sets the is_encrypted of this EmailDto.
-
+        """
         Indicates whether the message is encrypted. Read only.             
 
         :param is_encrypted: The is_encrypted of this EmailDto.
@@ -648,8 +617,7 @@ class EmailDto(object):
 
     @property
     def is_signed(self) -> bool:
-        """Gets the is_signed of this EmailDto.
-
+        """
         Indicates whether the message is signed. Read only.             
 
         :return: The is_signed of this EmailDto.
@@ -659,8 +627,7 @@ class EmailDto(object):
 
     @is_signed.setter
     def is_signed(self, is_signed: bool):
-        """Sets the is_signed of this EmailDto.
-
+        """
         Indicates whether the message is signed. Read only.             
 
         :param is_signed: The is_signed of this EmailDto.
@@ -672,8 +639,7 @@ class EmailDto(object):
 
     @property
     def linked_resources(self) -> List[LinkedResource]:
-        """Gets the linked_resources of this EmailDto.
-
+        """
         Linked resources of message.             
 
         :return: The linked_resources of this EmailDto.
@@ -683,8 +649,7 @@ class EmailDto(object):
 
     @linked_resources.setter
     def linked_resources(self, linked_resources: List[LinkedResource]):
-        """Sets the linked_resources of this EmailDto.
-
+        """
         Linked resources of message.             
 
         :param linked_resources: The linked_resources of this EmailDto.
@@ -694,8 +659,7 @@ class EmailDto(object):
 
     @property
     def message_id(self) -> str:
-        """Gets the message_id of this EmailDto.
-
+        """
         Message id.             
 
         :return: The message_id of this EmailDto.
@@ -705,8 +669,7 @@ class EmailDto(object):
 
     @message_id.setter
     def message_id(self, message_id: str):
-        """Sets the message_id of this EmailDto.
-
+        """
         Message id.             
 
         :param message_id: The message_id of this EmailDto.
@@ -716,8 +679,7 @@ class EmailDto(object):
 
     @property
     def original_is_tnef(self) -> bool:
-        """Gets the original_is_tnef of this EmailDto.
-
+        """
         Indicates whether original EML message is in TNEF format. Read only.             
 
         :return: The original_is_tnef of this EmailDto.
@@ -727,8 +689,7 @@ class EmailDto(object):
 
     @original_is_tnef.setter
     def original_is_tnef(self, original_is_tnef: bool):
-        """Sets the original_is_tnef of this EmailDto.
-
+        """
         Indicates whether original EML message is in TNEF format. Read only.             
 
         :param original_is_tnef: The original_is_tnef of this EmailDto.
@@ -740,8 +701,7 @@ class EmailDto(object):
 
     @property
     def preferred_text_encoding(self) -> str:
-        """Gets the preferred_text_encoding of this EmailDto.
-
+        """
         Preferred encoding.             
 
         :return: The preferred_text_encoding of this EmailDto.
@@ -751,8 +711,7 @@ class EmailDto(object):
 
     @preferred_text_encoding.setter
     def preferred_text_encoding(self, preferred_text_encoding: str):
-        """Sets the preferred_text_encoding of this EmailDto.
-
+        """
         Preferred encoding.             
 
         :param preferred_text_encoding: The preferred_text_encoding of this EmailDto.
@@ -762,8 +721,7 @@ class EmailDto(object):
 
     @property
     def priority(self) -> str:
-        """Gets the priority of this EmailDto.
-
+        """
         Email priority status. Enum, available values: High, Low, Normal
 
         :return: The priority of this EmailDto.
@@ -773,8 +731,7 @@ class EmailDto(object):
 
     @priority.setter
     def priority(self, priority: str):
-        """Sets the priority of this EmailDto.
-
+        """
         Email priority status. Enum, available values: High, Low, Normal
 
         :param priority: The priority of this EmailDto.
@@ -786,8 +743,7 @@ class EmailDto(object):
 
     @property
     def read_receipt_to(self) -> List[MailAddress]:
-        """Gets the read_receipt_to of this EmailDto.
-
+        """
         Read receipt addresses.             
 
         :return: The read_receipt_to of this EmailDto.
@@ -797,8 +753,7 @@ class EmailDto(object):
 
     @read_receipt_to.setter
     def read_receipt_to(self, read_receipt_to: List[MailAddress]):
-        """Sets the read_receipt_to of this EmailDto.
-
+        """
         Read receipt addresses.             
 
         :param read_receipt_to: The read_receipt_to of this EmailDto.
@@ -808,8 +763,7 @@ class EmailDto(object):
 
     @property
     def reply_to_list(self) -> List[MailAddress]:
-        """Gets the reply_to_list of this EmailDto.
-
+        """
         The list of addresses to reply to for the mail message.             
 
         :return: The reply_to_list of this EmailDto.
@@ -819,8 +773,7 @@ class EmailDto(object):
 
     @reply_to_list.setter
     def reply_to_list(self, reply_to_list: List[MailAddress]):
-        """Sets the reply_to_list of this EmailDto.
-
+        """
         The list of addresses to reply to for the mail message.             
 
         :param reply_to_list: The reply_to_list of this EmailDto.
@@ -830,8 +783,7 @@ class EmailDto(object):
 
     @property
     def reverse_path(self) -> MailAddress:
-        """Gets the reverse_path of this EmailDto.
-
+        """
         ReversePath address.             
 
         :return: The reverse_path of this EmailDto.
@@ -841,8 +793,7 @@ class EmailDto(object):
 
     @reverse_path.setter
     def reverse_path(self, reverse_path: MailAddress):
-        """Sets the reverse_path of this EmailDto.
-
+        """
         ReversePath address.             
 
         :param reverse_path: The reverse_path of this EmailDto.
@@ -852,8 +803,7 @@ class EmailDto(object):
 
     @property
     def sender(self) -> MailAddress:
-        """Gets the sender of this EmailDto.
-
+        """
         Sender address.             
 
         :return: The sender of this EmailDto.
@@ -863,8 +813,7 @@ class EmailDto(object):
 
     @sender.setter
     def sender(self, sender: MailAddress):
-        """Sets the sender of this EmailDto.
-
+        """
         Sender address.             
 
         :param sender: The sender of this EmailDto.
@@ -874,8 +823,7 @@ class EmailDto(object):
 
     @property
     def sensitivity(self) -> str:
-        """Gets the sensitivity of this EmailDto.
-
+        """
         Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
 
         :return: The sensitivity of this EmailDto.
@@ -885,8 +833,7 @@ class EmailDto(object):
 
     @sensitivity.setter
     def sensitivity(self, sensitivity: str):
-        """Sets the sensitivity of this EmailDto.
-
+        """
         Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
 
         :param sensitivity: The sensitivity of this EmailDto.
@@ -898,8 +845,7 @@ class EmailDto(object):
 
     @property
     def subject(self) -> str:
-        """Gets the subject of this EmailDto.
-
+        """
         Message subject.             
 
         :return: The subject of this EmailDto.
@@ -909,8 +855,7 @@ class EmailDto(object):
 
     @subject.setter
     def subject(self, subject: str):
-        """Sets the subject of this EmailDto.
-
+        """
         Message subject.             
 
         :param subject: The subject of this EmailDto.
@@ -920,8 +865,7 @@ class EmailDto(object):
 
     @property
     def subject_encoding(self) -> str:
-        """Gets the subject_encoding of this EmailDto.
-
+        """
         Subject encoding.             
 
         :return: The subject_encoding of this EmailDto.
@@ -931,8 +875,7 @@ class EmailDto(object):
 
     @subject_encoding.setter
     def subject_encoding(self, subject_encoding: str):
-        """Sets the subject_encoding of this EmailDto.
-
+        """
         Subject encoding.             
 
         :param subject_encoding: The subject_encoding of this EmailDto.
@@ -942,8 +885,7 @@ class EmailDto(object):
 
     @property
     def time_zone_offset(self) -> int:
-        """Gets the time_zone_offset of this EmailDto.
-
+        """
         Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
 
         :return: The time_zone_offset of this EmailDto.
@@ -953,8 +895,7 @@ class EmailDto(object):
 
     @time_zone_offset.setter
     def time_zone_offset(self, time_zone_offset: int):
-        """Sets the time_zone_offset of this EmailDto.
-
+        """
         Coordinated Universal Time (UTC) offset for the message dates. This property defines the time zone difference, between the local time and UTC represented as count of ticks (10 000 per millisecond).             
 
         :param time_zone_offset: The time_zone_offset of this EmailDto.
@@ -964,8 +905,7 @@ class EmailDto(object):
 
     @property
     def to(self) -> List[MailAddress]:
-        """Gets the to of this EmailDto.
-
+        """
         The address collection that contains the recipients of message.             
 
         :return: The to of this EmailDto.
@@ -975,8 +915,7 @@ class EmailDto(object):
 
     @to.setter
     def to(self, to: List[MailAddress]):
-        """Sets the to of this EmailDto.
-
+        """
         The address collection that contains the recipients of message.             
 
         :param to: The to of this EmailDto.
@@ -986,8 +925,7 @@ class EmailDto(object):
 
     @property
     def x_mailer(self) -> str:
-        """Gets the x_mailer of this EmailDto.
-
+        """
         The X-Mailer the software that created the e-mail message.             
 
         :return: The x_mailer of this EmailDto.
@@ -997,8 +935,7 @@ class EmailDto(object):
 
     @x_mailer.setter
     def x_mailer(self, x_mailer: str):
-        """Sets the x_mailer of this EmailDto.
-
+        """
         The X-Mailer the software that created the e-mail message.             
 
         :param x_mailer: The x_mailer of this EmailDto.

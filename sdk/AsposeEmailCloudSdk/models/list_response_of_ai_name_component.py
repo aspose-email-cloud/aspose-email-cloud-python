@@ -64,10 +64,11 @@ class ListResponseOfAiNameComponent(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[AiNameComponent]:
-        """Gets the value of this ListResponseOfAiNameComponent.
-
+        """
+        Gets the value of this ListResponseOfAiNameComponent.
 
         :return: The value of this ListResponseOfAiNameComponent.
         :rtype: list[AiNameComponent]
@@ -76,8 +77,8 @@ class ListResponseOfAiNameComponent(object):
 
     @value.setter
     def value(self, value: List[AiNameComponent]):
-        """Sets the value of this ListResponseOfAiNameComponent.
-
+        """
+        Sets the value of this ListResponseOfAiNameComponent.
 
         :param value: The value of this ListResponseOfAiNameComponent.
         :type: list[AiNameComponent]

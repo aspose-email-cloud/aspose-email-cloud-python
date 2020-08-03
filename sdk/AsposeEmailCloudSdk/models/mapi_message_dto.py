@@ -137,7 +137,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
         'transport_message_headers': 'transportMessageHeaders'
     }
 
-    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, message_body: str = None, client_submit_time: datetime = None, conversation_topic: str = None, delivery_time: datetime = None, display_bcc: str = None, display_cc: str = None, display_name: str = None, display_name_prefix: str = None, display_to: str = None, flags: List[str] = None, headers: Dict[str, str] = None, internet_message_id: str = None, message_format: str = None, normalized_subject: str = None, read_receipt_requested: bool = None, reply_to: str = None, sender_address_type: str = None, sender_email_address: str = None, sender_name: str = None, sender_smtp_address: str = None, sent_representing_address_type: str = None, sent_representing_email_address: str = None, sent_representing_name: str = None, sent_representing_smtp_address: str = None, transport_message_headers: str = None):
+    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, message_body: str = None, client_submit_time: datetime = None, conversation_topic: str = None, delivery_time: datetime = None, display_bcc: str = None, display_cc: str = None, display_name: str = None, display_name_prefix: str = None, display_to: str = None, flags: List[str] = None, headers: Dict[str, str] = None, internet_message_id: str = None, message_format: str = None, normalized_subject: str = None, read_receipt_requested: bool = None, reply_to: str = None, sender_address_type: str = None, sender_email_address: str = None, sender_name: str = None, sender_smtp_address: str = None, sent_representing_address_type: str = None, sent_representing_email_address: str = None, sent_representing_name: str = None, sent_representing_smtp_address: str = None, transport_message_headers: str = None):
         """
         Represents an Outlook Message format document.             
         :param attachments: Message item attachments.             
@@ -172,8 +172,6 @@ class MapiMessageDto(MapiMessageItemBaseDto):
         :type subject_prefix: str
         :param properties: List of MAPI properties             
         :type properties: List[MapiPropertyDto]
-        :param discriminator: 
-        :type discriminator: str
         :param message_body: Message text             
         :type message_body: str
         :param client_submit_time: Date and time the message sender submitted a message.             
@@ -285,8 +283,6 @@ class MapiMessageDto(MapiMessageItemBaseDto):
             self.subject_prefix = subject_prefix
         if properties is not None:
             self.properties = properties
-        if discriminator is not None:
-            self.discriminator = discriminator
         if message_body is not None:
             self.message_body = message_body
         if client_submit_time is not None:
@@ -338,10 +334,10 @@ class MapiMessageDto(MapiMessageItemBaseDto):
         if transport_message_headers is not None:
             self.transport_message_headers = transport_message_headers
 
+
     @property
     def message_body(self) -> str:
-        """Gets the message_body of this MapiMessageDto.
-
+        """
         Message text             
 
         :return: The message_body of this MapiMessageDto.
@@ -351,8 +347,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @message_body.setter
     def message_body(self, message_body: str):
-        """Sets the message_body of this MapiMessageDto.
-
+        """
         Message text             
 
         :param message_body: The message_body of this MapiMessageDto.
@@ -362,8 +357,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def client_submit_time(self) -> datetime:
-        """Gets the client_submit_time of this MapiMessageDto.
-
+        """
         Date and time the message sender submitted a message.             
 
         :return: The client_submit_time of this MapiMessageDto.
@@ -373,8 +367,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @client_submit_time.setter
     def client_submit_time(self, client_submit_time: datetime):
-        """Sets the client_submit_time of this MapiMessageDto.
-
+        """
         Date and time the message sender submitted a message.             
 
         :param client_submit_time: The client_submit_time of this MapiMessageDto.
@@ -386,8 +379,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def conversation_topic(self) -> str:
-        """Gets the conversation_topic of this MapiMessageDto.
-
+        """
         Topic of the first message in a conversation thread.             
 
         :return: The conversation_topic of this MapiMessageDto.
@@ -397,8 +389,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @conversation_topic.setter
     def conversation_topic(self, conversation_topic: str):
-        """Sets the conversation_topic of this MapiMessageDto.
-
+        """
         Topic of the first message in a conversation thread.             
 
         :param conversation_topic: The conversation_topic of this MapiMessageDto.
@@ -408,8 +399,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def delivery_time(self) -> datetime:
-        """Gets the delivery_time of this MapiMessageDto.
-
+        """
         Date and time a message was delivered.             
 
         :return: The delivery_time of this MapiMessageDto.
@@ -419,8 +409,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @delivery_time.setter
     def delivery_time(self, delivery_time: datetime):
-        """Sets the delivery_time of this MapiMessageDto.
-
+        """
         Date and time a message was delivered.             
 
         :param delivery_time: The delivery_time of this MapiMessageDto.
@@ -432,8 +421,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def display_bcc(self) -> str:
-        """Gets the display_bcc of this MapiMessageDto.
-
+        """
         List of the display names of any blind carbon copy (BCC) message recipients, separated by semicolons (;).             
 
         :return: The display_bcc of this MapiMessageDto.
@@ -443,8 +431,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @display_bcc.setter
     def display_bcc(self, display_bcc: str):
-        """Sets the display_bcc of this MapiMessageDto.
-
+        """
         List of the display names of any blind carbon copy (BCC) message recipients, separated by semicolons (;).             
 
         :param display_bcc: The display_bcc of this MapiMessageDto.
@@ -454,8 +441,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def display_cc(self) -> str:
-        """Gets the display_cc of this MapiMessageDto.
-
+        """
         List of the display names of any carbon copy (CC) message recipients, separated by semicolons (;).             
 
         :return: The display_cc of this MapiMessageDto.
@@ -465,8 +451,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @display_cc.setter
     def display_cc(self, display_cc: str):
-        """Sets the display_cc of this MapiMessageDto.
-
+        """
         List of the display names of any carbon copy (CC) message recipients, separated by semicolons (;).             
 
         :param display_cc: The display_cc of this MapiMessageDto.
@@ -476,8 +461,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this MapiMessageDto.
-
+        """
         Display name for the message.             
 
         :return: The display_name of this MapiMessageDto.
@@ -487,8 +471,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this MapiMessageDto.
-
+        """
         Display name for the message.             
 
         :param display_name: The display_name of this MapiMessageDto.
@@ -498,8 +481,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def display_name_prefix(self) -> str:
-        """Gets the display_name_prefix of this MapiMessageDto.
-
+        """
         Prefix of the display name.             
 
         :return: The display_name_prefix of this MapiMessageDto.
@@ -509,8 +491,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @display_name_prefix.setter
     def display_name_prefix(self, display_name_prefix: str):
-        """Sets the display_name_prefix of this MapiMessageDto.
-
+        """
         Prefix of the display name.             
 
         :param display_name_prefix: The display_name_prefix of this MapiMessageDto.
@@ -520,8 +501,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def display_to(self) -> str:
-        """Gets the display_to of this MapiMessageDto.
-
+        """
         List of the display names of the primary (To) message recipients, separated by semicolons (;).             
 
         :return: The display_to of this MapiMessageDto.
@@ -531,8 +511,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @display_to.setter
     def display_to(self, display_to: str):
-        """Sets the display_to of this MapiMessageDto.
-
+        """
         List of the display names of the primary (To) message recipients, separated by semicolons (;).             
 
         :param display_to: The display_to of this MapiMessageDto.
@@ -542,8 +521,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def flags(self) -> List[str]:
-        """Gets the flags of this MapiMessageDto.
-
+        """
         Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
 
         :return: The flags of this MapiMessageDto.
@@ -553,8 +531,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @flags.setter
     def flags(self, flags: List[str]):
-        """Sets the flags of this MapiMessageDto.
-
+        """
         Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
 
         :param flags: The flags of this MapiMessageDto.
@@ -564,8 +541,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def headers(self) -> Dict[str, str]:
-        """Gets the headers of this MapiMessageDto.
-
+        """
         Transport message headers             
 
         :return: The headers of this MapiMessageDto.
@@ -575,8 +551,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @headers.setter
     def headers(self, headers: Dict[str, str]):
-        """Sets the headers of this MapiMessageDto.
-
+        """
         Transport message headers             
 
         :param headers: The headers of this MapiMessageDto.
@@ -586,8 +561,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def internet_message_id(self) -> str:
-        """Gets the internet_message_id of this MapiMessageDto.
-
+        """
         Internet message id of the message.             
 
         :return: The internet_message_id of this MapiMessageDto.
@@ -597,8 +571,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @internet_message_id.setter
     def internet_message_id(self, internet_message_id: str):
-        """Sets the internet_message_id of this MapiMessageDto.
-
+        """
         Internet message id of the message.             
 
         :param internet_message_id: The internet_message_id of this MapiMessageDto.
@@ -608,8 +581,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def message_format(self) -> str:
-        """Gets the message_format of this MapiMessageDto.
-
+        """
         Represents outlook message format. Enum, available values: Ascii, Unicode
 
         :return: The message_format of this MapiMessageDto.
@@ -619,8 +591,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @message_format.setter
     def message_format(self, message_format: str):
-        """Sets the message_format of this MapiMessageDto.
-
+        """
         Represents outlook message format. Enum, available values: Ascii, Unicode
 
         :param message_format: The message_format of this MapiMessageDto.
@@ -632,8 +603,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def normalized_subject(self) -> str:
-        """Gets the normalized_subject of this MapiMessageDto.
-
+        """
         Normalized subject of the message.             
 
         :return: The normalized_subject of this MapiMessageDto.
@@ -643,8 +613,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @normalized_subject.setter
     def normalized_subject(self, normalized_subject: str):
-        """Sets the normalized_subject of this MapiMessageDto.
-
+        """
         Normalized subject of the message.             
 
         :param normalized_subject: The normalized_subject of this MapiMessageDto.
@@ -654,8 +623,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def read_receipt_requested(self) -> bool:
-        """Gets the read_receipt_requested of this MapiMessageDto.
-
+        """
         Value indicating whether the read receipt is requested.
 
         :return: The read_receipt_requested of this MapiMessageDto.
@@ -665,8 +633,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @read_receipt_requested.setter
     def read_receipt_requested(self, read_receipt_requested: bool):
-        """Sets the read_receipt_requested of this MapiMessageDto.
-
+        """
         Value indicating whether the read receipt is requested.
 
         :param read_receipt_requested: The read_receipt_requested of this MapiMessageDto.
@@ -678,8 +645,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def reply_to(self) -> str:
-        """Gets the reply_to of this MapiMessageDto.
-
+        """
         Reply to names.
 
         :return: The reply_to of this MapiMessageDto.
@@ -689,8 +655,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @reply_to.setter
     def reply_to(self, reply_to: str):
-        """Sets the reply_to of this MapiMessageDto.
-
+        """
         Reply to names.
 
         :param reply_to: The reply_to of this MapiMessageDto.
@@ -700,8 +665,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sender_address_type(self) -> str:
-        """Gets the sender_address_type of this MapiMessageDto.
-
+        """
         Message sender's e-mail address type.
 
         :return: The sender_address_type of this MapiMessageDto.
@@ -711,8 +675,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sender_address_type.setter
     def sender_address_type(self, sender_address_type: str):
-        """Sets the sender_address_type of this MapiMessageDto.
-
+        """
         Message sender's e-mail address type.
 
         :param sender_address_type: The sender_address_type of this MapiMessageDto.
@@ -722,8 +685,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sender_email_address(self) -> str:
-        """Gets the sender_email_address of this MapiMessageDto.
-
+        """
         Message sender's e-mail address.
 
         :return: The sender_email_address of this MapiMessageDto.
@@ -733,8 +695,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sender_email_address.setter
     def sender_email_address(self, sender_email_address: str):
-        """Sets the sender_email_address of this MapiMessageDto.
-
+        """
         Message sender's e-mail address.
 
         :param sender_email_address: The sender_email_address of this MapiMessageDto.
@@ -744,8 +705,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sender_name(self) -> str:
-        """Gets the sender_name of this MapiMessageDto.
-
+        """
         Message sender's display name.
 
         :return: The sender_name of this MapiMessageDto.
@@ -755,8 +715,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sender_name.setter
     def sender_name(self, sender_name: str):
-        """Sets the sender_name of this MapiMessageDto.
-
+        """
         Message sender's display name.
 
         :param sender_name: The sender_name of this MapiMessageDto.
@@ -766,8 +725,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sender_smtp_address(self) -> str:
-        """Gets the sender_smtp_address of this MapiMessageDto.
-
+        """
         Message sender's e-mail address.
 
         :return: The sender_smtp_address of this MapiMessageDto.
@@ -777,8 +735,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sender_smtp_address.setter
     def sender_smtp_address(self, sender_smtp_address: str):
-        """Sets the sender_smtp_address of this MapiMessageDto.
-
+        """
         Message sender's e-mail address.
 
         :param sender_smtp_address: The sender_smtp_address of this MapiMessageDto.
@@ -788,8 +745,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sent_representing_address_type(self) -> str:
-        """Gets the sent_representing_address_type of this MapiMessageDto.
-
+        """
         Address type for the messaging user represented by the sender.
 
         :return: The sent_representing_address_type of this MapiMessageDto.
@@ -799,8 +755,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sent_representing_address_type.setter
     def sent_representing_address_type(self, sent_representing_address_type: str):
-        """Sets the sent_representing_address_type of this MapiMessageDto.
-
+        """
         Address type for the messaging user represented by the sender.
 
         :param sent_representing_address_type: The sent_representing_address_type of this MapiMessageDto.
@@ -810,8 +765,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sent_representing_email_address(self) -> str:
-        """Gets the sent_representing_email_address of this MapiMessageDto.
-
+        """
         E-mail address for the messaging user represented by the sender.
 
         :return: The sent_representing_email_address of this MapiMessageDto.
@@ -821,8 +775,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sent_representing_email_address.setter
     def sent_representing_email_address(self, sent_representing_email_address: str):
-        """Sets the sent_representing_email_address of this MapiMessageDto.
-
+        """
         E-mail address for the messaging user represented by the sender.
 
         :param sent_representing_email_address: The sent_representing_email_address of this MapiMessageDto.
@@ -832,8 +785,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sent_representing_name(self) -> str:
-        """Gets the sent_representing_name of this MapiMessageDto.
-
+        """
         Display name for the messaging user represented by the sender.
 
         :return: The sent_representing_name of this MapiMessageDto.
@@ -843,8 +795,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sent_representing_name.setter
     def sent_representing_name(self, sent_representing_name: str):
-        """Sets the sent_representing_name of this MapiMessageDto.
-
+        """
         Display name for the messaging user represented by the sender.
 
         :param sent_representing_name: The sent_representing_name of this MapiMessageDto.
@@ -854,8 +805,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def sent_representing_smtp_address(self) -> str:
-        """Gets the sent_representing_smtp_address of this MapiMessageDto.
-
+        """
         E-mail address for the messaging user represented by the sender.
 
         :return: The sent_representing_smtp_address of this MapiMessageDto.
@@ -865,8 +815,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @sent_representing_smtp_address.setter
     def sent_representing_smtp_address(self, sent_representing_smtp_address: str):
-        """Sets the sent_representing_smtp_address of this MapiMessageDto.
-
+        """
         E-mail address for the messaging user represented by the sender.
 
         :param sent_representing_smtp_address: The sent_representing_smtp_address of this MapiMessageDto.
@@ -876,8 +825,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @property
     def transport_message_headers(self) -> str:
-        """Gets the transport_message_headers of this MapiMessageDto.
-
+        """
         Transport-specific message envelope information.
 
         :return: The transport_message_headers of this MapiMessageDto.
@@ -887,8 +835,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
 
     @transport_message_headers.setter
     def transport_message_headers(self, transport_message_headers: str):
-        """Sets the transport_message_headers of this MapiMessageDto.
-
+        """
         Transport-specific message envelope information.
 
         :param transport_message_headers: The transport_message_headers of this MapiMessageDto.

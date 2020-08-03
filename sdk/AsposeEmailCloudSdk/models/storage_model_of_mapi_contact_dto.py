@@ -72,10 +72,11 @@ class StorageModelOfMapiContactDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfMapiContactDto.
-
+        """
+        Gets the storage_file of this StorageModelOfMapiContactDto.
 
         :return: The storage_file of this StorageModelOfMapiContactDto.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfMapiContactDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfMapiContactDto.
-
+        """
+        Sets the storage_file of this StorageModelOfMapiContactDto.
 
         :param storage_file: The storage_file of this StorageModelOfMapiContactDto.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfMapiContactDto(object):
 
     @property
     def value(self) -> MapiContactDto:
-        """Gets the value of this StorageModelOfMapiContactDto.
-
+        """
+        Gets the value of this StorageModelOfMapiContactDto.
 
         :return: The value of this StorageModelOfMapiContactDto.
         :rtype: MapiContactDto
@@ -106,8 +107,8 @@ class StorageModelOfMapiContactDto(object):
 
     @value.setter
     def value(self, value: MapiContactDto):
-        """Sets the value of this StorageModelOfMapiContactDto.
-
+        """
+        Sets the value of this StorageModelOfMapiContactDto.
 
         :param value: The value of this StorageModelOfMapiContactDto.
         :type: MapiContactDto

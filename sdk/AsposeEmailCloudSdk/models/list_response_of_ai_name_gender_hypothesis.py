@@ -64,10 +64,11 @@ class ListResponseOfAiNameGenderHypothesis(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[AiNameGenderHypothesis]:
-        """Gets the value of this ListResponseOfAiNameGenderHypothesis.
-
+        """
+        Gets the value of this ListResponseOfAiNameGenderHypothesis.
 
         :return: The value of this ListResponseOfAiNameGenderHypothesis.
         :rtype: list[AiNameGenderHypothesis]
@@ -76,8 +77,8 @@ class ListResponseOfAiNameGenderHypothesis(object):
 
     @value.setter
     def value(self, value: List[AiNameGenderHypothesis]):
-        """Sets the value of this ListResponseOfAiNameGenderHypothesis.
-
+        """
+        Sets the value of this ListResponseOfAiNameGenderHypothesis.
 
         :param value: The value of this ListResponseOfAiNameGenderHypothesis.
         :type: list[AiNameGenderHypothesis]

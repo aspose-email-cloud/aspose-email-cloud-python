@@ -78,10 +78,10 @@ class MapiContactPhysicalAddressPropertySetDto(object):
         if other_address is not None:
             self.other_address = other_address
 
+
     @property
     def work_address(self) -> MapiContactPhysicalAddressDto:
-        """Gets the work_address of this MapiContactPhysicalAddressPropertySetDto.
-
+        """
         Specifies the address of the contact's work             
 
         :return: The work_address of this MapiContactPhysicalAddressPropertySetDto.
@@ -91,8 +91,7 @@ class MapiContactPhysicalAddressPropertySetDto(object):
 
     @work_address.setter
     def work_address(self, work_address: MapiContactPhysicalAddressDto):
-        """Sets the work_address of this MapiContactPhysicalAddressPropertySetDto.
-
+        """
         Specifies the address of the contact's work             
 
         :param work_address: The work_address of this MapiContactPhysicalAddressPropertySetDto.
@@ -102,8 +101,7 @@ class MapiContactPhysicalAddressPropertySetDto(object):
 
     @property
     def home_address(self) -> MapiContactPhysicalAddressDto:
-        """Gets the home_address of this MapiContactPhysicalAddressPropertySetDto.
-
+        """
         Specifies the address of the contact's home             
 
         :return: The home_address of this MapiContactPhysicalAddressPropertySetDto.
@@ -113,8 +111,7 @@ class MapiContactPhysicalAddressPropertySetDto(object):
 
     @home_address.setter
     def home_address(self, home_address: MapiContactPhysicalAddressDto):
-        """Sets the home_address of this MapiContactPhysicalAddressPropertySetDto.
-
+        """
         Specifies the address of the contact's home             
 
         :param home_address: The home_address of this MapiContactPhysicalAddressPropertySetDto.
@@ -124,8 +121,7 @@ class MapiContactPhysicalAddressPropertySetDto(object):
 
     @property
     def other_address(self) -> MapiContactPhysicalAddressDto:
-        """Gets the other_address of this MapiContactPhysicalAddressPropertySetDto.
-
+        """
         Specifies the other contact's address             
 
         :return: The other_address of this MapiContactPhysicalAddressPropertySetDto.
@@ -135,8 +131,7 @@ class MapiContactPhysicalAddressPropertySetDto(object):
 
     @other_address.setter
     def other_address(self, other_address: MapiContactPhysicalAddressDto):
-        """Sets the other_address of this MapiContactPhysicalAddressPropertySetDto.
-
+        """
         Specifies the other contact's address             
 
         :param other_address: The other_address of this MapiContactPhysicalAddressPropertySetDto.

@@ -56,13 +56,11 @@ class EmailClientAccountPasswordCredentials(EmailClientAccountCredentials):
         'password': 'password'
     }
 
-    def __init__(self, login: str = None, discriminator: str = None, password: str = None):
+    def __init__(self, login: str = None, password: str = None):
         """
         Represents email client account password credentials             
         :param login: Email client account login             
         :type login: str
-        :param discriminator: 
-        :type discriminator: str
         :param password: Email client account password             
         :type password: str
         """
@@ -72,15 +70,13 @@ class EmailClientAccountPasswordCredentials(EmailClientAccountCredentials):
 
         if login is not None:
             self.login = login
-        if discriminator is not None:
-            self.discriminator = discriminator
         if password is not None:
             self.password = password
 
+
     @property
     def password(self) -> str:
-        """Gets the password of this EmailClientAccountPasswordCredentials.
-
+        """
         Email client account password             
 
         :return: The password of this EmailClientAccountPasswordCredentials.
@@ -90,8 +86,7 @@ class EmailClientAccountPasswordCredentials(EmailClientAccountCredentials):
 
     @password.setter
     def password(self, password: str):
-        """Sets the password of this EmailClientAccountPasswordCredentials.
-
+        """
         Email client account password             
 
         :param password: The password of this EmailClientAccountPasswordCredentials.

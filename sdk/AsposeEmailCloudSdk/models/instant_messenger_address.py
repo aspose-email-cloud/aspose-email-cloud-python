@@ -78,10 +78,10 @@ class InstantMessengerAddress(object):
         if preferred is not None:
             self.preferred = preferred
 
+
     @property
     def category(self) -> EnumWithCustomOfInstantMessengerCategory:
-        """Gets the category of this InstantMessengerAddress.
-
+        """
         Address category.             
 
         :return: The category of this InstantMessengerAddress.
@@ -91,8 +91,7 @@ class InstantMessengerAddress(object):
 
     @category.setter
     def category(self, category: EnumWithCustomOfInstantMessengerCategory):
-        """Sets the category of this InstantMessengerAddress.
-
+        """
         Address category.             
 
         :param category: The category of this InstantMessengerAddress.
@@ -102,8 +101,7 @@ class InstantMessengerAddress(object):
 
     @property
     def address(self) -> str:
-        """Gets the address of this InstantMessengerAddress.
-
+        """
         Address.             
 
         :return: The address of this InstantMessengerAddress.
@@ -113,8 +111,7 @@ class InstantMessengerAddress(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this InstantMessengerAddress.
-
+        """
         Address.             
 
         :param address: The address of this InstantMessengerAddress.
@@ -124,8 +121,7 @@ class InstantMessengerAddress(object):
 
     @property
     def preferred(self) -> bool:
-        """Gets the preferred of this InstantMessengerAddress.
-
+        """
         Determines whether this address is preferred.             
 
         :return: The preferred of this InstantMessengerAddress.
@@ -135,8 +131,7 @@ class InstantMessengerAddress(object):
 
     @preferred.setter
     def preferred(self, preferred: bool):
-        """Sets the preferred of this InstantMessengerAddress.
-
+        """
         Determines whether this address is preferred.             
 
         :param preferred: The preferred of this InstantMessengerAddress.

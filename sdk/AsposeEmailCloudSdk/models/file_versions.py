@@ -64,10 +64,10 @@ class FileVersions(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[FileVersion]:
-        """Gets the value of this FileVersions.
-
+        """
         File versions FileVersion.
 
         :return: The value of this FileVersions.
@@ -77,8 +77,7 @@ class FileVersions(object):
 
     @value.setter
     def value(self, value: List[FileVersion]):
-        """Sets the value of this FileVersions.
-
+        """
         File versions FileVersion.
 
         :param value: The value of this FileVersions.

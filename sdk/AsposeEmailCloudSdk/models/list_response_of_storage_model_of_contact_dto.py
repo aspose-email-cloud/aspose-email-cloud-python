@@ -64,10 +64,11 @@ class ListResponseOfStorageModelOfContactDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[StorageModelOfContactDto]:
-        """Gets the value of this ListResponseOfStorageModelOfContactDto.
-
+        """
+        Gets the value of this ListResponseOfStorageModelOfContactDto.
 
         :return: The value of this ListResponseOfStorageModelOfContactDto.
         :rtype: list[StorageModelOfContactDto]
@@ -76,8 +77,8 @@ class ListResponseOfStorageModelOfContactDto(object):
 
     @value.setter
     def value(self, value: List[StorageModelOfContactDto]):
-        """Sets the value of this ListResponseOfStorageModelOfContactDto.
-
+        """
+        Sets the value of this ListResponseOfStorageModelOfContactDto.
 
         :param value: The value of this ListResponseOfStorageModelOfContactDto.
         :type: list[StorageModelOfContactDto]

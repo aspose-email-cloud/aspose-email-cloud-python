@@ -78,10 +78,10 @@ class AssociatedPerson(object):
         if preferred is not None:
             self.preferred = preferred
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this AssociatedPerson.
-
+        """
         Associated person's name.             
 
         :return: The name of this AssociatedPerson.
@@ -91,8 +91,7 @@ class AssociatedPerson(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this AssociatedPerson.
-
+        """
         Associated person's name.             
 
         :param name: The name of this AssociatedPerson.
@@ -102,8 +101,7 @@ class AssociatedPerson(object):
 
     @property
     def category(self) -> EnumWithCustomOfAssociatedPersonCategory:
-        """Gets the category of this AssociatedPerson.
-
+        """
         Associated person's category.             
 
         :return: The category of this AssociatedPerson.
@@ -113,8 +111,7 @@ class AssociatedPerson(object):
 
     @category.setter
     def category(self, category: EnumWithCustomOfAssociatedPersonCategory):
-        """Sets the category of this AssociatedPerson.
-
+        """
         Associated person's category.             
 
         :param category: The category of this AssociatedPerson.
@@ -124,8 +121,7 @@ class AssociatedPerson(object):
 
     @property
     def preferred(self) -> bool:
-        """Gets the preferred of this AssociatedPerson.
-
+        """
         Defines whether associated person is preferred.             
 
         :return: The preferred of this AssociatedPerson.
@@ -135,8 +131,7 @@ class AssociatedPerson(object):
 
     @preferred.setter
     def preferred(self, preferred: bool):
-        """Sets the preferred of this AssociatedPerson.
-
+        """
         Defines whether associated person is preferred.             
 
         :param preferred: The preferred of this AssociatedPerson.

@@ -71,10 +71,10 @@ class CustomerEvent(object):
         if _date is not None:
             self._date = _date
 
+
     @property
     def category(self) -> EnumWithCustomOfEventCategory:
-        """Gets the category of this CustomerEvent.
-
+        """
         Event category.             
 
         :return: The category of this CustomerEvent.
@@ -84,8 +84,7 @@ class CustomerEvent(object):
 
     @category.setter
     def category(self, category: EnumWithCustomOfEventCategory):
-        """Sets the category of this CustomerEvent.
-
+        """
         Event category.             
 
         :param category: The category of this CustomerEvent.
@@ -95,8 +94,7 @@ class CustomerEvent(object):
 
     @property
     def _date(self) -> datetime:
-        """Gets the _date of this CustomerEvent.
-
+        """
         Event date.             
 
         :return: The _date of this CustomerEvent.
@@ -106,8 +104,7 @@ class CustomerEvent(object):
 
     @_date.setter
     def _date(self, _date: datetime):
-        """Sets the _date of this CustomerEvent.
-
+        """
         Event date.             
 
         :param _date: The _date of this CustomerEvent.

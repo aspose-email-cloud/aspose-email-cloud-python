@@ -56,11 +56,9 @@ class MailMessageBase64(MailMessageBase):
         'format': 'format'
     }
 
-    def __init__(self, discriminator: str = None, value_base64: str = None, format: str = None):
+    def __init__(self, value_base64: str = None, format: str = None):
         """
         Email message represented as file, encoded to Base64 format.             
-        :param discriminator: 
-        :type discriminator: str
         :param value_base64: Email message file data encoded to Base64 string.             
         :type value_base64: str
         :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
@@ -70,18 +68,15 @@ class MailMessageBase64(MailMessageBase):
 
         self._value_base64 = None
         self._format = None
-
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value_base64 is not None:
             self.value_base64 = value_base64
         if format is not None:
             self.format = format
 
+
     @property
     def value_base64(self) -> str:
-        """Gets the value_base64 of this MailMessageBase64.
-
+        """
         Email message file data encoded to Base64 string.             
 
         :return: The value_base64 of this MailMessageBase64.
@@ -91,8 +86,7 @@ class MailMessageBase64(MailMessageBase):
 
     @value_base64.setter
     def value_base64(self, value_base64: str):
-        """Sets the value_base64 of this MailMessageBase64.
-
+        """
         Email message file data encoded to Base64 string.             
 
         :param value_base64: The value_base64 of this MailMessageBase64.
@@ -106,8 +100,7 @@ class MailMessageBase64(MailMessageBase):
 
     @property
     def format(self) -> str:
-        """Gets the format of this MailMessageBase64.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :return: The format of this MailMessageBase64.
@@ -117,8 +110,7 @@ class MailMessageBase64(MailMessageBase):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this MailMessageBase64.
-
+        """
         Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
 
         :param format: The format of this MailMessageBase64.

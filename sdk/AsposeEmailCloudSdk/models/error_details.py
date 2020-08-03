@@ -69,10 +69,10 @@ class ErrorDetails(object):
         if _date is not None:
             self._date = _date
 
+
     @property
     def request_id(self) -> str:
-        """Gets the request_id of this ErrorDetails.
-
+        """
         The request id
 
         :return: The request_id of this ErrorDetails.
@@ -82,8 +82,7 @@ class ErrorDetails(object):
 
     @request_id.setter
     def request_id(self, request_id: str):
-        """Sets the request_id of this ErrorDetails.
-
+        """
         The request id
 
         :param request_id: The request_id of this ErrorDetails.
@@ -93,8 +92,7 @@ class ErrorDetails(object):
 
     @property
     def _date(self) -> datetime:
-        """Gets the _date of this ErrorDetails.
-
+        """
         Date
 
         :return: The _date of this ErrorDetails.
@@ -104,8 +102,7 @@ class ErrorDetails(object):
 
     @_date.setter
     def _date(self, _date: datetime):
-        """Sets the _date of this ErrorDetails.
-
+        """
         Date
 
         :param _date: The _date of this ErrorDetails.

@@ -78,10 +78,10 @@ class ClientMessageDeleteRequest(ClientMessageBaseRequest):
         if folder is not None:
             self.folder = folder
 
+
     @property
     def folder(self) -> str:
-        """Gets the folder of this ClientMessageDeleteRequest.
-
+        """
         Folder to delete message from.             
 
         :return: The folder of this ClientMessageDeleteRequest.
@@ -91,8 +91,7 @@ class ClientMessageDeleteRequest(ClientMessageBaseRequest):
 
     @folder.setter
     def folder(self, folder: str):
-        """Sets the folder of this ClientMessageDeleteRequest.
-
+        """
         Folder to delete message from.             
 
         :param folder: The folder of this ClientMessageDeleteRequest.

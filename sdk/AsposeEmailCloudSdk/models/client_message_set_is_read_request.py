@@ -78,10 +78,10 @@ class ClientMessageSetIsReadRequest(ClientMessageBaseRequest):
         if is_read is not None:
             self.is_read = is_read
 
+
     @property
     def is_read(self) -> bool:
-        """Gets the is_read of this ClientMessageSetIsReadRequest.
-
+        """
         Message is read flag.             
 
         :return: The is_read of this ClientMessageSetIsReadRequest.
@@ -91,8 +91,7 @@ class ClientMessageSetIsReadRequest(ClientMessageBaseRequest):
 
     @is_read.setter
     def is_read(self, is_read: bool):
-        """Sets the is_read of this ClientMessageSetIsReadRequest.
-
+        """
         Message is read flag.             
 
         :param is_read: The is_read of this ClientMessageSetIsReadRequest.

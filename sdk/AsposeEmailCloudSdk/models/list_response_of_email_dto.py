@@ -64,10 +64,11 @@ class ListResponseOfEmailDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[EmailDto]:
-        """Gets the value of this ListResponseOfEmailDto.
-
+        """
+        Gets the value of this ListResponseOfEmailDto.
 
         :return: The value of this ListResponseOfEmailDto.
         :rtype: list[EmailDto]
@@ -76,8 +77,8 @@ class ListResponseOfEmailDto(object):
 
     @value.setter
     def value(self, value: List[EmailDto]):
-        """Sets the value of this ListResponseOfEmailDto.
-
+        """
+        Sets the value of this ListResponseOfEmailDto.
 
         :param value: The value of this ListResponseOfEmailDto.
         :type: list[EmailDto]

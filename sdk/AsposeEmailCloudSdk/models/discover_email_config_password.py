@@ -83,10 +83,10 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
         if password is not None:
             self.password = password
 
+
     @property
     def password(self) -> str:
-        """Gets the password of this DiscoverEmailConfigPassword.
-
+        """
         Email account password.             
 
         :return: The password of this DiscoverEmailConfigPassword.
@@ -96,8 +96,7 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
 
     @password.setter
     def password(self, password: str):
-        """Sets the password of this DiscoverEmailConfigPassword.
-
+        """
         Email account password.             
 
         :param password: The password of this DiscoverEmailConfigPassword.

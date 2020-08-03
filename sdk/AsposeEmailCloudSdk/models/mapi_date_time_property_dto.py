@@ -57,13 +57,11 @@ class MapiDateTimePropertyDto(MapiPropertyDto):
         'value': 'value'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: datetime = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value: datetime = None):
         """
         Mapi property with DateTime value             
         :param descriptor: Property descriptor             
         :type descriptor: MapiPropertyDescriptor
-        :param discriminator: 
-        :type discriminator: str
         :param value: Property value             
         :type value: datetime
         """
@@ -73,15 +71,13 @@ class MapiDateTimePropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> datetime:
-        """Gets the value of this MapiDateTimePropertyDto.
-
+        """
         Property value             
 
         :return: The value of this MapiDateTimePropertyDto.
@@ -91,8 +87,7 @@ class MapiDateTimePropertyDto(MapiPropertyDto):
 
     @value.setter
     def value(self, value: datetime):
-        """Sets the value of this MapiDateTimePropertyDto.
-
+        """
         Property value             
 
         :param value: The value of this MapiDateTimePropertyDto.

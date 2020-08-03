@@ -77,10 +77,10 @@ class StorageFileLocation(StorageFolderLocation):
         if file_name is not None:
             self.file_name = file_name
 
+
     @property
     def file_name(self) -> str:
-        """Gets the file_name of this StorageFileLocation.
-
+        """
         A file name in storage             
 
         :return: The file_name of this StorageFileLocation.
@@ -90,8 +90,7 @@ class StorageFileLocation(StorageFolderLocation):
 
     @file_name.setter
     def file_name(self, file_name: str):
-        """Sets the file_name of this StorageFileLocation.
-
+        """
         A file name in storage             
 
         :param file_name: The file_name of this StorageFileLocation.

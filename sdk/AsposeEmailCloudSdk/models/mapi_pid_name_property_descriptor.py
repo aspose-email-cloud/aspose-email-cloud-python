@@ -62,11 +62,9 @@ class MapiPidNamePropertyDescriptor(MapiPidPropertyDescriptor):
         'property_set': 'propertySet'
     }
 
-    def __init__(self, discriminator: str = None, canonical_name: str = None, data_type: str = None, multiple_values_data_type: bool = None, name: str = None, property_set: str = None):
+    def __init__(self, canonical_name: str = None, data_type: str = None, multiple_values_data_type: bool = None, name: str = None, property_set: str = None):
         """
         Property identified by a string name along with a property set             
-        :param discriminator: 
-        :type discriminator: str
         :param canonical_name: The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
         :type canonical_name: str
         :param data_type: [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
@@ -81,9 +79,6 @@ class MapiPidNamePropertyDescriptor(MapiPidPropertyDescriptor):
         super(MapiPidNamePropertyDescriptor, self).__init__()
 
         self._property_set = None
-
-        if discriminator is not None:
-            self.discriminator = discriminator
         if canonical_name is not None:
             self.canonical_name = canonical_name
         if data_type is not None:
@@ -95,10 +90,10 @@ class MapiPidNamePropertyDescriptor(MapiPidPropertyDescriptor):
         if property_set is not None:
             self.property_set = property_set
 
+
     @property
     def property_set(self) -> str:
-        """Gets the property_set of this MapiPidNamePropertyDescriptor.
-
+        """
         A GUID that identifies a group of properties with a similar purpose.             
 
         :return: The property_set of this MapiPidNamePropertyDescriptor.
@@ -108,8 +103,7 @@ class MapiPidNamePropertyDescriptor(MapiPidPropertyDescriptor):
 
     @property_set.setter
     def property_set(self, property_set: str):
-        """Sets the property_set of this MapiPidNamePropertyDescriptor.
-
+        """
         A GUID that identifies a group of properties with a similar purpose.             
 
         :param property_set: The property_set of this MapiPidNamePropertyDescriptor.

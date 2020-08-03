@@ -86,7 +86,7 @@ class MapiMessageItemBaseDto(object):
         'discriminator': 'discriminator'
     }
 
-    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None):
+    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None):
         """
         Base Dto for MapiMessage, MapiCalendar or MapiContact             
         :param attachments: Message item attachments.             
@@ -121,8 +121,6 @@ class MapiMessageItemBaseDto(object):
         :type subject_prefix: str
         :param properties: List of MAPI properties             
         :type properties: List[MapiPropertyDto]
-        :param discriminator: 
-        :type discriminator: str
         """
 
         self._attachments = None
@@ -141,7 +139,6 @@ class MapiMessageItemBaseDto(object):
         self._subject = None
         self._subject_prefix = None
         self._properties = None
-        self._discriminator = self.__class__.__name__
 
         if attachments is not None:
             self.attachments = attachments
@@ -175,13 +172,11 @@ class MapiMessageItemBaseDto(object):
             self.subject_prefix = subject_prefix
         if properties is not None:
             self.properties = properties
-        if discriminator is not None:
-            self.discriminator = discriminator
+
 
     @property
     def attachments(self) -> List[MapiAttachmentDto]:
-        """Gets the attachments of this MapiMessageItemBaseDto.
-
+        """
         Message item attachments.             
 
         :return: The attachments of this MapiMessageItemBaseDto.
@@ -191,8 +186,7 @@ class MapiMessageItemBaseDto(object):
 
     @attachments.setter
     def attachments(self, attachments: List[MapiAttachmentDto]):
-        """Sets the attachments of this MapiMessageItemBaseDto.
-
+        """
         Message item attachments.             
 
         :param attachments: The attachments of this MapiMessageItemBaseDto.
@@ -202,8 +196,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def billing(self) -> str:
-        """Gets the billing of this MapiMessageItemBaseDto.
-
+        """
         Billing information associated with an item.             
 
         :return: The billing of this MapiMessageItemBaseDto.
@@ -213,8 +206,7 @@ class MapiMessageItemBaseDto(object):
 
     @billing.setter
     def billing(self, billing: str):
-        """Sets the billing of this MapiMessageItemBaseDto.
-
+        """
         Billing information associated with an item.             
 
         :param billing: The billing of this MapiMessageItemBaseDto.
@@ -224,8 +216,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def body(self) -> str:
-        """Gets the body of this MapiMessageItemBaseDto.
-
+        """
         Message text.             
 
         :return: The body of this MapiMessageItemBaseDto.
@@ -235,8 +226,7 @@ class MapiMessageItemBaseDto(object):
 
     @body.setter
     def body(self, body: str):
-        """Sets the body of this MapiMessageItemBaseDto.
-
+        """
         Message text.             
 
         :param body: The body of this MapiMessageItemBaseDto.
@@ -246,8 +236,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def body_html(self) -> str:
-        """Gets the body_html of this MapiMessageItemBaseDto.
-
+        """
         Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
 
         :return: The body_html of this MapiMessageItemBaseDto.
@@ -257,8 +246,7 @@ class MapiMessageItemBaseDto(object):
 
     @body_html.setter
     def body_html(self, body_html: str):
-        """Sets the body_html of this MapiMessageItemBaseDto.
-
+        """
         Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
 
         :param body_html: The body_html of this MapiMessageItemBaseDto.
@@ -268,8 +256,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def body_rtf(self) -> str:
-        """Gets the body_rtf of this MapiMessageItemBaseDto.
-
+        """
         RTF formatted message text.             
 
         :return: The body_rtf of this MapiMessageItemBaseDto.
@@ -279,8 +266,7 @@ class MapiMessageItemBaseDto(object):
 
     @body_rtf.setter
     def body_rtf(self, body_rtf: str):
-        """Sets the body_rtf of this MapiMessageItemBaseDto.
-
+        """
         RTF formatted message text.             
 
         :param body_rtf: The body_rtf of this MapiMessageItemBaseDto.
@@ -290,8 +276,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def body_type(self) -> str:
-        """Gets the body_type of this MapiMessageItemBaseDto.
-
+        """
         The content type of message body. Enum, available values: PlainText, Html, Rtf
 
         :return: The body_type of this MapiMessageItemBaseDto.
@@ -301,8 +286,7 @@ class MapiMessageItemBaseDto(object):
 
     @body_type.setter
     def body_type(self, body_type: str):
-        """Sets the body_type of this MapiMessageItemBaseDto.
-
+        """
         The content type of message body. Enum, available values: PlainText, Html, Rtf
 
         :param body_type: The body_type of this MapiMessageItemBaseDto.
@@ -314,8 +298,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def categories(self) -> List[str]:
-        """Gets the categories of this MapiMessageItemBaseDto.
-
+        """
         Contains keywords or categories for the message object.             
 
         :return: The categories of this MapiMessageItemBaseDto.
@@ -325,8 +308,7 @@ class MapiMessageItemBaseDto(object):
 
     @categories.setter
     def categories(self, categories: List[str]):
-        """Sets the categories of this MapiMessageItemBaseDto.
-
+        """
         Contains keywords or categories for the message object.             
 
         :param categories: The categories of this MapiMessageItemBaseDto.
@@ -336,8 +318,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def companies(self) -> List[str]:
-        """Gets the companies of this MapiMessageItemBaseDto.
-
+        """
         Contains the names of the companies that are associated with an item.             
 
         :return: The companies of this MapiMessageItemBaseDto.
@@ -347,8 +328,7 @@ class MapiMessageItemBaseDto(object):
 
     @companies.setter
     def companies(self, companies: List[str]):
-        """Sets the companies of this MapiMessageItemBaseDto.
-
+        """
         Contains the names of the companies that are associated with an item.             
 
         :param companies: The companies of this MapiMessageItemBaseDto.
@@ -358,8 +338,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def item_id(self) -> str:
-        """Gets the item_id of this MapiMessageItemBaseDto.
-
+        """
         The item id, uses with a server.             
 
         :return: The item_id of this MapiMessageItemBaseDto.
@@ -369,8 +348,7 @@ class MapiMessageItemBaseDto(object):
 
     @item_id.setter
     def item_id(self, item_id: str):
-        """Sets the item_id of this MapiMessageItemBaseDto.
-
+        """
         The item id, uses with a server.             
 
         :param item_id: The item_id of this MapiMessageItemBaseDto.
@@ -380,8 +358,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def message_class(self) -> str:
-        """Gets the message_class of this MapiMessageItemBaseDto.
-
+        """
         Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
 
         :return: The message_class of this MapiMessageItemBaseDto.
@@ -391,8 +368,7 @@ class MapiMessageItemBaseDto(object):
 
     @message_class.setter
     def message_class(self, message_class: str):
-        """Sets the message_class of this MapiMessageItemBaseDto.
-
+        """
         Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
 
         :param message_class: The message_class of this MapiMessageItemBaseDto.
@@ -402,8 +378,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def mileage(self) -> str:
-        """Gets the mileage of this MapiMessageItemBaseDto.
-
+        """
         Contains the mileage information that is associated with an item.             
 
         :return: The mileage of this MapiMessageItemBaseDto.
@@ -413,8 +388,7 @@ class MapiMessageItemBaseDto(object):
 
     @mileage.setter
     def mileage(self, mileage: str):
-        """Sets the mileage of this MapiMessageItemBaseDto.
-
+        """
         Contains the mileage information that is associated with an item.             
 
         :param mileage: The mileage of this MapiMessageItemBaseDto.
@@ -424,8 +398,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def recipients(self) -> List[MapiRecipientDto]:
-        """Gets the recipients of this MapiMessageItemBaseDto.
-
+        """
         Recipients of the message.             
 
         :return: The recipients of this MapiMessageItemBaseDto.
@@ -435,8 +408,7 @@ class MapiMessageItemBaseDto(object):
 
     @recipients.setter
     def recipients(self, recipients: List[MapiRecipientDto]):
-        """Sets the recipients of this MapiMessageItemBaseDto.
-
+        """
         Recipients of the message.             
 
         :param recipients: The recipients of this MapiMessageItemBaseDto.
@@ -446,8 +418,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def sensitivity(self) -> str:
-        """Gets the sensitivity of this MapiMessageItemBaseDto.
-
+        """
         Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
 
         :return: The sensitivity of this MapiMessageItemBaseDto.
@@ -457,8 +428,7 @@ class MapiMessageItemBaseDto(object):
 
     @sensitivity.setter
     def sensitivity(self, sensitivity: str):
-        """Sets the sensitivity of this MapiMessageItemBaseDto.
-
+        """
         Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
 
         :param sensitivity: The sensitivity of this MapiMessageItemBaseDto.
@@ -470,8 +440,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def subject(self) -> str:
-        """Gets the subject of this MapiMessageItemBaseDto.
-
+        """
         Subject of the message.             
 
         :return: The subject of this MapiMessageItemBaseDto.
@@ -481,8 +450,7 @@ class MapiMessageItemBaseDto(object):
 
     @subject.setter
     def subject(self, subject: str):
-        """Sets the subject of this MapiMessageItemBaseDto.
-
+        """
         Subject of the message.             
 
         :param subject: The subject of this MapiMessageItemBaseDto.
@@ -492,8 +460,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def subject_prefix(self) -> str:
-        """Gets the subject_prefix of this MapiMessageItemBaseDto.
-
+        """
         Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
 
         :return: The subject_prefix of this MapiMessageItemBaseDto.
@@ -503,8 +470,7 @@ class MapiMessageItemBaseDto(object):
 
     @subject_prefix.setter
     def subject_prefix(self, subject_prefix: str):
-        """Sets the subject_prefix of this MapiMessageItemBaseDto.
-
+        """
         Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
 
         :param subject_prefix: The subject_prefix of this MapiMessageItemBaseDto.
@@ -514,8 +480,7 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def properties(self) -> List[MapiPropertyDto]:
-        """Gets the properties of this MapiMessageItemBaseDto.
-
+        """
         List of MAPI properties             
 
         :return: The properties of this MapiMessageItemBaseDto.
@@ -525,8 +490,7 @@ class MapiMessageItemBaseDto(object):
 
     @properties.setter
     def properties(self, properties: List[MapiPropertyDto]):
-        """Sets the properties of this MapiMessageItemBaseDto.
-
+        """
         List of MAPI properties             
 
         :param properties: The properties of this MapiMessageItemBaseDto.
@@ -536,8 +500,8 @@ class MapiMessageItemBaseDto(object):
 
     @property
     def discriminator(self) -> str:
-        """Gets the discriminator of this MapiMessageItemBaseDto.
-
+        """
+        Gets the discriminator of this MapiMessageItemBaseDto.
 
         :return: The discriminator of this MapiMessageItemBaseDto.
         :rtype: str
@@ -546,15 +510,13 @@ class MapiMessageItemBaseDto(object):
 
     @discriminator.setter
     def discriminator(self, discriminator: str):
-        """Sets the discriminator of this MapiMessageItemBaseDto.
-
+        """
+        Sets the discriminator of this MapiMessageItemBaseDto.
 
         :param discriminator: The discriminator of this MapiMessageItemBaseDto.
         :type: str
         """
-        if discriminator is None:
-            raise ValueError("Invalid value for `discriminator`, must not be `None`")
-        self._discriminator = self.__class__.__name__
+        pass    # setter is ignored for discriminator property
 
     def to_dict(self):
         """Returns the model properties as a dict"""

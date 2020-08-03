@@ -50,22 +50,16 @@ class MapiPropertyDescriptor(object):
         'discriminator': 'discriminator'
     }
 
-    def __init__(self, discriminator: str = None):
+    def __init__(self):
         """
         Mapi property descriptor             
-        :param discriminator: 
-        :type discriminator: str
         """
 
-        self._discriminator = self.__class__.__name__
-
-        if discriminator is not None:
-            self.discriminator = discriminator
 
     @property
     def discriminator(self) -> str:
-        """Gets the discriminator of this MapiPropertyDescriptor.
-
+        """
+        Gets the discriminator of this MapiPropertyDescriptor.
 
         :return: The discriminator of this MapiPropertyDescriptor.
         :rtype: str
@@ -74,15 +68,13 @@ class MapiPropertyDescriptor(object):
 
     @discriminator.setter
     def discriminator(self, discriminator: str):
-        """Sets the discriminator of this MapiPropertyDescriptor.
-
+        """
+        Sets the discriminator of this MapiPropertyDescriptor.
 
         :param discriminator: The discriminator of this MapiPropertyDescriptor.
         :type: str
         """
-        if discriminator is None:
-            raise ValueError("Invalid value for `discriminator`, must not be `None`")
-        self._discriminator = self.__class__.__name__
+        pass    # setter is ignored for discriminator property
 
     def to_dict(self):
         """Returns the model properties as a dict"""

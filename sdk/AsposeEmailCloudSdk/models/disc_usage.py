@@ -69,10 +69,10 @@ class DiscUsage(object):
         if total_size is not None:
             self.total_size = total_size
 
+
     @property
     def used_size(self) -> int:
-        """Gets the used_size of this DiscUsage.
-
+        """
         Application used disc space.
 
         :return: The used_size of this DiscUsage.
@@ -82,8 +82,7 @@ class DiscUsage(object):
 
     @used_size.setter
     def used_size(self, used_size: int):
-        """Sets the used_size of this DiscUsage.
-
+        """
         Application used disc space.
 
         :param used_size: The used_size of this DiscUsage.
@@ -95,8 +94,7 @@ class DiscUsage(object):
 
     @property
     def total_size(self) -> int:
-        """Gets the total_size of this DiscUsage.
-
+        """
         Total disc space.
 
         :return: The total_size of this DiscUsage.
@@ -106,8 +104,7 @@ class DiscUsage(object):
 
     @total_size.setter
     def total_size(self, total_size: int):
-        """Sets the total_size of this DiscUsage.
-
+        """
         Total disc space.
 
         :param total_size: The total_size of this DiscUsage.

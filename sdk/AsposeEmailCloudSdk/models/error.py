@@ -85,10 +85,10 @@ class Error(object):
         if inner_error is not None:
             self.inner_error = inner_error
 
+
     @property
     def code(self) -> str:
-        """Gets the code of this Error.
-
+        """
         Code             
 
         :return: The code of this Error.
@@ -98,8 +98,7 @@ class Error(object):
 
     @code.setter
     def code(self, code: str):
-        """Sets the code of this Error.
-
+        """
         Code             
 
         :param code: The code of this Error.
@@ -109,8 +108,7 @@ class Error(object):
 
     @property
     def message(self) -> str:
-        """Gets the message of this Error.
-
+        """
         Message             
 
         :return: The message of this Error.
@@ -120,8 +118,7 @@ class Error(object):
 
     @message.setter
     def message(self, message: str):
-        """Sets the message of this Error.
-
+        """
         Message             
 
         :param message: The message of this Error.
@@ -131,8 +128,7 @@ class Error(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this Error.
-
+        """
         Description             
 
         :return: The description of this Error.
@@ -142,8 +138,7 @@ class Error(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this Error.
-
+        """
         Description             
 
         :param description: The description of this Error.
@@ -153,8 +148,7 @@ class Error(object):
 
     @property
     def inner_error(self) -> ErrorDetails:
-        """Gets the inner_error of this Error.
-
+        """
         Inner Error             
 
         :return: The inner_error of this Error.
@@ -164,8 +158,7 @@ class Error(object):
 
     @inner_error.setter
     def inner_error(self, inner_error: ErrorDetails):
-        """Sets the inner_error of this Error.
-
+        """
         Inner Error             
 
         :param inner_error: The inner_error of this Error.

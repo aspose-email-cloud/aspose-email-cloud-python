@@ -72,10 +72,11 @@ class StorageModelOfCalendarDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfCalendarDto.
-
+        """
+        Gets the storage_file of this StorageModelOfCalendarDto.
 
         :return: The storage_file of this StorageModelOfCalendarDto.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfCalendarDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfCalendarDto.
-
+        """
+        Sets the storage_file of this StorageModelOfCalendarDto.
 
         :param storage_file: The storage_file of this StorageModelOfCalendarDto.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfCalendarDto(object):
 
     @property
     def value(self) -> CalendarDto:
-        """Gets the value of this StorageModelOfCalendarDto.
-
+        """
+        Gets the value of this StorageModelOfCalendarDto.
 
         :return: The value of this StorageModelOfCalendarDto.
         :rtype: CalendarDto
@@ -106,8 +107,8 @@ class StorageModelOfCalendarDto(object):
 
     @value.setter
     def value(self, value: CalendarDto):
-        """Sets the value of this StorageModelOfCalendarDto.
-
+        """
+        Sets the value of this StorageModelOfCalendarDto.
 
         :param value: The value of this StorageModelOfCalendarDto.
         :type: CalendarDto

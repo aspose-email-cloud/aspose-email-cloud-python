@@ -188,10 +188,10 @@ class MapiContactPersonalInfoPropertySetDto(object):
         if children is not None:
             self.children = children
 
+
     @property
     def spouse_name(self) -> str:
-        """Gets the spouse_name of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the name of the contact's spouse/partner             
 
         :return: The spouse_name of this MapiContactPersonalInfoPropertySetDto.
@@ -201,8 +201,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @spouse_name.setter
     def spouse_name(self, spouse_name: str):
-        """Sets the spouse_name of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the name of the contact's spouse/partner             
 
         :param spouse_name: The spouse_name of this MapiContactPersonalInfoPropertySetDto.
@@ -212,8 +211,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def personal_home_page(self) -> str:
-        """Gets the personal_home_page of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's personal web page URL             
 
         :return: The personal_home_page of this MapiContactPersonalInfoPropertySetDto.
@@ -223,8 +221,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @personal_home_page.setter
     def personal_home_page(self, personal_home_page: str):
-        """Sets the personal_home_page of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's personal web page URL             
 
         :param personal_home_page: The personal_home_page of this MapiContactPersonalInfoPropertySetDto.
@@ -234,8 +231,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def language(self) -> str:
-        """Gets the language of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the language that the contact uses             
 
         :return: The language of this MapiContactPersonalInfoPropertySetDto.
@@ -245,8 +241,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @language.setter
     def language(self, language: str):
-        """Sets the language of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the language that the contact uses             
 
         :param language: The language of this MapiContactPersonalInfoPropertySetDto.
@@ -256,8 +251,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def notes(self) -> str:
-        """Gets the notes of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the additional notes             
 
         :return: The notes of this MapiContactPersonalInfoPropertySetDto.
@@ -267,8 +261,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @notes.setter
     def notes(self, notes: str):
-        """Sets the notes of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the additional notes             
 
         :param notes: The notes of this MapiContactPersonalInfoPropertySetDto.
@@ -278,8 +271,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def hobbies(self) -> str:
-        """Gets the hobbies of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the hobbies of the contact             
 
         :return: The hobbies of this MapiContactPersonalInfoPropertySetDto.
@@ -289,8 +281,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @hobbies.setter
     def hobbies(self, hobbies: str):
-        """Sets the hobbies of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the hobbies of the contact             
 
         :param hobbies: The hobbies of this MapiContactPersonalInfoPropertySetDto.
@@ -300,8 +291,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def location(self) -> str:
-        """Gets the location of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the location of the contact             
 
         :return: The location of this MapiContactPersonalInfoPropertySetDto.
@@ -311,8 +301,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @location.setter
     def location(self, location: str):
-        """Sets the location of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the location of the contact             
 
         :param location: The location of this MapiContactPersonalInfoPropertySetDto.
@@ -322,8 +311,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def instant_messaging_address(self) -> str:
-        """Gets the instant_messaging_address of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's instant messaging address             
 
         :return: The instant_messaging_address of this MapiContactPersonalInfoPropertySetDto.
@@ -333,8 +321,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @instant_messaging_address.setter
     def instant_messaging_address(self, instant_messaging_address: str):
-        """Sets the instant_messaging_address of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's instant messaging address             
 
         :param instant_messaging_address: The instant_messaging_address of this MapiContactPersonalInfoPropertySetDto.
@@ -344,8 +331,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def organizational_id_number(self) -> str:
-        """Gets the organizational_id_number of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies an organizational ID number for the contact             
 
         :return: The organizational_id_number of this MapiContactPersonalInfoPropertySetDto.
@@ -355,8 +341,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @organizational_id_number.setter
     def organizational_id_number(self, organizational_id_number: str):
-        """Sets the organizational_id_number of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies an organizational ID number for the contact             
 
         :param organizational_id_number: The organizational_id_number of this MapiContactPersonalInfoPropertySetDto.
@@ -366,8 +351,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def customer_id(self) -> str:
-        """Gets the customer_id of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's customer ID number             
 
         :return: The customer_id of this MapiContactPersonalInfoPropertySetDto.
@@ -377,8 +361,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @customer_id.setter
     def customer_id(self, customer_id: str):
-        """Sets the customer_id of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's customer ID number             
 
         :param customer_id: The customer_id of this MapiContactPersonalInfoPropertySetDto.
@@ -388,8 +371,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def government_id_number(self) -> str:
-        """Gets the government_id_number of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's government ID number             
 
         :return: The government_id_number of this MapiContactPersonalInfoPropertySetDto.
@@ -399,8 +381,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @government_id_number.setter
     def government_id_number(self, government_id_number: str):
-        """Sets the government_id_number of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's government ID number             
 
         :param government_id_number: The government_id_number of this MapiContactPersonalInfoPropertySetDto.
@@ -410,8 +391,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def free_busy_location(self) -> str:
-        """Gets the free_busy_location of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies a URL path from which a client can retrieve free/busy information for the contact as an iCal file             
 
         :return: The free_busy_location of this MapiContactPersonalInfoPropertySetDto.
@@ -421,8 +401,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @free_busy_location.setter
     def free_busy_location(self, free_busy_location: str):
-        """Sets the free_busy_location of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies a URL path from which a client can retrieve free/busy information for the contact as an iCal file             
 
         :param free_busy_location: The free_busy_location of this MapiContactPersonalInfoPropertySetDto.
@@ -432,8 +411,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def account(self) -> str:
-        """Gets the account of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the account name of the contact             
 
         :return: The account of this MapiContactPersonalInfoPropertySetDto.
@@ -443,8 +421,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @account.setter
     def account(self, account: str):
-        """Sets the account of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the account name of the contact             
 
         :param account: The account of this MapiContactPersonalInfoPropertySetDto.
@@ -454,8 +431,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def html(self) -> str:
-        """Gets the html of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's business web page URL             
 
         :return: The html of this MapiContactPersonalInfoPropertySetDto.
@@ -465,8 +441,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @html.setter
     def html(self, html: str):
-        """Sets the html of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's business web page URL             
 
         :param html: The html of this MapiContactPersonalInfoPropertySetDto.
@@ -476,8 +451,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def business_home_page(self) -> str:
-        """Gets the business_home_page of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's business web page URL             
 
         :return: The business_home_page of this MapiContactPersonalInfoPropertySetDto.
@@ -487,8 +461,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @business_home_page.setter
     def business_home_page(self, business_home_page: str):
-        """Sets the business_home_page of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's business web page URL             
 
         :param business_home_page: The business_home_page of this MapiContactPersonalInfoPropertySetDto.
@@ -498,8 +471,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def ftp_site(self) -> str:
-        """Gets the ftp_site of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's File Transfer Protocol (FTP) URL             
 
         :return: The ftp_site of this MapiContactPersonalInfoPropertySetDto.
@@ -509,8 +481,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @ftp_site.setter
     def ftp_site(self, ftp_site: str):
-        """Sets the ftp_site of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the contact's File Transfer Protocol (FTP) URL             
 
         :param ftp_site: The ftp_site of this MapiContactPersonalInfoPropertySetDto.
@@ -520,8 +491,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def computer_network_name(self) -> str:
-        """Gets the computer_network_name of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the name of the network to which the contact's computer is connected             
 
         :return: The computer_network_name of this MapiContactPersonalInfoPropertySetDto.
@@ -531,8 +501,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @computer_network_name.setter
     def computer_network_name(self, computer_network_name: str):
-        """Sets the computer_network_name of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the name of the network to which the contact's computer is connected             
 
         :param computer_network_name: The computer_network_name of this MapiContactPersonalInfoPropertySetDto.
@@ -542,8 +511,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def gender(self) -> str:
-        """Gets the gender of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Gender of the contact Enum, available values: Unspecified, Female, Male
 
         :return: The gender of this MapiContactPersonalInfoPropertySetDto.
@@ -553,8 +521,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @gender.setter
     def gender(self, gender: str):
-        """Sets the gender of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Gender of the contact Enum, available values: Unspecified, Female, Male
 
         :param gender: The gender of this MapiContactPersonalInfoPropertySetDto.
@@ -566,8 +533,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def referred_by_name(self) -> str:
-        """Gets the referred_by_name of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the name of the person who referred this contact to the user             
 
         :return: The referred_by_name of this MapiContactPersonalInfoPropertySetDto.
@@ -577,8 +543,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @referred_by_name.setter
     def referred_by_name(self, referred_by_name: str):
-        """Sets the referred_by_name of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Specifies the name of the person who referred this contact to the user             
 
         :param referred_by_name: The referred_by_name of this MapiContactPersonalInfoPropertySetDto.
@@ -588,8 +553,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @property
     def children(self) -> List[str]:
-        """Gets the children of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Contains a list of names of children.             
 
         :return: The children of this MapiContactPersonalInfoPropertySetDto.
@@ -599,8 +563,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
 
     @children.setter
     def children(self, children: List[str]):
-        """Sets the children of this MapiContactPersonalInfoPropertySetDto.
-
+        """
         Contains a list of names of children.             
 
         :param children: The children of this MapiContactPersonalInfoPropertySetDto.

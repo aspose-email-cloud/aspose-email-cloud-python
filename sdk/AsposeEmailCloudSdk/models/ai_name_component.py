@@ -83,10 +83,10 @@ class AiNameComponent(object):
         if position is not None:
             self.position = position
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this AiNameComponent.
-
+        """
         Component value             
 
         :return: The value of this AiNameComponent.
@@ -96,8 +96,7 @@ class AiNameComponent(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this AiNameComponent.
-
+        """
         Component value             
 
         :param value: The value of this AiNameComponent.
@@ -107,8 +106,7 @@ class AiNameComponent(object):
 
     @property
     def category(self) -> str:
-        """Gets the category of this AiNameComponent.
-
+        """
         Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
 
         :return: The category of this AiNameComponent.
@@ -118,8 +116,7 @@ class AiNameComponent(object):
 
     @category.setter
     def category(self, category: str):
-        """Sets the category of this AiNameComponent.
-
+        """
         Name component category. Enum, available values: Unknown, Mononym, Score, Format, FirstInitial, FirstName, MiddleInitial, MiddleName, MiddleNickname, MiddleSobriquet, MiddleMaidenName, MiddlePatronym, MiddleMatronym, LastInitial, LastName, LastNobiliaryParticle, LastNominalConjunction, LastPaternalSurname, LastMaternalSurname, PrefixTitle, PostfixGenerationalTitle, PostfixPostnominalLetters, ArabicIsm, ArabicKunya, ArabicNasab, ArabicSlaqab, ArabicNisbah
 
         :param category: The category of this AiNameComponent.
@@ -131,8 +128,7 @@ class AiNameComponent(object):
 
     @property
     def score(self) -> float:
-        """Gets the score of this AiNameComponent.
-
+        """
         Score from 0.0 to 1.0             
 
         :return: The score of this AiNameComponent.
@@ -142,8 +138,7 @@ class AiNameComponent(object):
 
     @score.setter
     def score(self, score: float):
-        """Sets the score of this AiNameComponent.
-
+        """
         Score from 0.0 to 1.0             
 
         :param score: The score of this AiNameComponent.
@@ -155,8 +150,7 @@ class AiNameComponent(object):
 
     @property
     def position(self) -> int:
-        """Gets the position of this AiNameComponent.
-
+        """
         Component position from 0             
 
         :return: The position of this AiNameComponent.
@@ -166,8 +160,7 @@ class AiNameComponent(object):
 
     @position.setter
     def position(self, position: int):
-        """Sets the position of this AiNameComponent.
-
+        """
         Component position from 0             
 
         :param position: The position of this AiNameComponent.

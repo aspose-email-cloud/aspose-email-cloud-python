@@ -85,7 +85,7 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
         'position': 'position'
     }
 
-    def __init__(self, calendar_type: str = None, deleted_instance_dates: List[datetime] = None, end_date: datetime = None, end_type: str = None, exceptions: List[MapiCalendarExceptionInfoDto] = None, frequency: str = None, modified_instance_dates: List[datetime] = None, occurrence_count: int = None, pattern_type: str = None, period: int = None, sliding_flag: bool = None, start_date: datetime = None, week_start_day: str = None, discriminator: str = None, day: int = None, day_of_week: List[str] = None, position: str = None):
+    def __init__(self, calendar_type: str = None, deleted_instance_dates: List[datetime] = None, end_date: datetime = None, end_type: str = None, exceptions: List[MapiCalendarExceptionInfoDto] = None, frequency: str = None, modified_instance_dates: List[datetime] = None, occurrence_count: int = None, pattern_type: str = None, period: int = None, sliding_flag: bool = None, start_date: datetime = None, week_start_day: str = None, day: int = None, day_of_week: List[str] = None, position: str = None):
         """
         Represents the yearly and monthly recurrence pattern of the mapi calendar             
         :param calendar_type: Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
@@ -114,8 +114,6 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
         :type start_date: datetime
         :param week_start_day: Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
         :type week_start_day: str
-        :param discriminator: 
-        :type discriminator: str
         :param day: Day of the month on which the recurrence falls.             
         :type day: int
         :param day_of_week: Days of week at which the event occurs.             
@@ -155,8 +153,6 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
             self.start_date = start_date
         if week_start_day is not None:
             self.week_start_day = week_start_day
-        if discriminator is not None:
-            self.discriminator = discriminator
         if day is not None:
             self.day = day
         if day_of_week is not None:
@@ -164,10 +160,10 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
         if position is not None:
             self.position = position
 
+
     @property
     def day(self) -> int:
-        """Gets the day of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
-
+        """
         Day of the month on which the recurrence falls.             
 
         :return: The day of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
@@ -177,8 +173,7 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
 
     @day.setter
     def day(self, day: int):
-        """Sets the day of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
-
+        """
         Day of the month on which the recurrence falls.             
 
         :param day: The day of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
@@ -190,8 +185,7 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
 
     @property
     def day_of_week(self) -> List[str]:
-        """Gets the day_of_week of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
-
+        """
         Days of week at which the event occurs.              Items: Enumerates the days of week of the mapi calendar recurrence pattern Enum, available values: Saturday, Friday, Thursday, Wednesday, Tuesday, Monday, Sunday
 
         :return: The day_of_week of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
@@ -201,8 +195,7 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
 
     @day_of_week.setter
     def day_of_week(self, day_of_week: List[str]):
-        """Sets the day_of_week of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
-
+        """
         Days of week at which the event occurs.              Items: Enumerates the days of week of the mapi calendar recurrence pattern Enum, available values: Saturday, Friday, Thursday, Wednesday, Tuesday, Monday, Sunday
 
         :param day_of_week: The day_of_week of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
@@ -212,8 +205,7 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
 
     @property
     def position(self) -> str:
-        """Gets the position of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
-
+        """
         Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
 
         :return: The position of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
@@ -223,8 +215,7 @@ class MapiCalendarYearlyAndMonthlyRecurrencePatternDto(MapiCalendarRecurrencePat
 
     @position.setter
     def position(self, position: str):
-        """Sets the position of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.
-
+        """
         Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
 
         :param position: The position of this MapiCalendarYearlyAndMonthlyRecurrencePatternDto.

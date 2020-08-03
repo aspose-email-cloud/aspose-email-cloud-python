@@ -62,10 +62,11 @@ class ValueTOfString(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this ValueTOfString.
-
+        """
+        Gets the value of this ValueTOfString.
 
         :return: The value of this ValueTOfString.
         :rtype: str
@@ -74,8 +75,8 @@ class ValueTOfString(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this ValueTOfString.
-
+        """
+        Sets the value of this ValueTOfString.
 
         :param value: The value of this ValueTOfString.
         :type: str

@@ -71,10 +71,10 @@ class ContactAsFileRequest(object):
         if value is not None:
             self.value = value
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this ContactAsFileRequest.
-
+        """
         Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
 
         :return: The format of this ContactAsFileRequest.
@@ -84,8 +84,7 @@ class ContactAsFileRequest(object):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this ContactAsFileRequest.
-
+        """
         Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
 
         :param format: The format of this ContactAsFileRequest.
@@ -97,8 +96,7 @@ class ContactAsFileRequest(object):
 
     @property
     def value(self) -> ContactDto:
-        """Gets the value of this ContactAsFileRequest.
-
+        """
         Contact model.             
 
         :return: The value of this ContactAsFileRequest.
@@ -108,8 +106,7 @@ class ContactAsFileRequest(object):
 
     @value.setter
     def value(self, value: ContactDto):
-        """Sets the value of this ContactAsFileRequest.
-
+        """
         Contact model.             
 
         :param value: The value of this ContactAsFileRequest.

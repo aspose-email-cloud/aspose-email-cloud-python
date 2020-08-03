@@ -69,10 +69,10 @@ class EnumWithCustomOfEmailAddressCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfEmailAddressCategory.
-
+        """
         Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
 
         :return: The value of this EnumWithCustomOfEmailAddressCategory.
@@ -82,8 +82,7 @@ class EnumWithCustomOfEmailAddressCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfEmailAddressCategory.
-
+        """
         Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
 
         :param value: The value of this EnumWithCustomOfEmailAddressCategory.
@@ -97,8 +96,8 @@ class EnumWithCustomOfEmailAddressCategory(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfEmailAddressCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfEmailAddressCategory.
 
         :return: The description of this EnumWithCustomOfEmailAddressCategory.
         :rtype: str
@@ -107,8 +106,8 @@ class EnumWithCustomOfEmailAddressCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfEmailAddressCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfEmailAddressCategory.
 
         :param description: The description of this EnumWithCustomOfEmailAddressCategory.
         :type: str

@@ -85,10 +85,10 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
         if other_parsed_name is not None:
             self.other_parsed_name = other_parsed_name
 
+
     @property
     def other_parsed_name(self) -> List[AiNameComponent]:
-        """Gets the other_parsed_name of this AiNameParsedMatchRequest.
-
+        """
         Other parsed name to match             
 
         :return: The other_parsed_name of this AiNameParsedMatchRequest.
@@ -98,8 +98,7 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
 
     @other_parsed_name.setter
     def other_parsed_name(self, other_parsed_name: List[AiNameComponent]):
-        """Sets the other_parsed_name of this AiNameParsedMatchRequest.
-
+        """
         Other parsed name to match             
 
         :param other_parsed_name: The other_parsed_name of this AiNameParsedMatchRequest.

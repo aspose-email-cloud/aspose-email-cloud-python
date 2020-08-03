@@ -64,6 +64,7 @@ class MailMessageBaseList(ListResponseOfMailMessageBase):
         if value is not None:
             self.value = value
 
+
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -106,10 +106,10 @@ class MapiCalendarTimeZoneInfoDto(object):
         if year is not None:
             self.year = year
 
+
     @property
     def bias(self) -> int:
-        """Gets the bias of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Time zone's offset in minutes from UTC.             
 
         :return: The bias of this MapiCalendarTimeZoneInfoDto.
@@ -119,8 +119,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @bias.setter
     def bias(self, bias: int):
-        """Sets the bias of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Time zone's offset in minutes from UTC.             
 
         :param bias: The bias of this MapiCalendarTimeZoneInfoDto.
@@ -132,8 +131,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @property
     def daylight_bias(self) -> int:
-        """Gets the daylight_bias of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Offset in minutes from lBias during daylight saving time.             
 
         :return: The daylight_bias of this MapiCalendarTimeZoneInfoDto.
@@ -143,8 +141,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @daylight_bias.setter
     def daylight_bias(self, daylight_bias: int):
-        """Sets the daylight_bias of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Offset in minutes from lBias during daylight saving time.             
 
         :param daylight_bias: The daylight_bias of this MapiCalendarTimeZoneInfoDto.
@@ -156,8 +153,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @property
     def daylight_date(self) -> MapiCalendarTimeZoneRuleDto:
-        """Gets the daylight_date of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Date and local time that indicate when to begin using the DaylightBias.             
 
         :return: The daylight_date of this MapiCalendarTimeZoneInfoDto.
@@ -167,8 +163,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @daylight_date.setter
     def daylight_date(self, daylight_date: MapiCalendarTimeZoneRuleDto):
-        """Sets the daylight_date of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Date and local time that indicate when to begin using the DaylightBias.             
 
         :param daylight_date: The daylight_date of this MapiCalendarTimeZoneInfoDto.
@@ -178,8 +173,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @property
     def standard_bias(self) -> int:
-        """Gets the standard_bias of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Offset in minutes from lBias during standard time.             
 
         :return: The standard_bias of this MapiCalendarTimeZoneInfoDto.
@@ -189,8 +183,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @standard_bias.setter
     def standard_bias(self, standard_bias: int):
-        """Sets the standard_bias of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Offset in minutes from lBias during standard time.             
 
         :param standard_bias: The standard_bias of this MapiCalendarTimeZoneInfoDto.
@@ -202,8 +195,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @property
     def standard_date(self) -> MapiCalendarTimeZoneRuleDto:
-        """Gets the standard_date of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Date and local time that indicate when to begin using the StandardBias.             
 
         :return: The standard_date of this MapiCalendarTimeZoneInfoDto.
@@ -213,8 +205,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @standard_date.setter
     def standard_date(self, standard_date: MapiCalendarTimeZoneRuleDto):
-        """Sets the standard_date of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Date and local time that indicate when to begin using the StandardBias.             
 
         :param standard_date: The standard_date of this MapiCalendarTimeZoneInfoDto.
@@ -224,8 +215,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @property
     def time_zone_flags(self) -> List[str]:
-        """Gets the time_zone_flags of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
 
         :return: The time_zone_flags of this MapiCalendarTimeZoneInfoDto.
@@ -235,8 +225,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @time_zone_flags.setter
     def time_zone_flags(self, time_zone_flags: List[str]):
-        """Sets the time_zone_flags of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
 
         :param time_zone_flags: The time_zone_flags of this MapiCalendarTimeZoneInfoDto.
@@ -246,8 +235,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @property
     def year(self) -> int:
-        """Gets the year of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Year in which this rule is scheduled to take effect.             
 
         :return: The year of this MapiCalendarTimeZoneInfoDto.
@@ -257,8 +245,7 @@ class MapiCalendarTimeZoneInfoDto(object):
 
     @year.setter
     def year(self, year: int):
-        """Sets the year of this MapiCalendarTimeZoneInfoDto.
-
+        """
         Year in which this rule is scheduled to take effect.             
 
         :param year: The year of this MapiCalendarTimeZoneInfoDto.

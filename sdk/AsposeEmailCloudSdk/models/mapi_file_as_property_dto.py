@@ -57,13 +57,11 @@ class MapiFileAsPropertyDto(MapiPropertyDto):
         'value': 'value'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value: str = None):
         """
         Mapi property with FileAsMapping value             
         :param descriptor: Property descriptor             
         :type descriptor: MapiPropertyDescriptor
-        :param discriminator: 
-        :type discriminator: str
         :param value: Defines how to construct what is displayed for a contact in the FileAs property. Enum, available values: None, LastCommaFirst, FirstSpaceLast, Company, LastCommaFirstCompany, CompanyLastFirst, LastFirst, LastFirstCompany, CompanyLastCommaFirst, LastFirstSuffix, LastSpaceFirstCompany, CompanyLastSpaceFirst, LastSpaceFirst, DisplayName, FirstName, LastFirstMiddleSuffix, LastName, Empty
         :type value: str
         """
@@ -73,15 +71,13 @@ class MapiFileAsPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this MapiFileAsPropertyDto.
-
+        """
         Defines how to construct what is displayed for a contact in the FileAs property. Enum, available values: None, LastCommaFirst, FirstSpaceLast, Company, LastCommaFirstCompany, CompanyLastFirst, LastFirst, LastFirstCompany, CompanyLastCommaFirst, LastFirstSuffix, LastSpaceFirstCompany, CompanyLastSpaceFirst, LastSpaceFirst, DisplayName, FirstName, LastFirstMiddleSuffix, LastName, Empty
 
         :return: The value of this MapiFileAsPropertyDto.
@@ -91,8 +87,7 @@ class MapiFileAsPropertyDto(MapiPropertyDto):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this MapiFileAsPropertyDto.
-
+        """
         Defines how to construct what is displayed for a contact in the FileAs property. Enum, available values: None, LastCommaFirst, FirstSpaceLast, Company, LastCommaFirstCompany, CompanyLastFirst, LastFirst, LastFirstCompany, CompanyLastCommaFirst, LastFirstSuffix, LastSpaceFirstCompany, CompanyLastSpaceFirst, LastSpaceFirst, DisplayName, FirstName, LastFirstMiddleSuffix, LastName, Empty
 
         :param value: The value of this MapiFileAsPropertyDto.

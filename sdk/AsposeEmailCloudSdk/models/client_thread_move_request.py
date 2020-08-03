@@ -78,10 +78,10 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
         if destination_folder is not None:
             self.destination_folder = destination_folder
 
+
     @property
     def destination_folder(self) -> str:
-        """Gets the destination_folder of this ClientThreadMoveRequest.
-
+        """
         Email account folder to move thread to.             
 
         :return: The destination_folder of this ClientThreadMoveRequest.
@@ -91,8 +91,7 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
 
     @destination_folder.setter
     def destination_folder(self, destination_folder: str):
-        """Sets the destination_folder of this ClientThreadMoveRequest.
-
+        """
         Email account folder to move thread to.             
 
         :param destination_folder: The destination_folder of this ClientThreadMoveRequest.

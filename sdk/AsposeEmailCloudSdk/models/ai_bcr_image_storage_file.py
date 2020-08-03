@@ -72,10 +72,10 @@ class AiBcrImageStorageFile(AiBcrImage):
         if file is not None:
             self.file = file
 
+
     @property
     def file(self) -> StorageFileLocation:
-        """Gets the file of this AiBcrImageStorageFile.
-
+        """
         Image location             
 
         :return: The file of this AiBcrImageStorageFile.
@@ -85,8 +85,7 @@ class AiBcrImageStorageFile(AiBcrImage):
 
     @file.setter
     def file(self, file: StorageFileLocation):
-        """Sets the file of this AiBcrImageStorageFile.
-
+        """
         Image location             
 
         :param file: The file of this AiBcrImageStorageFile.

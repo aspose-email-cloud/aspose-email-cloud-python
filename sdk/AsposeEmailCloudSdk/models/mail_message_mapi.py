@@ -55,27 +55,22 @@ class MailMessageMapi(MailMessageBase):
         'value': 'value'
     }
 
-    def __init__(self, discriminator: str = None, value: MapiMessageDto = None):
+    def __init__(self, value: MapiMessageDto = None):
         """
         Email message represented as MAPI object.             
-        :param discriminator: 
-        :type discriminator: str
         :param value: Email message object.             
         :type value: MapiMessageDto
         """
         super(MailMessageMapi, self).__init__()
 
         self._value = None
-
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> MapiMessageDto:
-        """Gets the value of this MailMessageMapi.
-
+        """
         Email message object.             
 
         :return: The value of this MailMessageMapi.
@@ -85,8 +80,7 @@ class MailMessageMapi(MailMessageBase):
 
     @value.setter
     def value(self, value: MapiMessageDto):
-        """Sets the value of this MailMessageMapi.
-
+        """
         Email message object.             
 
         :param value: The value of this MailMessageMapi.

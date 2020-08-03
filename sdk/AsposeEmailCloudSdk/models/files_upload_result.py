@@ -71,10 +71,10 @@ class FilesUploadResult(object):
         if errors is not None:
             self.errors = errors
 
+
     @property
     def uploaded(self) -> List[str]:
-        """Gets the uploaded of this FilesUploadResult.
-
+        """
         List of uploaded file names
 
         :return: The uploaded of this FilesUploadResult.
@@ -84,8 +84,7 @@ class FilesUploadResult(object):
 
     @uploaded.setter
     def uploaded(self, uploaded: List[str]):
-        """Sets the uploaded of this FilesUploadResult.
-
+        """
         List of uploaded file names
 
         :param uploaded: The uploaded of this FilesUploadResult.
@@ -95,8 +94,7 @@ class FilesUploadResult(object):
 
     @property
     def errors(self) -> List[Error]:
-        """Gets the errors of this FilesUploadResult.
-
+        """
         List of errors.
 
         :return: The errors of this FilesUploadResult.
@@ -106,8 +104,7 @@ class FilesUploadResult(object):
 
     @errors.setter
     def errors(self, errors: List[Error]):
-        """Sets the errors of this FilesUploadResult.
-
+        """
         List of errors.
 
         :param errors: The errors of this FilesUploadResult.

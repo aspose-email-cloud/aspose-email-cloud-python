@@ -72,10 +72,11 @@ class StorageModelOfMapiCalendarDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfMapiCalendarDto.
-
+        """
+        Gets the storage_file of this StorageModelOfMapiCalendarDto.
 
         :return: The storage_file of this StorageModelOfMapiCalendarDto.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfMapiCalendarDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfMapiCalendarDto.
-
+        """
+        Sets the storage_file of this StorageModelOfMapiCalendarDto.
 
         :param storage_file: The storage_file of this StorageModelOfMapiCalendarDto.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfMapiCalendarDto(object):
 
     @property
     def value(self) -> MapiCalendarDto:
-        """Gets the value of this StorageModelOfMapiCalendarDto.
-
+        """
+        Gets the value of this StorageModelOfMapiCalendarDto.
 
         :return: The value of this StorageModelOfMapiCalendarDto.
         :rtype: MapiCalendarDto
@@ -106,8 +107,8 @@ class StorageModelOfMapiCalendarDto(object):
 
     @value.setter
     def value(self, value: MapiCalendarDto):
-        """Sets the value of this StorageModelOfMapiCalendarDto.
-
+        """
+        Sets the value of this StorageModelOfMapiCalendarDto.
 
         :param value: The value of this StorageModelOfMapiCalendarDto.
         :type: MapiCalendarDto

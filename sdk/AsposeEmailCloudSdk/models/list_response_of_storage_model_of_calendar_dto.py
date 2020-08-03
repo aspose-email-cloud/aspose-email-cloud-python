@@ -64,10 +64,11 @@ class ListResponseOfStorageModelOfCalendarDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[StorageModelOfCalendarDto]:
-        """Gets the value of this ListResponseOfStorageModelOfCalendarDto.
-
+        """
+        Gets the value of this ListResponseOfStorageModelOfCalendarDto.
 
         :return: The value of this ListResponseOfStorageModelOfCalendarDto.
         :rtype: list[StorageModelOfCalendarDto]
@@ -76,8 +77,8 @@ class ListResponseOfStorageModelOfCalendarDto(object):
 
     @value.setter
     def value(self, value: List[StorageModelOfCalendarDto]):
-        """Sets the value of this ListResponseOfStorageModelOfCalendarDto.
-
+        """
+        Sets the value of this ListResponseOfStorageModelOfCalendarDto.
 
         :param value: The value of this ListResponseOfStorageModelOfCalendarDto.
         :type: list[StorageModelOfCalendarDto]

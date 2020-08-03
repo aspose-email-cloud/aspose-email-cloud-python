@@ -72,10 +72,11 @@ class StorageModelOfEmailDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfEmailDto.
-
+        """
+        Gets the storage_file of this StorageModelOfEmailDto.
 
         :return: The storage_file of this StorageModelOfEmailDto.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfEmailDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfEmailDto.
-
+        """
+        Sets the storage_file of this StorageModelOfEmailDto.
 
         :param storage_file: The storage_file of this StorageModelOfEmailDto.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfEmailDto(object):
 
     @property
     def value(self) -> EmailDto:
-        """Gets the value of this StorageModelOfEmailDto.
-
+        """
+        Gets the value of this StorageModelOfEmailDto.
 
         :return: The value of this StorageModelOfEmailDto.
         :rtype: EmailDto
@@ -106,8 +107,8 @@ class StorageModelOfEmailDto(object):
 
     @value.setter
     def value(self, value: EmailDto):
-        """Sets the value of this StorageModelOfEmailDto.
-
+        """
+        Sets the value of this StorageModelOfEmailDto.
 
         :param value: The value of this StorageModelOfEmailDto.
         :type: EmailDto

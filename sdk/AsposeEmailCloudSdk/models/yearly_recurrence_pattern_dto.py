@@ -68,7 +68,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
         'start_position': 'startPosition'
     }
 
-    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, discriminator: str = None, start_day: str = None, start_month: str = None, start_offset: int = None, start_position: str = None):
+    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, start_day: str = None, start_month: str = None, start_offset: int = None, start_position: str = None):
         """
         Yearly recurrence pattern.             
         :param interval: Number of recurrence units.             
@@ -79,8 +79,6 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
         :type end_date: datetime
         :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type week_start: str
-        :param discriminator: 
-        :type discriminator: str
         :param start_day: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type start_day: str
         :param start_month: Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
@@ -105,8 +103,6 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
             self.end_date = end_date
         if week_start is not None:
             self.week_start = week_start
-        if discriminator is not None:
-            self.discriminator = discriminator
         if start_day is not None:
             self.start_day = start_day
         if start_month is not None:
@@ -116,10 +112,10 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
         if start_position is not None:
             self.start_position = start_position
 
+
     @property
     def start_day(self) -> str:
-        """Gets the start_day of this YearlyRecurrencePatternDto.
-
+        """
         Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :return: The start_day of this YearlyRecurrencePatternDto.
@@ -129,8 +125,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
 
     @start_day.setter
     def start_day(self, start_day: str):
-        """Sets the start_day of this YearlyRecurrencePatternDto.
-
+        """
         Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :param start_day: The start_day of this YearlyRecurrencePatternDto.
@@ -142,8 +137,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
 
     @property
     def start_month(self) -> str:
-        """Gets the start_month of this YearlyRecurrencePatternDto.
-
+        """
         Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
 
         :return: The start_month of this YearlyRecurrencePatternDto.
@@ -153,8 +147,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
 
     @start_month.setter
     def start_month(self, start_month: str):
-        """Sets the start_month of this YearlyRecurrencePatternDto.
-
+        """
         Represents a calendar month. Enum, available values: None, January, February, March, April, May, June, July, August, September, October, November, December
 
         :param start_month: The start_month of this YearlyRecurrencePatternDto.
@@ -166,8 +159,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
 
     @property
     def start_offset(self) -> int:
-        """Gets the start_offset of this YearlyRecurrencePatternDto.
-
+        """
         Start offset.             
 
         :return: The start_offset of this YearlyRecurrencePatternDto.
@@ -177,8 +169,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
 
     @start_offset.setter
     def start_offset(self, start_offset: int):
-        """Sets the start_offset of this YearlyRecurrencePatternDto.
-
+        """
         Start offset.             
 
         :param start_offset: The start_offset of this YearlyRecurrencePatternDto.
@@ -190,8 +181,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
 
     @property
     def start_position(self) -> str:
-        """Gets the start_position of this YearlyRecurrencePatternDto.
-
+        """
         Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
 
         :return: The start_position of this YearlyRecurrencePatternDto.
@@ -201,8 +191,7 @@ class YearlyRecurrencePatternDto(RecurrencePatternDto):
 
     @start_position.setter
     def start_position(self, start_position: str):
-        """Sets the start_position of this YearlyRecurrencePatternDto.
-
+        """
         Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
 
         :param start_position: The start_position of this YearlyRecurrencePatternDto.

@@ -72,10 +72,10 @@ class ClientFolderDeleteRequest(ClientAccountBaseRequest):
         if folder is not None:
             self.folder = folder
 
+
     @property
     def folder(self) -> str:
-        """Gets the folder of this ClientFolderDeleteRequest.
-
+        """
         Path to folder to delete.             
 
         :return: The folder of this ClientFolderDeleteRequest.
@@ -85,8 +85,7 @@ class ClientFolderDeleteRequest(ClientAccountBaseRequest):
 
     @folder.setter
     def folder(self, folder: str):
-        """Sets the folder of this ClientFolderDeleteRequest.
-
+        """
         Path to folder to delete.             
 
         :param folder: The folder of this ClientFolderDeleteRequest.

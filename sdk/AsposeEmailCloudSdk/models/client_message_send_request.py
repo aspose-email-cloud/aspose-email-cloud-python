@@ -73,10 +73,10 @@ class ClientMessageSendRequest(ClientAccountBaseRequest):
         if message is not None:
             self.message = message
 
+
     @property
     def message(self) -> MailMessageBase:
-        """Gets the message of this ClientMessageSendRequest.
-
+        """
         Message to send             
 
         :return: The message of this ClientMessageSendRequest.
@@ -86,8 +86,7 @@ class ClientMessageSendRequest(ClientAccountBaseRequest):
 
     @message.setter
     def message(self, message: MailMessageBase):
-        """Sets the message of this ClientMessageSendRequest.
-
+        """
         Message to send             
 
         :param message: The message of this ClientMessageSendRequest.

@@ -71,10 +71,10 @@ class CalendarAsFileRequest(object):
         if value is not None:
             self.value = value
 
+
     @property
     def format(self) -> str:
-        """Gets the format of this CalendarAsFileRequest.
-
+        """
         Calendar file format Enum, available values: Ics, Msg
 
         :return: The format of this CalendarAsFileRequest.
@@ -84,8 +84,7 @@ class CalendarAsFileRequest(object):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this CalendarAsFileRequest.
-
+        """
         Calendar file format Enum, available values: Ics, Msg
 
         :param format: The format of this CalendarAsFileRequest.
@@ -97,8 +96,7 @@ class CalendarAsFileRequest(object):
 
     @property
     def value(self) -> CalendarDto:
-        """Gets the value of this CalendarAsFileRequest.
-
+        """
         iCalendar model             
 
         :return: The value of this CalendarAsFileRequest.
@@ -108,8 +106,7 @@ class CalendarAsFileRequest(object):
 
     @value.setter
     def value(self, value: CalendarDto):
-        """Sets the value of this CalendarAsFileRequest.
-
+        """
         iCalendar model             
 
         :param value: The value of this CalendarAsFileRequest.

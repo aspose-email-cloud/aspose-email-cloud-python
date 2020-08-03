@@ -72,10 +72,11 @@ class StorageModelOfContactDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfContactDto.
-
+        """
+        Gets the storage_file of this StorageModelOfContactDto.
 
         :return: The storage_file of this StorageModelOfContactDto.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfContactDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfContactDto.
-
+        """
+        Sets the storage_file of this StorageModelOfContactDto.
 
         :param storage_file: The storage_file of this StorageModelOfContactDto.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfContactDto(object):
 
     @property
     def value(self) -> ContactDto:
-        """Gets the value of this StorageModelOfContactDto.
-
+        """
+        Gets the value of this StorageModelOfContactDto.
 
         :return: The value of this StorageModelOfContactDto.
         :rtype: ContactDto
@@ -106,8 +107,8 @@ class StorageModelOfContactDto(object):
 
     @value.setter
     def value(self, value: ContactDto):
-        """Sets the value of this StorageModelOfContactDto.
-
+        """
+        Sets the value of this StorageModelOfContactDto.
 
         :param value: The value of this StorageModelOfContactDto.
         :type: ContactDto

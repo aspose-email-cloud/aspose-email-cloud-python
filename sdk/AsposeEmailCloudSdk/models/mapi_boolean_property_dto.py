@@ -57,13 +57,11 @@ class MapiBooleanPropertyDto(MapiPropertyDto):
         'value': 'value'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: bool = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value: bool = None):
         """
         Mapi property with Boolean value             
         :param descriptor: Property descriptor             
         :type descriptor: MapiPropertyDescriptor
-        :param discriminator: 
-        :type discriminator: str
         :param value: Property value             
         :type value: bool
         """
@@ -73,15 +71,13 @@ class MapiBooleanPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> bool:
-        """Gets the value of this MapiBooleanPropertyDto.
-
+        """
         Property value             
 
         :return: The value of this MapiBooleanPropertyDto.
@@ -91,8 +87,7 @@ class MapiBooleanPropertyDto(MapiPropertyDto):
 
     @value.setter
     def value(self, value: bool):
-        """Sets the value of this MapiBooleanPropertyDto.
-
+        """
         Property value             
 
         :param value: The value of this MapiBooleanPropertyDto.

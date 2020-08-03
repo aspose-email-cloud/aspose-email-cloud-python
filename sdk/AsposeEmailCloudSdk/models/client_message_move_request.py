@@ -85,10 +85,10 @@ class ClientMessageMoveRequest(ClientMessageBaseRequest):
         if destination_folder is not None:
             self.destination_folder = destination_folder
 
+
     @property
     def source_folder(self) -> str:
-        """Gets the source_folder of this ClientMessageMoveRequest.
-
+        """
         Folder to move message from.             
 
         :return: The source_folder of this ClientMessageMoveRequest.
@@ -98,8 +98,7 @@ class ClientMessageMoveRequest(ClientMessageBaseRequest):
 
     @source_folder.setter
     def source_folder(self, source_folder: str):
-        """Sets the source_folder of this ClientMessageMoveRequest.
-
+        """
         Folder to move message from.             
 
         :param source_folder: The source_folder of this ClientMessageMoveRequest.
@@ -109,8 +108,7 @@ class ClientMessageMoveRequest(ClientMessageBaseRequest):
 
     @property
     def destination_folder(self) -> str:
-        """Gets the destination_folder of this ClientMessageMoveRequest.
-
+        """
         Folder to move message to.             
 
         :return: The destination_folder of this ClientMessageMoveRequest.
@@ -120,8 +118,7 @@ class ClientMessageMoveRequest(ClientMessageBaseRequest):
 
     @destination_folder.setter
     def destination_folder(self, destination_folder: str):
-        """Sets the destination_folder of this ClientMessageMoveRequest.
-
+        """
         Folder to move message to.             
 
         :param destination_folder: The destination_folder of this ClientMessageMoveRequest.

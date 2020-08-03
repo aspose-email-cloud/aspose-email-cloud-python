@@ -155,10 +155,10 @@ class MapiCalendarExceptionInfoDto(object):
         if sub_type is not None:
             self.sub_type = sub_type
 
+
     @property
     def attachments(self) -> List[MapiAttachmentDto]:
-        """Gets the attachments of this MapiCalendarExceptionInfoDto.
-
+        """
         Attachments in the recurrence exception.             
 
         :return: The attachments of this MapiCalendarExceptionInfoDto.
@@ -168,8 +168,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @attachments.setter
     def attachments(self, attachments: List[MapiAttachmentDto]):
-        """Sets the attachments of this MapiCalendarExceptionInfoDto.
-
+        """
         Attachments in the recurrence exception.             
 
         :param attachments: The attachments of this MapiCalendarExceptionInfoDto.
@@ -179,8 +178,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def body(self) -> str:
-        """Gets the body of this MapiCalendarExceptionInfoDto.
-
+        """
         Body.             
 
         :return: The body of this MapiCalendarExceptionInfoDto.
@@ -190,8 +188,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @body.setter
     def body(self, body: str):
-        """Sets the body of this MapiCalendarExceptionInfoDto.
-
+        """
         Body.             
 
         :param body: The body of this MapiCalendarExceptionInfoDto.
@@ -201,8 +198,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def busy_status(self) -> str:
-        """Gets the busy_status of this MapiCalendarExceptionInfoDto.
-
+        """
         Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :return: The busy_status of this MapiCalendarExceptionInfoDto.
@@ -212,8 +208,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @busy_status.setter
     def busy_status(self, busy_status: str):
-        """Sets the busy_status of this MapiCalendarExceptionInfoDto.
-
+        """
         Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :param busy_status: The busy_status of this MapiCalendarExceptionInfoDto.
@@ -225,8 +220,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def end_date_time(self) -> datetime:
-        """Gets the end_date_time of this MapiCalendarExceptionInfoDto.
-
+        """
         End date.             
 
         :return: The end_date_time of this MapiCalendarExceptionInfoDto.
@@ -236,8 +230,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @end_date_time.setter
     def end_date_time(self, end_date_time: datetime):
-        """Sets the end_date_time of this MapiCalendarExceptionInfoDto.
-
+        """
         End date.             
 
         :param end_date_time: The end_date_time of this MapiCalendarExceptionInfoDto.
@@ -249,8 +242,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def has_attachment(self) -> bool:
-        """Gets the has_attachment of this MapiCalendarExceptionInfoDto.
-
+        """
         Value of this field specifies whether the Exception Embedded Message object contains attachments.             
 
         :return: The has_attachment of this MapiCalendarExceptionInfoDto.
@@ -260,8 +252,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @has_attachment.setter
     def has_attachment(self, has_attachment: bool):
-        """Sets the has_attachment of this MapiCalendarExceptionInfoDto.
-
+        """
         Value of this field specifies whether the Exception Embedded Message object contains attachments.             
 
         :param has_attachment: The has_attachment of this MapiCalendarExceptionInfoDto.
@@ -273,8 +264,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def location(self) -> str:
-        """Gets the location of this MapiCalendarExceptionInfoDto.
-
+        """
         Location.             
 
         :return: The location of this MapiCalendarExceptionInfoDto.
@@ -284,8 +274,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @location.setter
     def location(self, location: str):
-        """Sets the location of this MapiCalendarExceptionInfoDto.
-
+        """
         Location.             
 
         :param location: The location of this MapiCalendarExceptionInfoDto.
@@ -295,8 +284,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def meeting_type(self) -> str:
-        """Gets the meeting_type of this MapiCalendarExceptionInfoDto.
-
+        """
         Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
 
         :return: The meeting_type of this MapiCalendarExceptionInfoDto.
@@ -306,8 +294,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @meeting_type.setter
     def meeting_type(self, meeting_type: str):
-        """Sets the meeting_type of this MapiCalendarExceptionInfoDto.
-
+        """
         Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
 
         :param meeting_type: The meeting_type of this MapiCalendarExceptionInfoDto.
@@ -319,8 +306,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def original_start_date(self) -> datetime:
-        """Gets the original_start_date of this MapiCalendarExceptionInfoDto.
-
+        """
         Original start date.             
 
         :return: The original_start_date of this MapiCalendarExceptionInfoDto.
@@ -330,8 +316,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @original_start_date.setter
     def original_start_date(self, original_start_date: datetime):
-        """Sets the original_start_date of this MapiCalendarExceptionInfoDto.
-
+        """
         Original start date.             
 
         :param original_start_date: The original_start_date of this MapiCalendarExceptionInfoDto.
@@ -343,8 +328,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def override_flags(self) -> List[str]:
-        """Gets the override_flags of this MapiCalendarExceptionInfoDto.
-
+        """
         Override flags.              Items: Specifies what data in the MapiCalendarOverride structure has a value different from the recurring series. Enum, available values: Subject, MeetingType, ReminderDelta, Reminder, Location, BusyStatus, Attachment, Subtype, AppointmentColor, ExceptionalBody
 
         :return: The override_flags of this MapiCalendarExceptionInfoDto.
@@ -354,8 +338,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @override_flags.setter
     def override_flags(self, override_flags: List[str]):
-        """Sets the override_flags of this MapiCalendarExceptionInfoDto.
-
+        """
         Override flags.              Items: Specifies what data in the MapiCalendarOverride structure has a value different from the recurring series. Enum, available values: Subject, MeetingType, ReminderDelta, Reminder, Location, BusyStatus, Attachment, Subtype, AppointmentColor, ExceptionalBody
 
         :param override_flags: The override_flags of this MapiCalendarExceptionInfoDto.
@@ -365,8 +348,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def reminder_delta(self) -> int:
-        """Gets the reminder_delta of this MapiCalendarExceptionInfoDto.
-
+        """
         Reminder delta.             
 
         :return: The reminder_delta of this MapiCalendarExceptionInfoDto.
@@ -376,8 +358,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @reminder_delta.setter
     def reminder_delta(self, reminder_delta: int):
-        """Sets the reminder_delta of this MapiCalendarExceptionInfoDto.
-
+        """
         Reminder delta.             
 
         :param reminder_delta: The reminder_delta of this MapiCalendarExceptionInfoDto.
@@ -389,8 +370,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def reminder_set(self) -> bool:
-        """Gets the reminder_set of this MapiCalendarExceptionInfoDto.
-
+        """
         Value for the PidLidReminderSet property.             
 
         :return: The reminder_set of this MapiCalendarExceptionInfoDto.
@@ -400,8 +380,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @reminder_set.setter
     def reminder_set(self, reminder_set: bool):
-        """Sets the reminder_set of this MapiCalendarExceptionInfoDto.
-
+        """
         Value for the PidLidReminderSet property.             
 
         :param reminder_set: The reminder_set of this MapiCalendarExceptionInfoDto.
@@ -413,8 +392,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def start_date_time(self) -> datetime:
-        """Gets the start_date_time of this MapiCalendarExceptionInfoDto.
-
+        """
         Start date.             
 
         :return: The start_date_time of this MapiCalendarExceptionInfoDto.
@@ -424,8 +402,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @start_date_time.setter
     def start_date_time(self, start_date_time: datetime):
-        """Sets the start_date_time of this MapiCalendarExceptionInfoDto.
-
+        """
         Start date.             
 
         :param start_date_time: The start_date_time of this MapiCalendarExceptionInfoDto.
@@ -437,8 +414,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def subject(self) -> str:
-        """Gets the subject of this MapiCalendarExceptionInfoDto.
-
+        """
         Subject.             
 
         :return: The subject of this MapiCalendarExceptionInfoDto.
@@ -448,8 +424,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @subject.setter
     def subject(self, subject: str):
-        """Sets the subject of this MapiCalendarExceptionInfoDto.
-
+        """
         Subject.             
 
         :param subject: The subject of this MapiCalendarExceptionInfoDto.
@@ -459,8 +434,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @property
     def sub_type(self) -> int:
-        """Gets the sub_type of this MapiCalendarExceptionInfoDto.
-
+        """
         SubType.             
 
         :return: The sub_type of this MapiCalendarExceptionInfoDto.
@@ -470,8 +444,7 @@ class MapiCalendarExceptionInfoDto(object):
 
     @sub_type.setter
     def sub_type(self, sub_type: int):
-        """Sets the sub_type of this MapiCalendarExceptionInfoDto.
-
+        """
         SubType.             
 
         :param sub_type: The sub_type of this MapiCalendarExceptionInfoDto.

@@ -58,7 +58,7 @@ class RecurrencePatternDto(object):
         'discriminator': 'discriminator'
     }
 
-    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, discriminator: str = None):
+    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None):
         """
         iCalendar recurrence pattern.             
         :param interval: Number of recurrence units.             
@@ -69,15 +69,12 @@ class RecurrencePatternDto(object):
         :type end_date: datetime
         :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type week_start: str
-        :param discriminator: 
-        :type discriminator: str
         """
 
         self._interval = None
         self._occurs = None
         self._end_date = None
         self._week_start = None
-        self._discriminator = self.__class__.__name__
 
         if interval is not None:
             self.interval = interval
@@ -87,13 +84,11 @@ class RecurrencePatternDto(object):
             self.end_date = end_date
         if week_start is not None:
             self.week_start = week_start
-        if discriminator is not None:
-            self.discriminator = discriminator
+
 
     @property
     def interval(self) -> int:
-        """Gets the interval of this RecurrencePatternDto.
-
+        """
         Number of recurrence units.             
 
         :return: The interval of this RecurrencePatternDto.
@@ -103,8 +98,7 @@ class RecurrencePatternDto(object):
 
     @interval.setter
     def interval(self, interval: int):
-        """Sets the interval of this RecurrencePatternDto.
-
+        """
         Number of recurrence units.             
 
         :param interval: The interval of this RecurrencePatternDto.
@@ -116,8 +110,7 @@ class RecurrencePatternDto(object):
 
     @property
     def occurs(self) -> int:
-        """Gets the occurs of this RecurrencePatternDto.
-
+        """
         Number of occurrences of the recurrence pattern.             
 
         :return: The occurs of this RecurrencePatternDto.
@@ -127,8 +120,7 @@ class RecurrencePatternDto(object):
 
     @occurs.setter
     def occurs(self, occurs: int):
-        """Sets the occurs of this RecurrencePatternDto.
-
+        """
         Number of occurrences of the recurrence pattern.             
 
         :param occurs: The occurs of this RecurrencePatternDto.
@@ -140,8 +132,7 @@ class RecurrencePatternDto(object):
 
     @property
     def end_date(self) -> datetime:
-        """Gets the end_date of this RecurrencePatternDto.
-
+        """
         End date.             
 
         :return: The end_date of this RecurrencePatternDto.
@@ -151,8 +142,7 @@ class RecurrencePatternDto(object):
 
     @end_date.setter
     def end_date(self, end_date: datetime):
-        """Sets the end_date of this RecurrencePatternDto.
-
+        """
         End date.             
 
         :param end_date: The end_date of this RecurrencePatternDto.
@@ -164,8 +154,7 @@ class RecurrencePatternDto(object):
 
     @property
     def week_start(self) -> str:
-        """Gets the week_start of this RecurrencePatternDto.
-
+        """
         Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :return: The week_start of this RecurrencePatternDto.
@@ -175,8 +164,7 @@ class RecurrencePatternDto(object):
 
     @week_start.setter
     def week_start(self, week_start: str):
-        """Sets the week_start of this RecurrencePatternDto.
-
+        """
         Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :param week_start: The week_start of this RecurrencePatternDto.
@@ -188,8 +176,8 @@ class RecurrencePatternDto(object):
 
     @property
     def discriminator(self) -> str:
-        """Gets the discriminator of this RecurrencePatternDto.
-
+        """
+        Gets the discriminator of this RecurrencePatternDto.
 
         :return: The discriminator of this RecurrencePatternDto.
         :rtype: str
@@ -198,15 +186,13 @@ class RecurrencePatternDto(object):
 
     @discriminator.setter
     def discriminator(self, discriminator: str):
-        """Sets the discriminator of this RecurrencePatternDto.
-
+        """
+        Sets the discriminator of this RecurrencePatternDto.
 
         :param discriminator: The discriminator of this RecurrencePatternDto.
         :type: str
         """
-        if discriminator is None:
-            raise ValueError("Invalid value for `discriminator`, must not be `None`")
-        self._discriminator = self.__class__.__name__
+        pass    # setter is ignored for discriminator property
 
     def to_dict(self):
         """Returns the model properties as a dict"""

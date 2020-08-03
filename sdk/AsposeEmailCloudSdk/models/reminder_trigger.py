@@ -76,10 +76,10 @@ class ReminderTrigger(object):
         if related is not None:
             self.related = related
 
+
     @property
     def date_time(self) -> datetime:
-        """Gets the date_time of this ReminderTrigger.
-
+        """
         A trigger set to an absolute date/time.
 
         :return: The date_time of this ReminderTrigger.
@@ -89,8 +89,7 @@ class ReminderTrigger(object):
 
     @date_time.setter
     def date_time(self, date_time: datetime):
-        """Sets the date_time of this ReminderTrigger.
-
+        """
         A trigger set to an absolute date/time.
 
         :param date_time: The date_time of this ReminderTrigger.
@@ -102,8 +101,7 @@ class ReminderTrigger(object):
 
     @property
     def duration(self) -> int:
-        """Gets the duration of this ReminderTrigger.
-
+        """
         Specifies a relative time in ticks for the trigger of the alarm.             
 
         :return: The duration of this ReminderTrigger.
@@ -113,8 +111,7 @@ class ReminderTrigger(object):
 
     @duration.setter
     def duration(self, duration: int):
-        """Sets the duration of this ReminderTrigger.
-
+        """
         Specifies a relative time in ticks for the trigger of the alarm.             
 
         :param duration: The duration of this ReminderTrigger.
@@ -124,8 +121,7 @@ class ReminderTrigger(object):
 
     @property
     def related(self) -> str:
-        """Gets the related of this ReminderTrigger.
-
+        """
         Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
 
         :return: The related of this ReminderTrigger.
@@ -135,8 +131,7 @@ class ReminderTrigger(object):
 
     @related.setter
     def related(self, related: str):
-        """Sets the related of this ReminderTrigger.
-
+        """
         Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
 
         :param related: The related of this ReminderTrigger.

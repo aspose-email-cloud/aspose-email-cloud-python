@@ -72,10 +72,11 @@ class StorageModelOfEmailClientAccount(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfEmailClientAccount.
-
+        """
+        Gets the storage_file of this StorageModelOfEmailClientAccount.
 
         :return: The storage_file of this StorageModelOfEmailClientAccount.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfEmailClientAccount(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfEmailClientAccount.
-
+        """
+        Sets the storage_file of this StorageModelOfEmailClientAccount.
 
         :param storage_file: The storage_file of this StorageModelOfEmailClientAccount.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfEmailClientAccount(object):
 
     @property
     def value(self) -> EmailClientAccount:
-        """Gets the value of this StorageModelOfEmailClientAccount.
-
+        """
+        Gets the value of this StorageModelOfEmailClientAccount.
 
         :return: The value of this StorageModelOfEmailClientAccount.
         :rtype: EmailClientAccount
@@ -106,8 +107,8 @@ class StorageModelOfEmailClientAccount(object):
 
     @value.setter
     def value(self, value: EmailClientAccount):
-        """Sets the value of this StorageModelOfEmailClientAccount.
-
+        """
+        Sets the value of this StorageModelOfEmailClientAccount.
 
         :param value: The value of this StorageModelOfEmailClientAccount.
         :type: EmailClientAccount

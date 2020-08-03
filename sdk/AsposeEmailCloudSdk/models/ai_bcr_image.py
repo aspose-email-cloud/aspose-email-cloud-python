@@ -62,10 +62,10 @@ class AiBcrImage(object):
         if is_single is not None:
             self.is_single = is_single
 
+
     @property
     def is_single(self) -> bool:
-        """Gets the is_single of this AiBcrImage.
-
+        """
         Determines that image contains single VCard or more.             
 
         :return: The is_single of this AiBcrImage.
@@ -75,8 +75,7 @@ class AiBcrImage(object):
 
     @is_single.setter
     def is_single(self, is_single: bool):
-        """Sets the is_single of this AiBcrImage.
-
+        """
         Determines that image contains single VCard or more.             
 
         :param is_single: The is_single of this AiBcrImage.

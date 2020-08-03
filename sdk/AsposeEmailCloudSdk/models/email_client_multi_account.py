@@ -71,10 +71,10 @@ class EmailClientMultiAccount(object):
         if send_account is not None:
             self.send_account = send_account
 
+
     @property
     def receive_accounts(self) -> List[EmailClientAccount]:
-        """Gets the receive_accounts of this EmailClientMultiAccount.
-
+        """
         Email client receive accounts             
 
         :return: The receive_accounts of this EmailClientMultiAccount.
@@ -84,8 +84,7 @@ class EmailClientMultiAccount(object):
 
     @receive_accounts.setter
     def receive_accounts(self, receive_accounts: List[EmailClientAccount]):
-        """Sets the receive_accounts of this EmailClientMultiAccount.
-
+        """
         Email client receive accounts             
 
         :param receive_accounts: The receive_accounts of this EmailClientMultiAccount.
@@ -97,8 +96,7 @@ class EmailClientMultiAccount(object):
 
     @property
     def send_account(self) -> EmailClientAccount:
-        """Gets the send_account of this EmailClientMultiAccount.
-
+        """
         Email client send account             
 
         :return: The send_account of this EmailClientMultiAccount.
@@ -108,8 +106,7 @@ class EmailClientMultiAccount(object):
 
     @send_account.setter
     def send_account(self, send_account: EmailClientAccount):
-        """Sets the send_account of this EmailClientMultiAccount.
-
+        """
         Email client send account             
 
         :param send_account: The send_account of this EmailClientMultiAccount.

@@ -85,10 +85,10 @@ class MapiCalendarAttendeesDto(object):
         if response_requested is not None:
             self.response_requested = response_requested
 
+
     @property
     def appointment_recipients(self) -> List[MapiRecipientDto]:
-        """Gets the appointment_recipients of this MapiCalendarAttendeesDto.
-
+        """
         List of attendees.             
 
         :return: The appointment_recipients of this MapiCalendarAttendeesDto.
@@ -98,8 +98,7 @@ class MapiCalendarAttendeesDto(object):
 
     @appointment_recipients.setter
     def appointment_recipients(self, appointment_recipients: List[MapiRecipientDto]):
-        """Sets the appointment_recipients of this MapiCalendarAttendeesDto.
-
+        """
         List of attendees.             
 
         :param appointment_recipients: The appointment_recipients of this MapiCalendarAttendeesDto.
@@ -109,8 +108,7 @@ class MapiCalendarAttendeesDto(object):
 
     @property
     def appointment_unsendable_recipients(self) -> List[MapiRecipientDto]:
-        """Gets the appointment_unsendable_recipients of this MapiCalendarAttendeesDto.
-
+        """
         List of unsendable attendees.             
 
         :return: The appointment_unsendable_recipients of this MapiCalendarAttendeesDto.
@@ -120,8 +118,7 @@ class MapiCalendarAttendeesDto(object):
 
     @appointment_unsendable_recipients.setter
     def appointment_unsendable_recipients(self, appointment_unsendable_recipients: List[MapiRecipientDto]):
-        """Sets the appointment_unsendable_recipients of this MapiCalendarAttendeesDto.
-
+        """
         List of unsendable attendees.             
 
         :param appointment_unsendable_recipients: The appointment_unsendable_recipients of this MapiCalendarAttendeesDto.
@@ -131,8 +128,7 @@ class MapiCalendarAttendeesDto(object):
 
     @property
     def not_allow_propose(self) -> bool:
-        """Gets the not_allow_propose of this MapiCalendarAttendeesDto.
-
+        """
         Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
 
         :return: The not_allow_propose of this MapiCalendarAttendeesDto.
@@ -142,8 +138,7 @@ class MapiCalendarAttendeesDto(object):
 
     @not_allow_propose.setter
     def not_allow_propose(self, not_allow_propose: bool):
-        """Sets the not_allow_propose of this MapiCalendarAttendeesDto.
-
+        """
         Value indicating whether attendees are not allowed to propose a new date and/or time for the meeting.             
 
         :param not_allow_propose: The not_allow_propose of this MapiCalendarAttendeesDto.
@@ -155,8 +150,7 @@ class MapiCalendarAttendeesDto(object):
 
     @property
     def response_requested(self) -> bool:
-        """Gets the response_requested of this MapiCalendarAttendeesDto.
-
+        """
         Value indicating whether a response is requested to a Message object.             
 
         :return: The response_requested of this MapiCalendarAttendeesDto.
@@ -166,8 +160,7 @@ class MapiCalendarAttendeesDto(object):
 
     @response_requested.setter
     def response_requested(self, response_requested: bool):
-        """Sets the response_requested of this MapiCalendarAttendeesDto.
-
+        """
         Value indicating whether a response is requested to a Message object.             
 
         :param response_requested: The response_requested of this MapiCalendarAttendeesDto.

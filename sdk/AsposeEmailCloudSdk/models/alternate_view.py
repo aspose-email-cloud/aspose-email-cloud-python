@@ -98,10 +98,10 @@ class AlternateView(AttachmentBase):
         if linked_resources is not None:
             self.linked_resources = linked_resources
 
+
     @property
     def base_uri(self) -> str:
-        """Gets the base_uri of this AlternateView.
-
+        """
         Base URI.             
 
         :return: The base_uri of this AlternateView.
@@ -111,8 +111,7 @@ class AlternateView(AttachmentBase):
 
     @base_uri.setter
     def base_uri(self, base_uri: str):
-        """Sets the base_uri of this AlternateView.
-
+        """
         Base URI.             
 
         :param base_uri: The base_uri of this AlternateView.
@@ -122,8 +121,7 @@ class AlternateView(AttachmentBase):
 
     @property
     def linked_resources(self) -> List[LinkedResource]:
-        """Gets the linked_resources of this AlternateView.
-
+        """
         Embedded resources referred to by this alternate view.             
 
         :return: The linked_resources of this AlternateView.
@@ -133,8 +131,7 @@ class AlternateView(AttachmentBase):
 
     @linked_resources.setter
     def linked_resources(self, linked_resources: List[LinkedResource]):
-        """Sets the linked_resources of this AlternateView.
-
+        """
         Embedded resources referred to by this alternate view.             
 
         :param linked_resources: The linked_resources of this AlternateView.

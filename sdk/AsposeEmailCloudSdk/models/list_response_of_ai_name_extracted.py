@@ -64,10 +64,11 @@ class ListResponseOfAiNameExtracted(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[AiNameExtracted]:
-        """Gets the value of this ListResponseOfAiNameExtracted.
-
+        """
+        Gets the value of this ListResponseOfAiNameExtracted.
 
         :return: The value of this ListResponseOfAiNameExtracted.
         :rtype: list[AiNameExtracted]
@@ -76,8 +77,8 @@ class ListResponseOfAiNameExtracted(object):
 
     @value.setter
     def value(self, value: List[AiNameExtracted]):
-        """Sets the value of this ListResponseOfAiNameExtracted.
-
+        """
+        Sets the value of this ListResponseOfAiNameExtracted.
 
         :param value: The value of this ListResponseOfAiNameExtracted.
         :type: list[AiNameExtracted]

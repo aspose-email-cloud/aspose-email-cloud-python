@@ -69,10 +69,10 @@ class MapiContactEventPropertySetDto(object):
         if wedding_anniversary is not None:
             self.wedding_anniversary = wedding_anniversary
 
+
     @property
     def birthday(self) -> datetime:
-        """Gets the birthday of this MapiContactEventPropertySetDto.
-
+        """
         Specifies the birthday of the contact.
 
         :return: The birthday of this MapiContactEventPropertySetDto.
@@ -82,8 +82,7 @@ class MapiContactEventPropertySetDto(object):
 
     @birthday.setter
     def birthday(self, birthday: datetime):
-        """Sets the birthday of this MapiContactEventPropertySetDto.
-
+        """
         Specifies the birthday of the contact.
 
         :param birthday: The birthday of this MapiContactEventPropertySetDto.
@@ -95,8 +94,7 @@ class MapiContactEventPropertySetDto(object):
 
     @property
     def wedding_anniversary(self) -> datetime:
-        """Gets the wedding_anniversary of this MapiContactEventPropertySetDto.
-
+        """
         Specifies the wedding anniversary of the contact.             
 
         :return: The wedding_anniversary of this MapiContactEventPropertySetDto.
@@ -106,8 +104,7 @@ class MapiContactEventPropertySetDto(object):
 
     @wedding_anniversary.setter
     def wedding_anniversary(self, wedding_anniversary: datetime):
-        """Sets the wedding_anniversary of this MapiContactEventPropertySetDto.
-
+        """
         Specifies the wedding anniversary of the contact.             
 
         :param wedding_anniversary: The wedding_anniversary of this MapiContactEventPropertySetDto.

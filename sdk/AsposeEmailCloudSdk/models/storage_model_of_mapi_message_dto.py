@@ -72,10 +72,11 @@ class StorageModelOfMapiMessageDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfMapiMessageDto.
-
+        """
+        Gets the storage_file of this StorageModelOfMapiMessageDto.
 
         :return: The storage_file of this StorageModelOfMapiMessageDto.
         :rtype: StorageFileLocation
@@ -84,8 +85,8 @@ class StorageModelOfMapiMessageDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfMapiMessageDto.
-
+        """
+        Sets the storage_file of this StorageModelOfMapiMessageDto.
 
         :param storage_file: The storage_file of this StorageModelOfMapiMessageDto.
         :type: StorageFileLocation
@@ -96,8 +97,8 @@ class StorageModelOfMapiMessageDto(object):
 
     @property
     def value(self) -> MapiMessageDto:
-        """Gets the value of this StorageModelOfMapiMessageDto.
-
+        """
+        Gets the value of this StorageModelOfMapiMessageDto.
 
         :return: The value of this StorageModelOfMapiMessageDto.
         :rtype: MapiMessageDto
@@ -106,8 +107,8 @@ class StorageModelOfMapiMessageDto(object):
 
     @value.setter
     def value(self, value: MapiMessageDto):
-        """Sets the value of this StorageModelOfMapiMessageDto.
-
+        """
+        Sets the value of this StorageModelOfMapiMessageDto.
 
         :param value: The value of this StorageModelOfMapiMessageDto.
         :type: MapiMessageDto

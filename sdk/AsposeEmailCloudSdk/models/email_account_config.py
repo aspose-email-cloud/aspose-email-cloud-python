@@ -113,10 +113,10 @@ class EmailAccountConfig(object):
         if is_validated is not None:
             self.is_validated = is_validated
 
+
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this EmailAccountConfig.
-
+        """
         Email account display name             
 
         :return: The display_name of this EmailAccountConfig.
@@ -126,8 +126,7 @@ class EmailAccountConfig(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this EmailAccountConfig.
-
+        """
         Email account display name             
 
         :param display_name: The display_name of this EmailAccountConfig.
@@ -137,8 +136,7 @@ class EmailAccountConfig(object):
 
     @property
     def protocol_type(self) -> str:
-        """Gets the protocol_type of this EmailAccountConfig.
-
+        """
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :return: The protocol_type of this EmailAccountConfig.
@@ -148,8 +146,7 @@ class EmailAccountConfig(object):
 
     @protocol_type.setter
     def protocol_type(self, protocol_type: str):
-        """Sets the protocol_type of this EmailAccountConfig.
-
+        """
         Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :param protocol_type: The protocol_type of this EmailAccountConfig.
@@ -161,8 +158,7 @@ class EmailAccountConfig(object):
 
     @property
     def host(self) -> str:
-        """Gets the host of this EmailAccountConfig.
-
+        """
         Email account host.             
 
         :return: The host of this EmailAccountConfig.
@@ -172,8 +168,7 @@ class EmailAccountConfig(object):
 
     @host.setter
     def host(self, host: str):
-        """Sets the host of this EmailAccountConfig.
-
+        """
         Email account host.             
 
         :param host: The host of this EmailAccountConfig.
@@ -183,8 +178,7 @@ class EmailAccountConfig(object):
 
     @property
     def port(self) -> int:
-        """Gets the port of this EmailAccountConfig.
-
+        """
         Port.             
 
         :return: The port of this EmailAccountConfig.
@@ -194,8 +188,7 @@ class EmailAccountConfig(object):
 
     @port.setter
     def port(self, port: int):
-        """Sets the port of this EmailAccountConfig.
-
+        """
         Port.             
 
         :param port: The port of this EmailAccountConfig.
@@ -205,8 +198,7 @@ class EmailAccountConfig(object):
 
     @property
     def socket_type(self) -> str:
-        """Gets the socket_type of this EmailAccountConfig.
-
+        """
         Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The socket_type of this EmailAccountConfig.
@@ -216,8 +208,7 @@ class EmailAccountConfig(object):
 
     @socket_type.setter
     def socket_type(self, socket_type: str):
-        """Sets the socket_type of this EmailAccountConfig.
-
+        """
         Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param socket_type: The socket_type of this EmailAccountConfig.
@@ -229,8 +220,7 @@ class EmailAccountConfig(object):
 
     @property
     def authentication_types(self) -> List[str]:
-        """Gets the authentication_types of this EmailAccountConfig.
-
+        """
         Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
 
         :return: The authentication_types of this EmailAccountConfig.
@@ -240,8 +230,7 @@ class EmailAccountConfig(object):
 
     @authentication_types.setter
     def authentication_types(self, authentication_types: List[str]):
-        """Sets the authentication_types of this EmailAccountConfig.
-
+        """
         Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
 
         :param authentication_types: The authentication_types of this EmailAccountConfig.
@@ -251,8 +240,7 @@ class EmailAccountConfig(object):
 
     @property
     def extra_info(self) -> List[NameValuePair]:
-        """Gets the extra_info of this EmailAccountConfig.
-
+        """
         Extra account information.             
 
         :return: The extra_info of this EmailAccountConfig.
@@ -262,8 +250,7 @@ class EmailAccountConfig(object):
 
     @extra_info.setter
     def extra_info(self, extra_info: List[NameValuePair]):
-        """Sets the extra_info of this EmailAccountConfig.
-
+        """
         Extra account information.             
 
         :param extra_info: The extra_info of this EmailAccountConfig.
@@ -273,8 +260,7 @@ class EmailAccountConfig(object):
 
     @property
     def is_validated(self) -> bool:
-        """Gets the is_validated of this EmailAccountConfig.
-
+        """
         Determines that configuration validated. Set to false if validation skipped.             
 
         :return: The is_validated of this EmailAccountConfig.
@@ -284,8 +270,7 @@ class EmailAccountConfig(object):
 
     @is_validated.setter
     def is_validated(self, is_validated: bool):
-        """Sets the is_validated of this EmailAccountConfig.
-
+        """
         Determines that configuration validated. Set to false if validation skipped.             
 
         :param is_validated: The is_validated of this EmailAccountConfig.

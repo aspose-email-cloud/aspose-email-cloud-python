@@ -64,10 +64,11 @@ class ListResponseOfMailMessageBase(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[MailMessageBase]:
-        """Gets the value of this ListResponseOfMailMessageBase.
-
+        """
+        Gets the value of this ListResponseOfMailMessageBase.
 
         :return: The value of this ListResponseOfMailMessageBase.
         :rtype: list[MailMessageBase]
@@ -76,8 +77,8 @@ class ListResponseOfMailMessageBase(object):
 
     @value.setter
     def value(self, value: List[MailMessageBase]):
-        """Sets the value of this ListResponseOfMailMessageBase.
-
+        """
+        Sets the value of this ListResponseOfMailMessageBase.
 
         :param value: The value of this ListResponseOfMailMessageBase.
         :type: list[MailMessageBase]

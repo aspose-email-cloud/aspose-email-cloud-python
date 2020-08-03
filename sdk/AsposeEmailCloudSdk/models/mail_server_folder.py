@@ -69,10 +69,10 @@ class MailServerFolder(object):
         if id is not None:
             self.id = id
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this MailServerFolder.
-
+        """
         Gets or sets mail folder name             
 
         :return: The name of this MailServerFolder.
@@ -82,8 +82,7 @@ class MailServerFolder(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this MailServerFolder.
-
+        """
         Gets or sets mail folder name             
 
         :param name: The name of this MailServerFolder.
@@ -93,8 +92,7 @@ class MailServerFolder(object):
 
     @property
     def id(self) -> str:
-        """Gets the id of this MailServerFolder.
-
+        """
         Gets or sets mail folder id             
 
         :return: The id of this MailServerFolder.
@@ -104,8 +102,7 @@ class MailServerFolder(object):
 
     @id.setter
     def id(self, id: str):
-        """Sets the id of this MailServerFolder.
-
+        """
         Gets or sets mail folder id             
 
         :param id: The id of this MailServerFolder.

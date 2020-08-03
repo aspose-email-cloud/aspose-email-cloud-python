@@ -36,7 +36,8 @@ def test_storage_support(td: EmailApiData):
     td.api.mapi.calendar.save(models.MapiCalendarSaveRequest(
         models.StorageFileLocation(td.storage, td.folder, file_name),
         mapi_calendar, 'Msg'))
-    mapi_calendar_from_storage = td.api.mapi.calendar.get(models.MapiCalendarGetRequest(file_name, td.folder, td.storage))
+    mapi_calendar_from_storage = td.api.mapi.calendar.get(
+        models.MapiCalendarGetRequest(file_name, td.folder, td.storage))
     assert mapi_calendar.location == mapi_calendar_from_storage.location
 
 

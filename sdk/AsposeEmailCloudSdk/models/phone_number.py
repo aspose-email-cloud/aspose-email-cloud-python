@@ -78,10 +78,10 @@ class PhoneNumber(object):
         if preferred is not None:
             self.preferred = preferred
 
+
     @property
     def category(self) -> EnumWithCustomOfPhoneNumberCategory:
-        """Gets the category of this PhoneNumber.
-
+        """
         Phone number category.             
 
         :return: The category of this PhoneNumber.
@@ -91,8 +91,7 @@ class PhoneNumber(object):
 
     @category.setter
     def category(self, category: EnumWithCustomOfPhoneNumberCategory):
-        """Sets the category of this PhoneNumber.
-
+        """
         Phone number category.             
 
         :param category: The category of this PhoneNumber.
@@ -102,8 +101,7 @@ class PhoneNumber(object):
 
     @property
     def number(self) -> str:
-        """Gets the number of this PhoneNumber.
-
+        """
         Phone number.             
 
         :return: The number of this PhoneNumber.
@@ -113,8 +111,7 @@ class PhoneNumber(object):
 
     @number.setter
     def number(self, number: str):
-        """Sets the number of this PhoneNumber.
-
+        """
         Phone number.             
 
         :param number: The number of this PhoneNumber.
@@ -124,8 +121,7 @@ class PhoneNumber(object):
 
     @property
     def preferred(self) -> bool:
-        """Gets the preferred of this PhoneNumber.
-
+        """
         Defines whether phone number is preferred.             
 
         :return: The preferred of this PhoneNumber.
@@ -135,8 +131,7 @@ class PhoneNumber(object):
 
     @preferred.setter
     def preferred(self, preferred: bool):
-        """Sets the preferred of this PhoneNumber.
-
+        """
         Defines whether phone number is preferred.             
 
         :param preferred: The preferred of this PhoneNumber.

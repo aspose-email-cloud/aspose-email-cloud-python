@@ -79,10 +79,10 @@ class AiNameParsedRequest(object):
         if parsed_name is not None:
             self.parsed_name = parsed_name
 
+
     @property
     def cultural_context(self) -> AiNameCulturalContext:
-        """Gets the cultural_context of this AiNameParsedRequest.
-
+        """
         AiName parser cultural context             
 
         :return: The cultural_context of this AiNameParsedRequest.
@@ -92,8 +92,7 @@ class AiNameParsedRequest(object):
 
     @cultural_context.setter
     def cultural_context(self, cultural_context: AiNameCulturalContext):
-        """Sets the cultural_context of this AiNameParsedRequest.
-
+        """
         AiName parser cultural context             
 
         :param cultural_context: The cultural_context of this AiNameParsedRequest.
@@ -103,8 +102,7 @@ class AiNameParsedRequest(object):
 
     @property
     def format(self) -> str:
-        """Gets the format of this AiNameParsedRequest.
-
+        """
         Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (= '%t%F%m%N%L%p')     /format/FN+LN/ (= '%F%L')     /format/title+FN+LN/ (= '%t%F%L')     /format/FN+MN+LN/ (= '%F%M%N%L')     /format/title+FN+MN+LN/ (= '%t%F%M%N%L')     /format/FN+MI+LN/ (= '%F%m%N%L')     /format/title+FN+MI+LN/ (= '%t%F%m%N%L')     /format/LN/ (= '%L')     /format/title+LN/ (= '%t%L')     /format/LN+FN+MN/ (= '%L,%F%M%N')     /format/LN+title+FN+MN/ (= '%L,%t%F%M%N')     /format/LN+FN+MI/ (= '%L,%F%m%N')     /format/LN+title+FN+MI/ (= '%L,%t%F%m%N')  Custom format string - custom combination of characters and the next term placeholders:      '%t' - Title (prefix)     '%F' - First name     '%f' - First initial     '%M' - Middle name(s)     '%m' - Middle initial(s)     '%N' - Nickname     '%L' - Last name     '%l' - Last initial     '%p' - Postfix  If no value for format option was provided, its default value is '%t%F%m%N%L%p'             
 
         :return: The format of this AiNameParsedRequest.
@@ -114,8 +112,7 @@ class AiNameParsedRequest(object):
 
     @format.setter
     def format(self, format: str):
-        """Sets the format of this AiNameParsedRequest.
-
+        """
         Format of the name. Predefined format can be used by ID, or custom format can be specified. Predefined formats:      /format/default/ (= '%t%F%m%N%L%p')     /format/FN+LN/ (= '%F%L')     /format/title+FN+LN/ (= '%t%F%L')     /format/FN+MN+LN/ (= '%F%M%N%L')     /format/title+FN+MN+LN/ (= '%t%F%M%N%L')     /format/FN+MI+LN/ (= '%F%m%N%L')     /format/title+FN+MI+LN/ (= '%t%F%m%N%L')     /format/LN/ (= '%L')     /format/title+LN/ (= '%t%L')     /format/LN+FN+MN/ (= '%L,%F%M%N')     /format/LN+title+FN+MN/ (= '%L,%t%F%M%N')     /format/LN+FN+MI/ (= '%L,%F%m%N')     /format/LN+title+FN+MI/ (= '%L,%t%F%m%N')  Custom format string - custom combination of characters and the next term placeholders:      '%t' - Title (prefix)     '%F' - First name     '%f' - First initial     '%M' - Middle name(s)     '%m' - Middle initial(s)     '%N' - Nickname     '%L' - Last name     '%l' - Last initial     '%p' - Postfix  If no value for format option was provided, its default value is '%t%F%m%N%L%p'             
 
         :param format: The format of this AiNameParsedRequest.
@@ -125,8 +122,7 @@ class AiNameParsedRequest(object):
 
     @property
     def parsed_name(self) -> List[AiNameComponent]:
-        """Gets the parsed_name of this AiNameParsedRequest.
-
+        """
         Parsed name             
 
         :return: The parsed_name of this AiNameParsedRequest.
@@ -136,8 +132,7 @@ class AiNameParsedRequest(object):
 
     @parsed_name.setter
     def parsed_name(self, parsed_name: List[AiNameComponent]):
-        """Sets the parsed_name of this AiNameParsedRequest.
-
+        """
         Parsed name             
 
         :param parsed_name: The parsed_name of this AiNameParsedRequest.
