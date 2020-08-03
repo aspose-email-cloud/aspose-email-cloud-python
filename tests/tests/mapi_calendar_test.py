@@ -7,15 +7,13 @@ import pytest
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../sdk"))
 from AsposeEmailCloudSdk import models
-from AsposeEmailCloudSdk.models import requests
 from conftest import EmailApiData
 
 
 @pytest.mark.pipeline
 def test_mapi_model_to_general_model(td: EmailApiData):
     mapi_calendar = mapi_calendar_dto()
-    calendar = td.api.convert_mapi_calendar_model_to_calendar_model(
-        requests.ConvertMapiCalendarModelToCalendarModelRequest(mapi_calendar))
+    calendar = td.api.mapi.calendar.as_calendar_dto(mapi_calendar)
     assert mapi_calendar.subject == calendar.summary
     assert mapi_calendar.location == calendar.location
 
@@ -23,13 +21,11 @@ def test_mapi_model_to_general_model(td: EmailApiData):
 @pytest.mark.pipeline
 def test_mapi_model_to_file(td: EmailApiData):
     mapi_calendar = mapi_calendar_dto()
-    ics_file = td.api.convert_mapi_calendar_model_to_file(
-        requests.ConvertMapiCalendarModelToFileRequest('Ics', mapi_calendar))
+    ics_file = td.api.mapi.calendar.as_file(models.MapiCalendarAsFileRequest('Ics', mapi_calendar))
     with open(ics_file, 'r') as f:
         file_data = f.read()
         assert mapi_calendar.location in file_data
-    mapi_calendar_converted = td.api.get_calendar_file_as_mapi_model(
-        requests.GetCalendarFileAsMapiModelRequest(ics_file))
+    mapi_calendar_converted = td.api.mapi.calendar.from_file(models.MapiCalendarFromFileRequest(ics_file))
     assert mapi_calendar.location == mapi_calendar_converted.location
 
 
@@ -37,12 +33,10 @@ def test_mapi_model_to_file(td: EmailApiData):
 def test_storage_support(td: EmailApiData):
     file_name = str(uuid.uuid4()) + '.msg'
     mapi_calendar = mapi_calendar_dto()
-    td.api.save_mapi_calendar_model(
-        requests.SaveMapiCalendarModelRequest(
-            file_name, 'Msg',
-            models.StorageModelRqOfMapiCalendarDto(mapi_calendar, td.storage_folder())))
-    mapi_calendar_from_storage = td.api.get_mapi_calendar_model(
-        requests.GetMapiCalendarModelRequest(file_name, td.folder, td.storage))
+    td.api.mapi.calendar.save(models.MapiCalendarSaveRequest(
+        models.StorageFileLocation(td.storage, td.folder, file_name),
+        mapi_calendar, 'Msg'))
+    mapi_calendar_from_storage = td.api.mapi.calendar.get(models.MapiCalendarGetRequest(file_name, td.folder, td.storage))
     assert mapi_calendar.location == mapi_calendar_from_storage.location
 
 
