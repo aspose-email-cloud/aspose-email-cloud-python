@@ -4,10 +4,10 @@
 `app_key` and `app_sid` credentials should be obtained from [dashboard](https://dashboard.aspose.cloud/#/) to use `EmailCloud`:
 
 ```python
-app_key = 'Your App Key';
-app_sid = 'Your App SID';
+app_key = 'Your App Key'
+app_sid = 'Your App SID'
 
-api = EmailCloud(app_key, app_sid);
+api = EmailCloud(app_key, app_sid)
 ```
 
 All Aspose.Email Cloud functions are divided into groups and represented as `EmailCloud` fields:
