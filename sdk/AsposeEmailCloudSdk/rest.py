@@ -646,9 +646,7 @@ class ObjectHelper:
             return data
 
         #try get derived class by type field
-        type_attribute = 'type'
-        if (not hasattr(klass, type_attribute)):
-            type_attribute = 'discriminator'
+        type_attribute = 'discriminator'
         if (hasattr(klass, type_attribute) and type_attribute in data):
             type_name = data[type_attribute]
             sub_klass = getattr(AsposeEmailCloudSdk.models, type_name, None)
@@ -659,7 +657,7 @@ class ObjectHelper:
         if klass.swagger_types is not None:
             for attr, attr_type in six.iteritems(klass.swagger_types):
                 if (data is not None and
-                        not attr == 'discriminator' and
+                        not attr == type_attribute and
                         klass.attribute_map[attr][0].lower() +
                         klass.attribute_map[attr][1:] in data and
                         isinstance(data, (list, dict))):
