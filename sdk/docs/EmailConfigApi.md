@@ -1,77 +1,40 @@
+
 # AsposeEmailCloudSdk.EmailConfigApi
 
-<a name="email_config_discover"></a>
-# **email_config_discover**
-> email_config_discover(self, email_config_discover_request)
+        
+<a name="discover"></a>
+# discover
+
+```python
+discover(self, request: EmailConfigDiscoverRequest)
+```
 
 Discover email accounts by email address. Does not validate discovered accounts.             
 
 ### Return type
 
-[**EmailAccountConfigList**](EmailAccountConfigList.md)
+EmailAccountConfigList
 
-### Request Parameters
+### request Parameter
 ```python
-__init__(self, 
-    address, 
-    fast_processing=fast_processing)
+EmailConfigDiscoverRequest(
+    address: str, 
+    fast_processing: bool = None)
 ```
-
-### Usage
-```python
-EmailConfigApi.email_config_discover(
-    cakePrefix_email_config_discover_request_cakeCodePostProcessor(
-        address, 
-        fast_processing=fast_processing))
-```
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **str**| Email address. | 
- **fast_processing** | **bool**| Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.              | [optional] [default to false]
+ **address** | **str** | Email address. | 
+ **fast_processing** | **bool** | Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.              | [optional] [default to false]
 
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
+        
+<a name="discover_oauth"></a>
+# discover_oauth
 
-<a name="email_config_discover_async"></a>
-# **email_config_discover_async**
-> email_config_discover_async(self, email_config_discover_request)
-
-Discover email accounts by email address. Does not validate discovered accounts.             
-
-Performs operation asynchronously.
-
-### Return type
-
-Returns multiprocessing.pool.AsyncResult.
-email_config_discover_async(request).get() returns [**EmailAccountConfigList**](EmailAccountConfigList.md)
-
-### Request Parameters
 ```python
-__init__(self, 
-    address, 
-    fast_processing=fast_processing)
+discover_oauth(self, DiscoverEmailConfigOauth request)
 ```
-
-### Usage
-```python
-EmailConfigApi.email_config_discover_async(
-    cakePrefix_email_config_discover_request_cakeCodePostProcessor(
-        address, 
-        fast_processing=fast_processing))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **address** | **str**| Email address. | 
- **fast_processing** | **bool**| Turns on fast processing. All discover systems will run in parallel. First discovered result will be returned.              | [optional] [default to false]
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-<a name="email_config_discover_oauth"></a>
-# **email_config_discover_oauth**
-> email_config_discover_oauth(self, email_config_discover_oauth_request)
 
 Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
 
@@ -79,62 +42,18 @@ Discover email accounts by email address. Validates discovered accounts using OA
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-### Request Parameters
+### request Parameter
+
+See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md)
+
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
+        
+<a name="discover_password"></a>
+# discover_password
+
 ```python
-__init__(self, 
-    request)
+discover_password(self, DiscoverEmailConfigPassword request)
 ```
-
-### Usage
-```python
-EmailConfigApi.email_config_discover_oauth(
-    cakePrefix_email_config_discover_oauth_request_cakeCodePostProcessor(
-        request))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**DiscoverEmailConfigOauth**](DiscoverEmailConfigOauth.md)| Discover email configuration request. | 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-<a name="email_config_discover_oauth_async"></a>
-# **email_config_discover_oauth_async**
-> email_config_discover_oauth_async(self, email_config_discover_oauth_request)
-
-Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
-
-Performs operation asynchronously.
-
-### Return type
-
-Returns multiprocessing.pool.AsyncResult.
-email_config_discover_oauth_async(request).get() returns [**EmailAccountConfigList**](EmailAccountConfigList.md)
-
-### Request Parameters
-```python
-__init__(self, 
-    request)
-```
-
-### Usage
-```python
-EmailConfigApi.email_config_discover_oauth_async(
-    cakePrefix_email_config_discover_oauth_request_cakeCodePostProcessor(
-        request))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**DiscoverEmailConfigOauth**](DiscoverEmailConfigOauth.md)| Discover email configuration request. | 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-<a name="email_config_discover_password"></a>
-# **email_config_discover_password**
-> email_config_discover_password(self, email_config_discover_password_request)
 
 Discover email accounts by email address. Validates discovered accounts using login and password.             
 
@@ -142,56 +61,9 @@ Discover email accounts by email address. Validates discovered accounts using lo
 
 [**EmailAccountConfigList**](EmailAccountConfigList.md)
 
-### Request Parameters
-```python
-__init__(self, 
-    request)
-```
+### request Parameter
 
-### Usage
-```python
-EmailConfigApi.email_config_discover_password(
-    cakePrefix_email_config_discover_password_request_cakeCodePostProcessor(
-        request))
-```
+See parameter model documentation at [DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md)
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**DiscoverEmailConfigPassword**](DiscoverEmailConfigPassword.md)| Discover email configuration request. | 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-<a name="email_config_discover_password_async"></a>
-# **email_config_discover_password_async**
-> email_config_discover_password_async(self, email_config_discover_password_request)
-
-Discover email accounts by email address. Validates discovered accounts using login and password.             
-
-Performs operation asynchronously.
-
-### Return type
-
-Returns multiprocessing.pool.AsyncResult.
-email_config_discover_password_async(request).get() returns [**EmailAccountConfigList**](EmailAccountConfigList.md)
-
-### Request Parameters
-```python
-__init__(self, 
-    request)
-```
-
-### Usage
-```python
-EmailConfigApi.email_config_discover_password_async(
-    cakePrefix_email_config_discover_password_request_cakeCodePostProcessor(
-        request))
-```
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**DiscoverEmailConfigPassword**](DiscoverEmailConfigPassword.md)| Discover email configuration request. | 
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 
