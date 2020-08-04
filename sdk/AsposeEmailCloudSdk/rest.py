@@ -659,6 +659,7 @@ class ObjectHelper:
         if klass.swagger_types is not None:
             for attr, attr_type in six.iteritems(klass.swagger_types):
                 if (data is not None and
+                        not attr == 'discriminator' and
                         klass.attribute_map[attr][0].lower() +
                         klass.attribute_map[attr][1:] in data and
                         isinstance(data, (list, dict))):
