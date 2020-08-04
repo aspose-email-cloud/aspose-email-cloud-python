@@ -18,8 +18,8 @@ EmailAccountConfigList
 ### request Parameter
 ```python
 EmailConfigDiscoverRequest(
-    address: str, 
-    fast_processing: bool = None)
+    address,
+    fast_processing)
 ```
 
 Name | Type | Description  | Notes

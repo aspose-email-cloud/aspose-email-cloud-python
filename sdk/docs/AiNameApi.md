@@ -18,12 +18,12 @@ AiNameWeightedVariants
 ### request Parameter
 ```python
 AiNameCompleteRequest(
-    name: str, 
-    language: str = None, 
-    location: str = None, 
-    encoding: str = None, 
-    script: str = None, 
-    style: str = None)
+    name,
+    language,
+    location,
+    encoding,
+    script,
+    style)
 ```
 
 Name | Type | Description  | Notes
@@ -53,12 +53,12 @@ AiNameWeightedVariants
 ### request Parameter
 ```python
 AiNameExpandRequest(
-    name: str, 
-    language: str = None, 
-    location: str = None, 
-    encoding: str = None, 
-    script: str = None, 
-    style: str = None)
+    name,
+    language,
+    location,
+    encoding,
+    script,
+    style)
 ```
 
 Name | Type | Description  | Notes
@@ -107,13 +107,13 @@ AiNameFormatted
 ### request Parameter
 ```python
 AiNameFormatRequest(
-    name: str, 
-    language: str = None, 
-    location: str = None, 
-    encoding: str = None, 
-    script: str = None, 
-    format: str = None, 
-    style: str = None)
+    name,
+    language,
+    location,
+    encoding,
+    script,
+    format,
+    style)
 ```
 
 Name | Type | Description  | Notes
@@ -163,12 +163,12 @@ AiNameGenderHypothesisList
 ### request Parameter
 ```python
 AiNameGenderizeRequest(
-    name: str, 
-    language: str = None, 
-    location: str = None, 
-    encoding: str = None, 
-    script: str = None, 
-    style: str = None)
+    name,
+    language,
+    location,
+    encoding,
+    script,
+    style)
 ```
 
 Name | Type | Description  | Notes
@@ -217,13 +217,13 @@ AiNameMatchResult
 ### request Parameter
 ```python
 AiNameMatchRequest(
-    name: str, 
-    other_name: str, 
-    language: str = None, 
-    location: str = None, 
-    encoding: str = None, 
-    script: str = None, 
-    style: str = None)
+    name,
+    other_name,
+    language,
+    location,
+    encoding,
+    script,
+    style)
 ```
 
 Name | Type | Description  | Notes
@@ -273,12 +273,12 @@ AiNameComponentList
 ### request Parameter
 ```python
 AiNameParseRequest(
-    name: str, 
-    language: str = None, 
-    location: str = None, 
-    encoding: str = None, 
-    script: str = None, 
-    style: str = None)
+    name,
+    language,
+    location,
+    encoding,
+    script,
+    style)
 ```
 
 Name | Type | Description  | Notes
@@ -308,12 +308,12 @@ AiNameExtractedList
 ### request Parameter
 ```python
 AiNameParseEmailAddressRequest(
-    email_address: str, 
-    language: str = None, 
-    location: str = None, 
-    encoding: str = None, 
-    script: str = None, 
-    style: str = None)
+    email_address,
+    language,
+    location,
+    encoding,
+    script,
+    style)
 ```
 
 Name | Type | Description  | Notes

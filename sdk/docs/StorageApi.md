@@ -18,7 +18,7 @@ DiscUsage
 ### request Parameter
 ```python
 GetDiscUsageRequest(
-    storage_name: str = None)
+    storage_name)
 ```
 
 Name | Type | Description  | Notes
@@ -43,8 +43,8 @@ FileVersions
 ### request Parameter
 ```python
 GetFileVersionsRequest(
-    path: str, 
-    storage_name: str = None)
+    path,
+    storage_name)
 ```
 
 Name | Type | Description  | Notes
@@ -70,9 +70,9 @@ ObjectExist
 ### request Parameter
 ```python
 ObjectExistsRequest(
-    path: str, 
-    storage_name: str = None, 
-    version_id: str = None)
+    path,
+    storage_name,
+    version_id)
 ```
 
 Name | Type | Description  | Notes
@@ -99,7 +99,7 @@ StorageExist
 ### request Parameter
 ```python
 StorageExistsRequest(
-    storage_name: str)
+    storage_name)
 ```
 
 Name | Type | Description  | Notes

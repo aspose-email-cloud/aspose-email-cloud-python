@@ -18,10 +18,10 @@ None
 ### request Parameter
 ```python
 CopyFolderRequest(
-    src_path: str, 
-    dest_path: str, 
-    src_storage_name: str = None, 
-    dest_storage_name: str = None)
+    src_path,
+    dest_path,
+    src_storage_name,
+    dest_storage_name)
 ```
 
 Name | Type | Description  | Notes
@@ -49,8 +49,8 @@ None
 ### request Parameter
 ```python
 CreateFolderRequest(
-    path: str, 
-    storage_name: str = None)
+    path,
+    storage_name)
 ```
 
 Name | Type | Description  | Notes
@@ -76,9 +76,9 @@ None
 ### request Parameter
 ```python
 DeleteFolderRequest(
-    path: str, 
-    storage_name: str = None, 
-    recursive: bool = None)
+    path,
+    storage_name,
+    recursive)
 ```
 
 Name | Type | Description  | Notes
@@ -105,8 +105,8 @@ FilesList
 ### request Parameter
 ```python
 GetFilesListRequest(
-    path: str, 
-    storage_name: str = None)
+    path,
+    storage_name)
 ```
 
 Name | Type | Description  | Notes
@@ -132,10 +132,10 @@ None
 ### request Parameter
 ```python
 MoveFolderRequest(
-    src_path: str, 
-    dest_path: str, 
-    src_storage_name: str = None, 
-    dest_storage_name: str = None)
+    src_path,
+    dest_path,
+    src_storage_name,
+    dest_storage_name)
 ```
 
 Name | Type | Description  | Notes

@@ -18,11 +18,11 @@ None
 ### request Parameter
 ```python
 CopyFileRequest(
-    src_path: str, 
-    dest_path: str, 
-    src_storage_name: str = None, 
-    dest_storage_name: str = None, 
-    version_id: str = None)
+    src_path,
+    dest_path,
+    src_storage_name,
+    dest_storage_name,
+    version_id)
 ```
 
 Name | Type | Description  | Notes
@@ -51,9 +51,9 @@ None
 ### request Parameter
 ```python
 DeleteFileRequest(
-    path: str, 
-    storage_name: str = None, 
-    version_id: str = None)
+    path,
+    storage_name,
+    version_id)
 ```
 
 Name | Type | Description  | Notes
@@ -80,9 +80,9 @@ str
 ### request Parameter
 ```python
 DownloadFileRequest(
-    path: str, 
-    storage_name: str = None, 
-    version_id: str = None)
+    path,
+    storage_name,
+    version_id)
 ```
 
 Name | Type | Description  | Notes
@@ -109,11 +109,11 @@ None
 ### request Parameter
 ```python
 MoveFileRequest(
-    src_path: str, 
-    dest_path: str, 
-    src_storage_name: str = None, 
-    dest_storage_name: str = None, 
-    version_id: str = None)
+    src_path,
+    dest_path,
+    src_storage_name,
+    dest_storage_name,
+    version_id)
 ```
 
 Name | Type | Description  | Notes
@@ -142,9 +142,9 @@ FilesUploadResult
 ### request Parameter
 ```python
 UploadFileRequest(
-    path: str, 
-    file: str, 
-    storage_name: str = None)
+    path,
+    file,
+    storage_name)
 ```
 
 Name | Type | Description  | Notes

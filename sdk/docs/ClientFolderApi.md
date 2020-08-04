@@ -56,10 +56,10 @@ MailServerFolderList
 ### request Parameter
 ```python
 ClientFolderGetListRequest(
-    account: str, 
-    storage: str = None, 
-    account_storage_folder: str = None, 
-    parent_folder: str = None)
+    account,
+    storage,
+    account_storage_folder,
+    parent_folder)
 ```
 
 Name | Type | Description  | Notes

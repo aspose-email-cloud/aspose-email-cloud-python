@@ -75,8 +75,8 @@ str
 ### request Parameter
 ```python
 CalendarConvertRequest(
-    format: str, 
-    file: str)
+    format,
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -102,7 +102,7 @@ CalendarDto
 ### request Parameter
 ```python
 CalendarFromFileRequest(
-    file: str)
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -127,9 +127,9 @@ CalendarDto
 ### request Parameter
 ```python
 CalendarGetRequest(
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes
@@ -156,11 +156,11 @@ AlternateView
 ### request Parameter
 ```python
 CalendarGetAsAlternateRequest(
-    file_name: str, 
-    calendar_action: str, 
-    sequence_id: str = None, 
-    folder: str = None, 
-    storage: str = None)
+    file_name,
+    calendar_action,
+    sequence_id,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes
@@ -189,10 +189,10 @@ str
 ### request Parameter
 ```python
 CalendarGetAsFileRequest(
-    file_name: str, 
-    format: str, 
-    storage: str = None, 
-    folder: str = None)
+    file_name,
+    format,
+    storage,
+    folder)
 ```
 
 Name | Type | Description  | Notes
@@ -220,10 +220,10 @@ CalendarStorageList
 ### request Parameter
 ```python
 CalendarGetListRequest(
-    folder: str, 
-    items_per_page: int = None, 
-    page_number: int = None, 
-    storage: str = None)
+    folder,
+    items_per_page,
+    page_number,
+    storage)
 ```
 
 Name | Type | Description  | Notes

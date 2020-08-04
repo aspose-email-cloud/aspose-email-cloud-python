@@ -18,9 +18,9 @@ EmailClientAccount
 ### request Parameter
 ```python
 ClientAccountGetRequest(
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes
@@ -47,9 +47,9 @@ EmailClientMultiAccount
 ### request Parameter
 ```python
 ClientAccountGetMultiRequest(
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes

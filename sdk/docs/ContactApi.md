@@ -56,9 +56,9 @@ str
 ### request Parameter
 ```python
 ContactConvertRequest(
-    to_format: str, 
-    from_format: str, 
-    file: str)
+    to_format,
+    from_format,
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -85,8 +85,8 @@ ContactDto
 ### request Parameter
 ```python
 ContactFromFileRequest(
-    format: str, 
-    file: str)
+    format,
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -112,10 +112,10 @@ ContactDto
 ### request Parameter
 ```python
 ContactGetRequest(
-    format: str, 
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    format,
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes
@@ -143,11 +143,11 @@ str
 ### request Parameter
 ```python
 ContactGetAsFileRequest(
-    file_name: str, 
-    to_format: str, 
-    from_format: str, 
-    storage: str = None, 
-    folder: str = None)
+    file_name,
+    to_format,
+    from_format,
+    storage,
+    folder)
 ```
 
 Name | Type | Description  | Notes
@@ -176,11 +176,11 @@ ContactStorageList
 ### request Parameter
 ```python
 ContactGetListRequest(
-    format: str, 
-    folder: str = None, 
-    storage: str = None, 
-    items_per_page: int = None, 
-    page_number: int = None)
+    format,
+    folder,
+    storage,
+    items_per_page,
+    page_number)
 ```
 
 Name | Type | Description  | Notes

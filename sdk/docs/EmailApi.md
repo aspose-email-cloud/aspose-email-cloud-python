@@ -56,8 +56,8 @@ str
 ### request Parameter
 ```python
 EmailConvertRequest(
-    format: str, 
-    file: str)
+    format,
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -83,8 +83,8 @@ EmailDto
 ### request Parameter
 ```python
 EmailFromFileRequest(
-    format: str, 
-    file: str)
+    format,
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -110,10 +110,10 @@ EmailDto
 ### request Parameter
 ```python
 EmailGetRequest(
-    format: str, 
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    format,
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes
@@ -141,10 +141,10 @@ str
 ### request Parameter
 ```python
 EmailGetAsFileRequest(
-    file_name: str, 
-    format: str, 
-    storage: str = None, 
-    folder: str = None)
+    file_name,
+    format,
+    storage,
+    folder)
 ```
 
 Name | Type | Description  | Notes
@@ -172,11 +172,11 @@ EmailStorageList
 ### request Parameter
 ```python
 EmailGetListRequest(
-    format: str, 
-    folder: str = None, 
-    storage: str = None, 
-    items_per_page: int = None, 
-    page_number: int = None)
+    format,
+    folder,
+    storage,
+    items_per_page,
+    page_number)
 ```
 
 Name | Type | Description  | Notes

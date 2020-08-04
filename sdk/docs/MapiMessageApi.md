@@ -56,8 +56,8 @@ MapiMessageDto
 ### request Parameter
 ```python
 MapiMessageFromFileRequest(
-    format: str, 
-    file: str)
+    format,
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -83,10 +83,10 @@ MapiMessageDto
 ### request Parameter
 ```python
 MapiMessageGetRequest(
-    format: str, 
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    format,
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes

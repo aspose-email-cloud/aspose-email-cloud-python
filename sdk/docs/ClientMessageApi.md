@@ -37,13 +37,13 @@ ValueTOfString
 ### request Parameter
 ```python
 ClientMessageAppendFileRequest(
-    account: str, 
-    file: str, 
-    storage: str = None, 
-    account_storage_folder: str = None, 
-    format: str = None, 
-    folder: str = None, 
-    mark_as_sent: bool = None)
+    account,
+    file,
+    storage,
+    account_storage_folder,
+    format,
+    folder,
+    mark_as_sent)
 ```
 
 Name | Type | Description  | Notes
@@ -93,13 +93,13 @@ MailMessageBase
 ### request Parameter
 ```python
 ClientMessageFetchRequest(
-    message_id: str, 
-    account: str, 
-    folder: str = None, 
-    storage: str = None, 
-    account_storage_folder: str = None, 
-    type: str = None, 
-    format: str = None)
+    message_id,
+    account,
+    folder,
+    storage,
+    account_storage_folder,
+    type,
+    format)
 ```
 
 Name | Type | Description  | Notes
@@ -130,12 +130,12 @@ str
 ### request Parameter
 ```python
 ClientMessageFetchFileRequest(
-    message_id: str, 
-    account: str, 
-    folder: str = None, 
-    storage: str = None, 
-    account_storage_folder: str = None, 
-    format: str = None)
+    message_id,
+    account,
+    folder,
+    storage,
+    account_storage_folder,
+    format)
 ```
 
 Name | Type | Description  | Notes
@@ -167,14 +167,14 @@ MailMessageBaseList
 ### request Parameter
 ```python
 ClientMessageListRequest(
-    folder: str, 
-    account: str, 
-    query_string: str = None, 
-    storage: str = None, 
-    account_storage_folder: str = None, 
-    recursive: bool = None, 
-    type: str = None, 
-    format: str = None)
+    folder,
+    account,
+    query_string,
+    storage,
+    account_storage_folder,
+    recursive,
+    type,
+    format)
 ```
 
 Name | Type | Description  | Notes
@@ -244,11 +244,11 @@ None
 ### request Parameter
 ```python
 ClientMessageSendFileRequest(
-    account: str, 
-    file: str, 
-    storage: str = None, 
-    account_storage_folder: str = None, 
-    format: str = None)
+    account,
+    file,
+    storage,
+    account_storage_folder,
+    format)
 ```
 
 Name | Type | Description  | Notes

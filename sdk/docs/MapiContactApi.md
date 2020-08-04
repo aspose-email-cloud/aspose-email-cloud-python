@@ -56,8 +56,8 @@ MapiContactDto
 ### request Parameter
 ```python
 MapiContactFromFileRequest(
-    format: str, 
-    file: str)
+    format,
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -83,10 +83,10 @@ MapiContactDto
 ### request Parameter
 ```python
 MapiContactGetRequest(
-    format: str, 
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    format,
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes

@@ -37,12 +37,12 @@ EmailThreadList
 ### request Parameter
 ```python
 ClientThreadGetListRequest(
-    folder: str, 
-    account: str, 
-    storage: str = None, 
-    account_storage_folder: str = None, 
-    update_folder_cache: bool = None, 
-    messages_cache_limit: int = None)
+    folder,
+    account,
+    storage,
+    account_storage_folder,
+    update_folder_cache,
+    messages_cache_limit)
 ```
 
 Name | Type | Description  | Notes
@@ -72,11 +72,11 @@ EmailList
 ### request Parameter
 ```python
 ClientThreadGetMessagesRequest(
-    thread_id: str, 
-    account: str, 
-    folder: str = None, 
-    storage: str = None, 
-    account_storage_folder: str = None)
+    thread_id,
+    account,
+    folder,
+    storage,
+    account_storage_folder)
 ```
 
 Name | Type | Description  | Notes

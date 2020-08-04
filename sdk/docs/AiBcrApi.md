@@ -18,10 +18,10 @@ ContactList
 ### request Parameter
 ```python
 AiBcrParseRequest(
-    file: str, 
-    countries: str = None, 
-    languages: str = None, 
-    is_single: bool = None)
+    file,
+    countries,
+    languages,
+    is_single)
 ```
 
 Name | Type | Description  | Notes

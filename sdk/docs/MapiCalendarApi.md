@@ -56,7 +56,7 @@ MapiCalendarDto
 ### request Parameter
 ```python
 MapiCalendarFromFileRequest(
-    file: str)
+    file)
 ```
 
 Name | Type | Description  | Notes
@@ -81,9 +81,9 @@ MapiCalendarDto
 ### request Parameter
 ```python
 MapiCalendarGetRequest(
-    file_name: str, 
-    folder: str = None, 
-    storage: str = None)
+    file_name,
+    folder,
+    storage)
 ```
 
 Name | Type | Description  | Notes

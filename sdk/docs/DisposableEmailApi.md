@@ -18,7 +18,7 @@ ValueTOfBoolean
 ### request Parameter
 ```python
 DisposableEmailIsDisposableRequest(
-    address: str)
+    address)
 ```
 
 Name | Type | Description  | Notes
