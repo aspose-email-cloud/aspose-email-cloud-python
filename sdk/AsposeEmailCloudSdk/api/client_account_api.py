@@ -152,11 +152,11 @@ class ClientAccountApi(ApiBase):
 
         return self._make_request(http_request_object, 'GET', 'EmailClientMultiAccount')
             
-    def save(self, request: EmailClientAccountSaveRequest):
+    def save(self, request: ClientAccountSaveRequest):
         """Create/update email client account file (*.account) with credentials             
 
         :param request: Email account information
-        :type request: EmailClientAccountSaveRequest
+        :type request: ClientAccountSaveRequest
         :return: None
         """
         # verify the required parameter 'request' is set
@@ -181,11 +181,11 @@ class ClientAccountApi(ApiBase):
 
         return self._make_request(http_request_object, 'PUT', None)
             
-    def save_multi(self, request: EmailClientMultiAccountSaveRequest):
+    def save_multi(self, request: ClientAccountSaveMultiRequest):
         """Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
         :param request: Email accounts information.
-        :type request: EmailClientMultiAccountSaveRequest
+        :type request: ClientAccountSaveMultiRequest
         :return: None
         """
         # verify the required parameter 'request' is set

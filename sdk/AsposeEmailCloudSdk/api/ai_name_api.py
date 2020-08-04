@@ -512,11 +512,11 @@ class AiNameApi(ApiBase):
 
         return self._make_request(http_request_object, 'GET', 'AiNameMatchResult')
             
-    def match_parsed(self, request: AiNameParsedMatchRequest) -> AiNameMatchResult:
+    def match_parsed(self, request: AiNameMatchParsedRequest) -> AiNameMatchResult:
         """Compare people&#39;s parsed names and attributes. Uses options for comparing instructions.             
 
         :param request: Parsed names to match.
-        :type request: AiNameParsedMatchRequest
+        :type request: AiNameMatchParsedRequest
         :return: AiNameMatchResult
         """
         # verify the required parameter 'request' is set

@@ -1,4 +1,4 @@
-# AsposeEmailCloudSdk.models.AiNameParsedMatchRequest
+# AsposeEmailCloudSdk.models.AiNameMatchParsedRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

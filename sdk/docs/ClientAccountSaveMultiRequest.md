@@ -1,4 +1,4 @@
-# AsposeEmailCloudSdk.models.EmailClientMultiAccountSaveRequest
+# AsposeEmailCloudSdk.models.ClientAccountSaveMultiRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

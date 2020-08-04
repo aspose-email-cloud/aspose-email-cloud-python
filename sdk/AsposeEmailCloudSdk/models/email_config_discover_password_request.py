@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="DiscoverEmailConfigPassword.py">
+#  <copyright company="Aspose" file="EmailConfigDiscoverPasswordRequest.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -33,7 +33,7 @@ from datetime import datetime
 from AsposeEmailCloudSdk.models.discover_email_config_request import DiscoverEmailConfigRequest
 
 
-class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
+class EmailConfigDiscoverPasswordRequest(DiscoverEmailConfigRequest):
     """
     """
 
@@ -70,7 +70,7 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
         :param password: Email account password.             
         :type password: str
         """
-        super(DiscoverEmailConfigPassword, self).__init__()
+        super(EmailConfigDiscoverPasswordRequest, self).__init__()
 
         self._password = None
 
@@ -89,7 +89,7 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
         """
         Email account password.             
 
-        :return: The password of this DiscoverEmailConfigPassword.
+        :return: The password of this EmailConfigDiscoverPasswordRequest.
         :rtype: str
         """
         return self._password
@@ -99,7 +99,7 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
         """
         Email account password.             
 
-        :param password: The password of this DiscoverEmailConfigPassword.
+        :param password: The password of this EmailConfigDiscoverPasswordRequest.
         :type: str
         """
         if password is None:
@@ -142,7 +142,7 @@ class DiscoverEmailConfigPassword(DiscoverEmailConfigRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, DiscoverEmailConfigPassword):
+        if not isinstance(other, EmailConfigDiscoverPasswordRequest):
             return False
 
         return self.__dict__ == other.__dict__

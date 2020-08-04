@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="AiNameParsedMatchRequest.py">
+#  <copyright company="Aspose" file="AiNameMatchParsedRequest.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -35,7 +35,7 @@ from AsposeEmailCloudSdk.models.ai_name_cultural_context import AiNameCulturalCo
 from AsposeEmailCloudSdk.models.ai_name_parsed_request import AiNameParsedRequest
 
 
-class AiNameParsedMatchRequest(AiNameParsedRequest):
+class AiNameMatchParsedRequest(AiNameParsedRequest):
     """Two parsed names to match request             
     """
 
@@ -72,7 +72,7 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
         :param other_parsed_name: Other parsed name to match             
         :type other_parsed_name: List[AiNameComponent]
         """
-        super(AiNameParsedMatchRequest, self).__init__()
+        super(AiNameMatchParsedRequest, self).__init__()
 
         self._other_parsed_name = None
 
@@ -91,7 +91,7 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
         """
         Other parsed name to match             
 
-        :return: The other_parsed_name of this AiNameParsedMatchRequest.
+        :return: The other_parsed_name of this AiNameMatchParsedRequest.
         :rtype: list[AiNameComponent]
         """
         return self._other_parsed_name
@@ -101,7 +101,7 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
         """
         Other parsed name to match             
 
-        :param other_parsed_name: The other_parsed_name of this AiNameParsedMatchRequest.
+        :param other_parsed_name: The other_parsed_name of this AiNameMatchParsedRequest.
         :type: list[AiNameComponent]
         """
         if other_parsed_name is None:
@@ -142,7 +142,7 @@ class AiNameParsedMatchRequest(AiNameParsedRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, AiNameParsedMatchRequest):
+        if not isinstance(other, AiNameMatchParsedRequest):
             return False
 
         return self.__dict__ == other.__dict__

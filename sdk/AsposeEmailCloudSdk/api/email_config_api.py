@@ -90,11 +90,11 @@ class EmailConfigApi(ApiBase):
 
         return self._make_request(http_request_object, 'GET', 'EmailAccountConfigList')
             
-    def discover_oauth(self, request: DiscoverEmailConfigOauth) -> EmailAccountConfigList:
+    def discover_oauth(self, request: EmailConfigDiscoverOauthRequest) -> EmailAccountConfigList:
         """Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
 
         :param request: Discover email configuration request.
-        :type request: DiscoverEmailConfigOauth
+        :type request: EmailConfigDiscoverOauthRequest
         :return: EmailAccountConfigList
         """
         # verify the required parameter 'request' is set
@@ -119,11 +119,11 @@ class EmailConfigApi(ApiBase):
 
         return self._make_request(http_request_object, 'PUT', 'EmailAccountConfigList')
             
-    def discover_password(self, request: DiscoverEmailConfigPassword) -> EmailAccountConfigList:
+    def discover_password(self, request: EmailConfigDiscoverPasswordRequest) -> EmailAccountConfigList:
         """Discover email accounts by email address. Validates discovered accounts using login and password.             
 
         :param request: Discover email configuration request.
-        :type request: DiscoverEmailConfigPassword
+        :type request: EmailConfigDiscoverPasswordRequest
         :return: EmailAccountConfigList
         """
         # verify the required parameter 'request' is set

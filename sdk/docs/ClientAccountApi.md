@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # save
 
 ```python
-save(self, EmailClientAccountSaveRequest request)
+save(self, ClientAccountSaveRequest request)
 ```
 
 Create/update email client account file (*.account) with credentials             
@@ -75,7 +75,7 @@ void (empty response body)
 
 ### request Parameter
 
-See parameter model documentation at [EmailClientAccountSaveRequest](EmailClientAccountSaveRequest.md)
+See parameter model documentation at [ClientAccountSaveRequest](ClientAccountSaveRequest.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -83,7 +83,7 @@ See parameter model documentation at [EmailClientAccountSaveRequest](EmailClient
 # save_multi
 
 ```python
-save_multi(self, EmailClientMultiAccountSaveRequest request)
+save_multi(self, ClientAccountSaveMultiRequest request)
 ```
 
 Create email client multi account file (*.multi.account). Will respond error if file extension is not \".multi.account\".             
@@ -94,7 +94,7 @@ void (empty response body)
 
 ### request Parameter
 
-See parameter model documentation at [EmailClientMultiAccountSaveRequest](EmailClientMultiAccountSaveRequest.md)
+See parameter model documentation at [ClientAccountSaveMultiRequest](ClientAccountSaveMultiRequest.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

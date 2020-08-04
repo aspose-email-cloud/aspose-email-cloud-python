@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="EmailClientMultiAccountSaveRequest.py">
+#  <copyright company="Aspose" file="ClientAccountSaveRequest.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -30,13 +30,13 @@ import six
 from typing import List, Set, Dict, Tuple, Optional
 from datetime import datetime
 
-from AsposeEmailCloudSdk.models.email_client_multi_account import EmailClientMultiAccount
+from AsposeEmailCloudSdk.models.email_client_account import EmailClientAccount
 from AsposeEmailCloudSdk.models.storage_file_location import StorageFileLocation
-from AsposeEmailCloudSdk.models.storage_model_of_email_client_multi_account import StorageModelOfEmailClientMultiAccount
+from AsposeEmailCloudSdk.models.storage_model_of_email_client_account import StorageModelOfEmailClientAccount
 
 
-class EmailClientMultiAccountSaveRequest(StorageModelOfEmailClientMultiAccount):
-    """Email client multi account save request.             
+class ClientAccountSaveRequest(StorageModelOfEmailClientAccount):
+    """Email client account save request             
     """
 
     """
@@ -48,7 +48,7 @@ class EmailClientMultiAccountSaveRequest(StorageModelOfEmailClientMultiAccount):
     """
     swagger_types = {
         'storage_file': 'StorageFileLocation',
-        'value': 'EmailClientMultiAccount'
+        'value': 'EmailClientAccount'
     }
 
     attribute_map = {
@@ -56,15 +56,15 @@ class EmailClientMultiAccountSaveRequest(StorageModelOfEmailClientMultiAccount):
         'value': 'value'
     }
 
-    def __init__(self, storage_file: StorageFileLocation = None, value: EmailClientMultiAccount = None):
+    def __init__(self, storage_file: StorageFileLocation = None, value: EmailClientAccount = None):
         """
-        Email client multi account save request.             
+        Email client account save request             
         :param storage_file: 
         :type storage_file: StorageFileLocation
         :param value: 
-        :type value: EmailClientMultiAccount
+        :type value: EmailClientAccount
         """
-        super(EmailClientMultiAccountSaveRequest, self).__init__()
+        super(ClientAccountSaveRequest, self).__init__()
 
         if storage_file is not None:
             self.storage_file = storage_file
@@ -106,7 +106,7 @@ class EmailClientMultiAccountSaveRequest(StorageModelOfEmailClientMultiAccount):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, EmailClientMultiAccountSaveRequest):
+        if not isinstance(other, ClientAccountSaveRequest):
             return False
 
         return self.__dict__ == other.__dict__

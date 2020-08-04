@@ -1,4 +1,4 @@
-# AsposeEmailCloudSdk.models.DiscoverEmailConfigPassword
+# AsposeEmailCloudSdk.models.EmailConfigDiscoverPasswordRequest
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

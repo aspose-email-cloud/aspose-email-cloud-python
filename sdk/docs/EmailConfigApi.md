@@ -33,7 +33,7 @@ Name | Type | Description  | Notes
 # discover_oauth
 
 ```python
-discover_oauth(self, DiscoverEmailConfigOauth request)
+discover_oauth(self, EmailConfigDiscoverOauthRequest request)
 ```
 
 Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
@@ -44,7 +44,7 @@ Discover email accounts by email address. Validates discovered accounts using OA
 
 ### request Parameter
 
-See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailConfigOauth.md)
+See parameter model documentation at [EmailConfigDiscoverOauthRequest](EmailConfigDiscoverOauthRequest.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -52,7 +52,7 @@ See parameter model documentation at [DiscoverEmailConfigOauth](DiscoverEmailCon
 # discover_password
 
 ```python
-discover_password(self, DiscoverEmailConfigPassword request)
+discover_password(self, EmailConfigDiscoverPasswordRequest request)
 ```
 
 Discover email accounts by email address. Validates discovered accounts using login and password.             
@@ -63,7 +63,7 @@ Discover email accounts by email address. Validates discovered accounts using lo
 
 ### request Parameter
 
-See parameter model documentation at [DiscoverEmailConfigPassword](DiscoverEmailConfigPassword.md)
+See parameter model documentation at [EmailConfigDiscoverPasswordRequest](EmailConfigDiscoverPasswordRequest.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

@@ -1,6 +1,6 @@
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="DiscoverEmailConfigOauth.py">
+#  <copyright company="Aspose" file="EmailConfigDiscoverOauthRequest.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -33,7 +33,7 @@ from datetime import datetime
 from AsposeEmailCloudSdk.models.discover_email_config_request import DiscoverEmailConfigRequest
 
 
-class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
+class EmailConfigDiscoverOauthRequest(DiscoverEmailConfigRequest):
     """
     """
 
@@ -82,7 +82,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         :param request_url: The url to obtain access token. If not specified, will be discovered from email configuration.             
         :type request_url: str
         """
-        super(DiscoverEmailConfigOauth, self).__init__()
+        super(EmailConfigDiscoverOauthRequest, self).__init__()
 
         self._client_id = None
         self._client_secret = None
@@ -110,7 +110,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         OAuth client id.             
 
-        :return: The client_id of this DiscoverEmailConfigOauth.
+        :return: The client_id of this EmailConfigDiscoverOauthRequest.
         :rtype: str
         """
         return self._client_id
@@ -120,7 +120,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         OAuth client id.             
 
-        :param client_id: The client_id of this DiscoverEmailConfigOauth.
+        :param client_id: The client_id of this EmailConfigDiscoverOauthRequest.
         :type: str
         """
         if client_id is None:
@@ -134,7 +134,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         OAuth client secret.             
 
-        :return: The client_secret of this DiscoverEmailConfigOauth.
+        :return: The client_secret of this EmailConfigDiscoverOauthRequest.
         :rtype: str
         """
         return self._client_secret
@@ -144,7 +144,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         OAuth client secret.             
 
-        :param client_secret: The client_secret of this DiscoverEmailConfigOauth.
+        :param client_secret: The client_secret of this EmailConfigDiscoverOauthRequest.
         :type: str
         """
         if client_secret is None:
@@ -158,7 +158,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         OAuth refresh token.             
 
-        :return: The refresh_token of this DiscoverEmailConfigOauth.
+        :return: The refresh_token of this EmailConfigDiscoverOauthRequest.
         :rtype: str
         """
         return self._refresh_token
@@ -168,7 +168,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         OAuth refresh token.             
 
-        :param refresh_token: The refresh_token of this DiscoverEmailConfigOauth.
+        :param refresh_token: The refresh_token of this EmailConfigDiscoverOauthRequest.
         :type: str
         """
         if refresh_token is None:
@@ -182,7 +182,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         The url to obtain access token. If not specified, will be discovered from email configuration.             
 
-        :return: The request_url of this DiscoverEmailConfigOauth.
+        :return: The request_url of this EmailConfigDiscoverOauthRequest.
         :rtype: str
         """
         return self._request_url
@@ -192,7 +192,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
         """
         The url to obtain access token. If not specified, will be discovered from email configuration.             
 
-        :param request_url: The request_url of this DiscoverEmailConfigOauth.
+        :param request_url: The request_url of this EmailConfigDiscoverOauthRequest.
         :type: str
         """
         self._request_url = request_url
@@ -231,7 +231,7 @@ class DiscoverEmailConfigOauth(DiscoverEmailConfigRequest):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, DiscoverEmailConfigOauth):
+        if not isinstance(other, EmailConfigDiscoverOauthRequest):
             return False
 
         return self.__dict__ == other.__dict__

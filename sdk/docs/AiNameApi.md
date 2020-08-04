@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 # match_parsed
 
 ```python
-match_parsed(self, AiNameParsedMatchRequest request)
+match_parsed(self, AiNameMatchParsedRequest request)
 ```
 
 Compare people's parsed names and attributes. Uses options for comparing instructions.             
@@ -253,7 +253,7 @@ Compare people's parsed names and attributes. Uses options for comparing instruc
 
 ### request Parameter
 
-See parameter model documentation at [AiNameParsedMatchRequest](AiNameParsedMatchRequest.md)
+See parameter model documentation at [AiNameMatchParsedRequest](AiNameMatchParsedRequest.md)
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         

@@ -51,7 +51,7 @@ def test_email_client_account(td: EmailApiData):
         models.EmailClientAccountPasswordCredentials(
             'login', 'password'))
     name = str(uuid.uuid4()) + '.account'
-    td.api.client.account.save(models.EmailClientAccountSaveRequest(
+    td.api.client.account.save(models.ClientAccountSaveRequest(
         models.StorageFileLocation(td.storage, td.folder, name),
         account))
     result = td.api.client.account.get(models.ClientAccountGetRequest(name, td.folder, td.storage))
@@ -79,7 +79,7 @@ def test_email_client_multi_account(td: EmailApiData):
                                       'example@gmail.com', 'password')))
     file_name = str(uuid.uuid4()) + '.multi.account'
     # Save multi account
-    td.api.client.account.save_multi(models.EmailClientMultiAccountSaveRequest(
+    td.api.client.account.save_multi(models.ClientAccountSaveMultiRequest(
         models.StorageFileLocation(td.storage, td.folder, file_name),
         multi_account))
     # Get multi account object from storage
