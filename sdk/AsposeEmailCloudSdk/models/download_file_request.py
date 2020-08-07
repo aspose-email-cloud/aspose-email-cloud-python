@@ -1,4 +1,3 @@
-
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="download_file_request.py">

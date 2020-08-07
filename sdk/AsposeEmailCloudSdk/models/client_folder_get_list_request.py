@@ -1,4 +1,3 @@
-
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="client_folder_get_list_request.py">

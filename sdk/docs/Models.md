@@ -1,4 +1,3 @@
-
 ## Documentation for Models
 
  - [AsposeEmailCloudSdk.models.AiBcrImage](AiBcrImage.md)
