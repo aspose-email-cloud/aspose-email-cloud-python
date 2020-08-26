@@ -1,6 +1,7 @@
+
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="email_cloud.py">
+#  <copyright company="Aspose" file="mapi_group.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -27,10 +28,9 @@
 from __future__ import absolute_import
 from AsposeEmailCloudSdk.api import *
 
-
 class MapiGroup(object):
     """
-    MAPI operations.             
+    MAPI operations.
     """
     def __init__(self, api_client):
     
@@ -44,21 +44,21 @@ class MapiGroup(object):
     @property
     def calendar(self) -> MapiCalendarApi:
         """
-        MAPI calendar operations.             
+        MAPI calendar operations.
         """
         return self._calendar
     
     @property
     def contact(self) -> MapiContactApi:
         """
-        MAPI contact operations             
+        MAPI contact operations
         """
         return self._contact
     
     @property
     def message(self) -> MapiMessageApi:
         """
-        MAPI message operations             
+        MAPI message operations
         """
         return self._message
     

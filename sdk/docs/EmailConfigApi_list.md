@@ -3,8 +3,6 @@
 
 All URIs are relative to *https://api.aspose.cloud/v4.0*
 
-All methods have Async versions. These async versions are not available on .NETFramework v2.0.
-
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**discover**](EmailConfigApi.md#discover)| **GET** /email/config/discover| Discover email accounts by email address. Does not validate discovered accounts.             

@@ -3,8 +3,6 @@
 
 All URIs are relative to *https://api.aspose.cloud/v4.0*
 
-All methods have Async versions. These async versions are not available on .NETFramework v2.0.
-
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_disc_usage**](StorageApi.md#get_disc_usage)| **GET** /email/storage/disc| Get disc usage

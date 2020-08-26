@@ -84,35 +84,35 @@ class EmailCloud(object):
     @property
     def calendar(self) -> CalendarApi:
         """
-        iCalendar document operations.             
+        iCalendar document operations.
         """
         return self._calendar
     
     @property
     def contact(self) -> ContactApi:
         """
-        Contact document operations. Supported formats: VCard, MSG, WebDav             
+        Contact document operations. Supported formats: VCard, MSG, WebDav
         """
         return self._contact
     
     @property
     def email(self) -> EmailApi:
         """
-        Email document (*.eml) operations.             
+        Email document (*.eml) operations.
         """
         return self._email
     
     @property
     def disposable_email(self) -> DisposableEmailApi:
         """
-        Check email address is disposable operations             
+        Check email address is disposable operations
         """
         return self._disposable_email
     
     @property
     def email_config(self) -> EmailConfigApi:
         """
-        Email server configuration discovery.             
+        Email server configuration discovery.
         """
         return self._email_config
     
@@ -121,28 +121,28 @@ class EmailCloud(object):
     @property
     def mapi(self) -> MapiGroup:
         """
-        MAPI operations.             
+        MAPI operations.
         """
         return self._mapi
     
     @property
     def client(self) -> ClientGroup:
         """
-        Builtin Email client operations.             
+        Builtin Email client operations.
         """
         return self._client
     
     @property
     def ai(self) -> AiGroup:
         """
-        AI powered operations.             
+        AI powered operations.
         """
         return self._ai
     
     @property
     def cloud_storage(self) -> CloudStorageGroup:
         """
-        Cloud file storage operations.             
+        Cloud file storage operations.
         """
         return self._cloud_storage
     

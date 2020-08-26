@@ -3,8 +3,6 @@
 
 All URIs are relative to *https://api.aspose.cloud/v4.0*
 
-All methods have Async versions. These async versions are not available on .NETFramework v2.0.
-
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**as_calendar_dto**](MapiCalendarApi.md#as_calendar_dto)| **PUT** /email/MapiCalendar/as-calendar-dto| Converts MAPI calendar model to CalendarDto model.             

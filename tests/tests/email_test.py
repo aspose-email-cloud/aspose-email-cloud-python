@@ -13,7 +13,7 @@ from conftest import EmailApiData
 def test_email_converter(td: EmailApiData):
     email_document = email_dto()
     mapi = td.api.email.as_file(models.EmailAsFileRequest('Msg', email_document))
-    eml = td.api.email.convert(models.EmailConvertRequest('Eml', mapi))
+    eml = td.api.email.convert(models.EmailConvertRequest('Msg', 'Eml', mapi))
     with open(eml, 'r') as f:
         file_data = f.read()
         assert email_document._from.address in file_data

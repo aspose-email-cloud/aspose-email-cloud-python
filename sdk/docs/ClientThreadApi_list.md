@@ -3,8 +3,6 @@
 
 All URIs are relative to *https://api.aspose.cloud/v4.0*
 
-All methods have Async versions. These async versions are not available on .NETFramework v2.0.
-
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete**](ClientThreadApi.md#delete)| **DELETE** /email/client/thread| Delete thread by id. All messages from thread will also be deleted.             

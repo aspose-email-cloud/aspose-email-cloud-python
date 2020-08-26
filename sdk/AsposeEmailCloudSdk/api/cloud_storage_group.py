@@ -1,6 +1,7 @@
+
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
-#  <copyright company="Aspose" file="email_cloud.py">
+#  <copyright company="Aspose" file="cloud_storage_group.py">
 #    Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 #  </copyright>
 #  <summary>
@@ -27,10 +28,9 @@
 from __future__ import absolute_import
 from AsposeEmailCloudSdk.api import *
 
-
 class CloudStorageGroup(object):
     """
-    Cloud file storage operations.             
+    Cloud file storage operations.
     """
     def __init__(self, api_client):
     

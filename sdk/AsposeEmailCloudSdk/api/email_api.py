@@ -105,9 +105,12 @@ class EmailApi(ApiBase):
         :type request: EmailConvertRequest
         :return: str
         """
-        # verify the required parameter 'format' is set
-        if request.format is None:
-            raise ValueError("Missing the required parameter `format` when calling `convert`")
+        # verify the required parameter 'from_format' is set
+        if request.from_format is None:
+            raise ValueError("Missing the required parameter `from_format` when calling `convert`")
+        # verify the required parameter 'to_format' is set
+        if request.to_format is None:
+            raise ValueError("Missing the required parameter `to_format` when calling `convert`")
         # verify the required parameter 'file' is set
         if request.file is None:
             raise ValueError("Missing the required parameter `file` when calling `convert`")
@@ -117,12 +120,18 @@ class EmailApi(ApiBase):
         path_params = {}
 
         query_params = []
-        path_parameter = '{' + self._lowercase_first_letter('format') + '}'
+        path_parameter = '{' + self._lowercase_first_letter('fromFormat') + '}'
         if path_parameter in path:
-            path = path.replace(path_parameter, request.format if request.format is not None else '')
+            path = path.replace(path_parameter, request.from_format if request.from_format is not None else '')
         else:
-            if request.format is not None:
-                query_params.append((self._lowercase_first_letter('format'), request.format))
+            if request.from_format is not None:
+                query_params.append((self._lowercase_first_letter('fromFormat'), request.from_format))
+        path_parameter = '{' + self._lowercase_first_letter('toFormat') + '}'
+        if path_parameter in path:
+            path = path.replace(path_parameter, request.to_format if request.to_format is not None else '')
+        else:
+            if request.to_format is not None:
+                query_params.append((self._lowercase_first_letter('toFormat'), request.to_format))
 
         form_params = []
         local_var_files = []

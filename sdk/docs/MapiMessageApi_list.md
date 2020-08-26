@@ -3,8 +3,6 @@
 
 All URIs are relative to *https://api.aspose.cloud/v4.0*
 
-All methods have Async versions. These async versions are not available on .NETFramework v2.0.
-
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**as_email_dto**](MapiMessageApi.md#as_email_dto)| **PUT** /email/MapiMessage/as-email-dto| Converts MAPI message model to EmailDto model             
