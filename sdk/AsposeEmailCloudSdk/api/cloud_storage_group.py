@@ -44,21 +44,21 @@ class CloudStorageGroup(object):
     @property
     def file(self) -> FileApi:
         """
-        File operations controller
+        
         """
         return self._file
     
     @property
     def folder(self) -> FolderApi:
         """
-        Folder operations controller
+        
         """
         return self._folder
     
     @property
     def storage(self) -> StorageApi:
         """
-        Storage operations controller
+        
         """
         return self._storage
     

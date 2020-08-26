@@ -32,9 +32,9 @@ class GetFileVersionsRequest(object):
     Request model for get_file_versions operation.
     Initializes a new instance.
 
-    :param path: File path e.g. '/file.ext'
+    :param path: 
     :type path: str
-    :param storage_name: Storage name
+    :param storage_name: 
     :type storage_name: str
     """
 
@@ -43,9 +43,9 @@ class GetFileVersionsRequest(object):
         Request model for get_file_versions operation.
         Initializes a new instance.
 
-        :param path: File path e.g. '/file.ext'
+        :param path: 
         :type path: str
-        :param storage_name: Storage name
+        :param storage_name: 
         :type storage_name: str
         """
 

@@ -32,11 +32,11 @@ class ObjectExistsRequest(object):
     Request model for object_exists operation.
     Initializes a new instance.
 
-    :param path: File or folder path e.g. '/file.ext' or '/folder'
+    :param path: 
     :type path: str
-    :param storage_name: Storage name
+    :param storage_name: 
     :type storage_name: str
-    :param version_id: File version ID
+    :param version_id: 
     :type version_id: str
     """
 
@@ -45,11 +45,11 @@ class ObjectExistsRequest(object):
         Request model for object_exists operation.
         Initializes a new instance.
 
-        :param path: File or folder path e.g. '/file.ext' or '/folder'
+        :param path: 
         :type path: str
-        :param storage_name: Storage name
+        :param storage_name: 
         :type storage_name: str
-        :param version_id: File version ID
+        :param version_id: 
         :type version_id: str
         """
 

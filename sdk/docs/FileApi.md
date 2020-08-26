@@ -8,7 +8,7 @@
 copy_file(self, request: CopyFileRequest)
 ```
 
-Copy file
+
 
 ### Return type
 
@@ -26,11 +26,11 @@ CopyFileRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Source file path e.g. &#39;/folder/file.ext&#39; | 
- **dest_path** | **str** | Destination file path | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
- **version_id** | **str** | File version ID to copy | [optional] 
+ **src_path** | **str** |  | 
+ **dest_path** | **str** |  | 
+ **src_storage_name** | **str** |  | [optional] 
+ **dest_storage_name** | **str** |  | [optional] 
+ **version_id** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 delete_file(self, request: DeleteFileRequest)
 ```
 
-Delete file
+
 
 ### Return type
 
@@ -57,9 +57,9 @@ DeleteFileRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** | File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
- **version_id** | **str** | File version ID to delete | [optional] 
+ **path** | **str** |  | 
+ **storage_name** | **str** |  | [optional] 
+ **version_id** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 download_file(self, request: DownloadFileRequest)
 ```
 
-Download file
+
 
 ### Return type
 
@@ -86,9 +86,9 @@ DownloadFileRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** | File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
- **version_id** | **str** | File version ID to download | [optional] 
+ **path** | **str** |  | 
+ **storage_name** | **str** |  | [optional] 
+ **version_id** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 move_file(self, request: MoveFileRequest)
 ```
 
-Move file
+
 
 ### Return type
 
@@ -117,11 +117,11 @@ MoveFileRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Source file path e.g. &#39;/src.ext&#39; | 
- **dest_path** | **str** | Destination file path e.g. &#39;/dest.ext&#39; | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
- **version_id** | **str** | File version ID to move | [optional] 
+ **src_path** | **str** |  | 
+ **dest_path** | **str** |  | 
+ **src_storage_name** | **str** |  | [optional] 
+ **dest_storage_name** | **str** |  | [optional] 
+ **version_id** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 upload_file(self, request: UploadFileRequest)
 ```
 
-Upload file
+
 
 ### Return type
 
@@ -148,9 +148,9 @@ UploadFileRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** | Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              | 
+ **path** | **str** |  | 
  **file** | **str** | File to upload | 
- **storage_name** | **str** | Storage name | [optional] 
+ **storage_name** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

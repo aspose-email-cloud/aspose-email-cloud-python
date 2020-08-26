@@ -40,7 +40,7 @@ class FileApi(ApiBase):
         super(FileApi, self).__init__(api_client)
             
     def copy_file(self, request: CopyFileRequest):
-        """Copy file
+        """copy_file
 
 
         :param request: CopyFileRequest object with parameters
@@ -107,7 +107,7 @@ class FileApi(ApiBase):
         return self._make_request(http_request_object, 'PUT', None)
             
     def delete_file(self, request: DeleteFileRequest):
-        """Delete file
+        """delete_file
 
 
         :param request: DeleteFileRequest object with parameters
@@ -159,7 +159,7 @@ class FileApi(ApiBase):
         return self._make_request(http_request_object, 'DELETE', None)
             
     def download_file(self, request: DownloadFileRequest) -> str:
-        """Download file
+        """download_file
 
 
         :param request: DownloadFileRequest object with parameters
@@ -211,7 +211,7 @@ class FileApi(ApiBase):
         return self._make_request(http_request_object, 'GET', 'file')
             
     def move_file(self, request: MoveFileRequest):
-        """Move file
+        """move_file
 
 
         :param request: MoveFileRequest object with parameters
@@ -278,7 +278,7 @@ class FileApi(ApiBase):
         return self._make_request(http_request_object, 'PUT', None)
             
     def upload_file(self, request: UploadFileRequest) -> FilesUploadResult:
-        """Upload file
+        """upload_file
 
 
         :param request: UploadFileRequest object with parameters

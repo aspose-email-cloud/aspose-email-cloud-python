@@ -40,7 +40,7 @@ class FolderApi(ApiBase):
         super(FolderApi, self).__init__(api_client)
             
     def copy_folder(self, request: CopyFolderRequest):
-        """Copy folder
+        """copy_folder
 
 
         :param request: CopyFolderRequest object with parameters
@@ -101,7 +101,7 @@ class FolderApi(ApiBase):
         return self._make_request(http_request_object, 'PUT', None)
             
     def create_folder(self, request: CreateFolderRequest):
-        """Create the folder
+        """create_folder
 
 
         :param request: CreateFolderRequest object with parameters
@@ -147,7 +147,7 @@ class FolderApi(ApiBase):
         return self._make_request(http_request_object, 'PUT', None)
             
     def delete_folder(self, request: DeleteFolderRequest):
-        """Delete folder
+        """delete_folder
 
 
         :param request: DeleteFolderRequest object with parameters
@@ -199,7 +199,7 @@ class FolderApi(ApiBase):
         return self._make_request(http_request_object, 'DELETE', None)
             
     def get_files_list(self, request: GetFilesListRequest) -> FilesList:
-        """Get all files and folders within a folder
+        """get_files_list
 
 
         :param request: GetFilesListRequest object with parameters
@@ -245,7 +245,7 @@ class FolderApi(ApiBase):
         return self._make_request(http_request_object, 'GET', 'FilesList')
             
     def move_folder(self, request: MoveFolderRequest):
-        """Move folder
+        """move_folder
 
 
         :param request: MoveFolderRequest object with parameters

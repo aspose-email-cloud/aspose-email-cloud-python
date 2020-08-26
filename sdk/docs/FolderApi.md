@@ -8,7 +8,7 @@
 copy_folder(self, request: CopyFolderRequest)
 ```
 
-Copy folder
+
 
 ### Return type
 
@@ -25,10 +25,10 @@ CopyFolderRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Source folder path e.g. &#39;/src&#39; | 
- **dest_path** | **str** | Destination folder path e.g. &#39;/dst&#39; | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
+ **src_path** | **str** |  | 
+ **dest_path** | **str** |  | 
+ **src_storage_name** | **str** |  | [optional] 
+ **dest_storage_name** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -39,7 +39,7 @@ Name | Type | Description  | Notes
 create_folder(self, request: CreateFolderRequest)
 ```
 
-Create the folder
+
 
 ### Return type
 
@@ -54,8 +54,8 @@ CreateFolderRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** | Folder path to create e.g. &#39;folder_1/folder_2/&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
+ **path** | **str** |  | 
+ **storage_name** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 delete_folder(self, request: DeleteFolderRequest)
 ```
 
-Delete folder
+
 
 ### Return type
 
@@ -82,9 +82,9 @@ DeleteFolderRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** | Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
- **recursive** | **bool** | Enable to delete folders, subfolders and files | [optional] [default to false]
+ **path** | **str** |  | 
+ **storage_name** | **str** |  | [optional] 
+ **recursive** | **bool** |  | [optional] [default to false]
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 get_files_list(self, request: GetFilesListRequest)
 ```
 
-Get all files and folders within a folder
+
 
 ### Return type
 
@@ -110,8 +110,8 @@ GetFilesListRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** | Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
+ **path** | **str** |  | 
+ **storage_name** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 move_folder(self, request: MoveFolderRequest)
 ```
 
-Move folder
+
 
 ### Return type
 
@@ -139,10 +139,10 @@ MoveFolderRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Folder path to move e.g. &#39;/folder&#39; | 
- **dest_path** | **str** | Destination folder path to move to e.g &#39;/dst&#39; | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
+ **src_path** | **str** |  | 
+ **dest_path** | **str** |  | 
+ **src_storage_name** | **str** |  | [optional] 
+ **dest_storage_name** | **str** |  | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

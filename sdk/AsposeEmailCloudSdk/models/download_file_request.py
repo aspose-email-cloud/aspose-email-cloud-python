@@ -32,11 +32,11 @@ class DownloadFileRequest(object):
     Request model for download_file operation.
     Initializes a new instance.
 
-    :param path: File path e.g. '/folder/file.ext'
+    :param path: 
     :type path: str
-    :param storage_name: Storage name
+    :param storage_name: 
     :type storage_name: str
-    :param version_id: File version ID to download
+    :param version_id: 
     :type version_id: str
     """
 
@@ -45,11 +45,11 @@ class DownloadFileRequest(object):
         Request model for download_file operation.
         Initializes a new instance.
 
-        :param path: File path e.g. '/folder/file.ext'
+        :param path: 
         :type path: str
-        :param storage_name: Storage name
+        :param storage_name: 
         :type storage_name: str
-        :param version_id: File version ID to download
+        :param version_id: 
         :type version_id: str
         """
 

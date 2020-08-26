@@ -32,9 +32,9 @@ class GetFilesListRequest(object):
     Request model for get_files_list operation.
     Initializes a new instance.
 
-    :param path: Folder path e.g. '/folder'
+    :param path: 
     :type path: str
-    :param storage_name: Storage name
+    :param storage_name: 
     :type storage_name: str
     """
 
@@ -43,9 +43,9 @@ class GetFilesListRequest(object):
         Request model for get_files_list operation.
         Initializes a new instance.
 
-        :param path: Folder path e.g. '/folder'
+        :param path: 
         :type path: str
-        :param storage_name: Storage name
+        :param storage_name: 
         :type storage_name: str
         """
 

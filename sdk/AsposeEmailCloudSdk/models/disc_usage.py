@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class DiscUsage(object):
-    """Class for disc space information.
+    """
     """
 
     """
@@ -54,10 +54,10 @@ class DiscUsage(object):
 
     def __init__(self, used_size: int = None, total_size: int = None):
         """
-        Class for disc space information.
-        :param used_size: Application used disc space.
+        
+        :param used_size: 
         :type used_size: int
-        :param total_size: Total disc space.
+        :param total_size: 
         :type total_size: int
         """
 
@@ -73,7 +73,7 @@ class DiscUsage(object):
     @property
     def used_size(self) -> int:
         """
-        Application used disc space.
+        Gets the used_size of this DiscUsage.
 
         :return: The used_size of this DiscUsage.
         :rtype: int
@@ -83,7 +83,7 @@ class DiscUsage(object):
     @used_size.setter
     def used_size(self, used_size: int):
         """
-        Application used disc space.
+        Sets the used_size of this DiscUsage.
 
         :param used_size: The used_size of this DiscUsage.
         :type: int
@@ -95,7 +95,7 @@ class DiscUsage(object):
     @property
     def total_size(self) -> int:
         """
-        Total disc space.
+        Gets the total_size of this DiscUsage.
 
         :return: The total_size of this DiscUsage.
         :rtype: int
@@ -105,7 +105,7 @@ class DiscUsage(object):
     @total_size.setter
     def total_size(self, total_size: int):
         """
-        Total disc space.
+        Sets the total_size of this DiscUsage.
 
         :param total_size: The total_size of this DiscUsage.
         :type: int

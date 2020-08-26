@@ -34,7 +34,7 @@ from AsposeEmailCloudSdk.models.file_version import FileVersion
 
 
 class FileVersions(object):
-    """File versions FileVersion.
+    """
     """
 
     """
@@ -54,8 +54,8 @@ class FileVersions(object):
 
     def __init__(self, value: List[FileVersion] = None):
         """
-        File versions FileVersion.
-        :param value: File versions FileVersion.
+        
+        :param value: 
         :type value: List[FileVersion]
         """
 
@@ -68,7 +68,7 @@ class FileVersions(object):
     @property
     def value(self) -> List[FileVersion]:
         """
-        File versions FileVersion.
+        Gets the value of this FileVersions.
 
         :return: The value of this FileVersions.
         :rtype: list[FileVersion]
@@ -78,7 +78,7 @@ class FileVersions(object):
     @value.setter
     def value(self, value: List[FileVersion]):
         """
-        File versions FileVersion.
+        Sets the value of this FileVersions.
 
         :param value: The value of this FileVersions.
         :type: list[FileVersion]
