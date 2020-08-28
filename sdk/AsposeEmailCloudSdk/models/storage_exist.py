@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class StorageExist(object):
-    """
+    """Storage exists
     """
 
     """
@@ -52,8 +52,8 @@ class StorageExist(object):
 
     def __init__(self, exists: bool = None):
         """
-        
-        :param exists: 
+        Storage exists
+        :param exists: Shows that the storage exists.             
         :type exists: bool
         """
 
@@ -66,7 +66,7 @@ class StorageExist(object):
     @property
     def exists(self) -> bool:
         """
-        Gets the exists of this StorageExist.
+        Shows that the storage exists.             
 
         :return: The exists of this StorageExist.
         :rtype: bool
@@ -76,7 +76,7 @@ class StorageExist(object):
     @exists.setter
     def exists(self, exists: bool):
         """
-        Sets the exists of this StorageExist.
+        Shows that the storage exists.             
 
         :param exists: The exists of this StorageExist.
         :type: bool

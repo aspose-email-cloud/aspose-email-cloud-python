@@ -32,7 +32,7 @@ class StorageExistsRequest(object):
     Request model for storage_exists operation.
     Initializes a new instance.
 
-    :param storage_name: 
+    :param storage_name: Storage name
     :type storage_name: str
     """
 
@@ -41,7 +41,7 @@ class StorageExistsRequest(object):
         Request model for storage_exists operation.
         Initializes a new instance.
 
-        :param storage_name: 
+        :param storage_name: Storage name
         :type storage_name: str
         """
 

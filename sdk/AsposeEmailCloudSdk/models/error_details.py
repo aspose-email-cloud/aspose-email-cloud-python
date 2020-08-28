@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class ErrorDetails(object):
-    """
+    """The error details
     """
 
     """
@@ -54,10 +54,10 @@ class ErrorDetails(object):
 
     def __init__(self, request_id: str = None, _date: datetime = None):
         """
-        
-        :param request_id: 
+        The error details
+        :param request_id: The request id
         :type request_id: str
-        :param _date: 
+        :param _date: Date
         :type _date: datetime
         """
 
@@ -73,7 +73,7 @@ class ErrorDetails(object):
     @property
     def request_id(self) -> str:
         """
-        Gets the request_id of this ErrorDetails.
+        The request id
 
         :return: The request_id of this ErrorDetails.
         :rtype: str
@@ -83,7 +83,7 @@ class ErrorDetails(object):
     @request_id.setter
     def request_id(self, request_id: str):
         """
-        Sets the request_id of this ErrorDetails.
+        The request id
 
         :param request_id: The request_id of this ErrorDetails.
         :type: str
@@ -93,7 +93,7 @@ class ErrorDetails(object):
     @property
     def _date(self) -> datetime:
         """
-        Gets the _date of this ErrorDetails.
+        Date
 
         :return: The _date of this ErrorDetails.
         :rtype: datetime
@@ -103,7 +103,7 @@ class ErrorDetails(object):
     @_date.setter
     def _date(self, _date: datetime):
         """
-        Sets the _date of this ErrorDetails.
+        Date
 
         :param _date: The _date of this ErrorDetails.
         :type: datetime

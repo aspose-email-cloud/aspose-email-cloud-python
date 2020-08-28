@@ -32,13 +32,13 @@ class CopyFolderRequest(object):
     Request model for copy_folder operation.
     Initializes a new instance.
 
-    :param src_path: 
+    :param src_path: Source folder path e.g. '/src'
     :type src_path: str
-    :param dest_path: 
+    :param dest_path: Destination folder path e.g. '/dst'
     :type dest_path: str
-    :param src_storage_name: 
+    :param src_storage_name: Source storage name
     :type src_storage_name: str
-    :param dest_storage_name: 
+    :param dest_storage_name: Destination storage name
     :type dest_storage_name: str
     """
 
@@ -47,13 +47,13 @@ class CopyFolderRequest(object):
         Request model for copy_folder operation.
         Initializes a new instance.
 
-        :param src_path: 
+        :param src_path: Source folder path e.g. '/src'
         :type src_path: str
-        :param dest_path: 
+        :param dest_path: Destination folder path e.g. '/dst'
         :type dest_path: str
-        :param src_storage_name: 
+        :param src_storage_name: Source storage name
         :type src_storage_name: str
-        :param dest_storage_name: 
+        :param dest_storage_name: Destination storage name
         :type dest_storage_name: str
         """
 

@@ -8,7 +8,7 @@
 get_disc_usage(self, request: GetDiscUsageRequest)
 ```
 
-
+Get disc usage
 
 ### Return type
 
@@ -22,7 +22,7 @@ GetDiscUsageRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage_name** | **str** |  | [optional] 
+ **storage_name** | **str** | Storage name | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -33,7 +33,7 @@ Name | Type | Description  | Notes
 get_file_versions(self, request: GetFileVersionsRequest)
 ```
 
-
+Get file versions
 
 ### Return type
 
@@ -48,8 +48,8 @@ GetFileVersionsRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** |  | 
- **storage_name** | **str** |  | [optional] 
+ **path** | **str** | File path e.g. &#39;/file.ext&#39; | 
+ **storage_name** | **str** | Storage name | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 object_exists(self, request: ObjectExistsRequest)
 ```
 
-
+Check if file or folder exists
 
 ### Return type
 
@@ -76,9 +76,9 @@ ObjectExistsRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **path** | **str** |  | 
- **storage_name** | **str** |  | [optional] 
- **version_id** | **str** |  | [optional] 
+ **path** | **str** | File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39; | 
+ **storage_name** | **str** | Storage name | [optional] 
+ **version_id** | **str** | File version ID | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
         
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 exists(self, request: StorageExistsRequest)
 ```
 
-
+Check if storage exists
 
 ### Return type
 
@@ -103,7 +103,7 @@ StorageExistsRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage_name** | **str** |  | 
+ **storage_name** | **str** | Storage name | 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

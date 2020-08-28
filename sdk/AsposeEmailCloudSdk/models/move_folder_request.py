@@ -32,13 +32,13 @@ class MoveFolderRequest(object):
     Request model for move_folder operation.
     Initializes a new instance.
 
-    :param src_path: 
+    :param src_path: Folder path to move e.g. '/folder'
     :type src_path: str
-    :param dest_path: 
+    :param dest_path: Destination folder path to move to e.g '/dst'
     :type dest_path: str
-    :param src_storage_name: 
+    :param src_storage_name: Source storage name
     :type src_storage_name: str
-    :param dest_storage_name: 
+    :param dest_storage_name: Destination storage name
     :type dest_storage_name: str
     """
 
@@ -47,13 +47,13 @@ class MoveFolderRequest(object):
         Request model for move_folder operation.
         Initializes a new instance.
 
-        :param src_path: 
+        :param src_path: Folder path to move e.g. '/folder'
         :type src_path: str
-        :param dest_path: 
+        :param dest_path: Destination folder path to move to e.g '/dst'
         :type dest_path: str
-        :param src_storage_name: 
+        :param src_storage_name: Source storage name
         :type src_storage_name: str
-        :param dest_storage_name: 
+        :param dest_storage_name: Destination storage name
         :type dest_storage_name: str
         """
 

@@ -2,7 +2,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | [**list[StorageFile]**](StorageFile.md) |  | [optional] 
+**value** | [**list[StorageFile]**](StorageFile.md) | Files and folders contained by folder StorageFile. | [optional] 
 
 
 

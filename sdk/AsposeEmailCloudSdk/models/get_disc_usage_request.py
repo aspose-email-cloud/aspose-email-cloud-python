@@ -32,7 +32,7 @@ class GetDiscUsageRequest(object):
     Request model for get_disc_usage operation.
     Initializes a new instance.
 
-    :param storage_name: 
+    :param storage_name: Storage name
     :type storage_name: str
     """
 
@@ -41,7 +41,7 @@ class GetDiscUsageRequest(object):
         Request model for get_disc_usage operation.
         Initializes a new instance.
 
-        :param storage_name: 
+        :param storage_name: Storage name
         :type storage_name: str
         """
 

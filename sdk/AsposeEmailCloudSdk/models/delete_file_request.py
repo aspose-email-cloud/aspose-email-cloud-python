@@ -32,11 +32,11 @@ class DeleteFileRequest(object):
     Request model for delete_file operation.
     Initializes a new instance.
 
-    :param path: 
+    :param path: File path e.g. '/folder/file.ext'
     :type path: str
-    :param storage_name: 
+    :param storage_name: Storage name
     :type storage_name: str
-    :param version_id: 
+    :param version_id: File version ID to delete
     :type version_id: str
     """
 
@@ -45,11 +45,11 @@ class DeleteFileRequest(object):
         Request model for delete_file operation.
         Initializes a new instance.
 
-        :param path: 
+        :param path: File path e.g. '/folder/file.ext'
         :type path: str
-        :param storage_name: 
+        :param storage_name: Storage name
         :type storage_name: str
-        :param version_id: 
+        :param version_id: File version ID to delete
         :type version_id: str
         """
 

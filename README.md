@@ -1,9 +1,9 @@
-﻿# Aspose.Email Cloud SDK for Python
+# Aspose.Email Cloud SDK for Python
 [![PYPI](https://img.shields.io/pypi/v/aspose-email-cloud)](https://pypi.org/project/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-python)](https://pypi.org/project/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-python/workflows/tests/badge.svg)
 
 This repository contains Aspose.Email Cloud SDK for Python source code. This SDK allows you to work with Aspose.Email Cloud REST APIs in your Python applications quickly and easily, with zero initial cost.
 
-[Aspose.Email Cloud home](https://products.aspose.cloud/email/family "Aspose.Email Cloud")  
+[Aspose.Email Cloud home](https://products.aspose.cloud/email/family "Aspose.Email Cloud")
 [API Reference](https://apireference.aspose.cloud/email/)
 
 # Key features
@@ -11,26 +11,29 @@ Aspose.Email Cloud is a REST API for creating email applications that work with 
 - Lets developers manipulate different emails’ formats such as Outlook MSG, EML, VCard, and iCalendar files
 - Lets developers manipulate different emails' formats such as Outlook MSG, EML, VCard, and iCalendar files
 - Supports AI functions:
-    - The Business card recognition
-    - The Name API for parsing and handling personal names
+- The Business card recognition
+- The Name API for parsing and handling personal names
 - Has a built-in email client. This client provides:
-    - Unified REST API for different email protocols: IMAP, POP3, SMTP, EWS, WebDav
-    - Virtual multi-account
-    - Message threads (POP3 accounts are also supported)
+- Unified REST API for different email protocols: IMAP, POP3, SMTP, EWS, WebDav
+- Virtual multi-account
+- Message threads (POP3 accounts are also supported)
 - Email configuration discovery
 - Disposable email address detection
 
-## New features in version 20.7
-- New MAPI message files API with models:
-    - `MapiMessageDto` - represents the Microsoft Outlook message.
-    - `MapiCalendarDto` - represents the Microsoft Outlook calendar object.
-    - `MapiContactDto` - represents the Microsoft Outlook contact information. 
-- Improved Recurrence pattern support for CalendarDto.
+## New features in version 20.9
 
-See [Release notes](https://docs.aspose.cloud/display/emailcloud/Aspose.Email+Cloud+20.7+Release+Notes)
+Aspose.Email Cloud SDK 20.9.0 is based on a new v4.0 REST API.
+
+- All SDK functions are divided into groups (Email, Calendar, Contact, Client, Ai, Mapi, etc.).
+- Unified file API provided for supported file types (Save, Get, Convert, AsFile, FromFile, AsMapi/AsDto).
+- HierarchicalObject based API is removed.
+- All models are stored in one folder/namespace.
+- The request models are simplified.
+
+See [Release notes](https://docs.aspose.cloud/display/emailcloud/Aspose.Email+Cloud+20.9+Release+Notes).
 
 ## How to use the SDK?
-The complete source code is available in the GIT repository. 
+The complete source code is available in the GIT repository.
 
 Use [SDK tutorials](https://docs.aspose.cloud/display/emailcloud/SDK+Tutorials):
 - [SDK setup](https://docs.aspose.cloud/display/emailcloud/SDK+setup) - installation, account setup, first API calls
@@ -53,7 +56,7 @@ To use this SDK, you need an App SID and an App Key; they can be looked up at [A
 
 You can use it directly in your project via the source code or get a [PYPI Package](https://pypi.org/project/aspose-email-cloud/):
 
-    pip install aspose-email-cloud
+pip install aspose-email-cloud
 
 See more details about SDK installation in this tutorial: [SDK setup](https://docs.aspose.cloud/display/emailcloud/SDK+setup)
 
@@ -76,10 +79,10 @@ Use `AiBcrParseModel` method to parse business card image to VCard DTO:
 ```python
 image_data = None
 with open('/tmp/alex.png', 'rb') as f:
-    filedata = f.read()
-    image_data = str(base64.b64encode(filedata), 'utf-8')
+filedata = f.read()
+image_data = str(base64.b64encode(filedata), 'utf-8')
 result = email_api.ai_bcr_parse_model(requests.AiBcrParseModelRequest(
-    models.AiBcrBase64Rq(images=[models.AiBcrBase64Image(True, image_data)])))
+models.AiBcrBase64Rq(images=[models.AiBcrBase64Image(True, image_data)])))
 contact = result.value[0]
 ```
 See more details [here](https://docs.aspose.cloud/display/emailcloud/Parse+Image+To+VCard+File) and [here](https://docs.aspose.cloud/display/emailcloud/Business+Cards+Recognition+API)

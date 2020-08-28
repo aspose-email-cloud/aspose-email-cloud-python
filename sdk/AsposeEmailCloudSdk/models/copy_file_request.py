@@ -32,15 +32,15 @@ class CopyFileRequest(object):
     Request model for copy_file operation.
     Initializes a new instance.
 
-    :param src_path: 
+    :param src_path: Source file path e.g. '/folder/file.ext'
     :type src_path: str
-    :param dest_path: 
+    :param dest_path: Destination file path
     :type dest_path: str
-    :param src_storage_name: 
+    :param src_storage_name: Source storage name
     :type src_storage_name: str
-    :param dest_storage_name: 
+    :param dest_storage_name: Destination storage name
     :type dest_storage_name: str
-    :param version_id: 
+    :param version_id: File version ID to copy
     :type version_id: str
     """
 
@@ -49,15 +49,15 @@ class CopyFileRequest(object):
         Request model for copy_file operation.
         Initializes a new instance.
 
-        :param src_path: 
+        :param src_path: Source file path e.g. '/folder/file.ext'
         :type src_path: str
-        :param dest_path: 
+        :param dest_path: Destination file path
         :type dest_path: str
-        :param src_storage_name: 
+        :param src_storage_name: Source storage name
         :type src_storage_name: str
-        :param dest_storage_name: 
+        :param dest_storage_name: Destination storage name
         :type dest_storage_name: str
-        :param version_id: 
+        :param version_id: File version ID to copy
         :type version_id: str
         """
 

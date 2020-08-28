@@ -32,11 +32,11 @@ class DeleteFolderRequest(object):
     Request model for delete_folder operation.
     Initializes a new instance.
 
-    :param path: 
+    :param path: Folder path e.g. '/folder'
     :type path: str
-    :param storage_name: 
+    :param storage_name: Storage name
     :type storage_name: str
-    :param recursive: 
+    :param recursive: Enable to delete folders, subfolders and files
     :type recursive: bool
     """
 
@@ -45,11 +45,11 @@ class DeleteFolderRequest(object):
         Request model for delete_folder operation.
         Initializes a new instance.
 
-        :param path: 
+        :param path: Folder path e.g. '/folder'
         :type path: str
-        :param storage_name: 
+        :param storage_name: Storage name
         :type storage_name: str
-        :param recursive: 
+        :param recursive: Enable to delete folders, subfolders and files
         :type recursive: bool
         """
 
