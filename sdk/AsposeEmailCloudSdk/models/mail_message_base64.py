@@ -61,7 +61,7 @@ class MailMessageBase64(MailMessageBase):
         Email message represented as file, encoded to Base64 format.             
         :param value_base64: Email message file data encoded to Base64 string.             
         :type value_base64: str
-        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         """
         super(MailMessageBase64, self).__init__()
@@ -101,7 +101,7 @@ class MailMessageBase64(MailMessageBase):
     @property
     def format(self) -> str:
         """
-        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
 
         :return: The format of this MailMessageBase64.
         :rtype: str
@@ -111,7 +111,7 @@ class MailMessageBase64(MailMessageBase):
     @format.setter
     def format(self, format: str):
         """
-        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
 
         :param format: The format of this MailMessageBase64.
         :type: str

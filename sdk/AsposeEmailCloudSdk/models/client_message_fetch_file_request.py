@@ -42,7 +42,7 @@ class ClientMessageFetchFileRequest(object):
     :type storage: str
     :param account_storage_folder: Folder in storage where account file located.
     :type account_storage_folder: str
-    :param format: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :param format: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
     :type format: str
     """
 
@@ -61,7 +61,7 @@ class ClientMessageFetchFileRequest(object):
         :type storage: str
         :param account_storage_folder: Folder in storage where account file located.
         :type account_storage_folder: str
-        :param format: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param format: Fetched message file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         """
 

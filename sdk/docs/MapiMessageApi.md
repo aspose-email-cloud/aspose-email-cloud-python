@@ -61,7 +61,7 @@ MapiMessageFromFileRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str** | File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **format** | **str** | File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
  **file** | **str** | File to convert | 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
@@ -90,7 +90,7 @@ MapiMessageGetRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str** | Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **format** | **str** | Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
  **file_name** | **str** | Email document file name. | 
  **folder** | **str** | Path to folder in storage. | [optional] 
  **storage** | **str** | Storage name. | [optional] 

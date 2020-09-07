@@ -32,7 +32,7 @@ class MapiMessageFromFileRequest(object):
     Request model for mapi_message_from_file operation.
     Initializes a new instance.
 
-    :param format: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :param format: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
     :type format: str
     :param file: File to convert
     :type file: str
@@ -43,7 +43,7 @@ class MapiMessageFromFileRequest(object):
         Request model for mapi_message_from_file operation.
         Initializes a new instance.
 
-        :param format: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param format: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         :param file: File to convert
         :type file: str

@@ -32,7 +32,7 @@ class EmailGetListRequest(object):
     Request model for email_get_list operation.
     Initializes a new instance.
 
-    :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+    :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
     :type format: str
     :param folder: Path to folder in storage.
     :type folder: str
@@ -49,7 +49,7 @@ class EmailGetListRequest(object):
         Request model for email_get_list operation.
         Initializes a new instance.
 
-        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef
+        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         :param folder: Path to folder in storage.
         :type folder: str

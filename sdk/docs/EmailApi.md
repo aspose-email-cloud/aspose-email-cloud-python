@@ -62,8 +62,8 @@ EmailConvertRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **from_format** | **str** | File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
- **to_format** | **str** | File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **from_format** | **str** | File format to convert to Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
+ **to_format** | **str** | File format to convert from Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
  **file** | **str** | File to convert | 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
@@ -90,7 +90,7 @@ EmailFromFileRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str** |  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **format** | **str** |  Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
  **file** | **str** | File to convert | 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
@@ -119,7 +119,7 @@ EmailGetRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str** | Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **format** | **str** | Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
  **file_name** | **str** | Email document file name. | 
  **folder** | **str** | Path to folder in storage. | [optional] 
  **storage** | **str** | Storage name. | [optional] 
@@ -151,7 +151,7 @@ EmailGetAsFileRequest(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_name** | **str** | Email document file name | 
- **format** | **str** | File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **format** | **str** | File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
  **storage** | **str** | Storage name | [optional] 
  **folder** | **str** | Path to folder in storage | [optional] 
 
@@ -182,7 +182,7 @@ EmailGetListRequest(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str** | Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef | 
+ **format** | **str** | Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft | 
  **folder** | **str** | Path to folder in storage. | [optional] 
  **storage** | **str** | Storage name. | [optional] 
  **items_per_page** | **int** | Count of items on page. | [optional] [default to 10]
