@@ -57,12 +57,13 @@ class MapiLegacyFreeBusyPropertyDto(MapiPropertyDto):
         'value': 'value'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value: str = None):
         """
         Mapi property with LegacyFreeBusyType value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (str) Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+        :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
+        :param value: Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
+        :type value: str
         """
         super(MapiLegacyFreeBusyPropertyDto, self).__init__()
 
@@ -70,15 +71,13 @@ class MapiLegacyFreeBusyPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this MapiLegacyFreeBusyPropertyDto.
-
+        """
         Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
 
         :return: The value of this MapiLegacyFreeBusyPropertyDto.
@@ -88,8 +87,7 @@ class MapiLegacyFreeBusyPropertyDto(MapiPropertyDto):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this MapiLegacyFreeBusyPropertyDto.
-
+        """
         Represents the free/busy status for a calendar event. Enum, available values: Free, Tentative, Busy, Oof, WorkingElsewhere, NoData
 
         :param value: The value of this MapiLegacyFreeBusyPropertyDto.

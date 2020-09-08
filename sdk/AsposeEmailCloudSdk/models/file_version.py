@@ -34,7 +34,7 @@ from AsposeEmailCloudSdk.models.storage_file import StorageFile
 
 
 class FileVersion(StorageFile):
-    """
+    """File Version
     """
 
     """
@@ -66,14 +66,21 @@ class FileVersion(StorageFile):
 
     def __init__(self, name: str = None, is_folder: bool = None, modified_date: datetime = None, size: int = None, path: str = None, version_id: str = None, is_latest: bool = None):
         """
-        
-        :param name (str) 
-        :param is_folder (bool) 
-        :param modified_date (datetime) 
-        :param size (int) 
-        :param path (str) 
-        :param version_id (str) 
-        :param is_latest (bool) 
+        File Version
+        :param name: File or folder name.
+        :type name: str
+        :param is_folder: True if it is a folder.
+        :type is_folder: bool
+        :param modified_date: File or folder last modified DateTime.
+        :type modified_date: datetime
+        :param size: File or folder size.
+        :type size: int
+        :param path: File or folder path.
+        :type path: str
+        :param version_id: File Version ID.
+        :type version_id: str
+        :param is_latest: Specifies whether the file is (true) or is not (false) the latest version of an file.
+        :type is_latest: bool
         """
         super(FileVersion, self).__init__()
 
@@ -95,10 +102,11 @@ class FileVersion(StorageFile):
         if is_latest is not None:
             self.is_latest = is_latest
 
+
     @property
     def version_id(self) -> str:
-        """Gets the version_id of this FileVersion.
-
+        """
+        File Version ID.
 
         :return: The version_id of this FileVersion.
         :rtype: str
@@ -107,8 +115,8 @@ class FileVersion(StorageFile):
 
     @version_id.setter
     def version_id(self, version_id: str):
-        """Sets the version_id of this FileVersion.
-
+        """
+        File Version ID.
 
         :param version_id: The version_id of this FileVersion.
         :type: str
@@ -117,8 +125,8 @@ class FileVersion(StorageFile):
 
     @property
     def is_latest(self) -> bool:
-        """Gets the is_latest of this FileVersion.
-
+        """
+        Specifies whether the file is (true) or is not (false) the latest version of an file.
 
         :return: The is_latest of this FileVersion.
         :rtype: bool
@@ -127,8 +135,8 @@ class FileVersion(StorageFile):
 
     @is_latest.setter
     def is_latest(self, is_latest: bool):
-        """Sets the is_latest of this FileVersion.
-
+        """
+        Specifies whether the file is (true) or is not (false) the latest version of an file.
 
         :param is_latest: The is_latest of this FileVersion.
         :type: bool

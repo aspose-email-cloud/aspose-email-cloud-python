@@ -62,15 +62,19 @@ class WeeklyRecurrencePatternDto(RecurrencePatternDto):
         'start_days': 'startDays'
     }
 
-    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, discriminator: str = None, start_days: List[str] = None):
+    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, start_days: List[str] = None):
         """
         Weekly recurrence pattern.             
-        :param interval (int) Number of recurrence units.             
-        :param occurs (int) Number of occurrences of the recurrence pattern.             
-        :param end_date (datetime) End date.             
-        :param week_start (str) Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-        :param discriminator (str) 
-        :param start_days (List[str]) Start days             
+        :param interval: Number of recurrence units.             
+        :type interval: int
+        :param occurs: Number of occurrences of the recurrence pattern.             
+        :type occurs: int
+        :param end_date: End date.             
+        :type end_date: datetime
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :type week_start: str
+        :param start_days: Start days             
+        :type start_days: List[str]
         """
         super(WeeklyRecurrencePatternDto, self).__init__()
 
@@ -84,15 +88,13 @@ class WeeklyRecurrencePatternDto(RecurrencePatternDto):
             self.end_date = end_date
         if week_start is not None:
             self.week_start = week_start
-        if discriminator is not None:
-            self.discriminator = discriminator
         if start_days is not None:
             self.start_days = start_days
 
+
     @property
     def start_days(self) -> List[str]:
-        """Gets the start_days of this WeeklyRecurrencePatternDto.
-
+        """
         Start days              Items: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :return: The start_days of this WeeklyRecurrencePatternDto.
@@ -102,8 +104,7 @@ class WeeklyRecurrencePatternDto(RecurrencePatternDto):
 
     @start_days.setter
     def start_days(self, start_days: List[str]):
-        """Sets the start_days of this WeeklyRecurrencePatternDto.
-
+        """
         Start days              Items: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :param start_days: The start_days of this WeeklyRecurrencePatternDto.

@@ -64,24 +64,26 @@ class MapiPidLidPropertyDescriptor(MapiPidPropertyDescriptor):
         'property_set': 'propertySet'
     }
 
-    def __init__(self, discriminator: str = None, canonical_name: str = None, data_type: str = None, multiple_values_data_type: bool = None, name: str = None, long_id: int = None, property_set: str = None):
+    def __init__(self, canonical_name: str = None, data_type: str = None, multiple_values_data_type: bool = None, name: str = None, long_id: int = None, property_set: str = None):
         """
         Property identified by an unsigned 32-bit quantity along with a property set             
-        :param discriminator (str) 
-        :param canonical_name (str) The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
-        :param data_type (str) [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
-        :param multiple_values_data_type (bool) Indicates if data type contains of multiple values             
-        :param name (str) A string that identifies the property             
-        :param long_id (int) An unsigned 32-bit quantity that, along with the property set, identifies a named property.             
-        :param property_set (str) A GUID that identifies a group of properties with a similar purpose.             
+        :param canonical_name: The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
+        :type canonical_name: str
+        :param data_type: [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
+        :type data_type: str
+        :param multiple_values_data_type: Indicates if data type contains of multiple values             
+        :type multiple_values_data_type: bool
+        :param name: A string that identifies the property             
+        :type name: str
+        :param long_id: An unsigned 32-bit quantity that, along with the property set, identifies a named property.             
+        :type long_id: int
+        :param property_set: A GUID that identifies a group of properties with a similar purpose.             
+        :type property_set: str
         """
         super(MapiPidLidPropertyDescriptor, self).__init__()
 
         self._long_id = None
         self._property_set = None
-
-        if discriminator is not None:
-            self.discriminator = discriminator
         if canonical_name is not None:
             self.canonical_name = canonical_name
         if data_type is not None:
@@ -95,10 +97,10 @@ class MapiPidLidPropertyDescriptor(MapiPidPropertyDescriptor):
         if property_set is not None:
             self.property_set = property_set
 
+
     @property
     def long_id(self) -> int:
-        """Gets the long_id of this MapiPidLidPropertyDescriptor.
-
+        """
         An unsigned 32-bit quantity that, along with the property set, identifies a named property.             
 
         :return: The long_id of this MapiPidLidPropertyDescriptor.
@@ -108,8 +110,7 @@ class MapiPidLidPropertyDescriptor(MapiPidPropertyDescriptor):
 
     @long_id.setter
     def long_id(self, long_id: int):
-        """Sets the long_id of this MapiPidLidPropertyDescriptor.
-
+        """
         An unsigned 32-bit quantity that, along with the property set, identifies a named property.             
 
         :param long_id: The long_id of this MapiPidLidPropertyDescriptor.
@@ -121,8 +122,7 @@ class MapiPidLidPropertyDescriptor(MapiPidPropertyDescriptor):
 
     @property
     def property_set(self) -> str:
-        """Gets the property_set of this MapiPidLidPropertyDescriptor.
-
+        """
         A GUID that identifies a group of properties with a similar purpose.             
 
         :return: The property_set of this MapiPidLidPropertyDescriptor.
@@ -132,8 +132,7 @@ class MapiPidLidPropertyDescriptor(MapiPidPropertyDescriptor):
 
     @property_set.setter
     def property_set(self, property_set: str):
-        """Sets the property_set of this MapiPidLidPropertyDescriptor.
-
+        """
         A GUID that identifies a group of properties with a similar purpose.             
 
         :param property_set: The property_set of this MapiPidLidPropertyDescriptor.

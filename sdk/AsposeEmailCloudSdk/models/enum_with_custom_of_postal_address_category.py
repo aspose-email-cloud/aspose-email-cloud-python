@@ -55,8 +55,10 @@ class EnumWithCustomOfPostalAddressCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Address category. Enum, available values: Home, Work, Custom
-        :param description (str) 
+        :param value: Address category. Enum, available values: Home, Work, Custom
+        :type value: str
+        :param description: 
+        :type description: str
         """
 
         self._value = None
@@ -67,10 +69,10 @@ class EnumWithCustomOfPostalAddressCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfPostalAddressCategory.
-
+        """
         Address category. Enum, available values: Home, Work, Custom
 
         :return: The value of this EnumWithCustomOfPostalAddressCategory.
@@ -80,8 +82,7 @@ class EnumWithCustomOfPostalAddressCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfPostalAddressCategory.
-
+        """
         Address category. Enum, available values: Home, Work, Custom
 
         :param value: The value of this EnumWithCustomOfPostalAddressCategory.
@@ -89,12 +90,14 @@ class EnumWithCustomOfPostalAddressCategory(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
+        if value is not None and len(value) < 1:
+            raise ValueError("Invalid value for `value`, length must be greater than or equal to `1`")
         self._value = value
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfPostalAddressCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfPostalAddressCategory.
 
         :return: The description of this EnumWithCustomOfPostalAddressCategory.
         :rtype: str
@@ -103,8 +106,8 @@ class EnumWithCustomOfPostalAddressCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfPostalAddressCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfPostalAddressCategory.
 
         :param description: The description of this EnumWithCustomOfPostalAddressCategory.
         :type: str

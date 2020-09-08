@@ -114,35 +114,59 @@ class MapiContactDto(MapiMessageItemBaseDto):
         'telephones': 'telephones'
     }
 
-    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, electronic_addresses: MapiContactElectronicAddressPropertySetDto = None, events: MapiContactEventPropertySetDto = None, name_info: MapiContactNamePropertySetDto = None, other_fields: MapiContactOtherPropertySetDto = None, personal_info: MapiContactPersonalInfoPropertySetDto = None, photo: MapiContactPhotoDto = None, physical_addresses: MapiContactPhysicalAddressPropertySetDto = None, professional_info: MapiContactProfessionalPropertySetDto = None, telephones: MapiContactTelephonePropertySetDto = None):
+    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, electronic_addresses: MapiContactElectronicAddressPropertySetDto = None, events: MapiContactEventPropertySetDto = None, name_info: MapiContactNamePropertySetDto = None, other_fields: MapiContactOtherPropertySetDto = None, personal_info: MapiContactPersonalInfoPropertySetDto = None, photo: MapiContactPhotoDto = None, physical_addresses: MapiContactPhysicalAddressPropertySetDto = None, professional_info: MapiContactProfessionalPropertySetDto = None, telephones: MapiContactTelephonePropertySetDto = None):
         """
         Represents outlook contact information.             
-        :param attachments (List[MapiAttachmentDto]) Message item attachments.             
-        :param billing (str) Billing information associated with an item.             
-        :param body (str) Message text.             
-        :param body_html (str) Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
-        :param body_rtf (str) RTF formatted message text.             
-        :param body_type (str) The content type of message body. Enum, available values: PlainText, Html, Rtf
-        :param categories (List[str]) Contains keywords or categories for the message object.             
-        :param companies (List[str]) Contains the names of the companies that are associated with an item.             
-        :param item_id (str) The item id, uses with a server.             
-        :param message_class (str) Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
-        :param mileage (str) Contains the mileage information that is associated with an item.             
-        :param recipients (List[MapiRecipientDto]) Recipients of the message.             
-        :param sensitivity (str) Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
-        :param subject (str) Subject of the message.             
-        :param subject_prefix (str) Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
-        :param properties (List[MapiPropertyDto]) List of MAPI properties             
-        :param discriminator (str) 
-        :param electronic_addresses (MapiContactElectronicAddressPropertySetDto) Specify properties for up to three different e-mail addresses and three different fax addresses.             
-        :param events (MapiContactEventPropertySetDto) Specify events associated with a contact.             
-        :param name_info (MapiContactNamePropertySetDto) The properties are used to specify the name of the person represented by the contact.             
-        :param other_fields (MapiContactOtherPropertySetDto) Specify other fields of contact.             
-        :param personal_info (MapiContactPersonalInfoPropertySetDto) Specify other additional contact information.             
-        :param photo (MapiContactPhotoDto) Contact photo.             
-        :param physical_addresses (MapiContactPhysicalAddressPropertySetDto) Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
-        :param professional_info (MapiContactProfessionalPropertySetDto) Properties are used to store professional details for the person represented by the contact.             
-        :param telephones (MapiContactTelephonePropertySetDto) Specify telephone numbers for the contact.             
+        :param attachments: Message item attachments.             
+        :type attachments: List[MapiAttachmentDto]
+        :param billing: Billing information associated with an item.             
+        :type billing: str
+        :param body: Message text.             
+        :type body: str
+        :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :type body_html: str
+        :param body_rtf: RTF formatted message text.             
+        :type body_rtf: str
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :type body_type: str
+        :param categories: Contains keywords or categories for the message object.             
+        :type categories: List[str]
+        :param companies: Contains the names of the companies that are associated with an item.             
+        :type companies: List[str]
+        :param item_id: The item id, uses with a server.             
+        :type item_id: str
+        :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :type message_class: str
+        :param mileage: Contains the mileage information that is associated with an item.             
+        :type mileage: str
+        :param recipients: Recipients of the message.             
+        :type recipients: List[MapiRecipientDto]
+        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :type sensitivity: str
+        :param subject: Subject of the message.             
+        :type subject: str
+        :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :type subject_prefix: str
+        :param properties: List of MAPI properties             
+        :type properties: List[MapiPropertyDto]
+        :param electronic_addresses: Specify properties for up to three different e-mail addresses and three different fax addresses.             
+        :type electronic_addresses: MapiContactElectronicAddressPropertySetDto
+        :param events: Specify events associated with a contact.             
+        :type events: MapiContactEventPropertySetDto
+        :param name_info: The properties are used to specify the name of the person represented by the contact.             
+        :type name_info: MapiContactNamePropertySetDto
+        :param other_fields: Specify other fields of contact.             
+        :type other_fields: MapiContactOtherPropertySetDto
+        :param personal_info: Specify other additional contact information.             
+        :type personal_info: MapiContactPersonalInfoPropertySetDto
+        :param photo: Contact photo.             
+        :type photo: MapiContactPhotoDto
+        :param physical_addresses: Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
+        :type physical_addresses: MapiContactPhysicalAddressPropertySetDto
+        :param professional_info: Properties are used to store professional details for the person represented by the contact.             
+        :type professional_info: MapiContactProfessionalPropertySetDto
+        :param telephones: Specify telephone numbers for the contact.             
+        :type telephones: MapiContactTelephonePropertySetDto
         """
         super(MapiContactDto, self).__init__()
 
@@ -188,8 +212,6 @@ class MapiContactDto(MapiMessageItemBaseDto):
             self.subject_prefix = subject_prefix
         if properties is not None:
             self.properties = properties
-        if discriminator is not None:
-            self.discriminator = discriminator
         if electronic_addresses is not None:
             self.electronic_addresses = electronic_addresses
         if events is not None:
@@ -209,10 +231,10 @@ class MapiContactDto(MapiMessageItemBaseDto):
         if telephones is not None:
             self.telephones = telephones
 
+
     @property
     def electronic_addresses(self) -> MapiContactElectronicAddressPropertySetDto:
-        """Gets the electronic_addresses of this MapiContactDto.
-
+        """
         Specify properties for up to three different e-mail addresses and three different fax addresses.             
 
         :return: The electronic_addresses of this MapiContactDto.
@@ -222,8 +244,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @electronic_addresses.setter
     def electronic_addresses(self, electronic_addresses: MapiContactElectronicAddressPropertySetDto):
-        """Sets the electronic_addresses of this MapiContactDto.
-
+        """
         Specify properties for up to three different e-mail addresses and three different fax addresses.             
 
         :param electronic_addresses: The electronic_addresses of this MapiContactDto.
@@ -233,8 +254,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def events(self) -> MapiContactEventPropertySetDto:
-        """Gets the events of this MapiContactDto.
-
+        """
         Specify events associated with a contact.             
 
         :return: The events of this MapiContactDto.
@@ -244,8 +264,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @events.setter
     def events(self, events: MapiContactEventPropertySetDto):
-        """Sets the events of this MapiContactDto.
-
+        """
         Specify events associated with a contact.             
 
         :param events: The events of this MapiContactDto.
@@ -255,8 +274,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def name_info(self) -> MapiContactNamePropertySetDto:
-        """Gets the name_info of this MapiContactDto.
-
+        """
         The properties are used to specify the name of the person represented by the contact.             
 
         :return: The name_info of this MapiContactDto.
@@ -266,8 +284,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @name_info.setter
     def name_info(self, name_info: MapiContactNamePropertySetDto):
-        """Sets the name_info of this MapiContactDto.
-
+        """
         The properties are used to specify the name of the person represented by the contact.             
 
         :param name_info: The name_info of this MapiContactDto.
@@ -277,8 +294,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def other_fields(self) -> MapiContactOtherPropertySetDto:
-        """Gets the other_fields of this MapiContactDto.
-
+        """
         Specify other fields of contact.             
 
         :return: The other_fields of this MapiContactDto.
@@ -288,8 +304,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @other_fields.setter
     def other_fields(self, other_fields: MapiContactOtherPropertySetDto):
-        """Sets the other_fields of this MapiContactDto.
-
+        """
         Specify other fields of contact.             
 
         :param other_fields: The other_fields of this MapiContactDto.
@@ -299,8 +314,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def personal_info(self) -> MapiContactPersonalInfoPropertySetDto:
-        """Gets the personal_info of this MapiContactDto.
-
+        """
         Specify other additional contact information.             
 
         :return: The personal_info of this MapiContactDto.
@@ -310,8 +324,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @personal_info.setter
     def personal_info(self, personal_info: MapiContactPersonalInfoPropertySetDto):
-        """Sets the personal_info of this MapiContactDto.
-
+        """
         Specify other additional contact information.             
 
         :param personal_info: The personal_info of this MapiContactDto.
@@ -321,8 +334,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def photo(self) -> MapiContactPhotoDto:
-        """Gets the photo of this MapiContactDto.
-
+        """
         Contact photo.             
 
         :return: The photo of this MapiContactDto.
@@ -332,8 +344,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @photo.setter
     def photo(self, photo: MapiContactPhotoDto):
-        """Sets the photo of this MapiContactDto.
-
+        """
         Contact photo.             
 
         :param photo: The photo of this MapiContactDto.
@@ -343,8 +354,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def physical_addresses(self) -> MapiContactPhysicalAddressPropertySetDto:
-        """Gets the physical_addresses of this MapiContactDto.
-
+        """
         Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
 
         :return: The physical_addresses of this MapiContactDto.
@@ -354,8 +364,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @physical_addresses.setter
     def physical_addresses(self, physical_addresses: MapiContactPhysicalAddressPropertySetDto):
-        """Sets the physical_addresses of this MapiContactDto.
-
+        """
         Specify three physical addresses: Home Address, Work Address, and Other Address. One of the addresses can be marked as the Mailing Address.             
 
         :param physical_addresses: The physical_addresses of this MapiContactDto.
@@ -365,8 +374,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def professional_info(self) -> MapiContactProfessionalPropertySetDto:
-        """Gets the professional_info of this MapiContactDto.
-
+        """
         Properties are used to store professional details for the person represented by the contact.             
 
         :return: The professional_info of this MapiContactDto.
@@ -376,8 +384,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @professional_info.setter
     def professional_info(self, professional_info: MapiContactProfessionalPropertySetDto):
-        """Sets the professional_info of this MapiContactDto.
-
+        """
         Properties are used to store professional details for the person represented by the contact.             
 
         :param professional_info: The professional_info of this MapiContactDto.
@@ -387,8 +394,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @property
     def telephones(self) -> MapiContactTelephonePropertySetDto:
-        """Gets the telephones of this MapiContactDto.
-
+        """
         Specify telephone numbers for the contact.             
 
         :return: The telephones of this MapiContactDto.
@@ -398,8 +404,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
 
     @telephones.setter
     def telephones(self, telephones: MapiContactTelephonePropertySetDto):
-        """Sets the telephones of this MapiContactDto.
-
+        """
         Specify telephone numbers for the contact.             
 
         :param telephones: The telephones of this MapiContactDto.

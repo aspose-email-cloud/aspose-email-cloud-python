@@ -53,7 +53,8 @@ class ValueTOfBoolean(object):
     def __init__(self, value: bool = None):
         """
         
-        :param value (bool) 
+        :param value: 
+        :type value: bool
         """
 
         self._value = None
@@ -61,10 +62,11 @@ class ValueTOfBoolean(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> bool:
-        """Gets the value of this ValueTOfBoolean.
-
+        """
+        Gets the value of this ValueTOfBoolean.
 
         :return: The value of this ValueTOfBoolean.
         :rtype: bool
@@ -73,8 +75,8 @@ class ValueTOfBoolean(object):
 
     @value.setter
     def value(self, value: bool):
-        """Sets the value of this ValueTOfBoolean.
-
+        """
+        Sets the value of this ValueTOfBoolean.
 
         :param value: The value of this ValueTOfBoolean.
         :type: bool

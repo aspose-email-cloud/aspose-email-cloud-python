@@ -61,10 +61,14 @@ class EmailThread(object):
     def __init__(self, id: str = None, subject: str = None, messages: List[EmailDto] = None, folder: str = None):
         """
         Email messages thread             
-        :param id (str) Thread identifier             
-        :param subject (str) Thread subject             
-        :param messages (List[EmailDto]) List of messages in thread             
-        :param folder (str) Thread folder location             
+        :param id: Thread identifier             
+        :type id: str
+        :param subject: Thread subject             
+        :type subject: str
+        :param messages: List of messages in thread             
+        :type messages: List[EmailDto]
+        :param folder: Thread folder location             
+        :type folder: str
         """
 
         self._id = None
@@ -81,10 +85,10 @@ class EmailThread(object):
         if folder is not None:
             self.folder = folder
 
+
     @property
     def id(self) -> str:
-        """Gets the id of this EmailThread.
-
+        """
         Thread identifier             
 
         :return: The id of this EmailThread.
@@ -94,8 +98,7 @@ class EmailThread(object):
 
     @id.setter
     def id(self, id: str):
-        """Sets the id of this EmailThread.
-
+        """
         Thread identifier             
 
         :param id: The id of this EmailThread.
@@ -105,8 +108,7 @@ class EmailThread(object):
 
     @property
     def subject(self) -> str:
-        """Gets the subject of this EmailThread.
-
+        """
         Thread subject             
 
         :return: The subject of this EmailThread.
@@ -116,8 +118,7 @@ class EmailThread(object):
 
     @subject.setter
     def subject(self, subject: str):
-        """Sets the subject of this EmailThread.
-
+        """
         Thread subject             
 
         :param subject: The subject of this EmailThread.
@@ -127,8 +128,7 @@ class EmailThread(object):
 
     @property
     def messages(self) -> List[EmailDto]:
-        """Gets the messages of this EmailThread.
-
+        """
         List of messages in thread             
 
         :return: The messages of this EmailThread.
@@ -138,8 +138,7 @@ class EmailThread(object):
 
     @messages.setter
     def messages(self, messages: List[EmailDto]):
-        """Sets the messages of this EmailThread.
-
+        """
         List of messages in thread             
 
         :param messages: The messages of this EmailThread.
@@ -149,8 +148,7 @@ class EmailThread(object):
 
     @property
     def folder(self) -> str:
-        """Gets the folder of this EmailThread.
-
+        """
         Thread folder location             
 
         :return: The folder of this EmailThread.
@@ -160,8 +158,7 @@ class EmailThread(object):
 
     @folder.setter
     def folder(self, folder: str):
-        """Sets the folder of this EmailThread.
-
+        """
         Thread folder location             
 
         :param folder: The folder of this EmailThread.

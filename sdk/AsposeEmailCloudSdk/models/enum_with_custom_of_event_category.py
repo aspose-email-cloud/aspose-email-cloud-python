@@ -55,8 +55,10 @@ class EnumWithCustomOfEventCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Event category. Enum, available values: Custom, Birthday, Anniversary
-        :param description (str) 
+        :param value: Event category. Enum, available values: Custom, Birthday, Anniversary
+        :type value: str
+        :param description: 
+        :type description: str
         """
 
         self._value = None
@@ -67,10 +69,10 @@ class EnumWithCustomOfEventCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfEventCategory.
-
+        """
         Event category. Enum, available values: Custom, Birthday, Anniversary
 
         :return: The value of this EnumWithCustomOfEventCategory.
@@ -80,8 +82,7 @@ class EnumWithCustomOfEventCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfEventCategory.
-
+        """
         Event category. Enum, available values: Custom, Birthday, Anniversary
 
         :param value: The value of this EnumWithCustomOfEventCategory.
@@ -89,12 +90,14 @@ class EnumWithCustomOfEventCategory(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
+        if value is not None and len(value) < 1:
+            raise ValueError("Invalid value for `value`, length must be greater than or equal to `1`")
         self._value = value
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfEventCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfEventCategory.
 
         :return: The description of this EnumWithCustomOfEventCategory.
         :rtype: str
@@ -103,8 +106,8 @@ class EnumWithCustomOfEventCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfEventCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfEventCategory.
 
         :param description: The description of this EnumWithCustomOfEventCategory.
         :type: str

@@ -75,17 +75,28 @@ class PostalAddress(object):
     def __init__(self, address: str = None, category: EnumWithCustomOfPostalAddressCategory = None, city: str = None, country: str = None, country_code: str = None, is_mailing_address: bool = None, postal_code: str = None, post_office_box: str = None, preferred: bool = None, state_or_province: str = None, street: str = None):
         """
         A postal address             
-        :param address (str) Address.             
-        :param category (EnumWithCustomOfPostalAddressCategory) Address category.             
-        :param city (str) Address's city.             
-        :param country (str) Address's country.             
-        :param country_code (str) Country code.             
-        :param is_mailing_address (bool) Defines whether address may be used for mailing.             
-        :param postal_code (str) Postal code.             
-        :param post_office_box (str) Post Office box.             
-        :param preferred (bool) Defines whether postal address is preferred.             
-        :param state_or_province (str) Address's region.             
-        :param street (str) Address's street.             
+        :param address: Address.             
+        :type address: str
+        :param category: Address category.             
+        :type category: EnumWithCustomOfPostalAddressCategory
+        :param city: Address's city.             
+        :type city: str
+        :param country: Address's country.             
+        :type country: str
+        :param country_code: Country code.             
+        :type country_code: str
+        :param is_mailing_address: Defines whether address may be used for mailing.             
+        :type is_mailing_address: bool
+        :param postal_code: Postal code.             
+        :type postal_code: str
+        :param post_office_box: Post Office box.             
+        :type post_office_box: str
+        :param preferred: Defines whether postal address is preferred.             
+        :type preferred: bool
+        :param state_or_province: Address's region.             
+        :type state_or_province: str
+        :param street: Address's street.             
+        :type street: str
         """
 
         self._address = None
@@ -123,10 +134,10 @@ class PostalAddress(object):
         if street is not None:
             self.street = street
 
+
     @property
     def address(self) -> str:
-        """Gets the address of this PostalAddress.
-
+        """
         Address.             
 
         :return: The address of this PostalAddress.
@@ -136,8 +147,7 @@ class PostalAddress(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this PostalAddress.
-
+        """
         Address.             
 
         :param address: The address of this PostalAddress.
@@ -147,8 +157,7 @@ class PostalAddress(object):
 
     @property
     def category(self) -> EnumWithCustomOfPostalAddressCategory:
-        """Gets the category of this PostalAddress.
-
+        """
         Address category.             
 
         :return: The category of this PostalAddress.
@@ -158,8 +167,7 @@ class PostalAddress(object):
 
     @category.setter
     def category(self, category: EnumWithCustomOfPostalAddressCategory):
-        """Sets the category of this PostalAddress.
-
+        """
         Address category.             
 
         :param category: The category of this PostalAddress.
@@ -169,8 +177,7 @@ class PostalAddress(object):
 
     @property
     def city(self) -> str:
-        """Gets the city of this PostalAddress.
-
+        """
         Address's city.             
 
         :return: The city of this PostalAddress.
@@ -180,8 +187,7 @@ class PostalAddress(object):
 
     @city.setter
     def city(self, city: str):
-        """Sets the city of this PostalAddress.
-
+        """
         Address's city.             
 
         :param city: The city of this PostalAddress.
@@ -191,8 +197,7 @@ class PostalAddress(object):
 
     @property
     def country(self) -> str:
-        """Gets the country of this PostalAddress.
-
+        """
         Address's country.             
 
         :return: The country of this PostalAddress.
@@ -202,8 +207,7 @@ class PostalAddress(object):
 
     @country.setter
     def country(self, country: str):
-        """Sets the country of this PostalAddress.
-
+        """
         Address's country.             
 
         :param country: The country of this PostalAddress.
@@ -213,8 +217,7 @@ class PostalAddress(object):
 
     @property
     def country_code(self) -> str:
-        """Gets the country_code of this PostalAddress.
-
+        """
         Country code.             
 
         :return: The country_code of this PostalAddress.
@@ -224,8 +227,7 @@ class PostalAddress(object):
 
     @country_code.setter
     def country_code(self, country_code: str):
-        """Sets the country_code of this PostalAddress.
-
+        """
         Country code.             
 
         :param country_code: The country_code of this PostalAddress.
@@ -235,8 +237,7 @@ class PostalAddress(object):
 
     @property
     def is_mailing_address(self) -> bool:
-        """Gets the is_mailing_address of this PostalAddress.
-
+        """
         Defines whether address may be used for mailing.             
 
         :return: The is_mailing_address of this PostalAddress.
@@ -246,8 +247,7 @@ class PostalAddress(object):
 
     @is_mailing_address.setter
     def is_mailing_address(self, is_mailing_address: bool):
-        """Sets the is_mailing_address of this PostalAddress.
-
+        """
         Defines whether address may be used for mailing.             
 
         :param is_mailing_address: The is_mailing_address of this PostalAddress.
@@ -259,8 +259,7 @@ class PostalAddress(object):
 
     @property
     def postal_code(self) -> str:
-        """Gets the postal_code of this PostalAddress.
-
+        """
         Postal code.             
 
         :return: The postal_code of this PostalAddress.
@@ -270,8 +269,7 @@ class PostalAddress(object):
 
     @postal_code.setter
     def postal_code(self, postal_code: str):
-        """Sets the postal_code of this PostalAddress.
-
+        """
         Postal code.             
 
         :param postal_code: The postal_code of this PostalAddress.
@@ -281,8 +279,7 @@ class PostalAddress(object):
 
     @property
     def post_office_box(self) -> str:
-        """Gets the post_office_box of this PostalAddress.
-
+        """
         Post Office box.             
 
         :return: The post_office_box of this PostalAddress.
@@ -292,8 +289,7 @@ class PostalAddress(object):
 
     @post_office_box.setter
     def post_office_box(self, post_office_box: str):
-        """Sets the post_office_box of this PostalAddress.
-
+        """
         Post Office box.             
 
         :param post_office_box: The post_office_box of this PostalAddress.
@@ -303,8 +299,7 @@ class PostalAddress(object):
 
     @property
     def preferred(self) -> bool:
-        """Gets the preferred of this PostalAddress.
-
+        """
         Defines whether postal address is preferred.             
 
         :return: The preferred of this PostalAddress.
@@ -314,8 +309,7 @@ class PostalAddress(object):
 
     @preferred.setter
     def preferred(self, preferred: bool):
-        """Sets the preferred of this PostalAddress.
-
+        """
         Defines whether postal address is preferred.             
 
         :param preferred: The preferred of this PostalAddress.
@@ -327,8 +321,7 @@ class PostalAddress(object):
 
     @property
     def state_or_province(self) -> str:
-        """Gets the state_or_province of this PostalAddress.
-
+        """
         Address's region.             
 
         :return: The state_or_province of this PostalAddress.
@@ -338,8 +331,7 @@ class PostalAddress(object):
 
     @state_or_province.setter
     def state_or_province(self, state_or_province: str):
-        """Sets the state_or_province of this PostalAddress.
-
+        """
         Address's region.             
 
         :param state_or_province: The state_or_province of this PostalAddress.
@@ -349,8 +341,7 @@ class PostalAddress(object):
 
     @property
     def street(self) -> str:
-        """Gets the street of this PostalAddress.
-
+        """
         Address's street.             
 
         :return: The street of this PostalAddress.
@@ -360,8 +351,7 @@ class PostalAddress(object):
 
     @street.setter
     def street(self, street: str):
-        """Sets the street of this PostalAddress.
-
+        """
         Address's street.             
 
         :param street: The street of this PostalAddress.

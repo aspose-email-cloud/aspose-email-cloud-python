@@ -55,8 +55,10 @@ class AiNameExtractedComponent(object):
     def __init__(self, category: str = None, value: str = None):
         """
         Extracted name component             
-        :param category (str) Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
-        :param value (str) Extracted value             
+        :param category: Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+        :type category: str
+        :param value: Extracted value             
+        :type value: str
         """
 
         self._category = None
@@ -67,10 +69,10 @@ class AiNameExtractedComponent(object):
         if value is not None:
             self.value = value
 
+
     @property
     def category(self) -> str:
-        """Gets the category of this AiNameExtractedComponent.
-
+        """
         Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
 
         :return: The category of this AiNameExtractedComponent.
@@ -80,8 +82,7 @@ class AiNameExtractedComponent(object):
 
     @category.setter
     def category(self, category: str):
-        """Sets the category of this AiNameExtractedComponent.
-
+        """
         Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
 
         :param category: The category of this AiNameExtractedComponent.
@@ -93,8 +94,7 @@ class AiNameExtractedComponent(object):
 
     @property
     def value(self) -> str:
-        """Gets the value of this AiNameExtractedComponent.
-
+        """
         Extracted value             
 
         :return: The value of this AiNameExtractedComponent.
@@ -104,8 +104,7 @@ class AiNameExtractedComponent(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this AiNameExtractedComponent.
-
+        """
         Extracted value             
 
         :param value: The value of this AiNameExtractedComponent.

@@ -55,8 +55,10 @@ class EnumWithCustomOfPhoneNumberCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
-        :param description (str) 
+        :param value: Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+        :type value: str
+        :param description: 
+        :type description: str
         """
 
         self._value = None
@@ -67,10 +69,10 @@ class EnumWithCustomOfPhoneNumberCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
         Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
 
         :return: The value of this EnumWithCustomOfPhoneNumberCategory.
@@ -80,8 +82,7 @@ class EnumWithCustomOfPhoneNumberCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
         Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
 
         :param value: The value of this EnumWithCustomOfPhoneNumberCategory.
@@ -89,12 +90,14 @@ class EnumWithCustomOfPhoneNumberCategory(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
+        if value is not None and len(value) < 1:
+            raise ValueError("Invalid value for `value`, length must be greater than or equal to `1`")
         self._value = value
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfPhoneNumberCategory.
 
         :return: The description of this EnumWithCustomOfPhoneNumberCategory.
         :rtype: str
@@ -103,8 +106,8 @@ class EnumWithCustomOfPhoneNumberCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfPhoneNumberCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfPhoneNumberCategory.
 
         :param description: The description of this EnumWithCustomOfPhoneNumberCategory.
         :type: str

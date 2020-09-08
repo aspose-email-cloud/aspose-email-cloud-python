@@ -60,14 +60,17 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
         'name': 'name'
     }
 
-    def __init__(self, discriminator: str = None, canonical_name: str = None, data_type: str = None, multiple_values_data_type: bool = None, name: str = None):
+    def __init__(self, canonical_name: str = None, data_type: str = None, multiple_values_data_type: bool = None, name: str = None):
         """
         Mapi pid property descriptor base class             
-        :param discriminator (str) 
-        :param canonical_name (str) The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
-        :param data_type (str) [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
-        :param multiple_values_data_type (bool) Indicates if data type contains of multiple values             
-        :param name (str) A string that identifies the property             
+        :param canonical_name: The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
+        :type canonical_name: str
+        :param data_type: [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
+        :type data_type: str
+        :param multiple_values_data_type: Indicates if data type contains of multiple values             
+        :type multiple_values_data_type: bool
+        :param name: A string that identifies the property             
+        :type name: str
         """
         super(MapiPidPropertyDescriptor, self).__init__()
 
@@ -75,9 +78,6 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
         self._data_type = None
         self._multiple_values_data_type = None
         self._name = None
-
-        if discriminator is not None:
-            self.discriminator = discriminator
         if canonical_name is not None:
             self.canonical_name = canonical_name
         if data_type is not None:
@@ -87,10 +87,10 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
         if name is not None:
             self.name = name
 
+
     @property
     def canonical_name(self) -> str:
-        """Gets the canonical_name of this MapiPidPropertyDescriptor.
-
+        """
         The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
 
         :return: The canonical_name of this MapiPidPropertyDescriptor.
@@ -100,8 +100,7 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
 
     @canonical_name.setter
     def canonical_name(self, canonical_name: str):
-        """Sets the canonical_name of this MapiPidPropertyDescriptor.
-
+        """
         The name used to refer to the property in the documentation. The prefix of the canonical name identifies the basic characteristics of a property to the implementer. The canonical naming structure uses three categories that are denoted by the following prefixes to the canonical property name: * PidLid prefix: Properties identified by an unsigned 32-bit quantity along with a property set. * PidName prefix: Properties identified by a string name along with a property set. * PidTag prefix: Properties identified by an unsigned 16-bit quantity.             
 
         :param canonical_name: The canonical_name of this MapiPidPropertyDescriptor.
@@ -111,8 +110,7 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
 
     @property
     def data_type(self) -> str:
-        """Gets the data_type of this MapiPidPropertyDescriptor.
-
+        """
         [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
 
         :return: The data_type of this MapiPidPropertyDescriptor.
@@ -122,8 +120,7 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
 
     @data_type.setter
     def data_type(self, data_type: str):
-        """Sets the data_type of this MapiPidPropertyDescriptor.
-
+        """
         [MS-OXCDATA]: Data Structures Enum, available values: Unspecified, Null, Integer16, Integer32, Floating32, Floating64, Currency, FloatingTime, ErrorCode, Boolean, Integer64, String, String8, Time, Guid, ServerId, Restriction, RuleAction, Binary, MultipleInteger16, MultipleInteger32, MultipleFloating32, MultipleFloating64, MultipleCurrency, MultipleFloatingTime, MultipleBoolean, MultipleInteger64, MultipleString, MultipleString8, MultipleTime, MultipleGuid, MultipleBinary, Object
 
         :param data_type: The data_type of this MapiPidPropertyDescriptor.
@@ -135,8 +132,7 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
 
     @property
     def multiple_values_data_type(self) -> bool:
-        """Gets the multiple_values_data_type of this MapiPidPropertyDescriptor.
-
+        """
         Indicates if data type contains of multiple values             
 
         :return: The multiple_values_data_type of this MapiPidPropertyDescriptor.
@@ -146,8 +142,7 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
 
     @multiple_values_data_type.setter
     def multiple_values_data_type(self, multiple_values_data_type: bool):
-        """Sets the multiple_values_data_type of this MapiPidPropertyDescriptor.
-
+        """
         Indicates if data type contains of multiple values             
 
         :param multiple_values_data_type: The multiple_values_data_type of this MapiPidPropertyDescriptor.
@@ -159,8 +154,7 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
 
     @property
     def name(self) -> str:
-        """Gets the name of this MapiPidPropertyDescriptor.
-
+        """
         A string that identifies the property             
 
         :return: The name of this MapiPidPropertyDescriptor.
@@ -170,8 +164,7 @@ class MapiPidPropertyDescriptor(MapiPropertyDescriptor):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this MapiPidPropertyDescriptor.
-
+        """
         A string that identifies the property             
 
         :param name: The name of this MapiPidPropertyDescriptor.

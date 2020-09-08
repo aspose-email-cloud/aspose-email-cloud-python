@@ -59,10 +59,14 @@ class MailAddress(object):
     def __init__(self, display_name: str = None, address: str = None, participation_status: str = None, original_address_string: str = None):
         """
         Represents the address of a message.
-        :param display_name (str) Display name             
-        :param address (str) Address             
-        :param participation_status (str) Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
-        :param original_address_string (str) The original e-mail address string             
+        :param display_name: Display name             
+        :type display_name: str
+        :param address: Address             
+        :type address: str
+        :param participation_status: Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        :type participation_status: str
+        :param original_address_string: The original e-mail address string             
+        :type original_address_string: str
         """
 
         self._display_name = None
@@ -79,10 +83,10 @@ class MailAddress(object):
         if original_address_string is not None:
             self.original_address_string = original_address_string
 
+
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this MailAddress.
-
+        """
         Display name             
 
         :return: The display_name of this MailAddress.
@@ -92,8 +96,7 @@ class MailAddress(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this MailAddress.
-
+        """
         Display name             
 
         :param display_name: The display_name of this MailAddress.
@@ -103,8 +106,7 @@ class MailAddress(object):
 
     @property
     def address(self) -> str:
-        """Gets the address of this MailAddress.
-
+        """
         Address             
 
         :return: The address of this MailAddress.
@@ -114,8 +116,7 @@ class MailAddress(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this MailAddress.
-
+        """
         Address             
 
         :param address: The address of this MailAddress.
@@ -125,8 +126,7 @@ class MailAddress(object):
 
     @property
     def participation_status(self) -> str:
-        """Gets the participation_status of this MailAddress.
-
+        """
         Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
 
         :return: The participation_status of this MailAddress.
@@ -136,8 +136,7 @@ class MailAddress(object):
 
     @participation_status.setter
     def participation_status(self, participation_status: str):
-        """Sets the participation_status of this MailAddress.
-
+        """
         Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
 
         :param participation_status: The participation_status of this MailAddress.
@@ -149,8 +148,7 @@ class MailAddress(object):
 
     @property
     def original_address_string(self) -> str:
-        """Gets the original_address_string of this MailAddress.
-
+        """
         The original e-mail address string             
 
         :return: The original_address_string of this MailAddress.
@@ -160,8 +158,7 @@ class MailAddress(object):
 
     @original_address_string.setter
     def original_address_string(self, original_address_string: str):
-        """Sets the original_address_string of this MailAddress.
-
+        """
         The original e-mail address string             
 
         :param original_address_string: The original_address_string of this MailAddress.

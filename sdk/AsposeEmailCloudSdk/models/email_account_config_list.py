@@ -56,12 +56,14 @@ class EmailAccountConfigList(ListResponseOfEmailAccountConfig):
     def __init__(self, value: List[EmailAccountConfig] = None):
         """
         List of email accounts             
-        :param value (List[EmailAccountConfig]) 
+        :param value: 
+        :type value: List[EmailAccountConfig]
         """
         super(EmailAccountConfigList, self).__init__()
 
         if value is not None:
             self.value = value
+
 
     def to_dict(self):
         """Returns the model properties as a dict"""

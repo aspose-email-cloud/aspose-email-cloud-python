@@ -60,14 +60,17 @@ class DailyRecurrencePatternDto(RecurrencePatternDto):
         'discriminator': 'discriminator'
     }
 
-    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None, discriminator: str = None):
+    def __init__(self, interval: int = None, occurs: int = None, end_date: datetime = None, week_start: str = None):
         """
         Daily recurrence.             
-        :param interval (int) Number of recurrence units.             
-        :param occurs (int) Number of occurrences of the recurrence pattern.             
-        :param end_date (datetime) End date.             
-        :param week_start (str) Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
-        :param discriminator (str) 
+        :param interval: Number of recurrence units.             
+        :type interval: int
+        :param occurs: Number of occurrences of the recurrence pattern.             
+        :type occurs: int
+        :param end_date: End date.             
+        :type end_date: datetime
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :type week_start: str
         """
         super(DailyRecurrencePatternDto, self).__init__()
 
@@ -79,8 +82,7 @@ class DailyRecurrencePatternDto(RecurrencePatternDto):
             self.end_date = end_date
         if week_start is not None:
             self.week_start = week_start
-        if discriminator is not None:
-            self.discriminator = discriminator
+
 
     def to_dict(self):
         """Returns the model properties as a dict"""

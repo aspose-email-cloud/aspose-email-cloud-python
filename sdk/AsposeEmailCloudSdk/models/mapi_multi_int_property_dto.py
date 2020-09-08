@@ -57,12 +57,13 @@ class MapiMultiIntPropertyDto(MapiPropertyDto):
         'values': 'values'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, values: List[int] = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, values: List[int] = None):
         """
         Mapi property with Multiple Integer values             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param values (List[int]) Property values             
+        :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
+        :param values: Property values             
+        :type values: List[int]
         """
         super(MapiMultiIntPropertyDto, self).__init__()
 
@@ -70,15 +71,13 @@ class MapiMultiIntPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if values is not None:
             self.values = values
 
+
     @property
     def values(self) -> List[int]:
-        """Gets the values of this MapiMultiIntPropertyDto.
-
+        """
         Property values             
 
         :return: The values of this MapiMultiIntPropertyDto.
@@ -88,8 +87,7 @@ class MapiMultiIntPropertyDto(MapiPropertyDto):
 
     @values.setter
     def values(self, values: List[int]):
-        """Sets the values of this MapiMultiIntPropertyDto.
-
+        """
         Property values             
 
         :param values: The values of this MapiMultiIntPropertyDto.

@@ -58,8 +58,10 @@ class StorageModelOfContactDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: ContactDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (ContactDto) 
+        :param storage_file: 
+        :type storage_file: StorageFileLocation
+        :param value: 
+        :type value: ContactDto
         """
 
         self._storage_file = None
@@ -70,10 +72,11 @@ class StorageModelOfContactDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfContactDto.
-
+        """
+        Gets the storage_file of this StorageModelOfContactDto.
 
         :return: The storage_file of this StorageModelOfContactDto.
         :rtype: StorageFileLocation
@@ -82,18 +85,20 @@ class StorageModelOfContactDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfContactDto.
-
+        """
+        Sets the storage_file of this StorageModelOfContactDto.
 
         :param storage_file: The storage_file of this StorageModelOfContactDto.
         :type: StorageFileLocation
         """
+        if storage_file is None:
+            raise ValueError("Invalid value for `storage_file`, must not be `None`")
         self._storage_file = storage_file
 
     @property
     def value(self) -> ContactDto:
-        """Gets the value of this StorageModelOfContactDto.
-
+        """
+        Gets the value of this StorageModelOfContactDto.
 
         :return: The value of this StorageModelOfContactDto.
         :rtype: ContactDto
@@ -102,12 +107,14 @@ class StorageModelOfContactDto(object):
 
     @value.setter
     def value(self, value: ContactDto):
-        """Sets the value of this StorageModelOfContactDto.
-
+        """
+        Sets the value of this StorageModelOfContactDto.
 
         :param value: The value of this StorageModelOfContactDto.
         :type: ContactDto
         """
+        if value is None:
+            raise ValueError("Invalid value for `value`, must not be `None`")
         self._value = value
 
     def to_dict(self):

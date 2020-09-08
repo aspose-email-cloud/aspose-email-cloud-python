@@ -55,8 +55,10 @@ class EnumWithCustomOfEmailAddressCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
-        :param description (str) 
+        :param value: Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+        :type value: str
+        :param description: 
+        :type description: str
         """
 
         self._value = None
@@ -67,10 +69,10 @@ class EnumWithCustomOfEmailAddressCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfEmailAddressCategory.
-
+        """
         Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
 
         :return: The value of this EnumWithCustomOfEmailAddressCategory.
@@ -80,8 +82,7 @@ class EnumWithCustomOfEmailAddressCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfEmailAddressCategory.
-
+        """
         Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
 
         :param value: The value of this EnumWithCustomOfEmailAddressCategory.
@@ -89,12 +90,14 @@ class EnumWithCustomOfEmailAddressCategory(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
+        if value is not None and len(value) < 1:
+            raise ValueError("Invalid value for `value`, length must be greater than or equal to `1`")
         self._value = value
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfEmailAddressCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfEmailAddressCategory.
 
         :return: The description of this EnumWithCustomOfEmailAddressCategory.
         :rtype: str
@@ -103,8 +106,8 @@ class EnumWithCustomOfEmailAddressCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfEmailAddressCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfEmailAddressCategory.
 
         :param description: The description of this EnumWithCustomOfEmailAddressCategory.
         :type: str

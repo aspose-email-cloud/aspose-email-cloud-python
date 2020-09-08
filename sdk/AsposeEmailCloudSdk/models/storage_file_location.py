@@ -59,9 +59,12 @@ class StorageFileLocation(StorageFolderLocation):
     def __init__(self, storage: str = None, folder_path: str = None, file_name: str = None):
         """
         A storage file location information             
-        :param storage (str) A storage name             
-        :param folder_path (str) A path to a folder in specified storage             
-        :param file_name (str) A file name in storage             
+        :param storage: A storage name             
+        :type storage: str
+        :param folder_path: A path to a folder in specified storage             
+        :type folder_path: str
+        :param file_name: A file name in storage             
+        :type file_name: str
         """
         super(StorageFileLocation, self).__init__()
 
@@ -74,10 +77,10 @@ class StorageFileLocation(StorageFolderLocation):
         if file_name is not None:
             self.file_name = file_name
 
+
     @property
     def file_name(self) -> str:
-        """Gets the file_name of this StorageFileLocation.
-
+        """
         A file name in storage             
 
         :return: The file_name of this StorageFileLocation.
@@ -87,8 +90,7 @@ class StorageFileLocation(StorageFolderLocation):
 
     @file_name.setter
     def file_name(self, file_name: str):
-        """Sets the file_name of this StorageFileLocation.
-
+        """
         A file name in storage             
 
         :param file_name: The file_name of this StorageFileLocation.

@@ -34,7 +34,7 @@ from AsposeEmailCloudSdk.models.error_details import ErrorDetails
 
 
 class Error(object):
-    """
+    """Error
     """
 
     """
@@ -60,11 +60,15 @@ class Error(object):
 
     def __init__(self, code: str = None, message: str = None, description: str = None, inner_error: ErrorDetails = None):
         """
-        
-        :param code (str) 
-        :param message (str) 
-        :param description (str) 
-        :param inner_error (ErrorDetails) 
+        Error
+        :param code: Code             
+        :type code: str
+        :param message: Message             
+        :type message: str
+        :param description: Description             
+        :type description: str
+        :param inner_error: Inner Error             
+        :type inner_error: ErrorDetails
         """
 
         self._code = None
@@ -81,10 +85,11 @@ class Error(object):
         if inner_error is not None:
             self.inner_error = inner_error
 
+
     @property
     def code(self) -> str:
-        """Gets the code of this Error.
-
+        """
+        Code             
 
         :return: The code of this Error.
         :rtype: str
@@ -93,8 +98,8 @@ class Error(object):
 
     @code.setter
     def code(self, code: str):
-        """Sets the code of this Error.
-
+        """
+        Code             
 
         :param code: The code of this Error.
         :type: str
@@ -103,8 +108,8 @@ class Error(object):
 
     @property
     def message(self) -> str:
-        """Gets the message of this Error.
-
+        """
+        Message             
 
         :return: The message of this Error.
         :rtype: str
@@ -113,8 +118,8 @@ class Error(object):
 
     @message.setter
     def message(self, message: str):
-        """Sets the message of this Error.
-
+        """
+        Message             
 
         :param message: The message of this Error.
         :type: str
@@ -123,8 +128,8 @@ class Error(object):
 
     @property
     def description(self) -> str:
-        """Gets the description of this Error.
-
+        """
+        Description             
 
         :return: The description of this Error.
         :rtype: str
@@ -133,8 +138,8 @@ class Error(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this Error.
-
+        """
+        Description             
 
         :param description: The description of this Error.
         :type: str
@@ -143,8 +148,8 @@ class Error(object):
 
     @property
     def inner_error(self) -> ErrorDetails:
-        """Gets the inner_error of this Error.
-
+        """
+        Inner Error             
 
         :return: The inner_error of this Error.
         :rtype: ErrorDetails
@@ -153,8 +158,8 @@ class Error(object):
 
     @inner_error.setter
     def inner_error(self, inner_error: ErrorDetails):
-        """Sets the inner_error of this Error.
-
+        """
+        Inner Error             
 
         :param inner_error: The inner_error of this Error.
         :type: ErrorDetails

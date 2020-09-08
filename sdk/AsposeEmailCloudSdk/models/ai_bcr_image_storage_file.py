@@ -58,8 +58,10 @@ class AiBcrImageStorageFile(AiBcrImage):
     def __init__(self, is_single: bool = None, file: StorageFileLocation = None):
         """
         Image from storage for recognition             
-        :param is_single (bool) Determines that image contains single VCard or more. Ignored in current version. Multiple cards on image support will be added soon             
-        :param file (StorageFileLocation) Image location             
+        :param is_single: Determines that image contains single VCard or more.             
+        :type is_single: bool
+        :param file: Image location             
+        :type file: StorageFileLocation
         """
         super(AiBcrImageStorageFile, self).__init__()
 
@@ -70,10 +72,10 @@ class AiBcrImageStorageFile(AiBcrImage):
         if file is not None:
             self.file = file
 
+
     @property
     def file(self) -> StorageFileLocation:
-        """Gets the file of this AiBcrImageStorageFile.
-
+        """
         Image location             
 
         :return: The file of this AiBcrImageStorageFile.
@@ -83,13 +85,14 @@ class AiBcrImageStorageFile(AiBcrImage):
 
     @file.setter
     def file(self, file: StorageFileLocation):
-        """Sets the file of this AiBcrImageStorageFile.
-
+        """
         Image location             
 
         :param file: The file of this AiBcrImageStorageFile.
         :type: StorageFileLocation
         """
+        if file is None:
+            raise ValueError("Invalid value for `file`, must not be `None`")
         self._file = file
 
     def to_dict(self):

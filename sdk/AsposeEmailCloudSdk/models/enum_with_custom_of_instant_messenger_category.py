@@ -55,8 +55,10 @@ class EnumWithCustomOfInstantMessengerCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
-        :param description (str) 
+        :param value: Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
+        :type value: str
+        :param description: 
+        :type description: str
         """
 
         self._value = None
@@ -67,10 +69,10 @@ class EnumWithCustomOfInstantMessengerCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
         Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
 
         :return: The value of this EnumWithCustomOfInstantMessengerCategory.
@@ -80,8 +82,7 @@ class EnumWithCustomOfInstantMessengerCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
         Instant messenger address category. Enum, available values: GoogleTalk, Aim, Yahoo, Skype, Qq, Msn, Icq, Jabber, Custom, ImAddress1, ImAddress2, ImAddress3
 
         :param value: The value of this EnumWithCustomOfInstantMessengerCategory.
@@ -89,12 +90,14 @@ class EnumWithCustomOfInstantMessengerCategory(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
+        if value is not None and len(value) < 1:
+            raise ValueError("Invalid value for `value`, length must be greater than or equal to `1`")
         self._value = value
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfInstantMessengerCategory.
 
         :return: The description of this EnumWithCustomOfInstantMessengerCategory.
         :rtype: str
@@ -103,8 +106,8 @@ class EnumWithCustomOfInstantMessengerCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfInstantMessengerCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfInstantMessengerCategory.
 
         :param description: The description of this EnumWithCustomOfInstantMessengerCategory.
         :type: str

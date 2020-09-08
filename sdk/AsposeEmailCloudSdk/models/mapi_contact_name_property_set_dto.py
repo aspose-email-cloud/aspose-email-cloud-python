@@ -71,16 +71,26 @@ class MapiContactNamePropertySetDto(object):
     def __init__(self, display_name: str = None, display_name_prefix: str = None, file_under: str = None, file_under_id: int = None, generation: str = None, given_name: str = None, initials: str = None, middle_name: str = None, nickname: str = None, surname: str = None):
         """
         The properties are used to specify the name of the person represented by the contact             
-        :param display_name (str) Full name of the contact             
-        :param display_name_prefix (str) Title of the contact             
-        :param file_under (str) Name under which to file this contact when displaying a list of contacts             
-        :param file_under_id (int) Value specifying how to generate and recompute the property when other properties are changed             
-        :param generation (str) Generation suffix of the contact             
-        :param given_name (str) Given name (first name) of the contact             
-        :param initials (str) Initials of the contact             
-        :param middle_name (str) Middle name of the contact             
-        :param nickname (str) Nickname of the contact             
-        :param surname (str) Surname (family name) of the contact             
+        :param display_name: Full name of the contact             
+        :type display_name: str
+        :param display_name_prefix: Title of the contact             
+        :type display_name_prefix: str
+        :param file_under: Name under which to file this contact when displaying a list of contacts             
+        :type file_under: str
+        :param file_under_id: Value specifying how to generate and recompute the property when other properties are changed             
+        :type file_under_id: int
+        :param generation: Generation suffix of the contact             
+        :type generation: str
+        :param given_name: Given name (first name) of the contact             
+        :type given_name: str
+        :param initials: Initials of the contact             
+        :type initials: str
+        :param middle_name: Middle name of the contact             
+        :type middle_name: str
+        :param nickname: Nickname of the contact             
+        :type nickname: str
+        :param surname: Surname (family name) of the contact             
+        :type surname: str
         """
 
         self._display_name = None
@@ -115,10 +125,10 @@ class MapiContactNamePropertySetDto(object):
         if surname is not None:
             self.surname = surname
 
+
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this MapiContactNamePropertySetDto.
-
+        """
         Full name of the contact             
 
         :return: The display_name of this MapiContactNamePropertySetDto.
@@ -128,8 +138,7 @@ class MapiContactNamePropertySetDto(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this MapiContactNamePropertySetDto.
-
+        """
         Full name of the contact             
 
         :param display_name: The display_name of this MapiContactNamePropertySetDto.
@@ -139,8 +148,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def display_name_prefix(self) -> str:
-        """Gets the display_name_prefix of this MapiContactNamePropertySetDto.
-
+        """
         Title of the contact             
 
         :return: The display_name_prefix of this MapiContactNamePropertySetDto.
@@ -150,8 +158,7 @@ class MapiContactNamePropertySetDto(object):
 
     @display_name_prefix.setter
     def display_name_prefix(self, display_name_prefix: str):
-        """Sets the display_name_prefix of this MapiContactNamePropertySetDto.
-
+        """
         Title of the contact             
 
         :param display_name_prefix: The display_name_prefix of this MapiContactNamePropertySetDto.
@@ -161,8 +168,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def file_under(self) -> str:
-        """Gets the file_under of this MapiContactNamePropertySetDto.
-
+        """
         Name under which to file this contact when displaying a list of contacts             
 
         :return: The file_under of this MapiContactNamePropertySetDto.
@@ -172,8 +178,7 @@ class MapiContactNamePropertySetDto(object):
 
     @file_under.setter
     def file_under(self, file_under: str):
-        """Sets the file_under of this MapiContactNamePropertySetDto.
-
+        """
         Name under which to file this contact when displaying a list of contacts             
 
         :param file_under: The file_under of this MapiContactNamePropertySetDto.
@@ -183,8 +188,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def file_under_id(self) -> int:
-        """Gets the file_under_id of this MapiContactNamePropertySetDto.
-
+        """
         Value specifying how to generate and recompute the property when other properties are changed             
 
         :return: The file_under_id of this MapiContactNamePropertySetDto.
@@ -194,8 +198,7 @@ class MapiContactNamePropertySetDto(object):
 
     @file_under_id.setter
     def file_under_id(self, file_under_id: int):
-        """Sets the file_under_id of this MapiContactNamePropertySetDto.
-
+        """
         Value specifying how to generate and recompute the property when other properties are changed             
 
         :param file_under_id: The file_under_id of this MapiContactNamePropertySetDto.
@@ -207,8 +210,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def generation(self) -> str:
-        """Gets the generation of this MapiContactNamePropertySetDto.
-
+        """
         Generation suffix of the contact             
 
         :return: The generation of this MapiContactNamePropertySetDto.
@@ -218,8 +220,7 @@ class MapiContactNamePropertySetDto(object):
 
     @generation.setter
     def generation(self, generation: str):
-        """Sets the generation of this MapiContactNamePropertySetDto.
-
+        """
         Generation suffix of the contact             
 
         :param generation: The generation of this MapiContactNamePropertySetDto.
@@ -229,8 +230,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def given_name(self) -> str:
-        """Gets the given_name of this MapiContactNamePropertySetDto.
-
+        """
         Given name (first name) of the contact             
 
         :return: The given_name of this MapiContactNamePropertySetDto.
@@ -240,8 +240,7 @@ class MapiContactNamePropertySetDto(object):
 
     @given_name.setter
     def given_name(self, given_name: str):
-        """Sets the given_name of this MapiContactNamePropertySetDto.
-
+        """
         Given name (first name) of the contact             
 
         :param given_name: The given_name of this MapiContactNamePropertySetDto.
@@ -251,8 +250,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def initials(self) -> str:
-        """Gets the initials of this MapiContactNamePropertySetDto.
-
+        """
         Initials of the contact             
 
         :return: The initials of this MapiContactNamePropertySetDto.
@@ -262,8 +260,7 @@ class MapiContactNamePropertySetDto(object):
 
     @initials.setter
     def initials(self, initials: str):
-        """Sets the initials of this MapiContactNamePropertySetDto.
-
+        """
         Initials of the contact             
 
         :param initials: The initials of this MapiContactNamePropertySetDto.
@@ -273,8 +270,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def middle_name(self) -> str:
-        """Gets the middle_name of this MapiContactNamePropertySetDto.
-
+        """
         Middle name of the contact             
 
         :return: The middle_name of this MapiContactNamePropertySetDto.
@@ -284,8 +280,7 @@ class MapiContactNamePropertySetDto(object):
 
     @middle_name.setter
     def middle_name(self, middle_name: str):
-        """Sets the middle_name of this MapiContactNamePropertySetDto.
-
+        """
         Middle name of the contact             
 
         :param middle_name: The middle_name of this MapiContactNamePropertySetDto.
@@ -295,8 +290,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def nickname(self) -> str:
-        """Gets the nickname of this MapiContactNamePropertySetDto.
-
+        """
         Nickname of the contact             
 
         :return: The nickname of this MapiContactNamePropertySetDto.
@@ -306,8 +300,7 @@ class MapiContactNamePropertySetDto(object):
 
     @nickname.setter
     def nickname(self, nickname: str):
-        """Sets the nickname of this MapiContactNamePropertySetDto.
-
+        """
         Nickname of the contact             
 
         :param nickname: The nickname of this MapiContactNamePropertySetDto.
@@ -317,8 +310,7 @@ class MapiContactNamePropertySetDto(object):
 
     @property
     def surname(self) -> str:
-        """Gets the surname of this MapiContactNamePropertySetDto.
-
+        """
         Surname (family name) of the contact             
 
         :return: The surname of this MapiContactNamePropertySetDto.
@@ -328,8 +320,7 @@ class MapiContactNamePropertySetDto(object):
 
     @surname.setter
     def surname(self, surname: str):
-        """Sets the surname of this MapiContactNamePropertySetDto.
-
+        """
         Surname (family name) of the contact             
 
         :param surname: The surname of this MapiContactNamePropertySetDto.

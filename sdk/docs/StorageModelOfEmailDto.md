@@ -2,11 +2,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**storage_file** | [**StorageFileLocation**](StorageFileLocation.md) |  | [optional] 
-**value** | [**EmailDto**](EmailDto.md) |  | [optional] 
+**storage_file** | [**StorageFileLocation**](StorageFileLocation.md) |  | 
+**value** | [**EmailDto**](EmailDto.md) |  | 
 
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to README]](README.md)
+[[Back to Model list]](Models.md) [[Back to README]](README.md)
 
 

@@ -55,8 +55,10 @@ class AiNameFormatted(object):
     def __init__(self, name: str = None, comments: str = None):
         """
         Formatted name             
-        :param name (str) Formatted name value             
-        :param comments (str) Usually empty; can contain extra message describing some issue occurred during the formatting             
+        :param name: Formatted name value             
+        :type name: str
+        :param comments: Usually empty; can contain extra message describing some issue occurred during the formatting             
+        :type comments: str
         """
 
         self._name = None
@@ -67,10 +69,10 @@ class AiNameFormatted(object):
         if comments is not None:
             self.comments = comments
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this AiNameFormatted.
-
+        """
         Formatted name value             
 
         :return: The name of this AiNameFormatted.
@@ -80,8 +82,7 @@ class AiNameFormatted(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this AiNameFormatted.
-
+        """
         Formatted name value             
 
         :param name: The name of this AiNameFormatted.
@@ -91,8 +92,7 @@ class AiNameFormatted(object):
 
     @property
     def comments(self) -> str:
-        """Gets the comments of this AiNameFormatted.
-
+        """
         Usually empty; can contain extra message describing some issue occurred during the formatting             
 
         :return: The comments of this AiNameFormatted.
@@ -102,8 +102,7 @@ class AiNameFormatted(object):
 
     @comments.setter
     def comments(self, comments: str):
-        """Sets the comments of this AiNameFormatted.
-
+        """
         Usually empty; can contain extra message describing some issue occurred during the formatting             
 
         :param comments: The comments of this AiNameFormatted.

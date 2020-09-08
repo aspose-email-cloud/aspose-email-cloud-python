@@ -65,13 +65,20 @@ class MapiContactProfessionalPropertySetDto(object):
     def __init__(self, title: str = None, company_name: str = None, department_name: str = None, office_location: str = None, manager_name: str = None, assistant: str = None, profession: str = None):
         """
         Properties are used to store professional details for the person represented by the contact             
-        :param title (str) Gets or sets the job title of the contact             
-        :param company_name (str) Gets or sets the company that employs the contact             
-        :param department_name (str) Gets or sets the name of the department to which the contact belongs             
-        :param office_location (str) Gets or sets the location of the office that the contact works in             
-        :param manager_name (str) Gets or sets the name of the contact's manager             
-        :param assistant (str) Gets or sets the name of the contact's assistant             
-        :param profession (str) Gets or sets the profession of the contact             
+        :param title: Gets or sets the job title of the contact             
+        :type title: str
+        :param company_name: Gets or sets the company that employs the contact             
+        :type company_name: str
+        :param department_name: Gets or sets the name of the department to which the contact belongs             
+        :type department_name: str
+        :param office_location: Gets or sets the location of the office that the contact works in             
+        :type office_location: str
+        :param manager_name: Gets or sets the name of the contact's manager             
+        :type manager_name: str
+        :param assistant: Gets or sets the name of the contact's assistant             
+        :type assistant: str
+        :param profession: Gets or sets the profession of the contact             
+        :type profession: str
         """
 
         self._title = None
@@ -97,10 +104,10 @@ class MapiContactProfessionalPropertySetDto(object):
         if profession is not None:
             self.profession = profession
 
+
     @property
     def title(self) -> str:
-        """Gets the title of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the job title of the contact             
 
         :return: The title of this MapiContactProfessionalPropertySetDto.
@@ -110,8 +117,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @title.setter
     def title(self, title: str):
-        """Sets the title of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the job title of the contact             
 
         :param title: The title of this MapiContactProfessionalPropertySetDto.
@@ -121,8 +127,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @property
     def company_name(self) -> str:
-        """Gets the company_name of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the company that employs the contact             
 
         :return: The company_name of this MapiContactProfessionalPropertySetDto.
@@ -132,8 +137,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @company_name.setter
     def company_name(self, company_name: str):
-        """Sets the company_name of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the company that employs the contact             
 
         :param company_name: The company_name of this MapiContactProfessionalPropertySetDto.
@@ -143,8 +147,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @property
     def department_name(self) -> str:
-        """Gets the department_name of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the name of the department to which the contact belongs             
 
         :return: The department_name of this MapiContactProfessionalPropertySetDto.
@@ -154,8 +157,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @department_name.setter
     def department_name(self, department_name: str):
-        """Sets the department_name of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the name of the department to which the contact belongs             
 
         :param department_name: The department_name of this MapiContactProfessionalPropertySetDto.
@@ -165,8 +167,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @property
     def office_location(self) -> str:
-        """Gets the office_location of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the location of the office that the contact works in             
 
         :return: The office_location of this MapiContactProfessionalPropertySetDto.
@@ -176,8 +177,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @office_location.setter
     def office_location(self, office_location: str):
-        """Sets the office_location of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the location of the office that the contact works in             
 
         :param office_location: The office_location of this MapiContactProfessionalPropertySetDto.
@@ -187,8 +187,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @property
     def manager_name(self) -> str:
-        """Gets the manager_name of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the name of the contact's manager             
 
         :return: The manager_name of this MapiContactProfessionalPropertySetDto.
@@ -198,8 +197,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @manager_name.setter
     def manager_name(self, manager_name: str):
-        """Sets the manager_name of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the name of the contact's manager             
 
         :param manager_name: The manager_name of this MapiContactProfessionalPropertySetDto.
@@ -209,8 +207,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @property
     def assistant(self) -> str:
-        """Gets the assistant of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the name of the contact's assistant             
 
         :return: The assistant of this MapiContactProfessionalPropertySetDto.
@@ -220,8 +217,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @assistant.setter
     def assistant(self, assistant: str):
-        """Sets the assistant of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the name of the contact's assistant             
 
         :param assistant: The assistant of this MapiContactProfessionalPropertySetDto.
@@ -231,8 +227,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @property
     def profession(self) -> str:
-        """Gets the profession of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the profession of the contact             
 
         :return: The profession of this MapiContactProfessionalPropertySetDto.
@@ -242,8 +237,7 @@ class MapiContactProfessionalPropertySetDto(object):
 
     @profession.setter
     def profession(self, profession: str):
-        """Sets the profession of this MapiContactProfessionalPropertySetDto.
-
+        """
         Gets or sets the profession of the contact             
 
         :param profession: The profession of this MapiContactProfessionalPropertySetDto.

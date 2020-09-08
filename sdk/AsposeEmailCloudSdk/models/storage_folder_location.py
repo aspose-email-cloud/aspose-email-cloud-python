@@ -55,8 +55,10 @@ class StorageFolderLocation(object):
     def __init__(self, storage: str = None, folder_path: str = None):
         """
         A storage folder location information             
-        :param storage (str) A storage name             
-        :param folder_path (str) A path to a folder in specified storage             
+        :param storage: A storage name             
+        :type storage: str
+        :param folder_path: A path to a folder in specified storage             
+        :type folder_path: str
         """
 
         self._storage = None
@@ -67,10 +69,10 @@ class StorageFolderLocation(object):
         if folder_path is not None:
             self.folder_path = folder_path
 
+
     @property
     def storage(self) -> str:
-        """Gets the storage of this StorageFolderLocation.
-
+        """
         A storage name             
 
         :return: The storage of this StorageFolderLocation.
@@ -80,8 +82,7 @@ class StorageFolderLocation(object):
 
     @storage.setter
     def storage(self, storage: str):
-        """Sets the storage of this StorageFolderLocation.
-
+        """
         A storage name             
 
         :param storage: The storage of this StorageFolderLocation.
@@ -91,8 +92,7 @@ class StorageFolderLocation(object):
 
     @property
     def folder_path(self) -> str:
-        """Gets the folder_path of this StorageFolderLocation.
-
+        """
         A path to a folder in specified storage             
 
         :return: The folder_path of this StorageFolderLocation.
@@ -102,8 +102,7 @@ class StorageFolderLocation(object):
 
     @folder_path.setter
     def folder_path(self, folder_path: str):
-        """Sets the folder_path of this StorageFolderLocation.
-
+        """
         A path to a folder in specified storage             
 
         :param folder_path: The folder_path of this StorageFolderLocation.

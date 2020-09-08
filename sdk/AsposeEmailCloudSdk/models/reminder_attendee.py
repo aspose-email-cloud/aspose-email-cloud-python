@@ -53,7 +53,8 @@ class ReminderAttendee(object):
     def __init__(self, address: str = None):
         """
         Defines an \&quot;Attendee\&quot; within a alarm.
-        :param address (str) Contains the email address.
+        :param address: Contains the email address.
+        :type address: str
         """
 
         self._address = None
@@ -61,10 +62,10 @@ class ReminderAttendee(object):
         if address is not None:
             self.address = address
 
+
     @property
     def address(self) -> str:
-        """Gets the address of this ReminderAttendee.
-
+        """
         Contains the email address.
 
         :return: The address of this ReminderAttendee.
@@ -74,13 +75,16 @@ class ReminderAttendee(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this ReminderAttendee.
-
+        """
         Contains the email address.
 
         :param address: The address of this ReminderAttendee.
         :type: str
         """
+        if address is None:
+            raise ValueError("Invalid value for `address`, must not be `None`")
+        if address is not None and len(address) < 1:
+            raise ValueError("Invalid value for `address`, length must be greater than or equal to `1`")
         self._address = address
 
     def to_dict(self):

@@ -34,7 +34,7 @@ from AsposeEmailCloudSdk.models.storage_file import StorageFile
 
 
 class FilesList(object):
-    """
+    """Files list
     """
 
     """
@@ -54,8 +54,9 @@ class FilesList(object):
 
     def __init__(self, value: List[StorageFile] = None):
         """
-        
-        :param value (List[StorageFile]) 
+        Files list
+        :param value: Files and folders contained by folder StorageFile.
+        :type value: List[StorageFile]
         """
 
         self._value = None
@@ -63,10 +64,11 @@ class FilesList(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[StorageFile]:
-        """Gets the value of this FilesList.
-
+        """
+        Files and folders contained by folder StorageFile.
 
         :return: The value of this FilesList.
         :rtype: list[StorageFile]
@@ -75,8 +77,8 @@ class FilesList(object):
 
     @value.setter
     def value(self, value: List[StorageFile]):
-        """Sets the value of this FilesList.
-
+        """
+        Files and folders contained by folder StorageFile.
 
         :param value: The value of this FilesList.
         :type: list[StorageFile]

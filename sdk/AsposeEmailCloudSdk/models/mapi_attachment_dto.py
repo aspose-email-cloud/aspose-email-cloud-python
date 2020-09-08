@@ -55,8 +55,10 @@ class MapiAttachmentDto(object):
     def __init__(self, name: str = None, data_base64: str = None):
         """
         Mapi attachment             
-        :param name (str) Attachment's name             
-        :param data_base64 (str) Attachment data represented as Base64 string.             
+        :param name: Attachment's name             
+        :type name: str
+        :param data_base64: Attachment data represented as Base64 string.             
+        :type data_base64: str
         """
 
         self._name = None
@@ -67,10 +69,10 @@ class MapiAttachmentDto(object):
         if data_base64 is not None:
             self.data_base64 = data_base64
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this MapiAttachmentDto.
-
+        """
         Attachment's name             
 
         :return: The name of this MapiAttachmentDto.
@@ -80,8 +82,7 @@ class MapiAttachmentDto(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this MapiAttachmentDto.
-
+        """
         Attachment's name             
 
         :param name: The name of this MapiAttachmentDto.
@@ -91,8 +92,7 @@ class MapiAttachmentDto(object):
 
     @property
     def data_base64(self) -> str:
-        """Gets the data_base64 of this MapiAttachmentDto.
-
+        """
         Attachment data represented as Base64 string.             
 
         :return: The data_base64 of this MapiAttachmentDto.
@@ -102,8 +102,7 @@ class MapiAttachmentDto(object):
 
     @data_base64.setter
     def data_base64(self, data_base64: str):
-        """Sets the data_base64 of this MapiAttachmentDto.
-
+        """
         Attachment data represented as Base64 string.             
 
         :param data_base64: The data_base64 of this MapiAttachmentDto.

@@ -63,11 +63,16 @@ class ContentType(object):
     def __init__(self, boundary: str = None, char_set: str = None, media_type: str = None, name: str = None, parameters: List[ContentTypeParameter] = None):
         """
         Represents a Content-Type header.             
-        :param boundary (str) The boundary parameter included in the Content-Type header.             
-        :param char_set (str) CharSet parameter.             
-        :param media_type (str) The internet media type.             
-        :param name (str) Name parameter.             
-        :param parameters (List[ContentTypeParameter]) Full list of parameters             
+        :param boundary: The boundary parameter included in the Content-Type header.             
+        :type boundary: str
+        :param char_set: CharSet parameter.             
+        :type char_set: str
+        :param media_type: The internet media type.             
+        :type media_type: str
+        :param name: Name parameter.             
+        :type name: str
+        :param parameters: Full list of parameters             
+        :type parameters: List[ContentTypeParameter]
         """
 
         self._boundary = None
@@ -87,10 +92,10 @@ class ContentType(object):
         if parameters is not None:
             self.parameters = parameters
 
+
     @property
     def boundary(self) -> str:
-        """Gets the boundary of this ContentType.
-
+        """
         The boundary parameter included in the Content-Type header.             
 
         :return: The boundary of this ContentType.
@@ -100,8 +105,7 @@ class ContentType(object):
 
     @boundary.setter
     def boundary(self, boundary: str):
-        """Sets the boundary of this ContentType.
-
+        """
         The boundary parameter included in the Content-Type header.             
 
         :param boundary: The boundary of this ContentType.
@@ -111,8 +115,7 @@ class ContentType(object):
 
     @property
     def char_set(self) -> str:
-        """Gets the char_set of this ContentType.
-
+        """
         CharSet parameter.             
 
         :return: The char_set of this ContentType.
@@ -122,8 +125,7 @@ class ContentType(object):
 
     @char_set.setter
     def char_set(self, char_set: str):
-        """Sets the char_set of this ContentType.
-
+        """
         CharSet parameter.             
 
         :param char_set: The char_set of this ContentType.
@@ -133,8 +135,7 @@ class ContentType(object):
 
     @property
     def media_type(self) -> str:
-        """Gets the media_type of this ContentType.
-
+        """
         The internet media type.             
 
         :return: The media_type of this ContentType.
@@ -144,8 +145,7 @@ class ContentType(object):
 
     @media_type.setter
     def media_type(self, media_type: str):
-        """Sets the media_type of this ContentType.
-
+        """
         The internet media type.             
 
         :param media_type: The media_type of this ContentType.
@@ -155,8 +155,7 @@ class ContentType(object):
 
     @property
     def name(self) -> str:
-        """Gets the name of this ContentType.
-
+        """
         Name parameter.             
 
         :return: The name of this ContentType.
@@ -166,8 +165,7 @@ class ContentType(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this ContentType.
-
+        """
         Name parameter.             
 
         :param name: The name of this ContentType.
@@ -177,8 +175,7 @@ class ContentType(object):
 
     @property
     def parameters(self) -> List[ContentTypeParameter]:
-        """Gets the parameters of this ContentType.
-
+        """
         Full list of parameters             
 
         :return: The parameters of this ContentType.
@@ -188,8 +185,7 @@ class ContentType(object):
 
     @parameters.setter
     def parameters(self, parameters: List[ContentTypeParameter]):
-        """Sets the parameters of this ContentType.
-
+        """
         Full list of parameters             
 
         :param parameters: The parameters of this ContentType.

@@ -65,12 +65,18 @@ class EmailAddress(object):
     def __init__(self, category: EnumWithCustomOfEmailAddressCategory = None, display_name: str = None, preferred: bool = None, routing_type: str = None, address: str = None, original_address_string: str = None):
         """
         Email address.             
-        :param category (EnumWithCustomOfEmailAddressCategory) Address category.             
-        :param display_name (str) Display name.             
-        :param preferred (bool) Defines whether email address is preferred.             
-        :param routing_type (str) A routing type for an email.             
-        :param address (str) Email address.             
-        :param original_address_string (str) The original e-mail address string             
+        :param category: Address category.             
+        :type category: EnumWithCustomOfEmailAddressCategory
+        :param display_name: Display name.             
+        :type display_name: str
+        :param preferred: Defines whether email address is preferred.             
+        :type preferred: bool
+        :param routing_type: A routing type for an email.             
+        :type routing_type: str
+        :param address: Email address.             
+        :type address: str
+        :param original_address_string: The original e-mail address string             
+        :type original_address_string: str
         """
 
         self._category = None
@@ -93,10 +99,10 @@ class EmailAddress(object):
         if original_address_string is not None:
             self.original_address_string = original_address_string
 
+
     @property
     def category(self) -> EnumWithCustomOfEmailAddressCategory:
-        """Gets the category of this EmailAddress.
-
+        """
         Address category.             
 
         :return: The category of this EmailAddress.
@@ -106,8 +112,7 @@ class EmailAddress(object):
 
     @category.setter
     def category(self, category: EnumWithCustomOfEmailAddressCategory):
-        """Sets the category of this EmailAddress.
-
+        """
         Address category.             
 
         :param category: The category of this EmailAddress.
@@ -117,8 +122,7 @@ class EmailAddress(object):
 
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this EmailAddress.
-
+        """
         Display name.             
 
         :return: The display_name of this EmailAddress.
@@ -128,8 +132,7 @@ class EmailAddress(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this EmailAddress.
-
+        """
         Display name.             
 
         :param display_name: The display_name of this EmailAddress.
@@ -139,8 +142,7 @@ class EmailAddress(object):
 
     @property
     def preferred(self) -> bool:
-        """Gets the preferred of this EmailAddress.
-
+        """
         Defines whether email address is preferred.             
 
         :return: The preferred of this EmailAddress.
@@ -150,8 +152,7 @@ class EmailAddress(object):
 
     @preferred.setter
     def preferred(self, preferred: bool):
-        """Sets the preferred of this EmailAddress.
-
+        """
         Defines whether email address is preferred.             
 
         :param preferred: The preferred of this EmailAddress.
@@ -163,8 +164,7 @@ class EmailAddress(object):
 
     @property
     def routing_type(self) -> str:
-        """Gets the routing_type of this EmailAddress.
-
+        """
         A routing type for an email.             
 
         :return: The routing_type of this EmailAddress.
@@ -174,8 +174,7 @@ class EmailAddress(object):
 
     @routing_type.setter
     def routing_type(self, routing_type: str):
-        """Sets the routing_type of this EmailAddress.
-
+        """
         A routing type for an email.             
 
         :param routing_type: The routing_type of this EmailAddress.
@@ -185,8 +184,7 @@ class EmailAddress(object):
 
     @property
     def address(self) -> str:
-        """Gets the address of this EmailAddress.
-
+        """
         Email address.             
 
         :return: The address of this EmailAddress.
@@ -196,19 +194,21 @@ class EmailAddress(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this EmailAddress.
-
+        """
         Email address.             
 
         :param address: The address of this EmailAddress.
         :type: str
         """
+        if address is None:
+            raise ValueError("Invalid value for `address`, must not be `None`")
+        if address is not None and len(address) < 1:
+            raise ValueError("Invalid value for `address`, length must be greater than or equal to `1`")
         self._address = address
 
     @property
     def original_address_string(self) -> str:
-        """Gets the original_address_string of this EmailAddress.
-
+        """
         The original e-mail address string             
 
         :return: The original_address_string of this EmailAddress.
@@ -218,8 +218,7 @@ class EmailAddress(object):
 
     @original_address_string.setter
     def original_address_string(self, original_address_string: str):
-        """Sets the original_address_string of this EmailAddress.
-
+        """
         The original e-mail address string             
 
         :param original_address_string: The original_address_string of this EmailAddress.

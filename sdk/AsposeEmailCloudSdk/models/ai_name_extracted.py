@@ -57,8 +57,10 @@ class AiNameExtracted(object):
     def __init__(self, name: List[AiNameExtractedComponent] = None, score: float = None):
         """
         Extracted name             
-        :param name (List[AiNameExtractedComponent]) Extracted name components             
-        :param score (float) Extracted name score             
+        :param name: Extracted name components             
+        :type name: List[AiNameExtractedComponent]
+        :param score: Extracted name score             
+        :type score: float
         """
 
         self._name = None
@@ -69,10 +71,10 @@ class AiNameExtracted(object):
         if score is not None:
             self.score = score
 
+
     @property
     def name(self) -> List[AiNameExtractedComponent]:
-        """Gets the name of this AiNameExtracted.
-
+        """
         Extracted name components             
 
         :return: The name of this AiNameExtracted.
@@ -82,8 +84,7 @@ class AiNameExtracted(object):
 
     @name.setter
     def name(self, name: List[AiNameExtractedComponent]):
-        """Sets the name of this AiNameExtracted.
-
+        """
         Extracted name components             
 
         :param name: The name of this AiNameExtracted.
@@ -93,8 +94,7 @@ class AiNameExtracted(object):
 
     @property
     def score(self) -> float:
-        """Gets the score of this AiNameExtracted.
-
+        """
         Extracted name score             
 
         :return: The score of this AiNameExtracted.
@@ -104,8 +104,7 @@ class AiNameExtracted(object):
 
     @score.setter
     def score(self, score: float):
-        """Sets the score of this AiNameExtracted.
-
+        """
         Extracted name score             
 
         :param score: The score of this AiNameExtracted.

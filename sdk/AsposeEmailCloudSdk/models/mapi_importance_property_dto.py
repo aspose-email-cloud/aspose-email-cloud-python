@@ -57,12 +57,13 @@ class MapiImportancePropertyDto(MapiPropertyDto):
         'value': 'value'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value: str = None):
         """
         Mapi property with ImportanceChoicesType value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (str) Levels of importance for an item. Enum, available values: Low, Normal, High
+        :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
+        :param value: Levels of importance for an item. Enum, available values: Low, Normal, High
+        :type value: str
         """
         super(MapiImportancePropertyDto, self).__init__()
 
@@ -70,15 +71,13 @@ class MapiImportancePropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this MapiImportancePropertyDto.
-
+        """
         Levels of importance for an item. Enum, available values: Low, Normal, High
 
         :return: The value of this MapiImportancePropertyDto.
@@ -88,8 +87,7 @@ class MapiImportancePropertyDto(MapiPropertyDto):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this MapiImportancePropertyDto.
-
+        """
         Levels of importance for an item. Enum, available values: Low, Normal, High
 
         :param value: The value of this MapiImportancePropertyDto.

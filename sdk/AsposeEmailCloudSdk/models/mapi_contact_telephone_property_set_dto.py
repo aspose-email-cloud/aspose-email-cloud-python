@@ -89,25 +89,44 @@ class MapiContactTelephonePropertySetDto(object):
     def __init__(self, is_empty: bool = None, default_telephone_number: str = None, use_autocomplete: bool = None, callback_telephone_number: str = None, business_telephone_number: str = None, home_telephone_number: str = None, primary_telephone_number: str = None, business2_telephone_number: str = None, mobile_telephone_number: str = None, radio_telephone_number: str = None, car_telephone_number: str = None, other_telephone_number: str = None, assistant_telephone_number: str = None, home2_telephone_number: str = None, tty_tdd_phone_number: str = None, company_main_telephone_number: str = None, telex_number: str = None, isdn_number: str = None, pager_telephone_number: str = None):
         """
         Specify optional telephone numbers for the contact.             
-        :param is_empty (bool) Shows if MapiContactTelephonePropertySet is empty             
-        :param default_telephone_number (str) Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
-        :param use_autocomplete (bool) Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
-        :param callback_telephone_number (str) Gets or sets the callback telephone number             
-        :param business_telephone_number (str) Gets or sets the business telephone number             
-        :param home_telephone_number (str) Gets or sets the home telephone number             
-        :param primary_telephone_number (str) Gets or sets the primary telephone number             
-        :param business2_telephone_number (str) Gets or sets the second business telephone number             
-        :param mobile_telephone_number (str) Gets or sets the mobile telephone number             
-        :param radio_telephone_number (str) Gets or sets the radio telephone number             
-        :param car_telephone_number (str) Gets or sets the car telephone number             
-        :param other_telephone_number (str) Gets or sets an alternate telephone number             
-        :param assistant_telephone_number (str) Gets or sets the telephone number of the contact's assistant             
-        :param home2_telephone_number (str) Gets or sets a second home telephone number             
-        :param tty_tdd_phone_number (str) Gets or sets the telephone number for the contact's text telephone (TTY) or telecommunication device for the deaf (TDD)             
-        :param company_main_telephone_number (str) Gets or sets the company phone number             
-        :param telex_number (str) Gets or sets the telex number             
-        :param isdn_number (str) Gets or sets the integrated services digital network (ISDN) number             
-        :param pager_telephone_number (str) Gets or sets a pager telephone number             
+        :param is_empty: Shows if MapiContactTelephonePropertySet is empty             
+        :type is_empty: bool
+        :param default_telephone_number: Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
+        :type default_telephone_number: str
+        :param use_autocomplete: Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
+        :type use_autocomplete: bool
+        :param callback_telephone_number: Gets or sets the callback telephone number             
+        :type callback_telephone_number: str
+        :param business_telephone_number: Gets or sets the business telephone number             
+        :type business_telephone_number: str
+        :param home_telephone_number: Gets or sets the home telephone number             
+        :type home_telephone_number: str
+        :param primary_telephone_number: Gets or sets the primary telephone number             
+        :type primary_telephone_number: str
+        :param business2_telephone_number: Gets or sets the second business telephone number             
+        :type business2_telephone_number: str
+        :param mobile_telephone_number: Gets or sets the mobile telephone number             
+        :type mobile_telephone_number: str
+        :param radio_telephone_number: Gets or sets the radio telephone number             
+        :type radio_telephone_number: str
+        :param car_telephone_number: Gets or sets the car telephone number             
+        :type car_telephone_number: str
+        :param other_telephone_number: Gets or sets an alternate telephone number             
+        :type other_telephone_number: str
+        :param assistant_telephone_number: Gets or sets the telephone number of the contact's assistant             
+        :type assistant_telephone_number: str
+        :param home2_telephone_number: Gets or sets a second home telephone number             
+        :type home2_telephone_number: str
+        :param tty_tdd_phone_number: Gets or sets the telephone number for the contact's text telephone (TTY) or telecommunication device for the deaf (TDD)             
+        :type tty_tdd_phone_number: str
+        :param company_main_telephone_number: Gets or sets the company phone number             
+        :type company_main_telephone_number: str
+        :param telex_number: Gets or sets the telex number             
+        :type telex_number: str
+        :param isdn_number: Gets or sets the integrated services digital network (ISDN) number             
+        :type isdn_number: str
+        :param pager_telephone_number: Gets or sets a pager telephone number             
+        :type pager_telephone_number: str
         """
 
         self._is_empty = None
@@ -169,10 +188,10 @@ class MapiContactTelephonePropertySetDto(object):
         if pager_telephone_number is not None:
             self.pager_telephone_number = pager_telephone_number
 
+
     @property
     def is_empty(self) -> bool:
-        """Gets the is_empty of this MapiContactTelephonePropertySetDto.
-
+        """
         Shows if MapiContactTelephonePropertySet is empty             
 
         :return: The is_empty of this MapiContactTelephonePropertySetDto.
@@ -182,8 +201,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @is_empty.setter
     def is_empty(self, is_empty: bool):
-        """Sets the is_empty of this MapiContactTelephonePropertySetDto.
-
+        """
         Shows if MapiContactTelephonePropertySet is empty             
 
         :param is_empty: The is_empty of this MapiContactTelephonePropertySetDto.
@@ -195,8 +213,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def default_telephone_number(self) -> str:
-        """Gets the default_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
 
         :return: The default_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -206,8 +223,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @default_telephone_number.setter
     def default_telephone_number(self, default_telephone_number: str):
-        """Sets the default_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Default value of electronic address Uses when user does not set any electronic address if UseAutocomplete property is set 'true'             
 
         :param default_telephone_number: The default_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -217,8 +233,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def use_autocomplete(self) -> bool:
-        """Gets the use_autocomplete of this MapiContactTelephonePropertySetDto.
-
+        """
         Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
 
         :return: The use_autocomplete of this MapiContactTelephonePropertySetDto.
@@ -228,8 +243,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @use_autocomplete.setter
     def use_autocomplete(self, use_autocomplete: bool):
-        """Sets the use_autocomplete of this MapiContactTelephonePropertySetDto.
-
+        """
         Indicates that one electronic address is completed automatically in case if user does not set any electronic address             
 
         :param use_autocomplete: The use_autocomplete of this MapiContactTelephonePropertySetDto.
@@ -241,8 +255,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def callback_telephone_number(self) -> str:
-        """Gets the callback_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the callback telephone number             
 
         :return: The callback_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -252,8 +265,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @callback_telephone_number.setter
     def callback_telephone_number(self, callback_telephone_number: str):
-        """Sets the callback_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the callback telephone number             
 
         :param callback_telephone_number: The callback_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -263,8 +275,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def business_telephone_number(self) -> str:
-        """Gets the business_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the business telephone number             
 
         :return: The business_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -274,8 +285,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @business_telephone_number.setter
     def business_telephone_number(self, business_telephone_number: str):
-        """Sets the business_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the business telephone number             
 
         :param business_telephone_number: The business_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -285,8 +295,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def home_telephone_number(self) -> str:
-        """Gets the home_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the home telephone number             
 
         :return: The home_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -296,8 +305,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @home_telephone_number.setter
     def home_telephone_number(self, home_telephone_number: str):
-        """Sets the home_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the home telephone number             
 
         :param home_telephone_number: The home_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -307,8 +315,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def primary_telephone_number(self) -> str:
-        """Gets the primary_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the primary telephone number             
 
         :return: The primary_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -318,8 +325,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @primary_telephone_number.setter
     def primary_telephone_number(self, primary_telephone_number: str):
-        """Sets the primary_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the primary telephone number             
 
         :param primary_telephone_number: The primary_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -329,8 +335,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def business2_telephone_number(self) -> str:
-        """Gets the business2_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the second business telephone number             
 
         :return: The business2_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -340,8 +345,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @business2_telephone_number.setter
     def business2_telephone_number(self, business2_telephone_number: str):
-        """Sets the business2_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the second business telephone number             
 
         :param business2_telephone_number: The business2_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -351,8 +355,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def mobile_telephone_number(self) -> str:
-        """Gets the mobile_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the mobile telephone number             
 
         :return: The mobile_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -362,8 +365,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @mobile_telephone_number.setter
     def mobile_telephone_number(self, mobile_telephone_number: str):
-        """Sets the mobile_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the mobile telephone number             
 
         :param mobile_telephone_number: The mobile_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -373,8 +375,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def radio_telephone_number(self) -> str:
-        """Gets the radio_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the radio telephone number             
 
         :return: The radio_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -384,8 +385,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @radio_telephone_number.setter
     def radio_telephone_number(self, radio_telephone_number: str):
-        """Sets the radio_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the radio telephone number             
 
         :param radio_telephone_number: The radio_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -395,8 +395,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def car_telephone_number(self) -> str:
-        """Gets the car_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the car telephone number             
 
         :return: The car_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -406,8 +405,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @car_telephone_number.setter
     def car_telephone_number(self, car_telephone_number: str):
-        """Sets the car_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the car telephone number             
 
         :param car_telephone_number: The car_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -417,8 +415,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def other_telephone_number(self) -> str:
-        """Gets the other_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets an alternate telephone number             
 
         :return: The other_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -428,8 +425,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @other_telephone_number.setter
     def other_telephone_number(self, other_telephone_number: str):
-        """Sets the other_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets an alternate telephone number             
 
         :param other_telephone_number: The other_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -439,8 +435,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def assistant_telephone_number(self) -> str:
-        """Gets the assistant_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the telephone number of the contact's assistant             
 
         :return: The assistant_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -450,8 +445,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @assistant_telephone_number.setter
     def assistant_telephone_number(self, assistant_telephone_number: str):
-        """Sets the assistant_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the telephone number of the contact's assistant             
 
         :param assistant_telephone_number: The assistant_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -461,8 +455,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def home2_telephone_number(self) -> str:
-        """Gets the home2_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets a second home telephone number             
 
         :return: The home2_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -472,8 +465,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @home2_telephone_number.setter
     def home2_telephone_number(self, home2_telephone_number: str):
-        """Sets the home2_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets a second home telephone number             
 
         :param home2_telephone_number: The home2_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -483,8 +475,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def tty_tdd_phone_number(self) -> str:
-        """Gets the tty_tdd_phone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the telephone number for the contact's text telephone (TTY) or telecommunication device for the deaf (TDD)             
 
         :return: The tty_tdd_phone_number of this MapiContactTelephonePropertySetDto.
@@ -494,8 +485,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @tty_tdd_phone_number.setter
     def tty_tdd_phone_number(self, tty_tdd_phone_number: str):
-        """Sets the tty_tdd_phone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the telephone number for the contact's text telephone (TTY) or telecommunication device for the deaf (TDD)             
 
         :param tty_tdd_phone_number: The tty_tdd_phone_number of this MapiContactTelephonePropertySetDto.
@@ -505,8 +495,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def company_main_telephone_number(self) -> str:
-        """Gets the company_main_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the company phone number             
 
         :return: The company_main_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -516,8 +505,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @company_main_telephone_number.setter
     def company_main_telephone_number(self, company_main_telephone_number: str):
-        """Sets the company_main_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the company phone number             
 
         :param company_main_telephone_number: The company_main_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -527,8 +515,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def telex_number(self) -> str:
-        """Gets the telex_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the telex number             
 
         :return: The telex_number of this MapiContactTelephonePropertySetDto.
@@ -538,8 +525,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @telex_number.setter
     def telex_number(self, telex_number: str):
-        """Sets the telex_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the telex number             
 
         :param telex_number: The telex_number of this MapiContactTelephonePropertySetDto.
@@ -549,8 +535,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def isdn_number(self) -> str:
-        """Gets the isdn_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the integrated services digital network (ISDN) number             
 
         :return: The isdn_number of this MapiContactTelephonePropertySetDto.
@@ -560,8 +545,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @isdn_number.setter
     def isdn_number(self, isdn_number: str):
-        """Sets the isdn_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets the integrated services digital network (ISDN) number             
 
         :param isdn_number: The isdn_number of this MapiContactTelephonePropertySetDto.
@@ -571,8 +555,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @property
     def pager_telephone_number(self) -> str:
-        """Gets the pager_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets a pager telephone number             
 
         :return: The pager_telephone_number of this MapiContactTelephonePropertySetDto.
@@ -582,8 +565,7 @@ class MapiContactTelephonePropertySetDto(object):
 
     @pager_telephone_number.setter
     def pager_telephone_number(self, pager_telephone_number: str):
-        """Sets the pager_telephone_number of this MapiContactTelephonePropertySetDto.
-
+        """
         Gets or sets a pager telephone number             
 
         :param pager_telephone_number: The pager_telephone_number of this MapiContactTelephonePropertySetDto.

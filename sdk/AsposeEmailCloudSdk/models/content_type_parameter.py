@@ -55,8 +55,10 @@ class ContentTypeParameter(object):
     def __init__(self, name: str = None, value: str = None):
         """
         Content-Type header parameter             
-        :param name (str) Parameter name             
-        :param value (str) Parameter value             
+        :param name: Parameter name             
+        :type name: str
+        :param value: Parameter value             
+        :type value: str
         """
 
         self._name = None
@@ -67,10 +69,10 @@ class ContentTypeParameter(object):
         if value is not None:
             self.value = value
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this ContentTypeParameter.
-
+        """
         Parameter name             
 
         :return: The name of this ContentTypeParameter.
@@ -80,8 +82,7 @@ class ContentTypeParameter(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this ContentTypeParameter.
-
+        """
         Parameter name             
 
         :param name: The name of this ContentTypeParameter.
@@ -91,8 +92,7 @@ class ContentTypeParameter(object):
 
     @property
     def value(self) -> str:
-        """Gets the value of this ContentTypeParameter.
-
+        """
         Parameter value             
 
         :return: The value of this ContentTypeParameter.
@@ -102,8 +102,7 @@ class ContentTypeParameter(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this ContentTypeParameter.
-
+        """
         Parameter value             
 
         :param value: The value of this ContentTypeParameter.

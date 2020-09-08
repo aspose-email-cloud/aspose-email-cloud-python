@@ -59,10 +59,14 @@ class MapiRecipientDto(object):
     def __init__(self, email_address: str = None, address_type: str = None, display_name: str = None, recipient_type: str = None):
         """
         Represents the recipient information in the Microsoft Outlook Message.             
-        :param email_address (str) Email address of the message recipient or sender.             
-        :param address_type (str) Type of the address of the message recipient or sender.             
-        :param display_name (str) Display name of the message recipient or sender.             
-        :param recipient_type (str) Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+        :param email_address: Email address of the message recipient or sender.             
+        :type email_address: str
+        :param address_type: Type of the address of the message recipient or sender.             
+        :type address_type: str
+        :param display_name: Display name of the message recipient or sender.             
+        :type display_name: str
+        :param recipient_type: Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+        :type recipient_type: str
         """
 
         self._email_address = None
@@ -79,10 +83,10 @@ class MapiRecipientDto(object):
         if recipient_type is not None:
             self.recipient_type = recipient_type
 
+
     @property
     def email_address(self) -> str:
-        """Gets the email_address of this MapiRecipientDto.
-
+        """
         Email address of the message recipient or sender.             
 
         :return: The email_address of this MapiRecipientDto.
@@ -92,8 +96,7 @@ class MapiRecipientDto(object):
 
     @email_address.setter
     def email_address(self, email_address: str):
-        """Sets the email_address of this MapiRecipientDto.
-
+        """
         Email address of the message recipient or sender.             
 
         :param email_address: The email_address of this MapiRecipientDto.
@@ -103,8 +106,7 @@ class MapiRecipientDto(object):
 
     @property
     def address_type(self) -> str:
-        """Gets the address_type of this MapiRecipientDto.
-
+        """
         Type of the address of the message recipient or sender.             
 
         :return: The address_type of this MapiRecipientDto.
@@ -114,8 +116,7 @@ class MapiRecipientDto(object):
 
     @address_type.setter
     def address_type(self, address_type: str):
-        """Sets the address_type of this MapiRecipientDto.
-
+        """
         Type of the address of the message recipient or sender.             
 
         :param address_type: The address_type of this MapiRecipientDto.
@@ -125,8 +126,7 @@ class MapiRecipientDto(object):
 
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this MapiRecipientDto.
-
+        """
         Display name of the message recipient or sender.             
 
         :return: The display_name of this MapiRecipientDto.
@@ -136,8 +136,7 @@ class MapiRecipientDto(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this MapiRecipientDto.
-
+        """
         Display name of the message recipient or sender.             
 
         :param display_name: The display_name of this MapiRecipientDto.
@@ -147,8 +146,7 @@ class MapiRecipientDto(object):
 
     @property
     def recipient_type(self) -> str:
-        """Gets the recipient_type of this MapiRecipientDto.
-
+        """
         Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
 
         :return: The recipient_type of this MapiRecipientDto.
@@ -158,8 +156,7 @@ class MapiRecipientDto(object):
 
     @recipient_type.setter
     def recipient_type(self, recipient_type: str):
-        """Sets the recipient_type of this MapiRecipientDto.
-
+        """
         Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
 
         :param recipient_type: The recipient_type of this MapiRecipientDto.

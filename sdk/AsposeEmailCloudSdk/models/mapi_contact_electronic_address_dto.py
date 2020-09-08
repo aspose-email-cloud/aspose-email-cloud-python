@@ -63,12 +63,18 @@ class MapiContactElectronicAddressDto(object):
     def __init__(self, address_type: str = None, display_name: str = None, email_address: str = None, fax_number: str = None, is_empty: bool = None, original_display_name: str = None):
         """
         Refers to the group of properties that define the e-mail address or fax address for a contact.             
-        :param address_type (str) Address type of an electronic address
-        :param display_name (str) User-readable display name for the e-mail address
-        :param email_address (str) E-mail address of the contact
-        :param fax_number (str) Telephone number of the mail user's primary fax machine
-        :param is_empty (bool) Shows if MapiContactElectronicAddress is empty
-        :param original_display_name (str) SMTP e-mail address that corresponds to the e-mail address for the Contact object.
+        :param address_type: Address type of an electronic address
+        :type address_type: str
+        :param display_name: User-readable display name for the e-mail address
+        :type display_name: str
+        :param email_address: E-mail address of the contact
+        :type email_address: str
+        :param fax_number: Telephone number of the mail user's primary fax machine
+        :type fax_number: str
+        :param is_empty: Shows if MapiContactElectronicAddress is empty
+        :type is_empty: bool
+        :param original_display_name: SMTP e-mail address that corresponds to the e-mail address for the Contact object.
+        :type original_display_name: str
         """
 
         self._address_type = None
@@ -91,10 +97,10 @@ class MapiContactElectronicAddressDto(object):
         if original_display_name is not None:
             self.original_display_name = original_display_name
 
+
     @property
     def address_type(self) -> str:
-        """Gets the address_type of this MapiContactElectronicAddressDto.
-
+        """
         Address type of an electronic address
 
         :return: The address_type of this MapiContactElectronicAddressDto.
@@ -104,8 +110,7 @@ class MapiContactElectronicAddressDto(object):
 
     @address_type.setter
     def address_type(self, address_type: str):
-        """Sets the address_type of this MapiContactElectronicAddressDto.
-
+        """
         Address type of an electronic address
 
         :param address_type: The address_type of this MapiContactElectronicAddressDto.
@@ -115,8 +120,7 @@ class MapiContactElectronicAddressDto(object):
 
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this MapiContactElectronicAddressDto.
-
+        """
         User-readable display name for the e-mail address
 
         :return: The display_name of this MapiContactElectronicAddressDto.
@@ -126,8 +130,7 @@ class MapiContactElectronicAddressDto(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this MapiContactElectronicAddressDto.
-
+        """
         User-readable display name for the e-mail address
 
         :param display_name: The display_name of this MapiContactElectronicAddressDto.
@@ -137,8 +140,7 @@ class MapiContactElectronicAddressDto(object):
 
     @property
     def email_address(self) -> str:
-        """Gets the email_address of this MapiContactElectronicAddressDto.
-
+        """
         E-mail address of the contact
 
         :return: The email_address of this MapiContactElectronicAddressDto.
@@ -148,8 +150,7 @@ class MapiContactElectronicAddressDto(object):
 
     @email_address.setter
     def email_address(self, email_address: str):
-        """Sets the email_address of this MapiContactElectronicAddressDto.
-
+        """
         E-mail address of the contact
 
         :param email_address: The email_address of this MapiContactElectronicAddressDto.
@@ -159,8 +160,7 @@ class MapiContactElectronicAddressDto(object):
 
     @property
     def fax_number(self) -> str:
-        """Gets the fax_number of this MapiContactElectronicAddressDto.
-
+        """
         Telephone number of the mail user's primary fax machine
 
         :return: The fax_number of this MapiContactElectronicAddressDto.
@@ -170,8 +170,7 @@ class MapiContactElectronicAddressDto(object):
 
     @fax_number.setter
     def fax_number(self, fax_number: str):
-        """Sets the fax_number of this MapiContactElectronicAddressDto.
-
+        """
         Telephone number of the mail user's primary fax machine
 
         :param fax_number: The fax_number of this MapiContactElectronicAddressDto.
@@ -181,8 +180,7 @@ class MapiContactElectronicAddressDto(object):
 
     @property
     def is_empty(self) -> bool:
-        """Gets the is_empty of this MapiContactElectronicAddressDto.
-
+        """
         Shows if MapiContactElectronicAddress is empty
 
         :return: The is_empty of this MapiContactElectronicAddressDto.
@@ -192,8 +190,7 @@ class MapiContactElectronicAddressDto(object):
 
     @is_empty.setter
     def is_empty(self, is_empty: bool):
-        """Sets the is_empty of this MapiContactElectronicAddressDto.
-
+        """
         Shows if MapiContactElectronicAddress is empty
 
         :param is_empty: The is_empty of this MapiContactElectronicAddressDto.
@@ -205,8 +202,7 @@ class MapiContactElectronicAddressDto(object):
 
     @property
     def original_display_name(self) -> str:
-        """Gets the original_display_name of this MapiContactElectronicAddressDto.
-
+        """
         SMTP e-mail address that corresponds to the e-mail address for the Contact object.
 
         :return: The original_display_name of this MapiContactElectronicAddressDto.
@@ -216,8 +212,7 @@ class MapiContactElectronicAddressDto(object):
 
     @original_display_name.setter
     def original_display_name(self, original_display_name: str):
-        """Sets the original_display_name of this MapiContactElectronicAddressDto.
-
+        """
         SMTP e-mail address that corresponds to the e-mail address for the Contact object.
 
         :param original_display_name: The original_display_name of this MapiContactElectronicAddressDto.

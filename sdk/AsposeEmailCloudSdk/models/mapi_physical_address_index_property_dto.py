@@ -57,12 +57,13 @@ class MapiPhysicalAddressIndexPropertyDto(MapiPropertyDto):
         'value': 'value'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: str = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value: str = None):
         """
         Mapi property with PhysicalAddressIndexType value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (str) Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
+        :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
+        :param value: Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
+        :type value: str
         """
         super(MapiPhysicalAddressIndexPropertyDto, self).__init__()
 
@@ -70,15 +71,13 @@ class MapiPhysicalAddressIndexPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this MapiPhysicalAddressIndexPropertyDto.
-
+        """
         Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
 
         :return: The value of this MapiPhysicalAddressIndexPropertyDto.
@@ -88,8 +87,7 @@ class MapiPhysicalAddressIndexPropertyDto(MapiPropertyDto):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this MapiPhysicalAddressIndexPropertyDto.
-
+        """
         Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
 
         :param value: The value of this MapiPhysicalAddressIndexPropertyDto.

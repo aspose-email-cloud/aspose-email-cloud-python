@@ -56,12 +56,14 @@ class EmailThreadList(ListResponseOfEmailThread):
     def __init__(self, value: List[EmailThread] = None):
         """
         List of email threads             
-        :param value (List[EmailThread]) 
+        :param value: 
+        :type value: List[EmailThread]
         """
         super(EmailThreadList, self).__init__()
 
         if value is not None:
             self.value = value
+
 
     def to_dict(self):
         """Returns the model properties as a dict"""

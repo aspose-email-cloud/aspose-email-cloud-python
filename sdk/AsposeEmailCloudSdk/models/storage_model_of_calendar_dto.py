@@ -58,8 +58,10 @@ class StorageModelOfCalendarDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: CalendarDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (CalendarDto) 
+        :param storage_file: 
+        :type storage_file: StorageFileLocation
+        :param value: 
+        :type value: CalendarDto
         """
 
         self._storage_file = None
@@ -70,10 +72,11 @@ class StorageModelOfCalendarDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfCalendarDto.
-
+        """
+        Gets the storage_file of this StorageModelOfCalendarDto.
 
         :return: The storage_file of this StorageModelOfCalendarDto.
         :rtype: StorageFileLocation
@@ -82,18 +85,20 @@ class StorageModelOfCalendarDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfCalendarDto.
-
+        """
+        Sets the storage_file of this StorageModelOfCalendarDto.
 
         :param storage_file: The storage_file of this StorageModelOfCalendarDto.
         :type: StorageFileLocation
         """
+        if storage_file is None:
+            raise ValueError("Invalid value for `storage_file`, must not be `None`")
         self._storage_file = storage_file
 
     @property
     def value(self) -> CalendarDto:
-        """Gets the value of this StorageModelOfCalendarDto.
-
+        """
+        Gets the value of this StorageModelOfCalendarDto.
 
         :return: The value of this StorageModelOfCalendarDto.
         :rtype: CalendarDto
@@ -102,12 +107,14 @@ class StorageModelOfCalendarDto(object):
 
     @value.setter
     def value(self, value: CalendarDto):
-        """Sets the value of this StorageModelOfCalendarDto.
-
+        """
+        Sets the value of this StorageModelOfCalendarDto.
 
         :param value: The value of this StorageModelOfCalendarDto.
         :type: CalendarDto
         """
+        if value is None:
+            raise ValueError("Invalid value for `value`, must not be `None`")
         self._value = value
 
     def to_dict(self):

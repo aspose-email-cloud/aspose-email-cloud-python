@@ -67,14 +67,22 @@ class MapiContactOtherPropertySetDto(object):
     def __init__(self, private: bool = None, journal: bool = None, reminder_time: datetime = None, reminder_topic: str = None, user_field1: str = None, user_field2: str = None, user_field3: str = None, user_field4: str = None):
         """
         The properties are used to specify additional properties of contact.             
-        :param private (bool) Indicates whether the end-user wants this message object hidden from other users who have access to the message object.             
-        :param journal (bool) Specifies whether to create a journal for each action associated with this contact.             
-        :param reminder_time (datetime) Specifies the initial signal time for a reminder.             
-        :param reminder_topic (str) Represents the status of a meeting request.             
-        :param user_field1 (str) Specifies the first field on the contact that is intended for miscellaneous use for the contact.             
-        :param user_field2 (str) Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
-        :param user_field3 (str) Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
-        :param user_field4 (str) Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
+        :param private: Indicates whether the end-user wants this message object hidden from other users who have access to the message object.             
+        :type private: bool
+        :param journal: Specifies whether to create a journal for each action associated with this contact.             
+        :type journal: bool
+        :param reminder_time: Specifies the initial signal time for a reminder.             
+        :type reminder_time: datetime
+        :param reminder_topic: Represents the status of a meeting request.             
+        :type reminder_topic: str
+        :param user_field1: Specifies the first field on the contact that is intended for miscellaneous use for the contact.             
+        :type user_field1: str
+        :param user_field2: Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
+        :type user_field2: str
+        :param user_field3: Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
+        :type user_field3: str
+        :param user_field4: Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
+        :type user_field4: str
         """
 
         self._private = None
@@ -103,10 +111,10 @@ class MapiContactOtherPropertySetDto(object):
         if user_field4 is not None:
             self.user_field4 = user_field4
 
+
     @property
     def private(self) -> bool:
-        """Gets the private of this MapiContactOtherPropertySetDto.
-
+        """
         Indicates whether the end-user wants this message object hidden from other users who have access to the message object.             
 
         :return: The private of this MapiContactOtherPropertySetDto.
@@ -116,8 +124,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @private.setter
     def private(self, private: bool):
-        """Sets the private of this MapiContactOtherPropertySetDto.
-
+        """
         Indicates whether the end-user wants this message object hidden from other users who have access to the message object.             
 
         :param private: The private of this MapiContactOtherPropertySetDto.
@@ -129,8 +136,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @property
     def journal(self) -> bool:
-        """Gets the journal of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies whether to create a journal for each action associated with this contact.             
 
         :return: The journal of this MapiContactOtherPropertySetDto.
@@ -140,8 +146,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @journal.setter
     def journal(self, journal: bool):
-        """Sets the journal of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies whether to create a journal for each action associated with this contact.             
 
         :param journal: The journal of this MapiContactOtherPropertySetDto.
@@ -153,8 +158,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @property
     def reminder_time(self) -> datetime:
-        """Gets the reminder_time of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the initial signal time for a reminder.             
 
         :return: The reminder_time of this MapiContactOtherPropertySetDto.
@@ -164,8 +168,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @reminder_time.setter
     def reminder_time(self, reminder_time: datetime):
-        """Sets the reminder_time of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the initial signal time for a reminder.             
 
         :param reminder_time: The reminder_time of this MapiContactOtherPropertySetDto.
@@ -177,8 +180,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @property
     def reminder_topic(self) -> str:
-        """Gets the reminder_topic of this MapiContactOtherPropertySetDto.
-
+        """
         Represents the status of a meeting request.             
 
         :return: The reminder_topic of this MapiContactOtherPropertySetDto.
@@ -188,8 +190,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @reminder_topic.setter
     def reminder_topic(self, reminder_topic: str):
-        """Sets the reminder_topic of this MapiContactOtherPropertySetDto.
-
+        """
         Represents the status of a meeting request.             
 
         :param reminder_topic: The reminder_topic of this MapiContactOtherPropertySetDto.
@@ -199,8 +200,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @property
     def user_field1(self) -> str:
-        """Gets the user_field1 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the first field on the contact that is intended for miscellaneous use for the contact.             
 
         :return: The user_field1 of this MapiContactOtherPropertySetDto.
@@ -210,8 +210,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @user_field1.setter
     def user_field1(self, user_field1: str):
-        """Sets the user_field1 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the first field on the contact that is intended for miscellaneous use for the contact.             
 
         :param user_field1: The user_field1 of this MapiContactOtherPropertySetDto.
@@ -221,8 +220,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @property
     def user_field2(self) -> str:
-        """Gets the user_field2 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
 
         :return: The user_field2 of this MapiContactOtherPropertySetDto.
@@ -232,8 +230,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @user_field2.setter
     def user_field2(self, user_field2: str):
-        """Sets the user_field2 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the second field on the contact that is intended for miscellaneous use for the contact.             
 
         :param user_field2: The user_field2 of this MapiContactOtherPropertySetDto.
@@ -243,8 +240,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @property
     def user_field3(self) -> str:
-        """Gets the user_field3 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
 
         :return: The user_field3 of this MapiContactOtherPropertySetDto.
@@ -254,8 +250,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @user_field3.setter
     def user_field3(self, user_field3: str):
-        """Sets the user_field3 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the third field on the contact that is intended for miscellaneous use for the contact.             
 
         :param user_field3: The user_field3 of this MapiContactOtherPropertySetDto.
@@ -265,8 +260,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @property
     def user_field4(self) -> str:
-        """Gets the user_field4 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
 
         :return: The user_field4 of this MapiContactOtherPropertySetDto.
@@ -276,8 +270,7 @@ class MapiContactOtherPropertySetDto(object):
 
     @user_field4.setter
     def user_field4(self, user_field4: str):
-        """Sets the user_field4 of this MapiContactOtherPropertySetDto.
-
+        """
         Specifies the forth field on the contact that is intended for miscellaneous use for the contact.             
 
         :param user_field4: The user_field4 of this MapiContactOtherPropertySetDto.

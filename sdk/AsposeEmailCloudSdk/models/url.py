@@ -59,9 +59,12 @@ class Url(object):
     def __init__(self, category: EnumWithCustomOfUrlCategory = None, preferred: bool = None, href: str = None):
         """
         Url and its category.             
-        :param category (EnumWithCustomOfUrlCategory) Url category.             
-        :param preferred (bool) Defines whether url is preferred.             
-        :param href (str) URL.             
+        :param category: Url category.             
+        :type category: EnumWithCustomOfUrlCategory
+        :param preferred: Defines whether url is preferred.             
+        :type preferred: bool
+        :param href: URL.             
+        :type href: str
         """
 
         self._category = None
@@ -75,10 +78,10 @@ class Url(object):
         if href is not None:
             self.href = href
 
+
     @property
     def category(self) -> EnumWithCustomOfUrlCategory:
-        """Gets the category of this Url.
-
+        """
         Url category.             
 
         :return: The category of this Url.
@@ -88,8 +91,7 @@ class Url(object):
 
     @category.setter
     def category(self, category: EnumWithCustomOfUrlCategory):
-        """Sets the category of this Url.
-
+        """
         Url category.             
 
         :param category: The category of this Url.
@@ -99,8 +101,7 @@ class Url(object):
 
     @property
     def preferred(self) -> bool:
-        """Gets the preferred of this Url.
-
+        """
         Defines whether url is preferred.             
 
         :return: The preferred of this Url.
@@ -110,8 +111,7 @@ class Url(object):
 
     @preferred.setter
     def preferred(self, preferred: bool):
-        """Sets the preferred of this Url.
-
+        """
         Defines whether url is preferred.             
 
         :param preferred: The preferred of this Url.
@@ -123,8 +123,7 @@ class Url(object):
 
     @property
     def href(self) -> str:
-        """Gets the href of this Url.
-
+        """
         URL.             
 
         :return: The href of this Url.
@@ -134,8 +133,7 @@ class Url(object):
 
     @href.setter
     def href(self, href: str):
-        """Sets the href of this Url.
-
+        """
         URL.             
 
         :param href: The href of this Url.

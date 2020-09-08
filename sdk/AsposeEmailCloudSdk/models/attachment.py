@@ -72,15 +72,24 @@ class Attachment(AttachmentBase):
     def __init__(self, base64_data: str = None, content_id: str = None, content_type: ContentType = None, headers: Dict[str, str] = None, content_disposition: str = None, is_embedded_message: bool = None, name: str = None, name_encoding: str = None, preferred_text_encoding: str = None):
         """
         Document attachment.             
-        :param base64_data (str) Attachment file content as Base64 string.             
-        :param content_id (str) Attachment content id             
-        :param content_type (ContentType) Content type             
-        :param headers (Dict[str, str]) Attachment headers.             
-        :param content_disposition (str) Content-Disposition header. Read only.             
-        :param is_embedded_message (bool) Determines if attachment is an embedded message. Read only.             
-        :param name (str) Attachment name.             
-        :param name_encoding (str) Encoding of attachment name.             
-        :param preferred_text_encoding (str) Preferred text encoding.             
+        :param base64_data: Attachment file content as Base64 string.             
+        :type base64_data: str
+        :param content_id: Attachment content id             
+        :type content_id: str
+        :param content_type: Content type             
+        :type content_type: ContentType
+        :param headers: Attachment headers.             
+        :type headers: Dict[str, str]
+        :param content_disposition: Content-Disposition header. Read only.             
+        :type content_disposition: str
+        :param is_embedded_message: Determines if attachment is an embedded message. Read only.             
+        :type is_embedded_message: bool
+        :param name: Attachment name.             
+        :type name: str
+        :param name_encoding: Encoding of attachment name.             
+        :type name_encoding: str
+        :param preferred_text_encoding: Preferred text encoding.             
+        :type preferred_text_encoding: str
         """
         super(Attachment, self).__init__()
 
@@ -109,10 +118,10 @@ class Attachment(AttachmentBase):
         if preferred_text_encoding is not None:
             self.preferred_text_encoding = preferred_text_encoding
 
+
     @property
     def content_disposition(self) -> str:
-        """Gets the content_disposition of this Attachment.
-
+        """
         Content-Disposition header. Read only.             
 
         :return: The content_disposition of this Attachment.
@@ -122,8 +131,7 @@ class Attachment(AttachmentBase):
 
     @content_disposition.setter
     def content_disposition(self, content_disposition: str):
-        """Sets the content_disposition of this Attachment.
-
+        """
         Content-Disposition header. Read only.             
 
         :param content_disposition: The content_disposition of this Attachment.
@@ -133,8 +141,7 @@ class Attachment(AttachmentBase):
 
     @property
     def is_embedded_message(self) -> bool:
-        """Gets the is_embedded_message of this Attachment.
-
+        """
         Determines if attachment is an embedded message. Read only.             
 
         :return: The is_embedded_message of this Attachment.
@@ -144,8 +151,7 @@ class Attachment(AttachmentBase):
 
     @is_embedded_message.setter
     def is_embedded_message(self, is_embedded_message: bool):
-        """Sets the is_embedded_message of this Attachment.
-
+        """
         Determines if attachment is an embedded message. Read only.             
 
         :param is_embedded_message: The is_embedded_message of this Attachment.
@@ -157,8 +163,7 @@ class Attachment(AttachmentBase):
 
     @property
     def name(self) -> str:
-        """Gets the name of this Attachment.
-
+        """
         Attachment name.             
 
         :return: The name of this Attachment.
@@ -168,8 +173,7 @@ class Attachment(AttachmentBase):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this Attachment.
-
+        """
         Attachment name.             
 
         :param name: The name of this Attachment.
@@ -179,8 +183,7 @@ class Attachment(AttachmentBase):
 
     @property
     def name_encoding(self) -> str:
-        """Gets the name_encoding of this Attachment.
-
+        """
         Encoding of attachment name.             
 
         :return: The name_encoding of this Attachment.
@@ -190,8 +193,7 @@ class Attachment(AttachmentBase):
 
     @name_encoding.setter
     def name_encoding(self, name_encoding: str):
-        """Sets the name_encoding of this Attachment.
-
+        """
         Encoding of attachment name.             
 
         :param name_encoding: The name_encoding of this Attachment.
@@ -201,8 +203,7 @@ class Attachment(AttachmentBase):
 
     @property
     def preferred_text_encoding(self) -> str:
-        """Gets the preferred_text_encoding of this Attachment.
-
+        """
         Preferred text encoding.             
 
         :return: The preferred_text_encoding of this Attachment.
@@ -212,8 +213,7 @@ class Attachment(AttachmentBase):
 
     @preferred_text_encoding.setter
     def preferred_text_encoding(self, preferred_text_encoding: str):
-        """Sets the preferred_text_encoding of this Attachment.
-
+        """
         Preferred text encoding.             
 
         :param preferred_text_encoding: The preferred_text_encoding of this Attachment.

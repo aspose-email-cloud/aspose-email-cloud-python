@@ -57,12 +57,13 @@ class MapiIntPropertyDto(MapiPropertyDto):
         'value': 'value'
     }
 
-    def __init__(self, descriptor: MapiPropertyDescriptor = None, discriminator: str = None, value: int = None):
+    def __init__(self, descriptor: MapiPropertyDescriptor = None, value: int = None):
         """
         Mapi property with Integer value             
-        :param descriptor (MapiPropertyDescriptor) Property descriptor             
-        :param discriminator (str) 
-        :param value (int) Property value             
+        :param descriptor: Property descriptor             
+        :type descriptor: MapiPropertyDescriptor
+        :param value: Property value             
+        :type value: int
         """
         super(MapiIntPropertyDto, self).__init__()
 
@@ -70,15 +71,13 @@ class MapiIntPropertyDto(MapiPropertyDto):
 
         if descriptor is not None:
             self.descriptor = descriptor
-        if discriminator is not None:
-            self.discriminator = discriminator
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> int:
-        """Gets the value of this MapiIntPropertyDto.
-
+        """
         Property value             
 
         :return: The value of this MapiIntPropertyDto.
@@ -88,8 +87,7 @@ class MapiIntPropertyDto(MapiPropertyDto):
 
     @value.setter
     def value(self, value: int):
-        """Sets the value of this MapiIntPropertyDto.
-
+        """
         Property value             
 
         :param value: The value of this MapiIntPropertyDto.

@@ -55,8 +55,10 @@ class AiNameWeighted(object):
     def __init__(self, name: str = None, score: float = None):
         """
         Name with score             
-        :param name (str) Name             
-        :param score (float) Score of name             
+        :param name: Name             
+        :type name: str
+        :param score: Score of name             
+        :type score: float
         """
 
         self._name = None
@@ -67,10 +69,10 @@ class AiNameWeighted(object):
         if score is not None:
             self.score = score
 
+
     @property
     def name(self) -> str:
-        """Gets the name of this AiNameWeighted.
-
+        """
         Name             
 
         :return: The name of this AiNameWeighted.
@@ -80,8 +82,7 @@ class AiNameWeighted(object):
 
     @name.setter
     def name(self, name: str):
-        """Sets the name of this AiNameWeighted.
-
+        """
         Name             
 
         :param name: The name of this AiNameWeighted.
@@ -91,8 +92,7 @@ class AiNameWeighted(object):
 
     @property
     def score(self) -> float:
-        """Gets the score of this AiNameWeighted.
-
+        """
         Score of name             
 
         :return: The score of this AiNameWeighted.
@@ -102,8 +102,7 @@ class AiNameWeighted(object):
 
     @score.setter
     def score(self, score: float):
-        """Sets the score of this AiNameWeighted.
-
+        """
         Score of name             
 
         :param score: The score of this AiNameWeighted.

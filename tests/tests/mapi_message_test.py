@@ -8,16 +8,13 @@ import pytest
 from datetime import datetime
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../sdk"))
 from AsposeEmailCloudSdk import models
-from AsposeEmailCloudSdk.models import requests
 from conftest import EmailApiData
 
 
 @pytest.mark.pipeline
 def test_mapi_model_to_general_model(td: EmailApiData):
     mapi_message = mapi_message_dto()
-    email = td.email.convert_mapi_message_model_to_email_model(
-        requests.ConvertMapiMessageModelToEmailModelRequest(mapi_message))
-
+    email = td.api.mapi.message.as_email_dto(mapi_message)
     assert mapi_message.subject == email.subject
     assert mapi_message.body == email.body
 
@@ -25,15 +22,11 @@ def test_mapi_model_to_general_model(td: EmailApiData):
 @pytest.mark.pipeline
 def test_mapi_model_to_file(td: EmailApiData):
     mapi_message = mapi_message_dto()
-    eml_file = td.email.convert_mapi_message_model_to_file(
-        requests.ConvertMapiMessageModelToFileRequest('Eml', mapi_message))
-
+    eml_file = td.api.mapi.message.as_file(models.MapiMessageAsFileRequest('Eml', mapi_message))
     with open(eml_file, 'r') as f:
         file_data = f.read()
         assert mapi_message.subject in file_data
-    mapi_message_converted = td.email.get_email_file_as_mapi_model(
-        requests.GetEmailFileAsMapiModelRequest('Eml', eml_file))
-
+    mapi_message_converted = td.api.mapi.message.from_file(models.MapiMessageFromFileRequest('Eml', eml_file))
     assert mapi_message.subject == mapi_message_converted.subject
     # Subject is also available as MapiPropertyDto:
     # There are different Property descriptors supported.
@@ -49,12 +42,11 @@ def test_mapi_model_to_file(td: EmailApiData):
 def test_storage_support(td: EmailApiData):
     file_name = str(uuid.uuid4()) + '.msg'
     mapi_message = mapi_message_dto()
-    td.email.save_mapi_message_model(
-        requests.SaveMapiMessageModelRequest(
-            'Msg', file_name,
-            models.StorageModelRqOfMapiMessageDto(mapi_message, td.storage_folder())))
-    mapi_message_from_storage = td.email.get_mapi_message_model(
-        requests.GetMapiMessageModelRequest('Msg', file_name, td.folder, td.storage))
+    td.api.mapi.message.save(models.MapiMessageSaveRequest(
+        models.StorageFileLocation(td.storage, td.folder, file_name),
+        mapi_message, 'Msg'))
+    mapi_message_from_storage = td.api.mapi.message.get(
+        models.MapiMessageGetRequest('Msg', file_name, td.folder, td.storage))
     assert mapi_message.subject == mapi_message_from_storage.subject
 
 

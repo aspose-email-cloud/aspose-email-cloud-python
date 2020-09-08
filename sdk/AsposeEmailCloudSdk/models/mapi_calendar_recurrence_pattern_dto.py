@@ -78,23 +78,35 @@ class MapiCalendarRecurrencePatternDto(object):
         'discriminator': 'discriminator'
     }
 
-    def __init__(self, calendar_type: str = None, deleted_instance_dates: List[datetime] = None, end_date: datetime = None, end_type: str = None, exceptions: List[MapiCalendarExceptionInfoDto] = None, frequency: str = None, modified_instance_dates: List[datetime] = None, occurrence_count: int = None, pattern_type: str = None, period: int = None, sliding_flag: bool = None, start_date: datetime = None, week_start_day: str = None, discriminator: str = None):
+    def __init__(self, calendar_type: str = None, deleted_instance_dates: List[datetime] = None, end_date: datetime = None, end_type: str = None, exceptions: List[MapiCalendarExceptionInfoDto] = None, frequency: str = None, modified_instance_dates: List[datetime] = None, occurrence_count: int = None, pattern_type: str = None, period: int = None, sliding_flag: bool = None, start_date: datetime = None, week_start_day: str = None):
         """
         Mapi recurrence pattern.             
-        :param calendar_type (str) Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
-        :param deleted_instance_dates (List[datetime]) An array of dates, each of which is the original instance date of either a deleted instance or a modified instance for this recurrence.             
-        :param end_date (datetime) End date of an item recurrence pattern.             
-        :param end_type (str) Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
-        :param exceptions (List[MapiCalendarExceptionInfoDto]) An exception specifies changes to an instance of a recurring series.             
-        :param frequency (str) Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
-        :param modified_instance_dates (List[datetime]) An array of dates, each of which is the date of a modified instance.             
-        :param occurrence_count (int) Number of occurrences in a recurrence.             
-        :param pattern_type (str) Enumerates the mapi calendar recurrence pattern types Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
-        :param period (int) Interval at which the meeting pattern repeats.             
-        :param sliding_flag (bool) Defines whether pattern is sliding or not.             
-        :param start_date (datetime) Start date of an item recurrence pattern.             
-        :param week_start_day (str) Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-        :param discriminator (str) 
+        :param calendar_type: Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
+        :type calendar_type: str
+        :param deleted_instance_dates: An array of dates, each of which is the original instance date of either a deleted instance or a modified instance for this recurrence.             
+        :type deleted_instance_dates: List[datetime]
+        :param end_date: End date of an item recurrence pattern.             
+        :type end_date: datetime
+        :param end_type: Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
+        :type end_type: str
+        :param exceptions: An exception specifies changes to an instance of a recurring series.             
+        :type exceptions: List[MapiCalendarExceptionInfoDto]
+        :param frequency: Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
+        :type frequency: str
+        :param modified_instance_dates: An array of dates, each of which is the date of a modified instance.             
+        :type modified_instance_dates: List[datetime]
+        :param occurrence_count: Number of occurrences in a recurrence.             
+        :type occurrence_count: int
+        :param pattern_type: Enumerates the mapi calendar recurrence pattern types Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
+        :type pattern_type: str
+        :param period: Interval at which the meeting pattern repeats.             
+        :type period: int
+        :param sliding_flag: Defines whether pattern is sliding or not.             
+        :type sliding_flag: bool
+        :param start_date: Start date of an item recurrence pattern.             
+        :type start_date: datetime
+        :param week_start_day: Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        :type week_start_day: str
         """
 
         self._calendar_type = None
@@ -110,7 +122,6 @@ class MapiCalendarRecurrencePatternDto(object):
         self._sliding_flag = None
         self._start_date = None
         self._week_start_day = None
-        self._discriminator = self.__class__.__name__
 
         if calendar_type is not None:
             self.calendar_type = calendar_type
@@ -138,13 +149,11 @@ class MapiCalendarRecurrencePatternDto(object):
             self.start_date = start_date
         if week_start_day is not None:
             self.week_start_day = week_start_day
-        if discriminator is not None:
-            self.discriminator = discriminator
+
 
     @property
     def calendar_type(self) -> str:
-        """Gets the calendar_type of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
 
         :return: The calendar_type of this MapiCalendarRecurrencePatternDto.
@@ -154,8 +163,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @calendar_type.setter
     def calendar_type(self, calendar_type: str):
-        """Sets the calendar_type of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerated the calendar type of the mapi recurrence Enum, available values: Default, CalGregorian, CalGregorianUs, CalJapan, CalTaiwan, CalKorea, CalHijri, CalThai, CalHebrew, CalGregorianMeFrench, CalGregorianArabic, CalGregorianXLitEnglish, CalGregorianXLitFrench, CalLunarJapanese, CalChineseLunar, CalSaka, CalLunarEtoChn, CalLunarEtoKor, CalLunarRokuyou, CalLunarKorean, CalUmAlQura
 
         :param calendar_type: The calendar_type of this MapiCalendarRecurrencePatternDto.
@@ -167,8 +175,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def deleted_instance_dates(self) -> List[datetime]:
-        """Gets the deleted_instance_dates of this MapiCalendarRecurrencePatternDto.
-
+        """
         An array of dates, each of which is the original instance date of either a deleted instance or a modified instance for this recurrence.             
 
         :return: The deleted_instance_dates of this MapiCalendarRecurrencePatternDto.
@@ -178,8 +185,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @deleted_instance_dates.setter
     def deleted_instance_dates(self, deleted_instance_dates: List[datetime]):
-        """Sets the deleted_instance_dates of this MapiCalendarRecurrencePatternDto.
-
+        """
         An array of dates, each of which is the original instance date of either a deleted instance or a modified instance for this recurrence.             
 
         :param deleted_instance_dates: The deleted_instance_dates of this MapiCalendarRecurrencePatternDto.
@@ -189,8 +195,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def end_date(self) -> datetime:
-        """Gets the end_date of this MapiCalendarRecurrencePatternDto.
-
+        """
         End date of an item recurrence pattern.             
 
         :return: The end_date of this MapiCalendarRecurrencePatternDto.
@@ -200,8 +205,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @end_date.setter
     def end_date(self, end_date: datetime):
-        """Sets the end_date of this MapiCalendarRecurrencePatternDto.
-
+        """
         End date of an item recurrence pattern.             
 
         :param end_date: The end_date of this MapiCalendarRecurrencePatternDto.
@@ -213,8 +217,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def end_type(self) -> str:
-        """Gets the end_type of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
 
         :return: The end_type of this MapiCalendarRecurrencePatternDto.
@@ -224,8 +227,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @end_type.setter
     def end_type(self, end_type: str):
-        """Sets the end_type of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerates the ending type for the recurrence. Enum, available values: None, EndAfterDate, EndAfterNOccurrences, NeverEnd
 
         :param end_type: The end_type of this MapiCalendarRecurrencePatternDto.
@@ -237,8 +239,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def exceptions(self) -> List[MapiCalendarExceptionInfoDto]:
-        """Gets the exceptions of this MapiCalendarRecurrencePatternDto.
-
+        """
         An exception specifies changes to an instance of a recurring series.             
 
         :return: The exceptions of this MapiCalendarRecurrencePatternDto.
@@ -248,8 +249,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @exceptions.setter
     def exceptions(self, exceptions: List[MapiCalendarExceptionInfoDto]):
-        """Sets the exceptions of this MapiCalendarRecurrencePatternDto.
-
+        """
         An exception specifies changes to an instance of a recurring series.             
 
         :param exceptions: The exceptions of this MapiCalendarRecurrencePatternDto.
@@ -259,8 +259,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def frequency(self) -> str:
-        """Gets the frequency of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
 
         :return: The frequency of this MapiCalendarRecurrencePatternDto.
@@ -270,8 +269,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @frequency.setter
     def frequency(self, frequency: str):
-        """Sets the frequency of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerates mapi calendar recurrence frequency Enum, available values: None, Daily, Weekly, Monthly, Yearly
 
         :param frequency: The frequency of this MapiCalendarRecurrencePatternDto.
@@ -283,8 +281,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def modified_instance_dates(self) -> List[datetime]:
-        """Gets the modified_instance_dates of this MapiCalendarRecurrencePatternDto.
-
+        """
         An array of dates, each of which is the date of a modified instance.             
 
         :return: The modified_instance_dates of this MapiCalendarRecurrencePatternDto.
@@ -294,8 +291,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @modified_instance_dates.setter
     def modified_instance_dates(self, modified_instance_dates: List[datetime]):
-        """Sets the modified_instance_dates of this MapiCalendarRecurrencePatternDto.
-
+        """
         An array of dates, each of which is the date of a modified instance.             
 
         :param modified_instance_dates: The modified_instance_dates of this MapiCalendarRecurrencePatternDto.
@@ -305,8 +301,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def occurrence_count(self) -> int:
-        """Gets the occurrence_count of this MapiCalendarRecurrencePatternDto.
-
+        """
         Number of occurrences in a recurrence.             
 
         :return: The occurrence_count of this MapiCalendarRecurrencePatternDto.
@@ -316,8 +311,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @occurrence_count.setter
     def occurrence_count(self, occurrence_count: int):
-        """Sets the occurrence_count of this MapiCalendarRecurrencePatternDto.
-
+        """
         Number of occurrences in a recurrence.             
 
         :param occurrence_count: The occurrence_count of this MapiCalendarRecurrencePatternDto.
@@ -329,8 +323,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def pattern_type(self) -> str:
-        """Gets the pattern_type of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerates the mapi calendar recurrence pattern types Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
 
         :return: The pattern_type of this MapiCalendarRecurrencePatternDto.
@@ -340,8 +333,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @pattern_type.setter
     def pattern_type(self, pattern_type: str):
-        """Sets the pattern_type of this MapiCalendarRecurrencePatternDto.
-
+        """
         Enumerates the mapi calendar recurrence pattern types Enum, available values: Day, Week, Month, MonthEnd, MonthNth, HjMonth, HjMonthNth, HjMonthEnd
 
         :param pattern_type: The pattern_type of this MapiCalendarRecurrencePatternDto.
@@ -353,8 +345,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def period(self) -> int:
-        """Gets the period of this MapiCalendarRecurrencePatternDto.
-
+        """
         Interval at which the meeting pattern repeats.             
 
         :return: The period of this MapiCalendarRecurrencePatternDto.
@@ -364,8 +355,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @period.setter
     def period(self, period: int):
-        """Sets the period of this MapiCalendarRecurrencePatternDto.
-
+        """
         Interval at which the meeting pattern repeats.             
 
         :param period: The period of this MapiCalendarRecurrencePatternDto.
@@ -377,8 +367,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def sliding_flag(self) -> bool:
-        """Gets the sliding_flag of this MapiCalendarRecurrencePatternDto.
-
+        """
         Defines whether pattern is sliding or not.             
 
         :return: The sliding_flag of this MapiCalendarRecurrencePatternDto.
@@ -388,8 +377,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @sliding_flag.setter
     def sliding_flag(self, sliding_flag: bool):
-        """Sets the sliding_flag of this MapiCalendarRecurrencePatternDto.
-
+        """
         Defines whether pattern is sliding or not.             
 
         :param sliding_flag: The sliding_flag of this MapiCalendarRecurrencePatternDto.
@@ -401,8 +389,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def start_date(self) -> datetime:
-        """Gets the start_date of this MapiCalendarRecurrencePatternDto.
-
+        """
         Start date of an item recurrence pattern.             
 
         :return: The start_date of this MapiCalendarRecurrencePatternDto.
@@ -412,8 +399,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @start_date.setter
     def start_date(self, start_date: datetime):
-        """Sets the start_date of this MapiCalendarRecurrencePatternDto.
-
+        """
         Start date of an item recurrence pattern.             
 
         :param start_date: The start_date of this MapiCalendarRecurrencePatternDto.
@@ -425,8 +411,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def week_start_day(self) -> str:
-        """Gets the week_start_day of this MapiCalendarRecurrencePatternDto.
-
+        """
         Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :return: The week_start_day of this MapiCalendarRecurrencePatternDto.
@@ -436,8 +421,7 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @week_start_day.setter
     def week_start_day(self, week_start_day: str):
-        """Sets the week_start_day of this MapiCalendarRecurrencePatternDto.
-
+        """
         Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :param week_start_day: The week_start_day of this MapiCalendarRecurrencePatternDto.
@@ -449,8 +433,8 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @property
     def discriminator(self) -> str:
-        """Gets the discriminator of this MapiCalendarRecurrencePatternDto.
-
+        """
+        Gets the discriminator of this MapiCalendarRecurrencePatternDto.
 
         :return: The discriminator of this MapiCalendarRecurrencePatternDto.
         :rtype: str
@@ -459,15 +443,13 @@ class MapiCalendarRecurrencePatternDto(object):
 
     @discriminator.setter
     def discriminator(self, discriminator: str):
-        """Sets the discriminator of this MapiCalendarRecurrencePatternDto.
-
+        """
+        Sets the discriminator of this MapiCalendarRecurrencePatternDto.
 
         :param discriminator: The discriminator of this MapiCalendarRecurrencePatternDto.
         :type: str
         """
-        if discriminator is None:
-            raise ValueError("Invalid value for `discriminator`, must not be `None`")
-        self._discriminator = self.__class__.__name__
+        pass    # setter is ignored for discriminator property
 
     def to_dict(self):
         """Returns the model properties as a dict"""

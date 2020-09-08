@@ -57,8 +57,10 @@ class AiNameWeightedVariants(object):
     def __init__(self, names: List[AiNameWeighted] = None, comments: str = None):
         """
         Name variants             
-        :param names (List[AiNameWeighted]) List of name variations             
-        :param comments (str) Usually empty; can contain extra message describing some issue occurred during processing             
+        :param names: List of name variations             
+        :type names: List[AiNameWeighted]
+        :param comments: Usually empty; can contain extra message describing some issue occurred during processing             
+        :type comments: str
         """
 
         self._names = None
@@ -69,10 +71,10 @@ class AiNameWeightedVariants(object):
         if comments is not None:
             self.comments = comments
 
+
     @property
     def names(self) -> List[AiNameWeighted]:
-        """Gets the names of this AiNameWeightedVariants.
-
+        """
         List of name variations             
 
         :return: The names of this AiNameWeightedVariants.
@@ -82,8 +84,7 @@ class AiNameWeightedVariants(object):
 
     @names.setter
     def names(self, names: List[AiNameWeighted]):
-        """Sets the names of this AiNameWeightedVariants.
-
+        """
         List of name variations             
 
         :param names: The names of this AiNameWeightedVariants.
@@ -93,8 +94,7 @@ class AiNameWeightedVariants(object):
 
     @property
     def comments(self) -> str:
-        """Gets the comments of this AiNameWeightedVariants.
-
+        """
         Usually empty; can contain extra message describing some issue occurred during processing             
 
         :return: The comments of this AiNameWeightedVariants.
@@ -104,8 +104,7 @@ class AiNameWeightedVariants(object):
 
     @comments.setter
     def comments(self, comments: str):
-        """Sets the comments of this AiNameWeightedVariants.
-
+        """
         Usually empty; can contain extra message describing some issue occurred during processing             
 
         :param comments: The comments of this AiNameWeightedVariants.

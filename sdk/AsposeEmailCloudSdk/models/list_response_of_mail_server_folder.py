@@ -55,7 +55,8 @@ class ListResponseOfMailServerFolder(object):
     def __init__(self, value: List[MailServerFolder] = None):
         """
         
-        :param value (List[MailServerFolder]) 
+        :param value: 
+        :type value: List[MailServerFolder]
         """
 
         self._value = None
@@ -63,10 +64,11 @@ class ListResponseOfMailServerFolder(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[MailServerFolder]:
-        """Gets the value of this ListResponseOfMailServerFolder.
-
+        """
+        Gets the value of this ListResponseOfMailServerFolder.
 
         :return: The value of this ListResponseOfMailServerFolder.
         :rtype: list[MailServerFolder]
@@ -75,8 +77,8 @@ class ListResponseOfMailServerFolder(object):
 
     @value.setter
     def value(self, value: List[MailServerFolder]):
-        """Sets the value of this ListResponseOfMailServerFolder.
-
+        """
+        Sets the value of this ListResponseOfMailServerFolder.
 
         :param value: The value of this ListResponseOfMailServerFolder.
         :type: list[MailServerFolder]

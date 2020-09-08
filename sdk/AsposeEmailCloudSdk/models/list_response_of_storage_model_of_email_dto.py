@@ -55,7 +55,8 @@ class ListResponseOfStorageModelOfEmailDto(object):
     def __init__(self, value: List[StorageModelOfEmailDto] = None):
         """
         
-        :param value (List[StorageModelOfEmailDto]) 
+        :param value: 
+        :type value: List[StorageModelOfEmailDto]
         """
 
         self._value = None
@@ -63,10 +64,11 @@ class ListResponseOfStorageModelOfEmailDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[StorageModelOfEmailDto]:
-        """Gets the value of this ListResponseOfStorageModelOfEmailDto.
-
+        """
+        Gets the value of this ListResponseOfStorageModelOfEmailDto.
 
         :return: The value of this ListResponseOfStorageModelOfEmailDto.
         :rtype: list[StorageModelOfEmailDto]
@@ -75,8 +77,8 @@ class ListResponseOfStorageModelOfEmailDto(object):
 
     @value.setter
     def value(self, value: List[StorageModelOfEmailDto]):
-        """Sets the value of this ListResponseOfStorageModelOfEmailDto.
-
+        """
+        Sets the value of this ListResponseOfStorageModelOfEmailDto.
 
         :param value: The value of this ListResponseOfStorageModelOfEmailDto.
         :type: list[StorageModelOfEmailDto]

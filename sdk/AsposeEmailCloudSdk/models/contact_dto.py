@@ -133,42 +133,78 @@ class ContactDto(object):
     def __init__(self, associated_persons: List[AssociatedPerson] = None, attachments: List[Attachment] = None, company_name: str = None, computer_network_name: str = None, customer_id: str = None, department_name: str = None, display_name: str = None, email_addresses: List[EmailAddress] = None, events: List[CustomerEvent] = None, file_as: str = None, file_as_mapping: str = None, free_busy_location: str = None, gender: str = None, given_name: str = None, government_id_number: str = None, hobbies: str = None, initials: str = None, instant_messengers: List[InstantMessengerAddress] = None, job_title: str = None, language: str = None, location: str = None, middle_name: str = None, nickname: str = None, notes: str = None, notes_format: str = None, office_location: str = None, organizational_id_number: str = None, phone_numbers: List[PhoneNumber] = None, photo: ContactPhoto = None, physical_addresses: List[PostalAddress] = None, preferred_text_encoding: str = None, prefix: str = None, profession: str = None, suffix: str = None, surname: str = None, urls: List[Url] = None):
         """
         VCard document representation.             
-        :param associated_persons (List[AssociatedPerson]) Associated persons.             
-        :param attachments (List[Attachment]) Document attachments.             
-        :param company_name (str) Company name.             
-        :param computer_network_name (str) Computer network.             
-        :param customer_id (str) Customer id.             
-        :param department_name (str) Department name.             
-        :param display_name (str) Display name.             
-        :param email_addresses (List[EmailAddress]) Person's email addresses.             
-        :param events (List[CustomerEvent]) Person's events.             
-        :param file_as (str) A name used for sorting.             
-        :param file_as_mapping (str) Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
-        :param free_busy_location (str) URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
-        :param gender (str) Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
-        :param given_name (str) Person's given name.             
-        :param government_id_number (str) Government id number.             
-        :param hobbies (str) Person's hobbies.             
-        :param initials (str) Person's initials.             
-        :param instant_messengers (List[InstantMessengerAddress]) Person's instant messenger addresses.             
-        :param job_title (str) Person's job title.             
-        :param language (str) Language.             
-        :param location (str) Person's location.             
-        :param middle_name (str) Person's middle name.             
-        :param nickname (str) Person's nickname.             
-        :param notes (str) Notes.             
-        :param notes_format (str) Defines format of a text. Enum, available values: Text, Html
-        :param office_location (str) Office location.             
-        :param organizational_id_number (str) Contains an identifier for the mail user used within the mail user's organization.             
-        :param phone_numbers (List[PhoneNumber]) Person's phone numbers.             
-        :param photo (ContactPhoto) Person's photo.             
-        :param physical_addresses (List[PostalAddress]) Person's physical addresses.             
-        :param preferred_text_encoding (str) Encoding for all text properties.             
-        :param prefix (str) A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
-        :param profession (str) A job position of a person in a company.             
-        :param suffix (str) A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
-        :param surname (str) Person's surname.             
-        :param urls (List[Url]) Person's urls.             
+        :param associated_persons: Associated persons.             
+        :type associated_persons: List[AssociatedPerson]
+        :param attachments: Document attachments.             
+        :type attachments: List[Attachment]
+        :param company_name: Company name.             
+        :type company_name: str
+        :param computer_network_name: Computer network.             
+        :type computer_network_name: str
+        :param customer_id: Customer id.             
+        :type customer_id: str
+        :param department_name: Department name.             
+        :type department_name: str
+        :param display_name: Display name.             
+        :type display_name: str
+        :param email_addresses: Person's email addresses.             
+        :type email_addresses: List[EmailAddress]
+        :param events: Person's events.             
+        :type events: List[CustomerEvent]
+        :param file_as: A name used for sorting.             
+        :type file_as: str
+        :param file_as_mapping: Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+        :type file_as_mapping: str
+        :param free_busy_location: URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
+        :type free_busy_location: str
+        :param gender: Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+        :type gender: str
+        :param given_name: Person's given name.             
+        :type given_name: str
+        :param government_id_number: Government id number.             
+        :type government_id_number: str
+        :param hobbies: Person's hobbies.             
+        :type hobbies: str
+        :param initials: Person's initials.             
+        :type initials: str
+        :param instant_messengers: Person's instant messenger addresses.             
+        :type instant_messengers: List[InstantMessengerAddress]
+        :param job_title: Person's job title.             
+        :type job_title: str
+        :param language: Language.             
+        :type language: str
+        :param location: Person's location.             
+        :type location: str
+        :param middle_name: Person's middle name.             
+        :type middle_name: str
+        :param nickname: Person's nickname.             
+        :type nickname: str
+        :param notes: Notes.             
+        :type notes: str
+        :param notes_format: Defines format of a text. Enum, available values: Text, Html
+        :type notes_format: str
+        :param office_location: Office location.             
+        :type office_location: str
+        :param organizational_id_number: Contains an identifier for the mail user used within the mail user's organization.             
+        :type organizational_id_number: str
+        :param phone_numbers: Person's phone numbers.             
+        :type phone_numbers: List[PhoneNumber]
+        :param photo: Person's photo.             
+        :type photo: ContactPhoto
+        :param physical_addresses: Person's physical addresses.             
+        :type physical_addresses: List[PostalAddress]
+        :param preferred_text_encoding: Encoding for all text properties.             
+        :type preferred_text_encoding: str
+        :param prefix: A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
+        :type prefix: str
+        :param profession: A job position of a person in a company.             
+        :type profession: str
+        :param suffix: A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
+        :type suffix: str
+        :param surname: Person's surname.             
+        :type surname: str
+        :param urls: Person's urls.             
+        :type urls: List[Url]
         """
 
         self._associated_persons = None
@@ -281,10 +317,10 @@ class ContactDto(object):
         if urls is not None:
             self.urls = urls
 
+
     @property
     def associated_persons(self) -> List[AssociatedPerson]:
-        """Gets the associated_persons of this ContactDto.
-
+        """
         Associated persons.             
 
         :return: The associated_persons of this ContactDto.
@@ -294,8 +330,7 @@ class ContactDto(object):
 
     @associated_persons.setter
     def associated_persons(self, associated_persons: List[AssociatedPerson]):
-        """Sets the associated_persons of this ContactDto.
-
+        """
         Associated persons.             
 
         :param associated_persons: The associated_persons of this ContactDto.
@@ -305,8 +340,7 @@ class ContactDto(object):
 
     @property
     def attachments(self) -> List[Attachment]:
-        """Gets the attachments of this ContactDto.
-
+        """
         Document attachments.             
 
         :return: The attachments of this ContactDto.
@@ -316,8 +350,7 @@ class ContactDto(object):
 
     @attachments.setter
     def attachments(self, attachments: List[Attachment]):
-        """Sets the attachments of this ContactDto.
-
+        """
         Document attachments.             
 
         :param attachments: The attachments of this ContactDto.
@@ -327,8 +360,7 @@ class ContactDto(object):
 
     @property
     def company_name(self) -> str:
-        """Gets the company_name of this ContactDto.
-
+        """
         Company name.             
 
         :return: The company_name of this ContactDto.
@@ -338,8 +370,7 @@ class ContactDto(object):
 
     @company_name.setter
     def company_name(self, company_name: str):
-        """Sets the company_name of this ContactDto.
-
+        """
         Company name.             
 
         :param company_name: The company_name of this ContactDto.
@@ -349,8 +380,7 @@ class ContactDto(object):
 
     @property
     def computer_network_name(self) -> str:
-        """Gets the computer_network_name of this ContactDto.
-
+        """
         Computer network.             
 
         :return: The computer_network_name of this ContactDto.
@@ -360,8 +390,7 @@ class ContactDto(object):
 
     @computer_network_name.setter
     def computer_network_name(self, computer_network_name: str):
-        """Sets the computer_network_name of this ContactDto.
-
+        """
         Computer network.             
 
         :param computer_network_name: The computer_network_name of this ContactDto.
@@ -371,8 +400,7 @@ class ContactDto(object):
 
     @property
     def customer_id(self) -> str:
-        """Gets the customer_id of this ContactDto.
-
+        """
         Customer id.             
 
         :return: The customer_id of this ContactDto.
@@ -382,8 +410,7 @@ class ContactDto(object):
 
     @customer_id.setter
     def customer_id(self, customer_id: str):
-        """Sets the customer_id of this ContactDto.
-
+        """
         Customer id.             
 
         :param customer_id: The customer_id of this ContactDto.
@@ -393,8 +420,7 @@ class ContactDto(object):
 
     @property
     def department_name(self) -> str:
-        """Gets the department_name of this ContactDto.
-
+        """
         Department name.             
 
         :return: The department_name of this ContactDto.
@@ -404,8 +430,7 @@ class ContactDto(object):
 
     @department_name.setter
     def department_name(self, department_name: str):
-        """Sets the department_name of this ContactDto.
-
+        """
         Department name.             
 
         :param department_name: The department_name of this ContactDto.
@@ -415,8 +440,7 @@ class ContactDto(object):
 
     @property
     def display_name(self) -> str:
-        """Gets the display_name of this ContactDto.
-
+        """
         Display name.             
 
         :return: The display_name of this ContactDto.
@@ -426,8 +450,7 @@ class ContactDto(object):
 
     @display_name.setter
     def display_name(self, display_name: str):
-        """Sets the display_name of this ContactDto.
-
+        """
         Display name.             
 
         :param display_name: The display_name of this ContactDto.
@@ -437,8 +460,7 @@ class ContactDto(object):
 
     @property
     def email_addresses(self) -> List[EmailAddress]:
-        """Gets the email_addresses of this ContactDto.
-
+        """
         Person's email addresses.             
 
         :return: The email_addresses of this ContactDto.
@@ -448,8 +470,7 @@ class ContactDto(object):
 
     @email_addresses.setter
     def email_addresses(self, email_addresses: List[EmailAddress]):
-        """Sets the email_addresses of this ContactDto.
-
+        """
         Person's email addresses.             
 
         :param email_addresses: The email_addresses of this ContactDto.
@@ -459,8 +480,7 @@ class ContactDto(object):
 
     @property
     def events(self) -> List[CustomerEvent]:
-        """Gets the events of this ContactDto.
-
+        """
         Person's events.             
 
         :return: The events of this ContactDto.
@@ -470,8 +490,7 @@ class ContactDto(object):
 
     @events.setter
     def events(self, events: List[CustomerEvent]):
-        """Sets the events of this ContactDto.
-
+        """
         Person's events.             
 
         :param events: The events of this ContactDto.
@@ -481,8 +500,7 @@ class ContactDto(object):
 
     @property
     def file_as(self) -> str:
-        """Gets the file_as of this ContactDto.
-
+        """
         A name used for sorting.             
 
         :return: The file_as of this ContactDto.
@@ -492,8 +510,7 @@ class ContactDto(object):
 
     @file_as.setter
     def file_as(self, file_as: str):
-        """Sets the file_as of this ContactDto.
-
+        """
         A name used for sorting.             
 
         :param file_as: The file_as of this ContactDto.
@@ -503,8 +520,7 @@ class ContactDto(object):
 
     @property
     def file_as_mapping(self) -> str:
-        """Gets the file_as_mapping of this ContactDto.
-
+        """
         Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
 
         :return: The file_as_mapping of this ContactDto.
@@ -514,8 +530,7 @@ class ContactDto(object):
 
     @file_as_mapping.setter
     def file_as_mapping(self, file_as_mapping: str):
-        """Sets the file_as_mapping of this ContactDto.
-
+        """
         Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
 
         :param file_as_mapping: The file_as_mapping of this ContactDto.
@@ -527,8 +542,7 @@ class ContactDto(object):
 
     @property
     def free_busy_location(self) -> str:
-        """Gets the free_busy_location of this ContactDto.
-
+        """
         URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
 
         :return: The free_busy_location of this ContactDto.
@@ -538,8 +552,7 @@ class ContactDto(object):
 
     @free_busy_location.setter
     def free_busy_location(self, free_busy_location: str):
-        """Sets the free_busy_location of this ContactDto.
-
+        """
         URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
 
         :param free_busy_location: The free_busy_location of this ContactDto.
@@ -549,8 +562,7 @@ class ContactDto(object):
 
     @property
     def gender(self) -> str:
-        """Gets the gender of this ContactDto.
-
+        """
         Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
 
         :return: The gender of this ContactDto.
@@ -560,8 +572,7 @@ class ContactDto(object):
 
     @gender.setter
     def gender(self, gender: str):
-        """Sets the gender of this ContactDto.
-
+        """
         Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
 
         :param gender: The gender of this ContactDto.
@@ -573,8 +584,7 @@ class ContactDto(object):
 
     @property
     def given_name(self) -> str:
-        """Gets the given_name of this ContactDto.
-
+        """
         Person's given name.             
 
         :return: The given_name of this ContactDto.
@@ -584,8 +594,7 @@ class ContactDto(object):
 
     @given_name.setter
     def given_name(self, given_name: str):
-        """Sets the given_name of this ContactDto.
-
+        """
         Person's given name.             
 
         :param given_name: The given_name of this ContactDto.
@@ -595,8 +604,7 @@ class ContactDto(object):
 
     @property
     def government_id_number(self) -> str:
-        """Gets the government_id_number of this ContactDto.
-
+        """
         Government id number.             
 
         :return: The government_id_number of this ContactDto.
@@ -606,8 +614,7 @@ class ContactDto(object):
 
     @government_id_number.setter
     def government_id_number(self, government_id_number: str):
-        """Sets the government_id_number of this ContactDto.
-
+        """
         Government id number.             
 
         :param government_id_number: The government_id_number of this ContactDto.
@@ -617,8 +624,7 @@ class ContactDto(object):
 
     @property
     def hobbies(self) -> str:
-        """Gets the hobbies of this ContactDto.
-
+        """
         Person's hobbies.             
 
         :return: The hobbies of this ContactDto.
@@ -628,8 +634,7 @@ class ContactDto(object):
 
     @hobbies.setter
     def hobbies(self, hobbies: str):
-        """Sets the hobbies of this ContactDto.
-
+        """
         Person's hobbies.             
 
         :param hobbies: The hobbies of this ContactDto.
@@ -639,8 +644,7 @@ class ContactDto(object):
 
     @property
     def initials(self) -> str:
-        """Gets the initials of this ContactDto.
-
+        """
         Person's initials.             
 
         :return: The initials of this ContactDto.
@@ -650,8 +654,7 @@ class ContactDto(object):
 
     @initials.setter
     def initials(self, initials: str):
-        """Sets the initials of this ContactDto.
-
+        """
         Person's initials.             
 
         :param initials: The initials of this ContactDto.
@@ -661,8 +664,7 @@ class ContactDto(object):
 
     @property
     def instant_messengers(self) -> List[InstantMessengerAddress]:
-        """Gets the instant_messengers of this ContactDto.
-
+        """
         Person's instant messenger addresses.             
 
         :return: The instant_messengers of this ContactDto.
@@ -672,8 +674,7 @@ class ContactDto(object):
 
     @instant_messengers.setter
     def instant_messengers(self, instant_messengers: List[InstantMessengerAddress]):
-        """Sets the instant_messengers of this ContactDto.
-
+        """
         Person's instant messenger addresses.             
 
         :param instant_messengers: The instant_messengers of this ContactDto.
@@ -683,8 +684,7 @@ class ContactDto(object):
 
     @property
     def job_title(self) -> str:
-        """Gets the job_title of this ContactDto.
-
+        """
         Person's job title.             
 
         :return: The job_title of this ContactDto.
@@ -694,8 +694,7 @@ class ContactDto(object):
 
     @job_title.setter
     def job_title(self, job_title: str):
-        """Sets the job_title of this ContactDto.
-
+        """
         Person's job title.             
 
         :param job_title: The job_title of this ContactDto.
@@ -705,8 +704,7 @@ class ContactDto(object):
 
     @property
     def language(self) -> str:
-        """Gets the language of this ContactDto.
-
+        """
         Language.             
 
         :return: The language of this ContactDto.
@@ -716,8 +714,7 @@ class ContactDto(object):
 
     @language.setter
     def language(self, language: str):
-        """Sets the language of this ContactDto.
-
+        """
         Language.             
 
         :param language: The language of this ContactDto.
@@ -727,8 +724,7 @@ class ContactDto(object):
 
     @property
     def location(self) -> str:
-        """Gets the location of this ContactDto.
-
+        """
         Person's location.             
 
         :return: The location of this ContactDto.
@@ -738,8 +734,7 @@ class ContactDto(object):
 
     @location.setter
     def location(self, location: str):
-        """Sets the location of this ContactDto.
-
+        """
         Person's location.             
 
         :param location: The location of this ContactDto.
@@ -749,8 +744,7 @@ class ContactDto(object):
 
     @property
     def middle_name(self) -> str:
-        """Gets the middle_name of this ContactDto.
-
+        """
         Person's middle name.             
 
         :return: The middle_name of this ContactDto.
@@ -760,8 +754,7 @@ class ContactDto(object):
 
     @middle_name.setter
     def middle_name(self, middle_name: str):
-        """Sets the middle_name of this ContactDto.
-
+        """
         Person's middle name.             
 
         :param middle_name: The middle_name of this ContactDto.
@@ -771,8 +764,7 @@ class ContactDto(object):
 
     @property
     def nickname(self) -> str:
-        """Gets the nickname of this ContactDto.
-
+        """
         Person's nickname.             
 
         :return: The nickname of this ContactDto.
@@ -782,8 +774,7 @@ class ContactDto(object):
 
     @nickname.setter
     def nickname(self, nickname: str):
-        """Sets the nickname of this ContactDto.
-
+        """
         Person's nickname.             
 
         :param nickname: The nickname of this ContactDto.
@@ -793,8 +784,7 @@ class ContactDto(object):
 
     @property
     def notes(self) -> str:
-        """Gets the notes of this ContactDto.
-
+        """
         Notes.             
 
         :return: The notes of this ContactDto.
@@ -804,8 +794,7 @@ class ContactDto(object):
 
     @notes.setter
     def notes(self, notes: str):
-        """Sets the notes of this ContactDto.
-
+        """
         Notes.             
 
         :param notes: The notes of this ContactDto.
@@ -815,8 +804,7 @@ class ContactDto(object):
 
     @property
     def notes_format(self) -> str:
-        """Gets the notes_format of this ContactDto.
-
+        """
         Defines format of a text. Enum, available values: Text, Html
 
         :return: The notes_format of this ContactDto.
@@ -826,8 +814,7 @@ class ContactDto(object):
 
     @notes_format.setter
     def notes_format(self, notes_format: str):
-        """Sets the notes_format of this ContactDto.
-
+        """
         Defines format of a text. Enum, available values: Text, Html
 
         :param notes_format: The notes_format of this ContactDto.
@@ -839,8 +826,7 @@ class ContactDto(object):
 
     @property
     def office_location(self) -> str:
-        """Gets the office_location of this ContactDto.
-
+        """
         Office location.             
 
         :return: The office_location of this ContactDto.
@@ -850,8 +836,7 @@ class ContactDto(object):
 
     @office_location.setter
     def office_location(self, office_location: str):
-        """Sets the office_location of this ContactDto.
-
+        """
         Office location.             
 
         :param office_location: The office_location of this ContactDto.
@@ -861,8 +846,7 @@ class ContactDto(object):
 
     @property
     def organizational_id_number(self) -> str:
-        """Gets the organizational_id_number of this ContactDto.
-
+        """
         Contains an identifier for the mail user used within the mail user's organization.             
 
         :return: The organizational_id_number of this ContactDto.
@@ -872,8 +856,7 @@ class ContactDto(object):
 
     @organizational_id_number.setter
     def organizational_id_number(self, organizational_id_number: str):
-        """Sets the organizational_id_number of this ContactDto.
-
+        """
         Contains an identifier for the mail user used within the mail user's organization.             
 
         :param organizational_id_number: The organizational_id_number of this ContactDto.
@@ -883,8 +866,7 @@ class ContactDto(object):
 
     @property
     def phone_numbers(self) -> List[PhoneNumber]:
-        """Gets the phone_numbers of this ContactDto.
-
+        """
         Person's phone numbers.             
 
         :return: The phone_numbers of this ContactDto.
@@ -894,8 +876,7 @@ class ContactDto(object):
 
     @phone_numbers.setter
     def phone_numbers(self, phone_numbers: List[PhoneNumber]):
-        """Sets the phone_numbers of this ContactDto.
-
+        """
         Person's phone numbers.             
 
         :param phone_numbers: The phone_numbers of this ContactDto.
@@ -905,8 +886,7 @@ class ContactDto(object):
 
     @property
     def photo(self) -> ContactPhoto:
-        """Gets the photo of this ContactDto.
-
+        """
         Person's photo.             
 
         :return: The photo of this ContactDto.
@@ -916,8 +896,7 @@ class ContactDto(object):
 
     @photo.setter
     def photo(self, photo: ContactPhoto):
-        """Sets the photo of this ContactDto.
-
+        """
         Person's photo.             
 
         :param photo: The photo of this ContactDto.
@@ -927,8 +906,7 @@ class ContactDto(object):
 
     @property
     def physical_addresses(self) -> List[PostalAddress]:
-        """Gets the physical_addresses of this ContactDto.
-
+        """
         Person's physical addresses.             
 
         :return: The physical_addresses of this ContactDto.
@@ -938,8 +916,7 @@ class ContactDto(object):
 
     @physical_addresses.setter
     def physical_addresses(self, physical_addresses: List[PostalAddress]):
-        """Sets the physical_addresses of this ContactDto.
-
+        """
         Person's physical addresses.             
 
         :param physical_addresses: The physical_addresses of this ContactDto.
@@ -949,8 +926,7 @@ class ContactDto(object):
 
     @property
     def preferred_text_encoding(self) -> str:
-        """Gets the preferred_text_encoding of this ContactDto.
-
+        """
         Encoding for all text properties.             
 
         :return: The preferred_text_encoding of this ContactDto.
@@ -960,8 +936,7 @@ class ContactDto(object):
 
     @preferred_text_encoding.setter
     def preferred_text_encoding(self, preferred_text_encoding: str):
-        """Sets the preferred_text_encoding of this ContactDto.
-
+        """
         Encoding for all text properties.             
 
         :param preferred_text_encoding: The preferred_text_encoding of this ContactDto.
@@ -971,8 +946,7 @@ class ContactDto(object):
 
     @property
     def prefix(self) -> str:
-        """Gets the prefix of this ContactDto.
-
+        """
         A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
 
         :return: The prefix of this ContactDto.
@@ -982,8 +956,7 @@ class ContactDto(object):
 
     @prefix.setter
     def prefix(self, prefix: str):
-        """Sets the prefix of this ContactDto.
-
+        """
         A prefix of a full name such like Mr.(mister), Dr.(doctor) and so on.             
 
         :param prefix: The prefix of this ContactDto.
@@ -993,8 +966,7 @@ class ContactDto(object):
 
     @property
     def profession(self) -> str:
-        """Gets the profession of this ContactDto.
-
+        """
         A job position of a person in a company.             
 
         :return: The profession of this ContactDto.
@@ -1004,8 +976,7 @@ class ContactDto(object):
 
     @profession.setter
     def profession(self, profession: str):
-        """Sets the profession of this ContactDto.
-
+        """
         A job position of a person in a company.             
 
         :param profession: The profession of this ContactDto.
@@ -1015,8 +986,7 @@ class ContactDto(object):
 
     @property
     def suffix(self) -> str:
-        """Gets the suffix of this ContactDto.
-
+        """
         A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
 
         :return: The suffix of this ContactDto.
@@ -1026,8 +996,7 @@ class ContactDto(object):
 
     @suffix.setter
     def suffix(self, suffix: str):
-        """Sets the suffix of this ContactDto.
-
+        """
         A suffix of a full name such like Jr.(junior), Sr.(senior) and so on.             
 
         :param suffix: The suffix of this ContactDto.
@@ -1037,8 +1006,7 @@ class ContactDto(object):
 
     @property
     def surname(self) -> str:
-        """Gets the surname of this ContactDto.
-
+        """
         Person's surname.             
 
         :return: The surname of this ContactDto.
@@ -1048,8 +1016,7 @@ class ContactDto(object):
 
     @surname.setter
     def surname(self, surname: str):
-        """Sets the surname of this ContactDto.
-
+        """
         Person's surname.             
 
         :param surname: The surname of this ContactDto.
@@ -1059,8 +1026,7 @@ class ContactDto(object):
 
     @property
     def urls(self) -> List[Url]:
-        """Gets the urls of this ContactDto.
-
+        """
         Person's urls.             
 
         :return: The urls of this ContactDto.
@@ -1070,8 +1036,7 @@ class ContactDto(object):
 
     @urls.setter
     def urls(self, urls: List[Url]):
-        """Sets the urls of this ContactDto.
-
+        """
         Person's urls.             
 
         :param urls: The urls of this ContactDto.

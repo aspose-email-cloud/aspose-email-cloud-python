@@ -55,8 +55,10 @@ class EnumWithCustomOfUrlCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value (str) Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
-        :param description (str) 
+        :param value: Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+        :type value: str
+        :param description: 
+        :type description: str
         """
 
         self._value = None
@@ -67,10 +69,10 @@ class EnumWithCustomOfUrlCategory(object):
         if description is not None:
             self.description = description
 
+
     @property
     def value(self) -> str:
-        """Gets the value of this EnumWithCustomOfUrlCategory.
-
+        """
         Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
 
         :return: The value of this EnumWithCustomOfUrlCategory.
@@ -80,8 +82,7 @@ class EnumWithCustomOfUrlCategory(object):
 
     @value.setter
     def value(self, value: str):
-        """Sets the value of this EnumWithCustomOfUrlCategory.
-
+        """
         Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
 
         :param value: The value of this EnumWithCustomOfUrlCategory.
@@ -89,12 +90,14 @@ class EnumWithCustomOfUrlCategory(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
+        if value is not None and len(value) < 1:
+            raise ValueError("Invalid value for `value`, length must be greater than or equal to `1`")
         self._value = value
 
     @property
     def description(self) -> str:
-        """Gets the description of this EnumWithCustomOfUrlCategory.
-
+        """
+        Gets the description of this EnumWithCustomOfUrlCategory.
 
         :return: The description of this EnumWithCustomOfUrlCategory.
         :rtype: str
@@ -103,8 +106,8 @@ class EnumWithCustomOfUrlCategory(object):
 
     @description.setter
     def description(self, description: str):
-        """Sets the description of this EnumWithCustomOfUrlCategory.
-
+        """
+        Sets the description of this EnumWithCustomOfUrlCategory.
 
         :param description: The description of this EnumWithCustomOfUrlCategory.
         :type: str

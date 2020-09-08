@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 **display_name** | **str** | Display name.              | [optional] 
 **preferred** | **bool** | Defines whether email address is preferred.              | 
 **routing_type** | **str** | A routing type for an email.              | [optional] 
-**address** | **str** | Email address.              | [optional] 
+**address** | **str** | Email address.              | 
 **original_address_string** | **str** | The original e-mail address string              | [optional] 
 
 
 
-[[Back to Model list]](README.md#documentation-for-models) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to README]](README.md)
+[[Back to Model list]](Models.md) [[Back to README]](README.md)
 
 

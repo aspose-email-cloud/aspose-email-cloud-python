@@ -58,8 +58,10 @@ class StorageModelOfEmailDto(object):
     def __init__(self, storage_file: StorageFileLocation = None, value: EmailDto = None):
         """
         
-        :param storage_file (StorageFileLocation) 
-        :param value (EmailDto) 
+        :param storage_file: 
+        :type storage_file: StorageFileLocation
+        :param value: 
+        :type value: EmailDto
         """
 
         self._storage_file = None
@@ -70,10 +72,11 @@ class StorageModelOfEmailDto(object):
         if value is not None:
             self.value = value
 
+
     @property
     def storage_file(self) -> StorageFileLocation:
-        """Gets the storage_file of this StorageModelOfEmailDto.
-
+        """
+        Gets the storage_file of this StorageModelOfEmailDto.
 
         :return: The storage_file of this StorageModelOfEmailDto.
         :rtype: StorageFileLocation
@@ -82,18 +85,20 @@ class StorageModelOfEmailDto(object):
 
     @storage_file.setter
     def storage_file(self, storage_file: StorageFileLocation):
-        """Sets the storage_file of this StorageModelOfEmailDto.
-
+        """
+        Sets the storage_file of this StorageModelOfEmailDto.
 
         :param storage_file: The storage_file of this StorageModelOfEmailDto.
         :type: StorageFileLocation
         """
+        if storage_file is None:
+            raise ValueError("Invalid value for `storage_file`, must not be `None`")
         self._storage_file = storage_file
 
     @property
     def value(self) -> EmailDto:
-        """Gets the value of this StorageModelOfEmailDto.
-
+        """
+        Gets the value of this StorageModelOfEmailDto.
 
         :return: The value of this StorageModelOfEmailDto.
         :rtype: EmailDto
@@ -102,12 +107,14 @@ class StorageModelOfEmailDto(object):
 
     @value.setter
     def value(self, value: EmailDto):
-        """Sets the value of this StorageModelOfEmailDto.
-
+        """
+        Sets the value of this StorageModelOfEmailDto.
 
         :param value: The value of this StorageModelOfEmailDto.
         :type: EmailDto
         """
+        if value is None:
+            raise ValueError("Invalid value for `value`, must not be `None`")
         self._value = value
 
     def to_dict(self):

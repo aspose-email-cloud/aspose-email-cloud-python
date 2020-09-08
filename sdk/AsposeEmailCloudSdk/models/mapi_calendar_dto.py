@@ -127,44 +127,77 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         'organizer': 'organizer'
     }
 
-    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, discriminator: str = None, appointment_counter_proposal: bool = None, attendees: MapiCalendarAttendeesDto = None, busy_status: str = None, client_intent: List[str] = None, end_date: datetime = None, end_date_time_zone: MapiCalendarTimeZoneDto = None, is_all_day: bool = None, key_words: str = None, location: str = None, recurrence: MapiCalendarEventRecurrenceDto = None, reminder_delta: int = None, reminder_file_parameter: str = None, reminder_set: bool = None, sequence: int = None, start_date: datetime = None, start_date_time_zone: MapiCalendarTimeZoneDto = None, uid: str = None, organizer: MapiElectronicAddressDto = None):
+    def __init__(self, attachments: List[MapiAttachmentDto] = None, billing: str = None, body: str = None, body_html: str = None, body_rtf: str = None, body_type: str = None, categories: List[str] = None, companies: List[str] = None, item_id: str = None, message_class: str = None, mileage: str = None, recipients: List[MapiRecipientDto] = None, sensitivity: str = None, subject: str = None, subject_prefix: str = None, properties: List[MapiPropertyDto] = None, appointment_counter_proposal: bool = None, attendees: MapiCalendarAttendeesDto = None, busy_status: str = None, client_intent: List[str] = None, end_date: datetime = None, end_date_time_zone: MapiCalendarTimeZoneDto = None, is_all_day: bool = None, key_words: str = None, location: str = None, recurrence: MapiCalendarEventRecurrenceDto = None, reminder_delta: int = None, reminder_file_parameter: str = None, reminder_set: bool = None, sequence: int = None, start_date: datetime = None, start_date_time_zone: MapiCalendarTimeZoneDto = None, uid: str = None, organizer: MapiElectronicAddressDto = None):
         """
         Represents the mapi calendar object             
-        :param attachments (List[MapiAttachmentDto]) Message item attachments.             
-        :param billing (str) Billing information associated with an item.             
-        :param body (str) Message text.             
-        :param body_html (str) Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
-        :param body_rtf (str) RTF formatted message text.             
-        :param body_type (str) The content type of message body. Enum, available values: PlainText, Html, Rtf
-        :param categories (List[str]) Contains keywords or categories for the message object.             
-        :param companies (List[str]) Contains the names of the companies that are associated with an item.             
-        :param item_id (str) The item id, uses with a server.             
-        :param message_class (str) Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
-        :param mileage (str) Contains the mileage information that is associated with an item.             
-        :param recipients (List[MapiRecipientDto]) Recipients of the message.             
-        :param sensitivity (str) Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
-        :param subject (str) Subject of the message.             
-        :param subject_prefix (str) Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
-        :param properties (List[MapiPropertyDto]) List of MAPI properties             
-        :param discriminator (str) 
-        :param appointment_counter_proposal (bool) Value indicating whether a Meeting Response object is a counter proposal.             
-        :param attendees (MapiCalendarAttendeesDto) Attendees             
-        :param busy_status (str) Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
-        :param client_intent (List[str]) Actions the user has taken on this Meeting object.             
-        :param end_date (datetime) End date and time of the event. If the date is not set, default value for DateTime is returned.             
-        :param end_date_time_zone (MapiCalendarTimeZoneDto) Time zone information that indicates the time zone of the EndDate property.             
-        :param is_all_day (bool) Value indicating whether the event is an all-day event.             
-        :param key_words (str) Categories of the calendar object.             
-        :param location (str) Location of the event.             
-        :param recurrence (MapiCalendarEventRecurrenceDto) Recurrence properties.             
-        :param reminder_delta (int) Interval, in minutes, between the time at which the reminder first becomes overdue and the start time of the Calendar object.             
-        :param reminder_file_parameter (str) Full path of the sound that a client SHOULD play when the reminder becomes overdue.             
-        :param reminder_set (bool) Value indicating whether a reminder is set on the object.             
-        :param sequence (int) Sequence number.             
-        :param start_date (datetime) Start date and time of the event. If the date is not set, default value for DateTime is returned.             
-        :param start_date_time_zone (MapiCalendarTimeZoneDto) Time zone information that indicates the time zone of the StartDate property.             
-        :param uid (str) Unique identifier.             
-        :param organizer (MapiElectronicAddressDto) Organizer             
+        :param attachments: Message item attachments.             
+        :type attachments: List[MapiAttachmentDto]
+        :param billing: Billing information associated with an item.             
+        :type billing: str
+        :param body: Message text.             
+        :type body: str
+        :param body_html: Gets the BodyRtf of the message converted to HTML, if present, otherwise an empty string.             
+        :type body_html: str
+        :param body_rtf: RTF formatted message text.             
+        :type body_rtf: str
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :type body_type: str
+        :param categories: Contains keywords or categories for the message object.             
+        :type categories: List[str]
+        :param companies: Contains the names of the companies that are associated with an item.             
+        :type companies: List[str]
+        :param item_id: The item id, uses with a server.             
+        :type item_id: str
+        :param message_class: Case-sensitive string that identifies the sender-defined message class, such as IPM.Note. The message class specifies the type, purpose, or content of the message.             
+        :type message_class: str
+        :param mileage: Contains the mileage information that is associated with an item.             
+        :type mileage: str
+        :param recipients: Recipients of the message.             
+        :type recipients: List[MapiRecipientDto]
+        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :type sensitivity: str
+        :param subject: Subject of the message.             
+        :type subject: str
+        :param subject_prefix: Subject prefix that typically indicates some action on a message, such as \"FW: \" for forwarding.             
+        :type subject_prefix: str
+        :param properties: List of MAPI properties             
+        :type properties: List[MapiPropertyDto]
+        :param appointment_counter_proposal: Value indicating whether a Meeting Response object is a counter proposal.             
+        :type appointment_counter_proposal: bool
+        :param attendees: Attendees             
+        :type attendees: MapiCalendarAttendeesDto
+        :param busy_status: Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        :type busy_status: str
+        :param client_intent: Actions the user has taken on this Meeting object.             
+        :type client_intent: List[str]
+        :param end_date: End date and time of the event. If the date is not set, default value for DateTime is returned.             
+        :type end_date: datetime
+        :param end_date_time_zone: Time zone information that indicates the time zone of the EndDate property.             
+        :type end_date_time_zone: MapiCalendarTimeZoneDto
+        :param is_all_day: Value indicating whether the event is an all-day event.             
+        :type is_all_day: bool
+        :param key_words: Categories of the calendar object.             
+        :type key_words: str
+        :param location: Location of the event.             
+        :type location: str
+        :param recurrence: Recurrence properties.             
+        :type recurrence: MapiCalendarEventRecurrenceDto
+        :param reminder_delta: Interval, in minutes, between the time at which the reminder first becomes overdue and the start time of the Calendar object.             
+        :type reminder_delta: int
+        :param reminder_file_parameter: Full path of the sound that a client SHOULD play when the reminder becomes overdue.             
+        :type reminder_file_parameter: str
+        :param reminder_set: Value indicating whether a reminder is set on the object.             
+        :type reminder_set: bool
+        :param sequence: Sequence number.             
+        :type sequence: int
+        :param start_date: Start date and time of the event. If the date is not set, default value for DateTime is returned.             
+        :type start_date: datetime
+        :param start_date_time_zone: Time zone information that indicates the time zone of the StartDate property.             
+        :type start_date_time_zone: MapiCalendarTimeZoneDto
+        :param uid: Unique identifier.             
+        :type uid: str
+        :param organizer: Organizer             
+        :type organizer: MapiElectronicAddressDto
         """
         super(MapiCalendarDto, self).__init__()
 
@@ -219,8 +252,6 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
             self.subject_prefix = subject_prefix
         if properties is not None:
             self.properties = properties
-        if discriminator is not None:
-            self.discriminator = discriminator
         if appointment_counter_proposal is not None:
             self.appointment_counter_proposal = appointment_counter_proposal
         if attendees is not None:
@@ -258,10 +289,10 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         if organizer is not None:
             self.organizer = organizer
 
+
     @property
     def appointment_counter_proposal(self) -> bool:
-        """Gets the appointment_counter_proposal of this MapiCalendarDto.
-
+        """
         Value indicating whether a Meeting Response object is a counter proposal.             
 
         :return: The appointment_counter_proposal of this MapiCalendarDto.
@@ -271,8 +302,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @appointment_counter_proposal.setter
     def appointment_counter_proposal(self, appointment_counter_proposal: bool):
-        """Sets the appointment_counter_proposal of this MapiCalendarDto.
-
+        """
         Value indicating whether a Meeting Response object is a counter proposal.             
 
         :param appointment_counter_proposal: The appointment_counter_proposal of this MapiCalendarDto.
@@ -284,8 +314,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def attendees(self) -> MapiCalendarAttendeesDto:
-        """Gets the attendees of this MapiCalendarDto.
-
+        """
         Attendees             
 
         :return: The attendees of this MapiCalendarDto.
@@ -295,8 +324,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @attendees.setter
     def attendees(self, attendees: MapiCalendarAttendeesDto):
-        """Sets the attendees of this MapiCalendarDto.
-
+        """
         Attendees             
 
         :param attendees: The attendees of this MapiCalendarDto.
@@ -306,8 +334,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def busy_status(self) -> str:
-        """Gets the busy_status of this MapiCalendarDto.
-
+        """
         Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :return: The busy_status of this MapiCalendarDto.
@@ -317,8 +344,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @busy_status.setter
     def busy_status(self, busy_status: str):
-        """Sets the busy_status of this MapiCalendarDto.
-
+        """
         Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :param busy_status: The busy_status of this MapiCalendarDto.
@@ -330,8 +356,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def client_intent(self) -> List[str]:
-        """Gets the client_intent of this MapiCalendarDto.
-
+        """
         Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
 
         :return: The client_intent of this MapiCalendarDto.
@@ -341,8 +366,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @client_intent.setter
     def client_intent(self, client_intent: List[str]):
-        """Sets the client_intent of this MapiCalendarDto.
-
+        """
         Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
 
         :param client_intent: The client_intent of this MapiCalendarDto.
@@ -352,8 +376,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def end_date(self) -> datetime:
-        """Gets the end_date of this MapiCalendarDto.
-
+        """
         End date and time of the event. If the date is not set, default value for DateTime is returned.             
 
         :return: The end_date of this MapiCalendarDto.
@@ -363,8 +386,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @end_date.setter
     def end_date(self, end_date: datetime):
-        """Sets the end_date of this MapiCalendarDto.
-
+        """
         End date and time of the event. If the date is not set, default value for DateTime is returned.             
 
         :param end_date: The end_date of this MapiCalendarDto.
@@ -376,8 +398,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def end_date_time_zone(self) -> MapiCalendarTimeZoneDto:
-        """Gets the end_date_time_zone of this MapiCalendarDto.
-
+        """
         Time zone information that indicates the time zone of the EndDate property.             
 
         :return: The end_date_time_zone of this MapiCalendarDto.
@@ -387,8 +408,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @end_date_time_zone.setter
     def end_date_time_zone(self, end_date_time_zone: MapiCalendarTimeZoneDto):
-        """Sets the end_date_time_zone of this MapiCalendarDto.
-
+        """
         Time zone information that indicates the time zone of the EndDate property.             
 
         :param end_date_time_zone: The end_date_time_zone of this MapiCalendarDto.
@@ -398,8 +418,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def is_all_day(self) -> bool:
-        """Gets the is_all_day of this MapiCalendarDto.
-
+        """
         Value indicating whether the event is an all-day event.             
 
         :return: The is_all_day of this MapiCalendarDto.
@@ -409,8 +428,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @is_all_day.setter
     def is_all_day(self, is_all_day: bool):
-        """Sets the is_all_day of this MapiCalendarDto.
-
+        """
         Value indicating whether the event is an all-day event.             
 
         :param is_all_day: The is_all_day of this MapiCalendarDto.
@@ -422,8 +440,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def key_words(self) -> str:
-        """Gets the key_words of this MapiCalendarDto.
-
+        """
         Categories of the calendar object.             
 
         :return: The key_words of this MapiCalendarDto.
@@ -433,8 +450,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @key_words.setter
     def key_words(self, key_words: str):
-        """Sets the key_words of this MapiCalendarDto.
-
+        """
         Categories of the calendar object.             
 
         :param key_words: The key_words of this MapiCalendarDto.
@@ -444,8 +460,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def location(self) -> str:
-        """Gets the location of this MapiCalendarDto.
-
+        """
         Location of the event.             
 
         :return: The location of this MapiCalendarDto.
@@ -455,8 +470,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @location.setter
     def location(self, location: str):
-        """Sets the location of this MapiCalendarDto.
-
+        """
         Location of the event.             
 
         :param location: The location of this MapiCalendarDto.
@@ -466,8 +480,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def recurrence(self) -> MapiCalendarEventRecurrenceDto:
-        """Gets the recurrence of this MapiCalendarDto.
-
+        """
         Recurrence properties.             
 
         :return: The recurrence of this MapiCalendarDto.
@@ -477,8 +490,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @recurrence.setter
     def recurrence(self, recurrence: MapiCalendarEventRecurrenceDto):
-        """Sets the recurrence of this MapiCalendarDto.
-
+        """
         Recurrence properties.             
 
         :param recurrence: The recurrence of this MapiCalendarDto.
@@ -488,8 +500,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def reminder_delta(self) -> int:
-        """Gets the reminder_delta of this MapiCalendarDto.
-
+        """
         Interval, in minutes, between the time at which the reminder first becomes overdue and the start time of the Calendar object.             
 
         :return: The reminder_delta of this MapiCalendarDto.
@@ -499,8 +510,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @reminder_delta.setter
     def reminder_delta(self, reminder_delta: int):
-        """Sets the reminder_delta of this MapiCalendarDto.
-
+        """
         Interval, in minutes, between the time at which the reminder first becomes overdue and the start time of the Calendar object.             
 
         :param reminder_delta: The reminder_delta of this MapiCalendarDto.
@@ -512,8 +522,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def reminder_file_parameter(self) -> str:
-        """Gets the reminder_file_parameter of this MapiCalendarDto.
-
+        """
         Full path of the sound that a client SHOULD play when the reminder becomes overdue.             
 
         :return: The reminder_file_parameter of this MapiCalendarDto.
@@ -523,8 +532,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @reminder_file_parameter.setter
     def reminder_file_parameter(self, reminder_file_parameter: str):
-        """Sets the reminder_file_parameter of this MapiCalendarDto.
-
+        """
         Full path of the sound that a client SHOULD play when the reminder becomes overdue.             
 
         :param reminder_file_parameter: The reminder_file_parameter of this MapiCalendarDto.
@@ -534,8 +542,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def reminder_set(self) -> bool:
-        """Gets the reminder_set of this MapiCalendarDto.
-
+        """
         Value indicating whether a reminder is set on the object.             
 
         :return: The reminder_set of this MapiCalendarDto.
@@ -545,8 +552,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @reminder_set.setter
     def reminder_set(self, reminder_set: bool):
-        """Sets the reminder_set of this MapiCalendarDto.
-
+        """
         Value indicating whether a reminder is set on the object.             
 
         :param reminder_set: The reminder_set of this MapiCalendarDto.
@@ -558,8 +564,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def sequence(self) -> int:
-        """Gets the sequence of this MapiCalendarDto.
-
+        """
         Sequence number.             
 
         :return: The sequence of this MapiCalendarDto.
@@ -569,8 +574,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @sequence.setter
     def sequence(self, sequence: int):
-        """Sets the sequence of this MapiCalendarDto.
-
+        """
         Sequence number.             
 
         :param sequence: The sequence of this MapiCalendarDto.
@@ -582,8 +586,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def start_date(self) -> datetime:
-        """Gets the start_date of this MapiCalendarDto.
-
+        """
         Start date and time of the event. If the date is not set, default value for DateTime is returned.             
 
         :return: The start_date of this MapiCalendarDto.
@@ -593,8 +596,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @start_date.setter
     def start_date(self, start_date: datetime):
-        """Sets the start_date of this MapiCalendarDto.
-
+        """
         Start date and time of the event. If the date is not set, default value for DateTime is returned.             
 
         :param start_date: The start_date of this MapiCalendarDto.
@@ -606,8 +608,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def start_date_time_zone(self) -> MapiCalendarTimeZoneDto:
-        """Gets the start_date_time_zone of this MapiCalendarDto.
-
+        """
         Time zone information that indicates the time zone of the StartDate property.             
 
         :return: The start_date_time_zone of this MapiCalendarDto.
@@ -617,8 +618,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @start_date_time_zone.setter
     def start_date_time_zone(self, start_date_time_zone: MapiCalendarTimeZoneDto):
-        """Sets the start_date_time_zone of this MapiCalendarDto.
-
+        """
         Time zone information that indicates the time zone of the StartDate property.             
 
         :param start_date_time_zone: The start_date_time_zone of this MapiCalendarDto.
@@ -628,8 +628,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def uid(self) -> str:
-        """Gets the uid of this MapiCalendarDto.
-
+        """
         Unique identifier.             
 
         :return: The uid of this MapiCalendarDto.
@@ -639,8 +638,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @uid.setter
     def uid(self, uid: str):
-        """Sets the uid of this MapiCalendarDto.
-
+        """
         Unique identifier.             
 
         :param uid: The uid of this MapiCalendarDto.
@@ -650,8 +648,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @property
     def organizer(self) -> MapiElectronicAddressDto:
-        """Gets the organizer of this MapiCalendarDto.
-
+        """
         Organizer             
 
         :return: The organizer of this MapiCalendarDto.
@@ -661,8 +658,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
 
     @organizer.setter
     def organizer(self, organizer: MapiElectronicAddressDto):
-        """Sets the organizer of this MapiCalendarDto.
-
+        """
         Organizer             
 
         :param organizer: The organizer of this MapiCalendarDto.

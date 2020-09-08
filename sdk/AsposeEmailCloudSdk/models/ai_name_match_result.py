@@ -57,8 +57,10 @@ class AiNameMatchResult(object):
     def __init__(self, similarity: float = None, mismatches: List[AiNameMismatch] = None):
         """
         Two names match result             
-        :param similarity (float) Similarity score             
-        :param mismatches (List[AiNameMismatch]) Detailed description of mismatches             
+        :param similarity: Similarity score             
+        :type similarity: float
+        :param mismatches: Detailed description of mismatches             
+        :type mismatches: List[AiNameMismatch]
         """
 
         self._similarity = None
@@ -69,10 +71,10 @@ class AiNameMatchResult(object):
         if mismatches is not None:
             self.mismatches = mismatches
 
+
     @property
     def similarity(self) -> float:
-        """Gets the similarity of this AiNameMatchResult.
-
+        """
         Similarity score             
 
         :return: The similarity of this AiNameMatchResult.
@@ -82,8 +84,7 @@ class AiNameMatchResult(object):
 
     @similarity.setter
     def similarity(self, similarity: float):
-        """Sets the similarity of this AiNameMatchResult.
-
+        """
         Similarity score             
 
         :param similarity: The similarity of this AiNameMatchResult.
@@ -95,8 +96,7 @@ class AiNameMatchResult(object):
 
     @property
     def mismatches(self) -> List[AiNameMismatch]:
-        """Gets the mismatches of this AiNameMatchResult.
-
+        """
         Detailed description of mismatches             
 
         :return: The mismatches of this AiNameMatchResult.
@@ -106,8 +106,7 @@ class AiNameMatchResult(object):
 
     @mismatches.setter
     def mismatches(self, mismatches: List[AiNameMismatch]):
-        """Sets the mismatches of this AiNameMatchResult.
-
+        """
         Detailed description of mismatches             
 
         :param mismatches: The mismatches of this AiNameMatchResult.

@@ -55,7 +55,8 @@ class ListResponseOfEmailThread(object):
     def __init__(self, value: List[EmailThread] = None):
         """
         
-        :param value (List[EmailThread]) 
+        :param value: 
+        :type value: List[EmailThread]
         """
 
         self._value = None
@@ -63,10 +64,11 @@ class ListResponseOfEmailThread(object):
         if value is not None:
             self.value = value
 
+
     @property
     def value(self) -> List[EmailThread]:
-        """Gets the value of this ListResponseOfEmailThread.
-
+        """
+        Gets the value of this ListResponseOfEmailThread.
 
         :return: The value of this ListResponseOfEmailThread.
         :rtype: list[EmailThread]
@@ -75,8 +77,8 @@ class ListResponseOfEmailThread(object):
 
     @value.setter
     def value(self, value: List[EmailThread]):
-        """Sets the value of this ListResponseOfEmailThread.
-
+        """
+        Sets the value of this ListResponseOfEmailThread.
 
         :param value: The value of this ListResponseOfEmailThread.
         :type: list[EmailThread]

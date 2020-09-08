@@ -57,9 +57,12 @@ class AiNameMismatch(object):
     def __init__(self, category: str = None, similarity: float = None, explanation: str = None):
         """
         Names mismatch detailed description             
-        :param category (str) Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
-        :param similarity (float) Similarity score             
-        :param explanation (str) Explanation or mismatch subtype             
+        :param category: Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
+        :type category: str
+        :param similarity: Similarity score             
+        :type similarity: float
+        :param explanation: Explanation or mismatch subtype             
+        :type explanation: str
         """
 
         self._category = None
@@ -73,10 +76,10 @@ class AiNameMismatch(object):
         if explanation is not None:
             self.explanation = explanation
 
+
     @property
     def category(self) -> str:
-        """Gets the category of this AiNameMismatch.
-
+        """
         Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
 
         :return: The category of this AiNameMismatch.
@@ -86,8 +89,7 @@ class AiNameMismatch(object):
 
     @category.setter
     def category(self, category: str):
-        """Sets the category of this AiNameMismatch.
-
+        """
         Mismatch type. Enum, available values: Unknown, FirstName, MiddleName, MiddleLastName, MiddleNickname, Gender, Context
 
         :param category: The category of this AiNameMismatch.
@@ -99,8 +101,7 @@ class AiNameMismatch(object):
 
     @property
     def similarity(self) -> float:
-        """Gets the similarity of this AiNameMismatch.
-
+        """
         Similarity score             
 
         :return: The similarity of this AiNameMismatch.
@@ -110,8 +111,7 @@ class AiNameMismatch(object):
 
     @similarity.setter
     def similarity(self, similarity: float):
-        """Sets the similarity of this AiNameMismatch.
-
+        """
         Similarity score             
 
         :param similarity: The similarity of this AiNameMismatch.
@@ -123,8 +123,7 @@ class AiNameMismatch(object):
 
     @property
     def explanation(self) -> str:
-        """Gets the explanation of this AiNameMismatch.
-
+        """
         Explanation or mismatch subtype             
 
         :return: The explanation of this AiNameMismatch.
@@ -134,8 +133,7 @@ class AiNameMismatch(object):
 
     @explanation.setter
     def explanation(self, explanation: str):
-        """Sets the explanation of this AiNameMismatch.
-
+        """
         Explanation or mismatch subtype             
 
         :param explanation: The explanation of this AiNameMismatch.

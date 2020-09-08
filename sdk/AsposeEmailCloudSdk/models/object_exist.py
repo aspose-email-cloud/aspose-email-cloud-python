@@ -32,7 +32,7 @@ from datetime import datetime
 
 
 class ObjectExist(object):
-    """
+    """Object exists
     """
 
     """
@@ -54,9 +54,11 @@ class ObjectExist(object):
 
     def __init__(self, exists: bool = None, is_folder: bool = None):
         """
-        
-        :param exists (bool) 
-        :param is_folder (bool) 
+        Object exists
+        :param exists: Indicates that the file or folder exists.
+        :type exists: bool
+        :param is_folder: True if it is a folder, false if it is a file.
+        :type is_folder: bool
         """
 
         self._exists = None
@@ -67,10 +69,11 @@ class ObjectExist(object):
         if is_folder is not None:
             self.is_folder = is_folder
 
+
     @property
     def exists(self) -> bool:
-        """Gets the exists of this ObjectExist.
-
+        """
+        Indicates that the file or folder exists.
 
         :return: The exists of this ObjectExist.
         :rtype: bool
@@ -79,8 +82,8 @@ class ObjectExist(object):
 
     @exists.setter
     def exists(self, exists: bool):
-        """Sets the exists of this ObjectExist.
-
+        """
+        Indicates that the file or folder exists.
 
         :param exists: The exists of this ObjectExist.
         :type: bool
@@ -91,8 +94,8 @@ class ObjectExist(object):
 
     @property
     def is_folder(self) -> bool:
-        """Gets the is_folder of this ObjectExist.
-
+        """
+        True if it is a folder, false if it is a file.
 
         :return: The is_folder of this ObjectExist.
         :rtype: bool
@@ -101,8 +104,8 @@ class ObjectExist(object):
 
     @is_folder.setter
     def is_folder(self, is_folder: bool):
-        """Sets the is_folder of this ObjectExist.
-
+        """
+        True if it is a folder, false if it is a file.
 
         :param is_folder: The is_folder of this ObjectExist.
         :type: bool

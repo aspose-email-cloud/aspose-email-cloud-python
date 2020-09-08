@@ -69,15 +69,24 @@ class MapiContactPhysicalAddressDto(object):
     def __init__(self, is_mailing_address: bool = None, street: str = None, city: str = None, state_or_province: str = None, postal_code: str = None, country: str = None, country_code: str = None, address: str = None, post_office_box: str = None):
         """
         Refers to the group of properties that define physical address for a contact.             
-        :param is_mailing_address (bool) Gets or sets a value indicating whether this address is mailing address             
-        :param street (str) Specifies the street portion of the contact's address             
-        :param city (str) Specifies the city or locality portion of the contact's address             
-        :param state_or_province (str) Specifies the state or province portion of the contact's address             
-        :param postal_code (str) Specifies the postal code (ZIP code) portion of the contact's address             
-        :param country (str) Specifies the country or region portion of the contact's address             
-        :param country_code (str) Specifies the country code portion of the contact's address             
-        :param address (str) Specifies the complete address of the contact's address             
-        :param post_office_box (str) Gets or sets the post office box             
+        :param is_mailing_address: Gets or sets a value indicating whether this address is mailing address             
+        :type is_mailing_address: bool
+        :param street: Specifies the street portion of the contact's address             
+        :type street: str
+        :param city: Specifies the city or locality portion of the contact's address             
+        :type city: str
+        :param state_or_province: Specifies the state or province portion of the contact's address             
+        :type state_or_province: str
+        :param postal_code: Specifies the postal code (ZIP code) portion of the contact's address             
+        :type postal_code: str
+        :param country: Specifies the country or region portion of the contact's address             
+        :type country: str
+        :param country_code: Specifies the country code portion of the contact's address             
+        :type country_code: str
+        :param address: Specifies the complete address of the contact's address             
+        :type address: str
+        :param post_office_box: Gets or sets the post office box             
+        :type post_office_box: str
         """
 
         self._is_mailing_address = None
@@ -109,10 +118,10 @@ class MapiContactPhysicalAddressDto(object):
         if post_office_box is not None:
             self.post_office_box = post_office_box
 
+
     @property
     def is_mailing_address(self) -> bool:
-        """Gets the is_mailing_address of this MapiContactPhysicalAddressDto.
-
+        """
         Gets or sets a value indicating whether this address is mailing address             
 
         :return: The is_mailing_address of this MapiContactPhysicalAddressDto.
@@ -122,8 +131,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @is_mailing_address.setter
     def is_mailing_address(self, is_mailing_address: bool):
-        """Sets the is_mailing_address of this MapiContactPhysicalAddressDto.
-
+        """
         Gets or sets a value indicating whether this address is mailing address             
 
         :param is_mailing_address: The is_mailing_address of this MapiContactPhysicalAddressDto.
@@ -135,8 +143,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def street(self) -> str:
-        """Gets the street of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the street portion of the contact's address             
 
         :return: The street of this MapiContactPhysicalAddressDto.
@@ -146,8 +153,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @street.setter
     def street(self, street: str):
-        """Sets the street of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the street portion of the contact's address             
 
         :param street: The street of this MapiContactPhysicalAddressDto.
@@ -157,8 +163,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def city(self) -> str:
-        """Gets the city of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the city or locality portion of the contact's address             
 
         :return: The city of this MapiContactPhysicalAddressDto.
@@ -168,8 +173,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @city.setter
     def city(self, city: str):
-        """Sets the city of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the city or locality portion of the contact's address             
 
         :param city: The city of this MapiContactPhysicalAddressDto.
@@ -179,8 +183,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def state_or_province(self) -> str:
-        """Gets the state_or_province of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the state or province portion of the contact's address             
 
         :return: The state_or_province of this MapiContactPhysicalAddressDto.
@@ -190,8 +193,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @state_or_province.setter
     def state_or_province(self, state_or_province: str):
-        """Sets the state_or_province of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the state or province portion of the contact's address             
 
         :param state_or_province: The state_or_province of this MapiContactPhysicalAddressDto.
@@ -201,8 +203,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def postal_code(self) -> str:
-        """Gets the postal_code of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the postal code (ZIP code) portion of the contact's address             
 
         :return: The postal_code of this MapiContactPhysicalAddressDto.
@@ -212,8 +213,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @postal_code.setter
     def postal_code(self, postal_code: str):
-        """Sets the postal_code of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the postal code (ZIP code) portion of the contact's address             
 
         :param postal_code: The postal_code of this MapiContactPhysicalAddressDto.
@@ -223,8 +223,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def country(self) -> str:
-        """Gets the country of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the country or region portion of the contact's address             
 
         :return: The country of this MapiContactPhysicalAddressDto.
@@ -234,8 +233,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @country.setter
     def country(self, country: str):
-        """Sets the country of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the country or region portion of the contact's address             
 
         :param country: The country of this MapiContactPhysicalAddressDto.
@@ -245,8 +243,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def country_code(self) -> str:
-        """Gets the country_code of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the country code portion of the contact's address             
 
         :return: The country_code of this MapiContactPhysicalAddressDto.
@@ -256,8 +253,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @country_code.setter
     def country_code(self, country_code: str):
-        """Sets the country_code of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the country code portion of the contact's address             
 
         :param country_code: The country_code of this MapiContactPhysicalAddressDto.
@@ -267,8 +263,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def address(self) -> str:
-        """Gets the address of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the complete address of the contact's address             
 
         :return: The address of this MapiContactPhysicalAddressDto.
@@ -278,8 +273,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @address.setter
     def address(self, address: str):
-        """Sets the address of this MapiContactPhysicalAddressDto.
-
+        """
         Specifies the complete address of the contact's address             
 
         :param address: The address of this MapiContactPhysicalAddressDto.
@@ -289,8 +283,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @property
     def post_office_box(self) -> str:
-        """Gets the post_office_box of this MapiContactPhysicalAddressDto.
-
+        """
         Gets or sets the post office box             
 
         :return: The post_office_box of this MapiContactPhysicalAddressDto.
@@ -300,8 +293,7 @@ class MapiContactPhysicalAddressDto(object):
 
     @post_office_box.setter
     def post_office_box(self, post_office_box: str):
-        """Sets the post_office_box of this MapiContactPhysicalAddressDto.
-
+        """
         Gets or sets the post office box             
 
         :param post_office_box: The post_office_box of this MapiContactPhysicalAddressDto.
