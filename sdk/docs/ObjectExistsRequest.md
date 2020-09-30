@@ -14,5 +14,5 @@ Name | Type | Description | Notes
 ```python
 request = models.ObjectExistsRequest(
     path='/storage/path/to/folder/or/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 ```

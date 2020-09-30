@@ -14,5 +14,5 @@ Name | Type | Description | Notes
 ```python
 request = models.DeleteFileRequest(
     path='/storage/path/to/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 ```

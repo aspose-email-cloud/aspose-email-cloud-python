@@ -18,5 +18,5 @@ Name | Type | Description | Notes
 ```python
 request = models.AiNameFormatRequest(
     name='Mr. John Michael Cane',
-    format='%t%L%f%m',)
+    format='%t%L%f%m')
 ```

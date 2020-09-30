@@ -16,5 +16,5 @@ Name | Type | Description | Notes
 ## Example
 ```python
 request = models.AiNameParseEmailAddressRequest(
-    email_address='john-cane@gmail.com',)
+    email_address='john-cane@gmail.com')
 ```

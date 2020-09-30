@@ -22,5 +22,5 @@ request = models.ClientMessageAppendFileRequest(
     storage='First Storage',
     account_storage_folder='email/account/location/on/storage',
     format='Eml',
-    folder='INBOX',)
+    folder='INBOX')
 ```

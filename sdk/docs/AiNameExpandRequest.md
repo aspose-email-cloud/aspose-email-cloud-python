@@ -16,5 +16,5 @@ Name | Type | Description | Notes
 ## Example
 ```python
 request = models.AiNameExpandRequest(
-    name='John Cane',)
+    name='John Cane')
 ```

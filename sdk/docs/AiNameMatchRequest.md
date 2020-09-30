@@ -18,5 +18,5 @@ Name | Type | Description | Notes
 ```python
 request = models.AiNameMatchRequest(
     name='John Michael Cane',
-    other_name='Cane J.',)
+    other_name='Cane J.')
 ```

@@ -148,7 +148,7 @@ request = models.ClientMessageAppendFileRequest(
     storage='First Storage',
     account_storage_folder='email/account/location/on/storage',
     format='Eml',
-    folder='INBOX',)
+    folder='INBOX')
 ```
 
 </details>
@@ -182,7 +182,7 @@ request = models.ClientMessageAppendFileRequest(
     storage='First Storage',
     account_storage_folder='email/account/location/on/storage',
     format='Eml',
-    folder='INBOX',)
+    folder='INBOX')
 
 // Call method:
 result = api.client.message.append_file(request)

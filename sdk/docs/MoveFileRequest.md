@@ -18,5 +18,5 @@ request = models.MoveFileRequest(
     src_path='/storage/path/to/source/file.ext',
     dest_path='/storage/path/to/destination/file.ext',
     src_storage_name='First Storage',
-    dest_storage_name='Other Storage',)
+    dest_storage_name='Other Storage')
 ```

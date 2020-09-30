@@ -18,5 +18,5 @@ Name | Type | Description | Notes
 request = models.AiNameParseRequest(
     name='John Cane',
     language='eng',
-    location='USA',)
+    location='USA')
 ```

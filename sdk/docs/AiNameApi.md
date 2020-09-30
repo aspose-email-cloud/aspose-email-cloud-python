@@ -25,7 +25,7 @@ See parameter model documentation at [AiNameCompleteRequest](AiNameCompleteReque
     
 ```python
 request = models.AiNameCompleteRequest(
-    name='Dav',)
+    name='Dav')
 ```
 
 </details>
@@ -61,7 +61,7 @@ api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
 request = models.AiNameCompleteRequest(
-    name='Dav',)
+    name='Dav')
 
 // Call method:
 result = api.ai.name.complete(request)
@@ -103,7 +103,7 @@ See parameter model documentation at [AiNameExpandRequest](AiNameExpandRequest.m
     
 ```python
 request = models.AiNameExpandRequest(
-    name='John Cane',)
+    name='John Cane')
 ```
 
 </details>
@@ -139,7 +139,7 @@ api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
 request = models.AiNameExpandRequest(
-    name='John Cane',)
+    name='John Cane')
 
 // Call method:
 result = api.ai.name.expand(request)
@@ -258,7 +258,7 @@ See parameter model documentation at [AiNameFormatRequest](AiNameFormatRequest.m
 ```python
 request = models.AiNameFormatRequest(
     name='Mr. John Michael Cane',
-    format='%t%L%f%m',)
+    format='%t%L%f%m')
 ```
 
 </details>
@@ -290,7 +290,7 @@ api = EmailCloud(app_key, app_sid)
 // Prepare parameters:
 request = models.AiNameFormatRequest(
     name='Mr. John Michael Cane',
-    format='%t%L%f%m',)
+    format='%t%L%f%m')
 
 // Call method:
 result = api.ai.name.format(request)
@@ -393,7 +393,7 @@ See parameter model documentation at [AiNameGenderizeRequest](AiNameGenderizeReq
     
 ```python
 request = models.AiNameGenderizeRequest(
-    name='John Cane',)
+    name='John Cane')
 ```
 
 </details>
@@ -422,7 +422,7 @@ api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
 request = models.AiNameGenderizeRequest(
-    name='John Cane',)
+    name='John Cane')
 
 // Call method:
 result = api.ai.name.genderize(request)
@@ -520,7 +520,7 @@ See parameter model documentation at [AiNameMatchRequest](AiNameMatchRequest.md)
 ```python
 request = models.AiNameMatchRequest(
     name='John Michael Cane',
-    other_name='Cane J.',)
+    other_name='Cane J.')
 ```
 
 </details>
@@ -555,7 +555,7 @@ api = EmailCloud(app_key, app_sid)
 // Prepare parameters:
 request = models.AiNameMatchRequest(
     name='John Michael Cane',
-    other_name='Cane J.',)
+    other_name='Cane J.')
 
 // Call method:
 result = api.ai.name.match(request)
@@ -669,7 +669,7 @@ See parameter model documentation at [AiNameParseRequest](AiNameParseRequest.md)
 request = models.AiNameParseRequest(
     name='John Cane',
     language='eng',
-    location='USA',)
+    location='USA')
 ```
 
 </details>
@@ -700,7 +700,7 @@ api = EmailCloud(app_key, app_sid)
 request = models.AiNameParseRequest(
     name='John Cane',
     language='eng',
-    location='USA',)
+    location='USA')
 
 // Call method:
 result = api.ai.name.parse(request)
@@ -735,7 +735,7 @@ See parameter model documentation at [AiNameParseEmailAddressRequest](AiNamePars
     
 ```python
 request = models.AiNameParseEmailAddressRequest(
-    email_address='john-cane@gmail.com',)
+    email_address='john-cane@gmail.com')
 ```
 
 </details>
@@ -764,7 +764,7 @@ api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
 request = models.AiNameParseEmailAddressRequest(
-    email_address='john-cane@gmail.com',)
+    email_address='john-cane@gmail.com')
 
 // Call method:
 result = api.ai.name.parse_email_address(request)

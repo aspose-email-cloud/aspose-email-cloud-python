@@ -16,5 +16,5 @@ Name | Type | Description | Notes
 ## Example
 ```python
 request = models.AiNameGenderizeRequest(
-    name='John Cane',)
+    name='John Cane')
 ```

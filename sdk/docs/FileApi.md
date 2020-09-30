@@ -26,7 +26,7 @@ request = models.CopyFileRequest(
     src_path='/storage/path/to/source/file.ext',
     dest_path='/storage/path/to/destination/file.ext',
     src_storage_name='First Storage',
-    dest_storage_name='Other Storage',)
+    dest_storage_name='Other Storage')
 ```
 
 </details>
@@ -48,7 +48,7 @@ request = models.CopyFileRequest(
     src_path='/storage/path/to/source/file.ext',
     dest_path='/storage/path/to/destination/file.ext',
     src_storage_name='First Storage',
-    dest_storage_name='Other Storage',)
+    dest_storage_name='Other Storage')
 
 // Call method:
 api.cloud_storage.file.copy_file(request)
@@ -79,7 +79,7 @@ See parameter model documentation at [DeleteFileRequest](DeleteFileRequest.md).
 ```python
 request = models.DeleteFileRequest(
     path='/storage/path/to/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 ```
 
 </details>
@@ -99,7 +99,7 @@ api = EmailCloud(app_key, app_sid)
 // Prepare parameters:
 request = models.DeleteFileRequest(
     path='/storage/path/to/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 
 // Call method:
 api.cloud_storage.file.delete_file(request)
@@ -132,7 +132,7 @@ See parameter model documentation at [DownloadFileRequest](DownloadFileRequest.m
 ```python
 request = models.DownloadFileRequest(
     path='/storage/path/to/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 ```
 
 </details>
@@ -154,7 +154,7 @@ api = EmailCloud(app_key, app_sid)
 // Prepare parameters:
 request = models.DownloadFileRequest(
     path='/storage/path/to/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 
 // Call method:
 result = api.cloud_storage.file.download_file(request)
@@ -187,7 +187,7 @@ request = models.MoveFileRequest(
     src_path='/storage/path/to/source/file.ext',
     dest_path='/storage/path/to/destination/file.ext',
     src_storage_name='First Storage',
-    dest_storage_name='Other Storage',)
+    dest_storage_name='Other Storage')
 ```
 
 </details>
@@ -209,7 +209,7 @@ request = models.MoveFileRequest(
     src_path='/storage/path/to/source/file.ext',
     dest_path='/storage/path/to/destination/file.ext',
     src_storage_name='First Storage',
-    dest_storage_name='Other Storage',)
+    dest_storage_name='Other Storage')
 
 // Call method:
 api.cloud_storage.file.move_file(request)

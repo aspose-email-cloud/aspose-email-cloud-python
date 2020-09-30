@@ -16,5 +16,5 @@ Name | Type | Description | Notes
 ## Example
 ```python
 request = models.AiNameCompleteRequest(
-    name='Dav',)
+    name='Dav')
 ```

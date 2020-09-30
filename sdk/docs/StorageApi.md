@@ -176,7 +176,7 @@ See parameter model documentation at [ObjectExistsRequest](ObjectExistsRequest.m
 ```python
 request = models.ObjectExistsRequest(
     path='/storage/path/to/folder/or/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 ```
 
 </details>
@@ -207,7 +207,7 @@ api = EmailCloud(app_key, app_sid)
 // Prepare parameters:
 request = models.ObjectExistsRequest(
     path='/storage/path/to/folder/or/file.ext',
-    storage_name='First Storage',)
+    storage_name='First Storage')
 
 // Call method:
 result = api.cloud_storage.storage.object_exists(request)

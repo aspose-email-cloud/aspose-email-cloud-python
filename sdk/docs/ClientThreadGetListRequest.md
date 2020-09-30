@@ -19,5 +19,5 @@ request = models.ClientThreadGetListRequest(
     folder='INBOX/SubFolder',
     account='email.account',
     storage='First Storage',
-    account_storage_folder='email/account/location/on/storage',)
+    account_storage_folder='email/account/location/on/storage')
 ```
