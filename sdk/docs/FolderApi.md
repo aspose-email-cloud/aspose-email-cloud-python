@@ -1,148 +1,297 @@
-# AsposeEmailCloudSdk.FolderApi
+# AsposeEmailCloudSdk.FolderApi (EmailCloud.cloud_storage.folder)
 
-        
+Folder operations controller
+
 <a name="copy_folder"></a>
-# copy_folder
+## copy_folder
 
+Description: Copy folder
+
+Method call example:
 ```python
-copy_folder(self, request: CopyFolderRequest)
+api.cloud_storage.folder.copy_folder(request)
 ```
 
-Copy folder
+### Parameter: request
 
-### Return type
+Description: copy_folder method request.
 
-None
+See parameter model documentation at [CopyFolderRequest](CopyFolderRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-CopyFolderRequest(
-    src_path,
-    dest_path,
-    src_storage_name,
-    dest_storage_name)
+request = models.CopyFolderRequest(
+    src_path='/storage/path/to/source/folder',
+    dest_path='/storage/path/to/destination/folder',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage')
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Source folder path e.g. &#39;/src&#39; | 
- **dest_path** | **str** | Destination folder path e.g. &#39;/dst&#39; | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.CopyFolderRequest(
+    src_path='/storage/path/to/source/folder',
+    dest_path='/storage/path/to/destination/folder',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage')
+
+// Call method:
+api.cloud_storage.folder.copy_folder(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="create_folder"></a>
-# create_folder
+## create_folder
 
+Description: Create the folder
+
+Method call example:
 ```python
-create_folder(self, request: CreateFolderRequest)
+api.cloud_storage.folder.create_folder(request)
 ```
 
-Create the folder
+### Parameter: request
 
-### Return type
+Description: create_folder method request.
 
-None
+See parameter model documentation at [CreateFolderRequest](CreateFolderRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-CreateFolderRequest(
-    path,
-    storage_name)
+request = models.CreateFolderRequest(
+    path='/storage/path/to/new/folder',
+    storage_name='First Storage')
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **str** | Folder path to create e.g. &#39;folder_1/folder_2/&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.CreateFolderRequest(
+    path='/storage/path/to/new/folder',
+    storage_name='First Storage')
+
+// Call method:
+api.cloud_storage.folder.create_folder(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="delete_folder"></a>
-# delete_folder
+## delete_folder
 
+Description: Delete folder
+
+Method call example:
 ```python
-delete_folder(self, request: DeleteFolderRequest)
+api.cloud_storage.folder.delete_folder(request)
 ```
 
-Delete folder
+### Parameter: request
 
-### Return type
+Description: delete_folder method request.
 
-None
+See parameter model documentation at [DeleteFolderRequest](DeleteFolderRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-DeleteFolderRequest(
-    path,
-    storage_name,
-    recursive)
+request = models.DeleteFolderRequest(
+    path='/storage/path/to/folder',
+    storage_name='First Storage',
+    recursive=True)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **str** | Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
- **recursive** | **bool** | Enable to delete folders, subfolders and files | [optional] [default to false]
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.DeleteFolderRequest(
+    path='/storage/path/to/folder',
+    storage_name='First Storage',
+    recursive=True)
+
+// Call method:
+api.cloud_storage.folder.delete_folder(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="get_files_list"></a>
-# get_files_list
+## get_files_list
 
+Description: Get all files and folders within a folder
+
+Returns: Returns all files and folders contained by the folder.
+
+Method call example:
 ```python
-get_files_list(self, request: GetFilesListRequest)
+result = api.cloud_storage.folder.get_files_list(request)
 ```
 
-Get all files and folders within a folder
+### Parameter: request
 
-### Return type
+Description: get_files_list method request.
 
-FilesList
+See parameter model documentation at [GetFilesListRequest](GetFilesListRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-GetFilesListRequest(
-    path,
-    storage_name)
+request = models.GetFilesListRequest(
+    path='/storage/path/to/folder',
+    storage_name='First Storage')
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **str** | Folder path e.g. &#39;/folder&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
+</details>
+
+### Result
+
+Description: Returns all files and folders contained by the folder.
+
+Return type: [**FilesList**](FilesList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```python
+result = models.FilesList(
+    value=[
+        models.StorageFile(
+            name='file.ext',
+            modified_date=datetime.today(),
+            size=1024,
+            path='/path/to/file/on/storage')])
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.GetFilesListRequest(
+    path='/storage/path/to/folder',
+    storage_name='First Storage')
+
+// Call method:
+result = api.cloud_storage.folder.get_files_list(request)
+
+// Result example:
+result = models.FilesList(
+    value=[
+        models.StorageFile(
+            name='file.ext',
+            modified_date=datetime.today(),
+            size=1024,
+            path='/path/to/file/on/storage')])
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="move_folder"></a>
-# move_folder
+## move_folder
 
+Description: Move folder
+
+Method call example:
 ```python
-move_folder(self, request: MoveFolderRequest)
+api.cloud_storage.folder.move_folder(request)
 ```
 
-Move folder
+### Parameter: request
 
-### Return type
+Description: move_folder method request.
 
-None
+See parameter model documentation at [MoveFolderRequest](MoveFolderRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-MoveFolderRequest(
-    src_path,
-    dest_path,
-    src_storage_name,
-    dest_storage_name)
+request = models.MoveFolderRequest(
+    src_path='/storage/path/to/source/folder',
+    dest_path='/storage/path/to/destination/folder',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage')
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Folder path to move e.g. &#39;/folder&#39; | 
- **dest_path** | **str** | Destination folder path to move to e.g &#39;/dst&#39; | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.MoveFolderRequest(
+    src_path='/storage/path/to/source/folder',
+    dest_path='/storage/path/to/destination/folder',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage')
+
+// Call method:
+api.cloud_storage.folder.move_folder(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

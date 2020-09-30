@@ -1,156 +1,289 @@
-# AsposeEmailCloudSdk.FileApi
+# AsposeEmailCloudSdk.FileApi (EmailCloud.cloud_storage.file)
 
-        
+File operations controller
+
 <a name="copy_file"></a>
-# copy_file
+## copy_file
 
+Description: Copy file
+
+Method call example:
 ```python
-copy_file(self, request: CopyFileRequest)
+api.cloud_storage.file.copy_file(request)
 ```
 
-Copy file
+### Parameter: request
 
-### Return type
+Description: copy_file method request.
 
-None
+See parameter model documentation at [CopyFileRequest](CopyFileRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-CopyFileRequest(
-    src_path,
-    dest_path,
-    src_storage_name,
-    dest_storage_name,
-    version_id)
+request = models.CopyFileRequest(
+    src_path='/storage/path/to/source/file.ext',
+    dest_path='/storage/path/to/destination/file.ext',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage',)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Source file path e.g. &#39;/folder/file.ext&#39; | 
- **dest_path** | **str** | Destination file path | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
- **version_id** | **str** | File version ID to copy | [optional] 
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.CopyFileRequest(
+    src_path='/storage/path/to/source/file.ext',
+    dest_path='/storage/path/to/destination/file.ext',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage',)
+
+// Call method:
+api.cloud_storage.file.copy_file(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="delete_file"></a>
-# delete_file
+## delete_file
 
+Description: Delete file
+
+Method call example:
 ```python
-delete_file(self, request: DeleteFileRequest)
+api.cloud_storage.file.delete_file(request)
 ```
 
-Delete file
+### Parameter: request
 
-### Return type
+Description: delete_file method request.
 
-None
+See parameter model documentation at [DeleteFileRequest](DeleteFileRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-DeleteFileRequest(
-    path,
-    storage_name,
-    version_id)
+request = models.DeleteFileRequest(
+    path='/storage/path/to/file.ext',
+    storage_name='First Storage',)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **str** | File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
- **version_id** | **str** | File version ID to delete | [optional] 
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.DeleteFileRequest(
+    path='/storage/path/to/file.ext',
+    storage_name='First Storage',)
+
+// Call method:
+api.cloud_storage.file.delete_file(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="download_file"></a>
-# download_file
+## download_file
 
+Description: Download file
+
+Returns: The raw data of the file.
+
+Method call example:
 ```python
-download_file(self, request: DownloadFileRequest)
+result = api.cloud_storage.file.download_file(request)
 ```
 
-Download file
+### Parameter: request
 
-### Return type
+Description: download_file method request.
 
-str
+See parameter model documentation at [DownloadFileRequest](DownloadFileRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-DownloadFileRequest(
-    path,
-    storage_name,
-    version_id)
+request = models.DownloadFileRequest(
+    path='/storage/path/to/file.ext',
+    storage_name='First Storage',)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **str** | File path e.g. &#39;/folder/file.ext&#39; | 
- **storage_name** | **str** | Storage name | [optional] 
- **version_id** | **str** | File version ID to download | [optional] 
+</details>
+
+### Result
+
+Description: The raw data of the file.
+
+Return type: **Stream**
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.DownloadFileRequest(
+    path='/storage/path/to/file.ext',
+    storage_name='First Storage',)
+
+// Call method:
+result = api.cloud_storage.file.download_file(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="move_file"></a>
-# move_file
+## move_file
 
+Description: Move file
+
+Method call example:
 ```python
-move_file(self, request: MoveFileRequest)
+api.cloud_storage.file.move_file(request)
 ```
 
-Move file
+### Parameter: request
 
-### Return type
+Description: move_file method request.
 
-None
+See parameter model documentation at [MoveFileRequest](MoveFileRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-MoveFileRequest(
-    src_path,
-    dest_path,
-    src_storage_name,
-    dest_storage_name,
-    version_id)
+request = models.MoveFileRequest(
+    src_path='/storage/path/to/source/file.ext',
+    dest_path='/storage/path/to/destination/file.ext',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage',)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **src_path** | **str** | Source file path e.g. &#39;/src.ext&#39; | 
- **dest_path** | **str** | Destination file path e.g. &#39;/dest.ext&#39; | 
- **src_storage_name** | **str** | Source storage name | [optional] 
- **dest_storage_name** | **str** | Destination storage name | [optional] 
- **version_id** | **str** | File version ID to move | [optional] 
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.MoveFileRequest(
+    src_path='/storage/path/to/source/file.ext',
+    dest_path='/storage/path/to/destination/file.ext',
+    src_storage_name='First Storage',
+    dest_storage_name='Other Storage',)
+
+// Call method:
+api.cloud_storage.file.move_file(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="upload_file"></a>
-# upload_file
+## upload_file
 
+Description: Upload file
+
+Returns: Empty error list if the upload is successful.
+
+Method call example:
 ```python
-upload_file(self, request: UploadFileRequest)
+result = api.cloud_storage.file.upload_file(request)
 ```
 
-Upload file
+### Parameter: request
 
-### Return type
+Description: upload_file method request.
 
-FilesUploadResult
+See parameter model documentation at [UploadFileRequest](UploadFileRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-UploadFileRequest(
-    path,
-    file,
-    storage_name)
+request = models.UploadFileRequest(
+    path='/storage/path/to/file.ext',
+    file='/local/file/system/path/to/file.ext',
+    storage_name='First Storage')
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **str** | Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.              | 
- **file** | **str** | File to upload | 
- **storage_name** | **str** | Storage name | [optional] 
+</details>
+
+### Result
+
+Description: Empty error list if the upload is successful.
+
+Return type: [**FilesUploadResult**](FilesUploadResult.md)
+
+<details>
+    <summary>Result example</summary>
+
+```python
+result = 
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.UploadFileRequest(
+    path='/storage/path/to/file.ext',
+    file='/local/file/system/path/to/file.ext',
+    storage_name='First Storage')
+
+// Call method:
+result = api.cloud_storage.file.upload_file(request)
+
+// Result example:
+result = 
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

@@ -1,128 +1,372 @@
-# AsposeEmailCloudSdk.ClientThreadApi
+# AsposeEmailCloudSdk.ClientThreadApi (EmailCloud.client.thread)
 
-        
+Email client thread operations.
+
 <a name="delete"></a>
-# delete
+## delete
 
+Description: Delete thread by id. All messages from thread will also be deleted.             
+
+Method call example:
 ```python
-delete(self, ClientThreadDeleteRequest request)
+api.client.thread.delete(request)
 ```
 
-Delete thread by id. All messages from thread will also be deleted.             
+### Parameter: request
 
-### Return type
-
-void (empty response body)
-
-### request Parameter
+Description: Delete email thread request.
 
 See parameter model documentation at [ClientThreadDeleteRequest](ClientThreadDeleteRequest.md)
 
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```python
+request = models.ClientThreadDeleteRequest(
+    folder='INBOX/SubFolder',
+    thread_id='5',
+    account_location=models.StorageFileLocation(
+        file_name='email.account',
+        storage='First Storage',
+        folder_path='file/location/folder/on/storage'))
+```
+
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.ClientThreadDeleteRequest(
+    folder='INBOX/SubFolder',
+    thread_id='5',
+    account_location=models.StorageFileLocation(
+        file_name='email.account',
+        storage='First Storage',
+        folder_path='file/location/folder/on/storage'))
+
+// Call method:
+api.client.thread.delete(request)
+```
+
+</details>
+
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="get_list"></a>
-# get_list
+## get_list
 
+Description: Get message threads from folder. All messages are partly fetched (without email body and some other fields).             
+
+Returns: List of threads
+
+Method call example:
 ```python
-get_list(self, request: ClientThreadGetListRequest)
+result = api.client.thread.get_list(request)
 ```
 
-Get message threads from folder. All messages are partly fetched (without email body and some other fields).             
+### Parameter: request
 
-### Return type
+Description: get_list method request.
 
-EmailThreadList
+See parameter model documentation at [ClientThreadGetListRequest](ClientThreadGetListRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-ClientThreadGetListRequest(
-    folder,
-    account,
-    storage,
-    account_storage_folder,
-    update_folder_cache,
-    messages_cache_limit)
+request = models.ClientThreadGetListRequest(
+    folder='INBOX/SubFolder',
+    account='email.account',
+    storage='First Storage',
+    account_storage_folder='email/account/location/on/storage',)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **folder** | **str** | A folder in email account.              | 
- **account** | **str** | Email account | 
- **storage** | **str** | Storage name where account file located | [optional] 
- **account_storage_folder** | **str** | Folder in storage where account file located | [optional] 
- **update_folder_cache** | **bool** | This parameter is only used in accounts with CacheFile. If true - get new messages and update threads cache for given folder. If false, get only threads from cache without any calls to an email account              | [optional] [default to true]
- **messages_cache_limit** | **int** | Limit messages cache size if CacheFile is used. Ignored in accounts without limits support              | [optional] [default to 200]
+</details>
+
+### Result
+
+Description: List of threads
+
+Return type: [**EmailThreadList**](EmailThreadList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```python
+result = models.EmailThreadList(
+    value=[
+        models.EmailThread(
+            id='123',
+            subject='Some email subject',
+            messages=[
+                models.EmailDto(
+                    date=datetime.today(),
+                    _from=models.MailAddress(
+                        address='from@aspose.com'),
+                    message_id='1',
+                    subject='Some email subject',
+                    to=[
+                        models.MailAddress(
+                            address='to@aspose.com')]),
+                models.EmailDto(
+                    date=datetime.today(),
+                    _from=models.MailAddress(
+                        address='from@aspose.com'),
+                    message_id='3',
+                    subject='Re: Some email subject',
+                    to=[
+                        models.MailAddress(
+                            address='to@aspose.com')])])])
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.ClientThreadGetListRequest(
+    folder='INBOX/SubFolder',
+    account='email.account',
+    storage='First Storage',
+    account_storage_folder='email/account/location/on/storage',)
+
+// Call method:
+result = api.client.thread.get_list(request)
+
+// Result example:
+result = models.EmailThreadList(
+    value=[
+        models.EmailThread(
+            id='123',
+            subject='Some email subject',
+            messages=[
+                models.EmailDto(
+                    date=datetime.today(),
+                    _from=models.MailAddress(
+                        address='from@aspose.com'),
+                    message_id='1',
+                    subject='Some email subject',
+                    to=[
+                        models.MailAddress(
+                            address='to@aspose.com')]),
+                models.EmailDto(
+                    date=datetime.today(),
+                    _from=models.MailAddress(
+                        address='from@aspose.com'),
+                    message_id='3',
+                    subject='Re: Some email subject',
+                    to=[
+                        models.MailAddress(
+                            address='to@aspose.com')])])])
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="get_messages"></a>
-# get_messages
+## get_messages
 
+Description: Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+
+Returns: Requested thread with fully fetched messages
+
+Method call example:
 ```python
-get_messages(self, request: ClientThreadGetMessagesRequest)
+result = api.client.thread.get_messages(request)
 ```
 
-Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
+### Parameter: request
 
-### Return type
+Description: get_messages method request.
 
-EmailList
+See parameter model documentation at [ClientThreadGetMessagesRequest](ClientThreadGetMessagesRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-ClientThreadGetMessagesRequest(
-    thread_id,
-    account,
-    folder,
-    storage,
-    account_storage_folder)
+request = models.ClientThreadGetMessagesRequest(
+    thread_id='5',
+    account='email.account',
+    folder='INBOX',
+    storage='First Storage',
+    account_storage_folder='email/account/location/on/storage')
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **thread_id** | **str** | Thread identifier | 
- **account** | **str** | Email account | 
- **folder** | **str** | Specifies account folder to get thread from              | [optional] 
- **storage** | **str** | Storage name where account file located | [optional] 
- **account_storage_folder** | **str** | Folder in storage where account file located | [optional] 
+</details>
+
+### Result
+
+Description: Requested thread with fully fetched messages
+
+Return type: [**EmailList**](EmailList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```python
+result = 
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.ClientThreadGetMessagesRequest(
+    thread_id='5',
+    account='email.account',
+    folder='INBOX',
+    storage='First Storage',
+    account_storage_folder='email/account/location/on/storage')
+
+// Call method:
+result = api.client.thread.get_messages(request)
+
+// Result example:
+result = 
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="move"></a>
-# move
+## move
 
+Description: Move thread to another folder.             
+
+Method call example:
 ```python
-move(self, ClientThreadMoveRequest request)
+api.client.thread.move(request)
 ```
 
-Move thread to another folder.             
+### Parameter: request
 
-### Return type
-
-void (empty response body)
-
-### request Parameter
+Description: Move thread request.
 
 See parameter model documentation at [ClientThreadMoveRequest](ClientThreadMoveRequest.md)
 
-[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
-<a name="set_is_read"></a>
-# set_is_read
-
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-set_is_read(self, ClientThreadSetIsReadRequest request)
+request = models.ClientThreadMoveRequest(
+    destination_folder='INBOX/SubFolder',
+    thread_id='5',
+    account_location=models.StorageFileLocation(
+        file_name='email.account',
+        storage='First Storage',
+        folder_path='file/location/folder/on/storage'))
 ```
 
-Mark all messages in thread as read or unread.             
+</details>
 
-### Return type
+### Result
 
-void (empty response body)
+Return type: void (empty response body)
 
-### request Parameter
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.ClientThreadMoveRequest(
+    destination_folder='INBOX/SubFolder',
+    thread_id='5',
+    account_location=models.StorageFileLocation(
+        file_name='email.account',
+        storage='First Storage',
+        folder_path='file/location/folder/on/storage'))
+
+// Call method:
+api.client.thread.move(request)
+```
+
+</details>
+
+[[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
+<a name="set_is_read"></a>
+## set_is_read
+
+Description: Mark all messages in thread as read or unread.             
+
+Method call example:
+```python
+api.client.thread.set_is_read(request)
+```
+
+### Parameter: request
+
+Description: Email account specifier and IsRead flag.
 
 See parameter model documentation at [ClientThreadSetIsReadRequest](ClientThreadSetIsReadRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```python
+request = models.ClientThreadSetIsReadRequest(
+    is_read=True,
+    folder='INBOX',
+    thread_id='5',
+    account_location=models.StorageFileLocation(
+        file_name='email.account',
+        storage='First Storage',
+        folder_path='file/location/folder/on/storage'))
+```
+
+</details>
+
+### Result
+
+Return type: void (empty response body)
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.ClientThreadSetIsReadRequest(
+    is_read=True,
+    folder='INBOX',
+    thread_id='5',
+    account_location=models.StorageFileLocation(
+        file_name='email.account',
+        storage='First Storage',
+        folder_path='file/location/folder/on/storage'))
+
+// Call method:
+api.client.thread.set_is_read(request)
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 
