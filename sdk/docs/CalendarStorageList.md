@@ -13,7 +13,7 @@ Parent class: [ListResponseOfStorageModelOfCalendarDto](ListResponseOfStorageMod
 ```python
 calendar_storage_list = models.CalendarStorageList(
     value=[
-        models.StorageModel<CalendarDto>(
+        models.StorageModelOfCalendarDto(
             storage_file=models.StorageFileLocation(
                 file_name='calendar.ics',
                 storage='First Storage',

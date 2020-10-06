@@ -38,7 +38,7 @@ class CalendarApi(ApiBase):
 
     def __init__(self, api_client):
         super(CalendarApi, self).__init__(api_client)
-            
+
     def as_alternate(self, request: CalendarAsAlternateRequest) -> AlternateView:
         """Convert iCalendar to AlternateView             
 
@@ -67,7 +67,7 @@ class CalendarApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'AlternateView')
-            
+
     def as_file(self, request: CalendarAsFileRequest) -> str:
         """Converts calendar model to specified format and returns as file.             
 
@@ -96,7 +96,7 @@ class CalendarApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-            
+
     def as_mapi(self, calendar_dto: CalendarDto) -> MapiCalendarDto:
         """Converts CalendarDto to MapiCalendarDto.             
 
@@ -125,7 +125,7 @@ class CalendarApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiCalendarDto')
-            
+
     def convert(self, request: CalendarConvertRequest) -> str:
         """Converts calendar document to specified format and returns as file.             
 
@@ -174,7 +174,7 @@ class CalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-            
+
     def from_file(self, request: CalendarFromFileRequest) -> CalendarDto:
         """Converts calendar document to a model representation.             
 
@@ -214,7 +214,7 @@ class CalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'CalendarDto')
-            
+
     def get(self, request: CalendarGetRequest) -> CalendarDto:
         """Get calendar file from storage.             
 
@@ -270,7 +270,7 @@ class CalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'CalendarDto')
-            
+
     def get_as_alternate(self, request: CalendarGetAsAlternateRequest) -> AlternateView:
         """Get iCalendar from storage as AlternateView             
 
@@ -341,7 +341,7 @@ class CalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AlternateView')
-            
+
     def get_as_file(self, request: CalendarGetAsFileRequest) -> str:
         """Converts calendar document from storage to specified format and returns as file.             
 
@@ -406,7 +406,7 @@ class CalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'file')
-            
+
     def get_list(self, request: CalendarGetListRequest) -> CalendarStorageList:
         """Get iCalendar list from storage folder.             
 
@@ -468,7 +468,7 @@ class CalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'CalendarStorageList')
-            
+
     def save(self, request: CalendarSaveRequest):
         """Save iCalendar             
 
@@ -497,3 +497,4 @@ class CalendarApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
+

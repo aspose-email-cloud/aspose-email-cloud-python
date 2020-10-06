@@ -38,7 +38,7 @@ class ClientAccountApi(ApiBase):
 
     def __init__(self, api_client):
         super(ClientAccountApi, self).__init__(api_client)
-            
+
     def get(self, request: ClientAccountGetRequest) -> EmailClientAccount:
         """Get email client account from storage.             
 
@@ -94,7 +94,7 @@ class ClientAccountApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailClientAccount')
-            
+
     def get_multi(self, request: ClientAccountGetMultiRequest) -> EmailClientMultiAccount:
         """Get email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
@@ -150,7 +150,7 @@ class ClientAccountApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailClientMultiAccount')
-            
+
     def save(self, request: ClientAccountSaveRequest):
         """Create/update email client account file (*.account) with credentials             
 
@@ -179,7 +179,7 @@ class ClientAccountApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-            
+
     def save_multi(self, request: ClientAccountSaveMultiRequest):
         """Create email client multi account file (*.multi.account). Will respond error if file extension is not \&quot;.multi.account\&quot;.             
 
@@ -208,3 +208,4 @@ class ClientAccountApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
+

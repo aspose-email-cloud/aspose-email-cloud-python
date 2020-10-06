@@ -33,7 +33,7 @@ request = models.ContactAsFileRequest(
         display_name='Alex Thomas',
         email_addresses=[
             models.EmailAddress(
-                category=models.EnumWithCustom<EmailAddressCategory>(
+                category=models.EnumWithCustomOfEmailAddressCategory(
                     value='Custom',
                     description='Partners'),
                 display_name='Alex Thomas Partners',
@@ -43,7 +43,7 @@ request = models.ContactAsFileRequest(
         given_name='Alex',
         phone_numbers=[
             models.PhoneNumber(
-                category=models.EnumWithCustom<PhoneNumberCategory>(
+                category=models.EnumWithCustomOfPhoneNumberCategory(
                     value='Office'),
                 number='+49 211 4247 21',
                 preferred=True)],
@@ -51,7 +51,7 @@ request = models.ContactAsFileRequest(
         surname='Thomas',
         urls=[
             models.Url(
-                category=models.EnumWithCustom<UrlCategory>(
+                category=models.EnumWithCustomOfUrlCategory(
                     value='Work'),
                 preferred=True,
                 href='www.aspose.com')]))
@@ -83,7 +83,7 @@ request = models.ContactAsFileRequest(
         display_name='Alex Thomas',
         email_addresses=[
             models.EmailAddress(
-                category=models.EnumWithCustom<EmailAddressCategory>(
+                category=models.EnumWithCustomOfEmailAddressCategory(
                     value='Custom',
                     description='Partners'),
                 display_name='Alex Thomas Partners',
@@ -93,7 +93,7 @@ request = models.ContactAsFileRequest(
         given_name='Alex',
         phone_numbers=[
             models.PhoneNumber(
-                category=models.EnumWithCustom<PhoneNumberCategory>(
+                category=models.EnumWithCustomOfPhoneNumberCategory(
                     value='Office'),
                 number='+49 211 4247 21',
                 preferred=True)],
@@ -101,7 +101,7 @@ request = models.ContactAsFileRequest(
         surname='Thomas',
         urls=[
             models.Url(
-                category=models.EnumWithCustom<UrlCategory>(
+                category=models.EnumWithCustomOfUrlCategory(
                     value='Work'),
                 preferred=True,
                 href='www.aspose.com')]))
@@ -143,7 +143,7 @@ contact_dto = models.ContactDto(
     display_name='Alex Thomas',
     email_addresses=[
         models.EmailAddress(
-            category=models.EnumWithCustom<EmailAddressCategory>(
+            category=models.EnumWithCustomOfEmailAddressCategory(
                 value='Custom',
                 description='Partners'),
             display_name='Alex Thomas Partners',
@@ -153,7 +153,7 @@ contact_dto = models.ContactDto(
     given_name='Alex',
     phone_numbers=[
         models.PhoneNumber(
-            category=models.EnumWithCustom<PhoneNumberCategory>(
+            category=models.EnumWithCustomOfPhoneNumberCategory(
                 value='Office'),
             number='+49 211 4247 21',
             preferred=True)],
@@ -161,7 +161,7 @@ contact_dto = models.ContactDto(
     surname='Thomas',
     urls=[
         models.Url(
-            category=models.EnumWithCustom<UrlCategory>(
+            category=models.EnumWithCustomOfUrlCategory(
                 value='Work'),
             preferred=True,
             href='www.aspose.com')])
@@ -212,7 +212,7 @@ contact_dto = models.ContactDto(
     display_name='Alex Thomas',
     email_addresses=[
         models.EmailAddress(
-            category=models.EnumWithCustom<EmailAddressCategory>(
+            category=models.EnumWithCustomOfEmailAddressCategory(
                 value='Custom',
                 description='Partners'),
             display_name='Alex Thomas Partners',
@@ -222,7 +222,7 @@ contact_dto = models.ContactDto(
     given_name='Alex',
     phone_numbers=[
         models.PhoneNumber(
-            category=models.EnumWithCustom<PhoneNumberCategory>(
+            category=models.EnumWithCustomOfPhoneNumberCategory(
                 value='Office'),
             number='+49 211 4247 21',
             preferred=True)],
@@ -230,7 +230,7 @@ contact_dto = models.ContactDto(
     surname='Thomas',
     urls=[
         models.Url(
-            category=models.EnumWithCustom<UrlCategory>(
+            category=models.EnumWithCustomOfUrlCategory(
                 value='Work'),
             preferred=True,
             href='www.aspose.com')])
@@ -361,7 +361,7 @@ result = models.ContactDto(
     display_name='Alex Thomas',
     email_addresses=[
         models.EmailAddress(
-            category=models.EnumWithCustom<EmailAddressCategory>(
+            category=models.EnumWithCustomOfEmailAddressCategory(
                 value='Custom',
                 description='Partners'),
             display_name='Alex Thomas Partners',
@@ -371,7 +371,7 @@ result = models.ContactDto(
     given_name='Alex',
     phone_numbers=[
         models.PhoneNumber(
-            category=models.EnumWithCustom<PhoneNumberCategory>(
+            category=models.EnumWithCustomOfPhoneNumberCategory(
                 value='Office'),
             number='+49 211 4247 21',
             preferred=True)],
@@ -379,7 +379,7 @@ result = models.ContactDto(
     surname='Thomas',
     urls=[
         models.Url(
-            category=models.EnumWithCustom<UrlCategory>(
+            category=models.EnumWithCustomOfUrlCategory(
                 value='Work'),
             preferred=True,
             href='www.aspose.com')])
@@ -411,7 +411,7 @@ result = models.ContactDto(
     display_name='Alex Thomas',
     email_addresses=[
         models.EmailAddress(
-            category=models.EnumWithCustom<EmailAddressCategory>(
+            category=models.EnumWithCustomOfEmailAddressCategory(
                 value='Custom',
                 description='Partners'),
             display_name='Alex Thomas Partners',
@@ -421,7 +421,7 @@ result = models.ContactDto(
     given_name='Alex',
     phone_numbers=[
         models.PhoneNumber(
-            category=models.EnumWithCustom<PhoneNumberCategory>(
+            category=models.EnumWithCustomOfPhoneNumberCategory(
                 value='Office'),
             number='+49 211 4247 21',
             preferred=True)],
@@ -429,7 +429,7 @@ result = models.ContactDto(
     surname='Thomas',
     urls=[
         models.Url(
-            category=models.EnumWithCustom<UrlCategory>(
+            category=models.EnumWithCustomOfUrlCategory(
                 value='Work'),
             preferred=True,
             href='www.aspose.com')])
@@ -487,7 +487,7 @@ result = models.ContactDto(
     display_name='Alex Thomas',
     email_addresses=[
         models.EmailAddress(
-            category=models.EnumWithCustom<EmailAddressCategory>(
+            category=models.EnumWithCustomOfEmailAddressCategory(
                 value='Custom',
                 description='Partners'),
             display_name='Alex Thomas Partners',
@@ -497,7 +497,7 @@ result = models.ContactDto(
     given_name='Alex',
     phone_numbers=[
         models.PhoneNumber(
-            category=models.EnumWithCustom<PhoneNumberCategory>(
+            category=models.EnumWithCustomOfPhoneNumberCategory(
                 value='Office'),
             number='+49 211 4247 21',
             preferred=True)],
@@ -505,7 +505,7 @@ result = models.ContactDto(
     surname='Thomas',
     urls=[
         models.Url(
-            category=models.EnumWithCustom<UrlCategory>(
+            category=models.EnumWithCustomOfUrlCategory(
                 value='Work'),
             preferred=True,
             href='www.aspose.com')])
@@ -539,7 +539,7 @@ result = models.ContactDto(
     display_name='Alex Thomas',
     email_addresses=[
         models.EmailAddress(
-            category=models.EnumWithCustom<EmailAddressCategory>(
+            category=models.EnumWithCustomOfEmailAddressCategory(
                 value='Custom',
                 description='Partners'),
             display_name='Alex Thomas Partners',
@@ -549,7 +549,7 @@ result = models.ContactDto(
     given_name='Alex',
     phone_numbers=[
         models.PhoneNumber(
-            category=models.EnumWithCustom<PhoneNumberCategory>(
+            category=models.EnumWithCustomOfPhoneNumberCategory(
                 value='Office'),
             number='+49 211 4247 21',
             preferred=True)],
@@ -557,7 +557,7 @@ result = models.ContactDto(
     surname='Thomas',
     urls=[
         models.Url(
-            category=models.EnumWithCustom<UrlCategory>(
+            category=models.EnumWithCustomOfUrlCategory(
                 value='Work'),
             preferred=True,
             href='www.aspose.com')])
@@ -671,7 +671,7 @@ Return type: [**ContactStorageList**](ContactStorageList.md)
 ```python
 result = models.ContactStorageList(
     value=[
-        models.StorageModel<ContactDto>(
+        models.StorageModelOfContactDto(
             storage_file=models.StorageFileLocation(
                 file_name='contact.vcf',
                 storage='First Storage',
@@ -684,7 +684,7 @@ result = models.ContactStorageList(
                 display_name='Alex Thomas',
                 email_addresses=[
                     models.EmailAddress(
-                        category=models.EnumWithCustom<EmailAddressCategory>(
+                        category=models.EnumWithCustomOfEmailAddressCategory(
                             value='Custom',
                             description='Partners'),
                         display_name='Alex Thomas Partners',
@@ -694,7 +694,7 @@ result = models.ContactStorageList(
                 given_name='Alex',
                 phone_numbers=[
                     models.PhoneNumber(
-                        category=models.EnumWithCustom<PhoneNumberCategory>(
+                        category=models.EnumWithCustomOfPhoneNumberCategory(
                             value='Office'),
                         number='+49 211 4247 21',
                         preferred=True)],
@@ -702,7 +702,7 @@ result = models.ContactStorageList(
                 surname='Thomas',
                 urls=[
                     models.Url(
-                        category=models.EnumWithCustom<UrlCategory>(
+                        category=models.EnumWithCustomOfUrlCategory(
                             value='Work'),
                         preferred=True,
                         href='www.aspose.com')]))])
@@ -731,7 +731,7 @@ result = api.contact.get_list(request)
 // Result example:
 result = models.ContactStorageList(
     value=[
-        models.StorageModel<ContactDto>(
+        models.StorageModelOfContactDto(
             storage_file=models.StorageFileLocation(
                 file_name='contact.vcf',
                 storage='First Storage',
@@ -744,7 +744,7 @@ result = models.ContactStorageList(
                 display_name='Alex Thomas',
                 email_addresses=[
                     models.EmailAddress(
-                        category=models.EnumWithCustom<EmailAddressCategory>(
+                        category=models.EnumWithCustomOfEmailAddressCategory(
                             value='Custom',
                             description='Partners'),
                         display_name='Alex Thomas Partners',
@@ -754,7 +754,7 @@ result = models.ContactStorageList(
                 given_name='Alex',
                 phone_numbers=[
                     models.PhoneNumber(
-                        category=models.EnumWithCustom<PhoneNumberCategory>(
+                        category=models.EnumWithCustomOfPhoneNumberCategory(
                             value='Office'),
                         number='+49 211 4247 21',
                         preferred=True)],
@@ -762,7 +762,7 @@ result = models.ContactStorageList(
                 surname='Thomas',
                 urls=[
                     models.Url(
-                        category=models.EnumWithCustom<UrlCategory>(
+                        category=models.EnumWithCustomOfUrlCategory(
                             value='Work'),
                         preferred=True,
                         href='www.aspose.com')]))])
@@ -804,7 +804,7 @@ request = models.ContactSaveRequest(
         display_name='Alex Thomas',
         email_addresses=[
             models.EmailAddress(
-                category=models.EnumWithCustom<EmailAddressCategory>(
+                category=models.EnumWithCustomOfEmailAddressCategory(
                     value='Custom',
                     description='Partners'),
                 display_name='Alex Thomas Partners',
@@ -814,7 +814,7 @@ request = models.ContactSaveRequest(
         given_name='Alex',
         phone_numbers=[
             models.PhoneNumber(
-                category=models.EnumWithCustom<PhoneNumberCategory>(
+                category=models.EnumWithCustomOfPhoneNumberCategory(
                     value='Office'),
                 number='+49 211 4247 21',
                 preferred=True)],
@@ -822,7 +822,7 @@ request = models.ContactSaveRequest(
         surname='Thomas',
         urls=[
             models.Url(
-                category=models.EnumWithCustom<UrlCategory>(
+                category=models.EnumWithCustomOfUrlCategory(
                     value='Work'),
                 preferred=True,
                 href='www.aspose.com')]))
@@ -856,7 +856,7 @@ request = models.ContactSaveRequest(
         display_name='Alex Thomas',
         email_addresses=[
             models.EmailAddress(
-                category=models.EnumWithCustom<EmailAddressCategory>(
+                category=models.EnumWithCustomOfEmailAddressCategory(
                     value='Custom',
                     description='Partners'),
                 display_name='Alex Thomas Partners',
@@ -866,7 +866,7 @@ request = models.ContactSaveRequest(
         given_name='Alex',
         phone_numbers=[
             models.PhoneNumber(
-                category=models.EnumWithCustom<PhoneNumberCategory>(
+                category=models.EnumWithCustomOfPhoneNumberCategory(
                     value='Office'),
                 number='+49 211 4247 21',
                 preferred=True)],
@@ -874,7 +874,7 @@ request = models.ContactSaveRequest(
         surname='Thomas',
         urls=[
             models.Url(
-                category=models.EnumWithCustom<UrlCategory>(
+                category=models.EnumWithCustomOfUrlCategory(
                     value='Work'),
                 preferred=True,
                 href='www.aspose.com')]))

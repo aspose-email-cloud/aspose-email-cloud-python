@@ -830,7 +830,7 @@ Return type: [**CalendarStorageList**](CalendarStorageList.md)
 ```python
 result = models.CalendarStorageList(
     value=[
-        models.StorageModel<CalendarDto>(
+        models.StorageModelOfCalendarDto(
             storage_file=models.StorageFileLocation(
                 file_name='calendar.ics',
                 storage='First Storage',
@@ -877,7 +877,7 @@ result = api.calendar.get_list(request)
 // Result example:
 result = models.CalendarStorageList(
     value=[
-        models.StorageModel<CalendarDto>(
+        models.StorageModelOfCalendarDto(
             storage_file=models.StorageFileLocation(
                 file_name='calendar.ics',
                 storage='First Storage',

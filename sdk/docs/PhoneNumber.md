@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 ```python
 phone_number = models.PhoneNumber(
-    category=models.EnumWithCustom<PhoneNumberCategory>(
+    category=models.EnumWithCustomOfPhoneNumberCategory(
         value='Company'),
     number='+44 141 628 8900',
     preferred=True)

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 ```python
 url = models.Url(
-    category=models.EnumWithCustom<UrlCategory>(
+    category=models.EnumWithCustomOfUrlCategory(
         value='Work'),
     preferred=True,
     href='https://products.aspose.cloud/email')

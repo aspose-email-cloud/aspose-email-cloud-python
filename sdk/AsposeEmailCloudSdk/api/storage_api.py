@@ -38,7 +38,7 @@ class StorageApi(ApiBase):
 
     def __init__(self, api_client):
         super(StorageApi, self).__init__(api_client)
-            
+
     def get_disc_usage(self, request: GetDiscUsageRequest) -> DiscUsage:
         """Get disc usage
 
@@ -79,7 +79,7 @@ class StorageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'DiscUsage')
-            
+
     def get_file_versions(self, request: GetFileVersionsRequest) -> FileVersions:
         """Get file versions
 
@@ -125,7 +125,7 @@ class StorageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'FileVersions')
-            
+
     def object_exists(self, request: ObjectExistsRequest) -> ObjectExist:
         """Check if file or folder exists
 
@@ -177,7 +177,7 @@ class StorageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'ObjectExist')
-            
+
     def exists(self, request: StorageExistsRequest) -> StorageExist:
         """Check if storage exists
 
@@ -217,3 +217,4 @@ class StorageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'StorageExist')
+

@@ -1,4 +1,3 @@
-
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="client_group.py">
@@ -28,46 +27,41 @@
 from __future__ import absolute_import
 from AsposeEmailCloudSdk.api import *
 
+
 class ClientGroup(object):
     """
     Builtin Email client operations.
     """
     def __init__(self, api_client):
-    
         self._account = ClientAccountApi(api_client)
-    
         self._folder = ClientFolderApi(api_client)
-    
         self._message = ClientMessageApi(api_client)
-    
         self._thread = ClientThreadApi(api_client)
-    
-    
+
     @property
     def account(self) -> ClientAccountApi:
         """
         Email server account for built-in client operations.
         """
         return self._account
-    
+
     @property
     def folder(self) -> ClientFolderApi:
         """
         Email client folder operations.
         """
         return self._folder
-    
+
     @property
     def message(self) -> ClientMessageApi:
         """
         Email client message operations.
         """
         return self._message
-    
+
     @property
     def thread(self) -> ClientThreadApi:
         """
         Email client thread operations.
         """
         return self._thread
-    

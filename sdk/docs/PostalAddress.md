@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ```python
 postal_address = models.PostalAddress(
     address='221b',
-    category=models.EnumWithCustom<PostalAddressCategory>(
+    category=models.EnumWithCustomOfPostalAddressCategory(
         ),
     city='London',
     country='United Kingdom',

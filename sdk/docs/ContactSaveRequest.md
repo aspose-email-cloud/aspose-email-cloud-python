@@ -25,7 +25,7 @@ contact_save_request = models.ContactSaveRequest(
         display_name='Alex Thomas',
         email_addresses=[
             models.EmailAddress(
-                category=models.EnumWithCustom<EmailAddressCategory>(
+                category=models.EnumWithCustomOfEmailAddressCategory(
                     value='Custom',
                     description='Partners'),
                 display_name='Alex Thomas Partners',
@@ -35,7 +35,7 @@ contact_save_request = models.ContactSaveRequest(
         given_name='Alex',
         phone_numbers=[
             models.PhoneNumber(
-                category=models.EnumWithCustom<PhoneNumberCategory>(
+                category=models.EnumWithCustomOfPhoneNumberCategory(
                     value='Office'),
                 number='+49 211 4247 21',
                 preferred=True)],
@@ -43,7 +43,7 @@ contact_save_request = models.ContactSaveRequest(
         surname='Thomas',
         urls=[
             models.Url(
-                category=models.EnumWithCustom<UrlCategory>(
+                category=models.EnumWithCustomOfUrlCategory(
                     value='Work'),
                 preferred=True,
                 href='www.aspose.com')]))
