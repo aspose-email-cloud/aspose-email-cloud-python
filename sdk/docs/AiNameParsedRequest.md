@@ -14,11 +14,6 @@ Name | Type | Description | Notes
 ## Example
 ```python
 ai_name_parsed_request = models.AiNameParsedRequest(
-    cultural_context=models.AiNameCulturalContext(
-        language='',
-        location='',
-        script='',
-        encoding=''),
     parsed_name=[
         models.AiNameComponent(
             value='John',

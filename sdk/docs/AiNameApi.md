@@ -181,11 +181,6 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
     
 ```python
 request = models.AiNameParsedRequest(
-    cultural_context=models.AiNameCulturalContext(
-        language='',
-        location='',
-        script='',
-        encoding=''),
     parsed_name=[
         models.AiNameComponent(
             value='John',
@@ -238,11 +233,6 @@ api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
 request = models.AiNameParsedRequest(
-    cultural_context=models.AiNameCulturalContext(
-        language='',
-        location='',
-        script='',
-        encoding=''),
     parsed_name=[
         models.AiNameComponent(
             value='John',
@@ -371,11 +361,6 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
     
 ```python
 request = models.AiNameParsedRequest(
-    cultural_context=models.AiNameCulturalContext(
-        language='',
-        location='',
-        script='',
-        encoding=''),
     parsed_name=[
         models.AiNameComponent(
             value='John',
@@ -423,11 +408,6 @@ api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
 request = models.AiNameParsedRequest(
-    cultural_context=models.AiNameCulturalContext(
-        language='',
-        location='',
-        script='',
-        encoding=''),
     parsed_name=[
         models.AiNameComponent(
             value='John',
@@ -545,11 +525,6 @@ See parameter model documentation at [AiNameParsedRequest](AiNameParsedRequest.m
     
 ```python
 request = models.AiNameParsedRequest(
-    cultural_context=models.AiNameCulturalContext(
-        language='',
-        location='',
-        script='',
-        encoding=''),
     parsed_name=[
         models.AiNameComponent(
             value='John',
@@ -595,11 +570,6 @@ api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
 request = models.AiNameParsedRequest(
-    cultural_context=models.AiNameCulturalContext(
-        language='',
-        location='',
-        script='',
-        encoding=''),
     parsed_name=[
         models.AiNameComponent(
             value='John',
@@ -726,7 +696,41 @@ See parameter model documentation at [AiNameMatchParsedRequest](AiNameMatchParse
     <summary>Parameter initialization example:</summary>
     
 ```python
-request = 
+request = models.AiNameMatchParsedRequest(
+    other_parsed_name=[
+        models.AiNameComponent(
+            value='J',
+            category='FirstInitial',
+            score=1),
+        models.AiNameComponent(
+            value='Cane',
+            category='LastName',
+            score=0.5,
+            position=3),
+        models.AiNameComponent(
+            value='%f%L',
+            category='Format'),
+        models.AiNameComponent(
+            value='0.5',
+            category='Score',
+            score=0.5)],
+    parsed_name=[
+        models.AiNameComponent(
+            value='John',
+            category='FirstName',
+            score=0.95),
+        models.AiNameComponent(
+            value='Cane',
+            category='LastName',
+            score=0.5,
+            position=5),
+        models.AiNameComponent(
+            value='%F%L',
+            category='Format'),
+        models.AiNameComponent(
+            value='0.5',
+            category='Score',
+            score=0.5)])
 ```
 
 </details>
@@ -759,7 +763,41 @@ result = models.AiNameMatchResult(
 api = EmailCloud(app_key, app_sid)
 
 // Prepare parameters:
-request = 
+request = models.AiNameMatchParsedRequest(
+    other_parsed_name=[
+        models.AiNameComponent(
+            value='J',
+            category='FirstInitial',
+            score=1),
+        models.AiNameComponent(
+            value='Cane',
+            category='LastName',
+            score=0.5,
+            position=3),
+        models.AiNameComponent(
+            value='%f%L',
+            category='Format'),
+        models.AiNameComponent(
+            value='0.5',
+            category='Score',
+            score=0.5)],
+    parsed_name=[
+        models.AiNameComponent(
+            value='John',
+            category='FirstName',
+            score=0.95),
+        models.AiNameComponent(
+            value='Cane',
+            category='LastName',
+            score=0.5,
+            position=5),
+        models.AiNameComponent(
+            value='%F%L',
+            category='Format'),
+        models.AiNameComponent(
+            value='0.5',
+            category='Score',
+            score=0.5)])
 
 // Call method:
 result = api.ai.name.match_parsed(request)
