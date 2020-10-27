@@ -38,7 +38,7 @@ class MapiContactApi(ApiBase):
 
     def __init__(self, api_client):
         super(MapiContactApi, self).__init__(api_client)
-
+            
     def as_contact_dto(self, mapi_contact_dto: MapiContactDto) -> ContactDto:
         """Converts MAPI contact model to ContactDto model.             
 
@@ -67,7 +67,7 @@ class MapiContactApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'ContactDto')
-
+            
     def as_file(self, request: MapiContactAsFileRequest) -> str:
         """Converts MAPI contact model to specified format and returns as file.             
 
@@ -96,7 +96,7 @@ class MapiContactApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-
+            
     def from_file(self, request: MapiContactFromFileRequest) -> MapiContactDto:
         """Converts contact file to a MAPI model representation.             
 
@@ -145,7 +145,7 @@ class MapiContactApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiContactDto')
-
+            
     def get(self, request: MapiContactGetRequest) -> MapiContactDto:
         """Get MAPI contact document.             
 
@@ -210,7 +210,7 @@ class MapiContactApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MapiContactDto')
-
+            
     def save(self, request: MapiContactSaveRequest):
         """Save MAPI Contact to storage.             
 
@@ -239,4 +239,3 @@ class MapiContactApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-

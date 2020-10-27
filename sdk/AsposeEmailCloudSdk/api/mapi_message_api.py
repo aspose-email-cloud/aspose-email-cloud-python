@@ -38,7 +38,7 @@ class MapiMessageApi(ApiBase):
 
     def __init__(self, api_client):
         super(MapiMessageApi, self).__init__(api_client)
-
+            
     def as_email_dto(self, mapi_message: MapiMessageDto) -> EmailDto:
         """Converts MAPI message model to EmailDto model             
 
@@ -67,7 +67,7 @@ class MapiMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'EmailDto')
-
+            
     def as_file(self, request: MapiMessageAsFileRequest) -> str:
         """Converts MAPI message model to specified format and returns as file.             
 
@@ -96,7 +96,7 @@ class MapiMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-
+            
     def from_file(self, request: MapiMessageFromFileRequest) -> MapiMessageDto:
         """Converts email file to a MAPI model representation             
 
@@ -145,7 +145,7 @@ class MapiMessageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiMessageDto')
-
+            
     def get(self, request: MapiMessageGetRequest) -> MapiMessageDto:
         """Get MAPI message document.             
 
@@ -210,7 +210,7 @@ class MapiMessageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MapiMessageDto')
-
+            
     def save(self, request: MapiMessageSaveRequest):
         """Save MAPI message to storage.             
 
@@ -239,4 +239,3 @@ class MapiMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-

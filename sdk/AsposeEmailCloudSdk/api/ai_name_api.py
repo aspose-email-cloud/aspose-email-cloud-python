@@ -38,7 +38,7 @@ class AiNameApi(ApiBase):
 
     def __init__(self, api_client):
         super(AiNameApi, self).__init__(api_client)
-
+            
     def complete(self, request: AiNameCompleteRequest) -> AiNameWeightedVariants:
         """The call proposes k most probable names for given starting characters.             
 
@@ -112,7 +112,7 @@ class AiNameApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameWeightedVariants')
-
+            
     def expand(self, request: AiNameExpandRequest) -> AiNameWeightedVariants:
         """Expands a person&#39;s name into a list of possible alternatives using options for expanding instructions.             
 
@@ -186,7 +186,7 @@ class AiNameApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameWeightedVariants')
-
+            
     def expand_parsed(self, request: AiNameParsedRequest) -> AiNameWeightedVariants:
         """Expands a person&#39;s parsed name into a list of possible alternatives using options for expanding instructions.             
 
@@ -215,7 +215,7 @@ class AiNameApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'AiNameWeightedVariants')
-
+            
     def format(self, request: AiNameFormatRequest) -> AiNameFormatted:
         """Formats a person&#39;s name in correct case and name order using options for formatting instructions.             
 
@@ -295,7 +295,7 @@ class AiNameApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameFormatted')
-
+            
     def format_parsed(self, request: AiNameParsedRequest) -> AiNameFormatted:
         """Formats a person&#39;s parsed name in correct case and name order using options for formatting instructions.             
 
@@ -324,7 +324,7 @@ class AiNameApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'AiNameFormatted')
-
+            
     def genderize(self, request: AiNameGenderizeRequest) -> AiNameGenderHypothesisList:
         """Detect person&#39;s gender from name string.             
 
@@ -398,7 +398,7 @@ class AiNameApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameGenderHypothesisList')
-
+            
     def genderize_parsed(self, request: AiNameParsedRequest) -> AiNameGenderHypothesisList:
         """Detect person&#39;s gender from parsed name.             
 
@@ -427,7 +427,7 @@ class AiNameApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'AiNameGenderHypothesisList')
-
+            
     def match(self, request: AiNameMatchRequest) -> AiNameMatchResult:
         """Compare people&#39;s names. Uses options for comparing instructions.             
 
@@ -510,7 +510,7 @@ class AiNameApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameMatchResult')
-
+            
     def match_parsed(self, request: AiNameMatchParsedRequest) -> AiNameMatchResult:
         """Compare people&#39;s parsed names and attributes. Uses options for comparing instructions.             
 
@@ -539,7 +539,7 @@ class AiNameApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'AiNameMatchResult')
-
+            
     def parse(self, request: AiNameParseRequest) -> AiNameComponentList:
         """Parse name to components.             
 
@@ -613,7 +613,7 @@ class AiNameApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameComponentList')
-
+            
     def parse_email_address(self, request: AiNameParseEmailAddressRequest) -> AiNameExtractedList:
         """Parse person&#39;s name out of an email address.             
 
@@ -687,4 +687,3 @@ class AiNameApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'AiNameExtractedList')
-

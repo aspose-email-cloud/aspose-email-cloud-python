@@ -38,7 +38,7 @@ class MapiCalendarApi(ApiBase):
 
     def __init__(self, api_client):
         super(MapiCalendarApi, self).__init__(api_client)
-
+            
     def as_calendar_dto(self, mapi_calendar_dto: MapiCalendarDto) -> CalendarDto:
         """Converts MAPI calendar model to CalendarDto model.             
 
@@ -67,7 +67,7 @@ class MapiCalendarApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'CalendarDto')
-
+            
     def as_file(self, request: MapiCalendarAsFileRequest) -> str:
         """Converts MAPI calendar model to specified format and returns as file.             
 
@@ -96,7 +96,7 @@ class MapiCalendarApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-
+            
     def from_file(self, request: MapiCalendarFromFileRequest) -> MapiCalendarDto:
         """Converts calendar file to a MAPI model representation.             
 
@@ -136,7 +136,7 @@ class MapiCalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiCalendarDto')
-
+            
     def get(self, request: MapiCalendarGetRequest) -> MapiCalendarDto:
         """Get MAPI calendar document.             
 
@@ -192,7 +192,7 @@ class MapiCalendarApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MapiCalendarDto')
-
+            
     def save(self, request: MapiCalendarSaveRequest):
         """Save MAPI Calendar to storage.             
 
@@ -221,4 +221,3 @@ class MapiCalendarApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-

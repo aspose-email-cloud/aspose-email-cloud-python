@@ -29,7 +29,6 @@ from __future__ import absolute_import
 from AsposeEmailCloudSdk import Configuration, ApiClient
 from AsposeEmailCloudSdk.api import *
 
-
 class EmailCloud(object):
     """
     Aspose.Email Cloud API.
@@ -39,7 +38,7 @@ class EmailCloud(object):
                  api_version=None, debug=False):
         """
         Initializes a new instance of the EmailCloud class.
-
+        
         :param app_key: The app key.
         :type app_key: str
         :param app_sid: The app sid.

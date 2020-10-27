@@ -38,7 +38,7 @@ class DisposableEmailApi(ApiBase):
 
     def __init__(self, api_client):
         super(DisposableEmailApi, self).__init__(api_client)
-
+            
     def is_disposable(self, request: DisposableEmailIsDisposableRequest) -> ValueTOfBoolean:
         """Check email address is disposable             
 
@@ -82,4 +82,3 @@ class DisposableEmailApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'ValueTOfBoolean')
-

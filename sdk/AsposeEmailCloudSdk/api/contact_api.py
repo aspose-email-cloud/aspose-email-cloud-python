@@ -38,7 +38,7 @@ class ContactApi(ApiBase):
 
     def __init__(self, api_client):
         super(ContactApi, self).__init__(api_client)
-
+            
     def as_file(self, request: ContactAsFileRequest) -> str:
         """Converts contact model to specified format and returns as file             
 
@@ -67,7 +67,7 @@ class ContactApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-
+            
     def as_mapi(self, contact_dto: ContactDto) -> MapiContactDto:
         """Converts ContactDto to MapiContactDto.             
 
@@ -96,7 +96,7 @@ class ContactApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiContactDto')
-
+            
     def convert(self, request: ContactConvertRequest) -> str:
         """Converts contact document to specified format and returns as file             
 
@@ -154,7 +154,7 @@ class ContactApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-
+            
     def from_file(self, request: ContactFromFileRequest) -> ContactDto:
         """Converts contact document to a model representation             
 
@@ -203,7 +203,7 @@ class ContactApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'ContactDto')
-
+            
     def get(self, request: ContactGetRequest) -> ContactDto:
         """Get contact document from storage.             
 
@@ -268,7 +268,7 @@ class ContactApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'ContactDto')
-
+            
     def get_as_file(self, request: ContactGetAsFileRequest) -> str:
         """Converts contact document from storage to specified format and returns as file             
 
@@ -342,7 +342,7 @@ class ContactApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'file')
-
+            
     def get_list(self, request: ContactGetListRequest) -> ContactStorageList:
         """Get contact list from storage folder.             
 
@@ -410,7 +410,7 @@ class ContactApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'ContactStorageList')
-
+            
     def save(self, request: ContactSaveRequest):
         """Save contact to storage.             
 
@@ -439,4 +439,3 @@ class ContactApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-

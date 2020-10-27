@@ -38,7 +38,7 @@ class ClientFolderApi(ApiBase):
 
     def __init__(self, api_client):
         super(ClientFolderApi, self).__init__(api_client)
-
+            
     def create(self, request: ClientFolderCreateRequest):
         """Create new folder in email account             
 
@@ -67,7 +67,7 @@ class ClientFolderApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-
+            
     def delete(self, request: ClientFolderDeleteRequest):
         """Delete a folder in email account             
 
@@ -96,7 +96,7 @@ class ClientFolderApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'DELETE', None)
-
+            
     def get_list(self, request: ClientFolderGetListRequest) -> MailServerFolderList:
         """Get folders list in email account             
 
@@ -158,4 +158,3 @@ class ClientFolderApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MailServerFolderList')
-

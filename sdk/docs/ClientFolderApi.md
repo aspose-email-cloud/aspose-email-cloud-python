@@ -1,191 +1,72 @@
-# AsposeEmailCloudSdk.ClientFolderApi (EmailCloud.client.folder)
+# AsposeEmailCloudSdk.ClientFolderApi
 
-Email client folder operations.
-
+        
 <a name="create"></a>
-## create
+# create
 
-Description: Create new folder in email account             
-
-Method call example:
 ```python
-api.client.folder.create(request)
+create(self, ClientFolderCreateRequest request)
 ```
 
-### Parameter: request
+Create new folder in email account             
 
-Description: Create folder request
+### Return type
+
+void (empty response body)
+
+### request Parameter
 
 See parameter model documentation at [ClientFolderCreateRequest](ClientFolderCreateRequest.md)
 
-<details>
-    <summary>Parameter initialization example:</summary>
-    
-```python
-request = models.ClientFolderCreateRequest(
-    parent_folder='INBOX/SubFolder/ParentFolder',
-    folder_name='NewFolder',
-    account_location=models.StorageFileLocation(
-        file_name='email.account',
-        storage='First Storage',
-        folder_path='file/location/folder/on/storage'))
-```
-
-</details>
-
-### Result
-
-Return type: void (empty response body)
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```python
-api = EmailCloud(app_key, app_sid)
-
-// Prepare parameters:
-request = models.ClientFolderCreateRequest(
-    parent_folder='INBOX/SubFolder/ParentFolder',
-    folder_name='NewFolder',
-    account_location=models.StorageFileLocation(
-        file_name='email.account',
-        storage='First Storage',
-        folder_path='file/location/folder/on/storage'))
-
-// Call method:
-api.client.folder.create(request)
-```
-
-</details>
-
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
+        
 <a name="delete"></a>
-## delete
+# delete
 
-Description: Delete a folder in email account             
-
-Method call example:
 ```python
-api.client.folder.delete(request)
+delete(self, ClientFolderDeleteRequest request)
 ```
 
-### Parameter: request
+Delete a folder in email account             
 
-Description: Delete folder request
+### Return type
+
+void (empty response body)
+
+### request Parameter
 
 See parameter model documentation at [ClientFolderDeleteRequest](ClientFolderDeleteRequest.md)
 
-<details>
-    <summary>Parameter initialization example:</summary>
-    
-```python
-request = models.ClientFolderDeleteRequest(
-    folder='INBOX/SubFolder/FolderToDelete',
-    account_location=models.StorageFileLocation(
-        file_name='email.account',
-        storage='First Storage',
-        folder_path='file/location/folder/on/storage'))
-```
-
-</details>
-
-### Result
-
-Return type: void (empty response body)
-
-### Complete example
-
-<details>
-    <summary>Method call example:</summary>
-
-```python
-api = EmailCloud(app_key, app_sid)
-
-// Prepare parameters:
-request = models.ClientFolderDeleteRequest(
-    folder='INBOX/SubFolder/FolderToDelete',
-    account_location=models.StorageFileLocation(
-        file_name='email.account',
-        storage='First Storage',
-        folder_path='file/location/folder/on/storage'))
-
-// Call method:
-api.client.folder.delete(request)
-```
-
-</details>
-
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
+        
 <a name="get_list"></a>
-## get_list
-
-Description: Get folders list in email account             
-
-Returns: Folders list
-
-Method call example:
-```python
-result = api.client.folder.get_list(request)
-```
-
-### Parameter: request
-
-Description: get_list method request.
-
-See parameter model documentation at [ClientFolderGetListRequest](ClientFolderGetListRequest.md).
-
-<details>
-    <summary>Parameter initialization example:</summary>
-    
-```python
-request = models.ClientFolderGetListRequest(
-    account='email.multi.account',
-    storage='First Storage',
-    account_storage_folder='email/account/location/on/storage',
-    parent_folder='INBOX')
-```
-
-</details>
-
-### Result
-
-Description: Folders list
-
-Return type: [**MailServerFolderList**](MailServerFolderList.md)
-
-<details>
-    <summary>Result example</summary>
+# get_list
 
 ```python
-result = 
+get_list(self, request: ClientFolderGetListRequest)
 ```
-</details>
 
-### Complete example
+Get folders list in email account             
 
-<details>
-    <summary>Method call example:</summary>
+### Return type
 
+MailServerFolderList
+
+### request Parameter
 ```python
-api = EmailCloud(app_key, app_sid)
-
-// Prepare parameters:
-request = models.ClientFolderGetListRequest(
-    account='email.multi.account',
-    storage='First Storage',
-    account_storage_folder='email/account/location/on/storage',
-    parent_folder='INBOX')
-
-// Call method:
-result = api.client.folder.get_list(request)
-
-// Result example:
-result = 
+ClientFolderGetListRequest(
+    account,
+    storage,
+    account_storage_folder,
+    parent_folder)
 ```
 
-</details>
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account** | **str** | Email account | 
+ **storage** | **str** | Storage name where account file located | [optional] 
+ **account_storage_folder** | **str** | Folder in storage where account file located | [optional] 
+ **parent_folder** | **str** | Folder in which subfolders should be listed | [optional] 
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

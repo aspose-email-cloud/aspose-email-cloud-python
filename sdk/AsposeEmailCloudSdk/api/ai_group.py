@@ -1,3 +1,4 @@
+
 #  coding: utf-8
 #  ----------------------------------------------------------------------------
 #  <copyright company="Aspose" file="ai_group.py">
@@ -27,25 +28,28 @@
 from __future__ import absolute_import
 from AsposeEmailCloudSdk.api import *
 
-
 class AiGroup(object):
     """
     AI powered operations.
     """
     def __init__(self, api_client):
+    
         self._bcr = AiBcrApi(api_client)
+    
         self._name = AiNameApi(api_client)
-
+    
+    
     @property
     def bcr(self) -> AiBcrApi:
         """
         AI Business card recognition operations.
         """
         return self._bcr
-
+    
     @property
     def name(self) -> AiNameApi:
         """
         AI Name operations.
         """
         return self._name
+    

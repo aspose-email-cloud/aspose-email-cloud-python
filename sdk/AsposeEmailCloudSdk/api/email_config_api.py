@@ -38,7 +38,7 @@ class EmailConfigApi(ApiBase):
 
     def __init__(self, api_client):
         super(EmailConfigApi, self).__init__(api_client)
-
+            
     def discover(self, request: EmailConfigDiscoverRequest) -> EmailAccountConfigList:
         """Discover email accounts by email address. Does not validate discovered accounts.             
 
@@ -88,7 +88,7 @@ class EmailConfigApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailAccountConfigList')
-
+            
     def discover_oauth(self, request: EmailConfigDiscoverOauthRequest) -> EmailAccountConfigList:
         """Discover email accounts by email address. Validates discovered accounts using OAuth 2.0.             
 
@@ -117,7 +117,7 @@ class EmailConfigApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'EmailAccountConfigList')
-
+            
     def discover_password(self, request: EmailConfigDiscoverPasswordRequest) -> EmailAccountConfigList:
         """Discover email accounts by email address. Validates discovered accounts using login and password.             
 
@@ -146,4 +146,3 @@ class EmailConfigApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'EmailAccountConfigList')
-

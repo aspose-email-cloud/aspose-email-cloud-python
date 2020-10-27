@@ -38,7 +38,7 @@ class FolderApi(ApiBase):
 
     def __init__(self, api_client):
         super(FolderApi, self).__init__(api_client)
-
+            
     def copy_folder(self, request: CopyFolderRequest):
         """Copy folder
 
@@ -99,7 +99,7 @@ class FolderApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-
+            
     def create_folder(self, request: CreateFolderRequest):
         """Create the folder
 
@@ -145,7 +145,7 @@ class FolderApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-
+            
     def delete_folder(self, request: DeleteFolderRequest):
         """Delete folder
 
@@ -197,7 +197,7 @@ class FolderApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'DELETE', None)
-
+            
     def get_files_list(self, request: GetFilesListRequest) -> FilesList:
         """Get all files and folders within a folder
 
@@ -243,7 +243,7 @@ class FolderApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'FilesList')
-
+            
     def move_folder(self, request: MoveFolderRequest):
         """Move folder
 
@@ -304,4 +304,3 @@ class FolderApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-
