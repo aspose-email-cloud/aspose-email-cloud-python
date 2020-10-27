@@ -1,53 +1,229 @@
-# AsposeEmailCloudSdk.AiBcrApi
+# AsposeEmailCloudSdk.AiBcrApi (EmailCloud.ai.bcr)
 
-        
+AI Business card recognition operations.
+
 <a name="parse"></a>
-# parse
+## parse
 
+Description: Parse images to vCard document models             
+
+Returns: List of vCards
+
+Method call example:
 ```python
-parse(self, request: AiBcrParseRequest)
+result = api.ai.bcr.parse(request)
 ```
 
-Parse images to vCard document models             
+### Parameter: request
 
-### Return type
+Description: parse method request.
 
-ContactList
+See parameter model documentation at [AiBcrParseRequest](AiBcrParseRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-AiBcrParseRequest(
-    file,
-    countries,
-    languages,
-    is_single)
+request = models.AiBcrParseRequest(
+    file='/path/to/image.png',
+    countries='us',
+    languages='en',
+    is_single=True)
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | **str** | File to parse | 
- **countries** | **str** | Comma-separated codes of countries. | [optional] [default to ]
- **languages** | **str** | Comma-separated ISO-639 codes of languages (either 639-1 or 639-3; i.e. \&quot;it\&quot; or \&quot;ita\&quot; for Italian); it&#39;s \&quot;\&quot; by default.              | [optional] [default to ]
- **is_single** | **bool** | Determines that image contains single VCard or more. | [optional] [default to true]
+</details>
+
+### Result
+
+Description: List of vCards
+
+Return type: [**ContactList**](ContactList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```python
+result = models.ContactList(
+    value=[
+        models.ContactDto(
+            attachments=[
+                models.Attachment(
+                    name='attachment.txt',
+                    base64_data='U29tZSBmaWxlIGNvbnRlbnQ=')],
+            display_name='Alex Thomas',
+            email_addresses=[
+                models.EmailAddress(
+                    category=models.EnumWithCustomOfEmailAddressCategory(
+                        value='Custom',
+                        description='Partners'),
+                    display_name='Alex Thomas Partners',
+                    preferred=True,
+                    address='email@aspose.com')],
+            gender='Male',
+            given_name='Alex',
+            phone_numbers=[
+                models.PhoneNumber(
+                    category=models.EnumWithCustomOfPhoneNumberCategory(
+                        value='Office'),
+                    number='+49 211 4247 21',
+                    preferred=True)],
+            profession='GENERAL DIRECTOR',
+            surname='Thomas',
+            urls=[
+                models.Url(
+                    category=models.EnumWithCustomOfUrlCategory(
+                        value='Work'),
+                    preferred=True,
+                    href='www.aspose.com')])])
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.AiBcrParseRequest(
+    file='/path/to/image.png',
+    countries='us',
+    languages='en',
+    is_single=True)
+
+// Call method:
+result = api.ai.bcr.parse(request)
+
+// Result example:
+result = models.ContactList(
+    value=[
+        models.ContactDto(
+            attachments=[
+                models.Attachment(
+                    name='attachment.txt',
+                    base64_data='U29tZSBmaWxlIGNvbnRlbnQ=')],
+            display_name='Alex Thomas',
+            email_addresses=[
+                models.EmailAddress(
+                    category=models.EnumWithCustomOfEmailAddressCategory(
+                        value='Custom',
+                        description='Partners'),
+                    display_name='Alex Thomas Partners',
+                    preferred=True,
+                    address='email@aspose.com')],
+            gender='Male',
+            given_name='Alex',
+            phone_numbers=[
+                models.PhoneNumber(
+                    category=models.EnumWithCustomOfPhoneNumberCategory(
+                        value='Office'),
+                    number='+49 211 4247 21',
+                    preferred=True)],
+            profession='GENERAL DIRECTOR',
+            surname='Thomas',
+            urls=[
+                models.Url(
+                    category=models.EnumWithCustomOfUrlCategory(
+                        value='Work'),
+                    preferred=True,
+                    href='www.aspose.com')])])
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
-        
 <a name="parse_storage"></a>
-# parse_storage
+## parse_storage
 
+Description: Parse images from storage to vCard files             
+
+Returns: List of vCard files located on storage
+
+Method call example:
 ```python
-parse_storage(self, AiBcrParseStorageRequest request)
+result = api.ai.bcr.parse_storage(request)
 ```
 
-Parse images from storage to vCard files             
+### Parameter: request
 
-### Return type
-
-[**StorageFileLocationList**](StorageFileLocationList.md)
-
-### request Parameter
+Description: Request with images located on storage
 
 See parameter model documentation at [AiBcrParseStorageRequest](AiBcrParseStorageRequest.md)
+
+<details>
+    <summary>Parameter initialization example:</summary>
+    
+```python
+request = models.AiBcrParseStorageRequest(
+    out_folder=models.StorageFolderLocation(
+        storage='First Storage',
+        folder_path='VCard/files/produced/by/parser/will/be/placed/here'),
+    images=[
+        models.AiBcrImageStorageFile(
+            file=models.StorageFileLocation(
+                file_name='VCardScanImage.jpg',
+                storage='First Storage',
+                folder_path='image/location/on/storage'),
+            is_single=True)])
+```
+
+</details>
+
+### Result
+
+Description: List of vCard files located on storage
+
+Return type: [**StorageFileLocationList**](StorageFileLocationList.md)
+
+<details>
+    <summary>Result example</summary>
+
+```python
+result = models.StorageFileLocationList(
+    value=[
+        models.StorageFileLocation(
+            file_name='fileOnStorage.txt',
+            storage='First Storage',
+            folder_path='file/location/folder/on/storage')])
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.AiBcrParseStorageRequest(
+    out_folder=models.StorageFolderLocation(
+        storage='First Storage',
+        folder_path='VCard/files/produced/by/parser/will/be/placed/here'),
+    images=[
+        models.AiBcrImageStorageFile(
+            file=models.StorageFileLocation(
+                file_name='VCardScanImage.jpg',
+                storage='First Storage',
+                folder_path='image/location/on/storage'),
+            is_single=True)])
+
+// Call method:
+result = api.ai.bcr.parse_storage(request)
+
+// Result example:
+result = models.StorageFileLocationList(
+    value=[
+        models.StorageFileLocation(
+            file_name='fileOnStorage.txt',
+            storage='First Storage',
+            folder_path='file/location/folder/on/storage')])
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

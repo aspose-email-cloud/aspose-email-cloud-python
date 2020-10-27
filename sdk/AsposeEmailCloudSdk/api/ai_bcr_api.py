@@ -38,7 +38,7 @@ class AiBcrApi(ApiBase):
 
     def __init__(self, api_client):
         super(AiBcrApi, self).__init__(api_client)
-            
+
     def parse(self, request: AiBcrParseRequest) -> ContactList:
         """Parse images to vCard document models             
 
@@ -96,7 +96,7 @@ class AiBcrApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'ContactList')
-            
+
     def parse_storage(self, request: AiBcrParseStorageRequest) -> StorageFileLocationList:
         """Parse images from storage to vCard files             
 
@@ -125,3 +125,4 @@ class AiBcrApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'StorageFileLocationList')
+

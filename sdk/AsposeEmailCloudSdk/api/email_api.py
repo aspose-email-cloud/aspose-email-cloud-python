@@ -38,7 +38,7 @@ class EmailApi(ApiBase):
 
     def __init__(self, api_client):
         super(EmailApi, self).__init__(api_client)
-            
+
     def as_file(self, request: EmailAsFileRequest) -> str:
         """Converts Email model to specified format and returns as file.             
 
@@ -67,7 +67,7 @@ class EmailApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-            
+
     def as_mapi(self, email_dto: EmailDto) -> MapiMessageDto:
         """Converts EmailDto to MapiMessageDto.             
 
@@ -96,7 +96,7 @@ class EmailApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'MapiMessageDto')
-            
+
     def convert(self, request: EmailConvertRequest) -> str:
         """Converts email document to specified format and returns as file             
 
@@ -154,7 +154,7 @@ class EmailApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'file')
-            
+
     def from_file(self, request: EmailFromFileRequest) -> EmailDto:
         """Converts email document to a model representation             
 
@@ -203,7 +203,7 @@ class EmailApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', 'EmailDto')
-            
+
     def get(self, request: EmailGetRequest) -> EmailDto:
         """Get email document from storage.             
 
@@ -268,7 +268,7 @@ class EmailApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailDto')
-            
+
     def get_as_file(self, request: EmailGetAsFileRequest) -> str:
         """Converts email document from storage to specified format and returns as file             
 
@@ -333,7 +333,7 @@ class EmailApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'file')
-            
+
     def get_list(self, request: EmailGetListRequest) -> EmailStorageList:
         """Get email list from storage folder.             
 
@@ -401,7 +401,7 @@ class EmailApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailStorageList')
-            
+
     def save(self, request: EmailSaveRequest):
         """Save email document to storage.             
 
@@ -430,3 +430,4 @@ class EmailApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
+
