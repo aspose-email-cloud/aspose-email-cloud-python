@@ -1,28 +1,69 @@
-# AsposeEmailCloudSdk.DisposableEmailApi
+# AsposeEmailCloudSdk.DisposableEmailApi (EmailCloud.disposable_email)
 
-        
+Check email address is disposable operations
+
 <a name="is_disposable"></a>
-# is_disposable
+## is_disposable
 
+Description: Check email address is disposable             
+
+Returns: true if address is disposable
+
+Method call example:
 ```python
-is_disposable(self, request: DisposableEmailIsDisposableRequest)
+result = api.disposable_email.is_disposable(request)
 ```
 
-Check email address is disposable             
+### Parameter: request
 
-### Return type
+Description: is_disposable method request.
 
-ValueTOfBoolean
+See parameter model documentation at [DisposableEmailIsDisposableRequest](DisposableEmailIsDisposableRequest.md).
 
-### request Parameter
+<details>
+    <summary>Parameter initialization example:</summary>
+    
 ```python
-DisposableEmailIsDisposableRequest(
-    address)
+request = models.DisposableEmailIsDisposableRequest(
+    address='example@mailcatch.com')
 ```
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **address** | **str** | An email address to check | 
+</details>
+
+### Result
+
+Description: true if address is disposable
+
+Return type: [**ValueTOfBoolean**](ValueTOfBoolean.md)
+
+<details>
+    <summary>Result example</summary>
+
+```python
+result = 
+```
+</details>
+
+### Complete example
+
+<details>
+    <summary>Method call example:</summary>
+
+```python
+api = EmailCloud(app_key, app_sid)
+
+// Prepare parameters:
+request = models.DisposableEmailIsDisposableRequest(
+    address='example@mailcatch.com')
+
+// Call method:
+result = api.disposable_email.is_disposable(request)
+
+// Result example:
+result = 
+```
+
+</details>
 
 [[Back to top]](#) [[Back to Model list]](Models.md) [[Back to README]](README.md)
 

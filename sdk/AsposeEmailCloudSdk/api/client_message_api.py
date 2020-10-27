@@ -38,7 +38,7 @@ class ClientMessageApi(ApiBase):
 
     def __init__(self, api_client):
         super(ClientMessageApi, self).__init__(api_client)
-            
+
     def append(self, request: ClientMessageAppendRequest) -> ValueTOfString:
         """Add email message to specified folder in email account.             
 
@@ -67,7 +67,7 @@ class ClientMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'POST', 'ValueTOfString')
-            
+
     def append_file(self, request: ClientMessageAppendFileRequest) -> ValueTOfString:
         """Add email message from file to specified folder in email account.             
 
@@ -146,7 +146,7 @@ class ClientMessageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'POST', 'ValueTOfString')
-            
+
     def delete(self, request: ClientMessageDeleteRequest):
         """Delete message.             
 
@@ -175,7 +175,7 @@ class ClientMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'DELETE', None)
-            
+
     def fetch(self, request: ClientMessageFetchRequest) -> MailMessageBase:
         """Fetch message from email account             
 
@@ -258,7 +258,7 @@ class ClientMessageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MailMessageBase')
-            
+
     def fetch_file(self, request: ClientMessageFetchFileRequest) -> str:
         """Fetch message as file from email account             
 
@@ -335,7 +335,7 @@ class ClientMessageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'file')
-            
+
     def list(self, request: ClientMessageListRequest) -> MailMessageBaseList:
         """Get messages from folder, filtered by query             
 
@@ -425,7 +425,7 @@ class ClientMessageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'MailMessageBaseList')
-            
+
     def move(self, request: ClientMessageMoveRequest):
         """Move message to another folder.             
 
@@ -454,7 +454,7 @@ class ClientMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-            
+
     def send(self, request: ClientMessageSendRequest):
         """Send an email specified by model in request.             
 
@@ -483,7 +483,7 @@ class ClientMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'POST', None)
-            
+
     def send_file(self, request: ClientMessageSendFileRequest):
         """Send an email file.             
 
@@ -550,7 +550,7 @@ class ClientMessageApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'POST', None)
-            
+
     def set_is_read(self, request: ClientMessageSetIsReadRequest):
         """Mark message as read or unread.             
 
@@ -579,3 +579,4 @@ class ClientMessageApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
+

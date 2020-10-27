@@ -38,7 +38,7 @@ class ClientThreadApi(ApiBase):
 
     def __init__(self, api_client):
         super(ClientThreadApi, self).__init__(api_client)
-            
+
     def delete(self, request: ClientThreadDeleteRequest):
         """Delete thread by id. All messages from thread will also be deleted.             
 
@@ -67,7 +67,7 @@ class ClientThreadApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'DELETE', None)
-            
+
     def get_list(self, request: ClientThreadGetListRequest) -> EmailThreadList:
         """Get message threads from folder. All messages are partly fetched (without email body and some other fields).             
 
@@ -144,7 +144,7 @@ class ClientThreadApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailThreadList')
-            
+
     def get_messages(self, request: ClientThreadGetMessagesRequest) -> EmailList:
         """Get messages from thread by id. All messages are fully fetched. For accounts with CacheFile only cached messages will be returned.             
 
@@ -215,7 +215,7 @@ class ClientThreadApi(ApiBase):
                                           collection_formats, auth_settings)
 
         return self._make_request(http_request_object, 'GET', 'EmailList')
-            
+
     def move(self, request: ClientThreadMoveRequest):
         """Move thread to another folder.             
 
@@ -244,7 +244,7 @@ class ClientThreadApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
-            
+
     def set_is_read(self, request: ClientThreadSetIsReadRequest):
         """Mark all messages in thread as read or unread.             
 
@@ -273,3 +273,4 @@ class ClientThreadApi(ApiBase):
         http_request_object = HttpRequest(path, None, None, header_params, None, body_params, None, None, auth_settings)
 
         return self._make_request(http_request_object, 'PUT', None)
+
