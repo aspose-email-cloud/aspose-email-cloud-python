@@ -1,12 +1,13 @@
 # Manage Emails in Cloud via Python REST SDK
-[![PYPI](https://img.shields.io/pypi/v/aspose-email-cloud)](https://pypi.org/project/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-python)](https://pypi.org/project/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-python/workflows/tests/badge.svg) [![Uptime Robot status](https://img.shields.io/uptimerobot/status/m785988686-40b0339ddd75355f594f59e3)](https://apireference.aspose.cloud/email/)
+[![PYPI](https://img.shields.io/pypi/v/aspose-email-cloud)](https://pypi.org/project/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-python)](https://pypi.org/project/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-python/workflows/tests/badge.svg)
 
 [Aspose.Email Cloud SDK for Python](https://products.aspose.cloud/email/python) is a REST API SDK for creating email applications that work with standard email file formats such as Outlook MSG, EML, iCalendar files and VCard.
 
 This SDK allows you to work with Aspose.Email Cloud REST APIs in your Python applications quickly and easily, with zero initial cost.
 
 [Aspose.Email Cloud home](https://products.aspose.cloud/email/family)
-[API Reference](https://apireference.aspose.cloud/email/)
+
+[Swagger UI](https://apireference.aspose.cloud/email/)
 
 # Cloud Email Processing Features
 Aspose.Email Cloud is a REST API for creating email applications that work with standard email file formats. This SDK:
@@ -35,9 +36,7 @@ See [Release notes](https://docs.aspose.cloud/email/aspose-email-cloud-20-10-rel
 ## How to use the SDK?
 The complete source code is available in the [GIT repository](https://github.com/aspose-email-cloud/aspose-email-cloud-python/tree/master/sdk/AsposeEmailCloudSdk).
 
-Use [SDK tutorials](https://docs.aspose.cloud/email/sdk-tutorials/).
-
-SDK reference documentation is available in [this README](https://github.com/aspose-email-cloud/aspose-email-cloud-python/blob/master/sdk/docs/README.md).
+Use [SDK tutorials](https://docs.aspose.cloud/email/sdk-tutorials/) and [SDK reference documentation](https://docs.aspose.cloud/email/reference-api/).
 
 ### Prerequisites
 
@@ -73,4 +72,4 @@ contact = result.value[0]
 assert 'Parsed Display Name' in contact.display_name
 ```
 
-[Product Page](https://products.aspose.cloud/email/python) | [Documentation](https://docs.aspose.cloud/email/) | [Demo](https://products.aspose.app/email/family) | [API Reference](https://apireference.aspose.cloud/email/) | [Blog](https://blog.aspose.cloud/category/email/) | [Free support](https://forum.aspose.cloud/c/email) | [Free trial](https://dashboard.aspose.cloud/#/apps)
+[Product Page](https://products.aspose.cloud/email/python) | [Documentation](https://docs.aspose.cloud/email/) | [Demo](https://products.aspose.app/email/family) | [Swagger UI](https://apireference.aspose.cloud/email/) | [Blog](https://blog.aspose.cloud/category/email/) | [Free support](https://forum.aspose.cloud/c/email) | [Free trial](https://dashboard.aspose.cloud/#/apps) | [SDK reference documentation](https://docs.aspose.cloud/email/reference-api)
