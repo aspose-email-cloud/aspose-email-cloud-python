@@ -96,7 +96,7 @@ result = models.EmailDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 mapi_message = models.MapiMessageDto(
@@ -226,7 +226,7 @@ Return type: **Stream**
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiMessageAsFileRequest(
@@ -343,7 +343,7 @@ result = models.MapiMessageDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiMessageFromFileRequest(
@@ -465,7 +465,7 @@ result = models.MapiMessageDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiMessageGetRequest(
@@ -579,7 +579,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiMessageSaveRequest(

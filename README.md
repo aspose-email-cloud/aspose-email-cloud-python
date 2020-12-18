@@ -37,7 +37,7 @@ Use [SDK tutorials](https://docs.aspose.cloud/email/sdk-tutorials/) and [SDK ref
 
 ### Prerequisites
 
-To use this SDK, you need an App SID and an App Key; they can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (it requires free registration in Aspose Cloud for this).
+To use this SDK, you need a Client id and a Client secret; they can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (it requires free registration in Aspose Cloud for this).
 
 ### Installation
 
@@ -55,9 +55,10 @@ from AsposeEmailCloudSdk import api #EmailApi class is here
 from AsposeEmailCloudSdk import models #REST API models are here
 
 #...
-app_sid = 'Your App SID'
-app_key = 'Your App Key'
-email_cloud = api.EmailCloud(app_key, app_sid)
+client_secret = 'Your Client secret'
+client_id = 'Your Client id'
+
+email_cloud = api.EmailCloud(client_secret, client_id)
 ```
 
 #### Business cards recognition API

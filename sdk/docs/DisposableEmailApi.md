@@ -50,7 +50,7 @@ result =
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.DisposableEmailIsDisposableRequest(

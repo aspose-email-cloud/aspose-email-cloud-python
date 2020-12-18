@@ -93,7 +93,7 @@ result = models.CalendarDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 mapi_calendar_dto = models.MapiCalendarDto(
@@ -220,7 +220,7 @@ Return type: **Stream**
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiCalendarAsFileRequest(
@@ -336,7 +336,7 @@ result = models.MapiCalendarDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiCalendarFromFileRequest(
@@ -456,7 +456,7 @@ result = models.MapiCalendarDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiCalendarGetRequest(
@@ -569,7 +569,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiCalendarSaveRequest(

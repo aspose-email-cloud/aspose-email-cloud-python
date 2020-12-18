@@ -89,7 +89,7 @@ result = models.EmailAccountConfigList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.EmailConfigDiscoverRequest(
@@ -235,7 +235,7 @@ result = models.EmailAccountConfigList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.EmailConfigDiscoverOauthRequest(
@@ -383,7 +383,7 @@ result = models.EmailAccountConfigList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.EmailConfigDiscoverPasswordRequest(

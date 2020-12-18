@@ -52,7 +52,7 @@ result = models.DiscUsage(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.GetDiscUsageRequest(
@@ -127,7 +127,7 @@ result = models.FileVersions(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.GetFileVersionsRequest(
@@ -202,7 +202,7 @@ result = models.ObjectExist(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.ObjectExistsRequest(
@@ -269,7 +269,7 @@ result = models.StorageExist(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.StorageExistsRequest(
