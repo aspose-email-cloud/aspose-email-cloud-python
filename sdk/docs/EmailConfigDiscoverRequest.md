@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 
 ## Example
 ```python
-request = models.EmailConfigDiscoverRequest()
+request = models.EmailConfigDiscoverRequest(
+    address='address@gmail.com')
 ```
