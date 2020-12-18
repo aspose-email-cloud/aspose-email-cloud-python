@@ -84,8 +84,8 @@ class ApiBase(object):
     def _request_token(self):
         config = self.api_client.configuration
         request_url = "/connect/token"
-        form_params = [('grant_type', 'client_credentials'), ('client_id', config.api_key['app_sid']),
-                       ('client_secret', config.api_key['api_key'])]
+        form_params = [('grant_type', 'client_credentials'), ('client_id', config.api_key['client_id']),
+                       ('client_secret', config.api_key['client_secret'])]
 
         header_params = {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'}
 

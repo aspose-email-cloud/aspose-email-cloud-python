@@ -31,8 +31,8 @@ def pytest_configure(config):
 @pytest.fixture(scope="class")
 def td(request):
     config = _get_config(request)
-    app_sid = config["appsid"]
-    app_key = config["appkey"]
+    app_sid = config["clientid"]
+    app_key = config["clientsecret"]
     api_base_url = config.get("apibaseurl", "https://api-qa.aspose.cloud")
     email_cloud = api.EmailCloud(app_key, app_sid, api_base_url)
     auth_url = config.get("authurl")
