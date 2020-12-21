@@ -70,3 +70,4 @@ target/
 .vscode/
 .pytest_cache/
 .venv/
+.run/
