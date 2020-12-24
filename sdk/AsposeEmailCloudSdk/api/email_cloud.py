@@ -106,7 +106,7 @@ class EmailCloud(object):
     @property
     def disposable_email(self) -> DisposableEmailApi:
         """
-        Check email address is disposable operations
+        Checks if an email is a disposable one
         """
         return self._disposable_email
     
