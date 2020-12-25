@@ -20,8 +20,8 @@ jobs:
         python -m pip install -r tests/requirements.txt
     - name: Test with pytest
       env:
-        appSid: ${{secrets.appSid}}
-        appKey: ${{secrets.appKey}}
+        clientId: ${{secrets.appSid}}
+        clientSecret: ${{secrets.appKey}}
         apiBaseUrl: "https://api-qa.aspose.cloud"
       run: |
         python -m pytest --verbose --color=yes -m pipeline tests

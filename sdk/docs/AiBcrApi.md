@@ -84,7 +84,7 @@ result = models.ContactList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiBcrParseRequest(
@@ -196,7 +196,7 @@ result = models.StorageFileLocationList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiBcrParseStorageRequest(

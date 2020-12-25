@@ -24,7 +24,8 @@ See parameter model documentation at [EmailConfigDiscoverRequest](EmailConfigDis
     <summary>Parameter initialization example:</summary>
     
 ```python
-request = models.EmailConfigDiscoverRequest()
+request = models.EmailConfigDiscoverRequest(
+    address='address@gmail.com')
 ```
 
 </details>
@@ -88,10 +89,11 @@ result = models.EmailAccountConfigList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
-request = models.EmailConfigDiscoverRequest()
+request = models.EmailConfigDiscoverRequest(
+    address='address@gmail.com')
 
 // Call method:
 result = api.email_config.discover(request)
@@ -233,7 +235,7 @@ result = models.EmailAccountConfigList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.EmailConfigDiscoverOauthRequest(
@@ -381,7 +383,7 @@ result = models.EmailAccountConfigList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.EmailConfigDiscoverPasswordRequest(

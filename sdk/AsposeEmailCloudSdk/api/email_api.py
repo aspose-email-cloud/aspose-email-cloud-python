@@ -40,7 +40,7 @@ class EmailApi(ApiBase):
         super(EmailApi, self).__init__(api_client)
 
     def as_file(self, request: EmailAsFileRequest) -> str:
-        """Converts Email model to specified format and returns as file.             
+        """Converts Email model to a specified format and returns as a file.             
 
         :param request: Email model and format to convert.
         :type request: EmailAsFileRequest

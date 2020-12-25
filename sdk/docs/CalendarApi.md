@@ -84,7 +84,7 @@ result = models.AlternateView(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarAsAlternateRequest(
@@ -191,7 +191,7 @@ Return type: **Stream**
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarAsFileRequest(
@@ -312,7 +312,7 @@ result = models.MapiCalendarDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 calendar_dto = models.CalendarDto(
@@ -412,7 +412,7 @@ Return type: **Stream**
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarConvertRequest(
@@ -491,7 +491,7 @@ result = models.CalendarDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarFromFileRequest(
@@ -591,7 +591,7 @@ result = models.CalendarDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarGetRequest(
@@ -693,7 +693,7 @@ result = models.AlternateView(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarGetAsAlternateRequest(
@@ -771,7 +771,7 @@ Return type: **Stream**
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarGetAsFileRequest(
@@ -862,7 +862,7 @@ result = models.CalendarStorageList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarGetListRequest(
@@ -962,7 +962,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CalendarSaveRequest(

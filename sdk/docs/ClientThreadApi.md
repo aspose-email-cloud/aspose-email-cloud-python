@@ -43,7 +43,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.ClientThreadDeleteRequest(
@@ -135,7 +135,7 @@ result = models.EmailThreadList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.ClientThreadGetListRequest(
@@ -229,7 +229,7 @@ result =
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.ClientThreadGetMessagesRequest(
@@ -290,7 +290,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.ClientThreadMoveRequest(
@@ -350,7 +350,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.ClientThreadSetIsReadRequest(

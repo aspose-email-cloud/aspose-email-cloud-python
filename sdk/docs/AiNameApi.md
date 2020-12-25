@@ -57,7 +57,7 @@ result = models.AiNameWeightedVariants(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameCompleteRequest(
@@ -135,7 +135,7 @@ result = models.AiNameWeightedVariants(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameExpandRequest(
@@ -229,7 +229,7 @@ result = models.AiNameWeightedVariants(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameParsedRequest(
@@ -319,7 +319,7 @@ result = models.AiNameFormatted(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameFormatRequest(
@@ -404,7 +404,7 @@ result = models.AiNameFormatted(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameParsedRequest(
@@ -486,7 +486,7 @@ result =
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameGenderizeRequest(
@@ -566,7 +566,7 @@ result =
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameParsedRequest(
@@ -652,7 +652,7 @@ result = models.AiNameMatchResult(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameMatchRequest(
@@ -760,7 +760,7 @@ result = models.AiNameMatchResult(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameMatchParsedRequest(
@@ -881,7 +881,7 @@ result = models.AiNameComponentList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameParseRequest(
@@ -964,7 +964,7 @@ result =
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.AiNameParseEmailAddressRequest(

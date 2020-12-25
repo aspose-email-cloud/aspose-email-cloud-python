@@ -90,7 +90,7 @@ result = models.ContactDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 mapi_contact_dto = models.MapiContactDto(
@@ -199,7 +199,7 @@ Return type: **Stream**
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiContactAsFileRequest(
@@ -286,7 +286,7 @@ result = models.MapiContactDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiContactFromFileRequest(
@@ -378,7 +378,7 @@ result = models.MapiContactDto(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiContactGetRequest(
@@ -462,7 +462,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MapiContactSaveRequest(

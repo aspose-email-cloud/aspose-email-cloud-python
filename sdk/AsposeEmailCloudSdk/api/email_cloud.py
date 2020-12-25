@@ -35,15 +35,15 @@ class EmailCloud(object):
     Aspose.Email Cloud API.
     """
 
-    def __init__(self, app_key=None, app_sid=None, base_url=None,
+    def __init__(self, client_secret=None, client_id=None, base_url=None,
                  api_version=None, debug=False):
         """
         Initializes a new instance of the EmailCloud class.
 
-        :param app_key: The app key.
-        :type app_key: str
-        :param app_sid: The app sid.
-        :type app_sid: str
+        :param client_secret: The client secret.
+        :type client_secret: str
+        :param client_id: The client id.
+        :type client_id: str
         :param base_url: The base URL.
         :type base_url: str
         :param api_version: API version.
@@ -51,8 +51,8 @@ class EmailCloud(object):
         :param debug: If debug mode is enabled. False by default.
         :type debug: bool
         """
-        configuration = Configuration(app_key=app_key,
-                                      app_sid=app_sid,
+        configuration = Configuration(client_secret=client_secret,
+                                      client_id=client_id,
                                       base_url=base_url,
                                       api_version=api_version,
                                       debug=debug)
@@ -106,7 +106,7 @@ class EmailCloud(object):
     @property
     def disposable_email(self) -> DisposableEmailApi:
         """
-        Check email address is disposable operations
+        Checks if an email is a disposable one
         """
         return self._disposable_email
     

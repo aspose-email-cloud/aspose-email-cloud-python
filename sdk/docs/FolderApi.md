@@ -41,7 +41,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CopyFolderRequest(
@@ -94,7 +94,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.CreateFolderRequest(
@@ -146,7 +146,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.DeleteFolderRequest(
@@ -216,7 +216,7 @@ result = models.FilesList(
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.GetFilesListRequest(
@@ -278,7 +278,7 @@ Return type: void (empty response body)
     <summary>Method call example:</summary>
 
 ```python
-api = EmailCloud(app_key, app_sid)
+api = EmailCloud(client_secret, client_id)
 
 // Prepare parameters:
 request = models.MoveFolderRequest(
