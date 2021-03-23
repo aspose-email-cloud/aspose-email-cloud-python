@@ -6,6 +6,7 @@ Email client move thread request.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **destination_folder** |**str** |Email account folder to move thread to.              |
+**source_folder** |**str** |Email account folder to move thread from.              |[optional] 
 
 Parent class: [ClientThreadBaseRequest](ClientThreadBaseRequest.md)
 
@@ -14,6 +15,7 @@ Parent class: [ClientThreadBaseRequest](ClientThreadBaseRequest.md)
 ```python
 client_thread_move_request = models.ClientThreadMoveRequest(
     destination_folder='INBOX/SubFolder',
+    source_folder='INBOX',
     thread_id='5',
     account_location=models.StorageFileLocation(
         file_name='email.account',

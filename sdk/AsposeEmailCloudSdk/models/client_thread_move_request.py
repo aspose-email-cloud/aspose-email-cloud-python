@@ -48,16 +48,18 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
     swagger_types = {
         'account_location': 'StorageFileLocation',
         'thread_id': 'str',
-        'destination_folder': 'str'
+        'destination_folder': 'str',
+        'source_folder': 'str'
     }
 
     attribute_map = {
         'account_location': 'accountLocation',
         'thread_id': 'threadId',
-        'destination_folder': 'destinationFolder'
+        'destination_folder': 'destinationFolder',
+        'source_folder': 'sourceFolder'
     }
 
-    def __init__(self, account_location: StorageFileLocation = None, thread_id: str = None, destination_folder: str = None):
+    def __init__(self, account_location: StorageFileLocation = None, thread_id: str = None, destination_folder: str = None, source_folder: str = None):
         """
         Email client move thread request.             
         :param account_location: Email client account configuration location on storage.             
@@ -66,10 +68,13 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
         :type thread_id: str
         :param destination_folder: Email account folder to move thread to.             
         :type destination_folder: str
+        :param source_folder: Email account folder to move thread from.             
+        :type source_folder: str
         """
         super(ClientThreadMoveRequest, self).__init__()
 
         self._destination_folder = None
+        self._source_folder = None
 
         if account_location is not None:
             self.account_location = account_location
@@ -77,6 +82,8 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
             self.thread_id = thread_id
         if destination_folder is not None:
             self.destination_folder = destination_folder
+        if source_folder is not None:
+            self.source_folder = source_folder
 
 
     @property
@@ -102,6 +109,26 @@ class ClientThreadMoveRequest(ClientThreadBaseRequest):
         if destination_folder is not None and len(destination_folder) < 1:
             raise ValueError("Invalid value for `destination_folder`, length must be greater than or equal to `1`")
         self._destination_folder = destination_folder
+
+    @property
+    def source_folder(self) -> str:
+        """
+        Email account folder to move thread from.             
+
+        :return: The source_folder of this ClientThreadMoveRequest.
+        :rtype: str
+        """
+        return self._source_folder
+
+    @source_folder.setter
+    def source_folder(self, source_folder: str):
+        """
+        Email account folder to move thread from.             
+
+        :param source_folder: The source_folder of this ClientThreadMoveRequest.
+        :type: str
+        """
+        self._source_folder = source_folder
 
     def to_dict(self):
         """Returns the model properties as a dict"""

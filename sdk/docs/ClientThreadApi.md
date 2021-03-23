@@ -271,6 +271,7 @@ See parameter model documentation at [ClientThreadMoveRequest](ClientThreadMoveR
 ```python
 request = models.ClientThreadMoveRequest(
     destination_folder='INBOX/SubFolder',
+    source_folder='INBOX',
     thread_id='5',
     account_location=models.StorageFileLocation(
         file_name='email.account',
@@ -295,6 +296,7 @@ api = EmailCloud(client_secret, client_id)
 // Prepare parameters:
 request = models.ClientThreadMoveRequest(
     destination_folder='INBOX/SubFolder',
+    source_folder='INBOX',
     thread_id='5',
     account_location=models.StorageFileLocation(
         file_name='email.account',
