@@ -1,6 +1,7 @@
 [![PYPI](https://img.shields.io/pypi/v/aspose-email-cloud)](https://pypi.org/project/aspose-email-cloud/) [![License](https://img.shields.io/github/license/aspose-email-cloud/aspose-email-cloud-python)](https://pypi.org/project/aspose-email-cloud/) ![tests](https://github.com/aspose-email-cloud/aspose-email-cloud-python/workflows/tests/badge.svg)
 
 # Manage Emails in Cloud via Python REST SDK
+
 [Aspose.Email Cloud SDK for Python](https://products.aspose.cloud/email/python) is a REST API SDK for creating email applications that work with standard email file formats such as Outlook MSG, EML, iCalendar files and VCard.
 
 This SDK allows you to work with Aspose.Email Cloud REST APIs in your Python applications quickly and easily, with zero initial cost.
@@ -22,12 +23,12 @@ Aspose.Email Cloud is a REST API for creating email applications that work with 
 - Email configuration discovery.
 - Disposable email address detection.
 
-## Enhancements in Version 21.3
+## Enhancements in Version 21.4
 
 - IMAP native threads support added to the built-in Email client.
 - New field ClientThreadMoveRequest.SourceFolder added to specify a folder to move a thread from.
 
-See [Release notes](https://docs.aspose.cloud/email/aspose-email-cloud-21-3-release-notes/).
+See [Release notes](https://docs.aspose.cloud/email/aspose-email-cloud-21-4-release-notes/).
 
 ## How to use the SDK?
 The complete source code is available in the [GIT repository](https://github.com/aspose-email-cloud/aspose-email-cloud-python/tree/master/sdk/AsposeEmailCloudSdk).
@@ -64,7 +65,9 @@ email_cloud = api.EmailCloud(client_secret, client_id)
 Use `AiBcrApi.parse` method to parse business card image to VCard DTO:
 ```python
 path = 'path/to/image/to/parse.png'
-result = email_cloud.ai.bcr.parse(models.AiBcrParseRequest(image_file))
+result = email_cloud.ai.bcr.parse(models.AiBcrParseRequest(
+    file=image_file,
+    is_single=True))
 contact = result.value[0]
 assert 'Parsed Display Name' in contact.display_name
 ```
@@ -72,7 +75,7 @@ assert 'Parsed Display Name' in contact.display_name
 ## Aspose.Email Cloud SDKs in Popular Languages
 
 | .NET | Java | PHP | Python | Ruby | Node.js |
-|---|---|---|---|---|---|
+|------|------|-----|--------|------|---------|
 | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-dotnet) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-java) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-php) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-python) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-ruby)  | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-node) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-android) | [GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-swift)|[GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-dart) |[GitHub](https://github.com/aspose-email-cloud/aspose-email-cloud-go) |
 | [NuGet](https://www.nuget.org/packages/Aspose.Email-Cloud/) | [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-email-cloud) | [Composer](https://packagist.org/packages/aspose/aspose-email-cloud) | [PIP](https://pypi.org/project/aspose.email-cloud/) | [GEM](https://rubygems.org/gems/aspose_email_cloud)  | [NPM](https://www.npmjs.com/package/@asposecloud/aspose-email-cloud) |
 

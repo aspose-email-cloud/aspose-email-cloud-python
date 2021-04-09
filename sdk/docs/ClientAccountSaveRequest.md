@@ -25,7 +25,11 @@ client_account_save_request = models.ClientAccountSaveRequest(
             client_id='clientId',
             client_secret='clientSecret',
             refresh_token='refreshToken',
-            login='example@example.com')))
+            login='example@example.com'),
+        cache_file=models.StorageFileLocation(
+            file_name='account.cache',
+            storage='First Storage',
+            folder_path='file/location/folder/on/storage')))
 ```
 
 
