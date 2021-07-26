@@ -146,6 +146,10 @@ class AiNameComponent(object):
         """
         if score is None:
             raise ValueError("Invalid value for `score`, must not be `None`")
+        if score is not None and score > 1.0:
+            raise ValueError("Invalid value for `score`, must be a value less than or equal to `1.0`")
+        if score is not None and score < 0.0:
+            raise ValueError("Invalid value for `score`, must be a value greater than or equal to `0.0`")
         self._score = score
 
     @property
@@ -168,6 +172,10 @@ class AiNameComponent(object):
         """
         if position is None:
             raise ValueError("Invalid value for `position`, must not be `None`")
+        if position is not None and position > 2147483647:
+            raise ValueError("Invalid value for `position`, must be a value less than or equal to `2147483647`")
+        if position is not None and position < 0:
+            raise ValueError("Invalid value for `position`, must be a value greater than or equal to `0`")
         self._position = position
 
     def to_dict(self):
