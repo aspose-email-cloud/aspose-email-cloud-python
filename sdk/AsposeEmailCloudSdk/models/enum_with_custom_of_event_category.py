@@ -55,7 +55,7 @@ class EnumWithCustomOfEventCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value: Event category. Enum, available values: Custom, Birthday, Anniversary
+        :param value: Event category./nEnum, available values: Custom, Birthday, Anniversary
         :type value: str
         :param description: 
         :type description: str
@@ -73,7 +73,7 @@ class EnumWithCustomOfEventCategory(object):
     @property
     def value(self) -> str:
         """
-        Event category. Enum, available values: Custom, Birthday, Anniversary
+        Event category./nEnum, available values: Custom, Birthday, Anniversary
 
         :return: The value of this EnumWithCustomOfEventCategory.
         :rtype: str
@@ -83,7 +83,7 @@ class EnumWithCustomOfEventCategory(object):
     @value.setter
     def value(self, value: str):
         """
-        Event category. Enum, available values: Custom, Birthday, Anniversary
+        Event category./nEnum, available values: Custom, Birthday, Anniversary
 
         :param value: The value of this EnumWithCustomOfEventCategory.
         :type: str

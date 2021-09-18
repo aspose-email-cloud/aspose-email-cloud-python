@@ -55,7 +55,7 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value: Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+        :param value: Associated person's category./nEnum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
         :type value: str
         :param description: 
         :type description: str
@@ -73,7 +73,7 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
     @property
     def value(self) -> str:
         """
-        Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+        Associated person's category./nEnum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
 
         :return: The value of this EnumWithCustomOfAssociatedPersonCategory.
         :rtype: str
@@ -83,7 +83,7 @@ class EnumWithCustomOfAssociatedPersonCategory(object):
     @value.setter
     def value(self, value: str):
         """
-        Associated person's category. Enum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
+        Associated person's category./nEnum, available values: Spouse, Child, Mother, Father, Parent, Brother, Sister, Friend, Relative, Manager, Assistant, ReferredBy, Partner, DomesticPartner, Custom
 
         :param value: The value of this EnumWithCustomOfAssociatedPersonCategory.
         :type: str

@@ -34,9 +34,9 @@ class ContactGetAsFileRequest(object):
 
     :param file_name: Calendar document file name
     :type file_name: str
-    :param to_format: File format Enum, available values: VCard, WebDav, Msg
+    :param to_format: File format./nEnum, available values: VCard, WebDav, Msg
     :type to_format: str
-    :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+    :param from_format: File format to convert from./nEnum, available values: VCard, WebDav, Msg
     :type from_format: str
     :param storage: Storage name
     :type storage: str
@@ -51,9 +51,9 @@ class ContactGetAsFileRequest(object):
 
         :param file_name: Calendar document file name
         :type file_name: str
-        :param to_format: File format Enum, available values: VCard, WebDav, Msg
+        :param to_format: File format./nEnum, available values: VCard, WebDav, Msg
         :type to_format: str
-        :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+        :param from_format: File format to convert from./nEnum, available values: VCard, WebDav, Msg
         :type from_format: str
         :param storage: Storage name
         :type storage: str

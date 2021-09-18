@@ -69,7 +69,9 @@ class CalendarDto(object):
         'start_time_zone': 'str',
         'status': 'str',
         'summary': 'str',
-        'transparency': 'str'
+        'transparency': 'str',
+        '_class': 'str',
+        'microsoft_importance': 'str'
     }
 
     attribute_map = {
@@ -94,10 +96,12 @@ class CalendarDto(object):
         'start_time_zone': 'startTimeZone',
         'status': 'status',
         'summary': 'summary',
-        'transparency': 'transparency'
+        'transparency': 'transparency',
+        '_class': 'class',
+        'microsoft_importance': 'microsoftImportance'
     }
 
-    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, recurrence: RecurrencePatternDto = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None):
+    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, recurrence: RecurrencePatternDto = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None, _class: str = None, microsoft_importance: str = None):
         """
         iCalendar document representation.             
         :param attachments: Document attachments.
@@ -116,11 +120,11 @@ class CalendarDto(object):
         :type is_description_html: bool
         :param location: Location.
         :type location: str
-        :param method: Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+        :param method: Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
         :type method: str
-        :param microsoft_busy_status: Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        :param microsoft_busy_status: Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
         :type microsoft_busy_status: str
-        :param microsoft_intended_status: Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        :param microsoft_intended_status: Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
         :type microsoft_intended_status: str
         :param optional_attendees: Optional attendees.             
         :type optional_attendees: List[MailAddress]
@@ -138,12 +142,16 @@ class CalendarDto(object):
         :type start_date: datetime
         :param start_time_zone: Start time zone.
         :type start_time_zone: str
-        :param status: Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+        :param status: Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
         :type status: str
         :param summary: Summary.
         :type summary: str
-        :param transparency: Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+        :param transparency: Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
         :type transparency: str
+        :param _class: Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+        :type _class: str
+        :param microsoft_importance: Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
+        :type microsoft_importance: str
         """
 
         self._attachments = None
@@ -168,6 +176,8 @@ class CalendarDto(object):
         self._status = None
         self._summary = None
         self._transparency = None
+        self.__class = None
+        self._microsoft_importance = None
 
         if attachments is not None:
             self.attachments = attachments
@@ -213,6 +223,10 @@ class CalendarDto(object):
             self.summary = summary
         if transparency is not None:
             self.transparency = transparency
+        if _class is not None:
+            self._class = _class
+        if microsoft_importance is not None:
+            self.microsoft_importance = microsoft_importance
 
 
     @property
@@ -322,7 +336,7 @@ class CalendarDto(object):
     @property
     def flags(self) -> List[str]:
         """
-        Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
+        Appointment flags. Items: Enumerates iCalendar flags./nEnum, available values: None, AllDayEvent
 
         :return: The flags of this CalendarDto.
         :rtype: list[str]
@@ -332,7 +346,7 @@ class CalendarDto(object):
     @flags.setter
     def flags(self, flags: List[str]):
         """
-        Appointment flags. Items: Enumerates iCalendar flags. Enum, available values: None, AllDayEvent
+        Appointment flags. Items: Enumerates iCalendar flags./nEnum, available values: None, AllDayEvent
 
         :param flags: The flags of this CalendarDto.
         :type: list[str]
@@ -388,7 +402,7 @@ class CalendarDto(object):
     @property
     def method(self) -> str:
         """
-        Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+        Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
 
         :return: The method of this CalendarDto.
         :rtype: str
@@ -398,7 +412,7 @@ class CalendarDto(object):
     @method.setter
     def method(self, method: str):
         """
-        Defines the iCalendar object method type associated with the calendar document. Enum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
+        Defines the iCalendar object method type associated with the calendar document./nEnum, available values: None, Publish, Request, Reply, Add, Cancel, Refresh, Counter, DeclineCounter
 
         :param method: The method of this CalendarDto.
         :type: str
@@ -410,7 +424,7 @@ class CalendarDto(object):
     @property
     def microsoft_busy_status(self) -> str:
         """
-        Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :return: The microsoft_busy_status of this CalendarDto.
         :rtype: str
@@ -420,7 +434,7 @@ class CalendarDto(object):
     @microsoft_busy_status.setter
     def microsoft_busy_status(self, microsoft_busy_status: str):
         """
-        Specifies the BUSY status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        Specifies the BUSY status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :param microsoft_busy_status: The microsoft_busy_status of this CalendarDto.
         :type: str
@@ -432,7 +446,7 @@ class CalendarDto(object):
     @property
     def microsoft_intended_status(self) -> str:
         """
-        Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :return: The microsoft_intended_status of this CalendarDto.
         :rtype: str
@@ -442,7 +456,7 @@ class CalendarDto(object):
     @microsoft_intended_status.setter
     def microsoft_intended_status(self, microsoft_intended_status: str):
         """
-        Specifies the INTENDED status. Enum, available values: NotDefined, Free, Tentative, Busy, Oof
+        Specifies the INTENDED status./nEnum, available values: NotDefined, Free, Tentative, Busy, Oof
 
         :param microsoft_intended_status: The microsoft_intended_status of this CalendarDto.
         :type: str
@@ -618,7 +632,7 @@ class CalendarDto(object):
     @property
     def status(self) -> str:
         """
-        Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+        Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
 
         :return: The status of this CalendarDto.
         :rtype: str
@@ -628,7 +642,7 @@ class CalendarDto(object):
     @status.setter
     def status(self, status: str):
         """
-        Defines the overall status or confirmation for the calendar document. Enum, available values: NotDefined, Cancelled, Tentative, Confirmed
+        Defines the overall status or confirmation for the calendar document./nEnum, available values: NotDefined, Cancelled, Tentative, Confirmed
 
         :param status: The status of this CalendarDto.
         :type: str
@@ -660,7 +674,7 @@ class CalendarDto(object):
     @property
     def transparency(self) -> str:
         """
-        Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+        Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
 
         :return: The transparency of this CalendarDto.
         :rtype: str
@@ -670,7 +684,7 @@ class CalendarDto(object):
     @transparency.setter
     def transparency(self, transparency: str):
         """
-        Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
+        Specifies whether or not this appointment is intended to be visible in availability searches./nEnum, available values: NotDefined, Transparent, Opaque
 
         :param transparency: The transparency of this CalendarDto.
         :type: str
@@ -678,6 +692,50 @@ class CalendarDto(object):
         if transparency is None:
             raise ValueError("Invalid value for `transparency`, must not be `None`")
         self._transparency = transparency
+
+    @property
+    def _class(self) -> str:
+        """
+        Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+
+        :return: The _class of this CalendarDto.
+        :rtype: str
+        """
+        return self.__class
+
+    @_class.setter
+    def _class(self, _class: str):
+        """
+        Defines the access classification for the calendar./nEnum, available values: Public, Private, Confidential, NotDefined
+
+        :param _class: The _class of this CalendarDto.
+        :type: str
+        """
+        if _class is None:
+            raise ValueError("Invalid value for `_class`, must not be `None`")
+        self.__class = _class
+
+    @property
+    def microsoft_importance(self) -> str:
+        """
+        Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
+
+        :return: The microsoft_importance of this CalendarDto.
+        :rtype: str
+        """
+        return self._microsoft_importance
+
+    @microsoft_importance.setter
+    def microsoft_importance(self, microsoft_importance: str):
+        """
+        Specifies the importance of a calendar object./nEnum, available values: Low, Normal, High, NotDefined
+
+        :param microsoft_importance: The microsoft_importance of this CalendarDto.
+        :type: str
+        """
+        if microsoft_importance is None:
+            raise ValueError("Invalid value for `microsoft_importance`, must not be `None`")
+        self._microsoft_importance = microsoft_importance
 
     def to_dict(self):
         """Returns the model properties as a dict"""

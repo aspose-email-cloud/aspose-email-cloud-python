@@ -121,7 +121,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
         :type ftp_site: str
         :param computer_network_name: Specifies the name of the network to which the contact's computer is connected             
         :type computer_network_name: str
-        :param gender: Gender of the contact Enum, available values: Unspecified, Female, Male
+        :param gender: Gender of the contact./nEnum, available values: Unspecified, Female, Male
         :type gender: str
         :param referred_by_name: Specifies the name of the person who referred this contact to the user             
         :type referred_by_name: str
@@ -512,7 +512,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
     @property
     def gender(self) -> str:
         """
-        Gender of the contact Enum, available values: Unspecified, Female, Male
+        Gender of the contact./nEnum, available values: Unspecified, Female, Male
 
         :return: The gender of this MapiContactPersonalInfoPropertySetDto.
         :rtype: str
@@ -522,7 +522,7 @@ class MapiContactPersonalInfoPropertySetDto(object):
     @gender.setter
     def gender(self, gender: str):
         """
-        Gender of the contact Enum, available values: Unspecified, Female, Male
+        Gender of the contact./nEnum, available values: Unspecified, Female, Male
 
         :param gender: The gender of this MapiContactPersonalInfoPropertySetDto.
         :type: str

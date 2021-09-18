@@ -55,7 +55,7 @@ class AiNameGenderHypothesis(object):
     def __init__(self, gender: str = None, score: float = None):
         """
         Name gender hypothesis             
-        :param gender: Recognized name gender. Enum, available values: Male, Female, Unknown
+        :param gender: Recognized name gender./nEnum, available values: Male, Female, Unknown
         :type gender: str
         :param score: Hypothesis score             
         :type score: float
@@ -73,7 +73,7 @@ class AiNameGenderHypothesis(object):
     @property
     def gender(self) -> str:
         """
-        Recognized name gender. Enum, available values: Male, Female, Unknown
+        Recognized name gender./nEnum, available values: Male, Female, Unknown
 
         :return: The gender of this AiNameGenderHypothesis.
         :rtype: str
@@ -83,7 +83,7 @@ class AiNameGenderHypothesis(object):
     @gender.setter
     def gender(self, gender: str):
         """
-        Recognized name gender. Enum, available values: Male, Female, Unknown
+        Recognized name gender./nEnum, available values: Male, Female, Unknown
 
         :param gender: The gender of this AiNameGenderHypothesis.
         :type: str

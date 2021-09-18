@@ -32,7 +32,7 @@ class ContactGetRequest(object):
     Request model for contact_get operation.
     Initializes a new instance.
 
-    :param format: Contact document format. Enum, available values: VCard, WebDav, Msg
+    :param format: Contact document format./nEnum, available values: VCard, WebDav, Msg
     :type format: str
     :param file_name: Contact document file name.
     :type file_name: str
@@ -47,7 +47,7 @@ class ContactGetRequest(object):
         Request model for contact_get operation.
         Initializes a new instance.
 
-        :param format: Contact document format. Enum, available values: VCard, WebDav, Msg
+        :param format: Contact document format./nEnum, available values: VCard, WebDav, Msg
         :type format: str
         :param file_name: Contact document file name.
         :type file_name: str

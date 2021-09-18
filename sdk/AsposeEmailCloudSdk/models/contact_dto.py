@@ -153,11 +153,11 @@ class ContactDto(object):
         :type events: List[CustomerEvent]
         :param file_as: A name used for sorting.             
         :type file_as: str
-        :param file_as_mapping: Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+        :param file_as_mapping: Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
         :type file_as_mapping: str
         :param free_busy_location: URL path from which a client can retrieve free/busy information for the contact as an iCal file.             
         :type free_busy_location: str
-        :param gender: Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+        :param gender: Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
         :type gender: str
         :param given_name: Person's given name.             
         :type given_name: str
@@ -181,7 +181,7 @@ class ContactDto(object):
         :type nickname: str
         :param notes: Notes.             
         :type notes: str
-        :param notes_format: Defines format of a text. Enum, available values: Text, Html
+        :param notes_format: Defines format of a text./nEnum, available values: Text, Html
         :type notes_format: str
         :param office_location: Office location.             
         :type office_location: str
@@ -521,7 +521,7 @@ class ContactDto(object):
     @property
     def file_as_mapping(self) -> str:
         """
-        Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+        Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
 
         :return: The file_as_mapping of this ContactDto.
         :rtype: str
@@ -531,7 +531,7 @@ class ContactDto(object):
     @file_as_mapping.setter
     def file_as_mapping(self, file_as_mapping: str):
         """
-        Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014. Enum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
+        Specifies how to generate and recompute the value of the dispidFileAs property when other contact name properties change. Coincides MS-OXPROPS revision 16.2 from 7/31/2014./nEnum, available values: Empty, DisplayName, FirstName, LastName, Organization, LastFirstMiddle, OrgLastFirstMiddle, LastFirstMiddleOrg, LastFirstMiddle2, LastFirstMiddle3, OrgLastFirstMiddle2, OrgLastFirstMiddle3, LastFirstMiddleOrg2, LastFirstMiddleOrg3, LastFirstMiddleGen, FirstMiddleLastGen, LastFirstMiddleGen2, BestMatch, AccordingToLocale, None
 
         :param file_as_mapping: The file_as_mapping of this ContactDto.
         :type: str
@@ -563,7 +563,7 @@ class ContactDto(object):
     @property
     def gender(self) -> str:
         """
-        Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+        Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
 
         :return: The gender of this ContactDto.
         :rtype: str
@@ -573,7 +573,7 @@ class ContactDto(object):
     @gender.setter
     def gender(self, gender: str):
         """
-        Enum defines gender of a person. Enum, available values: Unspecified, Female, Male
+        Enum defines gender of a person./nEnum, available values: Unspecified, Female, Male
 
         :param gender: The gender of this ContactDto.
         :type: str
@@ -805,7 +805,7 @@ class ContactDto(object):
     @property
     def notes_format(self) -> str:
         """
-        Defines format of a text. Enum, available values: Text, Html
+        Defines format of a text./nEnum, available values: Text, Html
 
         :return: The notes_format of this ContactDto.
         :rtype: str
@@ -815,7 +815,7 @@ class ContactDto(object):
     @notes_format.setter
     def notes_format(self, notes_format: str):
         """
-        Defines format of a text. Enum, available values: Text, Html
+        Defines format of a text./nEnum, available values: Text, Html
 
         :param notes_format: The notes_format of this ContactDto.
         :type: str

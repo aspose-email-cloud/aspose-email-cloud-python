@@ -55,7 +55,7 @@ class EnumWithCustomOfEmailAddressCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value: Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+        :param value: Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
         :type value: str
         :param description: 
         :type description: str
@@ -73,7 +73,7 @@ class EnumWithCustomOfEmailAddressCategory(object):
     @property
     def value(self) -> str:
         """
-        Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+        Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
 
         :return: The value of this EnumWithCustomOfEmailAddressCategory.
         :rtype: str
@@ -83,7 +83,7 @@ class EnumWithCustomOfEmailAddressCategory(object):
     @value.setter
     def value(self, value: str):
         """
-        Represents category for an email address. Enum, available values: Home, Work, Custom, Email1, Email2, Email3
+        Represents category for an email address./nEnum, available values: Home, Work, Custom, Email1, Email2, Email3
 
         :param value: The value of this EnumWithCustomOfEmailAddressCategory.
         :type: str

@@ -61,7 +61,7 @@ class CalendarAsAlternateRequest(object):
         Convert iCalendar to AlternateView request             
         :param value: iCalendar document model             
         :type value: CalendarDto
-        :param action: iCalendar actions. Enum, available values: Create, Update, Cancel
+        :param action: iCalendar actions./nEnum, available values: Create, Update, Cancel
         :type action: str
         :param sequence_id: iCalendar sequence id             
         :type sequence_id: str
@@ -104,7 +104,7 @@ class CalendarAsAlternateRequest(object):
     @property
     def action(self) -> str:
         """
-        iCalendar actions. Enum, available values: Create, Update, Cancel
+        iCalendar actions./nEnum, available values: Create, Update, Cancel
 
         :return: The action of this CalendarAsAlternateRequest.
         :rtype: str
@@ -114,7 +114,7 @@ class CalendarAsAlternateRequest(object):
     @action.setter
     def action(self, action: str):
         """
-        iCalendar actions. Enum, available values: Create, Update, Cancel
+        iCalendar actions./nEnum, available values: Create, Update, Cancel
 
         :param action: The action of this CalendarAsAlternateRequest.
         :type: str

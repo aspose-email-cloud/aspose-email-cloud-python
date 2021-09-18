@@ -55,7 +55,7 @@ class EnumWithCustomOfPhoneNumberCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value: Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+        :param value: Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
         :type value: str
         :param description: 
         :type description: str
@@ -73,7 +73,7 @@ class EnumWithCustomOfPhoneNumberCategory(object):
     @property
     def value(self) -> str:
         """
-        Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+        Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
 
         :return: The value of this EnumWithCustomOfPhoneNumberCategory.
         :rtype: str
@@ -83,7 +83,7 @@ class EnumWithCustomOfPhoneNumberCategory(object):
     @value.setter
     def value(self, value: str):
         """
-        Phone number category. Enum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
+        Phone number category./nEnum, available values: Custom, Home, Work, Office, Mobile, Fax, HomeFax, WorkFax, Pager, Car, Isdn, Telex, Callback, Radio, Company, TtyTdd, Assistant, Primary
 
         :param value: The value of this EnumWithCustomOfPhoneNumberCategory.
         :type: str

@@ -65,7 +65,7 @@ class MapiContactSaveRequest(StorageModelOfMapiContactDto):
         :type storage_file: StorageFileLocation
         :param value: 
         :type value: MapiContactDto
-        :param format: Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+        :param format: Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
         :type format: str
         """
         super(MapiContactSaveRequest, self).__init__()
@@ -83,7 +83,7 @@ class MapiContactSaveRequest(StorageModelOfMapiContactDto):
     @property
     def format(self) -> str:
         """
-        Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+        Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
 
         :return: The format of this MapiContactSaveRequest.
         :rtype: str
@@ -93,7 +93,7 @@ class MapiContactSaveRequest(StorageModelOfMapiContactDto):
     @format.setter
     def format(self, format: str):
         """
-        Enumerates contact formats. Enum, available values: VCard, WebDav, Msg
+        Enumerates contact formats./nEnum, available values: VCard, WebDav, Msg
 
         :param format: The format of this MapiContactSaveRequest.
         :type: str

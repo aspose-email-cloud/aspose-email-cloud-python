@@ -32,7 +32,7 @@ class MapiMessageGetRequest(object):
     Request model for mapi_message_get operation.
     Initializes a new instance.
 
-    :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+    :param format: Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
     :type format: str
     :param file_name: Email document file name.
     :type file_name: str
@@ -47,7 +47,7 @@ class MapiMessageGetRequest(object):
         Request model for mapi_message_get operation.
         Initializes a new instance.
 
-        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        :param format: Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         :param file_name: Email document file name.
         :type file_name: str

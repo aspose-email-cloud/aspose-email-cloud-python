@@ -127,7 +127,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
         :type body_html: str
         :param body_rtf: RTF formatted message text.             
         :type body_rtf: str
-        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :param body_type: The content type of message body./nEnum, available values: PlainText, Html, Rtf
         :type body_type: str
         :param categories: Contains keywords or categories for the message object.             
         :type categories: List[str]
@@ -141,7 +141,7 @@ class MapiContactDto(MapiMessageItemBaseDto):
         :type mileage: str
         :param recipients: Recipients of the message.             
         :type recipients: List[MapiRecipientDto]
-        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :param sensitivity: Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
         :type sensitivity: str
         :param subject: Subject of the message.             
         :type subject: str

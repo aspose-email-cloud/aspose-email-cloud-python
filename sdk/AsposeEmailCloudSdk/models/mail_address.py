@@ -63,7 +63,7 @@ class MailAddress(object):
         :type display_name: str
         :param address: Address             
         :type address: str
-        :param participation_status: Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        :param participation_status: Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
         :type participation_status: str
         :param original_address_string: The original e-mail address string             
         :type original_address_string: str
@@ -127,7 +127,7 @@ class MailAddress(object):
     @property
     def participation_status(self) -> str:
         """
-        Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
 
         :return: The participation_status of this MailAddress.
         :rtype: str
@@ -137,7 +137,7 @@ class MailAddress(object):
     @participation_status.setter
     def participation_status(self, participation_status: str):
         """
-        Identifies the participation status for the calendar user. Enum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
+        Identifies the participation status for the calendar user./nEnum, available values: NeedsAction, Accepted, Declined, Tentative, Delegated
 
         :param participation_status: The participation_status of this MailAddress.
         :type: str

@@ -8,7 +8,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "aspose-email-cloud"
-VERSION = "21.4.0"
+VERSION = "21.9.0.151"
 # To install the library, run the following
 #
 # python setup.py install

@@ -99,7 +99,7 @@ class MapiMessageItemBaseDto(object):
         :type body_html: str
         :param body_rtf: RTF formatted message text.             
         :type body_rtf: str
-        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
+        :param body_type: The content type of message body./nEnum, available values: PlainText, Html, Rtf
         :type body_type: str
         :param categories: Contains keywords or categories for the message object.             
         :type categories: List[str]
@@ -113,7 +113,7 @@ class MapiMessageItemBaseDto(object):
         :type mileage: str
         :param recipients: Recipients of the message.             
         :type recipients: List[MapiRecipientDto]
-        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        :param sensitivity: Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
         :type sensitivity: str
         :param subject: Subject of the message.             
         :type subject: str
@@ -277,7 +277,7 @@ class MapiMessageItemBaseDto(object):
     @property
     def body_type(self) -> str:
         """
-        The content type of message body. Enum, available values: PlainText, Html, Rtf
+        The content type of message body./nEnum, available values: PlainText, Html, Rtf
 
         :return: The body_type of this MapiMessageItemBaseDto.
         :rtype: str
@@ -287,7 +287,7 @@ class MapiMessageItemBaseDto(object):
     @body_type.setter
     def body_type(self, body_type: str):
         """
-        The content type of message body. Enum, available values: PlainText, Html, Rtf
+        The content type of message body./nEnum, available values: PlainText, Html, Rtf
 
         :param body_type: The body_type of this MapiMessageItemBaseDto.
         :type: str
@@ -419,7 +419,7 @@ class MapiMessageItemBaseDto(object):
     @property
     def sensitivity(self) -> str:
         """
-        Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
 
         :return: The sensitivity of this MapiMessageItemBaseDto.
         :rtype: str
@@ -429,7 +429,7 @@ class MapiMessageItemBaseDto(object):
     @sensitivity.setter
     def sensitivity(self, sensitivity: str):
         """
-        Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
+        Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
 
         :param sensitivity: The sensitivity of this MapiMessageItemBaseDto.
         :type: str

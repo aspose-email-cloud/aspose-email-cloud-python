@@ -69,7 +69,7 @@ class DailyRecurrencePatternDto(RecurrencePatternDto):
         :type occurs: int
         :param end_date: End date.             
         :type end_date: datetime
-        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param week_start: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type week_start: str
         """
         super(DailyRecurrencePatternDto, self).__init__()

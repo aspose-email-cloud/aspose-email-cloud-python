@@ -75,13 +75,13 @@ class MonthlyRecurrencePatternDto(RecurrencePatternDto):
         :type occurs: int
         :param end_date: End date.             
         :type end_date: datetime
-        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param week_start: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type week_start: str
-        :param start_day: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param start_day: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type start_day: str
         :param start_offset: Start offset.             
         :type start_offset: int
-        :param start_position: Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        :param start_position: Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
         :type start_position: str
         """
         super(MonthlyRecurrencePatternDto, self).__init__()
@@ -109,7 +109,7 @@ class MonthlyRecurrencePatternDto(RecurrencePatternDto):
     @property
     def start_day(self) -> str:
         """
-        Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :return: The start_day of this MonthlyRecurrencePatternDto.
         :rtype: str
@@ -119,7 +119,7 @@ class MonthlyRecurrencePatternDto(RecurrencePatternDto):
     @start_day.setter
     def start_day(self, start_day: str):
         """
-        Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :param start_day: The start_day of this MonthlyRecurrencePatternDto.
         :type: str
@@ -153,7 +153,7 @@ class MonthlyRecurrencePatternDto(RecurrencePatternDto):
     @property
     def start_position(self) -> str:
         """
-        Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
 
         :return: The start_position of this MonthlyRecurrencePatternDto.
         :rtype: str
@@ -163,7 +163,7 @@ class MonthlyRecurrencePatternDto(RecurrencePatternDto):
     @start_position.setter
     def start_position(self, start_position: str):
         """
-        Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
 
         :param start_position: The start_position of this MonthlyRecurrencePatternDto.
         :type: str

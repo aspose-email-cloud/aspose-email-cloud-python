@@ -34,7 +34,7 @@ class EmailGetAsFileRequest(object):
 
     :param file_name: Email document file name
     :type file_name: str
-    :param format: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+    :param format: File format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
     :type format: str
     :param storage: Storage name
     :type storage: str
@@ -49,7 +49,7 @@ class EmailGetAsFileRequest(object):
 
         :param file_name: Email document file name
         :type file_name: str
-        :param format: File format Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        :param format: File format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         :param storage: Storage name
         :type storage: str

@@ -65,7 +65,7 @@ class EmailSaveRequest(StorageModelOfEmailDto):
         :type storage_file: StorageFileLocation
         :param value: 
         :type value: EmailDto
-        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        :param format: Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         """
         super(EmailSaveRequest, self).__init__()
@@ -83,7 +83,7 @@ class EmailSaveRequest(StorageModelOfEmailDto):
     @property
     def format(self) -> str:
         """
-        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
 
         :return: The format of this EmailSaveRequest.
         :rtype: str
@@ -93,7 +93,7 @@ class EmailSaveRequest(StorageModelOfEmailDto):
     @format.setter
     def format(self, format: str):
         """
-        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
 
         :param format: The format of this EmailSaveRequest.
         :type: str

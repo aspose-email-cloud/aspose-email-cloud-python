@@ -71,7 +71,7 @@ class MapiCalendarTimeZoneRuleDto(object):
         Represents time zone rule that indicate when to begin using the Standard/Daylight time.             
         :param _date: Date and time that indicate when to begin using the Standard/Daylight time.             
         :type _date: datetime
-        :param day_of_week: Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        :param day_of_week: Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
         :type day_of_week: str
         :param hour: Hour.             
         :type hour: int
@@ -81,7 +81,7 @@ class MapiCalendarTimeZoneRuleDto(object):
         :type minute: int
         :param month: Month.             
         :type month: int
-        :param position: Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        :param position: Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
         :type position: str
         :param seconds: Seconds.             
         :type seconds: int
@@ -144,7 +144,7 @@ class MapiCalendarTimeZoneRuleDto(object):
     @property
     def day_of_week(self) -> str:
         """
-        Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :return: The day_of_week of this MapiCalendarTimeZoneRuleDto.
         :rtype: str
@@ -154,7 +154,7 @@ class MapiCalendarTimeZoneRuleDto(object):
     @day_of_week.setter
     def day_of_week(self, day_of_week: str):
         """
-        Day of week. Enum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+        Day of week./nEnum, available values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
         :param day_of_week: The day_of_week of this MapiCalendarTimeZoneRuleDto.
         :type: str
@@ -258,7 +258,7 @@ class MapiCalendarTimeZoneRuleDto(object):
     @property
     def position(self) -> str:
         """
-        Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
 
         :return: The position of this MapiCalendarTimeZoneRuleDto.
         :rtype: str
@@ -268,7 +268,7 @@ class MapiCalendarTimeZoneRuleDto(object):
     @position.setter
     def position(self, position: str):
         """
-        Day positions, typically found in a month. Enum, available values: None, First, Second, Third, Fourth, Last
+        Day positions, typically found in a month./nEnum, available values: None, First, Second, Third, Fourth, Last
 
         :param position: The position of this MapiCalendarTimeZoneRuleDto.
         :type: str

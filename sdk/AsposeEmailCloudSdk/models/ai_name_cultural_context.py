@@ -69,7 +69,7 @@ class AiNameCulturalContext(object):
         :type script: str
         :param encoding: A character encoding name             
         :type encoding: str
-        :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        :param style: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
         :type style: str
         """
 
@@ -174,7 +174,7 @@ class AiNameCulturalContext(object):
     @property
     def style(self) -> str:
         """
-        Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
 
         :return: The style of this AiNameCulturalContext.
         :rtype: str
@@ -184,7 +184,7 @@ class AiNameCulturalContext(object):
     @style.setter
     def style(self, style: str):
         """
-        Name writing style. Enum, available values: Formal, Informal, Legal, Academic
+        Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
 
         :param style: The style of this AiNameCulturalContext.
         :type: str

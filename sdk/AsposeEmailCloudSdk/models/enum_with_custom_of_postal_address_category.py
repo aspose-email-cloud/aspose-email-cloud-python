@@ -55,7 +55,7 @@ class EnumWithCustomOfPostalAddressCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value: Address category. Enum, available values: Home, Work, Custom
+        :param value: Address category./nEnum, available values: Home, Work, Custom
         :type value: str
         :param description: 
         :type description: str
@@ -73,7 +73,7 @@ class EnumWithCustomOfPostalAddressCategory(object):
     @property
     def value(self) -> str:
         """
-        Address category. Enum, available values: Home, Work, Custom
+        Address category./nEnum, available values: Home, Work, Custom
 
         :return: The value of this EnumWithCustomOfPostalAddressCategory.
         :rtype: str
@@ -83,7 +83,7 @@ class EnumWithCustomOfPostalAddressCategory(object):
     @value.setter
     def value(self, value: str):
         """
-        Address category. Enum, available values: Home, Work, Custom
+        Address category./nEnum, available values: Home, Work, Custom
 
         :param value: The value of this EnumWithCustomOfPostalAddressCategory.
         :type: str

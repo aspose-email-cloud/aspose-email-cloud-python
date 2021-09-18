@@ -55,7 +55,7 @@ class AiNameExtractedComponent(object):
     def __init__(self, category: str = None, value: str = None):
         """
         Extracted name component             
-        :param category: Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+        :param category: Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
         :type category: str
         :param value: Extracted value             
         :type value: str
@@ -73,7 +73,7 @@ class AiNameExtractedComponent(object):
     @property
     def category(self) -> str:
         """
-        Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+        Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
 
         :return: The category of this AiNameExtractedComponent.
         :rtype: str
@@ -83,7 +83,7 @@ class AiNameExtractedComponent(object):
     @category.setter
     def category(self, category: str):
         """
-        Extracted from email address name component category. Enum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
+        Extracted from email address name component category./nEnum, available values: Unknown, GivenName, Surname, SomeName, NoName, Initial
 
         :param category: The category of this AiNameExtractedComponent.
         :type: str
