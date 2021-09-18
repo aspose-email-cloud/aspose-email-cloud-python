@@ -57,7 +57,7 @@ class ContactPhoto(object):
     def __init__(self, photo_image_format: str = None, base64_data: str = None):
         """
         Person&#39;s photo.             
-        :param photo_image_format: MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+        :param photo_image_format: MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
         :type photo_image_format: str
         :param base64_data: Photo serialized as base64 string.             
         :type base64_data: str
@@ -75,7 +75,7 @@ class ContactPhoto(object):
     @property
     def photo_image_format(self) -> str:
         """
-        MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+        MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
 
         :return: The photo_image_format of this ContactPhoto.
         :rtype: str
@@ -85,7 +85,7 @@ class ContactPhoto(object):
     @photo_image_format.setter
     def photo_image_format(self, photo_image_format: str):
         """
-        MapiContact photo image format./nEnum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
+        MapiContact photo image format. Enum, available values: Undefined, Jpeg, Gif, Wmf, Bmp, Tiff
 
         :param photo_image_format: The photo_image_format of this ContactPhoto.
         :type: str

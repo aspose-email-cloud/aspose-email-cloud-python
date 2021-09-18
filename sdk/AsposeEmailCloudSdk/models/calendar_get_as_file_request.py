@@ -34,7 +34,7 @@ class CalendarGetAsFileRequest(object):
 
     :param file_name: Calendar document file name.
     :type file_name: str
-    :param format: File format./nEnum, available values: Ics, Msg
+    :param format: File format. Enum, available values: Ics, Msg
     :type format: str
     :param storage: Storage name.
     :type storage: str
@@ -49,7 +49,7 @@ class CalendarGetAsFileRequest(object):
 
         :param file_name: Calendar document file name.
         :type file_name: str
-        :param format: File format./nEnum, available values: Ics, Msg
+        :param format: File format. Enum, available values: Ics, Msg
         :type format: str
         :param storage: Storage name.
         :type storage: str

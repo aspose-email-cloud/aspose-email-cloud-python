@@ -65,7 +65,7 @@ class MapiRecipientDto(object):
         :type address_type: str
         :param display_name: Display name of the message recipient or sender.             
         :type display_name: str
-        :param recipient_type: Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+        :param recipient_type: Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
         :type recipient_type: str
         """
 
@@ -147,7 +147,7 @@ class MapiRecipientDto(object):
     @property
     def recipient_type(self) -> str:
         """
-        Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+        Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
 
         :return: The recipient_type of this MapiRecipientDto.
         :rtype: str
@@ -157,7 +157,7 @@ class MapiRecipientDto(object):
     @recipient_type.setter
     def recipient_type(self, recipient_type: str):
         """
-        Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient./nEnum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
+        Represent the PR_RECIPIENT_TYPE property which contains the recipient type for a message recipient. Enum, available values: Unknown, MapiBcc, MapiCc, MapiP1, MapiSubmitted, MapiTo
 
         :param recipient_type: The recipient_type of this MapiRecipientDto.
         :type: str

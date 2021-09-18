@@ -40,7 +40,7 @@ class ClientMessageAppendFileRequest(object):
     :type storage: str
     :param account_storage_folder: Folder in storage where account file located.
     :type account_storage_folder: str
-    :param format: Email file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+    :param format: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
     :type format: str
     :param folder: Path to folder on email server to append message to.
     :type folder: str
@@ -61,7 +61,7 @@ class ClientMessageAppendFileRequest(object):
         :type storage: str
         :param account_storage_folder: Folder in storage where account file located.
         :type account_storage_folder: str
-        :param format: Email file format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        :param format: Email file format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         :param folder: Path to folder on email server to append message to.
         :type folder: str

@@ -70,9 +70,9 @@ class EmailClientAccount(object):
         :type host: str
         :param port: Mail server port             
         :type port: int
-        :param security_options: Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param security_options: Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :type security_options: str
-        :param protocol_type: Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :param protocol_type: Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :type protocol_type: str
         :param credentials: Email client account credentials             
         :type credentials: EmailClientAccountCredentials
@@ -154,7 +154,7 @@ class EmailClientAccount(object):
     @property
     def security_options(self) -> str:
         """
-        Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The security_options of this EmailClientAccount.
         :rtype: str
@@ -164,7 +164,7 @@ class EmailClientAccount(object):
     @security_options.setter
     def security_options(self, security_options: str):
         """
-        Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param security_options: The security_options of this EmailClientAccount.
         :type: str
@@ -176,7 +176,7 @@ class EmailClientAccount(object):
     @property
     def protocol_type(self) -> str:
         """
-        Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :return: The protocol_type of this EmailClientAccount.
         :rtype: str
@@ -186,7 +186,7 @@ class EmailClientAccount(object):
     @protocol_type.setter
     def protocol_type(self, protocol_type: str):
         """
-        Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :param protocol_type: The protocol_type of this EmailClientAccount.
         :type: str

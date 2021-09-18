@@ -55,7 +55,7 @@ class EnumWithCustomOfUrlCategory(object):
     def __init__(self, value: str = None, description: str = None):
         """
         
-        :param value: Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+        :param value: Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
         :type value: str
         :param description: 
         :type description: str
@@ -73,7 +73,7 @@ class EnumWithCustomOfUrlCategory(object):
     @property
     def value(self) -> str:
         """
-        Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+        Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
 
         :return: The value of this EnumWithCustomOfUrlCategory.
         :rtype: str
@@ -83,7 +83,7 @@ class EnumWithCustomOfUrlCategory(object):
     @value.setter
     def value(self, value: str):
         """
-        Url category./nEnum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
+        Url category. Enum, available values: Profile, HomePage, Home, Work, Blog, Ftp, Custom
 
         :param value: The value of this EnumWithCustomOfUrlCategory.
         :type: str

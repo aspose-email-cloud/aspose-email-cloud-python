@@ -61,7 +61,7 @@ class ReminderTrigger(object):
         :type date_time: datetime
         :param duration: Specifies a relative time in ticks for the trigger of the alarm.             
         :type duration: int
-        :param related: Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
+        :param related: Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
         :type related: str
         """
 
@@ -122,7 +122,7 @@ class ReminderTrigger(object):
     @property
     def related(self) -> str:
         """
-        Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
+        Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
 
         :return: The related of this ReminderTrigger.
         :rtype: str
@@ -132,7 +132,7 @@ class ReminderTrigger(object):
     @related.setter
     def related(self, related: str):
         """
-        Specify the relationship of the alarm trigger with respect to the start or end of the event./nEnum, available values: Start, End
+        Specify the relationship of the alarm trigger with respect to the start or end of the event. Enum, available values: Start, End
 
         :param related: The related of this ReminderTrigger.
         :type: str

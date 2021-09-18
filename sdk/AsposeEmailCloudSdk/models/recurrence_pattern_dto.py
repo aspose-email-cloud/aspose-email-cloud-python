@@ -67,7 +67,7 @@ class RecurrencePatternDto(object):
         :type occurs: int
         :param end_date: End date.             
         :type end_date: datetime
-        :param week_start: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type week_start: str
         """
 
@@ -155,7 +155,7 @@ class RecurrencePatternDto(object):
     @property
     def week_start(self) -> str:
         """
-        Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :return: The week_start of this RecurrencePatternDto.
         :rtype: str
@@ -165,7 +165,7 @@ class RecurrencePatternDto(object):
     @week_start.setter
     def week_start(self, week_start: str):
         """
-        Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :param week_start: The week_start of this RecurrencePatternDto.
         :type: str

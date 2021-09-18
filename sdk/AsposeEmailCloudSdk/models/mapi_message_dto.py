@@ -150,7 +150,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
         :type body_html: str
         :param body_rtf: RTF formatted message text.             
         :type body_rtf: str
-        :param body_type: The content type of message body./nEnum, available values: PlainText, Html, Rtf
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
         :type body_type: str
         :param categories: Contains keywords or categories for the message object.             
         :type categories: List[str]
@@ -164,7 +164,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
         :type mileage: str
         :param recipients: Recipients of the message.             
         :type recipients: List[MapiRecipientDto]
-        :param sensitivity: Contains values that indicate the message sensitivity./nEnum, available values: None, Personal, Private, CompanyConfidential
+        :param sensitivity: Contains values that indicate the message sensitivity. Enum, available values: None, Personal, Private, CompanyConfidential
         :type sensitivity: str
         :param subject: Subject of the message.             
         :type subject: str
@@ -196,7 +196,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
         :type headers: Dict[str, str]
         :param internet_message_id: Internet message id of the message.             
         :type internet_message_id: str
-        :param message_format: Represents outlook message format./nEnum, available values: Ascii, Unicode
+        :param message_format: Represents outlook message format. Enum, available values: Ascii, Unicode
         :type message_format: str
         :param normalized_subject: Normalized subject of the message.             
         :type normalized_subject: str
@@ -522,7 +522,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
     @property
     def flags(self) -> List[str]:
         """
-        Message flags.              Items: Mapi message flags./nEnum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
+        Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
 
         :return: The flags of this MapiMessageDto.
         :rtype: list[str]
@@ -532,7 +532,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
     @flags.setter
     def flags(self, flags: List[str]):
         """
-        Message flags.              Items: Mapi message flags./nEnum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
+        Message flags.              Items: Mapi message flags. Enum, available values: MsgFlagZero, MsgFlagRead, MsgFlagUnmodified, MsgFlagSubmit, MsgFlagUnsent, MsgFlagHasAttach, MsgFlagFromMe, MsgFlagAssociated, MsgFlagResend, MsgFlagNotifyRead, MsgFlagNotifyUnread, MsgFlagEverRead, MsgFlagOriginX400, MsgFlagOriginInternet, MsgFlagOriginMiscExt
 
         :param flags: The flags of this MapiMessageDto.
         :type: list[str]
@@ -582,7 +582,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
     @property
     def message_format(self) -> str:
         """
-        Represents outlook message format./nEnum, available values: Ascii, Unicode
+        Represents outlook message format. Enum, available values: Ascii, Unicode
 
         :return: The message_format of this MapiMessageDto.
         :rtype: str
@@ -592,7 +592,7 @@ class MapiMessageDto(MapiMessageItemBaseDto):
     @message_format.setter
     def message_format(self, message_format: str):
         """
-        Represents outlook message format./nEnum, available values: Ascii, Unicode
+        Represents outlook message format. Enum, available values: Ascii, Unicode
 
         :param message_format: The message_format of this MapiMessageDto.
         :type: str

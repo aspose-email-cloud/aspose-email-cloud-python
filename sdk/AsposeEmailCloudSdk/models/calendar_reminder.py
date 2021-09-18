@@ -70,7 +70,7 @@ class CalendarReminder(object):
     def __init__(self, action: str = None, attachments: List[str] = None, attendees: List[ReminderAttendee] = None, description: str = None, duration: int = None, repeat: int = None, summary: str = None, trigger: ReminderTrigger = None):
         """
         Provides a grouping of component properties that define an alarm.             
-        :param action: Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
+        :param action: Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
         :type action: str
         :param attachments: Collection of Reminder Attachments. Could be an absolute URI or Base64 string representation of attachment content             
         :type attachments: List[str]
@@ -118,7 +118,7 @@ class CalendarReminder(object):
     @property
     def action(self) -> str:
         """
-        Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
+        Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
 
         :return: The action of this CalendarReminder.
         :rtype: str
@@ -128,7 +128,7 @@ class CalendarReminder(object):
     @action.setter
     def action(self, action: str):
         """
-        Defines the action to be invoked when an alarm is triggered./nEnum, available values: Audio, Display, Email, Procedure, None
+        Defines the action to be invoked when an alarm is triggered. Enum, available values: Audio, Display, Email, Procedure, None
 
         :param action: The action of this CalendarReminder.
         :type: str

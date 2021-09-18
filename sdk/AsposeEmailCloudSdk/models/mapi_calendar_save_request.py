@@ -65,7 +65,7 @@ class MapiCalendarSaveRequest(StorageModelOfMapiCalendarDto):
         :type storage_file: StorageFileLocation
         :param value: 
         :type value: MapiCalendarDto
-        :param format: Calendar file format./nEnum, available values: Ics, Msg
+        :param format: Calendar file format. Enum, available values: Ics, Msg
         :type format: str
         """
         super(MapiCalendarSaveRequest, self).__init__()
@@ -83,7 +83,7 @@ class MapiCalendarSaveRequest(StorageModelOfMapiCalendarDto):
     @property
     def format(self) -> str:
         """
-        Calendar file format./nEnum, available values: Ics, Msg
+        Calendar file format. Enum, available values: Ics, Msg
 
         :return: The format of this MapiCalendarSaveRequest.
         :rtype: str
@@ -93,7 +93,7 @@ class MapiCalendarSaveRequest(StorageModelOfMapiCalendarDto):
     @format.setter
     def format(self, format: str):
         """
-        Calendar file format./nEnum, available values: Ics, Msg
+        Calendar file format. Enum, available values: Ics, Msg
 
         :param format: The format of this MapiCalendarSaveRequest.
         :type: str

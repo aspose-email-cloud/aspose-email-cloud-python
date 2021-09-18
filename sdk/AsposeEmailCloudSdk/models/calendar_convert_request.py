@@ -32,7 +32,7 @@ class CalendarConvertRequest(object):
     Request model for calendar_convert operation.
     Initializes a new instance.
 
-    :param format: File format./nEnum, available values: Ics, Msg
+    :param format: File format. Enum, available values: Ics, Msg
     :type format: str
     :param file: File to convert
     :type file: str
@@ -43,7 +43,7 @@ class CalendarConvertRequest(object):
         Request model for calendar_convert operation.
         Initializes a new instance.
 
-        :param format: File format./nEnum, available values: Ics, Msg
+        :param format: File format. Enum, available values: Ics, Msg
         :type format: str
         :param file: File to convert
         :type file: str

@@ -62,7 +62,7 @@ class MapiPhysicalAddressIndexPropertyDto(MapiPropertyDto):
         Mapi property with PhysicalAddressIndexType value             
         :param descriptor: Property descriptor             
         :type descriptor: MapiPropertyDescriptor
-        :param value: Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
+        :param value: Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
         :type value: str
         """
         super(MapiPhysicalAddressIndexPropertyDto, self).__init__()
@@ -78,7 +78,7 @@ class MapiPhysicalAddressIndexPropertyDto(MapiPropertyDto):
     @property
     def value(self) -> str:
         """
-        Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
+        Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
 
         :return: The value of this MapiPhysicalAddressIndexPropertyDto.
         :rtype: str
@@ -88,7 +88,7 @@ class MapiPhysicalAddressIndexPropertyDto(MapiPropertyDto):
     @value.setter
     def value(self, value: str):
         """
-        Identifies the display types for physical addresses./nEnum, available values: None, Home, Business, Other
+        Identifies the display types for physical addresses. Enum, available values: None, Home, Business, Other
 
         :param value: The value of this MapiPhysicalAddressIndexPropertyDto.
         :type: str

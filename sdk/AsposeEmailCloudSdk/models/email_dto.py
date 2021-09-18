@@ -134,7 +134,7 @@ class EmailDto(object):
         :type body: str
         :param body_encoding: Body encoding.             
         :type body_encoding: str
-        :param body_type: The content type of message body./nEnum, available values: PlainText, Html, Rtf
+        :param body_type: The content type of message body. Enum, available values: PlainText, Html, Rtf
         :type body_type: str
         :param cc: CC recipients.             
         :type cc: List[MailAddress]
@@ -166,7 +166,7 @@ class EmailDto(object):
         :type original_is_tnef: bool
         :param preferred_text_encoding: Preferred encoding.             
         :type preferred_text_encoding: str
-        :param priority: Email priority status./nEnum, available values: High, Low, Normal
+        :param priority: Email priority status. Enum, available values: High, Low, Normal
         :type priority: str
         :param read_receipt_to: Read receipt addresses.             
         :type read_receipt_to: List[MailAddress]
@@ -176,7 +176,7 @@ class EmailDto(object):
         :type reverse_path: MailAddress
         :param sender: Sender address.             
         :type sender: MailAddress
-        :param sensitivity: Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+        :param sensitivity: Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
         :type sensitivity: str
         :param subject: Message subject.             
         :type subject: str
@@ -402,7 +402,7 @@ class EmailDto(object):
     @property
     def body_type(self) -> str:
         """
-        The content type of message body./nEnum, available values: PlainText, Html, Rtf
+        The content type of message body. Enum, available values: PlainText, Html, Rtf
 
         :return: The body_type of this EmailDto.
         :rtype: str
@@ -412,7 +412,7 @@ class EmailDto(object):
     @body_type.setter
     def body_type(self, body_type: str):
         """
-        The content type of message body./nEnum, available values: PlainText, Html, Rtf
+        The content type of message body. Enum, available values: PlainText, Html, Rtf
 
         :param body_type: The body_type of this EmailDto.
         :type: str
@@ -466,7 +466,7 @@ class EmailDto(object):
     @property
     def delivery_notification_options(self) -> List[str]:
         """
-        Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
+        Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
 
         :return: The delivery_notification_options of this EmailDto.
         :rtype: list[str]
@@ -476,7 +476,7 @@ class EmailDto(object):
     @delivery_notification_options.setter
     def delivery_notification_options(self, delivery_notification_options: List[str]):
         """
-        Delivery notifications. Items: Email delivery notification options./nEnum, available values: Delay, Never, None, OnFailure, OnSuccess
+        Delivery notifications. Items: Email delivery notification options. Enum, available values: Delay, Never, None, OnFailure, OnSuccess
 
         :param delivery_notification_options: The delivery_notification_options of this EmailDto.
         :type: list[str]
@@ -736,7 +736,7 @@ class EmailDto(object):
     @property
     def priority(self) -> str:
         """
-        Email priority status./nEnum, available values: High, Low, Normal
+        Email priority status. Enum, available values: High, Low, Normal
 
         :return: The priority of this EmailDto.
         :rtype: str
@@ -746,7 +746,7 @@ class EmailDto(object):
     @priority.setter
     def priority(self, priority: str):
         """
-        Email priority status./nEnum, available values: High, Low, Normal
+        Email priority status. Enum, available values: High, Low, Normal
 
         :param priority: The priority of this EmailDto.
         :type: str
@@ -838,7 +838,7 @@ class EmailDto(object):
     @property
     def sensitivity(self) -> str:
         """
-        Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+        Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
 
         :return: The sensitivity of this EmailDto.
         :rtype: str
@@ -848,7 +848,7 @@ class EmailDto(object):
     @sensitivity.setter
     def sensitivity(self, sensitivity: str):
         """
-        Specifies the sensitivity of a MailMessage./nEnum, available values: None, Normal, Personal, Private, CompanyConfidential
+        Specifies the sensitivity of a MailMessage. Enum, available values: None, Normal, Personal, Private, CompanyConfidential
 
         :param sensitivity: The sensitivity of this EmailDto.
         :type: str

@@ -44,7 +44,7 @@ class AiNameMatchRequest(object):
     :type encoding: str
     :param script: A writing system code; starts with the ISO-15924 script name.
     :type script: str
-    :param style: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+    :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
     :type style: str
     """
 
@@ -65,7 +65,7 @@ class AiNameMatchRequest(object):
         :type encoding: str
         :param script: A writing system code; starts with the ISO-15924 script name.
         :type script: str
-        :param style: Name writing style./nEnum, available values: Formal, Informal, Legal, Academic
+        :param style: Name writing style. Enum, available values: Formal, Informal, Legal, Academic
         :type style: str
         """
 

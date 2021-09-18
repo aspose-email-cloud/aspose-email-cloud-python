@@ -71,13 +71,13 @@ class EmailAccountConfig(object):
         Email account configuration.             
         :param display_name: Email account display name             
         :type display_name: str
-        :param protocol_type: Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        :param protocol_type: Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :type protocol_type: str
         :param host: Email account host.             
         :type host: str
         :param port: Port.             
         :type port: int
-        :param socket_type: Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param socket_type: Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :type socket_type: str
         :param authentication_types: Supported authentication types.             
         :type authentication_types: List[str]
@@ -137,7 +137,7 @@ class EmailAccountConfig(object):
     @property
     def protocol_type(self) -> str:
         """
-        Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :return: The protocol_type of this EmailAccountConfig.
         :rtype: str
@@ -147,7 +147,7 @@ class EmailAccountConfig(object):
     @protocol_type.setter
     def protocol_type(self, protocol_type: str):
         """
-        Type of connection protocol./nEnum, available values: IMAP, POP3, SMTP, EWS, WebDav
+        Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
 
         :param protocol_type: The protocol_type of this EmailAccountConfig.
         :type: str
@@ -199,7 +199,7 @@ class EmailAccountConfig(object):
     @property
     def socket_type(self) -> str:
         """
-        Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The socket_type of this EmailAccountConfig.
         :rtype: str
@@ -209,7 +209,7 @@ class EmailAccountConfig(object):
     @socket_type.setter
     def socket_type(self, socket_type: str):
         """
-        Email account security mode./nEnum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param socket_type: The socket_type of this EmailAccountConfig.
         :type: str
@@ -221,7 +221,7 @@ class EmailAccountConfig(object):
     @property
     def authentication_types(self) -> List[str]:
         """
-        Supported authentication types.              Items: Email account authentication types./nEnum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+        Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
 
         :return: The authentication_types of this EmailAccountConfig.
         :rtype: list[str]
@@ -231,7 +231,7 @@ class EmailAccountConfig(object):
     @authentication_types.setter
     def authentication_types(self, authentication_types: List[str]):
         """
-        Supported authentication types.              Items: Email account authentication types./nEnum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
+        Supported authentication types.              Items: Email account authentication types. Enum, available values: NoAuth, OAuth2, PasswordCleartext, PasswordEncrypted, SmtpAfterPop, ClientIpAddress
 
         :param authentication_types: The authentication_types of this EmailAccountConfig.
         :type: list[str]

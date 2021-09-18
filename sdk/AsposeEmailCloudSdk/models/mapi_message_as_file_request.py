@@ -57,7 +57,7 @@ class MapiMessageAsFileRequest(object):
     def __init__(self, format: str = None, value: MapiMessageDto = None):
         """
         Convert MapiMessage to file request.             
-        :param format: Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        :param format: Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
         :type format: str
         :param value: MAPI message model.             
         :type value: MapiMessageDto
@@ -75,7 +75,7 @@ class MapiMessageAsFileRequest(object):
     @property
     def format(self) -> str:
         """
-        Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
 
         :return: The format of this MapiMessageAsFileRequest.
         :rtype: str
@@ -85,7 +85,7 @@ class MapiMessageAsFileRequest(object):
     @format.setter
     def format(self, format: str):
         """
-        Email document format./nEnum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
+        Email document format. Enum, available values: Eml, Msg, MsgUnicode, Mhtml, Html, Tnef, Oft
 
         :param format: The format of this MapiMessageAsFileRequest.
         :type: str

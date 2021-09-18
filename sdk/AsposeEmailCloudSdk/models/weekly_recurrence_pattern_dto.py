@@ -71,7 +71,7 @@ class WeeklyRecurrencePatternDto(RecurrencePatternDto):
         :type occurs: int
         :param end_date: End date.             
         :type end_date: datetime
-        :param week_start: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type week_start: str
         :param start_days: Start days             
         :type start_days: List[str]
@@ -95,7 +95,7 @@ class WeeklyRecurrencePatternDto(RecurrencePatternDto):
     @property
     def start_days(self) -> List[str]:
         """
-        Start days              Items: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        Start days              Items: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :return: The start_days of this WeeklyRecurrencePatternDto.
         :rtype: list[str]
@@ -105,7 +105,7 @@ class WeeklyRecurrencePatternDto(RecurrencePatternDto):
     @start_days.setter
     def start_days(self, start_days: List[str]):
         """
-        Start days              Items: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        Start days              Items: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
 
         :param start_days: The start_days of this WeeklyRecurrencePatternDto.
         :type: list[str]

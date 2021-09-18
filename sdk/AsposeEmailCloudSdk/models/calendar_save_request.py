@@ -65,7 +65,7 @@ class CalendarSaveRequest(StorageModelOfCalendarDto):
         :type storage_file: StorageFileLocation
         :param value: 
         :type value: CalendarDto
-        :param format: Calendar file format./nEnum, available values: Ics, Msg
+        :param format: Calendar file format. Enum, available values: Ics, Msg
         :type format: str
         """
         super(CalendarSaveRequest, self).__init__()
@@ -83,7 +83,7 @@ class CalendarSaveRequest(StorageModelOfCalendarDto):
     @property
     def format(self) -> str:
         """
-        Calendar file format./nEnum, available values: Ics, Msg
+        Calendar file format. Enum, available values: Ics, Msg
 
         :return: The format of this CalendarSaveRequest.
         :rtype: str
@@ -93,7 +93,7 @@ class CalendarSaveRequest(StorageModelOfCalendarDto):
     @format.setter
     def format(self, format: str):
         """
-        Calendar file format./nEnum, available values: Ics, Msg
+        Calendar file format. Enum, available values: Ics, Msg
 
         :param format: The format of this CalendarSaveRequest.
         :type: str

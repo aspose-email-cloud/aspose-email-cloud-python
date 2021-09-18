@@ -71,9 +71,9 @@ class TaskRegeneratingPatternDto(RecurrencePatternDto):
         :type occurs: int
         :param end_date: End date.             
         :type end_date: datetime
-        :param week_start: Represents the day of the week./nEnum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
+        :param week_start: Represents the day of the week. Enum, available values: None, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Day, WeekDay, WeekendDay
         :type week_start: str
-        :param regenerating_type: Enumerates the types of regenerating pattern./nEnum, available values: Daily, Weekly, Monthly, Yearly
+        :param regenerating_type: Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
         :type regenerating_type: str
         """
         super(TaskRegeneratingPatternDto, self).__init__()
@@ -95,7 +95,7 @@ class TaskRegeneratingPatternDto(RecurrencePatternDto):
     @property
     def regenerating_type(self) -> str:
         """
-        Enumerates the types of regenerating pattern./nEnum, available values: Daily, Weekly, Monthly, Yearly
+        Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
 
         :return: The regenerating_type of this TaskRegeneratingPatternDto.
         :rtype: str
@@ -105,7 +105,7 @@ class TaskRegeneratingPatternDto(RecurrencePatternDto):
     @regenerating_type.setter
     def regenerating_type(self, regenerating_type: str):
         """
-        Enumerates the types of regenerating pattern./nEnum, available values: Daily, Weekly, Monthly, Yearly
+        Enumerates the types of regenerating pattern. Enum, available values: Daily, Weekly, Monthly, Yearly
 
         :param regenerating_type: The regenerating_type of this TaskRegeneratingPatternDto.
         :type: str
