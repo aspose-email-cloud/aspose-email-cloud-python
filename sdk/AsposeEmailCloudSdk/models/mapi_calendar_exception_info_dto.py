@@ -85,7 +85,7 @@ class MapiCalendarExceptionInfoDto(object):
         :type attachments: List[MapiAttachmentDto]
         :param body: Body.             
         :type body: str
-        :param busy_status: Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        :param busy_status: Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
         :type busy_status: str
         :param end_date_time: End date.             
         :type end_date_time: datetime
@@ -93,7 +93,7 @@ class MapiCalendarExceptionInfoDto(object):
         :type has_attachment: bool
         :param location: Location.             
         :type location: str
-        :param meeting_type: Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+        :param meeting_type: Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
         :type meeting_type: str
         :param original_start_date: Original start date.             
         :type original_start_date: datetime
@@ -199,7 +199,7 @@ class MapiCalendarExceptionInfoDto(object):
     @property
     def busy_status(self) -> str:
         """
-        Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :return: The busy_status of this MapiCalendarExceptionInfoDto.
         :rtype: str
@@ -209,7 +209,7 @@ class MapiCalendarExceptionInfoDto(object):
     @busy_status.setter
     def busy_status(self, busy_status: str):
         """
-        Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :param busy_status: The busy_status of this MapiCalendarExceptionInfoDto.
         :type: str
@@ -285,7 +285,7 @@ class MapiCalendarExceptionInfoDto(object):
     @property
     def meeting_type(self) -> str:
         """
-        Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+        Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
 
         :return: The meeting_type of this MapiCalendarExceptionInfoDto.
         :rtype: str
@@ -295,7 +295,7 @@ class MapiCalendarExceptionInfoDto(object):
     @meeting_type.setter
     def meeting_type(self, meeting_type: str):
         """
-        Enumerates the appointment state Enum, available values: Meeting, Received, Canceled
+        Enumerates the appointment state. Enum, available values: Meeting, Received, Canceled
 
         :param meeting_type: The meeting_type of this MapiCalendarExceptionInfoDto.
         :type: str

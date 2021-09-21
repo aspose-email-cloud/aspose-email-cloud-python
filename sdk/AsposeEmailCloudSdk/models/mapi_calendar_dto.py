@@ -166,7 +166,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
         :type appointment_counter_proposal: bool
         :param attendees: Attendees             
         :type attendees: MapiCalendarAttendeesDto
-        :param busy_status: Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        :param busy_status: Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
         :type busy_status: str
         :param client_intent: Actions the user has taken on this Meeting object.             
         :type client_intent: List[str]
@@ -335,7 +335,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
     @property
     def busy_status(self) -> str:
         """
-        Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :return: The busy_status of this MapiCalendarDto.
         :rtype: str
@@ -345,7 +345,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
     @busy_status.setter
     def busy_status(self, busy_status: str):
         """
-        Enumerates the mapi calendar possible busy status Enum, available values: Free, Tentative, Busy, OutOfOffice
+        Enumerates the mapi calendar possible busy status. Enum, available values: Free, Tentative, Busy, OutOfOffice
 
         :param busy_status: The busy_status of this MapiCalendarDto.
         :type: str
@@ -357,7 +357,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
     @property
     def client_intent(self) -> List[str]:
         """
-        Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+        Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object. Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
 
         :return: The client_intent of this MapiCalendarDto.
         :rtype: list[str]
@@ -367,7 +367,7 @@ class MapiCalendarDto(MapiMessageItemBaseDto):
     @client_intent.setter
     def client_intent(self, client_intent: List[str]):
         """
-        Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
+        Actions the user has taken on this Meeting object.              Items: Enumerates the actions the user can taken on the Meeting object. Enum, available values: Manager, Delegate, DeletedWithNoResponse, DeletedExceptionWithNoResponse, RespondedTentative, RespondedAccept, RespondedDecline, ModifiedStartTime, ModifiedEndTime, ModifiedLocation, RespondedExceptionDecline, Canceled, ExceptionCanceled
 
         :param client_intent: The client_intent of this MapiCalendarDto.
         :type: list[str]

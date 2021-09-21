@@ -70,7 +70,7 @@ class EmailClientAccount(object):
         :type host: str
         :param port: Mail server port             
         :type port: int
-        :param security_options: Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        :param security_options: Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
         :type security_options: str
         :param protocol_type: Type of connection protocol. Enum, available values: IMAP, POP3, SMTP, EWS, WebDav
         :type protocol_type: str
@@ -154,7 +154,7 @@ class EmailClientAccount(object):
     @property
     def security_options(self) -> str:
         """
-        Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :return: The security_options of this EmailClientAccount.
         :rtype: str
@@ -164,7 +164,7 @@ class EmailClientAccount(object):
     @security_options.setter
     def security_options(self, security_options: str):
         """
-        Email account security mode Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
+        Email account security mode. Enum, available values: None, SSLExplicit, SSLImplicit, SSLAuto, Auto
 
         :param security_options: The security_options of this EmailClientAccount.
         :type: str

@@ -32,9 +32,9 @@ class ContactConvertRequest(object):
     Request model for contact_convert operation.
     Initializes a new instance.
 
-    :param to_format: File format to convert to Enum, available values: VCard, WebDav, Msg
+    :param to_format: File format to convert to. Enum, available values: VCard, WebDav, Msg
     :type to_format: str
-    :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+    :param from_format: File format to convert from. Enum, available values: VCard, WebDav, Msg
     :type from_format: str
     :param file: File to convert
     :type file: str
@@ -45,9 +45,9 @@ class ContactConvertRequest(object):
         Request model for contact_convert operation.
         Initializes a new instance.
 
-        :param to_format: File format to convert to Enum, available values: VCard, WebDav, Msg
+        :param to_format: File format to convert to. Enum, available values: VCard, WebDav, Msg
         :type to_format: str
-        :param from_format: File format to convert from Enum, available values: VCard, WebDav, Msg
+        :param from_format: File format to convert from. Enum, available values: VCard, WebDav, Msg
         :type from_format: str
         :param file: File to convert
         :type file: str

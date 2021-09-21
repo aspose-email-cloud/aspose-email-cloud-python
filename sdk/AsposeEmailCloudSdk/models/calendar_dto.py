@@ -69,7 +69,9 @@ class CalendarDto(object):
         'start_time_zone': 'str',
         'status': 'str',
         'summary': 'str',
-        'transparency': 'str'
+        'transparency': 'str',
+        '_class': 'str',
+        'microsoft_importance': 'str'
     }
 
     attribute_map = {
@@ -94,10 +96,12 @@ class CalendarDto(object):
         'start_time_zone': 'startTimeZone',
         'status': 'status',
         'summary': 'summary',
-        'transparency': 'transparency'
+        'transparency': 'transparency',
+        '_class': 'class',
+        'microsoft_importance': 'microsoftImportance'
     }
 
-    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, recurrence: RecurrencePatternDto = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None):
+    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, recurrence: RecurrencePatternDto = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None, _class: str = None, microsoft_importance: str = None):
         """
         iCalendar document representation.             
         :param attachments: Document attachments.
@@ -144,6 +148,10 @@ class CalendarDto(object):
         :type summary: str
         :param transparency: Specifies whether or not this appointment is intended to be visible in availability searches. Enum, available values: NotDefined, Transparent, Opaque
         :type transparency: str
+        :param _class: Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+        :type _class: str
+        :param microsoft_importance: Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+        :type microsoft_importance: str
         """
 
         self._attachments = None
@@ -168,6 +176,8 @@ class CalendarDto(object):
         self._status = None
         self._summary = None
         self._transparency = None
+        self.__class = None
+        self._microsoft_importance = None
 
         if attachments is not None:
             self.attachments = attachments
@@ -213,6 +223,10 @@ class CalendarDto(object):
             self.summary = summary
         if transparency is not None:
             self.transparency = transparency
+        if _class is not None:
+            self._class = _class
+        if microsoft_importance is not None:
+            self.microsoft_importance = microsoft_importance
 
 
     @property
@@ -678,6 +692,50 @@ class CalendarDto(object):
         if transparency is None:
             raise ValueError("Invalid value for `transparency`, must not be `None`")
         self._transparency = transparency
+
+    @property
+    def _class(self) -> str:
+        """
+        Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+
+        :return: The _class of this CalendarDto.
+        :rtype: str
+        """
+        return self.__class
+
+    @_class.setter
+    def _class(self, _class: str):
+        """
+        Defines the access classification for the calendar. Enum, available values: Public, Private, Confidential, NotDefined
+
+        :param _class: The _class of this CalendarDto.
+        :type: str
+        """
+        if _class is None:
+            raise ValueError("Invalid value for `_class`, must not be `None`")
+        self.__class = _class
+
+    @property
+    def microsoft_importance(self) -> str:
+        """
+        Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+
+        :return: The microsoft_importance of this CalendarDto.
+        :rtype: str
+        """
+        return self._microsoft_importance
+
+    @microsoft_importance.setter
+    def microsoft_importance(self, microsoft_importance: str):
+        """
+        Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
+
+        :param microsoft_importance: The microsoft_importance of this CalendarDto.
+        :type: str
+        """
+        if microsoft_importance is None:
+            raise ValueError("Invalid value for `microsoft_importance`, must not be `None`")
+        self._microsoft_importance = microsoft_importance
 
     def to_dict(self):
         """Returns the model properties as a dict"""

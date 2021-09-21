@@ -216,7 +216,7 @@ class MapiCalendarTimeZoneInfoDto(object):
     @property
     def time_zone_flags(self) -> List[str]:
         """
-        Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+        Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule. Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
 
         :return: The time_zone_flags of this MapiCalendarTimeZoneInfoDto.
         :rtype: list[str]
@@ -226,7 +226,7 @@ class MapiCalendarTimeZoneInfoDto(object):
     @time_zone_flags.setter
     def time_zone_flags(self, time_zone_flags: List[str]):
         """
-        Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
+        Individual bit flags that specify information about this TimeZoneRule.              Items: Enumerates the individual bit flags that specify information about TimeZoneRule. Enum, available values: TzRuleFlagRecurCurrentTzReg, TzRuleFlagEffectiveTzReg
 
         :param time_zone_flags: The time_zone_flags of this MapiCalendarTimeZoneInfoDto.
         :type: list[str]

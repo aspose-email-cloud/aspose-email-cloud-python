@@ -32,7 +32,7 @@ class MapiContactFromFileRequest(object):
     Request model for mapi_contact_from_file operation.
     Initializes a new instance.
 
-    :param format: File format Enum, available values: VCard, WebDav, Msg
+    :param format: File format. Enum, available values: VCard, WebDav, Msg
     :type format: str
     :param file: File to convert
     :type file: str
@@ -43,7 +43,7 @@ class MapiContactFromFileRequest(object):
         Request model for mapi_contact_from_file operation.
         Initializes a new instance.
 
-        :param format: File format Enum, available values: VCard, WebDav, Msg
+        :param format: File format. Enum, available values: VCard, WebDav, Msg
         :type format: str
         :param file: File to convert
         :type file: str

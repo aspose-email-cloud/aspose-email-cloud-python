@@ -57,7 +57,7 @@ class MapiCalendarAsFileRequest(object):
     def __init__(self, format: str = None, value: MapiCalendarDto = None):
         """
         Convert MapiCalendar to file request.             
-        :param format: Calendar file format Enum, available values: Ics, Msg
+        :param format: Calendar file format. Enum, available values: Ics, Msg
         :type format: str
         :param value: MAPI calendar model.             
         :type value: MapiCalendarDto
@@ -75,7 +75,7 @@ class MapiCalendarAsFileRequest(object):
     @property
     def format(self) -> str:
         """
-        Calendar file format Enum, available values: Ics, Msg
+        Calendar file format. Enum, available values: Ics, Msg
 
         :return: The format of this MapiCalendarAsFileRequest.
         :rtype: str
@@ -85,7 +85,7 @@ class MapiCalendarAsFileRequest(object):
     @format.setter
     def format(self, format: str):
         """
-        Calendar file format Enum, available values: Ics, Msg
+        Calendar file format. Enum, available values: Ics, Msg
 
         :param format: The format of this MapiCalendarAsFileRequest.
         :type: str

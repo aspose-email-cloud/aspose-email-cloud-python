@@ -34,7 +34,7 @@ class CalendarGetAsAlternateRequest(object):
 
     :param file_name: iCalendar file name in storage
     :type file_name: str
-    :param calendar_action: iCalendar method type Enum, available values: Create, Update, Cancel
+    :param calendar_action: iCalendar method type. Enum, available values: Create, Update, Cancel
     :type calendar_action: str
     :param sequence_id: The sequence id
     :type sequence_id: str
@@ -51,7 +51,7 @@ class CalendarGetAsAlternateRequest(object):
 
         :param file_name: iCalendar file name in storage
         :type file_name: str
-        :param calendar_action: iCalendar method type Enum, available values: Create, Update, Cancel
+        :param calendar_action: iCalendar method type. Enum, available values: Create, Update, Cancel
         :type calendar_action: str
         :param sequence_id: The sequence id
         :type sequence_id: str

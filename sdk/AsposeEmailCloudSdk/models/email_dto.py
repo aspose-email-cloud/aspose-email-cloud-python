@@ -79,7 +79,9 @@ class EmailDto(object):
         'subject_encoding': 'str',
         'time_zone_offset': 'int',
         'to': 'list[MailAddress]',
-        'x_mailer': 'str'
+        'x_mailer': 'str',
+        'epilogue': 'str',
+        'preamble': 'str'
     }
 
     attribute_map = {
@@ -114,10 +116,12 @@ class EmailDto(object):
         'subject_encoding': 'subjectEncoding',
         'time_zone_offset': 'timeZoneOffset',
         'to': 'to',
-        'x_mailer': 'xMailer'
+        'x_mailer': 'xMailer',
+        'epilogue': 'epilogue',
+        'preamble': 'preamble'
     }
 
-    def __init__(self, alternate_views: List[AlternateView] = None, attachments: List[Attachment] = None, bcc: List[MailAddress] = None, body: str = None, body_encoding: str = None, body_type: str = None, cc: List[MailAddress] = None, _date: datetime = None, delivery_notification_options: List[str] = None, _from: MailAddress = None, headers: Dict[str, str] = None, html_body: str = None, html_body_text: str = None, is_body_html: bool = None, is_draft: bool = None, is_encrypted: bool = None, is_signed: bool = None, linked_resources: List[LinkedResource] = None, message_id: str = None, original_is_tnef: bool = None, preferred_text_encoding: str = None, priority: str = None, read_receipt_to: List[MailAddress] = None, reply_to_list: List[MailAddress] = None, reverse_path: MailAddress = None, sender: MailAddress = None, sensitivity: str = None, subject: str = None, subject_encoding: str = None, time_zone_offset: int = None, to: List[MailAddress] = None, x_mailer: str = None):
+    def __init__(self, alternate_views: List[AlternateView] = None, attachments: List[Attachment] = None, bcc: List[MailAddress] = None, body: str = None, body_encoding: str = None, body_type: str = None, cc: List[MailAddress] = None, _date: datetime = None, delivery_notification_options: List[str] = None, _from: MailAddress = None, headers: Dict[str, str] = None, html_body: str = None, html_body_text: str = None, is_body_html: bool = None, is_draft: bool = None, is_encrypted: bool = None, is_signed: bool = None, linked_resources: List[LinkedResource] = None, message_id: str = None, original_is_tnef: bool = None, preferred_text_encoding: str = None, priority: str = None, read_receipt_to: List[MailAddress] = None, reply_to_list: List[MailAddress] = None, reverse_path: MailAddress = None, sender: MailAddress = None, sensitivity: str = None, subject: str = None, subject_encoding: str = None, time_zone_offset: int = None, to: List[MailAddress] = None, x_mailer: str = None, epilogue: str = None, preamble: str = None):
         """
         Email message representation.             
         :param alternate_views: Collection of alternate views of message.             
@@ -184,6 +188,10 @@ class EmailDto(object):
         :type to: List[MailAddress]
         :param x_mailer: The X-Mailer the software that created the e-mail message.             
         :type x_mailer: str
+        :param epilogue: Gets or sets an epilogue text. It is located after the last boundary.
+        :type epilogue: str
+        :param preamble: Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+        :type preamble: str
         """
 
         self._alternate_views = None
@@ -218,6 +226,8 @@ class EmailDto(object):
         self._time_zone_offset = None
         self._to = None
         self._x_mailer = None
+        self._epilogue = None
+        self._preamble = None
 
         if alternate_views is not None:
             self.alternate_views = alternate_views
@@ -283,6 +293,10 @@ class EmailDto(object):
             self.to = to
         if x_mailer is not None:
             self.x_mailer = x_mailer
+        if epilogue is not None:
+            self.epilogue = epilogue
+        if preamble is not None:
+            self.preamble = preamble
 
 
     @property
@@ -942,6 +956,46 @@ class EmailDto(object):
         :type: str
         """
         self._x_mailer = x_mailer
+
+    @property
+    def epilogue(self) -> str:
+        """
+        Gets or sets an epilogue text. It is located after the last boundary.
+
+        :return: The epilogue of this EmailDto.
+        :rtype: str
+        """
+        return self._epilogue
+
+    @epilogue.setter
+    def epilogue(self, epilogue: str):
+        """
+        Gets or sets an epilogue text. It is located after the last boundary.
+
+        :param epilogue: The epilogue of this EmailDto.
+        :type: str
+        """
+        self._epilogue = epilogue
+
+    @property
+    def preamble(self) -> str:
+        """
+        Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+
+        :return: The preamble of this EmailDto.
+        :rtype: str
+        """
+        return self._preamble
+
+    @preamble.setter
+    def preamble(self, preamble: str):
+        """
+        Gets or sets a preamble text. It is located before the first boundary and generally includes an explanatory note to non-MIME conformant readers.
+
+        :param preamble: The preamble of this EmailDto.
+        :type: str
+        """
+        self._preamble = preamble
 
     def to_dict(self):
         """Returns the model properties as a dict"""
