@@ -71,3 +71,4 @@ target/
 .pytest_cache/
 .venv/
 .run/
+venv/
