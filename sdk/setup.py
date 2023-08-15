@@ -17,10 +17,10 @@ VERSION = "21.9.0.34"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
+    "urllib3>=2.0.4",
+    "six>=1.16.0",
     "certifi>=2023.7.22",
-    "python-dateutil>=2.1",
-    "six>=1.10",
-    "urllib3>=1.23"
+    "python-dateutil>=2.8.2",
 ]
 from os import path
 this_directory = path.abspath(path.dirname(__file__))
