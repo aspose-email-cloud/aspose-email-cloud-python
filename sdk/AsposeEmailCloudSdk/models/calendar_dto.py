@@ -71,7 +71,9 @@ class CalendarDto(object):
         'summary': 'str',
         'transparency': 'str',
         '_class': 'str',
-        'microsoft_importance': 'str'
+        'microsoft_importance': 'str',
+        'html_description': 'str',
+        'date_time_stamp': 'datetime'
     }
 
     attribute_map = {
@@ -98,10 +100,12 @@ class CalendarDto(object):
         'summary': 'summary',
         'transparency': 'transparency',
         '_class': 'class',
-        'microsoft_importance': 'microsoftImportance'
+        'microsoft_importance': 'microsoftImportance',
+        'html_description': 'htmlDescription',
+        'date_time_stamp': 'dateTimeStamp'
     }
 
-    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, recurrence: RecurrencePatternDto = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None, _class: str = None, microsoft_importance: str = None):
+    def __init__(self, attachments: List[Attachment] = None, attendees: List[MailAddress] = None, description: str = None, end_date: datetime = None, end_time_zone: str = None, flags: List[str] = None, is_description_html: bool = None, location: str = None, method: str = None, microsoft_busy_status: str = None, microsoft_intended_status: str = None, optional_attendees: List[MailAddress] = None, organizer: MailAddress = None, recurrence_string: str = None, recurrence: RecurrencePatternDto = None, reminders: List[CalendarReminder] = None, sequence_id: str = None, start_date: datetime = None, start_time_zone: str = None, status: str = None, summary: str = None, transparency: str = None, _class: str = None, microsoft_importance: str = None, html_description: str = None, date_time_stamp: datetime = None):
         """
         iCalendar document representation.             
         :param attachments: Document attachments.
@@ -152,6 +156,10 @@ class CalendarDto(object):
         :type _class: str
         :param microsoft_importance: Specifies the importance of a calendar object. Enum, available values: Low, Normal, High, NotDefined
         :type microsoft_importance: str
+        :param html_description: HTML representation of description.             
+        :type html_description: str
+        :param date_time_stamp: Date/time that the instance of the iCalendar object was created.             
+        :type date_time_stamp: datetime
         """
 
         self._attachments = None
@@ -178,6 +186,8 @@ class CalendarDto(object):
         self._transparency = None
         self.__class = None
         self._microsoft_importance = None
+        self._html_description = None
+        self._date_time_stamp = None
 
         if attachments is not None:
             self.attachments = attachments
@@ -227,6 +237,10 @@ class CalendarDto(object):
             self._class = _class
         if microsoft_importance is not None:
             self.microsoft_importance = microsoft_importance
+        if html_description is not None:
+            self.html_description = html_description
+        if date_time_stamp is not None:
+            self.date_time_stamp = date_time_stamp
 
 
     @property
@@ -736,6 +750,48 @@ class CalendarDto(object):
         if microsoft_importance is None:
             raise ValueError("Invalid value for `microsoft_importance`, must not be `None`")
         self._microsoft_importance = microsoft_importance
+
+    @property
+    def html_description(self) -> str:
+        """
+        HTML representation of description.             
+
+        :return: The html_description of this CalendarDto.
+        :rtype: str
+        """
+        return self._html_description
+
+    @html_description.setter
+    def html_description(self, html_description: str):
+        """
+        HTML representation of description.             
+
+        :param html_description: The html_description of this CalendarDto.
+        :type: str
+        """
+        self._html_description = html_description
+
+    @property
+    def date_time_stamp(self) -> datetime:
+        """
+        Date/time that the instance of the iCalendar object was created.             
+
+        :return: The date_time_stamp of this CalendarDto.
+        :rtype: datetime
+        """
+        return self._date_time_stamp
+
+    @date_time_stamp.setter
+    def date_time_stamp(self, date_time_stamp: datetime):
+        """
+        Date/time that the instance of the iCalendar object was created.             
+
+        :param date_time_stamp: The date_time_stamp of this CalendarDto.
+        :type: datetime
+        """
+        if date_time_stamp is None:
+            raise ValueError("Invalid value for `date_time_stamp`, must not be `None`")
+        self._date_time_stamp = date_time_stamp
 
     def to_dict(self):
         """Returns the model properties as a dict"""
