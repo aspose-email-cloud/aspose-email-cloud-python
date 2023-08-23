@@ -54,17 +54,36 @@ with open(path.join(this_directory, "..", 'README.md'), encoding='utf-8') as f:
 setup(
     name=NAME,
     version=VERSION,
-    url='https://products.aspose.cloud/email/family',
-    classifiers = [
-        'License :: OSI Approved :: MIT License',
-    ],
-    license = "License :: OSI Approved :: MIT License",
-    description="Aspose.Email Cloud API",
-    author_email="",
-    keywords=["Swagger", "Aspose.Email Cloud API"],
-    install_requires=REQUIRES,
-    packages=find_packages(),
-    include_package_data=True,
+    author="Aspose",
+    author_email="aspose.email.team@gmail.com",
+    description="Aspose.Email Cloud is a REST API for creating email applications that work with common email file formats. It lets developers manipulate message formats such as Outlook MSG, EML and MHT files.",
     long_description=long_description,
     long_description_content_type='text/markdown',
+    url='https://github.com/aspose-email-cloud/aspose-email-cloud-python',
+    classifiers = [
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent'
+    ],
+    license = "License :: OSI Approved :: MIT License",
+    keywords=[
+            "Aspose", "Python", "Aspose Cloud",
+            "Aspose.Email", "Aspose.Email-Cloud", "Cloud", "REST", "API", "MSG", "EML", "MHTML", "HTML", "VCF", "ICS", "TNEF", "EMLX",
+            "iCalendar", "MAPI", "vCard", "Email Conversion", "Convert", "Converter", "Read Email Message", "Calendar", "Email Attachment",
+            "Contact Card", "Image to vCard", "Virtual Card", "Search Email", "SMTP", "POP3", "IMAP", "EWS", "WebDav", "SSL Explicit",
+            "SSL Implicit", "SSL", "iCalendar", "Email Validation", "OAuth2.0", "Message Thread", "iCalendar Conversion",
+            "vCard Conversion", "Email Conversion", "MIME", "Flag Email", "Email Client", "Exchange", "Name API", "name parser",
+            "name matcher", "name", "BCR", "contact scan", "business card", "Outlook", "EML to MSG", "MSG to EML", "EML to MHTML",
+            "MSG to MHTML", "ICS to MSG", "MSG to ICS", "VCF to MSG", "MSG to VCF", "Disposable email", "email configuration discovery",
+            "autodiscover", "email configuration"
+        ],
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=REQUIRES,
+    python_requires='>=3.7',
+    project_urls={
+        "Documentation": "https://docs.aspose.cloud/email/",
+        "Source": "https://github.com/aspose-email-cloud/aspose-email-cloud-python",
+        "Website": "https://products.aspose.cloud/email/"
+    }
 )
