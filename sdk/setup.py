@@ -68,7 +68,7 @@ setup(
     license = "License :: OSI Approved :: MIT License",
     keywords=[
             "Aspose", "Python", "Aspose Cloud",
-            "Aspose.Email", "Aspose.Email-Cloud", "Cloud", "REST", "API", "MSG", "EML", "MHTML", "HTML", "VCF", "ICS", "TNEF", "EMLX",
+            "Aspose.Email", "Aspose Email Cloud", "Cloud", "REST", "API", "MSG", "EML", "MHTML", "HTML", "VCF", "ICS", "TNEF", "EMLX",
             "iCalendar", "MAPI", "vCard", "Email Conversion", "Convert", "Converter", "Read Email Message", "Calendar", "Email Attachment",
             "Contact Card", "Image to vCard", "Virtual Card", "Search Email", "SMTP", "POP3", "IMAP", "EWS", "WebDav", "SSL Explicit",
             "SSL Implicit", "SSL", "iCalendar", "Email Validation", "OAuth2.0", "Message Thread", "iCalendar Conversion",
